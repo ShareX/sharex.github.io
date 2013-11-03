@@ -55,7 +55,7 @@ ul#sidebar {
 	text-decoration: none;
 }
 
-.btnd-1d:active, .btnd-1d:visited {
+.btnd-1d:active, .btnd-1d:hover {
   color: white;
   text-decoration: none;
 }
