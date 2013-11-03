@@ -1,96 +1,115 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="ShareX : Share anything" />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
     <title>ShareX</title>
-  </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
   <body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/ShareX">View on GitHub</a>
+    <nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
 
-          <h1 id="project_title">ShareX</h1>
-          <h2 id="project_tagline">Share anything</h2>
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav navbar-right">
+    	<li class="active"><a href="#">Home</a></li>
+    	<li><a href="features">Features</a></li>
+      <li><a href="screenshots">Screenshots</a></li>
+		<li><a href="doc">Docs</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+  </div>
+</nav>
 
-        </header>
+<div class="jumbotronf">
+  <div class="container">
+    <h1>ShareX</h1>
+    <p>Sharing has never been easier.</p>
+    <p><a href="https://sharex.googlecode.com/files/ShareX-8.3.0.747-setup.exe
+" class="btnd btnd-1 btnd-1d">Download ShareX</a><a href="https://github.com/ShareX/ShareX" class="btnd btnd-1 btnd-1d">View on Github</a></p>
+  </div>
+</div>
+
+<div class="after-header"><p>Take a screenshot, have it uploaded and get the URL<br /> copied to your clipboard with a single hotkey.</p>
+</div>
+
+
+<div class="sharex-screenshot visible-md visible-lg"><img src="img/sharex-screenshot.png" /></div>
+
+<div class="feature">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-4">
+        <p><img src="img/icon-crop.png" /></p><br />
+        <p>Advanced screenshot tool and recorder.</p><br /><br />
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <p><img src="img/icon-drag.png" /></p><br />
+        <p>Upload with context menu, drag & drop and clipboard.</p><br /><br />       
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <p><img src="img/icon-save.png" /></p><br />
+        <p>Automatic tasks after capture such as image editor, saving, and other actions.</p><br /><br />
+      </div>
     </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <p>ShareX is an open source program that lets you take screenshots of any selected area with a single key, save them in your clipboard, hard disk or instantly upload them to over 25 different file hosting services. ShareX can capture screenshots with different shapes: rectangle, rounded rectangle, ellipse, triangle, diamond, polygon and also freehand. It can upload images, text files and all other different file types. It is able to capture screenshots with transparency and shadow. The program also supports clipboard upload and drag-and-drop.</p>
-
-<p><img src="http://dl.dropbox.com/u/14076298/ShareX/2013/09/OQId4Vsbso.png" alt="ShareX"></p>
-
-<hr><p><strong>Capture methods:</strong></p>
-
-<p>Fullscreen, Active window, Window list, Active monitor, Monitor list, Rectangle, Rectangle + Window, Rounded rectangle, Ellipse, Triangle, Diamond, Polygon, Free hand, Last region, Screen recording (Supports animated gif), Auto capture</p>
-
-<hr><p><strong>After capture tasks:</strong></p>
-
-<p>Add watermark, Add border, Add shadow, Annotate image, Copy image to clipboard, Print image, Save image to file, Save image to file as, Copy file path to clipboard, Perform actions, Upload image to host</p>
-
-<hr><p><strong>Upload methods:</strong></p>
-
-<p>File upload, Clipboard upload, Drag and drop, Send to from Windows Explorer, Watch folder</p>
-
-<hr><p><strong>After upload tasks:</strong></p>
-
-<p>Use URL shortener, Post URL to social networking service, Send URL with Email, Copy URL to clipboard</p>
-
-<hr><p><strong>Tools:</strong></p>
-
-<p>Screen color picker, Hash check, Index folder</p>
-
-<hr><p><strong>Image uploaders:</strong></p>
-
-<p>imageshack.us, tinypic.com, imgur.com, flickr.com, photobucket.com, picasaweb.google.com, uploadscreenshot.com, twitpic.com, twitsnaps.com, yfrog.com, imm.io, File uploader</p>
-
-<hr><p><strong>Text uploaders:</strong></p>
-
-<p>pastebin.com, pastebin.ca, paste2.org, slexy.org, pastee.org, paste.ee, File uploader</p>
-
-<hr><p><strong>File uploaders:</strong></p>
-
-<p>dropbox.com, Google Drive, rapidshare.com, sendspace.com, minus.com, box.com, ge.tt, localhostr.com, Custom uploader, FTP server, Shared folder, Email</p>
-
-<hr><p><strong>URL shorteners:</strong></p>
-
-<p>goo.gl, bit.ly, j.mp, is.gd, tinyurl.com, turl.ca</p>
-
-<hr><p><strong>Social networking services:</strong></p>
-
-<p>twitter.com</p>
-      </section>
+    <div class="row">
+      <div class="col-md-4 col-sm-4">
+        <p><img src="img/icon-upload.png" /></p><br />
+        <p>Upload to 30+ different filehosting or FTP.</p>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <p><img src="img/icon-key.png" /></p><br />
+        <p>Custom hotkey with their own settings.</p>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <p><img src="img/icon-settings.png" /></p><br />
+        <p>Highly detailed and customizeable settings.</p>
+      </div>
     </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-40712139-2");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+  </div>
+</div>
 
 
+
+<div class="conclusion">
+  <div class="container">
+    <p>Best of all, it's free and open source.</p>
+    <p><a href="https://sharex.googlecode.com/files/ShareX-8.3.0.747-setup.exe
+" class="btnd btnd-1 btnd-1d">Download ShareX</a><a href="https://github.com/ShareX/ShareX" class="btnd btnd-1 btnd-1d">View on Github</a></p>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <!-- <p><img src="img/sharexicon-4.png" /></p> -->
+    <p>Copyright &#169; 2009 - 2013 ShareX.</p>
+  </div>
+</footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
