@@ -1,14 +1,14 @@
 body {
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	-webkit-transform: translateZ(0px);
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  -webkit-transform: translateZ(0px);
 }
 
 ul#sidebar {
-	margin-top: 25px;
+  margin-top: 25px;
 }
 
 #sidebar li {
-	margin: -5px -15px -5px -35px;
+  margin: -5px -15px -5px -35px;
 }
 
 
@@ -49,16 +49,13 @@ ul#sidebar {
 
 
 /* Button 1d */
-.btnd-1d:hover {
-	color: #3E579F;
-	background: #fff;
-	text-decoration: none;
-}
-
-.btnd-1d:active, .btnd-1d:hover {
-  color: white;
+.btnd-1d:hover,
+.btnd-1d:active {
+  color: #3E579F;
+  background: #fff;
   text-decoration: none;
 }
+
 
 .sharex-screenshot {
   height: 500px;
@@ -665,16 +662,16 @@ footer p {
 }
 
 .after-header p {
-	font-weight: 200;
+  font-weight: 200;
 }
 
 .jumbopurple {
-	background-color: #3E579F;
-	color: #ffffff;
+  background-color: #3E579F;
+  color: #ffffff;
 }
 
 .jumbopurple h1 {
-	margin-top: 50px;
+  margin-top: 50px;
 }
 
 .jumbopurple p {
@@ -682,18 +679,18 @@ footer p {
 }
 
 .navbar-inverse .navbar-brand {
-	color: rgb(255,255,255);
+  color: rgb(255,255,255);
 }
 
 .navbar-inverse .navbar-brand:hover {
-	color: #e1e1e1;
+  color: #e1e1e1;
 }
 
 @media (min-width: 979px) {
   #mynav.affix-top {
     position: static;
-  	margin-top:30px;
-  	width: 200px;
+    margin-top:30px;
+    width: 200px;
   }
   
   #mynav.affix {
