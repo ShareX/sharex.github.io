@@ -49,11 +49,15 @@ ul#sidebar {
 
 
 /* Button 1d */
-.btnd-1d:hover,
-.btnd-1d:active {
+.btnd-1d:hover {
 	color: #3E579F;
 	background: #fff;
 	text-decoration: none;
+}
+
+.btnd-1d:active, .btnd-1d:visited {
+  color: white;
+  text-decoration: none;
 }
 
 .sharex-screenshot {
