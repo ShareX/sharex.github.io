@@ -1,0 +1,23 @@
+<h1>Settings folder</h1>
+<h4>How to change settings folder?</h4>
+<p>By default ShareX is using "Documents\ShareX" folder.</p>
+
+<p>If you want to change this folder, you need to create a text file with the file name: "PersonalPath.cfg" inside the folder where ShareX.exe resides. A typical example will be: "C:\Program Files\ShareX\PersonalPath.cfg"</p>
+
+<p>Inside this config file you can write which folder you want to use as the settings folder. You can use a relative path. If this config file does not exist or don't contain any text then ShareX will use default folder which is "Documents\ShareX".</p>
+
+<h4>How to use ShareX in portable mode?</h4>
+
+<p>There is two ways:</p>
+
+<ul>
+<li>You can open ShareX with -portable command line argument.</li>
+
+<li>You can create "PersonalPath.cfg" file inside the folder where ShareX.exe resides and write "ShareX" which is a relative path, so when ShareX is run it will create "ShareX" named folder to where "PersonalPath.cfg" is and use it as the settings folder.</li>
+</ul>
+
+<p>Both methods are doing exactly the same thing but PersonalPath.cfg is giving more control about where settings folder will be.</p>
+
+<h4>What if you don't want use any settings folder at all?</h4>
+
+<p>You can open ShareX with -sandbox command line argument so ShareX will open with default settings and won't save any settings. But you still need to disable saving images because it is using Screenshots folder which is changeable from settings window.</p>

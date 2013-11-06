@@ -1,404 +1,94 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		<title>ShareX</title>
-		
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
-		<link href="../css/style.css" rel="stylesheet" media="screen">
+    <title>ShareX</title>
 
-		<link rel="icon" type="image/x-icon" href="../favicon.ico" />
-	</head>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../css/style.css" rel="stylesheet" media="screen">
+
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+</head>
 
 <body>
-<nav class="navbar navbar-inverse docnavbar navbar-fixed-top" role="navigation">
-<div class="container">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#">ShareX</a>
-  </div>
+    <nav class="navbar navbar-inverse docnavbar navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">ShareX</a>
+            </div>
 
-  <div class="collapse navbar-collapse navbar-ex1-collapse">
-    <ul class="nav navbar-nav navbar-right">
-    	<li><a href="..">Home</a></li>
-    	<li><a href="../features">Features</a></li>
-    <li><a href="../screenshots">Screenshots</a></li>
-		<li class="active"><a href="#">Docs</a></li>
-    </ul>
-  </div>
-  </div>
-</nav>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="..">Home</a></li>
+                    <li><a href="../features">Features</a></li>
+                    <li><a href="../screenshots">Screenshots</a></li>
+                    <li class="active"><a href="#">Docs</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<div class="jumbotron masthead jumbopurple">
-<div class="container">
-  <h1>Documentation</h1>
-  <p>Welcome to the ShareX documentation.</p>
-  </div>
-</div>
-
-<div class="container">
-  <!-- sidebar -->
-  <div class="col-md-3">
-    <div class="list-group navbar visible-lg visible-md" id="sidebar">
-      <ul class="nav" id="mynav" data-spy="affix" data-offset-top="280">
-        <li><a href="#c1" class="list-group-item">Settings folder</a></li>
-        <li><a href="#c2" class="list-group-item">Command arguments</a></li>
-        <li><a href="#c3" class="list-group-item">Screen recording tutorial</a></li>
-        <li><a href="#c4" class="list-group-item">Upload screenshots with Steam</a></li>
-        <li><a href="#c5" class="list-group-item">Webpage capture</a></li>
-        <li><a href="#c6" class="list-group-item">Dropbox tutorial</a></li>
-        <li><a href="#c7" class="list-group-item">Configuring FTP accounts</a></li>
-        <li><a href="#c8" class="list-group-item">Capturing shapes</a></li>
-      </ul>
-    </div>
-  </div>
-  <!-- end of sidebar -->
-
-  <!-- content -->
-  <div class="col-md-9">
-  <div id="c1">
-    <h1>Settings folder</h1>
-    <h4>How to change settings folder?</h4>
-    <p>By default ShareX is using "Documents\ShareX" folder.</p>
-
-    <p>If you want to change this folder, you need to create a text file with the file name: "PersonalPath.cfg" inside the folder where ShareX.exe resides. A typical example will be: "C:\Program Files\ShareX\PersonalPath.cfg"</p>
-
-    <p>Inside this config file you can write which folder you want to use as the settings folder. You can use a relative path. If this config file does not exist or don't contain any text then ShareX will use default folder which is "Documents\ShareX".</p>
-
-    <h4>How to use ShareX in portable mode?</h4>
-
-    <p>There is two ways:</p>
-
-    <ul>
-    <li>You can open ShareX with -portable command line argument.</li>
-
-    <li>You can create "PersonalPath.cfg" file inside the folder where ShareX.exe resides and write "ShareX" which is a relative path, so when ShareX is run it will create "ShareX" named folder to where "PersonalPath.cfg" is and use it as the settings folder.</li>
-    </ul>
-
-    <p>Both methods are doing exactly the same thing but PersonalPath.cfg is giving more control about where settings folder will be.</p>
-
-    <h4>What if you don't want use any settings folder at all?</h4>
-
-    <p>You can open ShareX with -sandbox command line argument so ShareX will open with default settings and won't save any settings. But you still need to disable saving images because it is using Screenshots folder which is changeable from settings window. </p>
-
-    <hr />
-    </div>
-    <div id="c2">
-    <h1>Supported command line arguments</h1>
-
-    <p><code>-multi</code> or <code>-m</code> allows ShareX to load multiple instances. By default it not possible to use more than one ShareX instance.</p>
-
-    <p><code>-silent</code> or <code>-s</code> loads ShareX to tray without showing the main window.</p>
-
-    <p><code>-portable</code> or <code>-p</code> loads ShareX in portable mode. In portable mode, the application will create a folder (if it doesn't exist already) in its startup path to save configuration files and images.</p>
-
-    <p><code>-clipboardupload</code> performs clipboard upload as soon as ShareX opens.</p>
-
-    <p><code>"filepath"</code> uploads file.</p>
-    <hr />
+    <div class="jumbotron masthead jumbopurple">
+        <div class="container">
+            <h1>Documentation</h1>
+            <p>Welcome to the ShareX documentation.</p>
+        </div>
     </div>
 
-    <div id="c3">
-    
-    <h1>Screen recording with x264 encoder</h1>
+    <div class="container">
+        <!-- sidebar -->
+        <div class="col-md-3">
+            <div class="list-group navbar visible-lg visible-md" id="sidebar">
+                <ul class="nav" id="mynav" data-spy="affix" data-offset-top="280">
+                    <li><a href="SettingsFolder.html" class="list-group-item">Settings folder</a></li>
+                    <li><a href="CommandArguments.html" class="list-group-item">Command arguments</a></li>
+                    <li><a href="ScreenRecordingTutorial.html" class="list-group-item">Screen recording tutorial</a></li>
+                    <li><a href="UploadScreenshotsWithSteam.html" class="list-group-item">Upload screenshots with Steam</a></li>
+                    <li><a href="WebpageCapture.html" class="list-group-item">Webpage capture</a></li>
+                    <li><a href="DropboxTutorial.html" class="list-group-item">Dropbox tutorial</a></li>
+                    <li><a href="ConfiguringFTPAccounts.html" class="list-group-item">Configuring FTP accounts</a></li>
+                    <li><a href="RegionScreenCapture.html" class="list-group-item">Region screen capture</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- end of sidebar -->
 
-    <p><h4>1. Set hotkey for screen recording.</h4> This hotkey will be used to start recording or stop recording if recording has started already.</p>
-
-    <p><img src="https://dl.dropbox.com/u/14076298/ShareX/2013/08/cK8gfz75p5.png" /> </p>
-
-    <p><h4>2. Click on edit button, go to Screen recorder tab.</h4></p>
-
-    <p>In output select &quot;AVI CLI encoder&quot; to use x264 encoder after the video is done recording.  </p>
-
-    <p>FPS (frame per second) indicates how many frames per second it is recording. If you record at 10 FPS for 5 seconds, then you will have captured 50 frames. The lower the number of frames, the smaller the video size but also the choppier it may look. Setting 10 FPS is my suggestion if you are capturing the entire desktop. </p><p>If you check the &quot;Fixed duration&quot; option then you can tell ShareX you want to record for a specified duration. Otherwise, if you want to record as long as you wish you can do so by not checking &quot;Fixed duration&quot; and stop the recording by simply pressing the same hotkey you used to record or by clicking the red tray icon. </p>
-
-    <p>Set settings according to this screenshot if you are unsure what to select, these are recommended settings: </p>
-
-    <p><img src="https://dl.dropbox.com/u/84476328/ShareX/2013-08/ShareX_-_Screen_Recorder_-_Workflow_settings_2013-08-25_11-30-36.png" /> </p>
-
-    <p><h4>3. Open the screen recorder from here:</h4></p>
-
-    <p><img src="https://dl.dropbox.com/u/14076298/ShareX/2013/08/8X7DmASLcD.png" /> </p>
-
-    <p>or you can press the hotkey you had set previously. </p><p>You need to select the region where you wish the application to record.  Region is up to you. I don&#x27;t suggest selecting fullscreen region because it can increase video size greatly. </p>
-
-    <p><h4>4. Now you need to download <a href="http://www.videolan.org/developers/x264.html" rel="nofollow">x264</a> encoder.</h4> It is a free and open source encoder and will keep your videos file size down while still making the video look good. </p><p>You can download the compiled version from here: <a href="http://www.x264.nl/x264_main.php" rel="nofollow">http://www.x264.nl/x264_main.php</a> </p><p>8bit-depth version with 32bit/64bit depending on your operating system. </p>
-
-    <p>I downloaded: 64bit 8bit-depth from mirror 01. </p>
-
-    <p>or if you want to compile yourself: <a href="http://www.videolan.org/developers/x264.html" rel="nofollow">http://www.videolan.org/developers/x264.html</a> </p>
-
-    <p>After you download it, copy x264.exe to where ShareX is installed (Example: C:\Program Files\ShareX). It is not necessary to copy but if you copy it then you don&#x27;t need to set encoder path setting because I already set default encoder path to &quot;x264.exe&quot;. </p>
-
-    <p><h4>5. Now you can start recording.</h4> The region will show a red border for 1 second and then turn to green which means after 1 second the recording will start and you can stop it with hotkey/tray icon any time you want. </p>
-
-    <p>After you have stopped it, x264.exe will open in background and encode the recorded video. This x264 window is hidden from you. After encoding has finished ShareX will upload it to the file destination you selected before (in my case it is Dropbox). </p>
-
-    <p>Example video I recorded with ShareX (37 seconds, 556 KiB): <a href="https://dl.dropbox.com/u/14076298/ShareX/2013/08/Ju3aOtZchT.mp4" rel="nofollow">https://dl.dropbox.com/u/14076298/ShareX/2013/08/Ju3aOtZchT.mp4</a>
-
-    <hr />
+        <!-- content -->
+        <div class="col-md-9">
+            <div id="wrapper" />
+            <div id="content" />
+        </div>
+        <!-- end of content -->
+        
+        <hr />
+        <p>Copyright &#169; 2008 - 2013 ShareX</p>
     </div>
-
-    <div id="c4">
-    <h1>Upload screenshots with Steam Overlay UI</h1>
-
-    <div class="alert alert-info"><strong>Note:</strong> You can use the ShareX &#x27;watch folder&#x27; feature with the Steam overlay UI to upload screenshots automatically. Below is an instruction for it.</p></div>
-
-    <p>If you're using Steam, you can take a screenshot from a game and upload it automatically using ShareX and the Steam overlay UI. </p>
-
-    <p><h4>1. Open Steam settings menu and switch to the &#x27;in-game&#x27; tab.</h4> Check &quot;Save an uncompressed copy outside of Steam&quot; and choose a folder to store screenshots by clicking &#x27;select external screenshots folder&#x27;. </p>
-
-    <p><img src="https://dl.dropbox.com/u/14076298/ShareX/2013/08/qfpwjNhdg7.png" /> </p>
-
-    <p><h4>2. (Optional)</h4> You will probably want to convert the image formats automatically because Steam will save your screenshots uncompressed and those files can be pretty big. The image below shows how you can use ShareX to convert them to a .jpg or .png type in the settings menu. </p>
-
-    <p><img src="https://dl.dropbox.com/u/14076298/ShareX/2013/08/HoGwyf6dOy.png" /> </p>
-
-    <p><h4>3. Use the ShareX settings again to create a &#x27;watch folder&#x27; like this:</h4></p>
-
-    <p><img src="https://dl.dropbox.com/u/14076298/ShareX/2013/08/MXuVIPNFNC.png" /> </p>
-
-    <p>The &#x27;watch folder&#x27; will automatically upload new images from the folder you selected as they are added. The watch folder path should point to your directory of uncompressed Steam screenshots. </p>
-
-    <p><h4>4. You can now open your Steam game and press your Steam screenshot key (set to F12 by default) at any time to export a screenshot.</h4> ShareX will notice the new file appear in the folder you specified and upload it automatically. If you completed step 2, ShareX will convert the file to a more sensible format before uploading. </p>
-
-    <p><div class="alert alert-info"><strong>Note:</strong> This trick also works with any non-steam game in which you have enabled the Steam overlay UI.</div></p>
-
-    <hr />
-    </div>
-
-    <div id="c5">
-    <h1>Webpage capture</h1>
-    ShareX does not have a web capture feature because it will involve rendering pages in background using Internet Explorer. You could, however, use extensions/addons developed for Chrome/Firefox browsers to capture the entire webpage and utilise the Watch Folder feature in ShareX to automatically upload them to your designated image hosting service.  </p>
-
-    <p>Here is an example using Chrome with the official Google screen capture extension. It will work exactly same for Firefox etc. with different addons. </p>
-
-    <p><h4>1. Download Google Screen capture Chrome addon from here: </p></h4><p><a href="https://chrome.google.com/webstore/detail/screen-capture-by-google/cpngackimfmofbokmjmljamhdncknpmg" rel="nofollow">https://chrome.google.com/webstore/detail/screen-capture-by-google/cpngackimfmofbokmjmljamhdncknpmg</a> </p>
-
-    <p><h4>2. (Optional) Change image save location from here: </p></h4>
-
-    <p><img src="https://dl.dropbox.com/u/14076298/ShareX/2013/08/3WPJIpomNo.png" /> </p><p><img src="https://dl.dropbox.com/u/14076298/ShareX/2013/08/rHhkfTtLh4.png" /> </p>
-
-    <p><h4>3. Open ShareX settings window, switch to Watch folder tab, add an existing folder to watch: </h4></p><p><img src="https://dl.dropbox.com/u/14076298/ShareX/2013/08/E8GXVYpZvY.png" /> </p>
-
-    <p><h4>4. Click &quot;Capture Whole Page&quot; in Chrome screen capture extension: </h4></p>
-
-    <p><img src="https://dl.dropbox.com/u/14076298/ShareX/2013/08/NuylBpGEUs.png" /> </p>
-
-    <p><h4>After saving it, ShareX will automatically upload it. </h4></p>
-    <hr />
-    </div>
-
-    <div id="c6">
-
-    <h1>How to use Dropbox for image uploads?</h1>
-
-    <a href="#How_to_use_Dropbox_for_image_uploads?" class="section_anchor"></a></h1>
-
-    <p>1. Destinations -&gt; Image uploader: File Uploader </p>
-
-    <p><img src="https://dl.dropbox.com/u/14076298/ShareX/2013/04/7SXNhayOBY.png" /> </p>
-
-    <p>2. Destinations -&gt; File uploader: Dropbox </p>
-
-    <p><img src="https://dl.dropbox.com/u/14076298/ShareX/2013/04/HiaMsYbdJu.png" /> </p>
-
-    <p>3. Destinations -&gt; Outputs configuration... </p>
-
-    <p><img src="https://dl.dropbox.com/u/14076298/ShareX/2013/04/UnPezwNMnx.png" /> </p>
-
-    <p>4. Tab: (File uploaders -&gt; Dropbox) -&gt; Press &quot;1. Open authorize page...&quot; button </p>
-
-    <p><img src="https://dl.dropbox.com/u/14076298/ShareX/2013/04/xNlcHpceWi.png" /> </p><p>5. In your default browser dropbox page will open, press &quot;Allow&quot; button. </p>
-
-    <p><img src="https://dl.dropbox.com/u/14076298/ShareX/2013/04/q2sNeXk8Qg.png" /> <img src="https://dl.dropbox.com/u/14076298/ShareX/2013/04/rddQyJJukC.png" /> </p>
-
-    <p>6. After see Success page in Dropbox web site turn back to ShareX configuration window and press &quot;2. Complete authorization&quot; button. </p>
-
-    <p><img src="https://dl.dropbox.com/u/14076298/ShareX/2013/04/0olBz47KIg.png" /> </p>
-
-    <p>7. Now if in &quot;After capture&quot; menu is &quot;Upload image to host&quot; is checked then when you take screenshot with any hotkey (Example: Ctrl + Printscreen) then image will be automatically uploaded to Dropbox. </p>
-
-    <p><img src="https://dl.dropbox.com/u/14076298/ShareX/2013/04/Gg1JBL6Djq.png" /> </p>
-
-    <p><div class="alert alert-info"><strong>Note:</strong> New Dropbox accounts don&#x27;t have public folder feature so if you want to use this feature you must enable it with this URL: <a href="https://www.dropbox.com/enable_public_folder" rel="nofollow">https://www.dropbox.com/enable_public_folder</a> (<a href="https://www.dropbox.com/help/16/en" rel="nofollow">https://www.dropbox.com/help/16/en</a>) </p></div>
-    
-    <hr />
-
-    </div>
-
-    <div id="c7">
-    <h1>Configuring FTP accounts</h1>
-
-    <h3><a name="Automatic_folder_creation"></a>Automatic folder creation<a href="#Automatic_folder_creation" class="section_anchor"></a></h3>
-
-    <p>ShareX can automatically create sub-folders in your FTP Server based on the SubFolderPath settings. FTP Path of a file is shown below: </p>
-
-    <pre class="prettyprint">URL = ftp:// + Host + : + Port + SubFolderPath + FileName</pre>
-
-    <h3><a name="URL_creation_based_on_FTP_Account_settings"></a>URL creation based on FTP Account settings<a href="#URL_creation_based_on_FTP_Account_settings" class="section_anchor"></a></h3>
-
-    <p>The usual URL creation procedure is as follows: </p><pre class="prettyprint">URL = HttpHomePath + SubFolderPath + FileName</pre>
-
-    <p>This default behavior of URL creation can be customized.  </p>
-
-    <p>If HttpHomePath starts with the @ char then,  </p>
-
-    <pre class="prettyprint">URL = HttpHomePath + FileName</pre>
-
-    <p>If HttpHomePath is empty then, </p>
-
-    <pre class="prettyprint">URL = Host + SubFolderPath + FileName</pre>
-
-    <p><div class="alert alert-info"><strong>Note:</strong> If URL does not start with <strong> http:// </strong> then it will be added automatically. The <strong>/</strong> char will be handled automatically; you don&#x27;t need to add <strong>/</strong> char to the beginning or end of paths. </p><p>If Host starts with <strong>ftp.</strong> then it will be automatically removed while making URL (when using empty HttpHomePath or when using % in HttpHomePath).  </p><p>File Name: screenshot.jpg </p></div>
-
-    <h3><a name="Standard_usage"></a>Standard usage<a href="#Standard_usage" class="section_anchor"></a></h3>
-
-    <h4><a name="Using_IP_address"></a>Using IP address<a href="#Using_IP_address" class="section_anchor"></a></h4>
-
-    <pre class="prettyprint">Host: 80.1.3.37
-SubFolderPath: ShareX
-HttpHomePath: sharexftptest.com/jaex
-PreviewFtpPath: ftp://80.1.3.37:21/ShareX/screenshot.jpg
-PreviewHttpPath: http://sharexftptest.com/jaex/ShareX/screenshot.jpg</pre>
-
-<h4><a name="Using_domain"></a>Using domain<a href="#Using_domain" class="section_anchor"></a></h4>
-
-<pre class="prettyprint">Host: ftp.sharexftptest.com
-SubFolderPath:
-HttpHomePath:
-PreviewFtpPath: ftp://ftp.sharexftptest.com:21/screenshot.jpg
-PreviewHttpPath: http://sharexftptest.com/screenshot.jpg</pre>
-
-<h4><a name="Using_subdomain"></a>Using subdomain<a href="#Using_subdomain" class="section_anchor"></a></h4>
-
-<pre class="prettyprint">Host: jaex.sharexftptest.com
-SubFolderPath: ShareX/Screenshots
-HttpHomePath: www.sharexftptest.com/jaex
-PreviewFtpPath: ftp://jaex.sharexftptest.com:21/ShareX/Screenshots/screenshot.jpg
-PreviewHttpPath: http://www.sharexftptest.com/jaex/ShareX/Screenshots/screenshot.jpg</pre>
-
-<h3><a name="Using_empty"></a>Using empty HttpHomePath<a href="#Using_empty" class="section_anchor"></a></h3>
-
-<h4><a name="Using_domain"></a>Using domain<a href="#Using_domain" class="section_anchor"></a></h4>
-
-<pre class="prettyprint">Host: ftp.sharexftptest.com
-SubFolderPath: ShareX
-HttpHomePath:
-PreviewFtpPath: ftp://ftp.sharexftptest.com:21/ShareX/screenshot.jpg
-PreviewHttpPath: http://sharexftptest.com/ShareX/screenshot.jpg</pre>
-
-<h4><a name="Using_subdomain"></a>Using subdomain<a href="#Using_subdomain" class="section_anchor"></a></h4>
-<pre class="prettyprint">Host: jaex.sharexftptest.com
-SubFolderPath: Screenshots/ShareX
-HttpHomePath:
-PreviewFtpPath: ftp://jaex.sharexftptest.com:21/Screenshots/ShareX/screenshot.jpg
-PreviewHttpPath: http://jaex.sharexftptest.com/Screenshots/ShareX/screenshot.jpg</pre>
-
-<h3><a name="Using_%host_in"></a>Using %host in HttpHomePath<a href="#Using_%host_in" class="section_anchor"></a></h3><p>%host char will be automatically replaced with Host.  </p>
-
-<h4><a name="Using_domain"></a>Using domain<a href="#Using_domain" class="section_anchor"></a></h4>
-
-<pre class="prettyprint">Host: sharexftptest.com
-SubFolderPath: ShareX
-HttpHomePath: %host/jaex
-PreviewFtpPath: ftp://ftp.sharexftptest.com:21/jaex/ShareX/screenshot.jpg
-PreviewHttpPath: http://sharexftptest.com/jaex/ShareX/screenshot.jpg</pre>
-
-<h4><a name="Using_subdomain"></a>Using subdomain<a href="#Using_subdomain" class="section_anchor"></a></h4>
-
-<pre class="prettyprint">Host: jaex.sharexftptest.com
-SubFolderPath: ShareX
-HttpHomePath: %host
-PreviewFtpPath: ftp://jaex.sharexftptest.com:21/ShareX/screenshot.jpg
-PreviewHttpPath: http://jaex.sharexftptest.com/ShareX/screenshot.jpg</pre>
-
-<h3><a name="Using_@_in"></a>Using @ in HttpHomePath<a href="#Using_@_in" class="section_anchor"></a></h3>
-
-<p>SubFolderPath won&#x27;t be automatically appended to HttpHomePath if HttpHomePath does start with @ </p>
-
-<h4><a name="Using_subdomain"></a>Using subdomain<a href="#Using_subdomain" class="section_anchor"></a></h4>
-<pre class="prettyprint">Host: ftp.sharexftptest.com
-SubFolderPath: ShareX
-HttpHomePath: @jaex.sharexftptest.com
-PreviewFtpPath: ftp://ftp.sharexftptest.com:21/ShareX/screenshot.jpg
-PreviewHttpPath: http://jaex.sharexftptest.com/screenshot.jpg</pre>
-<hr />
-
-</div>
-
-<div id="c8">
-
-  <h1>Capturing shapes</h1>
-  <p>All you need to know about capturing shapes with tips and useful hotkeys</p>
-
-  <h3>Instructions<a href="#Instructions" class="section_anchor"></a></h3>
-
-  <ul>
-
-  <li>After creating region(s) double click anywhere or press <strong>Enter</strong> to capture these region(s) </li>
-  <li>You can right click on region to remove it </li>
-  <li><strong>Space</strong> key captures full screen </li>
-  <li>Right click empty area or press <strong>Esc</strong> to cancel capture </li>
-  </ul>
-
-  <h3><a name="When_region_is_not_selected_or_when_drawing_region"></a>When region is not selected or when drawing region<a href="#When_region_is_not_selected_or_when_drawing_region" class="section_anchor"></a></h3>
-  <ul>
-  <li>Arrow keys will move cursor position </li>
-  <li>Holding <strong>Ctrl</strong> will increase cursor move speed to 5 pixel instead 1 pixel </li>
-  </ul>
-
-  <h3><a name="When_drawing_region"></a>When drawing region<a href="#When_drawing_region" class="section_anchor"></a></h3>
-  <ul>
-  <li>Holding <strong>Shift</strong> will use proportional resizing (Width and height will be same size like square or circle) </li>
-  </ul>
-  <h3><a name="When_region_is_selected"></a>When region is selected<a href="#When_region_is_selected" class="section_anchor"></a></h3>
-  <ul>
-  <li>Arrow keys will move left top position for resize region </li>
-  <li><strong>Tab</strong> key will swap this anchor position to right bottom </li>
-  <li>Holding <strong>Shift</strong> will move the entire region instead of resizing </li>
-  <li>Holding <strong>Ctrl</strong> will increase resize/move speed to 5 pixel instead 1 pixel </li>
-  </ul>
-  <h3><a name="Other_hotkeys"></a>Other hotkeys<a href="#Other_hotkeys" class="section_anchor"></a></h3>
-  <ul>
-  <li>Use mouse wheel to change magnifier pixel count </li>
-  <li>If you hold <strong>Ctrl</strong> while using mouse wheel then magnifier pixel size will change instead pixel count </li>
-  <li>When using Rounded Rectangle region pressing <strong>+ or - (Numpad)</strong> will change corner radius </li>
-  <li>When using Triangle region pressing <strong>+ or - (Numpad)</strong> will change triangle angle </li>
-  <li><strong>I</strong> key toggles coordinate and size information visibility </li>
-  <li><strong>C</strong> key toggles screen wide crosshair visibility </li>
-  <li><strong>M</strong> key toggles magnifier visibility </li><li><strong>Q</strong> key toggles quick crop </li>
-
-</div>
-  <!-- end of content -->
-  <hr/>
-   <p>Copyright &#169; 2008 - 2013 ShareX</p>
-  </div>
-
-</div>
 
     <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/sidebar.js"></script>
+    <script src="../js/loader.js"></script>
 
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-      ga('create', 'UA-40712139-3', 'getsharex.com');
-      ga('send', 'pageview');
+        ga('create', 'UA-40712139-3', 'getsharex.com');
+        ga('send', 'pageview');
     </script>
-
-  </body>
+</body>
 </html>
