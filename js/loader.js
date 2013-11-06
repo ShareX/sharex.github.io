@@ -1,29 +1,39 @@
 $(document).ready(function () {
-    var hash = window.location.hash.substr(1);
-    var href = $('#mynav li a').each(function () {
-        var href = $(this).attr('href');
-        if (hash == href.substr(0, href.length - 5)) {
-            var toLoad = hash + '.html';
-            $('#content').load(toLoad)
+    var isLoading = false;
+    var hash = window.location.hash.substr(1) + ".html";
+    var test = $("#mynav li a").each(function () {
+        var href = $(this).attr("href");
+        if (hash == href) {
+            LoadContent(href);
+            isLoading = true;
+            return false;
         }
     });
 
-    $('#mynav li a').click(function () {
-        var toLoad = $(this).attr('href');
-        $('#content').hide('fast', loadContent);
-        $('#load').remove();
-        $('#wrapper').append('<span id="load">Loading...</span>');
-        $('#load').fadeIn('normal');
-        window.location.hash = $(this).attr('href').substr(0, $(this).attr('href').length - 5);
-        function loadContent() {
-            $('#content').load(toLoad, '', showNewContent())
-        }
-        function showNewContent() {
-            $('#content').show('normal', hideLoader());
-        }
-        function hideLoader() {
-            $('#load').fadeOut('normal');
-        }
+    if (!isLoading) {
+        var href = $("#mynav li a").first().attr("href");
+        LoadContent(href);
+    }
+
+    $("#mynav li a").click(function () {
+        var href = $(this).attr("href");
+        LoadContent(href);
         return false;
     });
 });
+
+function LoadContent(href) {
+    $("#content").fadeOut("fast", loadContent);
+    $("#loading").fadeIn("fast");
+
+    window.location.hash = href.substr(0, href.length - 5);
+
+    function loadContent() {
+        $("#content").load(href, "", showNewContent())
+    }
+
+    function showNewContent() {
+        $("#loading").hide();
+        $("#content").fadeIn("normal");
+    }
+}
