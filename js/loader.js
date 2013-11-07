@@ -16,6 +16,7 @@ $(document).ready(function () {
     }
 
     $("#mynav li a").click(function () {
+        window.scrollTo(0, 0);
         var href = $(this).attr("href");
         LoadContent(href);
         return false;
