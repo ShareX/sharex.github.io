@@ -1,6 +1,5 @@
 body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  -webkit-transform: translateZ(0px);
 }
 
 ul#sidebar {
@@ -10,7 +9,6 @@ ul#sidebar {
 #sidebar li {
   margin: -5px -15px -5px -35px;
 }
-
 
 /* General button style (reset) */
 .btnd {
@@ -687,13 +685,13 @@ footer p {
 }
 
 @media (min-width: 979px) {
-  #mynav.affix-top {
+  #sidebar.affix-top {
     position: static;
     margin-top:30px;
     width: 200px;
   }
   
-  #mynav.affix {
+  #sidebar.affix {
     position: fixed;
     top:70px;
     width: 200px;
@@ -701,4 +699,3 @@ footer p {
 }
 
 #mynav li.active a {background-color:#e1e1e1;}
-

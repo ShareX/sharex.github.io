@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var isLoading = false;
     var hash = window.location.hash.substr(1) + ".html";
-    var test = $("#mynav li a").each(function () {
+    $("#mynav li a").each(function () {
         var href = $(this).attr("href");
         if (hash == href) {
             LoadContent(href);
