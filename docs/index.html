@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse docnavbar navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container" id="top-navbar">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -46,25 +46,23 @@
     </div>
 
     <div class="container">
-        <!-- sidebar -->
         <div class="col-md-3">
-            <div class="list-group navbar visible-lg visible-md" id="sidebar">
-                <ul class="nav" id="mynav">
-                    <li><a href="SettingsFolder.html" class="list-group-item">Settings folder</a></li>
-                    <li><a href="CommandArguments.html" class="list-group-item">Command arguments</a></li>
-                    <li><a href="ScreenRecordingTutorial.html" class="list-group-item">Screen recording tutorial</a></li>
-                    <li><a href="UploadScreenshotsWithSteam.html" class="list-group-item">Upload screenshots with Steam</a></li>
-                    <li><a href="WebpageCapture.html" class="list-group-item">Webpage capture</a></li>
-                    <li><a href="DropboxTutorial.html" class="list-group-item">Dropbox tutorial</a></li>
-                    <li><a href="ConfiguringFTPAccounts.html" class="list-group-item">Configuring FTP accounts</a></li>
-                    <li><a href="RegionScreenCapture.html" class="list-group-item">Region screen capture</a></li>
-                </ul>
-            </div>
+            <ul class="nav nav-tabs nav-stacked" id="sidebar">
+                <li class="active"><a href="SettingsFolder.html">Settings folder</a></li>
+                <li><a href="CommandArguments.html">Command arguments</a></li>
+                <li><a href="ScreenRecordingTutorial.html">Screen recording tutorial</a></li>
+                <li><a href="UploadScreenshotsWithSteam.html">Upload screenshots with Steam</a></li>
+                <li><a href="WebpageCapture.html">Webpage capture</a></li>
+                <li><a href="DropboxTutorial.html">Dropbox tutorial</a></li>
+                <li><a href="ConfiguringFTPAccounts.html">Configuring FTP accounts</a></li>
+                <li><a href="RegionScreenCapture.html">Region screen capture</a></li>
+            </ul>
         </div>
-        <!-- end of sidebar -->
 
-        <div class="col-md-9"> 
-            <div id="loading"><h2>Loading...</h2></div>
+        <div class="col-md-9">
+            <div id="loading">
+                <h2>Loading...</h2>
+            </div>
             <div id="content"></div>
             <hr />
             <p>Copyright &#169; 2008 - 2013 ShareX</p>

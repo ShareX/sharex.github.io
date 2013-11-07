@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var isLoading = false;
     var hash = window.location.hash.substr(1) + ".html";
-    $("#mynav li a").each(function () {
+    $("#sidebar li a").each(function () {
         var href = $(this).attr("href");
         if (hash == href) {
             LoadContent(href);
@@ -11,11 +11,11 @@ $(document).ready(function () {
     });
 
     if (!isLoading) {
-        var href = $("#mynav li a").first().attr("href");
+        var href = $("#sidebar li a").first().attr("href");
         LoadContent(href);
     }
 
-    $("#mynav li a").click(function () {
+    $("#sidebar li a").click(function () {
         window.scrollTo(0, 0);
         var href = $(this).attr("href");
         LoadContent(href);
