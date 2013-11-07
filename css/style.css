@@ -2,14 +2,6 @@ body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
-ul#sidebar {
-  margin-top: 25px;
-}
-
-#sidebar li {
-  margin: -5px -15px -5px -35px;
-}
-
 /* General button style (reset) */
 .btnd {
   border: none;
@@ -38,13 +30,13 @@ ul#sidebar {
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
+
 /* Button 1 */
 .btnd-1 {
   border: 2px solid #fff;
   border-radius: 10px;
   color: #fff;
 }
-
 
 /* Button 1d */
 .btnd-1d:hover,
@@ -53,7 +45,6 @@ ul#sidebar {
   background: #fff;
   text-decoration: none;
 }
-
 
 .sharex-screenshot {
   height: 500px;
@@ -149,7 +140,6 @@ footer p {
 .footer1 p {
   padding-bottom: 5px;
 }
-
 
 .navbar-inverse {
   background-color: #29386c;
@@ -684,16 +674,23 @@ footer p {
   color: #e1e1e1;
 }
 
-@media (min-width: 979px) {
+#sidebar {
+  margin-top: 30px;
+}
+
+#sidebar.affix {
+  position: static;
+}
+
+@media (min-width: 992px) {
   #sidebar.affix-top {
     position: static;
-    margin-top:30px;
-    width: 200px;
+	width: 200px;
   }
   
   #sidebar.affix {
     position: fixed;
-    top:70px;
-    width: 200px;
+    top: 70px;
+	width: 200px;
   }
 }
