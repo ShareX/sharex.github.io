@@ -22,6 +22,14 @@ body {
   transition: all 0.3s;
 }
 
+@media (max-width: 400px) {
+  .btnd {
+	width: 200px;
+	padding: 10px 10px;
+	margin: 10px 0px;
+  }
+}
+
 .btnd:after {
   content: '';
   position: absolute;
