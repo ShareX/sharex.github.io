@@ -12,7 +12,6 @@ body {
   width: 270px;
   padding: 10px 50px;
   display: inline-block;
-  margin: 20px 20px;
   letter-spacing: 1px;
   font-weight: 400;
   outline: none;
@@ -20,6 +19,12 @@ body {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+@media (min-width: 763px) {
+  .btnd {
+    margin: 20px 20px;
+  }
 }
 
 .btnd:after {
