@@ -201,6 +201,4 @@ body:after {
   opacity: 1;
 }
 
-img {
-  max-height: 150px;
-}
+.img-thumbnail { max-height: 150px }
