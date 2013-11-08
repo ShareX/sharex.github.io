@@ -202,5 +202,5 @@ body:after {
 }
 
 img {
-  width: 200px;
+  max-height: 150px;
 }
