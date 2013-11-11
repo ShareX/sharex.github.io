@@ -1,3 +1,9 @@
+$("#sidebar").affix({
+    offset: {
+        top: $('#top-navbar').height() + $('.jumbotron').height()
+    }
+});
+
 $(document).ready(function () {
     var isLoading = false;
     var hash = window.location.hash.substr(1) + ".html";

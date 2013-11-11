@@ -200,5 +200,3 @@ body:after {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-
-.img-thumbnail { max-height: 150px }
