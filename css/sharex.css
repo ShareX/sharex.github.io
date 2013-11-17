@@ -788,3 +788,8 @@ footer p {
 a .img-thumbnail {
     max-height: 150px;
 }
+
+.release-info {
+    display: none;
+    font-size: 8px;
+}
