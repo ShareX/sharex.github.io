@@ -789,7 +789,7 @@ a .img-thumbnail {
     max-height: 150px;
 }
 
-.release-info {
+p.release-info {
     display: none;
-    font-size: 8px;
+    font-size: 16px;
 }

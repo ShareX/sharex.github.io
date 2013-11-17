@@ -7,6 +7,6 @@
         var downloadCount = asset.download_count;
         var text = name + " was last updated on " + date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " and has been downloaded " + downloadCount + " times.";
         $(".release-info").text(text);
-        $(".release-info").slideDown("slow");
+        $(".release-info").fadeIn("slow");
     });
 });
