@@ -5,7 +5,7 @@
         var asset = latestRelease.assets[0];
         var date = new Date(asset.updated_at);
         var downloadCount = asset.download_count;
-        var text = name + " released on " + date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " and downloaded " + downloadCount + " times.";
+        var text = name + " was released on " + date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " and downloaded " + downloadCount + " times.";
         $(".release-info").text(text);
         $(".release-info").fadeIn("slow");
     });
