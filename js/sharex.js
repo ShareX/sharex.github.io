@@ -11,7 +11,7 @@ function GetLatestReleaseInfo() {
         $(".sharex-download").attr("href", downloadURL);
 
         var releaseInfo = release.name + " was released " + $.timeago(asset.updated_at) + " and downloaded " + asset.download_count + " times.";
-        $("#sharex-screenshot").animate({ "top": "+=15px" });
+        $("#sharex-screenshot").animate({ "top": "+=20px" });
         $(".release-info").text(releaseInfo);
         $(".release-info").fadeIn("slow");
     });
