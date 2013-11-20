@@ -10,7 +10,7 @@ function GetLatestReleaseInfo() {
         var timeago = $.timeago(asset.updated_at);
         var downloadCount = asset.download_count;
         var text = name + " was released " + timeago + " and downloaded " + downloadCount + " times.";
-        $(".sharex-screenshot").animate({ "top": "+=15px" }, "slow");
+        $(".sharex-screenshot").animate({ "top": "+=15px" });
         $(".release-info").text(text);
         $(".release-info").fadeIn("slow");
     });
