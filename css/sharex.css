@@ -54,14 +54,6 @@ body {
     text-decoration: none;
 }
 
-.sharex-screenshot {
-    height: 500px;
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    top: 375px;
-}
-
 .after-header {
     background-color: #ecf0f1;
     font-size: 28px;
@@ -792,4 +784,12 @@ a .img-thumbnail {
 p.release-info {
     display: none;
     font-size: 16px;
+}
+
+#sharex-screenshot {
+    height: 500px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 375px;
 }
