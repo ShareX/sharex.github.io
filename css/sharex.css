@@ -274,7 +274,7 @@ footer p {
 }
 
 .jumbotronf {
-    background: #3E579F url(../img/header_background.jpg) no-repeat top center;
+    background: #2B3E78 url(../img/header_background.jpg) no-repeat top center;
     padding: 30px;
     margin-bottom: 30px;
     font-size: 21px;
@@ -732,7 +732,7 @@ footer p {
 }
 
 .jumbopurple {
-    background-color: #3E579F;
+    background: #2B3E78 url(../img/header_background.jpg) no-repeat top center;
     color: #ffffff;
 }
 
