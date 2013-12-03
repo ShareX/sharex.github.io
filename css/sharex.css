@@ -125,8 +125,12 @@ footer {
     text-align: center;
 }
 
+footer form {
+    margin-bottom: 15px;
+}
+
 footer p {
-    padding-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .footer1 {
