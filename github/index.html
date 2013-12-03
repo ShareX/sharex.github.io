@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -24,28 +24,28 @@
         </div>
     </div>
 
-    <div class="container" id="features_container">
-        <script type="text/javascript">
-            function getParameterByName(name)
-            {
-                var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
-                return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
-            }
+    <div class="container">
+        <p id="github_auth_container">
+            <script type="text/javascript">
+                function getParameterByName(name) {
+                    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+                    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+                }
 
-            if (getParameterByName("code"))
-            {
-                document.write("<h1>Please paste following code in ShareX: " + getParameterByName("code") + "</h1>");
-            }
-            else if (getParameterByName("error"))
-            {
-                document.write("<h1>ShareX is not properly authorized on GitHub</h1><p>(error: " + getParameterByName("error") + ")</p>");
-            }
-            else
-            {
-                document.write("<h1>Invalid access</h1>");
-            }
-        </script>
+                if (getParameterByName("code")) {
+                    document.write("<div class=\"alert alert-success\">Please paste following code in ShareX</div><p><input type=\"text\" class=\"form-control\" onClick=\"this.select();\" value=\"" + getParameterByName("code") + "\"></p>");
+                }
+                else if (getParameterByName("error")) {
+                    document.write("<div class=\"alert alert-danger\">ShareX is not properly authorized on GitHub (Error: " + getParameterByName("error") + ")</div>");
+                }
+                else {
+                    document.write("<div class=\"alert alert-warning\">Invalid access</div>");
+                }
+            </script>
+        </p>
     </div>
+
+    <script src="../js/bootstrap.min.js"></script>
 
     <script>
         (function (i, s, o, g, r, a, m) {
