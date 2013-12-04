@@ -801,3 +801,9 @@ p.release-info {
 #github_auth_container {
     margin-top: 20px;
 }
+
+/*Add hover class on btn-default to allow zclip overlay to simulate hover*/
+.btn-default.hover
+{
+  background-color: #ebebeb;
+}

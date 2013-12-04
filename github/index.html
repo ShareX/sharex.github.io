@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
-	
+
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/sharex.css" rel="stylesheet">
 
@@ -26,27 +26,50 @@
 
     <div class="container">
         <p id="github_auth_container">
-            <script type="text/javascript">
-                function getParameterByName(name) {
-                    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
-                    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
-                }
-
-                if (getParameterByName("code")) {
-                    document.write("<div class=\"alert alert-success\">Please paste following code in ShareX</div><p><input type=\"text\" class=\"form-control\" onClick=\"this.select();\" value=\"" + getParameterByName("code") + "\"></p>");
-                }
-                else if (getParameterByName("error")) {
-                    document.write("<div class=\"alert alert-danger\">ShareX is not properly authorized on GitHub (Error: " + getParameterByName("error") + ")</div>");
-                }
-                else {
-                    document.write("<div class=\"alert alert-warning\">Invalid access</div>");
-                }
-            </script>
+            <div class="panel" id="panel">
+                <div class="panel-heading"><strong><span id="title"></span></strong></div>
+                <div class="panel-body"><span id="content" /></div>
+            </div>
         </p>
     </div>
-
+    <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.zclip.min.js"></script>
 
+    <script type="text/javascript">
+        function getParameterByName(name) {
+            var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+            return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+        }
+        
+        $(document).ready(function() {
+            if (getParameterByName('code')) {
+                $('#panel').addClass('panel-success');
+                $('#title').html('Please paste following code in ShareX');
+                $('#content').html('<div class="input-group"> \
+                                        <input type="text" class="form-control" onClick="this.select();" value="' + getParameterByName("code") + '" id="code" /> \
+                                        <span class="input-group-btn"> \
+                                            <button class="btn btn-default" type="button" id="copy">Copy to clipboard</button> \
+                                        </span> \
+                                    </div>');
+
+                $('button#copy').zclip({
+                    path:'../js/ZeroClipboard.swf',
+                    copy:function() { return $('input#code').val(); }
+                });
+
+            } else if (getParameterByName('error')) {
+                $('#panel').addClass('panel-danger');
+                $('#title').html('ShareX is not properly authorized on GitHub');
+                $('#content').html('(Error: ' + getParameterByName('error') + ')');
+            } else {
+                $('#panel').addClass('panel-warning');
+                $('#title').html('Invalid access');
+                $('#content').html('Unexpected error occured. Please contact ShareX team.');
+            }
+        });
+    </script>
+    
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
