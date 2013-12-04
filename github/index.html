@@ -34,7 +34,7 @@
     </div>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery.zclip.min.js"></script>
+    <script src="../js/jquery.clipboard.min.js"></script>
 
     <script type="text/javascript">
         function getParameterByName(name) {
@@ -52,9 +52,9 @@
                                             <button class="btn btn-default" type="button" id="copy">Copy to clipboard</button> \
                                         </span> \
                                     </div>');
-
-                $('button#copy').zclip({
-                    path:'../img/ZeroClipboard.swf',
+                
+                $('button#copy').clipboard({
+                    path:'../img/jquery.clipboard',
                     copy:function() { return $('input#code').val(); }
                 });
 
