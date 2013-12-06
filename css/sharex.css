@@ -807,10 +807,6 @@ p.release-info {
     background-color: #ebebeb;
 }
 
-span.label {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-
 .jumbotronf .container .alert {
     padding: 5px;
     border: 0;
@@ -820,4 +816,9 @@ span.label {
     margin-bottom: 10px;
     font-size: 14px;
     line-height: 20px;
+}
+
+code {
+    color: #0054C0;
+    background-color: #ECF6FF;
 }
