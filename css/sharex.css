@@ -803,7 +803,10 @@ p.release-info {
 }
 
 /*Add hover class on btn-default to allow zclip overlay to simulate hover*/
-.btn-default.hover
-{
-  background-color: #ebebeb;
+.btn-default.hover {
+    background-color: #ebebeb;
+}
+
+span.label {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
