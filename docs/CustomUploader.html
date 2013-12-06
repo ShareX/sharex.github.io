@@ -27,6 +27,18 @@
 
 <p><strong>Example:</strong> http://getsharex.com/upload.php</p>
 
+<h3>File form name:</h3>
+
+<p>
+    This field can be only used when
+    <code>Request type</code> is
+    <code>POST</code>.
+</p>
+
+<p>In html check input tag, name attribute for find <code>file form name</code>. Example in this html code <code>file form name</code> is <code>file_image</code>:</p>
+
+<p><pre>&lt;input type="file" name="file_image"&gt;</pre></p>
+
 <h3>Arguments:</h3>
 
 <p>Left column is for argument name, right column for argument value.</p>
@@ -60,18 +72,6 @@
         </tr>
     </tbody>
 </table>
-
-<h3>File form name:</h3>
-
-<p>
-    This field can be only used when
-    <code>Request type</code> is
-    <code>POST</code>.
-</p>
-
-<p>In html you must check input tag name attribute for find value of this. Example in this html code file form name is <code>file_image</code>:</p>
-
-<p><code>&lt;input type="file" name="file_image"&gt;</code></p>
 
 <h3>Response type (Response text or Redirection URL):</h3>
 
@@ -118,3 +118,25 @@
     <code>$1,thumbnail$</code> this code means first regex in list and
     <code>thumbnail</code> named group in regex result.
 </p>
+
+<p><strong>Example if we have this json response:</strong></p>
+
+<pre>
+{
+    "server": 41,
+    "image_size": "150x200",
+    "filename": "1564561651.jpg",
+    "file_size": 52687
+}
+</pre>
+
+<p>You can use like this two regex (first regex using named group, second regex using numbered group):</p>
+
+<ul>
+    <li><code>"server": (?&lt;serverid&gt;\d+)</code></li>
+    <li><code>"filename": "(.+)"</code></li>
+</ul>
+
+<p>And in URL textbox use this syntax: http://getsharex.com/server/<code>$1,serverid$</code>/image/<code>$2,1$</code></p>
+
+<p>Result is: http://getsharex.com/server/41/image/1564561651.jpg</p>
