@@ -795,7 +795,7 @@ p.release-info {
     width: 100%;
     text-align: center;
     position: absolute;
-    top: 375px;
+    top: 395px;
 }
 
 #github_auth_container {
@@ -809,4 +809,15 @@ p.release-info {
 
 span.label {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.jumbotronf .container .alert {
+    padding: 5px;
+    border: 0;
+    margin: auto;
+    width: 75%;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px;
 }
