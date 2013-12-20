@@ -20,7 +20,7 @@
     <div class="jumbotron masthead jumbopurple">
         <div class="container">
             <h1>ShareX</h1>
-            <p>GitHub authorization</p>
+            <p>Authorization</p>
         </div>
     </div>
 
@@ -61,7 +61,7 @@
 
             } else if (getParameterByName('error')) {
                 $('#panel').addClass('panel-danger');
-                $('#title').html('ShareX is not properly authorized on GitHub');
+                $('#title').html('ShareX is not properly authorized');
                 $('#content').html('(Error: ' + getParameterByName('error') + ')');
             } else {
                 $('#panel').addClass('panel-warning');
