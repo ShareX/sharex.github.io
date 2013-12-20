@@ -48,10 +48,10 @@
                 $('#panel').addClass('panel-success');
                 $('#title').html('Please paste following code in ShareX');
                 $('#content').html('<div class="input-group"> \
-                                        <input type="text" class="form-control" onClick="this.select();" value="' + getParameterByName("code") + '" id="code" /> \
                                         <span class="input-group-btn"> \
                                             <button class="btn btn-default" type="button" id="copy">Copy to clipboard</button> \
                                         </span> \
+                                        <input type="text" class="form-control" onClick="this.select();" value="' + getParameterByName("code") + '" id="code" /> \
                                     </div>');
                 
                 $('button#copy').clipboard({
