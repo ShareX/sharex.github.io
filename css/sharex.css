@@ -781,10 +781,6 @@ footer p {
     margin-left: 30px;
 }
 
-a .img-thumbnail {
-    max-height: 150px;
-}
-
 p.release-info {
     display: none;
     font-size: 16px;
