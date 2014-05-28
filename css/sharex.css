@@ -818,3 +818,7 @@ code {
     color: #0054C0;
     background-color: #ECF6FF;
 }
+
+.navbar-left {
+    padding-left: 30px;
+}

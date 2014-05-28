@@ -8,8 +8,8 @@
     <meta name="description" content="ShareX is an open source program that lets you take screenshots of any selected area with a single key, save them in your clipboard, hard disk or instantly upload them to over 30 different file hosting services.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/sharex.css" rel="stylesheet">
     <link href="https://plus.google.com/110225361399361277394" rel="publisher" />
 
@@ -19,22 +19,14 @@
 <body>
     <nav class="navbar navbar-inverse" role="navigation">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-
             <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-left">
                     <li class="active"><a href="#">Home</a></li>
                     <li><a href="https://plus.google.com/photos/+GetShareX/albums/6001767882980941553">Screenshots</a></li>
-                    <li><a href="features/">Features</a></li>
-                    <li><a href="https://drive.google.com/folderview?id=0B0ywocRL7KCFRENVM1g0TTd2ZDg&usp=sharing#list" title="ShareX Documentation in Google Drive">Docs</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/ShareX">Features</a></li>
+                    <li><a href="https://drive.google.com/folderview?id=0B0ywocRL7KCFRENVM1g0TTd2ZDg&usp=sharing#list" title="ShareX Documentation in Google Drive">Documents</a></li>
                     <li><a href="http://webchat.freenode.net/?channels=%23ShareX" title="#ShareX on irc.freenode.net">IRC</a></li>
+                    <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=donate%40getsharex%2ecom&lc=US&item_name=ShareX&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted" title="PayPal">Donate</a></li>
                 </ul>
             </div>
         </div>
@@ -116,13 +108,6 @@
 
     <footer>
         <div class="container">
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHLwYJKoZIhvcNAQcEoIIHIDCCBxwCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYB6qfOM6DKcNSLVkjj4XtXTiu++Fc8F6aZJD8hEt3JQdLP3zGjMq0S58tf4qjqMTdUgMrgubYVcaev+moPwd/3dCIAZVyen7vP2OYKWTkZaU3TpOHJGbTifK1Ppr65hafCQc5a06nE+PUZQnje1TbcbgVNhWb2TdbVdFgWROPoanjELMAkGBSsOAwIaBQAwgawGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIBywkCopEp7qAgYjAK/5kGIg29j0f9DHceRib5spwnohivMvXN7PhAiRi6kQfO99pdFwEph6lGvKBRLzUuG+0upx1yq3Z5XK4929UU2HNZ9geckj4zSHm+tIk0Y9wHFt/ZK1ab/Q+xVTBmm/Y10FNt7u9hSizqPGlPDCjuAuorW2CNzP2nMsqTXgP7PDjiyOXOv2DoIIDhzCCA4MwggLsoAMCAQICAQAwDQYJKoZIhvcNAQEFBQAwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMB4XDTA0MDIxMzEwMTMxNVoXDTM1MDIxMzEwMTMxNVowgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBR07d/ETMS1ycjtkpkvjXZe9k+6CieLuLsPumsJ7QC1odNz3sJiCbs2wC0nLE0uLGaEtXynIgRqIddYCHx88pb5HTXv4SZeuv0Rqq4+axW9PLAAATU8w04qqjaSXgbGLP3NmohqM6bV9kZZwZLR/klDaQGo1u9uDb9lr4Yn+rBQIDAQABo4HuMIHrMB0GA1UdDgQWBBSWn3y7xm8XvVk/UtcKG+wQ1mSUazCBuwYDVR0jBIGzMIGwgBSWn3y7xm8XvVk/UtcKG+wQ1mSUa6GBlKSBkTCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb22CAQAwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOBgQCBXzpWmoBa5e9fo6ujionW1hUhPkOBakTr3YCDjbYfvJEiv/2P+IobhOGJr85+XHhN0v4gUkEDI8r2/rNk1m0GA8HKddvTjyGw/XqXa+LSTlDYkqI8OwR8GEYj4efEtcRpRYBxV8KxAW93YDWzFGvruKnnLbDAF6VR5w/cCMn5hzGCAZowggGWAgEBMIGUMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbQIBADAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTMxMjAzMTUxMDMxWjAjBgkqhkiG9w0BCQQxFgQUivUbVr5pYL7P5rDKsm2/EGxO/IQwDQYJKoZIhvcNAQEBBQAEgYAEEccNUqMU7tnflYO49VQkLnhKvwx1BPJ7R4hzrYiD7ypr7uVCqnds9UlXv6mYFCNFqEtDyMw3upZH0yewnTjuTswekuMrM/vj03eknmsgdvhz5EOEtvcbD9mwYqZaZzKD1U8tIxXPtura7AR8YR4qRTddHDon/6QHKYMuMU/4TA==-----END PKCS7-----">
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-            </form>
-
             <p>
                 <iframe src="http://ghbtns.com/github-btn.html?user=ShareX&repo=ShareX&type=watch&count=true"
                         allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20" id="github"></iframe>
@@ -137,8 +122,8 @@
         </div>
     </footer>
 
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="js/jquery.timeago.js"></script>
     <script src="js/sharex.js"></script>
 
