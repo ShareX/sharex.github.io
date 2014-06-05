@@ -1,18 +1,23 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-
-    <title>ShareX - Take screenshots, Annotate, Upload and share URL in clipboard</title>
-
-    <meta name="description=" content="ShareX is an open source program that lets you take screenshots of any selected area with a single key, save them in your clipboard, hard disk or instantly upload them to over 30 different file hosting services.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShareX is an open source program that lets you take screenshots of any selected area with a single key, save them in your clipboard, hard disk or instantly upload them to over 30 different file hosting services.">
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <title>ShareX - Take screenshots or screencasts, annotate, upload and share URL in clipboard</title>
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/sharex.css" rel="stylesheet">
 
-    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <body>
@@ -26,50 +31,61 @@
     <div class="container">
         <p id="auth_container">
             <div class="panel" id="panel">
-                <div class="panel-heading"><strong><span id="title"></span></strong></div>
+                <div class="panel-heading">
+                    <strong><span id="title"></span></strong>
+                </div>
                 <div class="panel-body"><span id="content" /></div>
             </div>
         </p>
     </div>
 
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery.clipboard.min.js"></script>
 
     <script type="text/javascript">
-        function getParameterByName(name) {
+        function GetParameterByName(name) {
             var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
             return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
         }
-        
-        $(document).ready(function() {
-            if (getParameterByName('code')) {
+
+        $(document).ready(function () {
+            var code = GetParameterByName('code');
+
+            if (!code) {
+                code = GetParameterByName('oauth_verifier')
+            }
+
+            if (!code) {
                 $('#panel').addClass('panel-success');
                 $('#title').html('Please paste following code in ShareX');
                 $('#content').html('<div class="input-group"> \
                                         <span class="input-group-btn"> \
                                             <button class="btn btn-default" type="button" id="copy">Copy to clipboard</button> \
                                         </span> \
-                                        <input type="text" class="form-control" onClick="this.select();" value="' + getParameterByName("code") + '" id="code" /> \
+                                        <input type="text" class="form-control" onClick="this.select();" value="' + code + '" id="code" /> \
                                     </div>');
-                
                 $('button#copy').clipboard({
-                    path:'../img/jquery.clipboard.swf',
-                    copy:function() { return $('input#code').val(); }
+                    path: '../img/jquery.clipboard.swf',
+                    copy: function () { return $('input#code').val(); }
                 });
-
-            } else if (getParameterByName('error')) {
-                $('#panel').addClass('panel-danger');
-                $('#title').html('ShareX is not properly authorized');
-                $('#content').html('(Error: ' + getParameterByName('error') + ')');
             } else {
-                $('#panel').addClass('panel-warning');
-                $('#title').html('Invalid access');
-                $('#content').html('Unexpected error occured. Please contact ShareX team.');
+                var error = GetParameterByName('error');
+
+                if (error) {
+                    $('#panel').addClass('panel-danger');
+                    $('#title').html('ShareX is not properly authorized');
+                    $('#content').html('Error: ' + error);
+                }
+                else {
+                    $('#panel').addClass('panel-warning');
+                    $('#title').html('Invalid access');
+                    $('#content').html('Unexpected error occured.');
+                }
             }
         });
     </script>
-    
+
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
