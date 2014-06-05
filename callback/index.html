@@ -56,7 +56,7 @@
                 code = GetParameterByName('oauth_verifier')
             }
 
-            if (!code) {
+            if (code) {
                 $('#panel').addClass('panel-success');
                 $('#title').html('Please paste following code in ShareX');
                 $('#content').html('<div class="input-group"> \
