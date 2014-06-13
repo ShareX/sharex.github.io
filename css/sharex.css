@@ -819,6 +819,7 @@ code {
     background-color: #ECF6FF;
 }
 
-.navbar-left {
+.navbar-nav {
     padding-left: 30px;
+    padding-right: 30px;
 }
