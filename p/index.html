@@ -12,7 +12,7 @@
         * http://minimal.be/lab/Sprite3D
         *
         * Copyright (c) 2010 boblemarin emeric@minimal.be http://www.minimal.be
-        * 
+        *
         * Permission is hereby granted, free of charge, to any person
         * obtaining a copy of this software and associated documentation
         * files (the "Software"), to deal in the Software without
@@ -21,10 +21,10 @@
         * copies of the Software, and to permit persons to whom the
         * Software is furnished to do so, subject to the following
         * conditions:
-        * 
+        *
         * The above copyright notice and this permission notice shall be
         * included in all copies or substantial portions of the Software.
-        * 
+        *
         * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
         * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
         * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -242,8 +242,6 @@
             return this;
         };
 
-
-
         /**
          * Sets the amount of rotation around the X-axis of the Sprite3D.
          * @param {Number} rx The value of the rotation
@@ -287,7 +285,6 @@
             this.rotationZ = rz;
             return this;
         };
-
 
         /**
          * Applies a relative rotation in 3D space around the X-axis.
@@ -378,7 +375,7 @@
         };
 
         /**
-         * Sets the registrations point for the Sprite3D object. 
+         * Sets the registrations point for the Sprite3D object.
          * By default, CSS positionning is relative to the top left corner of the element.
          * The registration point values are simply substracted from the position when applied
          * @param {Number} rx The registration point value for the X-axis
@@ -405,7 +402,6 @@
             this.style[this._browserPrefix + "TransformOrigin"] = px + " " + py;
             return this;
         };
-
 
         /**
          * Sets the size of the HTML element linked to the Sprite3D object, using the width and height css properties.
@@ -538,7 +534,6 @@
             return this;
         };
 
-
         /**
          * Sets the size of the tiles in the spritesheet used as background image.
          * @param {Number} width The desired width
@@ -623,7 +618,6 @@
             return this;
         };
 
-
         /**
          * Applies 2D position, rotation and scaling values.
          * This method allows to use Sprite3D with browsers that only support 2D transforms.
@@ -650,7 +644,6 @@
             return this;
         };
 
-
         /**
          * Applies position and rotation values, as well as opacity and size.
          * @return {Sprite3D} The reference to this Sprite3D object
@@ -662,7 +655,6 @@
             this.style.height = this.height + "px";
             return this.update();
         };
-
 
         /**
          * Calls the update() method on every child of the Sprite3D object.
@@ -752,7 +744,6 @@
             return null;
         };
 
-
         Sprite3D.prototype.listeners = {};
 
         /**
@@ -786,7 +777,6 @@
             }
             return this;
         };
-
 
         /**
          * Creates a centered empty HTML div element to be used as root container for the other Sprite3D objects.
@@ -833,7 +823,6 @@
             //s[Sprite3D.prototype._browserPrefix+"TransformOrigin"] = "0 0";
             s[Sprite3D.prototype._browserPrefix + "Transform"] = "translateZ(0px)";
 
-
             //s.webkitPerspective = "800";
             //	s.webkitPerspectiveOrigin = "0 0";
             //	s.webkitTransformOrigin = "0 0";
@@ -858,7 +847,6 @@
 
             return c;
         };
-
 
         /** Private static property. Used internally for browser checking. You should not change its value. */
         Sprite3D.prototype._isInit = false;
@@ -928,7 +916,7 @@
         along with this program; if not, write to the Free Software
         Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 
-        Optionally you can also view the license at <http://www.gnu.org/licenses/>.
+        Optionally you can also view the license at <http://www.gnu.org/licenses />.
         */
         'use strict';
 
@@ -943,7 +931,9 @@
         PREVIEW.MouseMiddle = 2;
         PREVIEW.MouseRight = 3;
 
-        PREVIEW.KeyEscape = 27;
+        PREVIEW.KeySpace = 32;
+
+        PREVIEW.RotationSpeed = 0.05;
 
         window.requestAnimFrame = (function () {
             return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function (callback) {
@@ -1068,7 +1058,7 @@
                 this.element = document.createElement('video');
                 this.element.src = this.file;
                 this.element.autoplay = true;
-                this.element.loop = true;
+                this.element.loop = false;
                 this.element.controls = true;
             },
 
@@ -1179,16 +1169,16 @@
             },
 
             keydown: function (keyCode) {
-                if (keyCode === PREVIEW.KeyEscape) {
+                if (keyCode === PREVIEW.KeySpace) {
                     this.camera.reset();
                 }
             },
 
             mousemove: function (x, y) {
                 switch (this.pressed_mouse_button) {
-                    case PREVIEW.MouseMiddle:
-                        return this.camera.rotate((innerHeight / 2 - y) * 0.01, -(innerWidth / 2 - x) * 0.01, 0);
                     case PREVIEW.MouseLeft:
+                        return this.camera.rotate((innerHeight / 2 - y) * PREVIEW.RotationSpeed, -(innerWidth / 2 - x) * PREVIEW.RotationSpeed, 0);
+                    case PREVIEW.MouseMiddle:
                         return this.camera.move(x - this.pressed_mouse_position.x + this.last_camera_position.x, y - this.pressed_mouse_position.y + this.last_camera_position.y);
                 }
             },
@@ -1254,9 +1244,9 @@
 
     <script>
         function init() {
-            if(window.location.hash) {
+            if (window.location.hash) {
                 var hash = window.location.hash.substring(1);
-                document.title = "Preview: " + hash;
+                document.title = "Preview: " + PREVIEW.Filter.htmlEncode(hash);
                 preview(hash);
             }
         }
@@ -1276,7 +1266,7 @@
             };
 
             // Create a smoothed camera
-            var camera = new PREVIEW.SmoothedCamera();
+            var camera = new PREVIEW.Camera();
 
             // When the element has loaded, set opaque,
             // and animate the camera in
@@ -1327,7 +1317,7 @@
         #media {
             opacity: 0;
             transition: opacity 250ms;
-            box-shadow: 0 0 1em #555;
+            box-shadow: 0px 0px 20px black;
         }
     </style>
 </head>
