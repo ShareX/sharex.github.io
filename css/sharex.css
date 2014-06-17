@@ -823,3 +823,11 @@ code {
     padding-left: 30px;
     padding-right: 30px;
 }
+
+.icon-margin-bottom {
+    margin-bottom: 10px;
+}
+
+.row-margin-bottom {
+    margin-bottom: 50px;
+}
