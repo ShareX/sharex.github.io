@@ -831,3 +831,7 @@ code {
 .row-margin-bottom {
     margin-bottom: 50px;
 }
+
+.copy-button {
+    width: 145px;
+}
