@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+    $("#sharex-features").attr("href", "https://en.wikipedia.org/wiki/ShareX");
     GetLatestReleaseInfo();
 });
 

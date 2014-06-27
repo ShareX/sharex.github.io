@@ -835,3 +835,20 @@ code {
 .copy-button {
     width: 145px;
 }
+
+.features_container {
+    margin-top: 30px;
+}
+
+.jumbotron .main_container {
+    max-width: 1000px;
+}
+
+.main_container .main_header {
+    margin-top: 0px;
+}
+
+.main_header a {
+    color: inherit;
+    text-decoration: none;
+}
