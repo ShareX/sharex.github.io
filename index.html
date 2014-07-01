@@ -42,7 +42,7 @@
                     <li><a href="https://raw.githubusercontent.com/ShareX/ShareX/master/VersionHistory.txt">Changelog</a></li>
                     <li><a href="https://github.com/ShareX/ShareX/wiki">Documents</a></li>
                     <li><a href="http://webchat.freenode.net/?channels=%23ShareX" title="#ShareX on irc.freenode.net">IRC</a></li>
-                    <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=donate%40getsharex%2ecom&lc=US&item_name=ShareX&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted" title="PayPal">Donate</a></li>
+                    <li><a id="Donate" href="#Donate" title="PayPal">Donate</a></li>
                 </ul>
             </div>
         </div>
@@ -124,10 +124,44 @@
         </div>
     </footer>
 
+    <form id="DonateForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+    </form>
+
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.timeago.js"></script>
-    <script src="js/sharex.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sharex-features").attr("href", "https://en.wikipedia.org/wiki/ShareX");
+            GetLatestReleaseInfo();
+        });
+
+        $("#Donate").click(function () {
+            $("#DonateForm").submit();
+            return false;
+        });
+
+        function GetLatestReleaseInfo() {
+            $.getJSON("https://api.github.com/repos/ShareX/ShareX/releases").done(function (json) {
+                var release = json[0];
+                var asset = release.assets[0];
+                var downloadURL = "https://github.com/ShareX/ShareX/releases/download/" + release.tag_name + "/" + asset.name;
+                var downloadCount = 0;
+                for (var i = 0; i < release.assets.length; i++) {
+                    downloadCount += release.assets[i].download_count;
+                }
+                var releaseInfo = release.name + " was updated " + $.timeago(asset.updated_at) + " and downloaded " + downloadCount + " times.";
+                $(".sharex-download").attr("href", downloadURL);
+                $("#sharex-screenshot").animate({ "top": "+=20px" });
+                $(".release-info").text(releaseInfo);
+                $(".release-info").fadeIn("slow");
+            });
+        }
+    </script>
 
     <script type="text/javascript">
         (function () {
