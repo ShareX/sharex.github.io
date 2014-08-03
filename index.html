@@ -12,6 +12,7 @@
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
     <link href="css/octicons.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.css?v=2.1.5" rel="stylesheet" media="screen">
     <link href="css/sharex.css" rel="stylesheet">
     <link href="https://plus.google.com/110225361399361277394" rel="publisher">
 
@@ -37,12 +38,12 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Home</a></li>
-                    <li><a href="https://plus.google.com/photos/+GetShareX/albums/6001767882980941553">Screenshots</a></li>
-                    <li><a href="features/" id="sharex-features">Features</a></li>
+                    <li><a id="sharex-screenshots" data-fancybox-type="iframe" href="http://imgur.com/a/7TDhO/embed?background=292929&text=ffffff&link=4e76c9">Screenshots</a></li>
+                    <li><a id="sharex-features" href="features/">Features</a></li>
                     <li><a href="https://raw.githubusercontent.com/ShareX/ShareX/master/VersionHistory.txt">Changelog</a></li>
                     <li><a href="https://github.com/ShareX/ShareX/wiki">Documents</a></li>
                     <li><a href="http://webchat.freenode.net/?channels=%23ShareX" title="#ShareX on irc.freenode.net">IRC</a></li>
-                    <li><a id="Donate" href="#Donate" title="PayPal">Donate</a></li>
+                    <li><a id="sharex-donate" href="#Donate" title="PayPal">Donate</a></li>
                 </ul>
             </div>
         </div>
@@ -133,16 +134,39 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.timeago.js"></script>
+    <script src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#sharex-features").attr("href", "https://en.wikipedia.org/wiki/ShareX");
-            GetLatestReleaseInfo();
-        });
+            $("#sharex-screenshots").fancybox({
+                padding: 5,
+                margin: 0,
+                autoSize: false,
+                width: '90%',
+                height: '90%',
+                helpers: {
+                    overlay: {
+                        locked: false,
+                        css: {
+                            'background': 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                },
+                openEffect: 'fade',
+                closeEffect: 'fade',
+                iframe: {
+                    preload: false
+                }
+            });
 
-        $("#Donate").click(function () {
-            $("#DonateForm").submit();
-            return false;
+            $("#sharex-features").attr("href", "https://en.wikipedia.org/wiki/ShareX");
+
+            $("#sharex-donate").click(function () {
+                $("#DonateForm").submit();
+                return false;
+            });
+
+            GetLatestReleaseInfo();
         });
 
         function GetLatestReleaseInfo() {
