@@ -38,9 +38,9 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Home</a></li>
-                    <li><a class="fancybox" data-fancybox-type="iframe" href="http://imgur.com/a/7TDhO/embed?background=292929&text=ffffff&link=4e76c9">Screenshots</a></li>
+                    <li><a id="sharex-screenshots" data-fancybox-type="iframe" href="http://imgur.com/a/7TDhO/embed?background=292929&text=ffffff&link=4e76c9">Screenshots</a></li>
                     <li><a id="sharex-features" href="features/">Features</a></li>
-                    <li><a class="fancybox" data-fancybox-type="iframe" href="https://raw.githubusercontent.com/ShareX/ShareX/master/VersionHistory.txt">Changelog</a></li>
+                    <li><a href="https://raw.githubusercontent.com/ShareX/ShareX/master/VersionHistory.txt">Changelog</a></li>
                     <li><a href="https://github.com/ShareX/ShareX/wiki">Documents</a></li>
                     <li><a href="http://webchat.freenode.net/?channels=%23ShareX" title="#ShareX on irc.freenode.net">IRC</a></li>
                     <li><a id="sharex-donate" href="#Donate" title="PayPal">Donate</a></li>
@@ -138,7 +138,7 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $(".fancybox").fancybox({
+            $("#sharex-screenshots").fancybox({
                 padding: 5,
                 margin: 0,
                 autoSize: false,
