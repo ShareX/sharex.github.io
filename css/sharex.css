@@ -852,3 +852,7 @@ code {
     color: inherit;
     text-decoration: none;
 }
+
+#_atssh {
+    display: none;
+}
