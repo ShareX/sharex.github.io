@@ -856,3 +856,7 @@ code {
 #_atssh {
     display: none;
 }
+
+.sharex-header {
+    margin-top: 10px;
+}
