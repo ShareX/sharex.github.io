@@ -11,6 +11,7 @@
 
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
     <link href="css/octicons.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/jquery.fancybox.css?v=2.1.5" rel="stylesheet" media="screen">
     <link href="css/sharex.css" rel="stylesheet">
@@ -43,7 +44,13 @@
                     <li><a href="https://github.com/ShareX/ShareX/wiki/Changelog">Changelog</a></li>
                     <li><a href="https://github.com/ShareX/ShareX/wiki" title="Wiki">Documents</a></li>
                     <li><a href="http://webchat.freenode.net/?channels=%23ShareX" title="#ShareX on irc.freenode.net">IRC</a></li>
-                    <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CXW5QE77SKKEJ" title="PayPal">Donate</a></li>
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Donate <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CXW5QE77SKKEJ"><i class="fa fa-paypal fa-lg fa-fw"></i> PayPal</a></li>
+                            <li><a href="https://www.coinbase.com/Jaex"><i class="fa fa-btc fa-lg fa-fw"></i> Bitcoin</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
