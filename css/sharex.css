@@ -39,6 +39,11 @@ body {
     transition: all 0.3s;
 }
 
+.btnd:focus {
+    text-decoration: none;
+    color: white;
+}
+
 /* Button 1 */
 .btnd-1 {
     border: 2px solid #fff;
@@ -863,4 +868,9 @@ code {
 
 .navbar-nav .dropdown-menu {
     font-size: 16px;
+    min-width: 80px;
+}
+
+.navbar-nav .dropdown-menu>li>a {
+    text-align: center;
 }
