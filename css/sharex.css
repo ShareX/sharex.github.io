@@ -834,7 +834,7 @@ code {
 }
 
 .row-margin-bottom {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .copy-button {
@@ -876,6 +876,6 @@ code {
 }
 
 .sharex-x {
-    -ms-text-shadow: 6px 0px 0px rgba(255, 255, 255, 0.2);
-    text-shadow: 6px 0px 0px rgba(255, 255, 255, 0.2);
+    -ms-text-shadow: 6px 0px 0px rgba(255, 255, 255, 0.25);
+    text-shadow: 6px 0px 0px rgba(255, 255, 255, 0.25);
 }
