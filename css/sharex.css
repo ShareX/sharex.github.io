@@ -876,6 +876,6 @@ code {
 }
 
 .sharex-x {
-    -ms-text-shadow: 6px 0px 0px rgba(255, 255, 255, 0.25);
-    text-shadow: 6px 0px 0px rgba(255, 255, 255, 0.25);
+    -ms-text-shadow: 6px 0px 0px rgba(255, 255, 255, 0.2);
+    text-shadow: 6px 0px 0px rgba(255, 255, 255, 0.2);
 }
