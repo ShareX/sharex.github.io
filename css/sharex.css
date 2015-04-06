@@ -5,14 +5,14 @@ body {
 /* General button style (reset) */
 .btnd {
     border: none;
-    font-size: 16px;
+    font-size: 18px;
     color: white;
     background: none;
     cursor: pointer;
-    width: 270px;
+    width: 200px;
     padding: 10px 50px;
     display: inline-block;
-    margin: 20px 20px;
+    margin: 20px 5px;
     letter-spacing: 1px;
     font-weight: 400;
     outline: none;
@@ -24,7 +24,7 @@ body {
 
 @media (max-width: 400px) {
     .btnd {
-        width: 200px;
+        width: 150px;
         padding: 10px 10px;
         margin: 10px 0px;
     }
@@ -873,6 +873,11 @@ code {
 
 .navbar-nav .dropdown-menu > li > a {
     text-align: center;
+}
+
+.sharex-s {
+    -ms-text-shadow: -6px -1px 0px rgba(255, 255, 255, 0.2);
+    text-shadow: -6px -1px 0px rgba(255, 255, 255, 0.2);
 }
 
 .sharex-x {
