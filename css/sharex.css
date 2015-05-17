@@ -874,13 +874,3 @@ code {
 .navbar-nav .dropdown-menu > li > a {
     text-align: center;
 }
-
-.sharex-s {
-    -ms-text-shadow: -6px -1px 0px rgba(255, 255, 255, 0.2);
-    text-shadow: -6px -1px 0px rgba(255, 255, 255, 0.2);
-}
-
-.sharex-x {
-    -ms-text-shadow: 6px 0px 0px rgba(255, 255, 255, 0.2);
-    text-shadow: 6px 0px 0px rgba(255, 255, 255, 0.2);
-}
