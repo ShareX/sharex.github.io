@@ -38,12 +38,13 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Home</a></li>
-                    <li><a id="sharex-video" data-fancybox-type="iframe" href="https://www.youtube.com/embed/4fvSC4ltTrE?autoplay=1&controls=0&rel=0&showinfo=0?modestbranding=1">Video</a></li>
+                    <li><a id="sharex-video" data-fancybox-type="iframe" href="https://www.youtube.com/embed/4fvSC4ltTrE?autoplay=1&rel=0&showinfo=0">Video</a></li>
                     <li><a id="sharex-screenshots" data-fancybox-type="iframe" href="//imgur.com/a/7TDhO/embed?background=292929&text=ffffff&link=4e76c9">Screenshots</a></li>
                     <li><a id="sharex-features" href="features/">Features</a></li>
                     <li><a href="https://github.com/ShareX/ShareX/wiki/Changelog">Changelog</a></li>
                     <li><a href="https://github.com/ShareX/ShareX/wiki" title="Wiki">Documentation</a></li>
                     <li><a href="http://webchat.freenode.net/?channels=%23ShareX" title="#ShareX on irc.freenode.net">IRC</a></li>
+                    <li><a href="http://steamcommunity.com/sharedfiles/filedetails/?id=491692781" title="Steam Greenlight">Greenlight</a></li>
                 </ul>
             </div>
         </div>
@@ -57,7 +58,6 @@
                 <a href="https://github.com/ShareX/ShareX/releases/latest" class="sharex-download btnd btnd-1 btnd-1d">Download</a>
                 <a href="https://github.com/ShareX/ShareX" title="GitHub" class="btnd btnd-1 btnd-1d">Source</a>
                 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CXW5QE77SKKEJ" title="PayPal" class="btnd btnd-1 btnd-1d">Donate</a>
-                <a href="http://steamcommunity.com/sharedfiles/filedetails/?id=491692781" title="Greenlight" class="btnd btnd-1 btnd-1d"><span style="color: #9BCB11;">Greenlight</span></a>
             </p>
 
             <p class="release-info"></p>
@@ -140,13 +140,24 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $("#sharex-video").fancybox({
-                padding: 0,
+                padding: 5,
                 margin: 0,
                 autoSize: false,
                 width: '1280px',
                 height: '720px',
+                helpers: {
+                    overlay: {
+                        locked: false,
+                        css: {
+                            'background': 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                },
                 openEffect: 'fade',
-                closeEffect: 'fade'
+                closeEffect: 'fade',
+                iframe: {
+                    preload: false
+                }
             });
 
             $("#sharex-screenshots").fancybox({
