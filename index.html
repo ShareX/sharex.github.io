@@ -38,6 +38,7 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Home</a></li>
+                    <li><a id="sharex-video" data-fancybox-type="iframe" href="https://www.youtube.com/embed/4fvSC4ltTrE?autoplay=1&controls=0&rel=0&showinfo=0?modestbranding=1">Video</a></li>
                     <li><a id="sharex-screenshots" data-fancybox-type="iframe" href="//imgur.com/a/7TDhO/embed?background=292929&text=ffffff&link=4e76c9">Screenshots</a></li>
                     <li><a id="sharex-features" href="features/">Features</a></li>
                     <li><a href="https://github.com/ShareX/ShareX/wiki/Changelog">Changelog</a></li>
@@ -137,6 +138,16 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
+            $("#sharex-video").fancybox({
+                padding: 0,
+                margin: 0,
+                autoSize: false,
+                width: '1280px',
+                height: '720px',
+                openEffect: 'fade',
+                closeEffect: 'fade'
+            });
+
             $("#sharex-screenshots").fancybox({
                 padding: 5,
                 margin: 0,
