@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>ShareX - Downloads</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 5px;
+        }
+
+        tr:nth-child(even) {
+            background: #EEE;
+        }
+    </style>
+</head>
+<body>
+    <table id="ReleasesTable">
+        <tr>
+            <th>Release name</th>
+            <th>Download count</th>
+            <th>Release date</th>
+        </tr>
+    </table>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/moment.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            GetReleases();
+        });
+
+        function GetReleases() {
+            $.getJSON("https://api.github.com/repos/ShareX/ShareX/releases").done(function (json) {
+                for (var i = 0; i < json.length; i++) {
+                    var release = json[i];
+                    var asset = release.assets[0];
+                    var downloadURL = "https://github.com/ShareX/ShareX/releases/download/" + release.tag_name + "/" + asset.name;
+                    var downloadCount = 0;
+                    for (var i2 = 0; i2 < release.assets.length; i2++) {
+                        downloadCount += release.assets[i2].download_count;
+                    }
+                    $('#ReleasesTable').find('tbody')
+                        .append($('<tr>')
+                            .append($('<td>')
+                                .append($('<a>')
+                                    .attr('href', release.html_url)
+                                    .text(release.name)
+                                )
+                            )
+                            .append($('<td>')
+                                .text(downloadCount.toLocaleString())
+                            )
+                            .append($('<td>')
+                                .text(moment(new Date(asset.updated_at)).format('YYYY/MM/DD HH:mm'))
+                            )
+                        );
+                }
+            });
+        }
+    </script>
+</body>
+</html>
