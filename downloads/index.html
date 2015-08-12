@@ -26,6 +26,7 @@
             <th>Release name</th>
             <th>Download count</th>
             <th>Release date</th>
+            <th>Active days</th>
         </tr>
     </table>
 
@@ -46,6 +47,13 @@
                     for (var i2 = 0; i2 < release.assets.length; i2++) {
                         downloadCount += release.assets[i2].download_count;
                     }
+                    var activeDays;
+                    if (i === 0) {
+                        activeDays = moment().diff(moment(asset.updated_at), "days", true);
+                    }
+                    else {
+                        activeDays = moment(json[i - 1].assets[0].updated_at).diff(moment(asset.updated_at), "days", true);
+                    }
                     $('#ReleasesTable').find('tbody')
                         .append($('<tr>')
                             .append($('<td>')
@@ -58,7 +66,10 @@
                                 .text(downloadCount.toLocaleString())
                             )
                             .append($('<td>')
-                                .text(moment(new Date(asset.updated_at)).format('YYYY/MM/DD HH:mm'))
+                                .text(moment(asset.updated_at).format("YYYY/MM/DD HH:mm"))
+                            )
+                            .append($('<td>')
+                                .text(activeDays.toFixed(1))
                             )
                         );
                 }
