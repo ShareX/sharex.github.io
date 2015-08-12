@@ -34,15 +34,23 @@
     <script src="../js/moment.min.js"></script>
     <script>
         $(document).ready(function () {
-            GetReleases();
+            var hashIndex = window.location.hash.indexOf("#");
+            var repo = "";
+            if (hashIndex !== -1) {
+                repo = window.location.hash.substring(hashIndex + 1);
+            }
+            if (!repo)
+            {
+                repo = "ShareX/ShareX";
+            }
+            GetReleases(repo);
         });
 
-        function GetReleases() {
-            $.getJSON("https://api.github.com/repos/ShareX/ShareX/releases").done(function (json) {
+        function GetReleases(repo) {
+            $.getJSON("https://api.github.com/repos/" + repo + "/releases").done(function (json) {
                 for (var i = 0; i < json.length; i++) {
                     var release = json[i];
                     var asset = release.assets[0];
-                    var downloadURL = "https://github.com/ShareX/ShareX/releases/download/" + release.tag_name + "/" + asset.name;
                     var downloadCount = 0;
                     for (var i2 = 0; i2 < release.assets.length; i2++) {
                         downloadCount += release.assets[i2].download_count;
