@@ -34,13 +34,8 @@
     <script src="../js/moment.min.js"></script>
     <script>
         $(document).ready(function () {
-            var hashIndex = window.location.hash.indexOf("#");
-            var repo = "";
-            if (hashIndex !== -1) {
-                repo = window.location.hash.substring(hashIndex + 1);
-            }
-            if (!repo)
-            {
+            var repo = GetParameterByName("repo");
+            if (!repo) {
                 repo = "ShareX/ShareX";
             }
             GetReleases(repo);
@@ -82,6 +77,13 @@
                         );
                 }
             });
+        }
+
+        function GetParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
         }
     </script>
 </body>
