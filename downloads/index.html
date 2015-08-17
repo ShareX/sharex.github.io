@@ -47,6 +47,7 @@
         <table id="ReleasesTable">
             <tr>
                 <th>Release name</th>
+                <th>File size</th>
                 <th>Download count</th>
                 <th>Release date</th>
                 <th>Active days</th>
@@ -69,7 +70,12 @@
             $.getJSON("https://api.github.com/repos/" + repo + "/releases").done(function (json) {
                 for (var i = 0; i < json.length; i++) {
                     var release = json[i];
+                    if (release.assets.length === 0) {
+                        continue;
+                    }
                     var asset = release.assets[0];
+                    var fileSize = Math.round(release.assets[0].size / 1024);
+                    var downloadURL = "https://github.com/" + repo + "/releases/download/" + release.tag_name + "/" + asset.name;
                     var downloadCount = 0;
                     for (var i2 = 0; i2 < release.assets.length; i2++) {
                         downloadCount += release.assets[i2].download_count;
@@ -87,6 +93,12 @@
                                 .append($('<a>')
                                     .attr('href', release.html_url)
                                     .text(release.name)
+                                )
+                            )
+                            .append($('<td>')
+                                .append($('<a>')
+                                    .attr('href', downloadURL)
+                                    .text(fileSize.toLocaleString() + " KB")
                                 )
                             )
                             .append($('<td>')
