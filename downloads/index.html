@@ -4,8 +4,26 @@
     <title>ShareX - Downloads</title>
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="/favicon.ico">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+        body {
+            background: #194B6D;
+        }
+
+        a {
+            color: #0866A7;
+        }
+
+        body, div {
+            padding: 5px;
+        }
+
+        #ReleasesTable {
+            margin: auto;
+        }
+
         table, th, td {
             border: 1px solid black;
             border-collapse: collapse;
@@ -15,20 +33,26 @@
             padding: 5px;
         }
 
+        tr:nth-child(odd) {
+            background: #ffffff;
+        }
+
         tr:nth-child(even) {
-            background: #EEE;
+            background: #f3f3f3;
         }
     </style>
 </head>
 <body>
-    <table id="ReleasesTable">
-        <tr>
-            <th>Release name</th>
-            <th>Download count</th>
-            <th>Release date</th>
-            <th>Active days</th>
-        </tr>
-    </table>
+    <div>
+        <table id="ReleasesTable">
+            <tr>
+                <th>Release name</th>
+                <th>Download count</th>
+                <th>Release date</th>
+                <th>Active days</th>
+            </tr>
+        </table>
+    </div>
 
     <script src="../js/jquery.min.js"></script>
     <script src="../js/moment.min.js"></script>
@@ -69,7 +93,7 @@
                                 .text(downloadCount.toLocaleString())
                             )
                             .append($('<td>')
-                                .text(moment(asset.updated_at).format("YYYY/MM/DD HH:mm"))
+                                .text(moment(asset.updated_at).format("YYYY-MM-DD HH:mm"))
                             )
                             .append($('<td>')
                                 .text(activeDays.toFixed(1))
