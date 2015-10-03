@@ -874,3 +874,7 @@ code {
 .navbar-nav .dropdown-menu > li > a {
     text-align: center;
 }
+
+.navbar-features {
+    padding-left: 0px
+}
