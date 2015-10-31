@@ -74,8 +74,7 @@
                         continue;
                     }
                     var asset = release.assets[0];
-                    var fileSize = Math.round(release.assets[0].size / 1024);
-                    var downloadURL = "https://github.com/" + repo + "/releases/download/" + release.tag_name + "/" + asset.name;
+                    var fileSize = Math.round(asset.size / 1024);
                     var downloadCount = 0;
                     for (var i2 = 0; i2 < release.assets.length; i2++) {
                         downloadCount += release.assets[i2].download_count;
@@ -97,7 +96,7 @@
                             )
                             .append($('<td>')
                                 .append($('<a>')
-                                    .attr('href', downloadURL)
+                                    .attr('href', asset.browser_download_url)
                                     .text(fileSize.toLocaleString() + " KB")
                                 )
                             )
