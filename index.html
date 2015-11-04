@@ -134,7 +134,6 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.timeago.js"></script>
     <script src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
 
     <script type="text/javascript">
@@ -196,7 +195,17 @@
                 for (var i = 0; i < release.assets.length; i++) {
                     downloadCount += release.assets[i].download_count;
                 }
-                var releaseInfo = release.name + " was updated " + $.timeago(asset.updated_at) + " and downloaded " + downloadCount + " times.";
+                var oneHour = 60 * 60 * 1000;
+                var oneDay = 24 * oneHour;
+                var dateDiff = new Date() - new Date(asset.updated_at);
+                var timeAgo;
+                if (dateDiff < oneDay) {
+                    timeAgo = (dateDiff / oneHour).toFixed(1) + " hours ago";
+                }
+                else {
+                    timeAgo = (dateDiff / oneDay).toFixed(1) + " days ago";
+                }
+                var releaseInfo = release.name + " was updated " + timeAgo + " and downloaded " + downloadCount + " times.";
                 $(".sharex-download").attr("href", asset.browser_download_url);
                 $("#sharex-screenshot").animate({ "top": "+=20px" });
                 $(".release-info").text(releaseInfo);
