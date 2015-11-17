@@ -83,7 +83,7 @@
                 </div>
                 <div class="col-md-4 col-sm-4">
                     <p><span class="mega-octicon octicon-device-camera icon-margin-bottom"></span></p>
-                    <p>Various methods of capturing screenshots including full screen, window, monitor, rectangle and other shapes.</p>
+                    <p>Various methods of capturing screenshots including full screen, window, monitor, region, freehand, scrolling etc.</p>
                 </div>
             </div>
 
@@ -98,7 +98,7 @@
                 </div>
                 <div class="col-md-4 col-sm-4">
                     <p><span class="mega-octicon octicon-globe icon-margin-bottom"></span></p>
-                    <p>Supports over 40 different image, text, file hosting services such as Imgur, FTP, Dropbox, Pastebin etc. Also supports many URL shortening and URL sharing services.</p>
+                    <p>Supports over 50 different image, text, file hosting services such as Imgur, FTP, Dropbox, Pastebin etc. Also supports many URL shortening and URL sharing services.</p>
                 </div>
             </div>
 
@@ -113,7 +113,7 @@
                 </div>
                 <div class="col-md-4 col-sm-4">
                     <p><span class="mega-octicon octicon-star icon-margin-bottom"></span></p>
-                    <p>Program that you can trust with over 7 years of active development.</p>
+                    <p>Program that you can trust with over 8 years of active development.</p>
                 </div>
             </div>
         </div>
@@ -205,7 +205,7 @@
                 else {
                     timeAgo = (dateDiff / oneDay).toFixed(1) + " days ago";
                 }
-                var releaseInfo = release.name + " was updated " + timeAgo + " and downloaded " + downloadCount + " times.";
+                var releaseInfo = release.name + " was updated " + timeAgo + " and downloaded " + downloadCount.toLocaleString() + " times.";
                 $(".sharex-download").attr("href", asset.browser_download_url);
                 $("#sharex-screenshot").animate({ "top": "+=20px" });
                 $(".release-info").text(releaseInfo);
