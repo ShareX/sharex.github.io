@@ -83,7 +83,7 @@
                 </div>
                 <div class="col-md-4 col-sm-4">
                     <p><span class="mega-octicon octicon-device-camera icon-margin-bottom"></span></p>
-                    <p>Various methods of capturing screenshots including full screen, window, monitor, region, freehand, scrolling etc.</p>
+                    <p>Various methods of capturing screenshots including full screen, window, monitor, region, freehand, scrolling, and more.</p>
                 </div>
             </div>
 
@@ -94,18 +94,18 @@
                 </div>
                 <div class="col-md-4 col-sm-4">
                     <p><span class="mega-octicon octicon-cloud-upload icon-margin-bottom"></span></p>
-                    <p>Upload any file type including image and text using hotkey, clipboard upload, drag & drop or Windows Explorer context menu.</p>
+                    <p>Upload any files using configurable hotkeys, clipboard upload, drag &amp; drop or from the Windows Explorer context menu.</p>
                 </div>
                 <div class="col-md-4 col-sm-4">
                     <p><span class="mega-octicon octicon-globe icon-margin-bottom"></span></p>
-                    <p>Supports over 50 different image, text, file hosting services such as Imgur, FTP, Dropbox, Pastebin etc. Also supports many URL shortening and URL sharing services.</p>
+                    <p>Supports over 50 different image, text, and file hosting services such as Imgur, FTP, Dropbox, Pastebin etc. Also supports many URL shortening and sharing services.</p>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-4 col-sm-4">
                     <p><span class="mega-octicon octicon-tools icon-margin-bottom"></span></p>
-                    <p>Tools such as screen color picker, image editor, ruler, DNS changer, QR code generator, directory indexer and many more.</p>
+                    <p>Contains tools like a screen color picker, an image editor, a ruler, a DNS changer, a QR code generator, a directory indexer and more.</p>
                 </div>
                 <div class="col-md-4 col-sm-4">
                     <p><span class="mega-octicon octicon-keyboard icon-margin-bottom"></span></p>
@@ -205,7 +205,7 @@
                 else {
                     timeAgo = (dateDiff / oneDay).toFixed(1) + " days ago";
                 }
-                var releaseInfo = release.name + " was updated " + timeAgo + " and downloaded " + downloadCount.toLocaleString() + " times.";
+                var releaseInfo = release.name + " was updated " + timeAgo + " and has been downloaded " + downloadCount.toLocaleString() + " times.";
                 $(".sharex-download").attr("href", asset.browser_download_url);
                 $("#sharex-screenshot").animate({ "top": "+=20px" });
                 $(".release-info").text(releaseInfo);
