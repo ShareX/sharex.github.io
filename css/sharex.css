@@ -876,5 +876,32 @@ code {
 }
 
 .navbar-features {
-    padding-left: 0px
+    padding-left: 0px;
+}
+
+.donate-after-header {
+    background-color: #ecf0f1;
+    font-size: 18px;
+    color: #34495e;
+    text-align: left;
+    font-weight: 200;
+    margin-top: -30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.donate-text {
+    margin-left: 20px;
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+.donate-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.jumbotron-compact {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }

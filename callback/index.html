@@ -22,10 +22,32 @@
 </head>
 
 <body>
-    <div class="jumbotron masthead jumbopurple">
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse navbar-features">
+                <ul class="nav navbar-nav navbar-features">
+                    <li><a href="..">Home</a></li>
+                    <li class="active"><a href="#">Callback</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron masthead jumbopurple jumbotron-compact">
         <div class="container main_container">
-            <h1 class="main_header"><a href="..">ShareX</a></h1>
-            <p>Authorization</p>
+            <h1 class="main_header">
+                <a href="..">ShareX</a>
+            </h1>
+            <h3>Authorization</h3>
         </div>
     </div>
 
@@ -54,7 +76,7 @@
             var code = GetParameterByName('code');
 
             if (!code) {
-                code = GetParameterByName('oauth_verifier')
+                code = GetParameterByName('oauth_verifier');
             }
 
             if (code) {
@@ -73,7 +95,8 @@
                         return $('input#code').val();
                     }
                 });
-            } else {
+            }
+            else {
                 var error = GetParameterByName('error');
 
                 if (error) {
