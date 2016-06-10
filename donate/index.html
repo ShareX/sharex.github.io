@@ -12,6 +12,7 @@
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/sharex.css" rel="stylesheet">
+    <link href="../css/sticky-footer.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -22,7 +23,7 @@
 
 <body>
     <nav class="navbar navbar-inverse" role="navigation">
-        <div class="container">
+        <div class="container donate-navbar">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -57,12 +58,39 @@
     </div>
 
     <div class="container donate-container">
-        <div class="donate-note">Unfortunately <a href="http://techcrunch.com/2016/05/31/paypal-to-halt-operations-in-turkey-after-losing-license-impacts-hundreds-of-thousands/">PayPal stopped its service in my country on 2016-06-06</a> and I'm unable to receive donations through PayPal anymore. We opened Patreon campaign if you would like to support our project. It allows donations both through PayPal and credit card therefore it is the best alternative we have.</div>
+        <div class="donate-note alert alert-warning">Unfortunately <a href="http://techcrunch.com/2016/05/31/paypal-to-halt-operations-in-turkey-after-losing-license-impacts-hundreds-of-thousands/">PayPal stopped its service in my country on 2016-06-06</a> and I'm unable to receive donations through PayPal anymore.
+        <br />We opened Patreon campaign if you would like to support our project. It allows donations both through PayPal and credit card therefore it is the best alternative we have.</div>
 
         <a class="donate-button" href="https://www.patreon.com/ShareX"><img src="../img/Patreon.png" alt="Patreon" /></a>
 
         <a class="donate-button" href="https://www.coinbase.com/Jaex"><img src="../img/Bitcoin.png" alt="Bitcoin" /></a>
+
+        <div class="panel panel-primary patrons-panel">
+            <div class="panel-heading">Patrons</div>
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Website</th>
+                    <th>Donation amount</th>
+                </tr>
+                <tr><td>...</td><td></td><td>$</td></tr>
+            </table>
+        </div>
     </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>
+                <iframe src="//ghbtns.com/github-btn.html?user=ShareX&repo=ShareX&type=watch&count=true"
+                        allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20" id="github"></iframe>
+
+                <span class="g-plusone" data-size="medium"></span>
+            </p>
+
+            <p>Copyright &copy; 2007-2016 ShareX Team</p>
+        </div>
+    </footer>
+
 
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>

@@ -890,9 +890,12 @@ code {
     padding-bottom: 30px;
 }
 
+.donate-navbar {
+    padding-left: 0px;
+}
+
 .donate-container {
     padding-top: 30px;
-    padding-bottom: 30px;
 }
 
 .donate-note {
@@ -901,6 +904,11 @@ code {
 
 .donate-button {
     margin-right: 20px;
+}
+
+.patrons-panel {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .jumbotron-compact {
