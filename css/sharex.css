@@ -895,12 +895,12 @@ code {
     padding-bottom: 30px;
 }
 
-.donate-img {
-    margin-right: 20px;
-}
-
 .donate-note {
     margin-bottom: 30px;
+}
+
+.donate-button {
+    margin-right: 20px;
 }
 
 .jumbotron-compact {
