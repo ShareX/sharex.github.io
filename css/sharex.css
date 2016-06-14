@@ -42,34 +42,45 @@
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-.btn,
-.btn:link,
-.btn:visited,
-.btn:hover,
-.btn:focus,
-.btn:active,
-.btn:active:focus,
-.btn:active:hover {
+.jumbotron-main {
+    text-align: center;
+}
+
+.jumbotron-main .btn,
+.jumbotron-main .btn:link,
+.jumbotron-main .btn:visited,
+.jumbotron-main .btn:hover,
+.jumbotron-main .btn:focus,
+.jumbotron-main .btn:active,
+.jumbotron-main .btn:active:focus,
+.jumbotron-main .btn:active:hover {
     background-color: white;
     border-color: white;
-    color: #1B6EA8;
+    color: #257CB9;
     border-radius: 4px;
+    padding: 10px 0px;
     margin: 10px 10px 0px 10px;
-    box-shadow: 0px 5px 0px #dbdbdb;
+    font-size: 20px;
+    box-shadow: 0px 6px 0px #dbdbdb;
     position: relative;
+    width: 200px;
 }
 
-.btn:active,
-.btn:active:focus,
-.btn:active:hover {
+.jumbotron-main .btn:active,
+.jumbotron-main .btn:active:focus,
+.jumbotron-main .btn:active:hover {
     box-shadow: 0px 2px 0px #dbdbdb;
     background-color: #f4f4f4;
-    top: 3px;
+    top: 4px;
 }
 
-.btn-fixed-size {
-    width: 180px;
-    padding: 12px 0px;
+.tooltip> .tooltip-inner {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-color: black;
+    color: #FFFFFF;
+    padding: 10px;
+    font-size: 15px;
+    max-width: 600px;
 }
 
 .row-margin-bottom {
@@ -77,26 +88,51 @@
 }
 
 .mega-octicon {
-    font-size: 50px;
+    font-size: 64px;
     color: #1B6EA8;
     margin-bottom: 10px;
 }
 
-.container-screenshot {
+.container-features {
     background-color: #f8f8f8;
     padding-top: 50px;
     padding-bottom: 50px;
-}
-
-.container-features {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    text-align: center;
 }
 
 @media (min-width: 1200px) {
     .container-features .container {
         width: 970px;
     }
+}
+
+.container-screenshot {
+    background-color: #ffffff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.container-screenshot h2 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    color: #257CB9;
+}
+
+.container-screenshot .btn {
+    padding: 10px 50px;
+    margin-top: 20px;
+    background-color: #348ccb;
+    border-color: transparent;
+    border-radius: 4px;
+    font-size: 20px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 6px 0px #2c76ad;
+}
+
+.container-screenshot img {
+    margin: 0px auto 30px auto;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
 }
 
 footer {
