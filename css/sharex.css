@@ -31,18 +31,34 @@
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-.btn {
+.btn,
+.btn:link,
+.btn:visited,
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn:active:focus,
+.btn:active:hover {
     background-color: white;
     border-color: white;
     color: #1B6EA8;
     border-radius: 4px;
-    vertical-align: middle margin: 10px 10px 0px 10px;
+    margin: 10px 10px 0px 10px;
     box-shadow: 0px 5px 0px rgb(219, 219, 219);
+    position: relative;
+}
+
+.btn:active,
+.btn:active:focus,
+.btn:active:hover {
+    box-shadow: 0px 2px 0px rgb(219, 219, 219);
+    background-color: #f4f4f4;
+    top: 3px;
 }
 
 .btn-fixed-size {
     width: 180px;
-    height: 50px;
+    padding: 12px 0px;
 }
 
 .row-margin-bottom {
