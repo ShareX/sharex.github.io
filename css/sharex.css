@@ -115,6 +115,15 @@
     color: #257CB9;
 }
 
+.container-screenshot .img-responsive-parent {
+    margin: 20px;
+}
+
+.container-screenshot img {
+    margin: 0px auto 30px auto;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
+}
+
 .container-screenshot .btn {
     padding: 10px 50px;
     margin-top: 20px;
@@ -124,11 +133,6 @@
     font-size: 20px;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 6px 0px #2c76ad;
-}
-
-.container-screenshot img {
-    margin: 0px auto 30px auto;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
 }
 
 .container-features {
