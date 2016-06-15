@@ -260,6 +260,8 @@ footer p {
     padding-top: 30px;
     padding-bottom: 30px;
     background-image: url(../img/Background2.png);
+    font-size: 16px;
+    color: #1B6EA8;
 }
 
 .container-donate-2 {
@@ -271,6 +273,15 @@ footer p {
 .donate-note {
     margin-top: 0px;
     margin-bottom: 30px;
+    background-color: #2d93db;
+    border: none;
+    color: white;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.donate-note a {
+    color: white;
+    text-decoration: underline;
 }
 
 .donate-button {
@@ -283,10 +294,10 @@ footer p {
 }
 
 .patrons-panel {
-    border-color: #1B6EA8;
+    border-color: #2d93db;
 }
 
 .patrons-panel .panel-heading {
-    background-color: #1B6EA8;
-    border-color: #1B6EA8;
+    background-color: #2d93db;
+    border-color: #2d93db;
 }
