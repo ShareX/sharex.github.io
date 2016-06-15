@@ -13,6 +13,7 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/octicons.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.css?v=2.1.5" rel="stylesheet" media="screen">
     <link href="css/sharex.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -122,10 +123,54 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
 
     <script>
         $(document).ready(function() {
             SlideCheck();
+
+            $("#sharex-video").fancybox({
+                padding: 5,
+                margin: 0,
+                autoSize: false,
+                width: '1280px',
+                height: '720px',
+                helpers: {
+                    overlay: {
+                        locked: false,
+                        css: {
+                            'background': 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                },
+                openEffect: 'fade',
+                closeEffect: 'fade',
+                iframe: {
+                    preload: false
+                }
+            });
+
+            $("#sharex-screenshots").fancybox({
+                padding: 5,
+                margin: 0,
+                autoSize: false,
+                width: '90%',
+                height: '90%',
+                helpers: {
+                    overlay: {
+                        locked: false,
+                        css: {
+                            'background': 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                },
+                openEffect: 'fade',
+                closeEffect: 'fade',
+                iframe: {
+                    preload: false
+                }
+            });
+
             GetLatestReleaseInfo();
         });
 
