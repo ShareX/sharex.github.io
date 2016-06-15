@@ -279,7 +279,6 @@ footer p {
     background-color: #2d93db;
     border: none;
     color: white;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .donate-note a {
@@ -301,7 +300,12 @@ footer p {
 }
 
 .patrons-panel .panel-heading {
+    color: white;
     background-color: #2d93db;
     border-color: #2d93db;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.container-callback {
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
