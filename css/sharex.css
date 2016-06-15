@@ -251,3 +251,38 @@ footer p {
     padding-bottom: 20px;
     background-image: url(../img/Background2.png);
 }
+
+.container-donate {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-image: url(../img/Background2.png);
+}
+
+.container-donate-2 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-image: url(../img/Background.png);
+}
+
+.donate-note {
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.donate-button {
+    margin-right: 15px;
+}
+
+.patrons-panel {
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+.patrons-panel {
+    border-color: #1B6EA8;
+}
+
+.patrons-panel .panel-heading {
+    background-color: #1B6EA8;
+    border-color: #1B6EA8;
+}
