@@ -75,7 +75,7 @@
 }
 
 .tooltip> .tooltip-inner {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
     border-color: black;
     color: #FFFFFF;
     padding: 10px;
@@ -83,31 +83,9 @@
     max-width: 600px;
 }
 
-.row-margin-bottom {
-    margin-bottom: 30px;
-}
-
-.mega-octicon {
-    font-size: 64px;
-    color: #1B6EA8;
-    margin-bottom: 10px;
-}
-
-.container-features {
-    background-color: #f8f8f8;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    text-align: center;
-}
-
-@media (min-width: 1200px) {
-    .container-features .container {
-        width: 970px;
-    }
-}
-
 .container-screenshot {
     background-color: #ffffff;
+    background-image: url(../img/Background.png);
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
@@ -135,6 +113,30 @@
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
 }
 
+.container-features {
+    background-color: #f8f8f8;
+    background-image: url(../img/Background2.png);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+@media (min-width: 1200px) {
+    .container-features .container {
+        width: 970px;
+    }
+}
+
+.row-margin-bottom {
+    margin-bottom: 30px;
+}
+
+.mega-octicon {
+    font-size: 64px;
+    color: #1B6EA8;
+    margin-bottom: 10px;
+}
+
 footer {
     background-color: #1B6EA8;
     color: white;
@@ -144,4 +146,5 @@ footer {
 
 footer p {
     margin: 0px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 }
