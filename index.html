@@ -64,7 +64,7 @@
     <div class="container-fluid container-screenshot">
         <div class="row">
             <img class="img-responsive" src="img/ShareX_Screenshot.png" alt="ShareX screenshot" />
-            <a class="btn btn-primary btn-lg slide-anim sharex-screenshots" role="button" data-fancybox-type="iframe" href="//imgur.com/a/7TDhO/embed?background=292929&text=ffffff&link=4e76c9">See more screenshots</a>
+            <a class="btn btn-primary btn-lg sharex-screenshots" role="button" data-fancybox-type="iframe" href="//imgur.com/a/7TDhO/embed?background=292929&text=ffffff&link=4e76c9">See more screenshots</a>
         </div>
     </div>
 
@@ -124,93 +124,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-    <script>
-        $(document).ready(function() {
-            SlideCheck();
-
-            $(".sharex-video").fancybox({
-                padding: 5,
-                margin: 0,
-                autoSize: false,
-                width: '1280px',
-                height: '720px',
-                helpers: {
-                    overlay: {
-                        locked: false,
-                        css: {
-                            'background': 'rgba(0, 0, 0, 0.5)'
-                        }
-                    }
-                },
-                openEffect: 'fade',
-                closeEffect: 'fade',
-                iframe: {
-                    preload: false
-                }
-            });
-
-            $(".sharex-screenshots").fancybox({
-                padding: 5,
-                margin: 0,
-                autoSize: false,
-                width: '90%',
-                height: '90%',
-                helpers: {
-                    overlay: {
-                        locked: false,
-                        css: {
-                            'background': 'rgba(0, 0, 0, 0.5)'
-                        }
-                    }
-                },
-                openEffect: 'fade',
-                closeEffect: 'fade',
-                iframe: {
-                    preload: false
-                }
-            });
-
-            GetLatestReleaseInfo();
-        });
-
-        $(window).scroll(SlideCheck);
-
-        function SlideCheck() {
-            $(".slide-anim").each(function() {
-                var pos = $(this).offset().top;
-                var winTop = $(window).scrollTop();
-                if (pos < winTop + $(window).height()) {
-                    $(this).addClass("slide");
-                }
-            });
-        };
-
-        function GetLatestReleaseInfo() {
-            $.getJSON("https://api.github.com/repos/ShareX/ShareX/releases/latest").done(function(release) {
-                var asset = release.assets[0];
-                var downloadCount = 0;
-                for (var i = 0; i < release.assets.length; i++) {
-                    downloadCount += release.assets[i].download_count;
-                }
-                var oneHour = 60 * 60 * 1000;
-                var oneDay = 24 * oneHour;
-                var dateDiff = new Date() - new Date(asset.updated_at);
-                var timeAgo;
-                if (dateDiff < oneDay) {
-                    timeAgo = (dateDiff / oneHour).toFixed(1) + " hours ago";
-                } else {
-                    timeAgo = (dateDiff / oneDay).toFixed(1) + " days ago";
-                }
-                var releaseInfo = release.name + " was updated " + timeAgo + " and has been downloaded " + downloadCount.toLocaleString() + " times.";
-                $(".sharex-download").attr("href", asset.browser_download_url);
-                $(".sharex-download").prop("title", releaseInfo);
-
-                $('[data-toggle="tooltip"]').tooltip();
-            });
-        }
-    </script>
-
+    <script src="js/sharex.js"></script>
 
     <script>
         (function(i, s, o, g, r, a, m) {
