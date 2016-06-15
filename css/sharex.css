@@ -3,6 +3,7 @@
     margin-bottom: 0px;
     border-radius: 0px;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    border: none;
 }
 
 .navbar-main a {
@@ -31,8 +32,8 @@
 }
 
 .navbar-header button {
-    background-color: rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.3);
+    background-color: #1B6EA8;
+    box-shadow: 0px 3px 0px #1c557c;
 }
 
 .navbar-header span {
@@ -210,7 +211,7 @@ footer p {
 }
 
 .jumbotron-compact h1 {
-    font-size: 60px;
+    font-size: 70px;
 }
 
 .jumbotron-compact a:hover {
@@ -224,15 +225,25 @@ footer p {
 
 .jumbotron-compact p {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    font-size: 34px;
     margin: 0px;
 }
 
-.navbar-compact .container {
-    padding-left: 0px;
+.navbar-compact {
+    border: none;
 }
 
-.navbar-compact .container #navbar {
-    padding-left: 0px;
+@media (min-width: 768px) {
+    .navbar-compact .container {
+        padding-left: 0px;
+    }
+    .navbar-compact .container #navbar {
+        padding-left: 0px;
+    }
+}
+
+.navbar-compact li.active {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .container-content {
