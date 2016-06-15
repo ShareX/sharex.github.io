@@ -17,11 +17,8 @@ function SlideCheck() {
         var element_top_position = $element.offset().top;
         var element_bottom_position = element_top_position + element_height;
 
-        if (element_bottom_position >= window_top_position &&
-            element_top_position <= window_bottom_position) {
+        if (element_bottom_position >= window_top_position && element_top_position <= window_bottom_position) {
             $element.addClass("slide");
-        } else {
-            $element.removeClass("slide");
         }
     });
 }
