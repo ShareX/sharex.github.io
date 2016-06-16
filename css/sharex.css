@@ -109,7 +109,7 @@ body {
 .container-screenshot {
     background-color: #ffffff;
     background-image: url(../img/Background.png);
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 50px;
     text-align: center;
 }
@@ -126,7 +126,7 @@ body {
 
 .container-screenshot img {
     margin: 0px auto 30px auto;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
 }
 
 .container-screenshot .btn {
