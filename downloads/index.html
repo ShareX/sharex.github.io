@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>ShareX - Downloads</title>
@@ -11,37 +11,42 @@
         body {
             background: #194B6D;
         }
-
+        
         a {
             color: #0866A7;
         }
-
-        body, div {
+        
+        body,
+        div {
             padding: 5px;
         }
-
+        
         #ReleasesTable {
             margin: auto;
         }
-
-        table, th, td {
+        
+        table,
+        th,
+        td {
             border: 1px solid black;
             border-collapse: collapse;
         }
-
-        th, td {
+        
+        th,
+        td {
             padding: 5px;
         }
-
+        
         tr:nth-child(odd) {
             background: #ffffff;
         }
-
+        
         tr:nth-child(even) {
             background: #f3f3f3;
         }
     </style>
 </head>
+
 <body>
     <div>
         <table id="ReleasesTable">
@@ -59,7 +64,7 @@
     <script src="../js/moment.min.js"></script>
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             var repo = GetParameterByName("repo");
             if (!repo) {
                 repo = "ShareX/ShareX";
@@ -68,7 +73,7 @@
         });
 
         function GetReleases(repo) {
-            $.getJSON("https://api.github.com/repos/" + repo + "/releases").done(function (json) {
+            $.getJSON("https://api.github.com/repos/" + repo + "/releases").done(function(json) {
                 for (var i = 0; i < json.length; i++) {
                     var release = json[i];
                     if (release.assets.length === 0) {
@@ -83,31 +88,30 @@
                     var activeDays;
                     if (i === 0) {
                         activeDays = moment().diff(moment(asset.updated_at), "days", true);
-                    }
-                    else {
+                    } else {
                         activeDays = moment(json[i - 1].assets[0].updated_at).diff(moment(asset.updated_at), "days", true);
                     }
-                    $('#ReleasesTable').find('tbody')
-                        .append($('<tr>')
-                            .append($('<td>')
-                                .append($('<a>')
-                                    .attr('href', release.html_url)
+                    $("#ReleasesTable").find("tbody")
+                        .append($("<tr>")
+                            .append($("<td>")
+                                .append($("<a>")
+                                    .attr("href", release.html_url)
                                     .text(release.name)
                                 )
                             )
-                            .append($('<td>')
-                                .append($('<a>')
-                                    .attr('href', asset.browser_download_url)
+                            .append($("<td>")
+                                .append($("<a>")
+                                    .attr("href", asset.browser_download_url)
                                     .text(fileSize.toLocaleString() + " KB")
                                 )
                             )
-                            .append($('<td>')
+                            .append($("<td>")
                                 .text(downloadCount.toLocaleString())
                             )
-                            .append($('<td>')
+                            .append($("<td>")
                                 .text(moment(asset.updated_at).format("YYYY-MM-DD HH:mm"))
                             )
-                            .append($('<td>')
+                            .append($("<td>")
                                 .text(activeDays.toFixed(1))
                             )
                         );
