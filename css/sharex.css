@@ -309,3 +309,15 @@ footer p {
     margin-top: 30px;
     margin-bottom: 10px;
 }
+
+.container-callback .panel {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-copy {
+    width: 145px;
+}
+
+.btn-copy.hover {
+    background-color: #ebebeb;
+}
