@@ -69,16 +69,9 @@ body {
     text-align: center;
 }
 
-.jumbotron-main .btn,
-.jumbotron-main .btn:link,
-.jumbotron-main .btn:visited,
-.jumbotron-main .btn:hover,
-.jumbotron-main .btn:focus,
-.jumbotron-main .btn:active,
-.jumbotron-main .btn:active:focus,
-.jumbotron-main .btn:active:hover {
+.jumbotron-main .btn {
     background-color: white;
-    border-color: white;
+    border-color: transparent;
     color: #257CB9;
     border-radius: 4px;
     padding: 10px 0px;
@@ -89,12 +82,10 @@ body {
     width: 200px;
 }
 
-.jumbotron-main .btn:active,
-.jumbotron-main .btn:active:focus,
-.jumbotron-main .btn:active:hover {
-    box-shadow: 0px 2px 0px #dbdbdb;
+.jumbotron-main .btn:active {
     background-color: #f4f4f4;
-    top: 4px;
+    box-shadow: 0px 3px 0px #dbdbdb;
+    top: 3px;
 }
 
 .tooltip> .tooltip-inner {
@@ -130,14 +121,22 @@ body {
 }
 
 .container-screenshot .btn {
-    padding: 10px 50px;
-    margin-top: 20px;
     background-color: #348ccb;
     border-color: transparent;
+    color: white;
     border-radius: 4px;
+    padding: 10px 50px;
+    margin-top: 20px;
     font-size: 20px;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 6px 0px #2c76ad;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.container-screenshot .btn:active {
+    background-color: #3388c4;
+    box-shadow: 0px 3px 0px #2c76ad;
+    top: 3px;
 }
 
 .container-features {
