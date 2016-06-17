@@ -52,12 +52,12 @@ function GetLatestReleaseInfo() {
 $(document).ready(function () {
     SlideCheck();
 
-    $(".sharex-video").fancybox({
+    $(".sharex-screenshots").fancybox({
         padding: 5,
         margin: 0,
         autoSize: false,
-        width: "1280px",
-        height: "720px",
+        width: "90%",
+        height: "90%",
         helpers: {
             overlay: {
                 locked: false,
@@ -73,12 +73,12 @@ $(document).ready(function () {
         }
     });
 
-    $(".sharex-screenshots").fancybox({
+    $(".sharex-video").fancybox({
         padding: 5,
         margin: 0,
         autoSize: false,
-        width: "90%",
-        height: "90%",
+        width: "1280px",
+        height: "720px",
         helpers: {
             overlay: {
                 locked: false,
