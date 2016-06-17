@@ -251,7 +251,7 @@ footer p {
 
 .container-content {
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     background-image: url(../img/Background2.png);
 }
 
@@ -310,7 +310,7 @@ footer p {
 }
 
 .container-callback .panel {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
 }
 
 .btn-copy {
