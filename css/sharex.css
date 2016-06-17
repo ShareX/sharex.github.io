@@ -147,7 +147,7 @@ body {
     background-color: #f8f8f8;
     background-image: url(../img/Background2.png);
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -157,7 +157,7 @@ body {
     }
 }
 
-.row-margin-bottom {
+.container-features .col-sm-4 {
     margin-bottom: 30px;
 }
 
