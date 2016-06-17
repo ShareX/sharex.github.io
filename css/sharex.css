@@ -88,13 +88,17 @@ body {
     top: 3px;
 }
 
-.tooltip> .tooltip-inner {
+.jumbotron-main .tooltip .tooltip-inner {
     background-color: rgba(0, 0, 0, 0.7);
-    border-color: black;
+    border: none;
     color: #FFFFFF;
     padding: 5px 10px;
     font-size: 15px;
-    max-width: 600px;
+    max-width: none;
+}
+
+.jumbotron-main .tooltip .tooltip-arrow {
+    border-bottom-color: rgba(0, 0, 0, 0.7);
 }
 
 .container-screenshot {
