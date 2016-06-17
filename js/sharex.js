@@ -43,7 +43,9 @@ function GetLatestReleaseInfo() {
         $(".sharex-download").attr("href", asset.browser_download_url);
         $(".sharex-download").prop("title", releaseInfo);
 
-        $('[data-toggle="tooltip"]').tooltip();
+        $("[data-toggle='tooltip']").tooltip({
+            trigger: "hover"
+        });
     });
 }
 
@@ -54,18 +56,18 @@ $(document).ready(function () {
         padding: 5,
         margin: 0,
         autoSize: false,
-        width: '1280px',
-        height: '720px',
+        width: "1280px",
+        height: "720px",
         helpers: {
             overlay: {
                 locked: false,
                 css: {
-                    'background': 'rgba(0, 0, 0, 0.5)'
+                    "background": "rgba(0, 0, 0, 0.5)"
                 }
             }
         },
-        openEffect: 'fade',
-        closeEffect: 'fade',
+        openEffect: "fade",
+        closeEffect: "fade",
         iframe: {
             preload: false
         }
@@ -75,18 +77,18 @@ $(document).ready(function () {
         padding: 5,
         margin: 0,
         autoSize: false,
-        width: '90%',
-        height: '90%',
+        width: "90%",
+        height: "90%",
         helpers: {
             overlay: {
                 locked: false,
                 css: {
-                    'background': 'rgba(0, 0, 0, 0.5)'
+                    "background": "rgba(0, 0, 0, 0.5)"
                 }
             }
         },
-        openEffect: 'fade',
-        closeEffect: 'fade',
+        openEffect: "fade",
+        closeEffect: "fade",
         iframe: {
             preload: false
         }

@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 .navbar-main {
@@ -89,6 +89,7 @@ body {
 }
 
 .jumbotron-main .btn:active {
+    color: #257CB9;
     background-color: #f4f4f4;
     box-shadow: 0px 3px 0px #dbdbdb;
     top: 3px;
