@@ -12,7 +12,7 @@ body {
 
 .navbar-main a {
     color: white;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-main li> a:hover,
@@ -21,7 +21,7 @@ body {
 }
 
 .navbar-main li> a:hover {
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 0px 25px rgba(255, 255, 255, 0.8);
 }
 
 @media (min-width: 768px) {
@@ -56,13 +56,13 @@ body {
     font-size: 110px;
     margin-top: 0px;
     margin-bottom: 10px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .jumbotron p {
     margin: 25px 0px 35px;
     font-size: 25px;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .jumbotron-main {
@@ -78,8 +78,14 @@ body {
     margin: 10px 10px 0px 10px;
     font-size: 20px;
     box-shadow: 0px 6px 0px #dbdbdb;
+    text-shadow: 0px 1px 0px #ffffff;
     position: relative;
     width: 200px;
+}
+
+.jumbotron-main .btn:hover {
+    color: #1c92e6;
+    text-shadow: 0px 1px 0px #ffffff, 0px 0px 30px rgba(0, 186, 255, 0.4);
 }
 
 .jumbotron-main .btn:active {
@@ -133,8 +139,12 @@ body {
     margin-top: 20px;
     font-size: 20px;
     box-shadow: 0px 6px 0px #2c76ad;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
     position: relative;
+}
+
+.container-screenshot .btn:hover {
+    background-color: #2d90d6;
 }
 
 .container-screenshot .btn:active {
@@ -176,7 +186,7 @@ footer {
 
 footer p {
     margin: 0px;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .animation-element {
@@ -222,7 +232,7 @@ footer p {
 }
 
 .jumbotron-compact a:hover {
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(255, 255, 255, 0.2);
 }
 
 .jumbotron-compact a {
@@ -231,7 +241,7 @@ footer p {
 }
 
 .jumbotron-compact p {
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
     font-size: 34px;
     margin: 0px;
 }
