@@ -13,6 +13,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/octicons.css" rel="stylesheet">
     <link href="../css/sharex.css" rel="stylesheet">
     <link href="../css/sticky-footer.css" rel="stylesheet">
 
@@ -63,6 +64,7 @@
     <div class="container-downloads">
         <div class="container">
             <h1>Last 30 release info obtained using GitHub API</h1>
+            <div><span class="mega-octicon octicon-sync spinning"></span></div>
             <table class="table table-bordered table-striped table-downloads">
                 <thead>
                     <tr>
@@ -140,6 +142,9 @@
                             )
                         );
                 }
+
+                $(".spinning").hide();
+                $(".table-downloads").fadeIn();
             });
         }
 
