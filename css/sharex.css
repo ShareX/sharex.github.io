@@ -108,6 +108,11 @@ body {
     border-bottom-color: rgba(0, 0, 0, 0.7);
 }
 
+.jumbotron-main .tooltip a {
+    color: white;
+    text-decoration: none;
+}
+
 .container-screenshot {
     background-color: #ffffff;
     background-image: url(../img/Background.png);

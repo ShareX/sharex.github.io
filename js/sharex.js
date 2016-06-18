@@ -41,12 +41,32 @@ function GetLatestReleaseInfo() {
         }
         var releaseInfo = release.name + " was updated " + timeAgo + " and has been downloaded " + downloadCount.toLocaleString() + " times.";
         $(".sharex-download").attr("href", asset.browser_download_url);
-        $(".sharex-download").prop("title", releaseInfo);
+        $(".sharex-download").attr("title", "<a href='downloads/'>" + releaseInfo + "</a>");
 
-        $("[data-toggle='tooltip']").tooltip({
-            trigger: "hover"
-        });
+        InitTooltip();
     });
+}
+
+function InitTooltip() {
+    $("[data-toggle='tooltip']").tooltip({
+            trigger: "manual",
+            html: true,
+            animation: false
+        })
+        .on("mouseenter", function () {
+            var _this = this;
+            $(this).tooltip("show");
+            $(".tooltip").on("mouseleave", function () {
+                $(_this).tooltip("hide");
+            });
+        }).on("mouseleave", function () {
+            var _this = this;
+            setTimeout(function () {
+                if (!$(".tooltip:hover").length) {
+                    $(_this).tooltip("hide");
+                }
+            }, 300);
+        });
 }
 
 $(document).ready(function () {
