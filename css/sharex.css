@@ -335,3 +335,14 @@ footer p {
 .btn-copy.hover {
     background-color: #ebebeb;
 }
+
+.container-downloads {
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.container-downloads h1 {
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
