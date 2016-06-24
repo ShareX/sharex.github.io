@@ -68,7 +68,13 @@
                     <span id="title" />
                 </div>
                 <div class="panel-body">
-                    <span id="content" />
+                    <div id="callback-code" class="input-group">
+                        <input id="code" type="text" class="form-control" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" data-clipboard-target="#code">Copy to clipboard</button>
+                        </span>
+                    </div>
+                    <span id="callback-error" />
                 </div>
             </div>
         </div>
@@ -80,14 +86,9 @@
 
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery.clipboard.min.js"></script>
+    <script src="../js/clipboard.min.js"></script>
 
-    <script type="text/javascript">
-        function GetParameterByName(name) {
-            var match = RegExp("[?&]" + name + "=([^&]*)").exec(window.location.search);
-            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
-        }
-
+    <script>
         $(document).ready(function() {
             var code = GetParameterByName("code");
 
@@ -97,34 +98,45 @@
 
             if (code) {
                 $("#panel-callback").addClass("panel-success");
-                $("#title").html("Please paste following code in ShareX");
-                $("#content").html('<div class="input-group"> \
-                                        <span class="input-group-btn"> \
-                                            <button class="btn btn-default btn-copy" type="button" id="copy">Copy to clipboard</button> \
-                                        </span> \
-                                        <input type="text" class="form-control" onClick="this.select();" value="' + code + '" id="code" /> \
-                                    </div>');
-                $("button#copy").clipboard({
-                    path: "../js/jquery.clipboard.swf",
-                    copy: function() {
-                        $("button#copy").text("Copied!");
-                        return $("input#code").val();
-                    }
-                });
+                $("#title").text("Please paste following code in ShareX");
+                $("#code").val(code);
             } else {
                 var error = GetParameterByName("error");
 
                 if (error) {
                     $("#panel-callback").addClass("panel-danger");
-                    $("#title").html("ShareX is not properly authorized");
-                    $("#content").html("Error: " + error);
+                    $("#title").text("ShareX is not properly authorized");
+                    $("#callback-error").text("Error: " + error);
                 } else {
                     $("#panel-callback").addClass("panel-warning");
-                    $("#title").html("Invalid access");
-                    $("#content").html("Unexpected error occured.");
+                    $("#title").text("Invalid access");
+                    $("#callback-error").text("Unexpected error occured.");
                 }
+
+                $("#callback-code").hide();
+                $("#callback-error").show();
             }
+
+            var clipboard = new Clipboard(".btn");
+
+            clipboard.on("success", function(e) {
+                $("#callback-code .btn").text("Copied!");
+            });
+
+            clipboard.on("error", function(e) {
+                $("#callback-code .btn").text("Copy failed.");
+            });
         });
+
+        function GetParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
     </script>
 </body>
 
