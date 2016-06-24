@@ -338,6 +338,14 @@ footer p {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
 }
 
+#callback-code .btn {
+    width: 150px;
+}
+
+#callback-error {
+    display: none;
+}
+
 .container-downloads {
     padding-top: 30px;
     padding-bottom: 10px;
@@ -374,12 +382,4 @@ footer p {
     to {
         -webkit-transform: rotate(360deg);
     }
-}
-
-#callback-code .btn {
-    width: 150px;
-}
-
-#callback-error {
-    display: none;
 }
