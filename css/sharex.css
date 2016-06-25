@@ -3,10 +3,11 @@ body {
 }
 
 .navbar-main {
-    background-color: #257CB9;
+    background-color: #123b65;
+    background: linear-gradient(to bottom, #224864 0%, #123b65 100%);
     margin-bottom: 0px;
     border-radius: 0px;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 20px rgb(16, 52, 74);
     border: none;
 }
 
@@ -22,6 +23,10 @@ body {
 
 .navbar-main li> a:hover {
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 0px 25px rgba(255, 255, 255, 0.8);
+}
+
+.navbar li.active {
+    background-color: rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 768px) {
@@ -45,7 +50,8 @@ body {
 }
 
 .jumbotron {
-    background-color: #1B6EA8;
+    background-color: #171f2a;
+    background: radial-gradient(at top, #19619d 0%, #171f2a 100%);
     color: white;
     padding-top: 0px;
     padding: 50px 0px 60px;
@@ -72,7 +78,7 @@ body {
 .jumbotron-main .btn {
     background-color: white;
     border-color: transparent;
-    color: #257CB9;
+    color: #255d84;
     border-radius: 4px;
     padding: 10px 0px;
     margin: 10px 10px 0px 10px;
@@ -189,8 +195,10 @@ body {
 }
 
 footer {
-    background-color: #1B6EA8;
+    background-color: #123b65;
+    background: linear-gradient(to bottom, #224864 0%, #123b65 100%);
     color: white;
+    box-shadow: 0px 0px 50px rgba(22, 40, 69, 0.5);
     padding: 20px 0px;
     text-align: center;
 }
@@ -268,10 +276,6 @@ footer p {
     .navbar-compact .container #navbar {
         padding-left: 0px;
     }
-}
-
-.navbar li.active {
-    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .container-content {
