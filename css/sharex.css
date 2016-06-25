@@ -78,7 +78,7 @@ body {
 .jumbotron-main .btn {
     background-color: white;
     border-color: transparent;
-    color: #255d84;
+    color: #19619d;
     border-radius: 4px;
     padding: 10px 0px;
     margin: 10px 10px 0px 10px;
@@ -144,29 +144,29 @@ body {
 
 .container-screenshot img {
     margin: 0px auto 30px auto;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 30px rgba(29, 80, 123, 0.3);
 }
 
 .container-screenshot .btn {
-    background-color: #348ccb;
+    background-color: #2f7cb4;
     border-color: transparent;
     color: white;
     border-radius: 4px;
     padding: 10px 50px;
     margin-top: 20px;
     font-size: 20px;
-    box-shadow: 0px 6px 0px #2c76ad;
+    box-shadow: 0px 6px 0px #2c6a98;
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
     position: relative;
 }
 
 .container-screenshot .btn:hover {
-    background-color: #2d90d6;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 0px 30px rgba(255, 255, 255, 0.5);
 }
 
 .container-screenshot .btn:active {
-    background-color: #3388c4;
-    box-shadow: 0px 3px 0px #2c76ad;
+    background-color: #2e78ad;
+    box-shadow: 0px 3px 0px #2c6a98;
     top: 3px;
 }
 
@@ -190,7 +190,7 @@ body {
 
 .mega-octicon {
     font-size: 64px;
-    color: #1B6EA8;
+    color: #19619d;
     margin-bottom: 10px;
 }
 
@@ -198,7 +198,7 @@ footer {
     background-color: #123b65;
     background: linear-gradient(to bottom, #224864 0%, #123b65 100%);
     color: white;
-    box-shadow: 0px 0px 50px rgba(22, 40, 69, 0.5);
+    box-shadow: 0px 0px 50px rgba(22, 40, 69, 0.4);
     padding: 20px 0px;
     text-align: center;
 }
