@@ -7,7 +7,7 @@ body {
     background: linear-gradient(to bottom, #224864 0%, #123b65 100%);
     margin-bottom: 0px;
     border-radius: 0px;
-    box-shadow: 0px 1px 20px rgb(16, 52, 74);
+    box-shadow: 0px 1px 20px rgb(0, 39, 62);
     border: none;
 }
 
@@ -51,7 +51,7 @@ body {
 
 .jumbotron {
     background-color: #171f2a;
-    background: radial-gradient(at top, #19619d 0%, #171f2a 100%);
+    background: radial-gradient(at top, #175a91 0%, #171f2a 100%);
     color: white;
     padding-top: 0px;
     padding: 50px 0px 60px;
@@ -121,7 +121,7 @@ body {
 }
 
 .jumbotron-main .tooltip a:hover {
-    text-shadow: 0px 1px 0px #000000, 0px 0px 10px rgba(255, 255, 255, 0.5)
+    text-shadow: 0px 1px 0px #000000, 0px 0px 10px rgba(255, 255, 255, 0.7)
 }
 
 .container-screenshot {
@@ -293,7 +293,7 @@ footer p {
     padding-bottom: 30px;
     background-image: url(../img/Background2.png);
     font-size: 16px;
-    color: #1B6EA8;
+    color: #19619d;
 }
 
 .container-donate-2 {
@@ -304,7 +304,7 @@ footer p {
 .donate-note {
     margin-top: 0px;
     margin-bottom: 30px;
-    background-color: #2d93db;
+    background-color: #19619d;
     border: none;
     color: white;
 }
@@ -320,17 +320,14 @@ footer p {
 
 .patrons-panel {
     margin-top: 30px;
-    margin-bottom: 0px;
-}
-
-.patrons-panel {
-    border-color: #2d93db;
+    margin-bottom: 10px;
+    border-color: #19619d;
 }
 
 .patrons-panel .panel-heading {
     color: white;
-    background-color: #2d93db;
-    border-color: #2d93db;
+    background-color: #19619d;
+    border-color: #19619d;
 }
 
 .container-callback {
