@@ -18,15 +18,17 @@ body {
 
 .navbar-main li> a:hover,
 .navbar-main li> a:focus {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .navbar-main li> a:hover {
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 0px 25px rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 0px 25px rgba(255, 255, 255, 0.6);
 }
 
 .navbar li.active {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 768px) {
