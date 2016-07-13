@@ -40,7 +40,7 @@ body {
 }
 
 .navbar-header button {
-    background-color: #1B6EA8;
+    background-color: #1b6ea8;
     box-shadow: 0px 3px 0px #1c557c;
 }
 
@@ -92,7 +92,7 @@ body {
 }
 
 .jumbotron-main .btn:active {
-    color: #257CB9;
+    color: #257cb9;
     background-color: #f4f4f4;
     box-shadow: 0px 3px 0px #dbdbdb;
     top: 3px;
@@ -101,7 +101,7 @@ body {
 .jumbotron-main .tooltip .tooltip-inner {
     background-color: rgba(0, 0, 0, 0.7);
     border: none;
-    color: #FFFFFF;
+    color: #ffffff;
     padding: 5px 10px;
     font-size: 15px;
     max-width: none;
@@ -121,7 +121,7 @@ body {
 }
 
 .container-screenshot {
-    background-color: #ffffff;
+    background-color: #fafafa;
     background-image: url(../img/Background.png);
     padding-top: 30px;
     padding-bottom: 50px;
@@ -131,7 +131,7 @@ body {
 .container-screenshot h2 {
     margin-top: 0px;
     margin-bottom: 20px;
-    color: #257CB9;
+    color: #257cb9;
 }
 
 .container-screenshot .img-responsive-parent {
@@ -166,8 +166,7 @@ body {
 }
 
 .container-features {
-    background-color: #f8f8f8;
-    background-image: url(../img/Background2.png);
+    background-color: #f5f5f5;
     padding-top: 50px;
     padding-bottom: 20px;
     text-align: center;
@@ -279,18 +278,19 @@ footer p {
 .container-content {
     padding-top: 10px;
     padding-bottom: 30px;
-    background-image: url(../img/Background2.png);
+    background-color: #f5f5f5;
 }
 
 .body-background {
+    background-color: #fafafa;
     background-image: url(../img/Background.png);
 }
 
 .container-donate {
     padding-top: 30px;
     padding-bottom: 30px;
-    background-image: url(../img/Background2.png);
     font-size: 16px;
+    background-color: #f5f5f5;
     color: #19619d;
 }
 
