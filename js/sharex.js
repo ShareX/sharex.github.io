@@ -43,39 +43,35 @@ function GetLatestReleaseInfo() {
         $(".sharex-download").attr("href", asset.browser_download_url);
         $(".sharex-download").attr("title", "<a href='downloads/'>" + releaseInfo + "</a>");
 
-        InitTooltip();
+        InitTooltip($(".sharex-download"));
     });
 }
 
-function InitTooltip() {
-    var tooltipButton = $(".sharex-download");
-    var tooltipFadeDelay = 300;
+function InitTooltip(obj, fadeDelay = 300) {
+    obj.tooltip({
+        trigger: "manual",
+        html: true,
+        animation: false
+    }).on("mouseenter", function () {
+        obj.tooltip("show");
 
-    tooltipButton.tooltip({
-            trigger: "manual",
-            html: true,
-            animation: false
-        })
-        .on("mouseenter", function () {
-            tooltipButton.tooltip("show");
-
-            $(".tooltip").on("mouseleave", function () {
-                setTimeout(function () {
-                    if (!tooltipButton.is(":hover") && !$(".tooltip").is(":hover")) {
-                        tooltipButton.tooltip("hide");
-                    }
-                }, tooltipFadeDelay);
-            });
-        }).on("mouseleave", function () {
+        $(".tooltip").on("mouseleave", function () {
             setTimeout(function () {
-                if (!tooltipButton.is(":hover") && !$(".tooltip").is(":hover")) {
-                    tooltipButton.tooltip("hide");
+                if (!obj.is(":hover") && !$(".tooltip").is(":hover")) {
+                    obj.tooltip("hide");
                 }
-            }, tooltipFadeDelay);
+            }, fadeDelay);
         });
+    }).on("mouseleave", function () {
+        setTimeout(function () {
+            if (!obj.is(":hover") && !$(".tooltip").is(":hover")) {
+                obj.tooltip("hide");
+            }
+        }, fadeDelay);
+    });
 
-    if (tooltipButton.is(":hover")) {
-        tooltipButton.tooltip("show");
+    if (obj.is(":hover")) {
+        obj.tooltip("show");
     }
 }
 
