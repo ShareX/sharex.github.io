@@ -48,30 +48,35 @@ function GetLatestReleaseInfo() {
 }
 
 function InitTooltip() {
+    var tooltipButton = $(".sharex-download");
     var tooltipFadeDelay = 300;
-    $("[data-toggle='tooltip']").tooltip({
+
+    tooltipButton.tooltip({
             trigger: "manual",
             html: true,
             animation: false
         })
         .on("mouseenter", function () {
-            var _this = this;
-            $(this).tooltip("show");
+            tooltipButton.tooltip("show");
+
             $(".tooltip").on("mouseleave", function () {
                 setTimeout(function () {
-                    if (!$(_this).is(":hover") && !$(".tooltip").is(":hover")) {
-                        $(_this).tooltip("hide");
+                    if (!tooltipButton.is(":hover") && !$(".tooltip").is(":hover")) {
+                        tooltipButton.tooltip("hide");
                     }
                 }, tooltipFadeDelay);
             });
         }).on("mouseleave", function () {
-            var _this = this;
             setTimeout(function () {
-                if (!$(_this).is(":hover") && !$(".tooltip").is(":hover")) {
-                    $(_this).tooltip("hide");
+                if (!tooltipButton.is(":hover") && !$(".tooltip").is(":hover")) {
+                    tooltipButton.tooltip("hide");
                 }
             }, tooltipFadeDelay);
         });
+
+    if (tooltipButton.is(":hover")) {
+        tooltipButton.tooltip("show");
+    }
 }
 
 $(document).ready(function () {
