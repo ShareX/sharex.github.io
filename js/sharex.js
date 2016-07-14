@@ -48,6 +48,7 @@ function GetLatestReleaseInfo() {
 }
 
 function InitTooltip() {
+    var tooltipFadeDelay = 300;
     $("[data-toggle='tooltip']").tooltip({
             trigger: "manual",
             html: true,
@@ -57,15 +58,19 @@ function InitTooltip() {
             var _this = this;
             $(this).tooltip("show");
             $(".tooltip").on("mouseleave", function () {
-                $(_this).tooltip("hide");
+                setTimeout(function () {
+                    if (!$(_this).is(":hover") && !$(".tooltip").is(":hover")) {
+                        $(_this).tooltip("hide");
+                    }
+                }, tooltipFadeDelay);
             });
         }).on("mouseleave", function () {
             var _this = this;
             setTimeout(function () {
-                if (!$(".tooltip:hover").length) {
+                if (!$(_this).is(":hover") && !$(".tooltip").is(":hover")) {
                     $(_this).tooltip("hide");
                 }
-            }, 300);
+            }, tooltipFadeDelay);
         });
 }
 
