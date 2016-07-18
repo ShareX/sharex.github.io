@@ -55,7 +55,7 @@
     <div class="jumbotron jumbotron-compact">
         <div class="container">
             <h1>
-                <a href="/">ShareX</a>
+                <a id="downloads-header" href="/">ShareX</a>
             </h1>
             <p>Downloads</p>
         </div>
@@ -92,7 +92,9 @@
     <script>
         $(document).ready(function() {
             var repo = GetParameterByName("repo");
-            if (!repo) {
+            if (repo) {
+                $("#downloads-header").text(repo).attr("href", "https://github.com/" + repo);
+            } else {
                 repo = "ShareX/ShareX";
             }
             GetReleases(repo);
