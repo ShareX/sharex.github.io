@@ -39,9 +39,9 @@ function GetLatestReleaseInfo() {
         } else {
             timeAgo = (dateDiff / oneDay).toFixed(1) + " days ago";
         }
-        var releaseInfo = release.name + " was updated " + timeAgo + " and has been downloaded " + downloadCount.toLocaleString() + " times.";
+        var releaseInfo = "Version: " + release.tag_name.substring(1) + "\nReleased: " + timeAgo + "\nDownload count: " + downloadCount.toLocaleString();
         $(".sharex-download").attr("href", asset.browser_download_url);
-        $(".sharex-download").attr("title", "<a href='downloads/'>" + releaseInfo + "</a>");
+        $(".sharex-download").attr("title", "<a href='downloads/'><div>" + releaseInfo + "</div></a>");
 
         InitTooltip($(".sharex-download"));
     });
