@@ -99,7 +99,7 @@ body {
 }
 
 .jumbotron-main .tooltip {
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 .jumbotron-main .tooltip .tooltip-inner {
@@ -114,7 +114,7 @@ body {
 }
 
 .jumbotron-main .tooltip .tooltip-arrow {
-    border: none;
+    display: none;
 }
 
 .jumbotron-main .tooltip.in {
