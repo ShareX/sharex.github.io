@@ -125,6 +125,7 @@
                                     .attr("href", release.html_url)
                                     .text(release.name)
                                 )
+                                .append(release.prerelease ? "<div class=\"pull-right\"><span class=\"label label-danger\">Pre-release</span></div>" : "")
                             )
                             .append($("<td>")
                                 .append($("<a>")
