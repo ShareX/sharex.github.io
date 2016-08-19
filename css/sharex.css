@@ -70,6 +70,11 @@ body {
 
 .jumbotron-main {
     text-align: center;
+    padding-top: 30px;
+}
+
+.jumbotron-main .alert {
+    margin-bottom: 40px;
 }
 
 .jumbotron-main .btn {
