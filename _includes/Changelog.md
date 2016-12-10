@@ -1,7 +1,3 @@
-Note: Every release includes bug fixes. In most cases, these are not included in the changelog.
-
----
-
 ### [ShareX 11.4.1](https://github.com/ShareX/ShareX/releases/tag/v11.4.1) - 2016-11-09
 
 * Region capture related changes:
