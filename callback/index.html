@@ -1,143 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+---
 
-<head>
-    <meta charset="utf-8">
-    <meta name="robots" content="noindex">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="ShareX is an open source program that lets you take screenshots or screencasts of any selected area with a single key, save them in your clipboard, hard disk or instantly upload them to over 30 different file hosting services.">
-    <meta name="author" content="ShareX Team">
-    <link rel="icon" href="/favicon.ico">
-
-    <title>ShareX - Take screenshots or screencasts, annotate, upload and share URL in clipboard</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/sharex.css" rel="stylesheet">
-    <link href="../css/sticky-footer.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-
-<body class="body-background">
-    <nav class="navbar navbar-main navbar-compact">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="../">Home</a></li>
-                    <li class="active"><a href="#">Callback</a></li>
-                    <li><a href="http://imgur.com/a/7TDhO">Screenshots</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=NB32QYt8WfI">Video</a></li>
-                    <li><a href="../features/">Features</a></li>
-                    <li><a href="https://github.com/ShareX/ShareX/wiki/Changelog">Changelog</a></li>
-                    <li><a href="https://github.com/ShareX/CustomUploaders">Custom uploaders</a></li>
-                    <li><a href="https://github.com/ShareX/ShareX">GitHub</a></li>
-                    <li><a href="https://webchat.freenode.net/?channels=%23ShareX" title="#ShareX on irc.freenode.net">IRC</a></li>
-                    <li><a href="http://store.steampowered.com/app/400040/">Steam</a></li>
-                </ul>
-            </div>
+<nav class="navbar navbar-main navbar-compact">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
         </div>
-    </nav>
-
-    <div class="jumbotron jumbotron-compact">
-        <div class="container">
-            <h1>
-                <a href="/">ShareX</a>
-            </h1>
-            <p>Authorization</p>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ site.url }}">Home</a></li>
+                <li class="active"><a href="#">Callback</a></li>
+                <li><a href="http://imgur.com/a/7TDhO">Screenshots</a></li>
+                <li><a href="https://www.youtube.com/watch?v=NB32QYt8WfI">Video</a></li>
+                <li><a href="{{ site.url }}/features/">Features</a></li>
+                <li><a href="{{ site.url }}/changelog/">Changelog</a></li>
+                <li><a href="https://github.com/ShareX/CustomUploaders">Custom uploaders</a></li>
+                <li><a href="https://github.com/ShareX/ShareX">GitHub</a></li>
+                <li><a href="https://webchat.freenode.net/?channels=%23ShareX" title="#ShareX on irc.freenode.net">IRC</a></li>
+                <li><a href="http://store.steampowered.com/app/400040/">Steam</a></li>
+            </ul>
         </div>
     </div>
+</nav>
 
-    <div class="container-callback">
-        <div class="container">
-            <div id="panel-callback" class="panel panel-primary">
-                <div class="panel-heading">
-                    <span id="title" />
+<div class="jumbotron jumbotron-compact">
+    <div class="container">
+        <h1>
+            <a href="/">ShareX</a>
+        </h1>
+        <p>Authorization</p>
+    </div>
+</div>
+
+<div class="container-callback">
+    <div class="container">
+        <div id="panel-callback" class="panel panel-primary">
+            <div class="panel-heading">
+                <span id="title" />
+            </div>
+            <div class="panel-body">
+                <div id="callback-code" class="input-group">
+                    <input id="code" type="text" class="form-control" onfocus="this.select()" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" data-clipboard-target="#code">Copy to clipboard</button>
+                    </span>
                 </div>
-                <div class="panel-body">
-                    <div id="callback-code" class="input-group">
-                        <input id="code" type="text" class="form-control" onfocus="this.select()" />
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button" data-clipboard-target="#code">Copy to clipboard</button>
-                        </span>
-                    </div>
-                    <span id="callback-error" />
-                </div>
+                <span id="callback-error" />
             </div>
         </div>
     </div>
+</div>
 
-    <footer class="footer">
-        <p>Copyright &copy; 2007-2016 ShareX Team</p>
-    </footer>
+<script src="{{ site.url }}/js/jquery.min.js"></script>
+<script src="{{ site.url }}/js/bootstrap.min.js"></script>
+<script src="{{ site.url }}/js/clipboard.min.js"></script>
 
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/clipboard.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var code = GetParameterByName("code");
 
-    <script>
-        $(document).ready(function() {
-            var code = GetParameterByName("code");
+        if (!code) {
+            code = GetParameterByName("oauth_verifier");
+        }
 
-            if (!code) {
-                code = GetParameterByName("oauth_verifier");
-            }
+        if (code) {
+            $("#panel-callback").addClass("panel-success");
+            $("#title").text("Please paste following code in ShareX");
+            $("#code").val(code);
+        } else {
+            var error = GetParameterByName("error");
 
-            if (code) {
-                $("#panel-callback").addClass("panel-success");
-                $("#title").text("Please paste following code in ShareX");
-                $("#code").val(code);
+            if (error) {
+                $("#panel-callback").addClass("panel-danger");
+                $("#title").text("ShareX is not properly authorized");
+                $("#callback-error").text("Error: " + error);
             } else {
-                var error = GetParameterByName("error");
-
-                if (error) {
-                    $("#panel-callback").addClass("panel-danger");
-                    $("#title").text("ShareX is not properly authorized");
-                    $("#callback-error").text("Error: " + error);
-                } else {
-                    $("#panel-callback").addClass("panel-warning");
-                    $("#title").text("Invalid access");
-                    $("#callback-error").text("Unexpected error occured.");
-                }
-
-                $("#callback-code").hide();
-                $("#callback-error").show();
+                $("#panel-callback").addClass("panel-warning");
+                $("#title").text("Invalid access");
+                $("#callback-error").text("Unexpected error occured.");
             }
 
-            var clipboard = new Clipboard(".btn");
+            $("#callback-code").hide();
+            $("#callback-error").show();
+        }
 
-            clipboard.on("success", function(e) {
-                $("#callback-code .btn").text("Copied!");
-            });
+        var clipboard = new Clipboard(".btn");
 
-            clipboard.on("error", function(e) {
-                $("#callback-code .btn").text("Copy failed.");
-            });
+        clipboard.on("success", function(e) {
+            $("#callback-code .btn").text("Copied!");
         });
 
-        function GetParameterByName(name, url) {
-            if (!url) url = window.location.href;
-            name = name.replace(/[\[\]]/g, "\\$&");
-            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, " "));
-        }
-    </script>
-</body>
+        clipboard.on("error", function(e) {
+            $("#callback-code .btn").text("Copy failed.");
+        });
+    });
 
-</html>
+    function GetParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+</script>
