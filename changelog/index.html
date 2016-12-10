@@ -39,7 +39,8 @@ layout: default
 
 <div class="container-content">
     <div class="container markdown">
-        {% markdown Changelog.md %}
+        {% capture markdown %}{% include Changelog.md %}{% endcapture %}
+        {{ markdown | markdownify }}
     </div>
 </div>
 
