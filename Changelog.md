@@ -508,7 +508,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Automatically expand capture menu when you open the tray menu (You can disable it from: Application settings -> Advanced)
 * Image effects can be enabled/disable using checkboxes near effects
 * Added rounded corners & outline image effects
-* Added Hizli Resim image uploader
+* Added Hızlı Resim image uploader
 
 ---
 
@@ -702,7 +702,7 @@ This update is focused on performance improvements and features additions to ima
 
 ---
 
-### ShareX 8.2.0.655 � 2013-09-26
+### ShareX 8.2.0.655 - 2013-09-26
 
 * Added folder indexer with support for text, HTML and XML
 * Option to change clipboard content format for wider software compatibility 
