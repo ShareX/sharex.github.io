@@ -191,7 +191,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Update [Greenshot image editor](https://github.com/greenshot/greenshot) to 1.2.9 version (by [@campbeb](https://github.com/campbeb))
 * Single instance improvements to support multiple file upload from Windows Explorer properly (by [@campbeb](https://github.com/campbeb))
 * Added raw URL option to Pastebin and GitHub Gist
-* Moved Quick task menu’s "Continue" button to top of the menu
+* Moved Quick task menu's "Continue" button to top of the menu
 * Added AcceptInvalidSSLCertificates option to `Application settings -> Advanced tab` which can be used by people who using self signed certificates
 * File name pattern will be applied to "Upload from URL" method too
 * Will not show window/control hover areas anymore in screen color picker
@@ -333,7 +333,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added [SomeImage](https://someimage.com) image uploader (by [@DanielMcAssey](https://github.com/DanielMcAssey))
 * Parameter support for few file naming macros (%i{n} Adds 0 padding, %rn{n} random number digits, %ra random alphanumeric digits) (by [@davidruhmann](https://github.com/davidruhmann))
 * Added keyboard support in region capture for creating regions so that way you don't need to use mouse (<kbd>Insert</kbd> Start/Stop selection, <kbd>Delete</kbd> Cancel selection) (by [@davidruhmann](https://github.com/davidruhmann))
-* Added option to use “after capture tasks” in file uploads which will allow using file related tasks such as "Perform actions" (In Task settings -> Advanced tab)
+* Added option to use "after capture tasks" in file uploads which will allow using file related tasks such as "Perform actions" (In Task settings -> Advanced tab)
 * Added custom sound support (In Task settings -> Advanced tab)
 * Snap to preset sizes support for region capture (Hold <kbd>Alt</kbd> modifier while dragging region)
 * Added customizable single left click action for tray icon, default is "Capture region" also you can select "None" for be able to disable it (In Application settings -> Advanced tab)
@@ -521,7 +521,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 
 ### [ShareX 9.3.0](https://github.com/ShareX/ShareX/releases/tag/v9.3.0) - 2014-09-10
 
-* Added custom gradient support to Image effects under "Draw text”
+* Added custom gradient support to Image effects under "Draw text"
 * PushBullet updated to API v2 and is now listed also as a URL sharing service (by [@BallisticLingonberries](https://github.com/BallisticLingonberries))
 * Hotkey to be able to open screenshots folder
 * Name parser support for ```%yy``` for 2 digits year
@@ -578,7 +578,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Videos recorded using FFmpeg will no longer play faster when framerate drops
 * Destinations settings window use list tab view now
 * Added gfycat.com file uploader support (by [@Dinnerbone](https://github.com/Dinnerbone))
-* Added new Capture menu item and hotkey “Rectangle (Light)” which is lightweight version of Rectangle capture for slower computers
+* Added new Capture menu item and hotkey "Rectangle (Light)" which is lightweight version of Rectangle capture for slower computers
 * Custom domain support for Amazon S3
 * Added help button to FFmpeg which opens up the documentation web page
 * Drag-and-drop box now supports image and text too
@@ -586,7 +586,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added an error window for FFmpeg incase recording or encoding fails
 * Added QR code generator to After Upload tasks, Tools menu and right click menu in main window
 * Hotkey task settings are now shown as Workflows in main window and tray menu
-* Added version history link to ‘about’ window
+* Added version history link to about window
 
 ---
 
