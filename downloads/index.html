@@ -1,181 +1,135 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: page
+---
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="ShareX is an open source program that lets you take screenshots or screencasts of any selected area with a single key, save them in your clipboard, hard disk or instantly upload them to over 30 different file hosting services.">
-    <meta name="author" content="ShareX Team">
-    <link rel="icon" href="/favicon.ico">
-
-    <title>ShareX - Take screenshots or screencasts, annotate, upload and share URL in clipboard</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/octicons.css" rel="stylesheet">
-    <link href="../css/sharex.css" rel="stylesheet">
-    <link href="../css/sticky-footer.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-
-<body>
-    <nav class="navbar navbar-main navbar-compact">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="../">Home</a></li>
-                    <li class="active"><a href="#">Downloads</a></li>
-                    <li><a href="http://imgur.com/a/7TDhO">Screenshots</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=NB32QYt8WfI">Video</a></li>
-                    <li><a href="../features/">Features</a></li>
-                    <li><a href="https://github.com/ShareX/ShareX/wiki/Changelog">Changelog</a></li>
-                    <li><a href="https://github.com/ShareX/CustomUploaders">Custom uploaders</a></li>
-                    <li><a href="https://github.com/ShareX/ShareX">GitHub</a></li>
-                    <li><a href="https://webchat.freenode.net/?channels=%23ShareX" title="#ShareX on irc.freenode.net">IRC</a></li>
-                    <li><a href="http://store.steampowered.com/app/400040/">Steam</a></li>
-                </ul>
-            </div>
+<nav class="navbar navbar-main navbar-compact">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
         </div>
-    </nav>
-
-    <div class="jumbotron jumbotron-compact">
-        <div class="container">
-            <h1>
-                <a id="downloads-header" href="/">ShareX</a>
-            </h1>
-            <p>Downloads</p>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="../">Home</a></li>
+                <li class="active"><a href="#">Downloads</a></li>
+                <li><a href="http://imgur.com/a/7TDhO">Screenshots</a></li>
+                <li><a href="https://www.youtube.com/watch?v=NB32QYt8WfI">Video</a></li>
+                <li><a href="../features/">Features</a></li>
+                <li><a href="https://github.com/ShareX/ShareX/wiki/Changelog">Changelog</a></li>
+                <li><a href="https://github.com/ShareX/CustomUploaders">Custom uploaders</a></li>
+                <li><a href="https://github.com/ShareX/ShareX">GitHub</a></li>
+                <li><a href="https://webchat.freenode.net/?channels=%23ShareX" title="#ShareX on irc.freenode.net">IRC</a></li>
+                <li><a href="http://store.steampowered.com/app/400040/">Steam</a></li>
+            </ul>
         </div>
     </div>
+</nav>
 
-    <div class="container-downloads">
-        <div class="container">
-            <h1>Last 30 release info</h1>
-            <div><span class="mega-octicon octicon-sync spinning"></span></div>
-            <table class="table table-bordered table-striped table-downloads">
-                <thead>
-                    <tr>
-                        <th>Release name</th>
-                        <th>File size</th>
-                        <th>Download count</th>
-                        <th>Release date</th>
-                        <th>Active days</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </div>
+<div class="jumbotron jumbotron-compact">
+    <div class="container">
+        <h1>
+            <a id="downloads-header" href="/">ShareX</a>
+        </h1>
+        <p>Downloads</p>
     </div>
+</div>
 
-    <footer class="footer">
-        <p>Copyright &copy; 2007-2016 ShareX Team</p>
-    </footer>
+<div class="container-downloads">
+    <div class="container">
+        <h1>Last 30 release info</h1>
+        <div><span class="mega-octicon octicon-sync spinning"></span></div>
+        <table class="table table-bordered table-striped table-downloads">
+            <thead>
+                <tr>
+                    <th>Release name</th>
+                    <th>File size</th>
+                    <th>Download count</th>
+                    <th>Release date</th>
+                    <th>Active days</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
 
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/moment.min.js"></script>
+<script src="{{ site.url }}/js/jquery.min.js"></script>
+<script src="{{ site.url }}/js/bootstrap.min.js"></script>
+<script src="{{ site.url }}/js/moment.min.js"></script>
 
-    <script>
-        $(document).ready(function() {
-            var repo = GetParameterByName("repo");
-            if (repo) {
-                $("#downloads-header").text(repo).attr("href", "https://github.com/" + repo);
-            } else {
-                repo = "ShareX/ShareX";
-            }
-            GetReleases(repo);
-        });
+<script>
+    $(document).ready(function() {
+        var repo = GetParameterByName("repo");
+        if (repo) {
+            $("#downloads-header").text(repo).attr("href", "https://github.com/" + repo);
+        } else {
+            repo = "ShareX/ShareX";
+        }
+        GetReleases(repo);
+    }); 
 
-        function GetReleases(repo) {
-            $.getJSON("https://api.github.com/repos/" + repo + "/releases").done(function(json) {
-                previousUpdatedAt = moment();
+    function GetReleases(repo) {
+        $.getJSON("https://api.github.com/repos/" + repo + "/releases").done(function(json) {
+            previousUpdatedAt = moment();
 
-                for (var i = 0; i < json.length; i++) {
-                    var release = json[i];
-                    if (release.assets.length === 0) {
-                        continue;
-                    }
-                    var asset = release.assets[0];
-                    var fileSize = Math.round(asset.size / 1024);
-                    var downloadCount = 0;
-                    for (var i2 = 0; i2 < release.assets.length; i2++) {
-                        downloadCount += release.assets[i2].download_count;
-                    }
-                    var updatedAt = moment(asset.updated_at);
-                    var activeDays = previousUpdatedAt.diff(updatedAt, "days", true);
-                    previousUpdatedAt = updatedAt;
-                    $(".table-downloads tbody")
-                        .append($("<tr>")
-                            .append($("<td>")
-                                .append($("<a>")
-                                    .attr("href", release.html_url)
-                                    .text(release.name)
-                                )
-                                .append(release.prerelease ? "<div class=\"pull-right\"><span class=\"label label-danger\">Pre-release</span></div>" : "")
-                            )
-                            .append($("<td>")
-                                .append($("<a>")
-                                    .attr("href", asset.browser_download_url)
-                                    .text(fileSize.toLocaleString() + " KB")
-                                )
-                            )
-                            .append($("<td>")
-                                .text(downloadCount.toLocaleString())
-                            )
-                            .append($("<td>")
-                                .text(moment(asset.updated_at).format("YYYY-MM-DD HH:mm"))
-                            )
-                            .append($("<td>")
-                                .text(activeDays.toFixed(1))
-                            )
-                        );
+            for (var i = 0; i < json.length; i++) {
+                var release = json[i];
+                if (release.assets.length === 0) {
+                    continue;
                 }
+                var asset = release.assets[0];
+                var fileSize = Math.round(asset.size / 1024);
+                var downloadCount = 0;
+                for (var i2 = 0; i2 < release.assets.length; i2++) {
+                    downloadCount += release.assets[i2].download_count;
+                }
+                var updatedAt = moment(asset.updated_at);
+                var activeDays = previousUpdatedAt.diff(updatedAt, "days", true);
+                previousUpdatedAt = updatedAt;
+                $(".table-downloads tbody")
+                    .append($("<tr>")
+                        .append($("<td>")
+                            .append($("<a>")
+                                .attr("href", release.html_url)
+                                .text(release.name)
+                            )
+                            .append(release.prerelease ? "<div class=\"pull-right\"><span class=\"label label-danger\">Pre-release</span></div>" : "")
+                        )
+                        .append($("<td>")
+                            .append($("<a>")
+                                .attr("href", asset.browser_download_url)
+                                .text(fileSize.toLocaleString() + " KB")
+                            )
+                        )
+                        .append($("<td>")
+                            .text(downloadCount.toLocaleString())
+                        )
+                        .append($("<td>")
+                            .text(moment(asset.updated_at).format("YYYY-MM-DD HH:mm"))
+                        )
+                        .append($("<td>")
+                            .text(activeDays.toFixed(1))
+                        )
+                    );
+            }
 
-                $(".spinning").hide();
-                $(".table-downloads").fadeIn();
-            });
-        }
+            $(".spinning").hide();
+            $(".table-downloads").fadeIn();
+        });
+    }
 
-        function GetParameterByName(name, url) {
-            if (!url) url = window.location.href;
-            name = name.replace(/[\[\]]/g, "\\$&");
-            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, " "));
-        }
-    </script>
-
-    <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-40712139-3', 'auto');
-        ga('send', 'pageview');
-    </script>
-</body>
-
-</html>
+    function GetParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+</script>
