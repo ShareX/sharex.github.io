@@ -15,6 +15,9 @@ layout: default
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="{{ site.url }}">Home</a></li>
+                {% if page.title == "Authorization" %}<li class="active"><a href="{{ site.url }}/callback/">Authorization</a></li>{% endif %}
+                {% if page.title == "Donate" %}<li class="active"><a href="{{ site.url }}/donate/">Donate</a></li>{% endif %}
+                {% if page.title == "Downloads" %}<li class="active"><a href="{{ site.url }}/downloads/">Downloads</a></li>{% endif %}
                 <li><a href="http://imgur.com/a/7TDhO">Screenshots</a></li>
                 <li><a href="https://www.youtube.com/watch?v=NB32QYt8WfI">Video</a></li>
                 <li {% if page.title == "Features" %}class="active"{% endif %}><a href="{{ site.url }}/features/">Features</a></li>
