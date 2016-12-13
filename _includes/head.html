@@ -1,12 +1,31 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="author" content="{{ site.author }}">
+    <meta name="generator" content="Jekyll v{{ jekyll.version }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="ShareX is an open source program that lets you take screenshots or screencasts of any selected area with a single key, save them in your clipboard, hard disk or instantly upload them to over 80 different file hosting services.">
-    <meta name="author" content="ShareX Team">
-    <link rel="icon" href="{{ site.url }}/favicon.ico">
+    
+    <title>{% if page.title %}{{ page.title }}{% elsif site.title %}{{ site.title }}{% endif %}</title>
+    
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@{{ site.twitter }}">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% elsif site.title %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{{ site.description }}">
+    <-- The image must be a minimum size of 120px by 120px and must be less than 1MB in file size. -->
+    <meta name="twitter:image" content="{{ site.url }}/img/ShareX_Logo.png">
 
-    <title>{{ site.title }}</title>
+    <!-- Open Graph data -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% elsif site.title %}{{ site.title }}{% endif %}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:image" content="{{ site.url }}/img/ShareX_Logo.png" />
+    <meta property="og:description" content="{{ site.description }}" /> 
+    <meta property="og:site_name" content="{{ site.name }}" />
+    
+    <link rel="icon" href="{{ site.url }}/favicon.ico">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="{{ site.url }}/css/bootstrap.min.css" rel="stylesheet">

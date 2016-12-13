@@ -1,6 +1,12 @@
+name: ShareX
 title: ShareX - Take screenshots or screencasts, annotate, upload and share URL in clipboard
+description: ShareX is an open source program that lets you take screenshots or screencasts of any selected area with a single key, save them in your clipboard, hard disk or instantly upload them to over 80 different file hosting services.
 url: https://getsharex.com
+author: ShareX Team
+twitter: @GetShareX
 markdown: kramdown
+
+googleAnalyticsId: UA-40712139-3
 
 kramdown:
   input: GFM
