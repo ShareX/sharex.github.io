@@ -77,49 +77,6 @@ function InitTooltip(obj, fadeDelay = 300) {
 
 $(document).ready(function () {
     SlideCheck();
-
-    $(".sharex-screenshots").fancybox({
-        padding: 5,
-        margin: 0,
-        autoSize: false,
-        width: "90%",
-        height: "90%",
-        helpers: {
-            overlay: {
-                locked: false,
-                css: {
-                    "background": "rgba(0, 0, 0, 0.5)"
-                }
-            }
-        },
-        openEffect: "fade",
-        closeEffect: "fade",
-        iframe: {
-            preload: false
-        }
-    });
-
-    $(".sharex-video").fancybox({
-        padding: 5,
-        margin: 0,
-        autoSize: false,
-        width: "1280px",
-        height: "720px",
-        helpers: {
-            overlay: {
-                locked: false,
-                css: {
-                    "background": "rgba(0, 0, 0, 0.5)"
-                }
-            }
-        },
-        openEffect: "fade",
-        closeEffect: "fade",
-        iframe: {
-            preload: false
-        }
-    });
-
     GetLatestReleaseInfo();
 });
 
