@@ -1,7 +1,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="{% if page.title != "Authorization" %}index, follow{% else %}noindex{% endif %}">
     <meta name="description" content="{{ site.description }}">
     <meta name="author" content="{{ site.author }}">
     <meta name="generator" content="Jekyll v{{ jekyll.version }}">

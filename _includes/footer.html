@@ -2,7 +2,7 @@
     <p>Copyright &copy; 2007-{{ "now" | date: "%Y" }} {{ site.author }}</p>
 </footer>
 
-{% if site.googleAnalyticsId %}
+{% if site.googleAnalyticsId and page.title != "Authorization" %}
 <script>
     (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
