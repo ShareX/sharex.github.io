@@ -8,6 +8,7 @@ twitter: GetShareX
 markdown: kramdown
 
 googleAnalyticsId: UA-40712139-3
+addThisId: 53e2d1c30114f995
 
 kramdown:
   input: GFM
