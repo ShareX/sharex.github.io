@@ -216,6 +216,10 @@ footer p {
     margin: 0px;
 }
 
+footer a, footer a:focus, footer a:hover {
+    color: white;
+}
+
 .animation-element {
     visibility: hidden;
 }
