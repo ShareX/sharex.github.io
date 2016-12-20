@@ -397,6 +397,10 @@ footer a, footer a:focus, footer a:hover {
     }
 }
 
+table .label {
+    font-weight: 500;
+}
+
 .markdown h2, 
 .markdown h3,
 .markdown h4 {
