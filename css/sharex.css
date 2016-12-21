@@ -397,8 +397,12 @@ footer a, footer a:focus, footer a:hover {
     }
 }
 
-table .label {
+.table-downloads .label {
     font-weight: 500;
+}
+
+.table-downloads tr {
+    background-color: #fdfdfd;
 }
 
 .markdown h2, 
