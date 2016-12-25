@@ -1,3 +1,8 @@
+---
+layout: markdown
+title: Features
+---
+
 ## Capturing
 
 ShareX incorporates the following methods to allow screen capture.

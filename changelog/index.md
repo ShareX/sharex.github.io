@@ -1,3 +1,8 @@
+---
+layout: markdown
+title: Changelog
+---
+
 ### [ShareX 11.4.1](https://github.com/ShareX/ShareX/releases/tag/v11.4.1) - 2016-11-09
 
 * Region capture related changes:
