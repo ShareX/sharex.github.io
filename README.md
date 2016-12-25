@@ -1,1 +1,3 @@
-# https://getsharex.com
+Website of ShareX
+
+https://getsharex.com
