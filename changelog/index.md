@@ -113,34 +113,34 @@ title: Changelog
 
 * Added annotation support inside region capture.
 In region capture you can <kbd>right click</kbd> to open menu which you can select annotation tool, capture fullscreen/monitor or be able to change region capture options. You can use <kbd>middle click</kbd> to cancel capture.
-	* These are the currently available annotation tools:
-		* Region
-			* Rectangle
-			* Rounded rectangle
-			* Ellipse
-		* Drawing
-			* Rectangle
-			* Rounded rectangle
-			* Ellipse
-			* Line
-			* Arrow
-			* Text
-			* Step
-		* Effect
-			* Blur
-			* Pixelate
-			* Highlight
-	* You can change these settings from region capture options menu:
-		* Multi region mode
-		* Show tips
-		* Show position and size info
-		* Show magnifier
-		* Square shape magnifier
-		* Magnifier pixel count
-		* Magnifier pixel size
-		* Show screen wide crosshair
-		* Fixed size region mode
-		* Show FPS
+    * These are the currently available annotation tools:
+        * Region
+            * Rectangle
+            * Rounded rectangle
+            * Ellipse
+        * Drawing
+            * Rectangle
+            * Rounded rectangle
+            * Ellipse
+            * Line
+            * Arrow
+            * Text
+            * Step
+        * Effect
+            * Blur
+            * Pixelate
+            * Highlight
+    * You can change these settings from region capture options menu:
+        * Multi region mode
+        * Show tips
+        * Show position and size info
+        * Show magnifier
+        * Square shape magnifier
+        * Magnifier pixel count
+        * Magnifier pixel size
+        * Show screen wide crosshair
+        * Fixed size region mode
+        * Show FPS
 * Added option to disable annotation support via "Task settings window -> Region capture tab"
 * Removed "Region (Annotate)" capture because default region capture has annotation support now
 * Added "Text capture ([OCR](https://en.wikipedia.org/wiki/Optical_character_recognition))" to capture menu
@@ -150,13 +150,13 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added option in "Destination settings, Email tab" to send email to a specific email address without requiring user prompt
 * Added icons for "After capture tasks" menu and "After upload tasks" menu items; checked items text will now display as bold
 * Added Copy dropdown button in "Color picker" window with the following items to be able to copy specific color type:
-	* All
-	* RGB
-	* Hexadecimal
-	* CMYK
-	* HSB
-	* Decimal
-	* Position
+    * All
+    * RGB
+    * Hexadecimal
+    * CMYK
+    * HSB
+    * Decimal
+    * Position
 * Added "SaveSettingsAfterTaskCompleted" setting to "Application settings, Advanced tab" and enabled by default, this setting saves all settings after each task completed but only if there is no other active task (so if there are 50 tasks running in same time only after all tasks completed, settings will save) reason for this setting is because in few people while Windows shutdown does not let ShareX to save settings therefore having this option allows to secure settings in this situations
 * Region capture tips will show in active monitor instead of primary monitor
 * "Quick task menu" and "After capture window" after capture tasks now can be used in all image related tasks
