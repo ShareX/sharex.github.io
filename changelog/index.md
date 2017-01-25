@@ -5,7 +5,7 @@ title: Changelog
 
 ### [ShareX 11.5.0](https://github.com/ShareX/ShareX/releases/tag/v11.5.0) - 2017-01-25
 
-* Changelog URL changed to https://getsharex.com/changelog
+* Changelog URL changed to [https://getsharex.com/changelog](https://getsharex.com/changelog)
 * Region capture related changes:
     * Added drop shadow support
     * Replaced rounded rectangle shapes with corner radius option to rectangle shapes
@@ -226,7 +226,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 ### [ShareX 10.9.1](https://github.com/ShareX/ShareX/releases/tag/v10.9.1) - 2016-03-25
 
 * Removed [Copy](http://copy.com) file uploader because [service is discontinued](https://blog.barracuda.com/2016/02/01/message-from-gm-of-storage/)
-* Update [Greenshot image editor](https://github.com/greenshot/greenshot) to 1.2.9 version (by [@campbeb](https://github.com/campbeb))
+* Update Greenshot image editor to 1.2.9 version (by [@campbeb](https://github.com/campbeb))
 * Single instance improvements to support multiple file upload from Windows Explorer properly (by [@campbeb](https://github.com/campbeb))
 * Added raw URL option to Pastebin and GitHub Gist
 * Moved Quick task menu's "Continue" button to top of the menu
@@ -267,10 +267,10 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 ### [ShareX 10.6.1](https://github.com/ShareX/ShareX/releases/tag/v10.6.1) - 2016-01-18
 
 * In update notification window if user presses the "No" button then ShareX will not check for updates for another 24 hours
-* If the user has not changed previous default value of a window name pattern setting then it will be reset to the new default value which uses ```%pn``` (process name) instead of ```%t``` (window title); people who have already modified it won't be affected (you can always customize the file name via ```Task settings window -> File naming tab```)
+* If the user has not changed previous default value of a window name pattern setting then it will be reset to the new default value which uses `%pn` (process name) instead of `%t` (window title); people who have already modified it won't be affected (you can always customize the file name via `Task settings window -> File naming tab`)
 * Alternative clipboard copy method is now disabled by default because a few applications have been causing issues with it e.g. Skype
 * QR code window will auto detect a URL in the clipboard and show its QR code on startup (by [@Scrxtchy](https://github.com/Scrxtchy))
-* Support [special folder](https://msdn.microsoft.com/en-us/library/system.environment.specialfolder(v=vs.110).aspx) parameters so that for instance, screenshots folder path can be configured as ```%MyPictures%\Screenshots```
+* Support [special folder](https://msdn.microsoft.com/en-us/library/system.environment.specialfolder(v=vs.110).aspx) parameters so that for instance, screenshots folder path can be configured as `%MyPictures%\Screenshots`
 
 ---
 
@@ -325,9 +325,9 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added show most recent link first setting
 * Added warning icons for unsupported WebM audio codecs and slow x264 presets
 * Added debug menu to tray menu
-* Having empty file with the file name ```Portable``` in the same folder as ShareX.exe will make ShareX portable
+* Having empty file with the file name `Portable` in the same folder as ShareX.exe will make ShareX portable
 * In portable mode, ShareX auto updater will open download URL of portable ShareX version in browser
-* Added ```Show "Upload with ShareX" button in Windows Explorer context menu``` option to ShareX setup
+* Added `Show "Upload with ShareX" button in Windows Explorer context menu` option to ShareX setup
 * When hotkeys are disabled all hotkeys except "Enable/Disable hotkeys" hotkey will be unregistered (by [@mpistrich](https://github.com/mpistrich))
 * If saving image fails during an after capture task "Save image to file as...", then save dialog will reopen (by [@mpistrich](https://github.com/mpistrich))
 * Added area info for cursor hover area in "Region (Windows & controls)" mode
@@ -345,7 +345,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added edit button near each hotkey in hotkey settings window to make it obvious that task settings of each hotkey is possible to edit
 * Added more name patterns (Task settings -> Upload tab) and categories for context menu of it (by [@davidruhmann](https://github.com/davidruhmann))
 * Added hidden window option to actions (by [@atillabyte](https://github.com/atillabyte))
-* Added ```-Task "Hotkey description"``` [CLI](https://en.wikipedia.org/wiki/Command-line_interface) command to be able to do upload using CLI with specific task settings
+* Added `-Task "Hotkey description"` [CLI](https://en.wikipedia.org/wiki/Command-line_interface) command to be able to do upload using CLI with specific task settings
 * Added Changelog button to both update notification message box and about window
 
 ---
@@ -400,10 +400,10 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Imgur GIF uploads now use GIFV link
 * Added [LnkU](http://lnku.co), [CoinURL](https://coinurl.com/), [QRnet](http://qr.net/), [VURL](http://vurl.com/), [2gp](http://2.gp/) URL shorteners (by [@DanielMcAssey](https://github.com/DanielMcAssey))
 * Added [Windows modifier](https://en.wikipedia.org/wiki/Windows_key) hotkey support (Because of limitations, instead of holding this modifier you need just press one time for it to add/remove modifier)
-* Multiple file import support e.g. import button used in Custom Uploaders (This feature allows you to import all these uploaders https://github.com/ShareX/CustomUploaders with single click)
+* Multiple file import support e.g. import button used in Custom Uploaders (This feature allows you to import all these [custom uploaders](https://github.com/ShareX/CustomUploaders) with single click)
 * Added clear Custom Uploaders button
 * Added "TextTaskSaveAsFile" setting in "Task Settings -> Advanced" tab which enabled by default and allows to save all text tasks (clipboard text upload, text drag and drop etc.) as file
-* [CLI](https://en.wikipedia.org/wiki/Command-line_interface) URL upload support (Example: ```ShareX.exe "https://getsharex.com/img/ShareX_Logo.png"```)
+* [CLI](https://en.wikipedia.org/wiki/Command-line_interface) URL upload support (Example: `ShareX.exe "https://getsharex.com/img/ShareX_Logo.png"`)
 
 ---
 
@@ -509,7 +509,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added hotkey based custom uploader selection
 * Actions, custom uploader, image effects list supports item dragging so that you could reorder them
 * Added image effects option to resize image if bigger than a specified size
-* Added -workflow "Hotkey description" [CLI](Command line arguments) command
+* Added -workflow "Hotkey description" [CLI](https://github.com/ShareX/ShareX/wiki/Command%20line%20arguments) command
 * Added hotkey to screen record last region
 * Added hotkey to start auto capture using last region
 
@@ -534,7 +534,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 
 ### [ShareX 9.4.0](https://github.com/ShareX/ShareX/releases/tag/v9.4.0) - 2014-11-01
 
-* Added Turkish translation. [Help us translate ShareX to your language](Translation)
+* Added Turkish translation
 * Added option to start recording by pressing Start button
 * Improved Pastebin UI
 * Greenshot image editor update with Speech Bubble and Step Label
@@ -562,7 +562,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added custom gradient support to Image effects under "Draw text"
 * PushBullet updated to API v2 and is now listed also as a URL sharing service (by [@BallisticLingonberries](https://github.com/BallisticLingonberries))
 * Hotkey to be able to open screenshots folder
-* Name parser support for ```%yy``` for 2 digits year
+* Name parser support for `%yy` for 2 digits year
 * Screen recording video source can be "None" to allow audio-only recording
 * Actions configuration through external programs support customizing Output Extension to make use of programs such as 7z
 * pomf.se file uploader support
@@ -666,7 +666,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added Pushbullet file uploader support (by [@BallisticLingonberries](https://github.com/BallisticLingonberries))
 * Added Amazon S3 file uploader support (by [@alanedwardes](https://github.com/alanedwardes))
 * Added DNS Changer to Tools menu
-* Added ```%pn``` (process name of active window) to name parser
+* Added `%pn` (process name of active window) to name parser
 * Removed Mega file uploader anonymous upload
 * Minus file uploader improvements
 
@@ -703,8 +703,6 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 
 ### [ShareX 8.4.1](https://github.com/ShareX/ShareX/releases/tag/v8.4.1) - 2013-12-05
 
-If you are using ShareX 8.4.0, please manually download and install this version. Auto-updater will not automatically update to this version from ShareX 8.4.0. All other previous versions of ShareX are unaffected. 
-
 * Ability to import/export custom file uploaders
 * Added user account support for Gist text uploader
 * Draw text image effect now supports shadow
@@ -714,8 +712,6 @@ If you are using ShareX 8.4.0, please manually download and install this version
 ---
 
 ### [ShareX 8.4.0](https://github.com/ShareX/ShareX/releases/tag/v8.4.0) - 2013-11-20
-
-This update is focused on performance improvements and features additions to image effects and watermark. These changes break backward compatibility. Therefore image effects and watermark settings will be reset.
 
 * Added new drawings category to image effects for be able to add background, border, checkerboard, image and text (watermark)
 * Added new image adjustment effects: black & white, polaroid and sepia
@@ -893,6 +889,7 @@ This update is focused on performance improvements and features additions to ima
 
 ### ShareX 6.0.0.161 - 2012-06-09
 
+* Rebranded as ShareX
 * Improved right click menu to include more open/copy options
 * Added support to preview image in the main window
 * Added support to run External Programs
@@ -904,63 +901,62 @@ This update is focused on performance improvements and features additions to ima
 * Screen-wide crosshair support during shapes capture
 * Magnifier support during shapes capture, resizeable with mouse wheel (hold shift to increase box size)
 * Added imm.io Image Uploader
-* Rebranded as ShareX
 
 ---
 
 ### ZUploader 5.5.0 - 2012-03-07
 
-* 5.5.0 Added Email as file uploader
-* 5.4.1 Clipboard upload auto detects URL and shortens it
-* 5.4.0 Added optional shadow capture for transparent capture
-* 5.3.1 Settings are backed up for automatic recovery
-* 5.3.0 Added Twitpic, Twitsnaps and yFrog
-* 5.2.1 Improved tray menu
-* 5.2.0 New updater with automatic downloader
-* 5.1.0 Added image resize settings
+* 5.5.0 - Added Email as file uploader
+* 5.4.1 - Clipboard upload auto detects URL and shortens it
+* 5.4.0 - Added optional shadow capture for transparent capture
+* 5.3.1 - Settings are backed up for automatic recovery
+* 5.3.0 - Added Twitpic, Twitsnaps and yFrog
+* 5.2.1 - Improved tray menu
+* 5.2.0 - New updater with automatic downloader
+* 5.1.0 - Added image resize settings
 
 ---
 
 ### ZUploader 5.0.0 - 2012-01-10
 
-* 5.0.0 Added Window & Control capture support to shape captures
-* 4.9.0 Added new post-capture option: save screenshots to file
-* 4.8.0 Added Box file uploader support
+* 5.0.0 - Added Window & Control capture support to shape captures
+* 4.9.0 - Added new post-capture option: save screenshots to file
+* 4.8.0 - Added Box file uploader support
 
 ---
 
 ### ZUploader 4.7.2 - 2011-10-31
 
-* 4.7.2 Supported image/text/file based FTP destinations
-* 4.7.1 Added camera sound when capture is made
-* 4.7.0 Added Transparent window capture
+* 4.7.2 - Supported image/text/file based FTP destinations
+* 4.7.1 - Added camera sound when capture is made
+* 4.7.0 - Added Transparent window capture
 
 ---
 
 ### ZUploader 4.6.0 - 2011-10-07
 
-* 4.6.0 Added Hotkeys support
-* 4.5.0 Added support to capture window from a list of windows
+* 4.6.0 - Added Hotkeys support
+* 4.5.0 - Added support to capture window from a list of windows
 
 ---
 
 ### ZUploader 4.4.0 - 2011-09-27
 
-* 4.4.0 Added support to capture shapes to Clipboard
-* 4.3.0 Added Minus uploader support
-* 4.2.0 Added Photobucket uploader support
-* 4.1.1 Added user account support for Goo.gl URL Shortener service
-* 4.1.0 Added tray icon support
-* 4.0.0 Added Capture menu to capture rectangle, rounded rectangle, ellipse, triangle, diamond, polygon and freehand shapes
+* 4.4.0 - Added support to capture shapes to Clipboard
+* 4.3.0 - Added Minus uploader support
+* 4.2.0 - Added Photobucket uploader support
+* 4.1.1 - Added user account support for Goo.gl URL Shortener service
+* 4.1.0 - Added tray icon support
+* 4.0.0 - Added Capture menu to capture rectangle, rounded rectangle, ellipse, triangle, diamond, polygon and freehand shapes
 
 ---
 
 ### ZUploader 3.12 - 2011-05-28
 
-* 3.12 Plugin system to perform Crop Shot and Entire Screen capture
-* 3.11 New Uploaders Configuration window to setup user accounts
-* 3.10 Added Clipboard Content Viewer to confirm uploading using Clipboard
-* 3.09 Added URL Shortener support
+* 3.12 - Plugin system to perform Crop Shot and Entire Screen capture
+* 3.11 - New Uploaders Configuration window to setup user accounts
+* 3.10 - Added Clipboard Content Viewer to confirm uploading using Clipboard
+* 3.9 - Added URL Shortener support
 
 ---
 
