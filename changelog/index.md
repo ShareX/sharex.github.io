@@ -42,6 +42,12 @@ title: Changelog
 
 ### [ShareX 11.4.1](https://github.com/ShareX/ShareX/releases/tag/v11.4.1) - 2016-11-09
 
+* Bug fixes
+
+---
+
+### [ShareX 11.4.0](https://github.com/ShareX/ShareX/releases/tag/v11.4.0) - 2016-11-09
+
 * Region capture related changes:
     * Added tools toolbar which will show up at top of the active monitor
     * Removed right click tools menu because the newly added toolbar is more user friendly
@@ -83,6 +89,12 @@ title: Changelog
 ---
 
 ### [ShareX 11.2.1](https://github.com/ShareX/ShareX/releases/tag/v11.2.1) - 2016-08-19
+
+* Bug fixes
+
+---
+
+### [ShareX 11.2.0](https://github.com/ShareX/ShareX/releases/tag/v11.2.0) - 2016-08-19
 
 * Added option to check for pre-releases in `Application settings window`. Future updates will initially release as pre-release and if release is stable enough, it will be released to rest of people
 * Region capture related changes:
@@ -147,6 +159,12 @@ title: Changelog
 ---
 
 ### [ShareX 11.0.1](https://github.com/ShareX/ShareX/releases/tag/v11.0.1) - 2016-06-10
+
+* Bug fixes
+
+---
+
+### [ShareX 11.0.0](https://github.com/ShareX/ShareX/releases/tag/v11.0.0) - 2016-06-10
 
 * Added annotation support inside region capture.
 In region capture you can <kbd>right click</kbd> to open menu which you can select annotation tool, capture fullscreen/monitor or be able to change region capture options. You can use <kbd>middle click</kbd> to cancel capture.
@@ -224,6 +242,12 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 ---
 
 ### [ShareX 10.9.1](https://github.com/ShareX/ShareX/releases/tag/v10.9.1) - 2016-03-25
+
+* Bug fixes
+
+---
+
+### [ShareX 10.9.0](https://github.com/ShareX/ShareX/releases/tag/v10.9.0) - 2016-03-25
 
 * Removed [Copy](http://copy.com) file uploader because [service is discontinued](https://blog.barracuda.com/2016/02/01/message-from-gm-of-storage/)
 * Update Greenshot image editor to 1.2.9 version (by [@campbeb](https://github.com/campbeb))
@@ -433,6 +457,12 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 
 ### [ShareX 9.10.1](https://github.com/ShareX/ShareX/releases/tag/v9.10.1) - 2015-05-17
 
+* Bug fixes
+
+---
+
+### [ShareX 9.10.0](https://github.com/ShareX/ShareX/releases/tag/v9.10.0) - 2015-05-17
+
 * Added tips to region capture (<kbd>F1</kbd> key will hide/show it)
 * Region capture startup time improvement
 * Region capture rectangle info will be shown at the top of the region instead of inside
@@ -581,6 +611,12 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added "Delete file locally" to main window right click menu (by [@WebFreak001](https://github.com/WebFreak001))
 * Added "Edit image" to main window right click menu (by [@DevAtHome](https://github.com/DevAtHome))
 * New ShareX logo and icon
+
+---
+
+### [ShareX 9.2.1](https://github.com/ShareX/ShareX/releases/tag/v9.2.1) - 2014-07-15
+
+* Bug fixes
 
 ---
 
