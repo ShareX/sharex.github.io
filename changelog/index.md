@@ -3,6 +3,43 @@ layout: markdown
 title: Changelog
 ---
 
+### [ShareX 11.5.0](https://github.com/ShareX/ShareX/releases/tag/v11.5.0) - 2017-01-25
+
+* Changelog URL changed to https://getsharex.com/changelog
+* Region capture related changes:
+    * Added drop shadow support
+    * Replaced rounded rectangle shapes with corner radius option to rectangle shapes
+    * Added capture last region button to capture menu
+    * Added edit menu to toolbar:
+        * Undo <kbd>Ctrl + Z</kbd>
+        * Delete <kbd>Del</kbd>
+        * Delete all <kbd>Shift + Del</kbd>
+        * Bring to front <kbd>Home</kbd>
+        * Bring forward <kbd>Page up</kbd>
+        * Send backward <kbd>Page down</kbd>
+        * Send to back <kbd>End</kbd>
+    * Annotation options will be reset to new defaults
+    * Changed visual of arrow cap
+* Added customizable actions toolbar which is accessable from tray menu
+* Added toggle actions toolbar and exit ShareX hotkeys
+* Added ShareX custom uploader extension `.sxcu` support. Users can now simply double click `.sxcu` files. ShareX can activate custom uploader and select proper destinations automatically. Users won't need any manual configuration to use custom uploaders.
+* Added "Destination type" option to custom uploader tab which is used when user double clicks `.sxcu` files so ShareX can know which destination to set custom uploader as active
+* Added H.264 NVENC & HEVC (H.265) NVENC encoder support (NVENC supported GPU, latest NVIDIA driver and up to date FFmpeg is required)
+* Added HTTPS result link option for Imgur
+* Added [Pastie](http://pastie.org/) text uploader (by [@plutoforever](https://github.com/plutoforever))
+* Added "OCR image" button to main window right click task menu
+* Added "Combine images" button to main window right click task menu which is only visible when two or more image files are selected
+* Check if file exists before screen recording and show file exists window if necessary
+* Added [Nextcloud](https://nextcloud.com) support to [ownCloud](https://owncloud.org) file uploader (by [@aStonedPenguin](https://github.com/aStonedPenguin))
+* Changed Dropbox default settings for new users, moved upload path to outside public folder and enabled shareable URL option in preparation for Dropbox to disable public folders on [March 15, 2017](https://www.dropbox.com/help/16)
+* Polr API v2 support which will be active by default, from settings API v1 can be enabled back
+* Removed Automate tool and moved it to its own [GitHub page](https://github.com/Jaex/Automate)
+* Added resize if smaller option to resize image effect (by [@wolfborg](https://github.com/wolfborg))
+* Updated Amazon S3 to include new endpoints
+* On upload errors include request URL in error message
+
+---
+
 ### [ShareX 11.4.1](https://github.com/ShareX/ShareX/releases/tag/v11.4.1) - 2016-11-09
 
 * Region capture related changes:
