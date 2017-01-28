@@ -447,3 +447,18 @@ footer a, footer a:focus, footer a:hover {
 .markdown hr {
     border-top: 1px solid #ababab;
 }
+
+.container-changelog {
+    padding-bottom: 30px;
+}
+
+.changelog h3 {
+    margin-top: 30px;
+    padding-bottom: 5px;
+    background: linear-gradient(to right, #12598d 0%, transparent 100%) left bottom transparent no-repeat;
+    background-size: 100% 1px;
+}
+
+.changelog > ul {
+    padding-left: 25px;
+}
