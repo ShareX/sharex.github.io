@@ -21,9 +21,9 @@ layout: default
     </div>
 </div>
 
-<div class="container-fluid container-features container-features-alternative">
+<div id="capture" class="container-fluid container-features container-features-alternative">
     <div class="container">
-        <h3><i class="fa fa-camera"></i> Capture</h3>
+        <h3><i class="fa fa-camera"></i>Capture</h3>
         <h4>Capture methods</h4>
         <div class="row">
             <div class="col-sm-3">Fullscreen</div>
@@ -31,7 +31,7 @@ layout: default
             <div class="col-sm-3">Active monitor</div>
             <div class="col-sm-3">Window menu</div>
             <div class="col-sm-3">Monitor menu</div>
-            <div class="col-sm-3">Region</div>
+            <div class="col-sm-3"><a href="#region-capture">Region</a></div>
             <div class="col-sm-3">Region (Light)</div>
             <div class="col-sm-3">Region (Transparent)</div>
             <div class="col-sm-3">Last region</div>
@@ -43,8 +43,8 @@ layout: default
             <div class="col-sm-3">Text capture (OCR)</div>
             <div class="col-sm-3">Auto capture</div>
         </div>
-        <h4><a class="collapsed" data-toggle="collapse" data-target="#afterCaptureTasks"><i class="fa"></i>After capture tasks</a></h4>
-        <div id="afterCaptureTasks" class="row collapse">
+        <h4><a class="collapsed" data-toggle="collapse" data-target="#after-capture-tasks"><i class="fa"></i>After capture tasks</a></h4>
+        <div id="after-capture-tasks" class="row collapse">
             <div class="col-sm-3">Show quick task menu</div>
             <div class="col-sm-3">Show "After capture" window</div>
             <div class="col-sm-3">Add image effects / watermark</div>
@@ -66,9 +66,9 @@ layout: default
     </div>
 </div>
 
-<div class="container-fluid container-features">
+<div id="region-capture" class="container-fluid container-features">
     <div class="container">
-        <h3><i class="fa fa-pencil-square-o"></i> Region capture</h3>
+        <h3><i class="fa fa-pencil-square-o"></i>Region capture</h3>
         <h4>Region types</h4>
         <div class="row">
             <div class="col-sm-3">Rectangle</div>
@@ -95,9 +95,9 @@ layout: default
     </div>
 </div>
 
-<div class="container-fluid container-features container-features-alternative">
+<div id="upload" class="container-fluid container-features container-features-alternative">
     <div class="container">
-        <h3><i class="fa fa-cloud-upload"></i> Upload</h3>
+        <h3><i class="fa fa-cloud-upload"></i>Upload</h3>
         <h4>Upload methods</h4>
         <div class="row">
             <div class="col-sm-3">Upload file</div>
@@ -109,8 +109,8 @@ layout: default
             <div class="col-sm-3">Upload from Windows send to menu</div>
             <div class="col-sm-3">Watch folder</div>
         </div>
-        <h4><a class="collapsed" data-toggle="collapse" data-target="#afterUploadTasks"><i class="fa"></i>After upload tasks</a></h4>
-        <div id="afterUploadTasks" class="row collapse">
+        <h4><a class="collapsed" data-toggle="collapse" data-target="#after-upload-tasks"><i class="fa"></i>After upload tasks</a></h4>
+        <div id="after-upload-tasks" class="row collapse">
             <div class="col-sm-3">Show "After upload" window</div>
             <div class="col-sm-3">Shorten URL</div>
             <div class="col-sm-3">Share URL</div>
@@ -121,9 +121,112 @@ layout: default
     </div>
 </div>
 
-<div class="container-fluid container-features">
+<div id="destinations" class="container-fluid container-features">
     <div class="container">
-        <h3><i class="fa fa-wrench"></i> Productivity tools</h3>
+        <h3><i class="fa fa-paper-plane"></i>Destinations</h3>
+        <h4><a class="collapsed" data-toggle="collapse" data-target="#image-uploaders"><i class="fa"></i>Image uploaders</a></h4>
+        <div id="image-uploaders" class="row collapse">
+            <div class="col-sm-3"><a href="http://imgur.com">Imgur</a></div>
+            <div class="col-sm-3"><a href="https://imageshack.us">ImageShack</a></div>
+            <div class="col-sm-3"><a href="http://tinypic.com">TinyPic</a></div>
+            <div class="col-sm-3"><a href="https://www.flickr.com">Flickr</a></div>
+            <div class="col-sm-3"><a href="http://photobucket.com">Photobucket</a></div>
+            <div class="col-sm-3"><a href="https://picasaweb.google.com">Google Photos (Picasa)</a></div>
+            <div class="col-sm-3"><a href="https://twitter.com">Twitter</a></div>
+            <div class="col-sm-3"><a href="https://chevereto.com">Chevereto</a></div>
+            <div class="col-sm-3"><a href="http://vgy.me">vgy.me</a></div>
+            <div class="col-sm-3"><a href="https://someimage.com">SomeImage</a></div>
+            <div class="col-sm-3"><a href="http://imgland.net">Imgland</a></div>
+            <div class="col-sm-3"><a href="https://sli.mg">SLiMG</a></div>
+            <div class="col-sm-3"><a href="https://github.com/ShareX/CustomUploaders">Custom image uploader</a></div>
+            <div class="col-sm-3"><a href="#file-uploaders">File uploader</a></div>
+        </div>
+        <h4><a class="collapsed" data-toggle="collapse" data-target="#text-uploaders"><i class="fa"></i>Text uploaders</a></h4>
+        <div id="text-uploaders" class="row collapse">
+            <div class="col-sm-3"><a href="http://pastebin.com">Pastebin</a></div>
+            <div class="col-sm-3"><a href="http://paste2.org">Paste2</a></div>
+            <div class="col-sm-3"><a href="http://slexy.org">Slexy</a></div>
+            <div class="col-sm-3"><a href="https://pastee.org">Pastee.org</a></div>
+            <div class="col-sm-3"><a href="https://paste.ee">Paste.ee</a></div>
+            <div class="col-sm-3"><a href="https://gist.github.com">GitHub Gist</a></div>
+            <div class="col-sm-3"><a href="http://upaste.me">uPaste</a></div>
+            <div class="col-sm-3"><a href="http://hastebin.com">Hastebin</a></div>
+            <div class="col-sm-3"><a href="https://onetimesecret.com">OneTimeSecret</a></div>
+            <div class="col-sm-3"><a href="https://github.com/ShareX/CustomUploaders">Custom text uploader</a></div>
+            <div class="col-sm-3"><a href="#file-uploaders">File uploader</a></div>
+        </div>
+        <h4><a class="collapsed" data-toggle="collapse" data-target="#file-uploaders"><i class="fa"></i>File uploaders</a></h4>
+        <div id="file-uploaders" class="row collapse">
+            <div class="col-sm-3"><a href="https://www.dropbox.com">Dropbox</a></div>
+            <div class="col-sm-3"><a href="https://en.wikipedia.org/wiki/File_Transfer_Protocol">FTP</a></div>
+            <div class="col-sm-3"><a href="https://onedrive.live.com">OneDrive</a></div>
+            <div class="col-sm-3"><a href="https://drive.google.com">Google Drive</a></div>
+            <div class="col-sm-3"><a href="http://puush.me">puush</a></div>
+            <div class="col-sm-3"><a href="https://www.box.com">Box</a></div>
+            <div class="col-sm-3"><a href="https://mega.co.nz">MEGA</a></div>
+            <div class="col-sm-3"><a href="http://aws.amazon.com/s3/">Amazon S3</a></div>
+            <div class="col-sm-3"><a href="https://owncloud.org">ownCloud</a></div>
+            <div class="col-sm-3"><a href="https://www.mediafire.com">MediaFire</a></div>
+            <div class="col-sm-3"><a href="http://gfycat.com">Gfycat</a></div>
+            <div class="col-sm-3"><a href="https://www.pushbullet.com">Pushbullet</a></div>
+            <div class="col-sm-3"><a href="https://www.sendspace.com">SendSpace</a></div>
+            <div class="col-sm-3"><a href="http://minus.com">Minus</a></div>
+            <div class="col-sm-3"><a href="http://ge.tt">Ge.tt</a></div>
+            <div class="col-sm-3"><a href="https://hostr.co">Hostr</a></div>
+            <div class="col-sm-3"><a href="https://www.atlassian.com/software/jira">JIRA</a></div>
+            <div class="col-sm-3"><a href="http://lambda.sx">Lambda</a></div>
+            <div class="col-sm-3"><a href="http://videobin.org">VideoBin</a></div>
+            <div class="col-sm-3"><a href="https://github.com/nokonoko/Pomf">Pomf</a></div>
+            <div class="col-sm-3"><a href="https://uguu.se">Uguu</a></div>
+            <div class="col-sm-3"><a href="https://dropfile.to">Dropfile</a></div>
+            <div class="col-sm-3"><a href="https://www.seafile.com">Seafile</a></div>
+            <div class="col-sm-3"><a href="https://streamable.com">Streamable</a></div>
+            <div class="col-sm-3"><a href="https://s-ul.eu">s-ul</a></div>
+            <div class="col-sm-3"><a href="https://lithi.io">Lithiio</a></div>
+            <div class="col-sm-3"><a href="https://transfer.sh">transfer.sh</a></div>
+            <div class="col-sm-3"><a href="http://uplea.com">Uplea</a></div>
+            <div class="col-sm-3">Shared folder</div>
+            <div class="col-sm-3"><a href="https://en.wikipedia.org/wiki/Email">Email</a></div>
+            <div class="col-sm-3"><a href="https://github.com/ShareX/CustomUploaders">Custom file uploader</a></div>
+        </div>
+        <h4><a class="collapsed" data-toggle="collapse" data-target="#url-shorteners"><i class="fa"></i>URL shorteners</a></h4>
+        <div id="url-shorteners" class="row collapse">
+            <div class="col-sm-3"><a href="https://bitly.com">bit.ly</a></div>
+            <div class="col-sm-3"><a href="https://goo.gl">goo.gl</a></div>
+            <div class="col-sm-3"><a href="https://is.gd">is.gd</a></div>
+            <div class="col-sm-3"><a href="https://v.gd">v.gd</a></div>
+            <div class="col-sm-3"><a href="http://tinyurl.com">tinyurl.com</a></div>
+            <div class="col-sm-3"><a href="http://turl.ca">turl.ca</a></div>
+            <div class="col-sm-3"><a href="http://yourls.org">yourls.org</a></div>
+            <div class="col-sm-3"><a href="https://adf.ly">adf.ly</a></div>
+            <div class="col-sm-3"><a href="https://coinurl.com">coinurl.com</a></div>
+            <div class="col-sm-3"><a href="http://qr.net">qr.net</a></div>
+            <div class="col-sm-3"><a href="http://vurl.com">vurl.com</a></div>
+            <div class="col-sm-3"><a href="http://2.gp">2.gp</a></div>
+            <div class="col-sm-3"><a href="https://github.com/Cydrobolt/polr">Polr</a></div>
+            <div class="col-sm-3"><a href="https://github.com/ShareX/CustomUploaders">Custom URL shortener</a></div>
+        </div>
+        <h4><a class="collapsed" data-toggle="collapse" data-target="#url-sharing-services"><i class="fa"></i>URL sharing services</a></h4>
+        <div id="url-sharing-services" class="row collapse">
+            <div class="col-sm-3"><a href="https://en.wikipedia.org/wiki/Email">Email</a></div>
+            <div class="col-sm-3"><a href="https://twitter.com">Twitter</a></div>
+            <div class="col-sm-3"><a href="https://www.facebook.com">Facebook</a></div>
+            <div class="col-sm-3"><a href="https://plus.google.com">Google+</a></div>
+            <div class="col-sm-3"><a href="http://www.reddit.com">Reddit</a></div>
+            <div class="col-sm-3"><a href="https://www.pinterest.com">Pinterest</a></div>
+            <div class="col-sm-3"><a href="https://www.tumblr.com">Tumblr</a></div>
+            <div class="col-sm-3"><a href="https://www.linkedin.com">LinkedIn</a></div>
+            <div class="col-sm-3"><a href="https://www.stumbleupon.com">StumbleUpon</a></div>
+            <div class="col-sm-3"><a href="https://delicious.com">Delicious</a></div>
+            <div class="col-sm-3"><a href="https://vk.com">VK</a></div>
+            <div class="col-sm-3"><a href="https://www.pushbullet.com">Pushbullet</a></div>
+        </div>
+    </div>
+</div>
+
+<div id="tools" class="container-fluid container-features container-features-alternative">
+    <div class="container">
+        <h3><i class="fa fa-wrench"></i>Productivity tools</h3>
         <div class="row">
             <div class="col-sm-3">Color picker</div>
             <div class="col-sm-3">Screen color picker</div>
