@@ -425,16 +425,16 @@ footer a, footer a:focus, footer a:hover {
     background-color: #f9f9f9;
 }
 
-.container-features .fa {
+.container-features h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.container-features h3 .fa {
     vertical-align: middle;
     margin-right: 10px;
     padding-bottom: 5px;
     font-size: 50px;
-}
-
-.container-features h3 {
-    font-size: 28px;
-    margin-bottom: 20px;
 }
 
 .container-features h4 {
@@ -449,4 +449,23 @@ footer a, footer a:focus, footer a:hover {
     font-size: 18px;
     margin-bottom: 20px;
     font-weight: 300;
+}
+
+.container-features h4 a {
+    color: #464646;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+[data-toggle="collapse"] .fa {
+    width: 20px;
+    margin-right: 8px;
+}
+
+[data-toggle="collapse"] .fa:before {
+    content: "\f078";
+}
+
+[data-toggle="collapse"].collapsed .fa:before {
+    content: "\f054";
 }
