@@ -441,6 +441,9 @@ footer a, footer a:focus, footer a:hover {
     font-size: 20px;
     margin-bottom: 20px;
     padding-bottom: 8px;
+}
+
+.container-features h4:not(.collapsed) {
     background: linear-gradient(to right, #cccccc 0%, transparent 80%) left bottom transparent no-repeat;
     background-size: 100% 1px;
 }
@@ -451,9 +454,7 @@ footer a, footer a:focus, footer a:hover {
     font-weight: 300;
 }
 
-.container-features h4 a {
-    color: #464646;
-    text-decoration: none;
+[data-toggle="collapse"] {
     cursor: pointer;
 }
 
