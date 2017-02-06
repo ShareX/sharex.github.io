@@ -421,7 +421,7 @@ footer a, footer a:focus, footer a:hover {
     border-top: 1px solid #ececec;
 }
 
-.container-features.container-features-alternative {
+.container-features:nth-child(odd) {
     background-color: #f9f9f9;
 }
 
