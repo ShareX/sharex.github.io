@@ -470,3 +470,8 @@ footer a, footer a:focus, footer a:hover {
 [data-toggle="collapse"].collapsed .fa:before {
     content: "\f054";
 }
+
+.new {
+    background: linear-gradient(to right, transparent 0%, #1b70b5 20%, #2e8edc 50%, #1b70b5 80%, transparent 100%) left bottom transparent no-repeat;
+    background-size: 100% 2px;
+}
