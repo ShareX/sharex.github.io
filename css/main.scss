@@ -3,14 +3,14 @@
 
 @import "sticky-footer";
 
-$primary-color: #1c5288;
-$primary-color-2: #12598d;
-$secondary-color: #175a91;
-$secondary-color-2: #1f3553;
-$background-color: #ffffff;
-$background-color-2: #f9f9f9;
-$text-color: #ffffff;
-$text-color-2: #464646;
+$color-primary: #1c5288;
+$color-primary-2: #12598d;
+$color-secondary: #175a91;
+$color-secondary-2: #1f3553;
+$color-background: #ffffff;
+$color-background-2: #f9f9f9;
+$color-text: #ffffff;
+$color-text-2: #464646;
 
 $background-image: "/img/Background.png";
 
@@ -19,13 +19,13 @@ body {
 }
 
 .body-background {
-    background-color: $background-color;
+    background-color: $color-background;
     background-image: url($background-image);
 }
 
 .navbar {
-    background-color: mix($primary-color, $primary-color-2);
-    background: linear-gradient(to bottom, $primary-color-2 0%, $primary-color 100%);
+    background-color: mix($color-primary, $color-primary-2);
+    background: linear-gradient(to bottom, $color-primary-2 0%, $color-primary 100%);
     margin-bottom: 0px;
     border-radius: 0px;
     box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.3);
@@ -42,7 +42,7 @@ body {
         }
         
         a {
-            color: $text-color;
+            color: $color-text;
         }
         
         a:hover, a:hover:focus {
@@ -82,9 +82,9 @@ body {
 }
 
 .jumbotron {
-    background-color: mix($secondary-color, $secondary-color-2);
-    background: radial-gradient(at top, $secondary-color 0%, $secondary-color-2 100%);
-    color: $text-color;
+    background-color: mix($color-secondary, $color-secondary-2);
+    background: radial-gradient(at top, $color-secondary 0%, $color-secondary-2 100%);
+    color: $color-text;
     padding-top: 0px;
     padding: 50px 0px 60px;
     margin-bottom: 0px;
@@ -135,8 +135,8 @@ body {
     }
     
     .tooltip .tooltip-inner {
-        background-color: mix($primary-color, $primary-color-2);
-        background: linear-gradient(to bottom, $primary-color-2 0%, $primary-color 100%);
+        background-color: mix($color-primary, $color-primary-2);
+        background: linear-gradient(to bottom, $color-primary-2 0%, $color-primary 100%);
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
         padding: 0px;
         font-size: 15px;
@@ -155,7 +155,7 @@ body {
     }
     
     .tooltip a {
-        color: $text-color;
+        color: $color-text;
         text-decoration: none;
     }
     
@@ -172,7 +172,7 @@ body {
     }
     
     a {
-        color: $text-color;
+        color: $color-text;
         text-decoration: none;
     }
     
@@ -188,7 +188,7 @@ body {
 }
 
 .container-screenshot {
-    background-color: $background-color;
+    background-color: $color-background;
     background-image: url($background-image);
     padding-top: 30px;
     padding-bottom: 50px;
@@ -206,7 +206,7 @@ body {
     .btn {
         background-color: #2f7cb4;
         border-color: transparent;
-        color: $text-color;
+        color: $color-text;
         border-radius: 4px;
         padding: 10px 50px;
         margin-top: 20px;
@@ -229,12 +229,12 @@ body {
 .container-features {
     padding-top: 10px;
     padding-bottom: 30px;
-    color: $text-color-2;
-    background-color: $background-color;
+    color: $color-text-2;
+    background-color: $color-background;
     border-top: 1px solid #ececec;
     
     &:nth-of-type(even) {
-        background-color: $background-color-2;
+        background-color: $color-background-2;
     }
     
     h3 {
@@ -285,9 +285,9 @@ body {
 }
 
 footer {
-    background-color: mix($primary-color, $primary-color-2);
-    background: linear-gradient(to bottom, $primary-color-2 0%, $primary-color 100%);
-    color: $text-color;
+    background-color: mix($color-primary, $color-primary-2);
+    background: linear-gradient(to bottom, $color-primary-2 0%, $color-primary 100%);
+    color: $color-text;
     box-shadow: 0px 0px 40px rgba(22, 40, 69, 0.4);
     padding: 20px 0px;
     text-align: center;
@@ -297,7 +297,7 @@ footer {
     }
     
     a, a:focus, a:hover {
-        color: $text-color;
+        color: $color-text;
     }
 }
 
@@ -310,8 +310,8 @@ footer {
     padding-top: 30px;
     padding-bottom: 30px;
     font-size: 16px;
-    background-color: $background-color-2;
-    color: $text-color-2;
+    background-color: $color-background-2;
+    color: $color-text-2;
 }
 
 .container-donate-2 {
@@ -322,12 +322,12 @@ footer {
 .donate-note {
     margin-top: 0px;
     margin-bottom: 30px;
-    background-color: $secondary-color;
+    background-color: $color-secondary;
     border: none;
-    color: $text-color;
+    color: $color-text;
     
     a {
-        color: $text-color;
+        color: $color-text;
         text-decoration: underline;
     }
 }
@@ -339,12 +339,12 @@ footer {
 .patrons-panel {
     margin-top: 30px;
     margin-bottom: 10px;
-    border-color: $secondary-color;
+    border-color: $color-secondary;
     
     .panel-heading {
-        color: $text-color;
-        background-color: $secondary-color;
-        border-color: $secondary-color;
+        color: $color-text;
+        background-color: $color-secondary;
+        border-color: $color-secondary;
     }
 }
 
@@ -383,11 +383,11 @@ footer {
         }
         
         tr {
-            background-color: $background-color;
+            background-color: $color-background;
         }
         
         tbody tr:nth-of-type(odd) {
-            background-color: $background-color-2;
+            background-color: $color-background-2;
         }
     }
 }
@@ -398,7 +398,7 @@ footer {
     h3 {
         margin-top: 30px;
         padding-bottom: 5px;
-        background: linear-gradient(to right, $primary-color 0%, transparent 100%) left bottom transparent no-repeat;
+        background: linear-gradient(to right, $color-primary 0%, transparent 100%) left bottom transparent no-repeat;
         background-size: 100% 1px;
     }
     
