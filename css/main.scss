@@ -3,18 +3,29 @@
 
 @import "sticky-footer";
 
+$primary-color: #1c5288;
+$primary-color-2: #12598d;
+$secondary-color: #175a91;
+$secondary-color-2: #1f3553;
+$background-color: #ffffff;
+$background-color-2: #f9f9f9;
+$font-color: #ffffff;
+$font-color-2: #464646;
+
+$background-image: "/img/Background.png";
+
 body {
     font-family: "Open Sans", sans-serif;
 }
 
 .body-background {
-    background-color: #fafafa;
-    background-image: url(/img/Background.png);
+    background-color: $background-color;
+    background-image: url($background-image);
 }
 
 .navbar {
-    background-color: #1c5288;
-    background: linear-gradient(to bottom, #12598d 0%, #1c5288 100%);
+    background-color: mix($primary-color, $primary-color-2);
+    background: linear-gradient(to bottom, $primary-color-2 0%, $primary-color 100%);
     margin-bottom: 0px;
     border-radius: 0px;
     box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.3);
@@ -31,7 +42,7 @@ body {
         }
         
         a {
-            color: white;
+            color: $font-color;
         }
         
         a:hover, a:hover:focus {
@@ -71,9 +82,9 @@ body {
 }
 
 .jumbotron {
-    background-color: #1f3553;
-    background: radial-gradient(at top, #175a91 0%, #1f3553 100%);
-    color: white;
+    background-color: mix($secondary-color, $secondary-color-2);
+    background: radial-gradient(at top, $secondary-color 0%, $secondary-color-2 100%);
+    color: $font-color;
     padding-top: 0px;
     padding: 50px 0px 60px;
     margin-bottom: 0px;
@@ -124,8 +135,8 @@ body {
     }
     
     .tooltip .tooltip-inner {
-        background-color: #1c5288;
-        background: linear-gradient(to bottom, #12598d 0%, #1c5288 100%);
+        background-color: mix($primary-color, $primary-color-2);
+        background: linear-gradient(to bottom, $primary-color-2 0%, $primary-color 100%);
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
         padding: 0px;
         font-size: 15px;
@@ -144,7 +155,7 @@ body {
     }
     
     .tooltip a {
-        color: white;
+        color: $font-color;
         text-decoration: none;
     }
     
@@ -161,7 +172,7 @@ body {
     }
     
     a {
-        color: white;
+        color: $font-color;
         text-decoration: none;
     }
     
@@ -177,18 +188,12 @@ body {
 }
 
 .container-screenshot {
-    background-color: #fafafa;
-    background-image: url(/img/Background.png);
+    background-color: $background-color;
+    background-image: url($background-image);
     padding-top: 30px;
     padding-bottom: 50px;
     text-align: center;
-    
-    h2 {
-        margin-top: 0px;
-        margin-bottom: 20px;
-        color: #257cb9;
-    }
-    
+
     .img-responsive-parent {
         margin: 20px;
     }
@@ -201,7 +206,7 @@ body {
     .btn {
         background-color: #2f7cb4;
         border-color: transparent;
-        color: white;
+        color: $font-color;
         border-radius: 4px;
         padding: 10px 50px;
         margin-top: 20px;
@@ -224,12 +229,12 @@ body {
 .container-features {
     padding-top: 10px;
     padding-bottom: 30px;
-    color: #464646;
-    background-color: #ffffff;
+    color: $font-color-2;
+    background-color: $background-color;
     border-top: 1px solid #ececec;
     
-    &:nth-child(odd) {
-        background-color: #f9f9f9;
+    &:nth-of-type(even) {
+        background-color: $background-color-2;
     }
     
     h3 {
@@ -280,9 +285,9 @@ body {
 }
 
 footer {
-    background-color: #12598d;
-    background: linear-gradient(to bottom, #12598d 0%, #1c5288 100%);
-    color: white;
+    background-color: mix($primary-color, $primary-color-2);
+    background: linear-gradient(to bottom, $primary-color-2 0%, $primary-color 100%);
+    color: $font-color;
     box-shadow: 0px 0px 40px rgba(22, 40, 69, 0.4);
     padding: 20px 0px;
     text-align: center;
@@ -292,7 +297,7 @@ footer {
     }
     
     a, a:focus, a:hover {
-        color: white;
+        color: $font-color;
     }
 }
 
@@ -305,8 +310,8 @@ footer {
     padding-top: 30px;
     padding-bottom: 30px;
     font-size: 16px;
-    background-color: #f5f5f5;
-    color: #19619d;
+    background-color: $background-color-2;
+    color: $font-color-2;
 }
 
 .container-donate-2 {
@@ -317,12 +322,12 @@ footer {
 .donate-note {
     margin-top: 0px;
     margin-bottom: 30px;
-    background-color: #19619d;
+    background-color: $secondary-color;
     border: none;
-    color: white;
+    color: $font-color;
     
     a {
-        color: white;
+        color: $font-color;
         text-decoration: underline;
     }
 }
@@ -334,12 +339,12 @@ footer {
 .patrons-panel {
     margin-top: 30px;
     margin-bottom: 10px;
-    border-color: #19619d;
+    border-color: $secondary-color;
     
     .panel-heading {
-        color: white;
-        background-color: #19619d;
-        border-color: #19619d;
+        color: $font-color;
+        background-color: $secondary-color;
+        border-color: $secondary-color;
     }
 }
 
@@ -372,14 +377,18 @@ footer {
     
     .table-downloads {
         display: none;
-    }
-    
-    .table-downloads .label {
-        font-weight: 500;
-    }
-    
-    .table-downloads tr {
-        background-color: #fdfdfd;
+        
+        .label {
+            font-weight: 500;
+        }
+        
+        tr {
+            background-color: $background-color;
+        }
+        
+        tbody tr:nth-of-type(odd) {
+            background-color: $background-color-2;
+        }
     }
 }
 
@@ -432,7 +441,7 @@ footer {
     h3 {
         margin-top: 30px;
         padding-bottom: 5px;
-        background: linear-gradient(to right, #12598d 0%, transparent 100%) left bottom transparent no-repeat;
+        background: linear-gradient(to right, $primary-color 0%, transparent 100%) left bottom transparent no-repeat;
         background-size: 100% 1px;
     }
     
