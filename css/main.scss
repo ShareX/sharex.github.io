@@ -9,8 +9,8 @@ $secondary-color: #175a91;
 $secondary-color-2: #1f3553;
 $background-color: #ffffff;
 $background-color-2: #f9f9f9;
-$font-color: #ffffff;
-$font-color-2: #464646;
+$text-color: #ffffff;
+$text-color-2: #464646;
 
 $background-image: "/img/Background.png";
 
@@ -42,7 +42,7 @@ body {
         }
         
         a {
-            color: $font-color;
+            color: $text-color;
         }
         
         a:hover, a:hover:focus {
@@ -84,7 +84,7 @@ body {
 .jumbotron {
     background-color: mix($secondary-color, $secondary-color-2);
     background: radial-gradient(at top, $secondary-color 0%, $secondary-color-2 100%);
-    color: $font-color;
+    color: $text-color;
     padding-top: 0px;
     padding: 50px 0px 60px;
     margin-bottom: 0px;
@@ -155,7 +155,7 @@ body {
     }
     
     .tooltip a {
-        color: $font-color;
+        color: $text-color;
         text-decoration: none;
     }
     
@@ -172,7 +172,7 @@ body {
     }
     
     a {
-        color: $font-color;
+        color: $text-color;
         text-decoration: none;
     }
     
@@ -206,7 +206,7 @@ body {
     .btn {
         background-color: #2f7cb4;
         border-color: transparent;
-        color: $font-color;
+        color: $text-color;
         border-radius: 4px;
         padding: 10px 50px;
         margin-top: 20px;
@@ -229,7 +229,7 @@ body {
 .container-features {
     padding-top: 10px;
     padding-bottom: 30px;
-    color: $font-color-2;
+    color: $text-color-2;
     background-color: $background-color;
     border-top: 1px solid #ececec;
     
@@ -287,7 +287,7 @@ body {
 footer {
     background-color: mix($primary-color, $primary-color-2);
     background: linear-gradient(to bottom, $primary-color-2 0%, $primary-color 100%);
-    color: $font-color;
+    color: $text-color;
     box-shadow: 0px 0px 40px rgba(22, 40, 69, 0.4);
     padding: 20px 0px;
     text-align: center;
@@ -297,7 +297,7 @@ footer {
     }
     
     a, a:focus, a:hover {
-        color: $font-color;
+        color: $text-color;
     }
 }
 
@@ -311,7 +311,7 @@ footer {
     padding-bottom: 30px;
     font-size: 16px;
     background-color: $background-color-2;
-    color: $font-color-2;
+    color: $text-color-2;
 }
 
 .container-donate-2 {
@@ -324,10 +324,10 @@ footer {
     margin-bottom: 30px;
     background-color: $secondary-color;
     border: none;
-    color: $font-color;
+    color: $text-color;
     
     a {
-        color: $font-color;
+        color: $text-color;
         text-decoration: underline;
     }
 }
@@ -342,7 +342,7 @@ footer {
     border-color: $secondary-color;
     
     .panel-heading {
-        color: $font-color;
+        color: $text-color;
         background-color: $secondary-color;
         border-color: $secondary-color;
     }
@@ -392,6 +392,21 @@ footer {
     }
 }
 
+.container-changelog {
+    padding-bottom: 30px;
+    
+    h3 {
+        margin-top: 30px;
+        padding-bottom: 5px;
+        background: linear-gradient(to right, $primary-color 0%, transparent 100%) left bottom transparent no-repeat;
+        background-size: 100% 1px;
+    }
+    
+    .markdown > ul {
+        padding-left: 25px;
+    }
+}
+
 .markdown {
     h2, h3, h4 {
         margin-bottom: 15px;
@@ -432,20 +447,5 @@ footer {
         border-bottom-color: #bbb;
         border-radius: 3px;
         box-shadow: inset 0 -1px 0 #bbb;
-    }
-}
-
-.container-changelog {
-    padding-bottom: 30px;
-    
-    h3 {
-        margin-top: 30px;
-        padding-bottom: 5px;
-        background: linear-gradient(to right, $primary-color 0%, transparent 100%) left bottom transparent no-repeat;
-        background-size: 100% 1px;
-    }
-    
-    .markdown > ul {
-        padding-left: 25px;
     }
 }
