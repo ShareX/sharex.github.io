@@ -5,7 +5,7 @@ title: Downloads
 
 <div class="container-downloads">
     <div class="container">
-        <h1>Last 30 releases</h1>
+        <h1>Last 30 releases<span class="total-downloads"></span></h1>
         <div><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i></div>
         <table class="table table-bordered table-striped table-downloads">
             <thead>
@@ -39,6 +39,7 @@ title: Downloads
 
     function GetReleases(repo) {
         $.getJSON("https://api.github.com/repos/" + repo + "/releases").done(function(json) {
+            var totalDownloadCount = 0;
             previousUpdatedAt = moment();
 
             for (var i = 0; i < json.length; i++) {
@@ -52,6 +53,7 @@ title: Downloads
                 for (var i2 = 0; i2 < release.assets.length; i2++) {
                     downloadCount += release.assets[i2].download_count;
                 }
+                totalDownloadCount += downloadCount;
                 var updatedAt = moment(asset.updated_at);
                 var activeDays = previousUpdatedAt.diff(updatedAt, "days", true);
                 previousUpdatedAt = updatedAt;
@@ -80,6 +82,11 @@ title: Downloads
                             .text(activeDays.toFixed(1))
                         )
                     );
+            }
+
+            if (totalDownloadCount > 0)
+            {
+                $(".total-downloads").text(" (" + totalDownloadCount.toLocaleString() + " downloads)");
             }
 
             $(".fa-spin").hide();
