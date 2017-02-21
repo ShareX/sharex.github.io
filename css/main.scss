@@ -17,11 +17,10 @@ $background-image: "/img/Background.png";
 
 body {
     font-family: "Open Sans", sans-serif;
-}
-
-.body-background {
-    background-color: $color-background;
-    background-image: url($background-image);
+    &-background {
+        background-color: $color-background;
+        background-image: url($background-image);
+    }
 }
 
 .navbar {
@@ -31,36 +30,30 @@ body {
     border-radius: 0px;
     box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.3);
     border: none;
-    
     .nav li {
         &.active {
             background-color: rgba(0, 0, 0, 0.1);
         }
-        
         &.new {
             background: linear-gradient(to right, transparent 0%, #1b70b5 20%, #2e8edc 50%, #1b70b5 80%, transparent 100%) left bottom transparent no-repeat;
             background-size: 100% 2px;
         }
-        
         a {
             color: $color-text;
         }
-        
-        a:hover, a:hover:focus {
+        a:hover,
+        a:hover:focus {
             background-color: rgba(0, 0, 0, 0.1);
             text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 0px 25px rgba(255, 255, 255, 0.6);
         }
-        
         a:focus {
             background-color: transparent;
         }
     }
-    
     .navbar-header button {
         background-color: #1b6ea8;
         box-shadow: 0px 3px 0px #1c557c;
     }
-
     .navbar-header span {
         background-color: rgb(255, 255, 255);
     }
@@ -69,15 +62,14 @@ body {
 @media (min-width: 768px) {
     .navbar-center .navbar-nav {
         display: inline-block;
-        float: none;
+        //float: none; has no effect when with inline-block
         vertical-align: top;
     }
-    
     .navbar-center .navbar-collapse {
         text-align: center;
     }
-    
-    .navbar-compact .container, .navbar-compact .container #navbar {
+    .navbar-compact .container,
+    .navbar-compact .container #navbar {
         padding-left: 0px;
     }
 }
@@ -89,13 +81,11 @@ body {
     padding-top: 0px;
     padding: 50px 0px 60px;
     margin-bottom: 0px;
-    
     h1 {
         font-size: 120px;
         margin-top: 0px;
         margin-bottom: 10px;
     }
-    
     p {
         margin: 25px 0px 35px;
         font-size: 25px;
@@ -104,7 +94,6 @@ body {
 
 .jumbotron-main {
     text-align: center;
-    
     .btn {
         background-color: white;
         border-color: transparent;
@@ -117,70 +106,58 @@ body {
         text-shadow: 0px 1px 0px #ffffff;
         position: relative;
         width: 200px;
+        &:hover {
+            color: #1c92e6;
+            text-shadow: 0px 1px 0px #ffffff, 0px 0px 30px rgba(0, 186, 255, 0.4);
+        }
+        &:active {
+            color: #257cb9;
+            background-color: #f4f4f4;
+            box-shadow: 0px 3px 0px #dbdbdb;
+            top: 3px;
+        }
     }
-    
-    .btn:hover {
-        color: #1c92e6;
-        text-shadow: 0px 1px 0px #ffffff, 0px 0px 30px rgba(0, 186, 255, 0.4);
-    }
-    
-    .btn:active {
-        color: #257cb9;
-        background-color: #f4f4f4;
-        box-shadow: 0px 3px 0px #dbdbdb;
-        top: 3px;
-    }
-    
     .tooltip {
         margin-top: 8px;
-    }
-    
-    .tooltip .tooltip-inner {
-        background-color: mix($color-primary, $color-primary-2);
-        background: linear-gradient(to bottom, $color-primary-2 0%, $color-primary 100%);
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-        padding: 0px;
-        font-size: 15px;
-        max-width: none;
-        white-space: pre-wrap;
-        text-align: left;
-    }
-    
-    .tooltip .tooltip-arrow {
-        display: none;
-    }
-    
-    .tooltip.in {
-        opacity: 1;
-        filter: alpha(opacity=100);
-    }
-    
-    .tooltip a {
-        color: $color-text;
-        text-decoration: none;
-    }
-    
-    .tooltip div {
-        padding: 7px 12px;
+        a {
+            color: $color-text;
+            text-decoration: none;
+        }
+        div {
+            padding: 7px 12px;
+        }
+        .tooltip-inner {
+            background-color: mix($color-primary, $color-primary-2);
+            background: linear-gradient(to bottom, $color-primary-2 0%, $color-primary 100%);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            padding: 0px;
+            font-size: 15px;
+            max-width: none;
+            white-space: pre-wrap;
+            text-align: left;
+        }
+        .tooltip-arrow {
+            display: none;
+        }
+        &.in {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
     }
 }
 
 .jumbotron-compact {
     padding: 25px 0px;
-    
     h1 {
         font-size: 70px;
     }
-    
     a {
         color: $color-text;
         text-decoration: none;
+        &:hover {
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(255, 255, 255, 0.2);
+        }
     }
-    
-    a:hover {
-        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(255, 255, 255, 0.2);
-    }
-    
     p {
         text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
         font-size: 34px;
@@ -194,16 +171,13 @@ body {
     padding-top: 30px;
     padding-bottom: 50px;
     text-align: center;
-
     .img-responsive-parent {
         margin: 20px;
     }
-    
     img {
         margin: 0px auto 30px auto;
         box-shadow: 0px 0px 30px rgba(29, 80, 123, 0.3);
     }
-    
     .btn {
         background-color: #2f7cb4;
         border-color: transparent;
@@ -214,16 +188,14 @@ body {
         font-size: 20px;
         box-shadow: 0px 6px 0px #2c6a98;
         position: relative;
-    }
-    
-    .btn:hover {
-        text-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
-    }
-    
-    .btn:active {
-        background-color: #2e78ad;
-        box-shadow: 0px 3px 0px #2c6a98;
-        top: 3px;
+        &:hover {
+            text-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
+        }
+        &:active {
+            background-color: #2e78ad;
+            box-shadow: 0px 3px 0px #2c6a98;
+            top: 3px;
+        }
     }
 }
 
@@ -233,34 +205,28 @@ body {
     color: $color-text-2;
     background-color: $color-background;
     border-top: 1px solid $color-border;
-    
     &:nth-of-type(even) {
         background-color: $color-background-shade;
     }
-    
     h3 {
         font-size: 28px;
         margin-bottom: 20px;
     }
-    
     h3 .fa {
         font-size: 50px;
         vertical-align: middle;
         margin-right: 20px;
         padding-bottom: 5px;
     }
-    
     h4 {
         font-size: 20px;
         margin-bottom: 20px;
         padding-bottom: 8px;
     }
-    
     h4:not(.collapsed) {
         background: linear-gradient(to right, #cccccc 0%, transparent 80%) left bottom transparent no-repeat;
         background-size: 100% 1px;
     }
-    
     .col-sm-3 {
         font-size: 18px;
         font-weight: 300;
@@ -270,16 +236,13 @@ body {
 
 [data-toggle="collapse"] {
     cursor: pointer;
-    
     .fa {
         width: 20px;
         margin-right: 8px;
     }
-    
     .fa:before {
         content: "\f078";
     }
-    
     &.collapsed .fa:before {
         content: "\f054";
     }
@@ -292,12 +255,12 @@ footer {
     box-shadow: 0px 0px 40px rgba(22, 40, 69, 0.4);
     padding: 20px 0px;
     text-align: center;
-    
     p {
         margin: 0px;
     }
-    
-    a, a:focus, a:hover {
+    a,
+    a:focus,
+    a:hover {
         color: $color-text;
     }
 }
@@ -327,7 +290,6 @@ footer {
     background-color: $color-secondary;
     border: none;
     color: $color-text;
-    
     a {
         color: $color-text;
         text-decoration: underline;
@@ -342,7 +304,6 @@ footer {
     margin-top: 30px;
     margin-bottom: 10px;
     border-color: $color-secondary;
-    
     .panel-heading {
         color: $color-text;
         background-color: $color-secondary;
@@ -353,15 +314,12 @@ footer {
 .container-callback {
     margin-top: 30px;
     margin-bottom: 10px;
-    
     .panel {
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
     }
-    
     #callback-code .btn {
         width: 150px;
     }
-
     #callback-error {
         display: none;
     }
@@ -370,24 +328,19 @@ footer {
 .container-downloads {
     padding-top: 30px;
     padding-bottom: 20px;
-    
     h1 {
         font-size: 18px;
         margin-top: 0px;
         margin-bottom: 20px;
     }
-    
     .table-downloads {
         display: none;
-        
         .label {
             font-weight: 500;
         }
-        
         tr {
             background-color: $color-background;
         }
-        
         tbody tr:nth-of-type(odd) {
             background-color: $color-background-shade;
         }
@@ -396,32 +349,29 @@ footer {
 
 .container-changelog {
     padding-bottom: 30px;
-    
     h3 {
         margin-top: 30px;
         padding-bottom: 5px;
         background: linear-gradient(to right, $color-primary 0%, transparent 100%) left bottom transparent no-repeat;
         background-size: 100% 1px;
     }
-    
-    .markdown > ul {
+    .markdown>ul {
         padding-left: 25px;
     }
 }
 
 .markdown {
-    h2, h3, h4 {
+    h2,
+    h3,
+    h4 {
         margin-bottom: 15px;
     }
-    
     h4 {
-        margin-top: 15px;   
+        margin-top: 15px;
     }
-    
     li {
         margin-top: 4px;
     }
-    
     code {
         font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
         padding: 3px 5px;
@@ -432,11 +382,9 @@ footer {
         background-color: rgba(0, 0, 0, 0.03);
         border-radius: 3px;
     }
-    
     hr {
         border-top: 1px solid #ababab;
     }
-    
     kbd {
         display: inline-block;
         padding: 3px 5px;
