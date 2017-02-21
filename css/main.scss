@@ -16,12 +16,9 @@ $color-border: #ececec;
 $background-image: "/img/Background.png";
 
 body {
-    font-family: "Open Sans", sans-serif;
-}
-
-.body-background {
     background-color: $color-background;
     background-image: url($background-image);
+    font-family: "Open Sans", sans-serif;
 }
 
 .navbar {
@@ -117,51 +114,51 @@ body {
         text-shadow: 0px 1px 0px #ffffff;
         position: relative;
         width: 200px;
-    }
-    
-    .btn:hover {
-        color: #1c92e6;
-        text-shadow: 0px 1px 0px #ffffff, 0px 0px 30px rgba(0, 186, 255, 0.4);
-    }
-    
-    .btn:active {
-        color: #257cb9;
-        background-color: #f4f4f4;
-        box-shadow: 0px 3px 0px #dbdbdb;
-        top: 3px;
+
+        &:hover {
+            color: #1c92e6;
+            text-shadow: 0px 1px 0px #ffffff, 0px 0px 30px rgba(0, 186, 255, 0.4);
+        }
+        
+        &:active {
+            color: #257cb9;
+            background-color: #f4f4f4;
+            box-shadow: 0px 3px 0px #dbdbdb;
+            top: 3px;
+        }
     }
     
     .tooltip {
         margin-top: 8px;
-    }
-    
-    .tooltip .tooltip-inner {
-        background-color: mix($color-primary, $color-primary-2);
-        background: linear-gradient(to bottom, $color-primary-2 0%, $color-primary 100%);
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-        padding: 0px;
-        font-size: 15px;
-        max-width: none;
-        white-space: pre-wrap;
-        text-align: left;
-    }
-    
-    .tooltip .tooltip-arrow {
-        display: none;
-    }
-    
-    .tooltip.in {
-        opacity: 1;
-        filter: alpha(opacity=100);
-    }
-    
-    .tooltip a {
-        color: $color-text;
-        text-decoration: none;
-    }
-    
-    .tooltip div {
-        padding: 7px 12px;
+
+        .tooltip-inner {
+            background-color: mix($color-primary, $color-primary-2);
+            background: linear-gradient(to bottom, $color-primary-2 0%, $color-primary 100%);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            padding: 0px;
+            font-size: 15px;
+            max-width: none;
+            white-space: pre-wrap;
+            text-align: left;
+        }
+        
+        .tooltip-arrow {
+            display: none;
+        }
+        
+        &.in {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+        
+        a {
+            color: $color-text;
+            text-decoration: none;
+        }
+        
+        div {
+            padding: 7px 12px;
+        }
     }
 }
 
@@ -175,10 +172,10 @@ body {
     a {
         color: $color-text;
         text-decoration: none;
-    }
-    
-    a:hover {
-        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(255, 255, 255, 0.2);
+
+        &:hover {
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(255, 255, 255, 0.2);
+        }
     }
     
     p {
@@ -214,16 +211,16 @@ body {
         font-size: 20px;
         box-shadow: 0px 6px 0px #2c6a98;
         position: relative;
-    }
-    
-    .btn:hover {
-        text-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
-    }
-    
-    .btn:active {
-        background-color: #2e78ad;
-        box-shadow: 0px 3px 0px #2c6a98;
-        top: 3px;
+
+        &:hover {
+            text-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
+        }
+        
+        &:active {
+            background-color: #2e78ad;
+            box-shadow: 0px 3px 0px #2c6a98;
+            top: 3px;
+        }
     }
 }
 
@@ -415,7 +412,7 @@ footer {
     }
     
     h4 {
-        margin-top: 15px;   
+        margin-top: 15px;
     }
     
     li {
