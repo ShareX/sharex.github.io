@@ -3,6 +3,32 @@ layout: changelog
 title: Changelog
 ---
 
+### [ShareX 11.6.0](https://github.com/ShareX/ShareX/releases/tag/v11.6.0) - 2017-02-23
+
+* Added outlined text drawing tool `Drawing: Text (Outline)` to region capture, previous text drawing tool was named as `Drawing: Text (Background)`
+* In region capture text input window pressing <kbd>Enter</kbd> accepts text and close input window, <kbd>Ctrl + Enter</kbd> inserts new line
+* Added cancel button to region capture text input window which ignores text changes and close input window, you can also press <kbd>Esc</kbd>
+* Added ShareX Firefox addon (Application settings -> Integration tab)
+* Added Azure Storage support (by [@wi5nia](https://github.com/wi5nia))
+* Added workaround to support [TLS 1.2](https://en.wikipedia.org/wiki/Transport_Layer_Security) when [.NET Framework 4.5](https://en.wikipedia.org/wiki/.NET_Framework) or newer is installed in system
+* Added option to disable region capture annotation support (Task settings -> Advanced tab)
+* Allow drag n drop file upload support to actions toolbar
+* Added additional hotkeys for main window task list and hotkey info text for its right click menu items
+    * Open URL <kbd>Enter</kbd>
+    * Open file <kbd>Ctrl + Enter</kbd>
+    * Open folder <kbd>Shift + Enter</kbd>
+    * Copy URL <kbd>Ctrl + C</kbd>
+    * Copy file <kbd>Shift + C</kbd>
+    * Copy image <kbd>Alt + C</kbd>
+    * Copy file path <kbd>Ctrl + Shift + C</kbd>
+    * Upload <kbd>Ctrl + U</kbd>
+    * Download <kbd>Ctrl + D</kbd>
+    * Edit image <kbd>Ctrl + E</kbd>
+    * Delete task from list <kbd>Del</kbd>
+    * Delete file locally <kbd>Shift + Del</kbd>
+* Removed info button from main window because most tasks hotkey visible in right click menu now
+* Removed sli.mg image uploader because the service is dead
+
 ### [ShareX 11.5.0](https://github.com/ShareX/ShareX/releases/tag/v11.5.0) - 2017-01-25
 
 * Changelog URL changed to [https://getsharex.com/changelog](https://getsharex.com/changelog)
