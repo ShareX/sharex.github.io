@@ -30,20 +30,29 @@ body {
     border: none;
     
     .nav li {
-        &.active {
+        &.active,
+        &.dropdown.open > a {
             background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        &.dropdown ul {
+            background-color: mix($color-primary, $color-primary-2);
+            background: linear-gradient(to bottom, $color-primary-2 0%, $color-primary 100%);
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
+            border: none;
         }
         
         &.new {
             background: linear-gradient(to right, transparent 0%, #1b70b5 20%, #2e8edc 50%, #1b70b5 80%, transparent 100%) left bottom transparent no-repeat;
             background-size: 100% 2px;
         }
-        
+
         a {
             color: $color-text;
         }
         
-        a:hover, a:hover:focus {
+        a:hover,
+        a:hover:focus {
             background-color: rgba(0, 0, 0, 0.1);
             text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 0px 25px rgba(255, 255, 255, 0.6);
         }
@@ -74,7 +83,8 @@ body {
         text-align: center;
     }
     
-    .navbar-compact .container, .navbar-compact .container #navbar {
+    .navbar-compact .container,
+    .navbar-compact .container #navbar {
         padding-left: 0px;
     }
 }
@@ -294,7 +304,9 @@ footer {
         margin: 0px;
     }
     
-    a, a:focus, a:hover {
+    a,
+    a:focus,
+    a:hover {
         color: $color-text;
     }
 }
@@ -411,7 +423,9 @@ footer {
 }
 
 .markdown {
-    h2, h3, h4 {
+    h2,
+    h3,
+    h4 {
         margin-bottom: 15px;
     }
     

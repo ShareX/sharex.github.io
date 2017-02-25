@@ -15,7 +15,12 @@
                 <li {% if page.title == "Changelog" %}class="active"{% endif %}><a href="{{ site.url }}/changelog/">Changelog</a></li>
                 <li><a href="http://imgur.com/a/7TDhO">Screenshots</a></li>
                 <li><a href="{{ site.github }}">GitHub</a></li>
-                <li><a href="https://github.com/ShareX/CustomUploaders">Custom uploaders</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Docs <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://github.com/ShareX/CustomUploaders">Custom uploaders</a></li>
+                    </ul>
+                </li>
                 <li><a href="https://webchat.freenode.net/?channels=%23ShareX" title="#ShareX on irc.freenode.net">IRC</a></li>
                 <li class="new"><a href="https://discord.gg/aw7ASwX">Discord</a></li>
                 <li><a href="http://store.steampowered.com/app/400040/">Steam</a></li>
