@@ -450,7 +450,13 @@ code {
     }
     
     hr {
-        border-top: 1px solid #ababab;
+        background: linear-gradient(to right, $color-primary 0%, transparent 100%) left bottom transparent no-repeat;
+        background-size: 100% 1px;
+        border-top: 1px solid transparent;
+    }
+
+    pre {
+        margin-bottom: 15px;
     }
     
     kbd {
