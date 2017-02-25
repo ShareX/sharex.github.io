@@ -5,10 +5,11 @@ url: https://getsharex.com
 author: ShareX Team
 github: https://github.com/ShareX/ShareX
 twitter: GetShareX
-markdown: kramdown
-
 googleAnalyticsId: UA-40712139-3
 addThisId: 53e2d1c30114f995
+
+markdown: kramdown
+highlighter: rouge
 
 kramdown:
   input: GFM

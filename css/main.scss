@@ -2,6 +2,7 @@
 ---
 
 @import "sticky-footer";
+@import "highlight";
 
 $color-primary: #1c5288;
 $color-primary-2: #12598d;
@@ -416,10 +417,17 @@ footer {
         background: linear-gradient(to right, $color-primary 0%, transparent 100%) left bottom transparent no-repeat;
         background-size: 100% 1px;
     }
-    
-    .markdown > ul {
-        padding-left: 25px;
-    }
+}
+
+code {
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    padding: 3px 5px;
+    margin: 0px;
+    font-size: 85%;
+    color: #337ab7;
+    color: #333;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 3px;
 }
 
 .markdown {
@@ -432,20 +440,13 @@ footer {
     h4 {
         margin-top: 15px;
     }
+
+    ul {
+        padding-left: 25px;
+    }
     
     li {
         margin-top: 4px;
-    }
-    
-    code {
-        font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-        padding: 3px 5px;
-        margin: 0px;
-        font-size: 85%;
-        color: #337ab7;
-        color: #333;
-        background-color: rgba(0, 0, 0, 0.03);
-        border-radius: 3px;
     }
     
     hr {
