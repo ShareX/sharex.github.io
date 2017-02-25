@@ -95,15 +95,15 @@ namespace ShareX.UploadersLib.ImageUploaders
 }
 ```
 
-`EnumValue` must be assigned so ShareX can know this service belongs to which uploader.
+**EnumValue** must be assigned so ShareX can know this service belongs to which uploader.
 
-[Optional] `ServiceIcon` or `ServiceImage` only required if you gonna have tab in uploaders config window. Add icon/image file to `ShareX.UploadersLib\Favicons` folder and add it to `ShareX.UploadersLib` project resources.
+[Optional] **ServiceIcon** or **ServiceImage** only required if you gonna have tab in uploaders config window. Add icon/image file to `ShareX.UploadersLib\Favicons` folder and add it to `ShareX.UploadersLib` project resources.
 
-`CheckConfig` function is used to check validation of config. For example if account type was user and if account info was empty then destination will be disabled in destinations menu.
+**CheckConfig** function is used to check validation of config. For example if account type was user and if account info was empty then destination will be disabled in destinations menu.
 
-`CreateUploader` function is used by ShareX task system to initiate uploader class with config.
+**CreateUploader** function is used by ShareX task system to initiate uploader class with config.
 
-[Optional] `GetUploadersConfigTabPage` function only required if you gonna have tab in uploaders config window. It will be used when user try to upload with missing or invalid account info then ShareX can open uploaders config window with current uploader tab selected.
+[Optional] **GetUploadersConfigTabPage** function only required if you gonna have tab in uploaders config window. It will be used when user try to upload with missing or invalid account info then ShareX can open uploaders config window with current uploader tab selected.
 
 Both service class and uploader class should be in same file (Example: `Imgur.cs`) for consistency with other uploaders.
 
