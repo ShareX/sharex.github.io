@@ -436,6 +436,13 @@ code {
     h4 {
         margin-bottom: 15px;
     }
+
+    h1,
+    h2 {
+        padding-bottom: 5px;
+        background: linear-gradient(to right, $color-primary 0%, transparent 100%) left bottom transparent no-repeat;
+        background-size: 100% 1px;
+    }
     
     h4 {
         margin-top: 15px;
@@ -447,6 +454,11 @@ code {
     
     li {
         margin-top: 4px;
+    }
+
+    img {
+        margin-bottom: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
     }
     
     hr {

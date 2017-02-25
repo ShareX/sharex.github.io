@@ -21,8 +21,6 @@ In the interest of keeping the size of ShareX setup small and in order to mainta
 
 Best way to understand how to make a new uploader is by going through existing uploader classes and checking how these uploaders work. There are many example uploaders and you can probably copy & paste majority of codes from them when creating new uploader.
 
----
-
 In `ShareX.UploadersLib` project, create a new uploader class file in the folder according to uploader type (ImageUploaders, TextUploaders, FileUploaders, URLShorteners). Inherit uploader according to uploader type (ImageUploader, TextUploader, FileUploader, URLShortener).
 
 ```csharp
@@ -44,8 +42,6 @@ namespace ShareX.UploadersLib.ImageUploaders
 }
 ```
 
----
-
 After uploader class is ready, add uploader name to `ShareX.UploadersLib/Enum.cs` (ImageDestination, TextDestination, FileDestination, UrlShortenerType)
 
 ```csharp
@@ -57,8 +53,6 @@ public enum ImageDestination
     ...
 }
 ```
-
----
 
 Also need to create uploader service class which will be used by ShareX to initiate uploader class and check config to enable/disable destination.
 
@@ -112,8 +106,6 @@ namespace ShareX.UploadersLib.ImageUploaders
 [Optional] `GetUploadersConfigTabPage` function only required if you gonna have tab in uploaders config window. It will be used when user try to upload with missing or invalid account info then ShareX can open uploaders config window with current uploader tab selected.
 
 Both service class and uploader class should be in same file (Example: `Imgur.cs`) for consistency with other uploaders.
-
----
 
 You can store uploader settings in `ShareX.UploadersLib/UploadersConfig.cs`.
 
