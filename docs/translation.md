@@ -15,11 +15,11 @@ title: Translation
 
 We are using [ResX Resource Manager](https://resxresourcemanager.codeplex.com/) Visual Studio extension when translating to other languages:
 
-https://visualstudiogallery.msdn.microsoft.com/3b64e04c-e8de-4b97-8358-06c73a97cc68
+[https://visualstudiogallery.msdn.microsoft.com/3b64e04c-e8de-4b97-8358-06c73a97cc68](https://visualstudiogallery.msdn.microsoft.com/3b64e04c-e8de-4b97-8358-06c73a97cc68)
 
 Standalone version of it also exist here:
 
-https://resxresourcemanager.codeplex.com/releases (ClickOnce Installer)
+[https://resxresourcemanager.codeplex.com/releases](https://resxresourcemanager.codeplex.com/releases) (ClickOnce Installer)
 
 Screenshot of it:
 
