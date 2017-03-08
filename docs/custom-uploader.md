@@ -3,25 +3,33 @@ layout: markdown
 title: Custom uploader
 ---
 
-## How to use Custom Uploader?
+## What is custom uploader?
 
-### Examples
+Custom uploader system in ShareX is able to upload image/text/file to hosting services or shorten URL. This feature is mainly used by people who host their own file hosting services.
 
-Checking examples easiest way to learn custom uploader system of ShareX.
+The easiest way to learn how to configure custom uploader is by checking example custom uploaders: [https://github.com/ShareX/CustomUploaders](https://github.com/ShareX/CustomUploaders)
 
-You can find example custom uploaders in here: [https://github.com/ShareX/CustomUploaders](https://github.com/ShareX/CustomUploaders)
+You can also pull request your custom uploader there.
 
-Also you can pull request your custom uploaders there.
+## Custom uploader configuration
+
+### Destination type
+
+Destination type is used when users import custom uploader by double clicking the `.sxcu` file.
+
+### Export / Import
+
+You can export your custom uploader with `.sxcu` extension which allows users to just double click that file to be able to use custom uploader.
+
+If destination type is configured then ShareX can also set this custom uploader as selected custom uploader and change current destination to this custom uploader, so users won't need any additional configuration to use it.
 
 ### Request type
 
 For image uploader and file uploader `POST` request type is required along with the `File form name`.
 
-For text uploader and URL shortener, if you are using `GET` request type or `POST` request type with empty `File form name` then you need to have at least one argument which has `$input$` as value for supply text or URL to host. When doing request `$input$` text will be automatically replaced with text or URL depending on what uploader type you are using.
+For text uploader and URL shortener, if you are using `GET` request type or `POST` request type with empty `File form name` then you need to have at least one argument which has `$input$` as value to supply text or URL to host. When doing request `$input$` text will be automatically replaced with text or URL depending on what uploader type you are using.
 
-When using `GET` request type arguments will be appended to URL in background like this:
-
-`http://example.com/upload.php?name=value&name2=value2`
+When using `GET` request type arguments will be appended to URL in background like this: `http://example.com/upload.php?name=value&name2=value2`
 
 ### Request URL
 
@@ -31,9 +39,10 @@ Example: `http://example.com/upload.php`
 
 This field can be only used when `Request type` is `POST`.
 
-In HTML check input tag and name attribute to find `File form name`. For example in this HTML code `File form name` is `file_image`:
+In HTML check input tag and name attribute to find `File form name`.
 
-`<input type="file" name="file_image">`
+For example in this HTML code: `<input type="file" name="file_image">`
+File form name is `file_image`.
 
 ### Arguments
 
@@ -45,60 +54,112 @@ There is one special value specific to `GET` request type; it is `$input$` which
 
 Example argument for text uploader (URL shortener works in a similar way):
 
-Name | Value
---- | ---
-text | $input$
-language | csharp
+```
+name: text
+value: $input$
+
+name: language
+value: csharp
+```
 
 ### Response type
 
-If URL textbox is empty then `Response text` or `Redirection URL` will be automatically used.
+If URL textbox is empty then `Response text` or `Redirection URL` will be automatically used. So if response only returns URL then no need to write anything to URL textbox.
 
-### Regex & URL sections
+### JSON
 
-----
+You can use [JsonPath](http://goessner.net/articles/JsonPath/) syntax to parse URL from [JSON](https://en.wikipedia.org/wiki/JSON) response.
 
-**Important note:**
-
-**You don't need to add [Regex](https://en.wikipedia.org/wiki/Regular_expression) syntax manually to URL text box anymore, you can use new `Add syntax to URL field` button to automatically guess and add it, but of course still you need to write [Regex](https://en.wikipedia.org/wiki/Regular_expression) yourself.**
-
-**Also now ShareX supports [Json](https://en.wikipedia.org/wiki/JSON) parsing with [JsonPath](http://goessner.net/articles/JsonPath/) syntax which is very easy to use therefore you don't need to use [Regex](https://en.wikipedia.org/wiki/Regular_expression) to parse [Json](https://en.wikipedia.org/wiki/JSON) response like showed in this examples below.**
-
-----
-
-You can use [Regular expression](https://en.wikipedia.org/wiki/Regular_expression) (Regex) to parse response text and use these in URL sections. If response text only contains URL, then you can make URL sections blank and don't need to use regex.
-
-In URL section, to be able to use regex results you must use this syntax:
-
-`$regex:n$` this syntax means from Regex list get index (index means order in list) `n` result. So `n` must be number and first item in list is 1.
-
-**Example:** `$regex:1$` means get first regex result from list.
-
-You can also get group results from regex using this syntax:
-
-`$regex:n,name$` this syntax means from Regex list get index `n` result with `name` group. Group name can be index or text.
-
-**Example:** `$regex:2,3$` means second regex in list and third group in regex result.
-
-**Example 2:** `$regex:1,thumbnail$` this code means first regex in list and `thumbnail` named group in regex result.
-
-For example if we have this [JSON](https://en.wikipedia.org/wiki/JSON) response:
+Example response:
 
 ```json
 {
-    "server": 41,
-    "image_size": "150x200",
-    "filename": "1564561651.jpg",
-    "file_size": 52687
+    "status": 200,
+    "data": {
+        "link": "https:\/\/example.com\/image.png"
+    }
 }
 ```
 
-You can use two regex (first regex using named group, second regex using numbered group):
+JsonPath: `data.link`
 
-`"server": (?<serverid>\d+)`
+Example response 2:
 
-`"filename": "(.+)"`
+```json
+{  
+    "success": true,
+    "files": [  
+        {  
+            "name": "image.png",
+            "url": "https://example.com/image.png"
+        }
+    ]
+}
+```
 
-In URL textbox, use this syntax: `http://example.com/server/$regex:1,serverid$/image/$regex:2,1$`
+JsonPath: `files[0].url`
 
-Result is: `http://example.com/server/41/image/1564561651.jpg`
+You must write JsonPath to URL textbox like this: `$json:files[0].url$`
+
+Or you can use "Add syntax to URL field" button.
+
+### XML
+
+You can use [XPath](https://www.w3schools.com/xml/xpath_syntax.asp) syntax to parse URL from [XML](https://en.wikipedia.org/wiki/XML) response.
+
+Example response:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<files>
+    <file>
+        <name>image.png</name>
+        <url>https://example.com/image.png</url>
+    </file>
+</files>
+```
+
+XPath: `/files/file[1]/url`
+
+URL textbox syntax: `$xml:/files/file[1]/url$`
+
+### Regex
+
+If response is not [JSON](https://en.wikipedia.org/wiki/JSON) or [XML](https://en.wikipedia.org/wiki/XML) then you can use [Regular expression (Regex)](https://en.wikipedia.org/wiki/Regular_expression) to parse response text.
+
+If you would like to learn Regex: https://regexone.com
+
+After writing your regex and adding it to regex list then you can use "Add syntax to URL field" button for ShareX to guess correct syntax and add selected regex to URL textbox.
+
+To manually add regex to URL textbox these syntax can be used:
+
+Syntax: `$regex:n$`
+
+From regex list get index (`n`) result. `n` must be number and first item in list is 1.
+
+Example: `$regex:1$` means get first regex result from list.
+
+Syntax: `$regex:n,group$`
+
+From regex list get index (`n`) result with group (`group`). Group can be index or text.
+
+Example: `$regex:2,3$` means second regex in list and third group in regex result.
+
+Example 2: `$regex:1,thumbnail$` means first regex in list and `thumbnail` named group in regex result.
+
+You can use multiple regex while parsing, for example if we have this response:
+
+```
+server: 41
+image_size: "250x200"
+filename: "image.png"
+file_size: 52687
+```
+
+First regex using named group: `server: (?<serverid>\d+)`
+
+Second regex using numbered group: `filename: "(.+)"`
+
+In URL textbox use this syntax: `https://example.com/server/$regex:1,serverid$/image/$regex:2,1$`
+
+Result URL will be: `https://example.com/server/41/image/image.png`
