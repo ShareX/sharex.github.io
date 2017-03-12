@@ -57,4 +57,5 @@ function InitTooltip(obj, fadeDelay = 300) {
 
 $(document).ready(function () {
     GetLatestReleaseInfo();
+    $('[data-toggle="popover"]').popover("show");
 });

@@ -16,10 +16,12 @@ $color-border: #ececec;
 
 $background-image: "/img/Background.png";
 
+$font: "Open Sans", sans-serif;
+
 body {
     background-color: $color-background;
     background-image: url($background-image);
-    font-family: "Open Sans", sans-serif;
+    font-family: $font;
 }
 
 .navbar {
@@ -43,11 +45,6 @@ body {
             border: none;
         }
         
-        &.new {
-            background: linear-gradient(to right, transparent 0%, #1b70b5 20%, #2e8edc 50%, #1b70b5 80%, transparent 100%) left bottom transparent no-repeat;
-            background-size: 100% 2px;
-        }
-
         a {
             color: $color-text;
         }
@@ -87,6 +84,25 @@ body {
     .navbar-compact .container,
     .navbar-compact .container #navbar {
         padding-left: 0px;
+    }
+}
+
+.popover {
+    font-family: $font;
+    background-color: #1b65a2;
+    color: $color-text;
+    border: none;
+
+    &.bottom { 
+        margin-top: 5px;
+        
+        .arrow {
+            border-bottom: none;
+        }
+
+        .arrow:after {
+            border-bottom-color: #1b65a2;
+        }
     }
 }
 
