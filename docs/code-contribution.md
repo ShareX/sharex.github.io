@@ -5,7 +5,7 @@ title: Code contribution
 
 ## Requirements
 
-* [Visual Studio 2015](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx) (You can't compile ShareX with VS2013 or older versions)
+* [Visual Studio 2017](https://www.visualstudio.com/downloads/)
 
 ## Code formatting
 
