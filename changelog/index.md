@@ -7,7 +7,7 @@ title: Changelog
 
 * We now have a [Discord](https://discordapp.com) server: [https://discord.gg/E4R3Qa9](https://discord.gg/E4R3Qa9)
 * Added Traditional Chinese translation (by [@alantsai](https://github.com/alantsai))
-* Implemented new Gfycat API with user account upload support (by [@Dinnerbone](https://github.com/Dinnerbone))
+* Implemented new [Gfycat](https://gfycat.com) API with user account upload support (by [@Dinnerbone](https://github.com/Dinnerbone))
 * Added [Plik](https://github.com/root-gg/plik) file uploader support (by [@maxibanki](https://github.com/maxibanki))
 * All capture methods are now able to detect the active window automatically. If the active window region is equal to or bigger than the capture region, it is used for the `%t` (Window title) and `%pn` (Process name) naming syntax. For example; if you are taking a fullscreen capture and active window is maximized or fullscreen, then it will be automatically used for file naming
 * ShareX annotation mode is now enabled by default for new installations and will be used instead of Greenshot image editor
@@ -18,7 +18,7 @@ title: Changelog
 * The ShareX annotation window now uses a dark background around the image and shows checkers only behind the image
 * Added animation to region & shape selection border
 * Added animation under annotation toolbar on startup to make it more noticeable, because there is a lot of people still don't know there is toolbar in region capture and it is possible to annotate using it
-* Reimplemented Amazon S3 from scratch to not use Amazon SDK libraries and allow more customization
+* Reimplemented [Amazon S3](https://aws.amazon.com/s3/) from scratch to not use Amazon SDK libraries and allow more customization
 * Added custom endpoint/region support to Amazon S3 so other services which are compatible with Amazon S3 API with v4 signature can be used
 * Added a path style request option to Amazon S3 to support some custom services which require it
 * Added "Google image search" to the main window task list right click menu and as a URL sharing destination
@@ -28,8 +28,8 @@ title: Changelog
 * Added custom domain support for [GitHub Enterprise](https://enterprise.github.com/home) Gist anonymous uploads (by [@maxibanki](https://github.com/maxibanki))
 * Add content type header to [Azure Storage](https://azure.microsoft.com/en-us/services/storage/) uploads so the browser can show content without requiring to download it (by [@Scrxtchy](https://github.com/Scrxtchy))
 * Drag & dropping files from image history are now allowed
-* Added "Reset settings" button (Application settings -> Export / Import tab)
-* HTTPS endpoints in Pastebin are now being used
+* Added "Reset settings" button to "Application settings -> Export / Import tab"
+* HTTPS endpoints in [Pastebin](https://pastebin.com) are now being used
 
 ### [ShareX 11.6.0](https://github.com/ShareX/ShareX/releases/tag/v11.6.0) - 2017-02-23
 
