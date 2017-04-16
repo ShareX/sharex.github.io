@@ -266,6 +266,11 @@ body {
         font-size: 28px;
         margin-bottom: 20px;
     }
+
+    h3 a {
+        color: $color-text-2;
+        text-decoration: none;
+    }
     
     h3 .fa {
         font-size: 50px;
