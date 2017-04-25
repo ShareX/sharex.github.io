@@ -369,6 +369,25 @@ footer {
     margin-right: 15px;
 }
 
+#bitcoin-modal {
+    .close {
+        font-size: 30px;
+    }
+
+    .bitcoin-qr {
+        margin: 20px;
+    }
+
+    .bitcoin-address {
+        padding: 10px;
+
+        input {
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+}
+
 .patrons-panel {
     margin-top: 30px;
     margin-bottom: 10px;

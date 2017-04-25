@@ -13,7 +13,26 @@ title: Donate
     <div class="container">
         <a class="donate-button" href="https://www.patreon.com/ShareX"><img src="../img/Patreon.png" alt="Patreon" /></a>
 
-        <a class="donate-button" href="https://www.coinbase.com/Jaex"><img src="../img/Bitcoin.png" alt="Bitcoin" /></a>
+        <a class="donate-button" href="#" data-toggle="modal" data-target="#bitcoin-modal"><img src="../img/Bitcoin.png" alt="Bitcoin" /></a>
+
+        <div id="bitcoin-modal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                        <h4 class="modal-title">Bitcoin address</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <img class="bitcoin-qr" src="../img/Bitcoin_QR.png" />
+                            <div class="bitcoin-address">
+                                <input id="code" type="text" class="form-control" value="1NSCKamhxYFUHqxpV1189iWfycLGuZYdsZ" onfocus="this.select()" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="panel patrons-panel">
             <div class="panel-heading">Patrons</div>
