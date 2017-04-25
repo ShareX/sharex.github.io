@@ -379,11 +379,11 @@ footer {
     }
 
     .bitcoin-address {
-        padding: 10px;
+        margin: 15px 5px 5px 5px;
 
-        input {
+        .panel-body {
             font-size: 18px;
-            text-align: center;
+            padding: 5px;
         }
     }
 }
