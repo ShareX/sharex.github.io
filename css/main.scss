@@ -87,6 +87,12 @@ body {
     }
 }
 
+@media (max-width: 767px) {
+    .popover {
+        display: none !important;
+    }
+}
+
 .popover {
     font-family: $font;
     background-color: #1b65a2;
@@ -118,6 +124,12 @@ body {
         font-size: 120px;
         margin-top: 0px;
         margin-bottom: 10px;
+    }
+
+    @media (max-width: 575px) {
+        h1 {
+            font-size: 70px;
+        }
     }
     
     p {
