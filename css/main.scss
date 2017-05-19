@@ -471,6 +471,33 @@ footer {
     }
 }
 
+.container-assets {
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+    h3 {
+        margin-bottom: 20px;
+        padding-bottom: 5px;
+        background: linear-gradient(to right, $color-primary 0%, transparent 100%) left bottom transparent no-repeat;
+        background-size: 100% 1px;
+    }
+
+    h4 {
+        margin-bottom: 15px;
+    }
+
+    p,
+    .col-sm-2 {
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+
+    .no-top-margin {
+        margin-top: 0px;
+    }
+}
+
 .markdown {
     h2,
     h3,
