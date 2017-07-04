@@ -3,6 +3,33 @@ layout: changelog
 title: Changelog
 ---
 
+### [ShareX 11.8.0](https://github.com/ShareX/ShareX/releases/tag/v11.8.0) - 2017-07-04
+
+* Added "News" button to main window which will show new updates or announcements
+* If after capture task "Annotate image" is selected and there are no annotations applied in region capture, the annotation window will open automatically after region selection, which will allow users to annotate after region selection similar to previous ShareX versions
+* Added "Crop" tool, which is not available when in region capture mode
+* Added "Image (Screen)" tool, which allows to duplicate area from the screen to move to a different position
+    * *Tip: You can use this tool to create an inverse blur highlighting effect. First blur the part of the area which should become the background, then use this tool to exclude the area that should not be blurred from the rest of the image.*
+* Added disable animations option to region capture options menu
+* Region animation speed is now slightly faster
+* Changed toolbar highlight animation to not look like a progress bar
+* In region capture when using multi region, non active regions will use static ant border instead of blinking border
+* `PersonalPath.cfg` file which stores custom personal folder path will be saved to `Documents\ShareX` instead of `%localappdata%\ShareX` folder and old file will be automatically migrated to new location
+* Tray icon progress animation changes
+* FTP settings UI remade to be more user friendly
+* While opening the color picker, if clipboard contains color text (`r, g, b`, `#hex` etc.) then that color will be used as current color automatically
+* Color picker will show old color where possible (for example if opened in image annotation window) under current color
+* In color picker if transparent button is pressed when alpha is 0, then alpha will be set to 255 which will allow quick toggling between 0 and 255
+* In region capture if an element is resized to be too small and resize nodes start overlapping, ShareX will now hide some of those resize nodes to allow for more precise control
+* Changes to default annotation settings
+* In order to increase image annotation performance some tools are now using lower quality rendering during annotation, but higher quality for final output
+* Added curved edge support to torn edges image effect
+* Added Screen recording (GIF) default hotkey <kbd>Ctrl + Shift + Print Screen</kbd> for new installations
+* Added configurable environments support for [Azure storage](https://azure.microsoft.com/en-us/services/storage/) (by [@nta](https://github.com/nta))
+* Added infinity expire time option to [Plik](https://github.com/root-gg/plik) file uploader (by [@maxibanki](https://github.com/maxibanki))
+* PNG bit depth is now configurable through task settings. Automatic detection will scan the image and apply best option for lower file size without quality loss
+* Now it is possible to drag n drop file from ShareX main window task list to [Discord](https://discordapp.com/) client
+
 ### [ShareX 11.7.0](https://github.com/ShareX/ShareX/releases/tag/v11.7.0) - 2017-04-14
 
 * We now have a [Discord](https://discordapp.com) server: [https://discord.gg/E4R3Qa9](https://discord.gg/E4R3Qa9)
