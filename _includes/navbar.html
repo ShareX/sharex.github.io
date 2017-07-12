@@ -13,7 +13,7 @@
                 <li {% unless page.title %}class="active"{% endunless %}><a href="{{ site.url }}">Home</a></li>
                 <li {% if page.title == "Downloads" %}class="active"{% endif %}><a href="{{ site.url }}/downloads/">Downloads</a></li>
                 <li {% if page.title == "Changelog" %}class="active"{% endif %}><a href="{{ site.url }}/changelog/">Changelog</a></li>
-                <li><a href="http://imgur.com/a/7TDhO">Screenshots</a></li>
+                <li {% if page.title == "Screenshots" %}class="active"{% endif %}><a href="{{ site.url }}/screenshots/">Screenshots</a></li>
                 <li><a href="{{ site.github }}">GitHub</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Docs <span class="caret"></span></a>
