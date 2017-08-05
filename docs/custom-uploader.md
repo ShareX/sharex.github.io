@@ -66,7 +66,9 @@ value: csharp
 
 If URL textbox is empty then `Response text` or `Redirection URL` will be automatically used. So if response only returns URL then no need to write anything to URL textbox.
 
-### JSON
+### URL syntax
+
+#### JSON
 
 You can use [JsonPath](http://goessner.net/articles/JsonPath/) syntax to parse URL from [JSON](https://en.wikipedia.org/wiki/JSON) response.
 
@@ -103,7 +105,7 @@ You must write JsonPath to URL textbox like this: `$json:files[0].url$`
 
 Or you can use "Add syntax to URL field" button.
 
-### XML
+#### XML
 
 You can use [XPath](https://www.w3schools.com/xml/xpath_syntax.asp) syntax to parse URL from [XML](https://en.wikipedia.org/wiki/XML) response.
 
@@ -123,11 +125,11 @@ XPath: `/files/file[1]/url`
 
 URL textbox syntax: `$xml:/files/file[1]/url$`
 
-### Regex
+#### Regex
 
 If response is not [JSON](https://en.wikipedia.org/wiki/JSON) or [XML](https://en.wikipedia.org/wiki/XML) then you can use [Regular expression (Regex)](https://en.wikipedia.org/wiki/Regular_expression) to parse response text.
 
-If you would like to learn Regex: https://regexone.com
+If you would like to learn Regex: [regexone.com](https://regexone.com)
 
 After writing your regex and adding it to regex list then you can use "Add syntax to URL field" button for ShareX to guess correct syntax and add selected regex to URL textbox.
 
@@ -163,3 +165,11 @@ Second regex using numbered group: `filename: "(.+)"`
 In URL textbox use this syntax: `https://example.com/server/$regex:1,serverid$/image/$regex:2,1$`
 
 Result URL will be: `https://example.com/server/41/image/image.png`
+
+#### Random
+
+For example if you would like to use random domain each upload you can use this syntax.
+
+Syntax: `$random:value1|value2|value3$`
+
+Example: `https://$random:subdomain1|subdomain2$.$random:domain1|domain2|domain3$.com/$json:files[0].url$`
