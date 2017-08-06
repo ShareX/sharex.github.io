@@ -3,6 +3,18 @@ layout: changelog
 title: Changelog
 ---
 
+### [ShareX 11.9.0](https://github.com/ShareX/ShareX/releases/tag/v11.9.0) - 2017-08-06
+
+* Added Italian language support (by [@pjammo](https://github.com/pjammo))
+* Added cursor tool to region capture which allows moving, deleting or adding more cursors
+* Added multiple center point support to line and arrow tools
+* Added arrows on both ends option to arrow tool
+* Added batch image thumbnailer tool
+* Added random syntax to Custom uploader, which can be used to return random domain each upload, check [here for more info](https://getsharex.com/docs/custom-uploader#random)
+* Added custom domain support for [Azure storage](https://azure.microsoft.com/en-us/services/storage/) (by [@Lego6245](https://github.com/Lego6245))
+* Added padding and border size option to text watermark
+* Added unread counter to news button
+
 ### [ShareX 11.8.0](https://github.com/ShareX/ShareX/releases/tag/v11.8.0) - 2017-07-04
 
 * Added "News" button to main window which will show new updates or announcements
