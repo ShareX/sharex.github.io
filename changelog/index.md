@@ -5,6 +5,7 @@ title: Changelog
 
 ### [ShareX 11.9.0](https://github.com/ShareX/ShareX/releases/tag/v11.9.0) - 2017-08-06
 
+* ShareX is now available on [Windows Store](https://www.microsoft.com/store/apps/9nblggh4z1sp)!
 * Added Italian language support (by [@pjammo](https://github.com/pjammo))
 * Added cursor tool to region capture which allows moving, deleting or adding more cursors
 * Added multiple center point support to line and arrow tools
