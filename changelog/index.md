@@ -3,6 +3,10 @@ layout: changelog
 title: Changelog
 ---
 
+### [ShareX 11.9.1](https://github.com/ShareX/ShareX/releases/tag/v11.9.1) - 2017-08-14
+
+* Bug fixes
+
 ### [ShareX 11.9.0](https://github.com/ShareX/ShareX/releases/tag/v11.9.0) - 2017-08-06
 
 * ShareX is now available on [Windows Store](https://www.microsoft.com/store/apps/9nblggh4z1sp)!
