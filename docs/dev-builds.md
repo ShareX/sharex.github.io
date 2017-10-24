@@ -23,7 +23,7 @@ Open artifacts tab which contains all downloads:
 
 ![](http://i.imgur.com/vrZxNLX.png)
 
-Download prefered build from list:
+Download preferred build from list:
 
 ![](http://i.imgur.com/ezKu1M7.png)
 
