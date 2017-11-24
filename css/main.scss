@@ -8,25 +8,30 @@ $color-primary: #1c5288;
 $color-primary-2: #12598d;
 $color-secondary: #175a91;
 $color-secondary-2: #1f3553;
-$color-background: #ffffff;
-$color-background-shade: #f9f9f9;
+$color-background: radial-gradient(at top, #353B44 -10%, #252932 60%);
+$color-background-shade: radial-gradient(at top, #272b31 -10%, #1b1f25 60%);
 $color-text: #ffffff;
-$color-text-2: #464646;
-$color-border: #ececec;
+$color-text-2: #e7e9ea;
+$color-border: #444950;
+$header-line: linear-gradient(to right, #717477 0%, transparent 80%) left bottom transparent no-repeat;
 
 $background-image: "/img/Background.png";
 
 $font: "Open Sans", sans-serif;
 
 body {
-    background-color: $color-background;
-    background-image: url($background-image);
+    background: $color-background;
+    color: $color-text;
     font-family: $font;
+
+    a {
+        color: $color-text;
+        font-weight: 500;
+    }
 }
 
 .navbar {
-    background-color: mix($color-primary, $color-primary-2);
-    background: linear-gradient(to bottom, $color-primary-2 0%, $color-primary 100%);
+    background-color: #313642;
     margin-bottom: 0px;
     border-radius: 0px;
     box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.3);
@@ -113,8 +118,7 @@ body {
 }
 
 .jumbotron {
-    background-color: mix($color-secondary, $color-secondary-2);
-    background: radial-gradient(at top, $color-secondary 0%, $color-secondary-2 100%);
+    background: radial-gradient(at top, #3e434e -20%, #20232b 90%);
     color: $color-text;
     padding-top: 0px;
     padding: 50px 0px 60px;
@@ -138,33 +142,36 @@ body {
     }
 }
 
+.btn {
+    background-color: white;
+    border-color: transparent;
+    color: #333840;
+    border-radius: 5px;
+    padding: 10px 0px;
+    margin: 10px 10px 0px 10px;
+    font-size: 20px;
+    box-shadow: 0px 4px 0px #c0c2c5;
+    text-shadow: 0px 1px 0px #ffffff;
+    position: relative;
+
+    &:hover {
+        color: #1c92e6;
+        text-shadow: 0px 1px 0px #ffffff, 0px 0px 30px rgba(0, 186, 255, 0.4);
+    }
+    
+    &:active {
+        color: #257cb9;
+        background-color: #f4f4f4;
+        box-shadow: 0px 3px 0px #dbdbdb;
+        top: 3px;
+    }
+}
+
 .jumbotron-main {
     text-align: center;
-    
-    .btn {
-        background-color: white;
-        border-color: transparent;
-        color: #267bc4;
-        border-radius: 4px;
-        padding: 10px 0px;
-        margin: 10px 10px 0px 10px;
-        font-size: 20px;
-        box-shadow: 0px 6px 0px #dbdbdb;
-        text-shadow: 0px 1px 0px #ffffff;
-        position: relative;
-        width: 200px;
 
-        &:hover {
-            color: #1c92e6;
-            text-shadow: 0px 1px 0px #ffffff, 0px 0px 30px rgba(0, 186, 255, 0.4);
-        }
-        
-        &:active {
-            color: #257cb9;
-            background-color: #f4f4f4;
-            box-shadow: 0px 3px 0px #dbdbdb;
-            top: 3px;
-        }
+    .btn {
+        width: 200px;
     }
     
     .tooltip {
@@ -202,6 +209,8 @@ body {
 }
 
 .jumbotron-compact {
+    background: $color-background-shade;
+    border-bottom: 1px solid $color-border;
     padding: 25px 0px;
     
     h1 {
@@ -225,8 +234,8 @@ body {
 }
 
 .container-screenshot {
-    background-color: $color-background;
-    background-image: url($background-image);
+    background: $color-background;
+    border-top: 1px solid $color-border;
     padding-top: 30px;
     padding-bottom: 50px;
     text-align: center;
@@ -241,25 +250,7 @@ body {
     }
     
     .btn {
-        background-color: #2f7cb4;
-        border-color: transparent;
-        color: $color-text;
-        border-radius: 4px;
-        padding: 10px 50px;
-        margin-top: 20px;
-        font-size: 20px;
-        box-shadow: 0px 6px 0px #2c6a98;
-        position: relative;
-
-        &:hover {
-            text-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
-        }
-        
-        &:active {
-            background-color: #2e78ad;
-            box-shadow: 0px 3px 0px #2c6a98;
-            top: 3px;
-        }
+        padding: 10px 50px;        
     }
 }
 
@@ -267,11 +258,12 @@ body {
     padding-top: 10px;
     padding-bottom: 30px;
     color: $color-text-2;
-    background-color: $color-background;
+    background: $color-background;
     border-top: 1px solid $color-border;
     
     &:nth-of-type(even) {
-        background-color: $color-background-shade;
+        border-top: 1px solid #39393a;
+        background: $color-background-shade;
     }
     
     h3 {
@@ -298,7 +290,7 @@ body {
     }
     
     h4:not(.collapsed) {
-        background: linear-gradient(to right, #cccccc 0%, transparent 80%) left bottom transparent no-repeat;
+        background: $header-line;
         background-size: 100% 1px;
     }
     
@@ -327,10 +319,8 @@ body {
 }
 
 footer {
-    background-color: mix($color-primary, $color-primary-2);
-    background: linear-gradient(to bottom, $color-primary-2 0%, $color-primary 100%);
+    background-color: #1d2127;
     color: $color-text;
-    box-shadow: 0px 0px 40px rgba(22, 40, 69, 0.4);
     padding: 20px 0px;
     text-align: center;
     
@@ -354,7 +344,7 @@ footer {
     padding-top: 30px;
     padding-bottom: 30px;
     font-size: 16px;
-    background-color: $color-background-shade;
+    background: $color-background-shade;
     color: $color-text-2;
     border-bottom: 1px solid $color-border;
 }
@@ -451,11 +441,11 @@ footer {
         }
         
         tr {
-            background-color: $color-background;
+            background: $color-background;
         }
         
         tbody tr:nth-of-type(odd) {
-            background-color: $color-background-shade;
+            background: $color-background-shade;
         }
     }
 }
@@ -471,7 +461,7 @@ footer {
     h3 {
         margin-top: 30px;
         padding-bottom: 5px;
-        background: linear-gradient(to right, $color-primary 0%, transparent 100%) left bottom transparent no-repeat;
+        background: $header-line;
         background-size: 100% 1px;
     }
 }
@@ -483,7 +473,7 @@ footer {
     h3 {
         margin-bottom: 20px;
         padding-bottom: 5px;
-        background: linear-gradient(to right, $color-primary 0%, transparent 100%) left bottom transparent no-repeat;
+        background: 
         background-size: 100% 1px;
     }
 
@@ -513,7 +503,7 @@ footer {
     h1,
     h2 {
         padding-bottom: 5px;
-        background: linear-gradient(to right, $color-primary 0%, transparent 100%) left bottom transparent no-repeat;
+        background: $header-line;
         background-size: 100% 1px;
     }
     
@@ -535,7 +525,7 @@ footer {
     }
     
     hr {
-        background: linear-gradient(to right, $color-primary 0%, transparent 100%) left bottom transparent no-repeat;
+        background: $header-line;
         background-size: 100% 1px;
         border-top: 1px solid transparent;
     }
