@@ -39,9 +39,13 @@ body {
         box-shadow: 0px 5px 0px #232425;
         position: relative;
 
-        &:hover, &:focus {
+        &:hover {
             color: $color-text;
             text-shadow: 0px 0px 30px #ffffff;
+        }
+
+        &:focus {
+            color: $color-text;
         }
         
         &:active {
@@ -66,8 +70,7 @@ body {
         }
 
         &.dropdown ul {
-            background-color: mix($color-primary, $color-primary-2);
-            background: linear-gradient(to bottom, $color-primary-2 0%, $color-primary 100%);
+            background-color: #313642;
             box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
             border: none;
         }
@@ -150,8 +153,7 @@ body {
         margin-top: 8px;
 
         .tooltip-inner {
-            background-color: mix($color-primary, $color-primary-2);
-            background: linear-gradient(to bottom, $color-primary-2 0%, $color-primary 100%);
+            background-color: #313642;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
             padding: 0px;
             font-size: 15px;
@@ -292,6 +294,7 @@ body {
 
 footer {
     background-color: #1d2127;
+    border-top: 1px solid #1d1d1f;
     color: $color-text;
     padding: 20px 0px;
     text-align: center;
