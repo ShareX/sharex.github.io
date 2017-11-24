@@ -114,31 +114,6 @@ body {
     }
 }
 
-@media (max-width: 767px) {
-    .popover {
-        display: none !important;
-    }
-}
-
-.popover {
-    font-family: $font;
-    background-color: #1b65a2;
-    color: $color-text;
-    border: none;
-
-    &.bottom { 
-        margin-top: 5px;
-        
-        .arrow {
-            border-bottom: none;
-        }
-
-        .arrow:after {
-            border-bottom-color: #1b65a2;
-        }
-    }
-}
-
 .jumbotron {
     background: radial-gradient(at top, #3e434e -20%, #20232b 90%);
     color: $color-text;
