@@ -469,6 +469,27 @@ footer {
 }
 
 .markdown {
+    color: #e4e4e4;
+    font-size: 16px;
+    font-weight: 300;
+
+    a {
+        font-weight: 500;
+    }
+    
+    a:hover,
+    a:focus {
+        color: #ffffff;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: #ffffff;
+        font-weight: 300;
+    }
+
     h2,
     h3,
     h4 {
