@@ -528,29 +528,26 @@ footer {
 
     pre {
         border-radius: 5px;
-        background: #1b1f25;
+        background-color: #1b1f25;
         box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
         border: none;
         margin-bottom: 15px;
     }
 
     code.highlighter-rouge {
-        font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
         padding: 3px 5px;
         margin: 0px;
         font-size: 85%;
-        color: #337ab7;
-        color: #333;
-        background-color: rgba(0, 0, 0, 0.03);
+        color: #abb2bf;
+        background-color: #1b1f25;
         border-radius: 3px;
-        box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.6);
     }
     
     kbd {
         display: inline-block;
-        padding: 3px 5px;
+        padding: 4px 5px;
         font-size: 11px;
-        line-height: 10px;
         color: #555;
         vertical-align: middle;
         background-color: #fcfcfc;
