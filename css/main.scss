@@ -25,8 +25,15 @@ body {
     font-family: $font;
 
     a {
-        color: $color-text;
         font-weight: 500;
+
+        &, &:hover, &:focus {
+            color: $color-text;
+        }
+
+        &:hover {
+            text-shadow: 0px 0px 1px #ffffff;
+        }
     }
 
     .btn {
@@ -319,7 +326,7 @@ footer {
     padding-top: 30px;
     padding-bottom: 30px;
     font-size: 16px;
-    background: $color-background-shade;
+    background: $color-background;
     color: $color-text-2;
     border-bottom: 1px solid $color-border;
 }
@@ -327,6 +334,7 @@ footer {
 .container-donate-2 {
     padding-top: 30px;
     padding-bottom: 30px;
+    background: $color-background;
 }
 
 .donate-note {
@@ -368,12 +376,27 @@ footer {
 .patrons-panel {
     margin-top: 30px;
     margin-bottom: 10px;
-    border-color: $color-secondary;
+    border: none;
+    box-shadow: 0px 0px 20px #00000040;
+    
+    a {
+        text-decoration: underline;
+        text-decoration-color: rgba(255, 255, 255, 0.5);
+    }
     
     .panel-heading {
         color: $color-text;
-        background-color: $color-secondary;
-        border-color: $color-secondary;
+        background-color: #1b1f25;
+        border-radius: 0px;
+    }
+
+    .table {
+        background-color: #22272f;
+        border-radius: 0px;
+
+        td {
+            border-top: 1px solid #202125;
+        }
     }
 }
 
@@ -397,7 +420,7 @@ footer {
 .container-downloads {
     padding-top: 30px;
     padding-bottom: 20px;
-    
+
     h1 {
         font-size: 18px;
         margin-top: 0px;
@@ -416,11 +439,15 @@ footer {
         }
         
         tr {
-            background: $color-background;
+            background: #252932;
         }
         
         tbody tr:nth-of-type(odd) {
-            background: $color-background-shade;
+            background-color: #1b1f25;
+        }
+
+        &, table, th, td {
+            border: 1px solid #3d414a;
         }
     }
 }
