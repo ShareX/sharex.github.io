@@ -455,6 +455,11 @@ footer {
 .container-screenshots {
     padding-top: 30px;
     padding-bottom: 10px;
+
+    .thumbnail {
+        background-color: #1c2026;
+        border: none;
+    }
 }
 
 .container-changelog {
