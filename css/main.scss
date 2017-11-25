@@ -410,10 +410,21 @@ footer {
     
     #callback-code .btn {
         width: 150px;
+        padding: 6px 12px;
+        margin: 0px;
+        font-size: 14px;
+        box-shadow: none;
+
+        &:hover, &:active, &:focus {
+            color: $color-text;
+            background-color: #393d45;
+            top: 0px;
+        }
     }
 
     #callback-error {
         display: none;
+        color: #393d45;
     }
 }
 
