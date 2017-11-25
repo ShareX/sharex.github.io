@@ -57,8 +57,4 @@ function InitTooltip(obj, fadeDelay = 300) {
 
 $(document).ready(function () {
     GetLatestReleaseInfo();
-    $('[data-toggle="popover"]').popover("show");
-    $(".dropdown").on("show.bs.dropdown", function () {
-        $('[data-toggle="popover"]').popover("hide");
-    });
 });
