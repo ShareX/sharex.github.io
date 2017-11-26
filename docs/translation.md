@@ -23,7 +23,7 @@ Standalone version of it also exist here:
 
 Screenshot of it:
 
-[![](http://i.imgur.com/yO6LRGlm.jpg)](http://i.imgur.com/yO6LRGl.png)
+[![](https://i.imgur.com/yO6LRGlm.jpg)](https://i.imgur.com/yO6LRGl.png)
 
 You just need to use this software/extension and set columns to your language.
 
@@ -33,6 +33,6 @@ When committing you must make sure only your language files are committed. For e
 
 Some fields do not require translation:
 
-[![](http://i.imgur.com/UM5N69Dm.jpg)](http://i.imgur.com/UM5N69D.png)
+[![](https://i.imgur.com/UM5N69Dm.jpg)](https://i.imgur.com/UM5N69D.png)
 
 They are marked as "Invariant" in software/extension which makes them gray. But sometimes when the form is edited in Visual Studio form designer, these "Invariant" marks can get removed automatically and there is no solution for it.

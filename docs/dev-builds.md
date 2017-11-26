@@ -17,14 +17,14 @@ Open our AppVeyor project page:
 
 Open release build page:
 
-![](http://i.imgur.com/wf8LqbR.png)
+![](https://i.imgur.com/wf8LqbR.png)
 
 Open artifacts tab which contains all downloads:
 
-![](http://i.imgur.com/vrZxNLX.png)
+![](https://i.imgur.com/vrZxNLX.png)
 
 Download preferred build from list:
 
-![](http://i.imgur.com/ezKu1M7.png)
+![](https://i.imgur.com/ezKu1M7.png)
 
 **Note: Dev builds can be unstable and must be used for testing purposes only.**
