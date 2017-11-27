@@ -3,6 +3,68 @@ layout: changelog
 title: Changelog
 ---
 
+### [ShareX 12.0.0](https://github.com/ShareX/ShareX/releases/tag/v12.0.0) - 2017-11-27
+
+* Added windowed mode support to image editor
+* Added panning support to image editor, hold middle mouse button to pan canvas (by [@L1Q](https://github.com/L1Q))
+* Added real time image effect (blur, pixelate, highlight) preview support to image editor
+* Added "Image" menu to image editor toolbar with these items:
+    * Image size
+    * Canvas size
+    * Rotate 90° clockwise
+    * Rotate 90° counter clockwise
+    * Rotate 180°
+    * Flip horizontal
+    * Flip vertical
+* Added image editor start mode option to "Options" menu:
+    * Normal window
+    * Maximized window (Default)
+    * Remember and use previous window size, position and maximized state
+    * Fullscreen
+* Added image editor background color option to "Options" menu
+* Added cursor type option to cursor drawing tool
+* Show image size, file name and FPS in image editor title bar
+* Image editor last selected tool will be remembered separately from region capture
+* Changed region capture/image editor resize node visuals
+* Support proportional resizing when dragging resize node while holding <kbd>Shift</kbd>
+* Added QR code decode support, which can scan multiple QR codes at the same time from screen or file
+* Added "Upload text" to main window upload menu and as hotkey
+* Added "Shorten URL"  to main window upload menu and as hotkey
+* Removed update button from custom uploaders tab because now settings apply instantly
+* Added `$response$` syntax to custom uploader which can be used in URL fields
+* If custom uploader name field is empty then name will be generated automatically from request url, which is recommended for consistency
+* While exporting custom uploader all default or empty values will be ignored, that way JSON output can be more compact
+* Added custom URL sharing service support, which can be used for example for [Discord webhooks](https://github.com/ShareX/CustomUploaders/search?utf8=%E2%9C%93&q=Discord+webhook)
+* Added [random syntax](https://getsharex.com/docs/custom-uploader#random) support to custom uploader request URL
+* Added Text/URL input to custom uploader arguments/headers value suggestion list
+* Custom uploader won't export with empty request url or destination type
+* Renamed Picasa to Google Photos
+* Removed dead uploaders: Someimage, Imgland, Minus, Uplea
+* Added image effects preset list support, this will cause previous image effect settings to reset
+* Added markdown copy options to main window task context menu
+* Removed Amazon S3 reduced redundancy storage option because it is now deprecated and even costs more than standard storage to encourage moving to standard storage
+* Added [standard infrequent access storage](https://aws.amazon.com/s3/storage-classes/) option to Amazon S3
+* Hide notification window from <kbd>Alt + Tab</kbd> and <kbd>Win + Tab</kbd> menu (by [@sylveon](https://github.com/sylveon))
+* Implemented latest [paste.ee](https://paste.ee/) API, this will cause previous authentication setting to reset
+* Implemented latest [Flickr](https://www.flickr.com/) API which is using OAuth for authentication now, this will cause previous authentication setting to reset
+* Added direct link option to [Flickr](https://www.flickr.com/)
+* Updated [Lithiio](https://lithi.io) to new API which is using username/password for authentication now instead of Steam OAuth
+* Increased Twitter message character limit to 280
+* Windows Store ShareX build is now using .NET Framework 4.6.1 so there is no need for additional executable to handle Centennial startup changes anymore (by [@sylveon](https://github.com/sylveon))
+* Touch input improvements for region capture (by [@mghiasi75](https://github.com/mghiasi75))
+* Watch folder feature will also check for file size multiple times to make sure that file is not being written before starting upload
+* Added [ShareX Discord server invite link](https://discord.gg/E4R3Qa9) to main window, you can press `X` button to permanently hide it
+* Both Discord and Patreon buttons will be automatically hidden when main window task list is not empty
+* Pressing <kbd>Esc</kbd> in quick task menu will close it
+* Added verbose request logs option to application settings advanced tab which can be used to debug upload related issues
+* Added drag and drop file from history window support (by [@campbeb](https://github.com/campbeb))
+* Support <kbd>Ctrl + A</kbd> in OCR results window (by [@campbeb](https://github.com/campbeb))
+* Main window image preview can now be positioned on the bottom (by [@campbeb](https://github.com/campbeb))
+* Removed https option for Imgur and instead always https will be used because now [it is used by default on Imgur](https://blog.imgur.com/2017/09/13/https-on-imgur/)
+* Show current version and latest version in update message box
+* In application settings window middle mouse clicking on pre-release check box will download latest dev build from [AppVeyor](https://ci.appveyor.com/project/ShareX/sharex) but it should be only used for testing purposes because dev builds can be unstable and therefore not recommended for production use
+* Updated design of ShareX web site to have dark colors
+
 ### [ShareX 11.9.1](https://github.com/ShareX/ShareX/releases/tag/v11.9.1) - 2017-08-14
 
 * Bug fixes
