@@ -383,7 +383,7 @@ footer {
     
     a {
         text-decoration: underline;
-        text-decoration-color: rgba(255, 255, 255, 0.5);
+        text-decoration-color: rgba(255, 255, 255, 0.3);
     }
     
     .panel-heading {
@@ -520,6 +520,8 @@ footer {
 
     a {
         font-weight: 500;
+        text-decoration: underline;
+        text-decoration-color: rgba(255, 255, 255, 0.3);
     }
     
     a:hover,
@@ -533,6 +535,10 @@ footer {
     h4 {
         color: #ffffff;
         font-weight: 300;
+
+        a {
+            text-decoration: none;
+        }
     }
 
     h2,
@@ -584,14 +590,14 @@ footer {
         margin: 0px;
         font-size: 85%;
         color: #abb2bf;
-        background-color: #1b1f25;
+        background-color: #21262d;
         border-radius: 3px;
         box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.6);
     }
     
     kbd {
         display: inline-block;
-        padding: 4px 5px;
+        padding: 3px 5px;
         font-size: 11px;
         color: #555;
         vertical-align: middle;
