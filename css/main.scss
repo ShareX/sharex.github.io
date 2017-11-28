@@ -181,6 +181,10 @@ body {
         a {
             color: $color-text;
             text-decoration: none;
+
+            &:hover {
+                text-shadow: none;
+            }
         }
         
         div {
