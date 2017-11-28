@@ -3,27 +3,33 @@ layout: markdown
 title: Dev builds
 ---
 
-## How to try dev builds?
-
 ### What is AppVeyor?
 
-Each time we upload (commit) code changes to [GitHub](https://github.com/ShareX/ShareX), the [AppVeyor](https://www.appveyor.com) service automatically downloads the latest code changes from GitHub, compiles ShareX and creates setup/portable builds.
+Each time we upload code changes to [GitHub](https://github.com/ShareX/ShareX), the [AppVeyor](https://www.appveyor.com) service automatically downloads the latest code changes from GitHub, compiles ShareX and creates setup/portable builds.
 
-### How to find latest download links
+### Automatic way to install dev build
 
-Open our AppVeyor project page:
+* Open ShareX application settings window.
+
+* **Mouse middle click** on pre-release checkbox to start auto update process:
+
+![](https://i.imgur.com/IY7ddmW.png)
+
+### Manual way to install dev build
+
+* Open our AppVeyor project page:
 
 [https://ci.appveyor.com/project/ShareX/sharex](https://ci.appveyor.com/project/ShareX/sharex)
 
-Open release build page:
+* Open release build page:
 
 ![](https://i.imgur.com/wf8LqbR.png)
 
-Open artifacts tab which contains all downloads:
+* Open artifacts tab which contains all downloads:
 
 ![](https://i.imgur.com/vrZxNLX.png)
 
-Download preferred build from list:
+* Download and install preferred build from list:
 
 ![](https://i.imgur.com/ezKu1M7.png)
 
