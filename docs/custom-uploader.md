@@ -35,6 +35,8 @@ When using `GET` request type arguments will be appended to URL in background li
 
 Example: `http://example.com/upload.php`
 
+<a href="#random">Random syntax</a> also can be used in request URL.
+
 ### File form name
 
 This field can be only used when `Request type` is `POST`.
@@ -165,6 +167,14 @@ Second regex using numbered group: `filename: "(.+)"`
 In URL textbox use this syntax: `https://example.com/server/$regex:1,serverid$/image/$regex:2,1$`
 
 Result URL will be: `https://example.com/server/41/image/image.png`
+
+#### Response
+
+For example if response only contains file name (or id) and if you would like to append it to domain then you can use this syntax.
+
+Syntax: `$response$`
+
+Example: `https://example.com/$response$`
 
 #### Random
 

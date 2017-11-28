@@ -31,10 +31,10 @@ title: Changelog
 * Added "Upload text" to main window upload menu and as hotkey
 * Added "Shorten URL"  to main window upload menu and as hotkey
 * Removed update button from custom uploaders tab because now settings apply instantly
-* Added `$response$` syntax to custom uploader which can be used in URL fields
 * If custom uploader name field is empty then name will be generated automatically from request url, which is recommended for consistency
 * While exporting custom uploader all default or empty values will be ignored, that way JSON output can be more compact
 * Added custom URL sharing service support, which can be used for example for [Discord webhooks](https://github.com/ShareX/CustomUploaders/search?utf8=%E2%9C%93&q=Discord+webhook)
+* Added [response syntax](https://getsharex.com/docs/custom-uploader#response) to custom uploader which can be used in URL fields
 * Added [random syntax](https://getsharex.com/docs/custom-uploader#random) support to custom uploader request URL
 * Added Text/URL input to custom uploader arguments/headers value suggestion list
 * Custom uploader won't export with empty request url or destination type
