@@ -105,6 +105,10 @@ body {
     .navbar-header span {
         background-color: rgb(255, 255, 255);
     }
+
+    .navbar-collapse {
+        box-shadow: none;
+    }
 }
 
 @media (min-width: 768px) {
@@ -598,6 +602,7 @@ footer {
         background-color: #21262d;
         border-radius: 3px;
         box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.6);
+        word-break: break-all;
     }
     
     kbd {
