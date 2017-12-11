@@ -61,7 +61,7 @@ The bucket is where your uploaded files will be stored.
 
 * Open [S3 Management Console](https://s3.console.aws.amazon.com/s3/home)
 * Press `Create bucket`
-* **Important:** If you are going to use your domain with S3 then bucket name should be same as your CNAME. For example if you want to use this URL `https://i.example.com/image.png` then bucket name should be `i.example.com`. [Click here for more info](http://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html#VirtualHostingCustomURLs).
+* **Important:** If you are going to use your domain with S3 then bucket name should be same as your CNAME. For example if you want to use this URL `https://i.example.com/image.png` then bucket name should be `i.example.com`. [Click here for more info.](http://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html#VirtualHostingCustomURLs)
 * Write bucket name you want
 * Select region you want bucket to be hosted in (You can use this web site to check ping of regions: [cloudping.info](http://www.cloudping.info))
 * Press `Next` 3 times unless you want to change any default setting
@@ -77,9 +77,9 @@ For example if you are using [Cloudflare](https://www.cloudflare.com/), your buc
 * Name: `i`
 * Value: `i.example.com.s3.eu-central-1.amazonaws.com`
 
-You can find list of region endpoints from `Destinations -> Destination settings -> Amazon S3 tab -> Endpoints`.
+You can find list of region endpoints from `Destinations -> Destination settings -> Amazon S3 tab -> Endpoints`
 
-So value should be `{bucketname}.{endpoint}`.
+So value should be `{bucketname}.{endpoint}`
 
 [Check here for more info.](http://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html#VirtualHostingCustomURLs)
 
@@ -95,4 +95,4 @@ So value should be `{bucketname}.{endpoint}`.
 * Now you can close destination settings window
 * In main window make sure to select Amazon S3 as destination for image uploader, text uploader and file uploader
 
-Now you are ready to use Amazon S3 in ShareX!
+Now you are ready to use [Amazon S3](https://aws.amazon.com/s3/) in ShareX!
