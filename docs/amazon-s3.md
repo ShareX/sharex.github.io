@@ -1,6 +1,6 @@
 ---
 layout: markdown
-title: Amazon S3
+title: Amazon S3 guide
 ---
 
 ## How to configure Amazon S3 and use it in ShareX
