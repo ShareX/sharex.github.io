@@ -4,31 +4,25 @@
 @import "sticky-footer";
 @import "highlight";
 
-$color-primary: #1c5288;
-$color-primary-2: #12598d;
-$color-secondary: #175a91;
-$color-secondary-2: #1f3553;
-$color-background: radial-gradient(at top, #353B44 -10%, #252932 60%);
-$color-background-shade: radial-gradient(at top, #272b31 -10%, #1b1f25 60%);
-$color-text: #ffffff;
-$color-text-2: #e7e9ea;
-$color-border: #444950;
+$font: "Open Sans", sans-serif;
+$text-color: #ffffff;
+$text-color-2: #e7e9ea;
+$background-image: "/img/Background.png";
+$background: radial-gradient(at top, #353B44 -10%, #252932 60%);
+$background-shade: radial-gradient(at top, #272b31 -10%, #1b1f25 60%);
+$border-color: #444950;
 $header-line: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0%, transparent 80%) left bottom transparent no-repeat;
 
-$background-image: "/img/Background.png";
-
-$font: "Open Sans", sans-serif;
-
 body {
-    background: $color-background;
-    color: $color-text;
+    background: $background;
+    color: $text-color;
     font-family: $font;
 
     a {
         font-weight: 500;
 
         &, &:hover, &:focus {
-            color: $color-text;
+            color: $text-color;
         }
 
         &:hover {
@@ -37,7 +31,7 @@ body {
     }
 
     .btn {
-        color: $color-text;
+        color: $text-color;
         background-color: #393d45;
         border-radius: 5px;
         padding: 10px 0px;
@@ -47,16 +41,16 @@ body {
         position: relative;
 
         &:hover {
-            color: $color-text;
+            color: $text-color;
             text-shadow: 0px 0px 30px #ffffff;
         }
 
         &:focus {
-            color: $color-text;
+            color: $text-color;
         }
         
         &:active {
-            color: $color-text;
+            color: $text-color;
             box-shadow: 0px 2px 0px #232425;
             top: 3px;
         }
@@ -83,7 +77,7 @@ body {
         }
         
         a {
-            color: $color-text;
+            color: $text-color;
         }
         
         a:hover,
@@ -130,7 +124,7 @@ body {
 
 .jumbotron {
     background: radial-gradient(at top, #3e434e -20%, #20232b 90%);
-    color: $color-text;
+    color: $text-color;
     padding-top: 0px;
     padding: 50px 0px 60px;
     margin-bottom: 0px;
@@ -183,7 +177,7 @@ body {
         }
         
         a {
-            color: $color-text;
+            color: $text-color;
             text-decoration: none;
 
             &:hover {
@@ -198,8 +192,8 @@ body {
 }
 
 .jumbotron-compact {
-    background: $color-background-shade;
-    border-bottom: 1px solid $color-border;
+    background: $background-shade;
+    border-bottom: 1px solid $border-color;
     padding: 25px 0px;
     
     h1 {
@@ -207,7 +201,7 @@ body {
     }
     
     a {
-        color: $color-text;
+        color: $text-color;
         text-decoration: none;
 
         &:hover {
@@ -223,8 +217,8 @@ body {
 }
 
 .container-screenshot {
-    background: $color-background;
-    border-top: 1px solid $color-border;
+    background: $background;
+    border-top: 1px solid $border-color;
     padding-top: 30px;
     padding-bottom: 50px;
     text-align: center;
@@ -246,13 +240,13 @@ body {
 .container-features {
     padding-top: 10px;
     padding-bottom: 30px;
-    color: $color-text-2;
-    background: $color-background;
-    border-top: 1px solid $color-border;
+    color: $text-color-2;
+    background: $background;
+    border-top: 1px solid $border-color;
     
     &:nth-of-type(even) {
         border-top: 1px solid #39393a;
-        background: $color-background-shade;
+        background: $background-shade;
     }
     
     h3 {
@@ -261,7 +255,7 @@ body {
     }
 
     h3 a {
-        color: $color-text-2;
+        color: $text-color-2;
         text-decoration: none;
     }
     
@@ -310,7 +304,7 @@ body {
 footer {
     background-color: #1d2127;
     border-top: 1px solid #1d1d1f;
-    color: $color-text;
+    color: $text-color;
     padding: 20px 0px;
     text-align: center;
     
@@ -321,7 +315,7 @@ footer {
     a,
     a:focus,
     a:hover {
-        color: $color-text;
+        color: $text-color;
     }
 }
 
@@ -334,28 +328,15 @@ footer {
     padding-top: 30px;
     padding-bottom: 30px;
     font-size: 16px;
-    background: $color-background;
-    color: $color-text-2;
-    border-bottom: 1px solid $color-border;
+    background: $background;
+    color: $text-color-2;
+    border-bottom: 1px solid $border-color;
 }
 
 .container-donate-2 {
     padding-top: 30px;
     padding-bottom: 30px;
-    background: $color-background;
-}
-
-.donate-note {
-    margin-top: 0px;
-    margin-bottom: 30px;
-    background-color: $color-secondary;
-    border: none;
-    color: $color-text;
-    
-    a {
-        color: $color-text;
-        text-decoration: underline;
-    }
+    background: $background;
 }
 
 .donate-button {
@@ -395,7 +376,7 @@ footer {
     }
     
     .panel-heading {
-        color: $color-text;
+        color: $text-color;
         background-color: #1b1f25;
         border-radius: 0px;
     }
@@ -426,7 +407,7 @@ footer {
         box-shadow: none;
 
         &:hover, &:active, &:focus {
-            color: $color-text;
+            color: $text-color;
             background-color: #393d45;
             top: 0px;
         }
