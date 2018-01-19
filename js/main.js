@@ -57,5 +57,4 @@ function InitTooltip(obj, fadeDelay = 300) {
 
 $(document).ready(function () {
     GetLatestReleaseInfo();
-    $(document).snowfall({ flakeCount: 100, minSize: 3, maxSize: 10, round: true, shadow: true });
 });
