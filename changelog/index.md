@@ -105,7 +105,7 @@ title: Changelog
 * Added curved edge support to torn edges image effect
 * Added Screen recording (GIF) default hotkey <kbd>Ctrl + Shift + Print Screen</kbd> for new installations
 * Added configurable environments support for [Azure storage](https://azure.microsoft.com/en-us/services/storage/) (by [@nta](https://github.com/nta))
-* Added infinity expire time option to [Plik](https://github.com/root-gg/plik) file uploader (by [@maxibanki](https://github.com/maxibanki))
+* Added infinity expire time option to [Plik](https://github.com/root-gg/plik) file uploader (by [@mxschmitt](https://github.com/mxschmitt))
 * PNG bit depth is now configurable through task settings. Automatic detection will scan the image and apply best option for lower file size without quality loss
 * Now it is possible to drag n drop file from ShareX main window task list to [Discord](https://discordapp.com/) client
 
@@ -114,7 +114,7 @@ title: Changelog
 * We now have a [Discord](https://discordapp.com) server: [https://discord.gg/E4R3Qa9](https://discord.gg/E4R3Qa9)
 * Added Traditional Chinese translation (by [@alantsai](https://github.com/alantsai))
 * Implemented new [Gfycat](https://gfycat.com) API with user account upload support (by [@Dinnerbone](https://github.com/Dinnerbone))
-* Added [Plik](https://github.com/root-gg/plik) file uploader support (by [@maxibanki](https://github.com/maxibanki))
+* Added [Plik](https://github.com/root-gg/plik) file uploader support (by [@mxschmitt](https://github.com/mxschmitt))
 * All capture methods are now able to detect the active window automatically. If the active window region is equal to or bigger than the capture region, it is used for the `%t` (Window title) and `%pn` (Process name) naming syntax. For example; if you are taking a fullscreen capture and active window is maximized or fullscreen, then it will be automatically used for file naming
 * ShareX annotation mode is now enabled by default for new installations and will be used instead of Greenshot image editor
 * If a ShareX annotation is opened by an "After capture" task, then the following task buttons will now be available in the toolbar:
@@ -131,7 +131,7 @@ title: Changelog
 * Removed Dropbox public folder support because as of March 15, 2017 [public folders have been disabled by Dropbox](https://www.dropbox.com/help/16) but shareable links can still be used
 * Removed Dropbox shortened URL option because it is not supported in Dropbox API v2; ShareX now uses fully API v2 endpoints because API v1 is going to be deprecated soon
 * Added Dropbox "Use direct link" option as check box which is usable with shareable links
-* Added custom domain support for [GitHub Enterprise](https://enterprise.github.com/home) Gist anonymous uploads (by [@maxibanki](https://github.com/maxibanki))
+* Added custom domain support for [GitHub Enterprise](https://enterprise.github.com/home) Gist anonymous uploads (by [@mxschmitt](https://github.com/mxschmitt))
 * Add content type header to [Azure Storage](https://azure.microsoft.com/en-us/services/storage/) uploads so the browser can show content without requiring to download it (by [@Scrxtchy](https://github.com/Scrxtchy))
 * Drag & dropping files from image history are now allowed
 * Added "Reset settings" button to "Application settings -> Export / Import tab"
