@@ -16,6 +16,17 @@ $button-color: #393d45;
 $button-color-shade: #232425;
 $navbar-color: #313642;
 
+::-webkit-scrollbar, ::-webkit-scrollbar-corner {
+    width: 15px;
+    background-color: #313642;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.1);
+    min-height: 60px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
 body {
     background: $background;
     color: $text-color;
