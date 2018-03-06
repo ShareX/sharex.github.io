@@ -1,33 +1,35 @@
 <nav class="navbar navbar-expand-md">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="container">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse {% if page.title %}navbar-compact{% else %}justify-content-center{% endif %}" id="navbar">
-        <ul class="navbar-nav">
-            <li class="nav-item{% unless page.title %} active{% endunless %}"><a class="nav-link" href="{{ site.url }}">Home</a></li>
-            <li class="nav-item{% if page.title == "Downloads" %} active{% endif %}"><a class="nav-link" href="{{ site.url }}/downloads/">Downloads</a></li>
-            <li class="nav-item{% if page.title == "Changelog" %} active{% endif %}"><a class="nav-link" href="{{ site.url }}/changelog/">Changelog</a></li>
-            <li class="nav-item{% if page.title == "Screenshots" %} active{% endif %}"><a class="nav-link" href="{{ site.url }}/screenshots/">Screenshots</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ site.github }}">GitHub</a></li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Docs</a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="https://github.com/ShareX/CustomUploaders">Custom uploaders</a>
-                    <a class="dropdown-item" href="{{ site.url }}/docs/faq">Frequently asked questions</a>
-                    <a class="dropdown-item" href="{{ site.url }}/docs/dev-builds">Dev builds</a>
-                    <a class="dropdown-item" href="{{ site.url }}/docs/command-line-arguments">Command line arguments</a>
-                    <a class="dropdown-item" href="{{ site.url }}/docs/code-contribution">Code contribution</a>
-                    <a class="dropdown-item" href="{{ site.url }}/docs/translation">Translation</a>
-                    <a class="dropdown-item" href="{{ site.url }}/brand-assets/">Brand assets</a>
-                    <a class="dropdown-item" href="{{ site.url }}/docs/custom-uploader">Custom uploader guide</a>
-                    <a class="dropdown-item" href="{{ site.url }}/docs/amazon-s3">Amazon S3 guide</a>
-                </div>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="https://discord.gg/E4R3Qa9">Discord</a></li>
-            <li class="nav-item"><a class="nav-link" href="http://store.steampowered.com/app/400040/">Steam</a></li>
-            <li class="nav-item"><a class="nav-link" href="https://www.microsoft.com/store/apps/9nblggh4z1sp">Windows Store</a></li>
-            <li class="nav-item{% if page.title == "Donate" %} active{% endif %}"><a class="nav-link" href="{{ site.url }}/donate/">Donate</a></li>
-        </ul>
+        <div class="collapse navbar-collapse {% unless page.title %}justify-content-center{% endunless %}" id="navbar">
+            <ul class="navbar-nav">
+                <li class="nav-item{% unless page.title %} active{% endunless %}"><a class="nav-link" href="{{ site.url }}">Home</a></li>
+                <li class="nav-item{% if page.title == "Downloads" %} active{% endif %}"><a class="nav-link" href="{{ site.url }}/downloads/">Downloads</a></li>
+                <li class="nav-item{% if page.title == "Changelog" %} active{% endif %}"><a class="nav-link" href="{{ site.url }}/changelog/">Changelog</a></li>
+                <li class="nav-item{% if page.title == "Screenshots" %} active{% endif %}"><a class="nav-link" href="{{ site.url }}/screenshots/">Screenshots</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ site.github }}">GitHub</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Docs</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="https://github.com/ShareX/CustomUploaders">Custom uploaders</a>
+                        <a class="dropdown-item" href="{{ site.url }}/docs/faq">Frequently asked questions</a>
+                        <a class="dropdown-item" href="{{ site.url }}/docs/dev-builds">Dev builds</a>
+                        <a class="dropdown-item" href="{{ site.url }}/docs/command-line-arguments">Command line arguments</a>
+                        <a class="dropdown-item" href="{{ site.url }}/docs/code-contribution">Code contribution</a>
+                        <a class="dropdown-item" href="{{ site.url }}/docs/translation">Translation</a>
+                        <a class="dropdown-item" href="{{ site.url }}/brand-assets/">Brand assets</a>
+                        <a class="dropdown-item" href="{{ site.url }}/docs/custom-uploader">Custom uploader guide</a>
+                        <a class="dropdown-item" href="{{ site.url }}/docs/amazon-s3">Amazon S3 guide</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="https://discord.gg/E4R3Qa9">Discord</a></li>
+                <li class="nav-item"><a class="nav-link" href="http://store.steampowered.com/app/400040/">Steam</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.microsoft.com/store/apps/9nblggh4z1sp">Windows Store</a></li>
+                <li class="nav-item{% if page.title == "Donate" %} active{% endif %}"><a class="nav-link" href="{{ site.url }}/donate/">Donate</a></li>
+            </ul>
+        </div>
     </div>
 </nav>

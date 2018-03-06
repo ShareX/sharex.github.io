@@ -136,18 +136,7 @@ body {
 }
 
 @media (min-width: 768px) {
-    .navbar-center .navbar-nav {
-        display: inline-block;
-        float: none;
-        vertical-align: top;
-    }
-    
-    .navbar-center .navbar-collapse {
-        text-align: center;
-    }
-    
-    .navbar-compact .container,
-    .navbar-compact .container #navbar {
+    .navbar .container {
         padding-left: 0px;
     }
 }
@@ -463,9 +452,10 @@ footer {
     .table-downloads {
         display: none;
         
-        .label {
+        .badge {
             font-weight: 500;
-            box-shadow: 0px 1px 0px rgba(158, 0, 0, 0.5);
+            padding: 4px;
+            box-shadow: 0px 1px 0px rgba(158, 0, 0, 1);
         }
         
         tr {
@@ -488,7 +478,15 @@ footer {
 
     .thumbnail {
         background-color: #1c2026;
+        display: block;
         border: none;
+        border-radius: 4px;
+        padding: 4px;
+        margin-bottom: 20px;
+    }
+
+    .thumbnail img {
+        max-width: 100%;
     }
 }
 
