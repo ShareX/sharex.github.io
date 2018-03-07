@@ -534,9 +534,12 @@ footer {
     h1,
     h2,
     h3,
-    h4 {
+    h4,
+    h5,
+    h6 {
         color: $text-color;
         font-weight: 300;
+        margin-bottom: 1rem;
 
         a {
             text-decoration: none;
