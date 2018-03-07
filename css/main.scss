@@ -412,8 +412,8 @@ footer {
     margin-top: $container-padding;
     margin-bottom: $container-padding-half;
     
-    .panel {
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+    .card {
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     }
     
     #callback-code .btn {
@@ -432,7 +432,6 @@ footer {
 
     #callback-error {
         display: none;
-        color: $button-color;
     }
 }
 
