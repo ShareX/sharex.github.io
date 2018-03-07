@@ -339,21 +339,25 @@ footer {
 
 .container-donate {
     padding-top: $container-padding;
-    padding-bottom: $container-padding-half;
+    padding-bottom: $container-padding;
     font-size: 16px;
     background: $background;
     color: $text-color-2;
     border-bottom: 1px solid $border-color;
+
+    p {
+        margin-bottom: $container-padding;
+    }
+
+    .donate-button {
+        margin-right: $container-padding;
+    }
 }
 
 .container-donate-2 {
     padding-top: $container-padding;
     padding-bottom: $container-padding-half;
     background: $background;
-}
-
-.donate-button {
-    margin-right: 15px;
 }
 
 #bitcoin-modal {
@@ -370,7 +374,7 @@ footer {
     .bitcoin-address {
         margin: 15px 5px 5px 5px;
 
-        .panel-body {
+        .card-body {
             font-size: 18px;
             padding: 5px;
         }
@@ -378,27 +382,28 @@ footer {
 }
 
 .patrons-panel {
-    margin-top: $container-padding;
-    border: none;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-    
     a {
         text-decoration: underline;
         text-decoration-color: rgba(255, 255, 255, 0.5);
     }
     
-    .panel-heading {
-        color: $text-color;
-        background-color: #1b1f25;
-        border-radius: 0px;
-    }
-
     .table {
         background-color: #22272f;
-        border-radius: 0px;
+        border-radius: 6px;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+        margin-top: $container-padding-half;
+
+        th {
+            border-top: none;
+            border-bottom: 3px solid #1b64ab;
+        }
 
         td {
-            border-top: 1px solid #202125;
+            border-top: 1px solid #222429;
+        }
+
+        tr:nth-of-type(even) {
+            background-color: #242a35;
         }
     }
 }
