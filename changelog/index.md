@@ -1,9 +1,9 @@
 ---
-layout: changelog
+layout: markdown
 title: Changelog
 ---
 
-### [ShareX 12.0.0](https://github.com/ShareX/ShareX/releases/tag/v12.0.0) - 2017-11-27
+## [ShareX 12.0.0](https://github.com/ShareX/ShareX/releases/tag/v12.0.0) - 2017-11-27
 
 * Added windowed mode support to image editor
 * Added panning support to image editor, hold middle mouse button to pan canvas (by [@L1Q](https://github.com/L1Q))
@@ -65,11 +65,11 @@ title: Changelog
 * In application settings window middle mouse clicking on pre-release check box will download latest dev build from [AppVeyor](https://ci.appveyor.com/project/ShareX/sharex) but it should be only used for testing purposes because dev builds can be unstable and therefore not recommended for production use
 * Updated design of [ShareX web site](https://getsharex.com) to have dark colors
 
-### [ShareX 11.9.1](https://github.com/ShareX/ShareX/releases/tag/v11.9.1) - 2017-08-14
+## [ShareX 11.9.1](https://github.com/ShareX/ShareX/releases/tag/v11.9.1) - 2017-08-14
 
 * Bug fixes
 
-### [ShareX 11.9.0](https://github.com/ShareX/ShareX/releases/tag/v11.9.0) - 2017-08-06
+## [ShareX 11.9.0](https://github.com/ShareX/ShareX/releases/tag/v11.9.0) - 2017-08-06
 
 * ShareX is now available on [Windows Store](https://www.microsoft.com/store/apps/9nblggh4z1sp)!
 * Added Italian language support (by [@pjammo](https://github.com/pjammo))
@@ -82,7 +82,7 @@ title: Changelog
 * Added padding and border size option to text watermark
 * Added unread counter to news button
 
-### [ShareX 11.8.0](https://github.com/ShareX/ShareX/releases/tag/v11.8.0) - 2017-07-04
+## [ShareX 11.8.0](https://github.com/ShareX/ShareX/releases/tag/v11.8.0) - 2017-07-04
 
 * Added "News" button to main window which will show new updates or announcements
 * If after capture task "Annotate image" is selected and there are no annotations applied in region capture, the annotation window will open automatically after region selection, which will allow users to annotate after region selection similar to previous ShareX versions
@@ -109,7 +109,7 @@ title: Changelog
 * PNG bit depth is now configurable through task settings. Automatic detection will scan the image and apply best option for lower file size without quality loss
 * Now it is possible to drag n drop file from ShareX main window task list to [Discord](https://discordapp.com/) client
 
-### [ShareX 11.7.0](https://github.com/ShareX/ShareX/releases/tag/v11.7.0) - 2017-04-14
+## [ShareX 11.7.0](https://github.com/ShareX/ShareX/releases/tag/v11.7.0) - 2017-04-14
 
 * We now have a [Discord](https://discordapp.com) server: [https://discord.gg/E4R3Qa9](https://discord.gg/E4R3Qa9)
 * Added Traditional Chinese translation (by [@alantsai](https://github.com/alantsai))
@@ -137,7 +137,7 @@ title: Changelog
 * Added "Reset settings" button to "Application settings -> Export / Import tab"
 * HTTPS endpoints in [Pastebin](https://pastebin.com) are now being used
 
-### [ShareX 11.6.0](https://github.com/ShareX/ShareX/releases/tag/v11.6.0) - 2017-02-23
+## [ShareX 11.6.0](https://github.com/ShareX/ShareX/releases/tag/v11.6.0) - 2017-02-23
 
 * Added outlined text drawing tool `Drawing: Text (Outline)` to region capture, previous text drawing tool was named as `Drawing: Text (Background)`
 * In region capture text input window pressing <kbd>Enter</kbd> accepts text and close input window, <kbd>Ctrl + Enter</kbd> inserts new line
@@ -163,7 +163,7 @@ title: Changelog
 * Removed info button from main window because most tasks hotkey visible in right click menu now
 * Removed sli.mg image uploader because the service is dead
 
-### [ShareX 11.5.0](https://github.com/ShareX/ShareX/releases/tag/v11.5.0) - 2017-01-25
+## [ShareX 11.5.0](https://github.com/ShareX/ShareX/releases/tag/v11.5.0) - 2017-01-25
 
 * Changelog URL changed to [https://getsharex.com/changelog](https://getsharex.com/changelog)
 * Region capture related changes:
@@ -198,11 +198,11 @@ title: Changelog
 * Updated Amazon S3 to include new endpoints
 * On upload errors include request URL in error message
 
-### [ShareX 11.4.1](https://github.com/ShareX/ShareX/releases/tag/v11.4.1) - 2016-11-09
+## [ShareX 11.4.1](https://github.com/ShareX/ShareX/releases/tag/v11.4.1) - 2016-11-09
 
 * Bug fixes
 
-### [ShareX 11.4.0](https://github.com/ShareX/ShareX/releases/tag/v11.4.0) - 2016-11-09
+## [ShareX 11.4.0](https://github.com/ShareX/ShareX/releases/tag/v11.4.0) - 2016-11-09
 
 * Region capture related changes:
     * Added tools toolbar which will show up at top of the active monitor
@@ -214,7 +214,7 @@ title: Changelog
 * Hidden background [UWP applications](https://en.wikipedia.org/wiki/Universal_Windows_Platform_apps) not included in the window list and region capture hover areas (by [@campbeb](https://github.com/campbeb))
 * Added file path parameter support to `-ImageEditor` CLI command (by [@ventzz](https://github.com/ventzz))
 
-### [ShareX 11.3.0](https://github.com/ShareX/ShareX/releases/tag/v11.3.0) - 2016-09-28
+## [ShareX 11.3.0](https://github.com/ShareX/ShareX/releases/tag/v11.3.0) - 2016-09-28
 
 * Region capture related changes:
     * Added speech balloon drawing tool which works similar to text drawing tool but have moveable tail
@@ -240,11 +240,11 @@ title: Changelog
 * Updated [DreamObjects](https://www.dreamhost.com/cloud/storage/) endpoint
 * Returned [SSH.NET](https://github.com/sshnet/SSH.NET) library to previous version until buffer related issue fix is released
 
-### [ShareX 11.2.1](https://github.com/ShareX/ShareX/releases/tag/v11.2.1) - 2016-08-19
+## [ShareX 11.2.1](https://github.com/ShareX/ShareX/releases/tag/v11.2.1) - 2016-08-19
 
 * Bug fixes
 
-### [ShareX 11.2.0](https://github.com/ShareX/ShareX/releases/tag/v11.2.0) - 2016-08-19
+## [ShareX 11.2.0](https://github.com/ShareX/ShareX/releases/tag/v11.2.0) - 2016-08-19
 
 * Added option to check for pre-releases in `Application settings window`. Future updates will initially release as pre-release and if release is stable enough, it will be released to rest of people
 * Region capture related changes:
@@ -274,7 +274,7 @@ title: Changelog
 * Screen color picker: `$hex` format will be lowercase and `$HEX` will output uppercase hexadecimal color info
 * Update [OCR.Space](http://ocr.space) to use new NA API endpoints
 
-### [ShareX 11.1.0](https://github.com/ShareX/ShareX/releases/tag/v11.1.0) - 2016-07-14
+## [ShareX 11.1.0](https://github.com/ShareX/ShareX/releases/tag/v11.1.0) - 2016-07-14
 
 * Region capture related changes:
     * <kbd>Tab</kbd> key or <kbd>Mouse 4</kbd> button will swap between last region tool and last annotation tool
@@ -304,11 +304,11 @@ title: Changelog
 * Implemented [Dropbox](https://www.dropbox.com) API v2
 * Option to use file extension for [Hastebin](http://hastebin.com) syntax highlighting
 
-### [ShareX 11.0.1](https://github.com/ShareX/ShareX/releases/tag/v11.0.1) - 2016-06-10
+## [ShareX 11.0.1](https://github.com/ShareX/ShareX/releases/tag/v11.0.1) - 2016-06-10
 
 * Bug fixes
 
-### [ShareX 11.0.0](https://github.com/ShareX/ShareX/releases/tag/v11.0.0) - 2016-06-10
+## [ShareX 11.0.0](https://github.com/ShareX/ShareX/releases/tag/v11.0.0) - 2016-06-10
 
 * Added annotation support inside region capture.
 In region capture you can <kbd>right click</kbd> to open menu which you can select annotation tool, capture fullscreen/monitor or be able to change region capture options. You can use <kbd>middle click</kbd> to cancel capture.
@@ -383,11 +383,11 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Main window right click "Clear list" button will also clear recent history now
 * Added toast window fade duration setting to "Task settings, Advanced tab"
 
-### [ShareX 10.9.1](https://github.com/ShareX/ShareX/releases/tag/v10.9.1) - 2016-03-25
+## [ShareX 10.9.1](https://github.com/ShareX/ShareX/releases/tag/v10.9.1) - 2016-03-25
 
 * Bug fixes
 
-### [ShareX 10.9.0](https://github.com/ShareX/ShareX/releases/tag/v10.9.0) - 2016-03-25
+## [ShareX 10.9.0](https://github.com/ShareX/ShareX/releases/tag/v10.9.0) - 2016-03-25
 
 * Removed [Copy](http://copy.com) file uploader because [service is discontinued](https://blog.barracuda.com/2016/02/01/message-from-gm-of-storage/)
 * Update Greenshot image editor to 1.2.9 version (by [@campbeb](https://github.com/campbeb))
@@ -398,7 +398,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * File name pattern will be applied to "Upload from URL" method too
 * Will not show window/control hover areas anymore in screen color picker
 
-### [ShareX 10.8.0](https://github.com/ShareX/ShareX/releases/tag/v10.8.0) - 2016-03-10
+## [ShareX 10.8.0](https://github.com/ShareX/ShareX/releases/tag/v10.8.0) - 2016-03-10
 
 * Added recent items support to main window list (You can disable this feature or change how many number of items to show from `Application settings window -> History tab`)
 * Added automatically assigned icons for quick task menu items
@@ -409,7 +409,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added [Imgland](http://imgland.net) image uploader (by [@jibcore](https://github.com/jibcore))
 * Save settings to file when tray menu is closed
 
-### [ShareX 10.7.0](https://github.com/ShareX/ShareX/releases/tag/v10.7.0) - 2016-02-21
+## [ShareX 10.7.0](https://github.com/ShareX/ShareX/releases/tag/v10.7.0) - 2016-02-21
 
 * Added "Show quick tasks menu" to after capture tasks which allows quickly selecting tasks with a customizable menu
 * Added "Export / Import" tab to "Application settings" window which allows exporting compressed backup of settings, history, logs and import them without requiring ShareX to restart
@@ -422,7 +422,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Use [native FFmpeg AAC encoder](https://trac.ffmpeg.org/wiki/Encode/AAC#NativeFFmpegAACencoder) because [libvo_aacenc](https://trac.ffmpeg.org/wiki/Encode/AAC#libvo_aacenc) removed in latest FFmpeg builds
 * Added "Hide columns" option to main window right click menu
 
-### [ShareX 10.6.1](https://github.com/ShareX/ShareX/releases/tag/v10.6.1) - 2016-01-18
+## [ShareX 10.6.1](https://github.com/ShareX/ShareX/releases/tag/v10.6.1) - 2016-01-18
 
 * In update notification window if user presses the "No" button then ShareX will not check for updates for another 24 hours
 * If the user has not changed previous default value of a window name pattern setting then it will be reset to the new default value which uses `%pn` (process name) instead of `%t` (window title); people who have already modified it won't be affected (you can always customize the file name via `Task settings window -> File naming tab`)
@@ -430,7 +430,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * QR code window will auto detect a URL in the clipboard and show its QR code on startup (by [@Scrxtchy](https://github.com/Scrxtchy))
 * Support [special folder](https://msdn.microsoft.com/en-us/library/system.environment.specialfolder(v=vs.110).aspx) parameters so that for instance, screenshots folder path can be configured as `%MyPictures%\Screenshots`
 
-### [ShareX 10.6.0](https://github.com/ShareX/ShareX/releases/tag/v10.6.0) - 2016-01-09
+## [ShareX 10.6.0](https://github.com/ShareX/ShareX/releases/tag/v10.6.0) - 2016-01-09
 
 * ShareX can automatically detect window where your cursor is during region capture and use that window title (%t) or process name (%pn) in file naming
 * Added [s-ul](https://s-ul.eu) file uploader (by [@corin12355](https://github.com/corin12355))
@@ -444,7 +444,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * "Capture region" now works as "Capture region (Windows & controls)" by default and it is possible to disable extra "Windows & controls" features
 * Removed IRC client tool
 
-### [ShareX 10.5.0](https://github.com/ShareX/ShareX/releases/tag/v10.5.0) - 2015-12-07
+## [ShareX 10.5.0](https://github.com/ShareX/ShareX/releases/tag/v10.5.0) - 2015-12-07
 
 * Added [Streamable](https://streamable.com) video uploader support (by [@streamablevideo](https://github.com/streamablevideo) developers)
 * Moved "Show after capture window" and "Show before upload window" to "After capture tasks" menu in main window
@@ -460,7 +460,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Pressing <kbd>Esc</kbd> will close main window and after capture window
 * Added shadow to "Region (Annotate)" rectangle drawing
 
-### [ShareX 10.4.0](https://github.com/ShareX/ShareX/releases/tag/v10.4.0) - 2015-11-21
+## [ShareX 10.4.0](https://github.com/ShareX/ShareX/releases/tag/v10.4.0) - 2015-11-21
 
 * Added Russian language support (by [@L1Q](https://github.com/L1Q))
 * Added Vietnamese language support (by [@thanhpd](https://github.com/thanhpd))
@@ -487,7 +487,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Logs will save instantly in separate thread now instead of waiting for ShareX to close
 * Show the application name that could cause the hotkey conflict when ShareX fails to register hotkeys
 
-### [ShareX 10.3.0](https://github.com/ShareX/ShareX/releases/tag/v10.3.0) - 2015-10-02
+## [ShareX 10.3.0](https://github.com/ShareX/ShareX/releases/tag/v10.3.0) - 2015-10-02
 
 * Added scrolling capture to Capture menu
 * Added image combiner to Tools menu
@@ -498,7 +498,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added `-Task "Hotkey description"` [CLI](https://en.wikipedia.org/wiki/Command-line_interface) command to be able to do upload using CLI with specific task settings
 * Added Changelog button to both update notification message box and about window
 
-### [ShareX 10.2.5](https://github.com/ShareX/ShareX/releases/tag/v10.2.5) - 2015-09-18
+## [ShareX 10.2.5](https://github.com/ShareX/ShareX/releases/tag/v10.2.5) - 2015-09-18
 
 * Update notification window will be minimized in taskbar and flash instead of showing on screen when new update is available while ShareX is already open
 * Windows & Chrome related settings are moved to Application settings -> Integration tab
@@ -506,7 +506,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * While recording if something unexpected happened and FFmpeg is not responding to stop command then pressing "Stop" button third time will force close it
 * While uploading any file it is now possible to open file from right click menu without having to wait until upload to complete
 
-### [ShareX 10.2.0](https://github.com/ShareX/ShareX/releases/tag/v10.2.0) - 2015-09-05
+## [ShareX 10.2.0](https://github.com/ShareX/ShareX/releases/tag/v10.2.0) - 2015-09-05
 
 * Added Chrome extension support which will allow uploading selection text, image, video, audio using right click menu (Check "Application settings -> Chrome extension support" for instructions)
 * Added IRC client to tools menu
@@ -532,7 +532,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * "Post capture tasks" and "Before upload" windows will show custom uploaders with their names
 * Removed "Portable mode" from installer instead added Portable zip file to release section
 
-### [ShareX 10.1.0](https://github.com/ShareX/ShareX/releases/tag/v10.1.0) - 2015-08-02
+## [ShareX 10.1.0](https://github.com/ShareX/ShareX/releases/tag/v10.1.0) - 2015-08-02
 
 * Added "Portable mode" option to installer
 * Added [ShareX Greenlight](http://steamcommunity.com/sharedfiles/filedetails/?id=491692781) buttons to main window where you could vote to help us or just hide it permanently
@@ -549,7 +549,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added "TextTaskSaveAsFile" setting in "Task Settings -> Advanced" tab which enabled by default and allows to save all text tasks (clipboard text upload, text drag and drop etc.) as file
 * [CLI](https://en.wikipedia.org/wiki/Command-line_interface) URL upload support (Example: `ShareX.exe "https://getsharex.com/img/ShareX_Logo.png"`)
 
-### [ShareX 10.0.0](https://github.com/ShareX/ShareX/releases/tag/v10.0.0) - 2015-07-04
+## [ShareX 10.0.0](https://github.com/ShareX/ShareX/releases/tag/v10.0.0) - 2015-07-04
 
 * Added [FFmpeg](https://www.ffmpeg.org) GIF encoding support
 * Added GIF encoder setting in "Screen recorder" tab and it defaults to FFmpeg
@@ -571,11 +571,11 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added hotkeys for all remaining Tools available in main window
 * Added countdown timer for screen recording when auto start timer is configured
 
-### [ShareX 9.10.1](https://github.com/ShareX/ShareX/releases/tag/v9.10.1) - 2015-05-17
+## [ShareX 9.10.1](https://github.com/ShareX/ShareX/releases/tag/v9.10.1) - 2015-05-17
 
 * Bug fixes
 
-### [ShareX 9.10.0](https://github.com/ShareX/ShareX/releases/tag/v9.10.0) - 2015-05-17
+## [ShareX 9.10.0](https://github.com/ShareX/ShareX/releases/tag/v9.10.0) - 2015-05-17
 
 * Added tips to region capture (<kbd>F1</kbd> key will hide/show it)
 * Region capture startup time improvement
@@ -593,7 +593,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Error message boxes for FTP client and Tweet message if valid account is not found
 * In main window list <kbd>Ctrl + C</kbd> and <kbd>Ctrl + X</kbd> will check for shortened url, normal url, and file path to copy in that order. <kbd>Ctrl + Shift + C</kbd> will copy file path.
 
-### [ShareX 9.9.0](https://github.com/ShareX/ShareX/releases/tag/v9.9.0) - 2015-04-12
+## [ShareX 9.9.0](https://github.com/ShareX/ShareX/releases/tag/v9.9.0) - 2015-04-12
 
 * Added transparent rectangle capture (without freezing screen)
 * Added Korean translation (by [@123jimin](https://github.com/123jimin))
@@ -602,7 +602,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added [vgy.me](http://vgy.me) image uploader
 * Added custom time zone option for name pattern
 
-### [ShareX 9.8.0](https://github.com/ShareX/ShareX/releases/tag/v9.8.0) - 2015-03-11
+## [ShareX 9.8.0](https://github.com/ShareX/ShareX/releases/tag/v9.8.0) - 2015-03-11
 
 * Added [imgrush.com](https://imgrush.com) image uploader
 * Ability to choose image/text uploader via add/remove image/text extensions support
@@ -612,7 +612,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added [v.gd](http://v.gd) URL shortener
 * Added Automate to Tools menu for script based automation
 
-### [ShareX 9.7.0](https://github.com/ShareX/ShareX/releases/tag/v9.7.0) - 2015-02-11
+## [ShareX 9.7.0](https://github.com/ShareX/ShareX/releases/tag/v9.7.0) - 2015-02-11
 
 * Added [Lambda](http://lambda.sx) file uploader (by [@marcusant](https://github.com/marcusant))
 * Added recent links menu to tray menu
@@ -621,11 +621,11 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added new "Screen color picker" tool which allows to get color from screen quickly
 * Added "Screen recording (FFmpeg)" and "Screen recording (GIF)" hotkeys and removed screen recording output option to make it easy to set hotkey
 
-### [ShareX 9.6.1](https://github.com/ShareX/ShareX/releases/tag/v9.6.1) - 2015-01-21
+## [ShareX 9.6.1](https://github.com/ShareX/ShareX/releases/tag/v9.6.1) - 2015-01-21
 
 * Bug fixes
 
-### [ShareX 9.6.0](https://github.com/ShareX/ShareX/releases/tag/v9.6.0) - 2015-01-19
+## [ShareX 9.6.0](https://github.com/ShareX/ShareX/releases/tag/v9.6.0) - 2015-01-19
 
 * Added German translation (by [@Starbug2](https://github.com/Starbug2))
 * Added French translation (by [@nwies](https://github.com/nwies))
@@ -634,7 +634,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Ability to customize browser which URLs is opened
 * ShareX will now check for updates every hour
 
-### [ShareX 9.5.0](https://github.com/ShareX/ShareX/releases/tag/v9.5.0) - 2014-12-29
+## [ShareX 9.5.0](https://github.com/ShareX/ShareX/releases/tag/v9.5.0) - 2014-12-29
 
 * Added OneDrive file uploader
 * Application settings and Task settings windows tab navigation changed to a tree navigation
@@ -645,7 +645,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added hotkey to screen record last region
 * Added hotkey to start auto capture using last region
 
-### [ShareX 9.4.2](https://github.com/ShareX/ShareX/releases/tag/v9.4.2) - 2014-11-28
+## [ShareX 9.4.2](https://github.com/ShareX/ShareX/releases/tag/v9.4.2) - 2014-11-28
 
 * Watermark setting will be disabled by default
 * Shape (Rectangle etc.) capture screen dimming can be disabled (by [@peppy](https://github.com/peppy))
@@ -653,12 +653,12 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added -AutoClose CLI command which will close ShareX after all tasks are completed
 * Main window will show currently configured hotkeys when task list is empty (Can be disabled from Application settings -> Advanced)
 
-### [ShareX 9.4.1](https://github.com/ShareX/ShareX/releases/tag/v9.4.1) - 2014-11-15
+## [ShareX 9.4.1](https://github.com/ShareX/ShareX/releases/tag/v9.4.1) - 2014-11-15
 
 * Added custom text support for text uploading
 * Added screen recording abort button which will stop and delete recorded video
 
-### [ShareX 9.4.0](https://github.com/ShareX/ShareX/releases/tag/v9.4.0) - 2014-11-01
+## [ShareX 9.4.0](https://github.com/ShareX/ShareX/releases/tag/v9.4.0) - 2014-11-01
 
 * Added Turkish translation
 * Added option to start recording by pressing Start button
@@ -674,12 +674,12 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added rounded corners & outline image effects
 * Added Hızlı Resim image uploader
 
-### [ShareX 9.3.1](https://github.com/ShareX/ShareX/releases/tag/v9.3.1) - 2014-09-13
+## [ShareX 9.3.1](https://github.com/ShareX/ShareX/releases/tag/v9.3.1) - 2014-09-13
 
 * New task completed and error sounds
 * Rectangle (Objects) capture also will have region of window client areas
 
-### [ShareX 9.3.0](https://github.com/ShareX/ShareX/releases/tag/v9.3.0) - 2014-09-10
+## [ShareX 9.3.0](https://github.com/ShareX/ShareX/releases/tag/v9.3.0) - 2014-09-10
 
 * Added custom gradient support to Image effects under "Draw text"
 * PushBullet updated to API v2 and is now listed also as a URL sharing service (by [@BallisticLingonberries](https://github.com/BallisticLingonberries))
@@ -704,11 +704,11 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added "Edit image" to main window right click menu (by [@DevAtHome](https://github.com/DevAtHome))
 * New ShareX logo and icon
 
-### [ShareX 9.2.1](https://github.com/ShareX/ShareX/releases/tag/v9.2.1) - 2014-07-15
+## [ShareX 9.2.1](https://github.com/ShareX/ShareX/releases/tag/v9.2.1) - 2014-07-15
 
 * Bug fixes
 
-### [ShareX 9.2.0](https://github.com/ShareX/ShareX/releases/tag/v9.2.0) - 2014-07-15
+## [ShareX 9.2.0](https://github.com/ShareX/ShareX/releases/tag/v9.2.0) - 2014-07-15
 
 * Main window menu changes to simplify UI
 * Automatic show/hide image preview in main window
@@ -728,7 +728,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Better stop upload mechanism (ability to stop stuck uploads)
 * Added Tweet Message to Tools menu with hotkey support
 
-### [ShareX 9.1.0](https://github.com/ShareX/ShareX/releases/tag/v9.1.0) - 2014-06-11
+## [ShareX 9.1.0](https://github.com/ShareX/ShareX/releases/tag/v9.1.0) - 2014-06-11
 
 * ShareX now uses .NET Framework 4.0, which the installer automatically downloads and installs if needed
 * Switched to OAuth 2.0 for Dropbox, which means you need to re-authenticate
@@ -748,7 +748,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Hotkey task settings are now shown as Workflows in main window and tray menu
 * Added version history link to about window
 
-### [ShareX 9.0.0](https://github.com/ShareX/ShareX/releases/tag/v9.0.0) - 2014-05-16
+## [ShareX 9.0.0](https://github.com/ShareX/ShareX/releases/tag/v9.0.0) - 2014-05-16
 
 * Capture screen recordings with audio using FFmpeg
 * Capture screen recordings using Video Compression Manager (VCM) via Video for Windows (VfW) encoders
@@ -758,7 +758,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added FTP Client to Tools menu
 * MediaCrush moved to file uploaders to be able to upload videos
 
-### [ShareX 8.8.0](https://github.com/ShareX/ShareX/releases/tag/v8.8.0) - 2014-05-01
+## [ShareX 8.8.0](https://github.com/ShareX/ShareX/releases/tag/v8.8.0) - 2014-05-01
 
 * Box 2.0 API support
 * Added new After Capture task: Save thumbnail to file
@@ -769,11 +769,11 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Support for secondary uploaders if primary uploaders fail
 * Added Ruler to Tools menu
 
-### [ShareX 8.7.1](https://github.com/ShareX/ShareX/releases/tag/v8.7.1) - 2014-04-09
+## [ShareX 8.7.1](https://github.com/ShareX/ShareX/releases/tag/v8.7.1) - 2014-04-09
 
 * Bug fixes
 
-### [ShareX 8.7.0](https://github.com/ShareX/ShareX/releases/tag/v8.7.0) - 2014-04-09
+## [ShareX 8.7.0](https://github.com/ShareX/ShareX/releases/tag/v8.7.0) - 2014-04-09
 
 * Added drag-and-drop window support
 * Toast notification window click actions
@@ -784,12 +784,12 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Removed Mega file uploader anonymous upload
 * Minus file uploader improvements
 
-### [ShareX 8.6.1](https://github.com/ShareX/ShareX/releases/tag/v8.6.1) - 2014-03-19
+## [ShareX 8.6.1](https://github.com/ShareX/ShareX/releases/tag/v8.6.1) - 2014-03-19
 
 * Added support for public access to Google Drive links
 * Bug fixes
 
-### [ShareX 8.6.0](https://github.com/ShareX/ShareX/releases/tag/v8.6.0) - 2014-03-18
+## [ShareX 8.6.0](https://github.com/ShareX/ShareX/releases/tag/v8.6.0) - 2014-03-18
 
 * New file operations wizard if file exists
 * Image and text destinations can have different file uploaders
@@ -798,7 +798,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Automatically shorten URL if the URL is longer than the specified length
 * Toast notification window location is now customizable
 
-### [ShareX 8.5.0](https://github.com/ShareX/ShareX/releases/tag/v8.5.0) - 2014-01-13
+## [ShareX 8.5.0](https://github.com/ShareX/ShareX/releases/tag/v8.5.0) - 2014-01-13
  
 * Updated ImageShack uploader to support their latest API
 * Added MediaCrush image uploader support (by [@SirCmpwn](https://github.com/SirCmpwn))
@@ -807,7 +807,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added UI support to modify personal path
 * Added new tool to test the monitor for backlight bleeding and dead pixels
 
-### [ShareX 8.4.1](https://github.com/ShareX/ShareX/releases/tag/v8.4.1) - 2013-12-05
+## [ShareX 8.4.1](https://github.com/ShareX/ShareX/releases/tag/v8.4.1) - 2013-12-05
 
 * Ability to import/export custom file uploaders
 * Added user account support for Gist text uploader
@@ -815,7 +815,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Torn edge image effect now supports edge selection
 * Improved update checker with a fallback mechanism in case updater fails
 
-### [ShareX 8.4.0](https://github.com/ShareX/ShareX/releases/tag/v8.4.0) - 2013-11-20
+## [ShareX 8.4.0](https://github.com/ShareX/ShareX/releases/tag/v8.4.0) - 2013-11-20
 
 * Added new drawings category to image effects for be able to add background, border, checkerboard, image and text (watermark)
 * Added new image adjustment effects: black & white, polaroid and sepia
@@ -828,7 +828,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Using GitHub API for check updates
 * Added remember main window size setting
 
-### [ShareX 8.3.0.747](https://github.com/ShareX/ShareX/releases/tag/v8.3.0) - 2013-11-02
+## [ShareX 8.3.0.747](https://github.com/ShareX/ShareX/releases/tag/v8.3.0) - 2013-11-02
 
 * Tray icon can now report progress percentage
 * Color picker improvements
@@ -836,7 +836,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added hotkey support for Tools (screen color picker, hash check and index folder) and to stop uploading
 * Added mega.co.nz file uploader support
 
-### ShareX 8.2.0.655 - 2013-09-26
+## ShareX 8.2.0.655 - 2013-09-26
 
 * Added folder indexer with support for text, HTML and XML
 * Option to change clipboard content format for wider software compatibility 
@@ -845,7 +845,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Ability to use Windows modifier for hotkeys using configuration file
 * Rectangle Lite support in Advanced settings for slow computers
 
-### ShareX 8.1.0.573 - 2013-09-04
+## ShareX 8.1.0.573 - 2013-09-04
 
 * Redesigned main configuration with simplified settings
 * Improved hotkey system to support all possible hotkey specific tasks 
@@ -853,7 +853,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Improved screen recorder
 * Automatic mode for proxy configuration
 
-### ShareX 8.0.0.463 - 2013-08-12
+## ShareX 8.0.0.463 - 2013-08-12
 
 * Ability to create custom hotkeys with task settings
 * Unlimited screen recorder support
@@ -863,7 +863,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Windows 7 taskbar support
 * Ability to change settings folder
 
-### ShareX 7.0.0.350 - 2013-04-05
+## ShareX 7.0.0.350 - 2013-04-05
 
 * Added modified version of Greenshot image editor (After capture -> Annotate Image)
 * Imgur, Google URL Shortener and Picasa using OAuth 2.0 now (You need to re-authorize)
@@ -876,7 +876,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added "Send URL with email" After upload task
 * Issues with DST time fixed
 
-### ShareX 6.7.0.311 - 2013-03-19
+## ShareX 6.7.0.311 - 2013-03-19
 
 * Issues with arguments and custom uploaders fixed
 * Fixed screen capture issues with Custom DPI settings
@@ -885,7 +885,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added Hash Check Tool
 * Added localhostr.com support
 
-### ShareX 6.6.2.293 - 2013-02-01
+## ShareX 6.6.2.293 - 2013-02-01
 
 * Fixed errors with screen recording
 * Added Name Formatting support for custom uploaders
@@ -894,11 +894,11 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Goo.gl shortener fix
 * Fixed issues with slow FTP uploads
 
-### ShareX 6.6.1.283 - 2013-01-21
+## ShareX 6.6.1.283 - 2013-01-21
 
 * Reverted minimum system requirements to .NET 3.5 to support Windows XP
 
-### ShareX 6.6.0.280 - 2013-01-20
+## ShareX 6.6.0.280 - 2013-01-20
 
 * Added Screenshot delay setting
 * Added Clipboard upload settings tab
@@ -908,7 +908,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added Screen Recording with GIF/AVI output
 * Minimum system requirements updated to .NET 4.5
 
-### ShareX 6.5.0.248 - 2012-09-19
+## ShareX 6.5.0.248 - 2012-09-19
 
 * Use Delete key to remove items from main window
 * Added "Post capture tasks" window
@@ -922,14 +922,14 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added "Add Border" Option to "After Capture Tasks" menu
 * Imgur upload bug fixed
 
-### ShareX 6.4.0.220 - 2012-08-10
+## ShareX 6.4.0.220 - 2012-08-10
 
 * Shows Balloon Tip after capture
 * Added Picasa image uploader
 * Added option to Clear List in Main Window
 * Minor UI changes to updater
 
-### ShareX 6.3.0.212 - 2012-08-03
+## ShareX 6.3.0.212 - 2012-08-03
 
 * Added new hotkeys to main window, history, image history: <kbd>Enter</kbd> = Open URL, <kbd>Ctrl + Enter</kbd> = Open file, <kbd>Ctrl + C</kbd> = Copy URL, <kbd>F5</kbd> = Refresh
 * Added separate name format for active window capture
@@ -943,7 +943,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Double Clicking on a file performs checks in this order to open it: Shortended url first, url then and then the local file.
 * Added ge.tt file uploader
 
-### ShareX 6.2.0.195 - 2012-07-15
+## ShareX 6.2.0.195 - 2012-07-15
 
 * Added watch folder tab to settings for auto uploading newly created files in these folders
 * Added screen color picker to tools section
@@ -952,7 +952,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * It is now possible to copy multiple uploaded item infos (html, bbcode etc.)
 * In 'shape capture' mode spacebar will now perform a fullscreen capture
 
-### ShareX 6.1.0.180 - 2012-06-23
+## ShareX 6.1.0.180 - 2012-06-23
 
 * Added support for sharing via social networking services initially with Twitter
 * After capture tasks and After upload tasks are configurable from the main window or tray menu
@@ -961,7 +961,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Ability to retry upload via main window context menu
 * Added printer support
 
-### ShareX 6.0.0.161 - 2012-06-09
+## ShareX 6.0.0.161 - 2012-06-09
 
 * Rebranded as ShareX
 * Improved right click menu to include more open/copy options
@@ -976,7 +976,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Magnifier support during shapes capture, resizeable with mouse wheel (hold shift to increase box size)
 * Added imm.io Image Uploader
 
-### ZUploader 5.5.0 - 2012-03-07
+## ZUploader 5.5.0 - 2012-03-07
 
 * 5.5.0 - Added Email as file uploader
 * 5.4.1 - Clipboard upload auto detects URL and shortens it
@@ -987,24 +987,24 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * 5.2.0 - New updater with automatic downloader
 * 5.1.0 - Added image resize settings
 
-### ZUploader 5.0.0 - 2012-01-10
+## ZUploader 5.0.0 - 2012-01-10
 
 * 5.0.0 - Added Window & Control capture support to shape captures
 * 4.9.0 - Added new post-capture option: save screenshots to file
 * 4.8.0 - Added Box file uploader support
 
-### ZUploader 4.7.2 - 2011-10-31
+## ZUploader 4.7.2 - 2011-10-31
 
 * 4.7.2 - Supported image/text/file based FTP destinations
 * 4.7.1 - Added camera sound when capture is made
 * 4.7.0 - Added Transparent window capture
 
-### ZUploader 4.6.0 - 2011-10-07
+## ZUploader 4.6.0 - 2011-10-07
 
 * 4.6.0 - Added Hotkeys support
 * 4.5.0 - Added support to capture window from a list of windows
 
-### ZUploader 4.4.0 - 2011-09-27
+## ZUploader 4.4.0 - 2011-09-27
 
 * 4.4.0 - Added support to capture shapes to Clipboard
 * 4.3.0 - Added Minus uploader support
@@ -1013,19 +1013,19 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * 4.1.0 - Added tray icon support
 * 4.0.0 - Added Capture menu to capture rectangle, rounded rectangle, ellipse, triangle, diamond, polygon and freehand shapes
 
-### ZUploader 3.12 - 2011-05-28
+## ZUploader 3.12 - 2011-05-28
 
 * 3.12 - Plugin system to perform Crop Shot and Entire Screen capture
 * 3.11 - New Uploaders Configuration window to setup user accounts
 * 3.10 - Added Clipboard Content Viewer to confirm uploading using Clipboard
 * 3.9 - Added URL Shortener support
 
-### ZUploader 3.8 - 2011-01-02
+## ZUploader 3.8 - 2011-01-02
 
 * 3.8 - Added ClipboardUpload hotkey <kbd>Ctrl + Page up</kbd>
 * 3.7 - Added upload queue system to limit simultaneous uploads
 
-### ZUploader 3.6 - 2010-12-15
+## ZUploader 3.6 - 2010-12-15
 
 * 3.6 - Added buffer size setting to improve upload speed
 * 3.5 - Added support to copy multiple URLs in history form
@@ -1047,16 +1047,18 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * 1.4 - Single instance support for better shell extension uploading (Useful for CLI uploads)
 * 1.3 - Added "Stop upload" button to right click menu
 
-### ZUploader 1.2 - 2010-05-13
+## ZUploader 1.2 - 2010-05-13
 
 * 1.2 - Added support for Shell Extension "Upload using ZUploader"
 
-### ZUploader 1.1 - 2010-04-06
+## ZUploader 1.1 - 2010-04-06
 
 * 1.1 - Reconfigured UI, Added proxy support
 
-### ZUploader 1.0 - 2010-03-28
+## ZUploader 1.0 - 2010-03-28
 
 * 1.0 - Initial version
 
-### [ZScreen 1.0 (2007-08-22) to 4.9 (2012-03-08)](https://raw.githubusercontent.com/ShareX/ZScreen_Google_Code/master/ZScreenLib/Documents/VersionHistory.txt)
+## ZScreen 1.0 (2007-08-22) to 4.9 (2012-03-08)
+
+* [ZScreen version history](https://raw.githubusercontent.com/ShareX/ZScreen_Google_Code/master/ZScreenLib/Documents/VersionHistory.txt)
