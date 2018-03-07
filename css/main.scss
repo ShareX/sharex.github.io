@@ -15,6 +15,8 @@ $header-line: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0%, transparent
 $button-color: #393d45;
 $button-color-shade: #232425;
 $navbar-color: #313642;
+$container-padding: 2rem;
+$container-padding-half: $container-padding / 2;
 
 ::-webkit-scrollbar, ::-webkit-scrollbar-corner {
     width: 15px;
@@ -214,7 +216,7 @@ body {
 .jumbotron-compact {
     background: $background-shade;
     border-bottom: 1px solid $border-color;
-    padding: 25px 0px;
+    padding: $container-padding 0px;
     
     h1 {
         font-size: 70px;
@@ -335,14 +337,9 @@ footer {
     }
 }
 
-.container-content {
-    padding-top: 10px;
-    padding-bottom: 30px;
-}
-
 .container-donate {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: $container-padding;
+    padding-bottom: $container-padding-half;
     font-size: 16px;
     background: $background;
     color: $text-color-2;
@@ -350,8 +347,8 @@ footer {
 }
 
 .container-donate-2 {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: $container-padding;
+    padding-bottom: $container-padding-half;
     background: $background;
 }
 
@@ -381,8 +378,7 @@ footer {
 }
 
 .patrons-panel {
-    margin-top: 30px;
-    margin-bottom: 10px;
+    margin-top: $container-padding;
     border: none;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
     
@@ -408,8 +404,8 @@ footer {
 }
 
 .container-callback {
-    margin-top: 30px;
-    margin-bottom: 10px;
+    margin-top: $container-padding;
+    margin-bottom: $container-padding-half;
     
     .panel {
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
@@ -436,8 +432,8 @@ footer {
 }
 
 .container-downloads {
-    padding-top: 30px;
-    padding-bottom: 20px;
+    padding-top: $container-padding;
+    padding-bottom: $container-padding-half;
 
     h1 {
         font-size: 18px;
@@ -473,8 +469,8 @@ footer {
 }
 
 .container-screenshots {
-    padding-top: 30px;
-    padding-bottom: 10px;
+    padding-top: $container-padding;
+    padding-bottom: $container-padding-half;
 
     .thumbnail {
         background-color: #1c2026;
@@ -491,10 +487,9 @@ footer {
 }
 
 .container-changelog {
-    padding-bottom: 30px;
+    padding-bottom: $container-padding-half;
     
     h3 {
-        margin-top: 30px;
         padding-bottom: 5px;
         background: $header-line;
         background-size: 100% 1px;
@@ -502,8 +497,8 @@ footer {
 }
 
 .container-assets {
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding-top: $container-padding;
+    padding-bottom: $container-padding-half;
 
     h3 {
         margin-bottom: 20px;
@@ -532,6 +527,8 @@ footer {
     color: #e4e4e4;
     font-size: 17px;
     font-weight: 300;
+    padding-top: $container-padding;
+    padding-bottom: $container-padding-half;
 
     a {
         font-weight: 500;
@@ -554,12 +551,6 @@ footer {
         a {
             text-decoration: none;
         }
-    }
-
-    h2,
-    h3,
-    h4 {
-        margin-bottom: 15px;
     }
 
     h1,
