@@ -34,17 +34,17 @@ function InitTooltip(obj, fadeDelay = 300) {
         animation: false
     }).on("mouseenter", function () {
         obj.tooltip("show");
-
-        $(".tooltip").on("mouseleave", function () {
-            setTimeout(function () {
-                if (!obj.is(":hover") && !$(".tooltip").is(":hover")) {
-                    obj.tooltip("hide");
-                }
-            }, fadeDelay);
-        });
     }).on("mouseleave", function () {
         setTimeout(function () {
-            if (!obj.is(":hover") && !$(".tooltip").is(":hover")) {
+            if (!obj.is(":hover") && $(".tooltip").length && !$(".tooltip").is(":hover")) {
+                obj.tooltip("hide");
+            }
+        }, fadeDelay);
+    });
+
+    $(document).on("mouseleave", ".tooltip", function () {
+        setTimeout(function () {
+            if (!obj.is(":hover") && $(".tooltip").length && !$(".tooltip").is(":hover")) {
                 obj.tooltip("hide");
             }
         }, fadeDelay);
