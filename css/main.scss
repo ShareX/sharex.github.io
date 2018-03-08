@@ -257,8 +257,8 @@ body {
 }
 
 .container-features {
-    padding-top: 10px;
-    padding-bottom: 30px;
+    padding-top: $container-padding-half;
+    padding-bottom: $container-padding-half;
     color: $text-color-2;
     background: $background;
     border-top: 1px solid $border-color;
@@ -270,7 +270,7 @@ body {
     
     h3 {
         font-size: 28px;
-        margin: 20px 0px;
+        margin: $container-padding-half 0px;
     }
 
     h3 a {
@@ -287,7 +287,7 @@ body {
     
     h4 {
         font-size: 20px;
-        margin-bottom: 20px;
+        margin-bottom: $container-padding-half;
         padding-bottom: 8px;
     }
     
@@ -299,7 +299,7 @@ body {
     .col-sm-3 {
         font-size: 18px;
         font-weight: 300;
-        margin-bottom: 20px;
+        margin-bottom: $container-padding-half;
     }
 }
 
