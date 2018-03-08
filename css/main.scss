@@ -17,6 +17,7 @@ $button-color-shade: #232425;
 $navbar-color: #313642;
 $container-padding: 2rem;
 $container-padding-half: $container-padding / 2;
+$container-padding-double: $container-padding * 2;
 
 ::-webkit-scrollbar, ::-webkit-scrollbar-corner {
     width: 15px;
@@ -242,12 +243,12 @@ body {
 .container-screenshot {
     background: $background;
     border-top: 1px solid $border-color;
-    padding-top: 30px;
-    padding-bottom: 50px;
+    padding-top: $container-padding-double;
+    padding-bottom: $container-padding-double;
     text-align: center;
 
     img {
-        margin: 20px 0px 30px 0px;
+        margin: 0px 0px $container-padding 0px;
         box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
     }
     
@@ -257,8 +258,8 @@ body {
 }
 
 .container-features {
-    padding-top: $container-padding-half;
-    padding-bottom: $container-padding-half;
+    padding-top: $container-padding;
+    padding-bottom: $container-padding;
     color: $text-color-2;
     background: $background;
     border-top: 1px solid $border-color;
@@ -279,9 +280,9 @@ body {
     }
     
     h3 .fa {
-        font-size: 50px;
+        font-size: 45px;
         vertical-align: middle;
-        margin-right: 20px;
+        margin-right: 15px;
         padding-bottom: 5px;
     }
     
