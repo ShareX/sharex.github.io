@@ -72,6 +72,8 @@ body {
 
         &:focus {
             color: $text-color;
+            outline: none;
+            box-shadow: none;
         }
         
         &:active {
