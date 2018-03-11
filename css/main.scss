@@ -341,7 +341,7 @@ footer {
 
 .container-donate {
     padding-top: $container-padding;
-    padding-bottom: $container-padding;
+    padding-bottom: $container-padding-half;
     font-size: 16px;
     background: $background;
     color: $text-color-2;
@@ -354,6 +354,7 @@ footer {
     .btn {
         margin-left: 0px;
         margin-top: 0px;
+        margin-bottom: 1rem;
         padding-left: 1rem;
         padding-right: 1rem;
 
