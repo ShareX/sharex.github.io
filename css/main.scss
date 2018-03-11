@@ -351,8 +351,19 @@ footer {
         margin-bottom: $container-padding;
     }
 
-    .donate-button {
-        margin-right: $container-padding;
+    .btn {
+        margin-left: 0px;
+        margin-top: 0px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        img {
+            margin-right: 10px;
+        }
+    
+        span {
+            vertical-align: middle;
+        }
     }
 }
 
@@ -362,18 +373,18 @@ footer {
     background: $background;
 }
 
-#bitcoin-modal {
+.crypto-modal {
     color: $button-color;
 
     .close {
         font-size: 30px;
     }
 
-    .bitcoin-qr {
+    .crypto-qr {
         margin: 20px;
     }
 
-    .bitcoin-address {
+    .crypto-address {
         margin: 15px 5px 5px 5px;
 
         .card-body {
