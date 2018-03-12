@@ -23,11 +23,11 @@ function GetLatestReleaseInfo() {
         $(".sharex-download").attr("href", asset.browser_download_url);
         $(".sharex-download").attr("title", "<a href='downloads/'><div>" + releaseInfo + "</div></a>");
 
-        InitTooltip($(".sharex-download"));
+        InitTooltip($(".sharex-download", 300));
     });
 }
 
-function InitTooltip(obj, fadeDelay = 300) {
+function InitTooltip(obj, fadeDelay) {
     obj.tooltip({
         trigger: "manual",
         html: true,
