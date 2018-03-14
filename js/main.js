@@ -23,7 +23,7 @@ function GetLatestReleaseInfo() {
         $(".sharex-download").attr("href", asset.browser_download_url);
         $(".sharex-download").attr("title", "<a href='downloads/'><div>" + releaseInfo + "</div></a>");
 
-        InitTooltip($(".sharex-download", 300));
+        InitTooltip($(".sharex-download"), 300);
     });
 }
 
