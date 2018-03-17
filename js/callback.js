@@ -26,7 +26,7 @@ $(document).ready(function () {
         $("#callback-error").show();
     }
 
-    var clipboard = new Clipboard(".btn");
+    var clipboard = new ClipboardJS(".btn");
 
     clipboard.on("success", function (e) {
         $("#callback-code .btn").text("Copied!");
