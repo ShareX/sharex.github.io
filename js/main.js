@@ -1,7 +1,6 @@
-/*jslint browser: true*/
-/*global $, jQuery, alert*/
-
-"use strict";
+$(document).ready(function () {
+    GetLatestReleaseInfo();
+});
 
 function GetLatestReleaseInfo() {
     $.getJSON("https://api.github.com/repos/ShareX/ShareX/releases/latest").done(function (release) {
@@ -21,7 +20,7 @@ function GetLatestReleaseInfo() {
         }
         var releaseInfo = "Version: " + release.tag_name.substring(1) + "\nReleased: " + timeAgo + "\nDownload count: " + downloadCount.toLocaleString();
         $(".sharex-download").attr("href", asset.browser_download_url);
-        $(".sharex-download").attr("title", "<a href='downloads/'><div>" + releaseInfo + "</div></a>");
+        $(".sharex-download").attr("title", "<a href=\"downloads/\"><div>" + releaseInfo + "</div></a>");
 
         InitTooltip($(".sharex-download"), 300);
     });
@@ -54,7 +53,3 @@ function InitTooltip(obj, fadeDelay) {
         obj.tooltip("show");
     }
 }
-
-$(document).ready(function () {
-    GetLatestReleaseInfo();
-});
