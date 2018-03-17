@@ -29,13 +29,11 @@ title: Downloads
 <script>
     $(document).ready(function() {
         var repo = GetParameterByName("repo");
-        if (repo) {
-            $("#downloads-header").text(repo).attr("href", "https://github.com/" + repo);
-        } else {
+        if (!repo) {
             repo = "ShareX/ShareX";
         }
         GetReleases(repo);
-    }); 
+    });
 
     function GetReleases(repo) {
         $.getJSON("https://api.github.com/repos/" + repo + "/releases").done(function(json) {
@@ -44,7 +42,7 @@ title: Downloads
 
             for (var i = 0; i < json.length; i++) {
                 var release = json[i];
-                if (release.assets.length === 0) {
+                if (!release.assets) {
                     continue;
                 }
                 var asset = release.assets[0];
@@ -97,10 +95,10 @@ title: Downloads
     function GetParameterByName(name, url) {
         if (!url) url = window.location.href;
         name = name.replace(/[\[\]]/g, "\\$&");
-        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-            results = regex.exec(url);
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
+        var results = regex.exec(url);
         if (!results) return null;
-        if (!results[2]) return '';
+        if (!results[2]) return "";
         return decodeURIComponent(results[2].replace(/\+/g, " "));
     }
 </script>
