@@ -44,7 +44,7 @@ body {
     font-family: $font;
 
     a {
-        font-weight: 500;
+        font-weight: 400;
 
         &, &:hover, &:focus {
             color: $text-color;
@@ -169,7 +169,7 @@ body {
     p {
         margin: 25px 0px 35px;
         font-size: 25px;
-        font-weight: 200;
+        font-weight: 300;
     }
 }
 
@@ -470,7 +470,7 @@ footer {
         display: none;
         
         .badge {
-            font-weight: 500;
+            font-weight: 400;
             padding: 4px;
             box-shadow: 0px 1px 0px rgba(158, 0, 0, 1);
         }
@@ -542,7 +542,7 @@ footer {
     padding-bottom: $container-padding-half;
 
     a {
-        font-weight: 500;
+        font-weight: 400;
         text-decoration: underline;
         text-decoration-color: rgba(255, 255, 255, 0.5);
     }
