@@ -13,7 +13,7 @@ function GetReleases(repo) {
 
         for (var i = 0; i < json.length; i++) {
             var release = json[i];
-            if (!release.assets) {
+            if (release.assets.length === 0) {
                 continue;
             }
             var asset = release.assets[0];
