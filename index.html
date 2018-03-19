@@ -7,7 +7,10 @@ layout: default
         <h1>{{ site.name }}</h1>
         <p>Screen capture, file sharing and productivity tool</p>
         <div>
-            <a class="btn sharex-download" role="button" data-toggle="tooltip" data-placement="bottom" title="" href="{{ site.github }}/releases/latest">Download</a>
+            <div id="download-btn-container">
+                <a class="btn sharex-download" role="button" data-toggle="tooltip" data-placement="bottom" title="" href="{{ site.github }}/releases/latest">Download</a>
+                <div><span>For Windows 7 and higher</span></div>
+            </div>
             <a class="btn" role="button" href="{{ site.github }}">Source</a>
             <a class="btn" role="button" href="{{ site.url }}/donate/">Donate</a>
         </div>

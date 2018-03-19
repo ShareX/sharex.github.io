@@ -243,6 +243,33 @@ body {
     }
 }
 
+#download-btn-container div {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 767.98px) {
+    #download-btn-container div {
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    #download-btn-container {
+        display: inline-block;
+
+        div {
+            position: relative;
+
+            span {
+                position: absolute;
+                width: 100%;
+                top: 10px;
+                left: 0px;
+            }
+        }
+    }
+}
+
 .container-screenshot {
     background: $background;
     border-top: 1px solid $border-color;
