@@ -3,6 +3,67 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 12.1.0](https://github.com/ShareX/ShareX/releases/tag/v12.1.0) - 2018-03-19
+
+* Upgraded .NET Framework version to 4.6.2. Because of this upgrade [Windows XP and Windows Vista is not supported](https://docs.microsoft.com/en-us/dotnet/framework/get-started/system-requirements) anymore. If you don't have .NET Framework 4.5 or higher is installed, ShareX auto updater will not be able to show new update because we are using GitHub API to check for updates and they require [TLS 1.2](https://en.wikipedia.org/wiki/Transport_Layer_Security#TLS_1.2) now which is not supported with .NET Framework 4.0. For detailed information [click here](https://github.com/ShareX/ShareX/issues/3201)
+* We now have a vanity Discord invite link: https://discord.gg/ShareX
+* Added image editor autosize start mode, which will resize the window to fit the image. If the image is too big then window will be maximised
+* Added sticker tool
+* Added [Blob Emoji](http://blobs.gg) sticker pack
+* Added these buttons to image editor, image menu
+    * New image (Creates empty canvas)
+    * Open image file
+    * Insert image file
+    * Insert image from screen
+    * Crop image
+    * Auto crop image (Removes same color sections from edges)
+    * Add image effects (Allows you to apply various effects to whole image)
+* Added paste image/text button to image editor, edit menu
+* Added visual scroll bars for panning (by [@L1Q](https://github.com/L1Q))
+* Added resampling option to image size dialog
+* Added "Font size" option to step tool
+* Added "Use letters" option to step tool
+* Added confirm and cancel buttons to image editor crop tool, which will allow moving or resizing crop region before confirming
+* Show area info text in crop tool
+* Added image interpolation mode option to "Image (File)" and "Image (Screen)" tools
+* Added "Drop shadow color" option
+* Added "Auto close editor on task" option, for example if you click "Upload image" on image editor toolbar then editor will close automatically if this option is enabled
+* In image editor paste <kbd>Ctrl + V</kbd> also gonna check for image files addition to image
+* Holding <kbd>Ctrl</kbd> while using sticker tool will use last sticker instead of opening sticker picker
+* Holding <kbd>Ctrl</kbd> while using image file tool will use last image file instead of opening file dialog
+* Added image editor startup dialog when editor is opened from tools menu
+* Removed Greenshot image editor
+* Using authorization header authentication for [Amazon S3](https://aws.amazon.com/s3/) now instead of presigned URL, this change allows to support [DigitalOcean Spaces](https://www.digitalocean.com/products/spaces/)
+* Added new Amazon S3 regions: China (Ningxia), EU (Paris)
+* Added [DigitalOcean Spaces](https://www.digitalocean.com/products/spaces/) Amsterdam, New York and Singapore endpoints to Amazon S3 regions list
+* Allow to disable public-read [ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html) on files uploaded via Amazon S3 (by [@sylveon](https://github.com/sylveon))
+* Added [random domain syntax](https://getsharex.com/docs/custom-uploader#random) support for Amazon S3 (by [@sylveon](https://github.com/sylveon))
+* Added option to remove file extensions on Amazon S3 uploads (by [@sylveon](https://github.com/sylveon))
+* If [JPEG](https://en.wikipedia.org/wiki/JPEG) image contains orientation [metadata](https://en.wikipedia.org/wiki/Exif) then the image will be rotated automatically
+* Added "Show cursor" quick setting to main window and tray capture menu
+* Added auto crop to image effects window
+* Added size mode option to image watermark effect (by [@RedMser](https://github.com/RedMser))
+* In destinations menu, unauthorized uploaders will be shown as red. If user tries to upload to any of these destinations then destination settings window with selected uploader tab will be opened automatically
+* Added decode button to [QR code](https://en.wikipedia.org/wiki/QR_code) encode picture box right click menu
+* Renamed "ownCloud" to "ownCloud / Nextcloud" to make it clear [Nextcloud](https://nextcloud.com) is supported
+* OwnCloud / NextCloud direct link option gonna use `/preview` link now instead of `/download`
+* Added random adjective `%radjective` and animal name `%ranimal` pattern for file naming similar to Gfycat naming which is: `%radjective%radjective%ranimal`
+* Added random line from a file `%rf{filepath}` pattern for file naming (by [@AtlasTheBot](https://github.com/AtlasTheBot))
+* Added `$filename$` pattern for custom uploader arguments, it is only usable when custom uploader type is image, text or file
+* Support name patterns in custom uploader headers
+* Support escaping custom uploader URL syntax with `\` character (by [@ArsenArsen](https://github.com/ArsenArsen))
+* Added [markdown](https://en.wikipedia.org/wiki/Markdown) copying options to also history window (by [@stuntguy3000](https://github.com/stuntguy3000))
+* Update [recorder devices](https://github.com/rdp/screen-capture-recorder-to-video-windows-free) to latest version
+* Added Google Translate button to [OCR](https://en.wikipedia.org/wiki/Optical_character_recognition) window (by [@9joao6](https://github.com/9joao6))
+* Added upload image and decode buttons to [QR code](https://en.wikipedia.org/wiki/QR_code) window context menu
+* Make [QR code](https://en.wikipedia.org/wiki/QR_code) input textbox multi line
+* Use [UTF-8](https://en.wikipedia.org/wiki/UTF-8) for [QR code](https://en.wikipedia.org/wiki/QR_code) encoding and restrict length to [2952 bytes](http://www.qrcode.com/en/about/version.html)
+* Make sure [QR code](https://en.wikipedia.org/wiki/QR_code) output is square image
+* Using [FluentFTP](https://github.com/robinrodricks/FluentFTP) library now for FTP/FTPS uploads instead of deprecated System.Net.FtpClient library
+* Added `/NORUN` parameter support to ShareX setup which can be used together with [`/SILENT` or `/VERYSILENT`](http://www.jrsoftware.org/ishelp/topic_setupcmdline.htm) to install ShareX silently without run it afterwards
+* Because of .NET Framework update now we can use built in Zip functions and no need to use [7-Zip](https://www.7-zip.org) library anymore, because of this change importing backups (.sxb files) from previous ShareX versions not gonna work because those were exported using 7z compression but you can extract them manually to `Documents/ShareX` folder yourself
+* Added .sxcu file association to Windows Store build (by [@sylveon](https://github.com/sylveon))
+
 ## [ShareX 12.0.0](https://github.com/ShareX/ShareX/releases/tag/v12.0.0) - 2017-11-27
 
 * Added windowed mode support to image editor
