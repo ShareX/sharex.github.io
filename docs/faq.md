@@ -12,3 +12,7 @@ Recently Microsoft released [.NET Core](https://en.wikipedia.org/wiki/.NET_Frame
 ### Does ShareX have portable builds?
 
 You can find portable builds here: [https://github.com/ShareX/ShareX/releases](https://github.com/ShareX/ShareX/releases)
+
+### Why does taking a screenshot from a fullscreen game return a black image?
+
+ShareX doesn't support the complex hooking necessary to capture the screen of most games in fullscreen mode. This limitation can be remedied by running the game in borderless or windowed modes, or using another capture method, such as Nvidia Shadowplay, Steam overlay, or Windows Game bar if supported on your system, then later uploaded through ShareX.
