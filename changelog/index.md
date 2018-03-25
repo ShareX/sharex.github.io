@@ -3,6 +3,10 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 12.1.1](https://github.com/ShareX/ShareX/releases/tag/v12.1.1) - 2018-03-25
+
+* Bug fixes
+
 ## [ShareX 12.1.0](https://github.com/ShareX/ShareX/releases/tag/v12.1.0) - 2018-03-19
 
 * Upgraded .NET Framework version to 4.6.2. Because of this upgrade [Windows XP and Windows Vista is not supported](https://docs.microsoft.com/en-us/dotnet/framework/get-started/system-requirements) anymore. If you don't have .NET Framework 4.5 or higher is installed, ShareX auto updater will not be able to show new update because we are using GitHub API to check for updates and they require [TLS 1.2](https://en.wikipedia.org/wiki/Transport_Layer_Security#TLS_1.2) now which is not supported with .NET Framework 4.0. For detailed information [click here](https://github.com/ShareX/ShareX/issues/3201)
