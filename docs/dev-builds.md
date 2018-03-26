@@ -5,13 +5,13 @@ title: Dev builds
 
 ### What is AppVeyor?
 
-Each time we upload code changes to [GitHub](https://github.com/ShareX/ShareX), the [AppVeyor](https://www.appveyor.com) service automatically downloads the latest code changes from GitHub, compiles ShareX and creates setup/portable builds.
+Each time we upload code changes to [GitHub](https://github.com/ShareX/ShareX), the [AppVeyor](https://www.appveyor.com) service automatically downloads the latest code changes from GitHub, compiles ShareX and creates setup/portable dev builds.
 
 ### Automatic way to install dev build
 
 * Open ShareX application settings window.
 
-* **Mouse middle click** on pre-release checkbox to start auto update process:
+* **Mouse middle click** (not left click) on pre-release checkbox to start auto update process:
 
 ![](https://i.imgur.com/IY7ddmW.png)
 
