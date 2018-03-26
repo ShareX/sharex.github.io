@@ -53,6 +53,11 @@ title: Region capture
 * <kbd>Enter</kbd> Close image editor and continue task with changes applied
 * <kbd>Right click</kbd> <kbd>Space</kbd> Close image editor and continue task without apply changes
 * <kbd>Esc</kbd> Close image editor and cancel task
+* <kbd>Ctrl + S</kbd> Save image
+* <kbd>Ctrl + Shift + S</kbd> Save image as...
+* <kbd>Ctrl + Shift + C</kbd> Copy image to clipboard
+* <kbd>Ctrl + U</kbd> Upload image
+* <kbd>Ctrl + P</kbd> Print image
 
 ### Region tools
 
