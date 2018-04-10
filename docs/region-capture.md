@@ -23,6 +23,7 @@ title: Region capture
 * <kbd>Page down</kbd> Move current shape down
 * <kbd>Mouse wheel</kbd> Change magnifier size
 * <kbd>Ctrl + Mouse wheel</kbd> Change current tool
+* <kbd>Hold Ctrl</kbd> Disables shape selection to allow drawing shape top of another shape
 
 ##### While creating region
 
@@ -41,7 +42,7 @@ title: Region capture
 ### Region capture
 
 * <kbd>Esc</kbd> <kbd>Right click</kbd> Close region capture
-* <kbd>Tab</kbd> <kbd>Mouse middle click</kbd> Switch between last region and last drawing tool
+* <kbd>Tab</kbd> <kbd>Middle click</kbd> Switch between last region and last drawing tool
 * <kbd>Space</kbd> Fullscreen capture
 * <kbd>1, 2, 3 ... 0</kbd> Specific monitor capture
 * <kbd>~</kbd> Active monitor capture
@@ -50,6 +51,7 @@ title: Region capture
 
 ### Image editor
 
+* <kbd>Hold middle click</kbd> Pan image
 * <kbd>Enter</kbd> Close image editor and continue task with changes applied
 * <kbd>Right click</kbd> <kbd>Space</kbd> Close image editor and continue task without apply changes
 * <kbd>Esc</kbd> Close image editor and cancel task
