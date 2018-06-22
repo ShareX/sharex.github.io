@@ -3,7 +3,7 @@ layout: markdown
 title: Changelog
 ---
 
-### [ShareX 12.2.0](https://github.com/ShareX/ShareX/releases/tag/v12.2.0) - 2018-06-22
+## [ShareX 12.2.0](https://github.com/ShareX/ShareX/releases/tag/v12.2.0) - 2018-06-22
 
 * Added new image editor / region capture keybinds:
     * Image editor
