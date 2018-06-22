@@ -309,7 +309,7 @@ body {
         text-decoration: none;
     }
     
-    h3 .fa {
+    h3 .fas {
         font-size: 45px;
         vertical-align: middle;
         margin-right: 15px;
@@ -337,16 +337,16 @@ body {
 [data-toggle="collapse"] {
     cursor: pointer;
     
-    .fa {
+    .fas {
         width: 20px;
         margin-right: 8px;
     }
     
-    .fa:before {
+    .fas:before {
         content: "\f078";
     }
     
-    &.collapsed .fa:before {
+    &.collapsed .fas:before {
         content: "\f054";
     }
 }
