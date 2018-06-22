@@ -3,6 +3,75 @@ layout: markdown
 title: Changelog
 ---
 
+### [ShareX 12.2.0](https://github.com/ShareX/ShareX/releases/tag/v12.2.0) - 2018-06-22
+
+* Added new image editor / region capture keybinds:
+    * Image editor
+        * <kbd>Ctrl + S</kbd> Save image
+        * <kbd>Ctrl + Shift + S</kbd> Save image as...
+        * <kbd>Ctrl + Shift + C</kbd> Copy image to clipboard
+        * <kbd>Ctrl + U</kbd> Upload image
+        * <kbd>Ctrl + P</kbd> Print image
+    * Drawing tools
+        * <kbd>R</kbd> Rectangle
+        * <kbd>E</kbd> Ellipse
+        * <kbd>F</kbd> Freehand
+        * <kbd>L</kbd> Line
+        * <kbd>A</kbd> Arrow
+        * <kbd>O</kbd> Text (Outline)
+        * <kbd>T</kbd> Text (Background)
+        * <kbd>S</kbd> Speech balloon
+        * <kbd>I</kbd> Step
+        * <kbd>B</kbd> Blur
+        * <kbd>P</kbd> Pixelate
+    * Other tools
+        * <kbd>C</kbd> Crop image
+* You can see all available key bindings on this page: [https://getsharex.com/docs/region-capture](https://getsharex.com/docs/region-capture)
+* Holding <kbd>Ctrl</kbd> will ignore shape intersection; that way you can, for example draw a rectangle inside another rectangle without selecting it
+* Added draggable custom scroll bar to the image editor, which automatically hides when the image is fully inside the window (by [@L1Q](https://github.com/L1Q))
+* Added gradient text color support to image editor "Text (Outline)" tool
+* Added confirmation message box for unsaved changes when user closes the image editor by pressing title bar close button, <kbd>Esc</kbd> key or <kbd>Right click</kbd>
+* When pasting image, inserting image file or inserting image from screen, show insert image dialog which allows automatically expanding canvas to bottom or right side and inserting image there
+* Allow to hide or show magnifier with mouse wheel, for example you can <kbd>Mouse wheel down</kbd> until magnifier disappear and <kbd>Mouse wheel up</kbd> to show it back
+* Image editor will stop rendering when it's out of focus to reduce unnecessary CPU usage
+* Added <kbd>Enter</kbd> and <kbd>Esc</kbd> key support to image editor dialogs
+* Added recent colors support to color picker which remembers last used 32 colors for quick selection
+* Screen color picker now shows current color sample in a rectangle next to its value
+* Added screen color picker support to image editor color picker
+* Added Ukrainian language support (by [@6c6c6](https://github.com/6c6c6))
+* Added Indonesian language support (by [@Nicedward](https://github.com/Nicedward))
+* Added show "Edit with ShareX" button in Windows Explorer context menu option to "Application settings window -> Integration tab"
+* Added support to escape custom uploader argument and header patterns with `\`
+* Support referrer and user-agent headers in custom uploaders
+* Added [Cloudflare DNS](https://1.1.1.1) to DNS changer tool
+* Added [Firebase](https://firebase.google.com) Dynamic Links URL shortener (by [@matthewburnett](https://github.com/matthewburnett))
+* Added [YouTube](https://www.youtube.com) file uploader (by [@SupSuper](https://github.com/SupSuper))
+    * Tip: There is no video destination support but you can configure it to only upload videos as per the link: [https://i.imgur.com/CWAGrHu.png](https://i.imgur.com/CWAGrHu.png)
+* Added [Google Cloud Storage](https://cloud.google.com/storage/) file uploader (by [@matthewburnett](https://github.com/matthewburnett))
+* Updated [OneDrive](https://onedrive.live.com) uploader to [Microsoft Graph API](https://developer.microsoft.com/en-us/graph), this change allows using OneDrive for Business and uploading higher size files (by [@SupSuper](https://github.com/SupSuper))
+    * Note: If you were using OneDrive destination, you need to re-authenticate
+* Added [Wasabi](https://wasabi.com) endpoint to Amazon S3 endpoints list
+* Added [Azure Storage](https://azure.microsoft.com/en-us/services/storage/) custom upload path support (by [@Lego6245](https://github.com/Lego6245))
+* Added [Azure Storage](https://azure.microsoft.com/en-us/services/storage/) [$root container](https://docs.microsoft.com/en-us/rest/api/storageservices/working-with-the-root-container) support (by [@Lego6245](https://github.com/Lego6245))
+* Container name won't be appended to [Azure Storage](https://azure.microsoft.com/en-us/services/storage/) custom domain automatically anymore, can be added manually to custom domain section if needed
+* Removed auto container creation from [Azure Storage](https://azure.microsoft.com/en-us/services/storage/) upload to decrease upload time
+* Added URL preview to [Azure Storage](https://azure.microsoft.com/en-us/services/storage/) tab to make configuring easier
+* Removed [GitHub gist](https://gist.github.com) anonymous upload support because it is [deprecated](https://blog.github.com/2018-03-20-removing-anonymous-gist-creation/)
+* Removed [Google URL shortener](https://goo.gl) because it is [deprecated](https://developers.googleblog.com/2018/03/transitioning-google-url-shortener.html)
+* Removed Dropfile, Pastee and CoinURL
+* Added after capture task "Scan QR code" (requires image to be saved as file)
+* Added "Ask for confirmation when aborting screen recording" option (by [@stuntguy3000](https://github.com/stuntguy3000))
+* Added upload image button to image effects window
+* Added selective color image effect which allows making two color images
+* Added color option to canvas image effect
+* Added sides option to auto crop image effect
+* High DPI improvements for UI (by [@SupSuper](https://github.com/SupSuper))
+* When ShareX is updating, setup will be run with `\UPDATE` parameter which makes sure that the setup will not apply initial tasks again such as creating desktop shortcut or context menu entries (by [@sylveon](https://github.com/sylveon))
+* Added option to replace non-unreserved characters by underscores (by [@sylveon](https://github.com/sylveon))
+* If pre-release updates checkbox is checked then dev build install button will show up
+* Added upload file and edit image context menu buttons to history and image history windows
+* Added hotkey repeat limit option (Application settings -> Advanced tab)
+
 ## [ShareX 12.1.1](https://github.com/ShareX/ShareX/releases/tag/v12.1.1) - 2018-03-25
 
 * Bug fixes
