@@ -33,7 +33,7 @@ function GetReleases(repo) {
                             .attr("href", release.html_url)
                             .text(release.name)
                         )
-                        .append(release.prerelease ? "<div class=\"pull-right\"><span class=\"badge badge-danger\">Pre-release</span></div>" : "")
+                        .append(release.prerelease ? "<div class=\"float-right\"><span class=\"badge badge-danger\">Pre-release</span></div>" : "")
                     )
                     .append($("<td>")
                         .append($("<a>")
