@@ -3,34 +3,14 @@ layout: markdown
 title: Dev builds
 ---
 
-### What is AppVeyor?
+* Open "Application settings" window either from main window or tray menu.
 
-Each time we upload code changes to [GitHub](https://github.com/ShareX/ShareX), the [AppVeyor](https://www.appveyor.com) service automatically downloads the latest code changes from GitHub, compiles ShareX and creates setup/portable dev builds.
+* If it is not already checked, click on "Check for pre-release updates" checkbox to check it.
 
-### Automatic way to install dev build
+* "Install dev build" button gonna become visible under that checkbox. Dev build is not related to pre-release but we made it this way to make sure only people who knows what is dev build to download it.
 
-* Open ShareX application settings window.
+* Click "Install dev build" button to start auto update progress. If it gave error, most likely that could mean we uploaded new code changes and setup is not compiled with latest changes yet or latest code base is failing to compile. So you can wait few minutes and try clicking install button again.
 
-* **Mouse middle click** (not left click) on pre-release checkbox to start auto update process:
+![](https://i.imgur.com/yBEIb8j.png)
 
-![](https://i.imgur.com/IY7ddmW.png)
-
-### Manual way to install dev build
-
-* Open our AppVeyor project page:
-
-[https://ci.appveyor.com/project/ShareX/sharex](https://ci.appveyor.com/project/ShareX/sharex)
-
-* Open release build page:
-
-![](https://i.imgur.com/wf8LqbR.png)
-
-* Open artifacts tab which contains all downloads:
-
-![](https://i.imgur.com/vrZxNLX.png)
-
-* Download and install preferred build from list:
-
-![](https://i.imgur.com/ezKu1M7.png)
-
-**Note: Dev builds can be unstable and must be used for testing purposes only.**
+**Please note, dev builds can be unstable and must be used for testing purposes only.**
