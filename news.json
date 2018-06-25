@@ -1,5 +1,10 @@
 [
   {
+    "DateTime": "2018-06-25T00:00:00Z",
+    "Text": "ShareX 12.2.0 has been released.",
+    "URL": "https://getsharex.com/changelog"
+  },
+  {
     "DateTime": "2018-03-22T00:00:00Z",
     "Text": "If .NET Framework 4.5 or higher is not installed, auto updater will not be able to detect new updates. Because of this Windows XP and Vista is not supported anymore. Click here for more info.",
     "URL": "https://github.com/ShareX/ShareX/issues/3201"
