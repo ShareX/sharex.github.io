@@ -9,6 +9,10 @@ ShareX is written using [C# programming language](https://en.wikipedia.org/wiki/
 
 Recently Microsoft released [.NET Core](https://en.wikipedia.org/wiki/.NET_Framework#.NET_Core) which supports writing multi platform software but it is currently extremely limited and doesn't have UI or graphic related libraries. So .NET Core is currently only viable to make console only applications.
 
+### How do I get ShareX to upload to my custom domain?
+
+There are many ways to do this, we recommend using our guides [Google Cloud Storage](/docs/google-cloud-storage.md) and [Amazon S3](/docs/amazon-s3.md).
+
 ### Does ShareX have portable builds?
 
 You can find portable builds here: [https://github.com/ShareX/ShareX/releases](https://github.com/ShareX/ShareX/releases)
