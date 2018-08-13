@@ -446,6 +446,10 @@ footer {
             border-top: 1px solid #222429;
         }
 
+        td:first-child a {
+            margin-left: 0.5rem;
+        }
+
         tr:nth-of-type(even) {
             background-color: #242a35;
         }
