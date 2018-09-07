@@ -66,7 +66,7 @@ title: Changelog
 * Added color option to canvas image effect
 * Added sides option to auto crop image effect
 * High DPI improvements for UI (by [@SupSuper](https://github.com/SupSuper))
-* When ShareX is updating, setup will be run with `\UPDATE` parameter which makes sure that the setup will not apply initial tasks again such as creating desktop shortcut or context menu entries (by [@sylveon](https://github.com/sylveon))
+* When ShareX is updating, setup will be run with `/UPDATE` parameter which makes sure that the setup will not apply initial tasks again such as creating desktop shortcut or context menu entries (by [@sylveon](https://github.com/sylveon))
 * Added option to replace non-unreserved characters by underscores (by [@sylveon](https://github.com/sylveon))
 * If pre-release updates checkbox is checked then dev build install button will show up
 * Added upload file and edit image context menu buttons to history and image history windows

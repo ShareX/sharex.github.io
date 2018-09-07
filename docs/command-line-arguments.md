@@ -3,6 +3,8 @@ layout: markdown
 title: Command line arguments
 ---
 
+## ShareX CLI
+
 ### "File or URL path"
 
 If it is file path then upload it, if it is URL then download it and upload it. You can use multiple paths for be able to upload multiple files in same time.
@@ -27,7 +29,7 @@ ShareX will open with default settings and won't save any settings (ApplicationC
 
 You can use any hotkey action as a command line argument.
 
-Example: `-ClipboardUpload`, `-RectangleRegion`, `-ScreenColorPicker` etc.
+Example: `-RectangleRegion`, `-PrintScreen`, `-ClipboardUpload`, `-ScreenColorPicker` etc.
 
 You can find the full list of hotkey actions from `public enum HotkeyType` in [here](https://github.com/ShareX/ShareX/blob/master/ShareX/Enums.cs).
 
@@ -53,4 +55,26 @@ For example it can be used to upload two images at the same time and then close 
 
 ### -nohotkeys
 
-Disables hotkey registration on ShareX startup.
+On startup of ShareX if hotkey registration fails then don't show hotkey registration error window.
+
+### -customuploader ".sxcu file path"
+
+Specified .sxcu file path used to add custom uploader configuration to ShareX. It is also used for `.sxcu` file association.
+
+## ShareX setup CLI
+
+### /SILENT
+
+When setup is silent the wizard and the background window are not displayed but the installation progress window is.
+
+### /VERYSILENT
+
+When setup is very silent then installation progress window is also not displayed.
+
+### /NORUN
+
+After setup is complete ShareX won't run automatically.
+
+### /UPDATE
+
+This makes sure that the setup will not apply initial tasks again such as creating desktop shortcut or context menu entries.
