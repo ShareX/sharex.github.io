@@ -11,7 +11,7 @@ Recently Microsoft released [.NET Core](https://en.wikipedia.org/wiki/.NET_Frame
 
 ### How do I get ShareX to upload to my custom domain?
 
-There are many ways to do this, we recommend using our guides [Google Cloud Storage]({{ site.url }}/docs/google-cloud-storage) and [Amazon S3]({{ site.url }}/docs/amazon-s3).
+There are many ways to do this, we recommend using our guides [Google Cloud Storage](/docs/google-cloud-storage) and [Amazon S3](/docs/amazon-s3).
 
 ### Does ShareX have portable builds?
 
