@@ -22,7 +22,6 @@ title: Region capture
 * <kbd>Page up</kbd> Move current shape up
 * <kbd>Page down</kbd> Move current shape down
 * <kbd>Mouse wheel</kbd> Change magnifier size
-* <kbd>Ctrl + Mouse wheel</kbd> Change current tool
 * <kbd>Hold Ctrl</kbd> Disables shape selection to allow drawing shape top of another shape
 
 ##### While creating region
