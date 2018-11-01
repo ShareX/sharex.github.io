@@ -660,4 +660,10 @@ footer {
         border-radius: 3px;
         box-shadow: inset 0 -1px 0 #bbb;
     }
+
+    blockquote {
+        margin-top: 4px;
+        padding: 0 1em;
+        border-left: 0.25em solid #dfe2e5;
+    }
 }
