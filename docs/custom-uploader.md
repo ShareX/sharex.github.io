@@ -5,48 +5,41 @@ title: Custom uploader guide
 
 ## What is custom uploader?
 
-Custom uploader system in ShareX is able to upload image/text/file to hosting services or shorten URL. This feature is mainly used by people who host their own file hosting services.
+Custom uploader system in ShareX let users to upload image/text/file to hosting services or shorten/share URL. This feature is mainly used by users who host their own hosting services.
 
 The easiest way to learn how to configure custom uploader is by checking example custom uploaders: [https://github.com/ShareX/CustomUploaders](https://github.com/ShareX/CustomUploaders)
 
 You can also pull request your custom uploader there.
 
-## Custom uploader configuration
-
-### Destination type
+## Destination type
 
 Destination type is used when users import custom uploader by double clicking the `.sxcu` file.
 
-### Export / Import
+## Export / Import
 
 You can export your custom uploader with `.sxcu` extension which allows users to just double click that file to be able to use custom uploader.
 
 If destination type is configured then ShareX can also set this custom uploader as selected custom uploader and change current destination to this custom uploader, so users won't need any additional configuration to use it.
 
-### Request type
+## Request type
 
 For image uploader and file uploader `POST` request type is required along with the `File form name`.
 
 For text uploader and URL shortener, if you are using `GET` request type or `POST` request type with empty `File form name` then you need to have at least one argument which has `$input$` as value to supply text or URL to host. When doing request `$input$` text will be automatically replaced with text or URL depending on what uploader type you are using.
 
-When using `GET` request type arguments will be appended to URL in background like this: `http://example.com/upload.php?name=value&name2=value2`
+When using `GET` request type arguments will be used as [query string](https://en.wikipedia.org/wiki/Query_string) like this: `https://example.com/upload.php?name=value&name2=value2`
 
-### Request URL
+## Request URL
 
-Example: `http://example.com/upload.php`
+Example: `https://example.com/upload.php`
 
-<a href="#random">Random syntax</a> also can be used in request URL.
-
-### File form name
+## File form name
 
 This field can be only used when `Request type` is `POST`.
 
-In HTML check input tag and name attribute to find `File form name`.
+For example in this HTML code: `<input type="file" name="file_image">` file form name is `file_image`.
 
-For example in this HTML code: `<input type="file" name="file_image">`
-File form name is `file_image`.
-
-### Arguments
+## Arguments
 
 Left column is for argument name, right column for argument value.
 
@@ -56,23 +49,37 @@ There is one special value specific to `GET` request type; it is `$input$` which
 
 Example argument for text uploader (URL shortener works in a similar way):
 
-```
-name: text
-value: $input$
+| Name | Value |
+| --- | --- |
+| text | $input$ |
+| language | csharp |
 
-name: language
-value: csharp
-```
-
-### Response type
+## Response type
 
 If URL textbox is empty then `Response text` or `Redirection URL` will be automatically used. So if response only returns URL then no need to write anything to URL textbox.
 
-### URL syntax
+## Custom uploader syntax
 
-#### JSON
+There is special syntaxes which you can use to accomplish tasks like parsing URL from JSON response.
 
-You can use [JsonPath](http://goessner.net/articles/JsonPath/) syntax to parse URL from [JSON](https://en.wikipedia.org/wiki/JSON) response.
+These sytnaxes usable in this sections with few exceptions:
+
+* Request URL
+* Argument value
+* Header value
+* URL
+* Thumbnail URL
+* Deletion URL
+
+For example syntaxes which involves parsing response only usable in URL sections as expected.
+
+You can find list of all available syntaxes with example usages at bottom.
+
+---
+
+### json
+
+You can use [JsonPath](http://goessner.net/articles/JsonPath/) to parse URL from [JSON](https://en.wikipedia.org/wiki/JSON) response.
 
 Example response:
 
@@ -85,7 +92,11 @@ Example response:
 }
 ```
 
-JsonPath: `data.link`
+Syntax:
+
+```
+$json:data.link$
+```
 
 Example response 2:
 
@@ -101,15 +112,17 @@ Example response 2:
 }
 ```
 
-JsonPath: `files[0].url`
+Syntax:
 
-You must write JsonPath to URL textbox like this: `$json:files[0].url$`
+```
+$json:files[0].url$
+```
 
-Or you can use "Add syntax to URL field" button.
+---
 
-#### XML
+### xml
 
-You can use [XPath](https://www.w3schools.com/xml/xpath_syntax.asp) syntax to parse URL from [XML](https://en.wikipedia.org/wiki/XML) response.
+You can use [XPath](https://www.w3schools.com/xml/xpath_syntax.asp) to parse URL from [XML](https://en.wikipedia.org/wiki/XML) response.
 
 Example response:
 
@@ -123,29 +136,39 @@ Example response:
 </files>
 ```
 
-XPath: `/files/file[1]/url`
+Syntax:
 
-URL textbox syntax: `$xml:/files/file[1]/url$`
+```
+$xml:/files/file[1]/url$
+```
 
-#### Regex
+---
+
+### regex
 
 If response is not [JSON](https://en.wikipedia.org/wiki/JSON) or [XML](https://en.wikipedia.org/wiki/XML) then you can use [Regular expression (Regex)](https://en.wikipedia.org/wiki/Regular_expression) to parse response text.
-
-If you would like to learn Regex: [regexone.com](https://regexone.com)
 
 After writing your regex and adding it to regex list then you can use "Add syntax to URL field" button for ShareX to guess correct syntax and add selected regex to URL textbox.
 
 To manually add regex to URL textbox these syntax can be used:
 
-Syntax: `$regex:n$`
-
 From regex list get index (`n`) result. `n` must be number and first item in list is 1.
+
+Syntax:
+
+```
+$regex:n$
+```
 
 Example: `$regex:1$` means get first regex result from list.
 
-Syntax: `$regex:n,group$`
-
 From regex list get index (`n`) result with group (`group`). Group can be index or text.
+
+Syntax:
+
+```
+$regex:n,group$
+````
 
 Example: `$regex:2,3$` means second regex in list and third group in regex result.
 
@@ -153,7 +176,7 @@ Example 2: `$regex:1,thumbnail$` means first regex in list and `thumbnail` named
 
 You can use multiple regex while parsing, for example if we have this response:
 
-```
+```css
 server: 41
 image_size: "250x200"
 filename: "image.png"
@@ -168,18 +191,38 @@ In URL textbox use this syntax: `https://example.com/server/$regex:1,serverid$/i
 
 Result URL will be: `https://example.com/server/41/image/image.png`
 
-#### Response
+---
+
+### response
 
 For example if response only contains file name (or id) and if you would like to append it to domain then you can use this syntax.
 
-Syntax: `$response$`
+Syntax:
 
-Example: `https://example.com/$response$`
+```
+$response$
+```
 
-#### Random
+Example:
+
+```
+https://example.com/$response$
+```
+
+---
+
+### random
 
 For example if you would like to use random domain each upload you can use this syntax.
 
-Syntax: `$random:value1|value2|value3$`
+Syntax:
 
-Example: `https://$random:subdomain1|subdomain2$.$random:domain1|domain2|domain3$.com/$json:files[0].url$`
+```
+$random:value1|value2|value3$
+```
+
+Example:
+
+```
+https://$random:subdomain1|subdomain2$.$random:domain1|domain2|domain3$.com/$json:files[0].url$
+```

@@ -666,4 +666,27 @@ footer {
         padding: 0 1em;
         border-left: 0.25em solid #dfe2e5;
     }
+
+    table {
+        display: block;
+        width: 100%;
+        overflow: auto;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: 14px;
+    }
+     
+    tr {
+        background: #252932;
+    }
+
+    tbody tr:nth-of-type(odd) {
+        background-color: #20242b;
+    }
+
+    table th,
+    table td {
+        border: 1px solid #3d414a;
+        padding: 6px 13px;
+    }
 }
