@@ -195,7 +195,7 @@ Result URL will be: `https://example.com/server/41/image/image.png`
 
 ### response
 
-For example if response only contains file name (or id) and if you would like to append it to domain then you can use this syntax.
+If response only contains file name (or id) and if you would like to append it to domain then you can use this syntax.
 
 Syntax:
 
@@ -211,9 +211,33 @@ https://example.com/$response$
 
 ---
 
+### input
+
+If you are using text custom uploader then this syntax will be replaced with text which you gonna upload. If it is URL shortener or URL sharing service then syntax will be replaced with URL. This syntax mainly used as argument value.
+
+Syntax:
+
+```
+$input$
+```
+
+---
+
+### filename
+
+This syntax will be replaced with file name. Most of the time you don't need to use this syntax because when doing POST file upload, file name already included in request.
+
+Syntax:
+
+```
+$filename$
+```
+
+---
+
 ### random
 
-For example if you would like to use random domain each upload you can use this syntax.
+If you would like to use random domain each upload you can use this syntax.
 
 Syntax:
 
@@ -226,3 +250,61 @@ Example:
 ```
 https://$random:subdomain1|subdomain2$.$random:domain1|domain2|domain3$.com/$json:files[0].url$
 ```
+
+---
+
+### select
+
+This will show window with all values as buttons. So you can select dynamically which text input to use. This syntax can be useful if you have multiple domains and would like to select specific domain each upload.
+
+Syntax:
+
+```
+$select:value1|value2|value3$
+```
+
+Example:
+
+```
+https://$select:domain1.com|domain2.com|domain3.com$/$json:files[0].url$
+```
+
+---
+
+### prompt
+
+This will show input box for user to input text. This syntax can be used if user prefer to write different value for argument or URL part each upload.
+
+First parameter is window title, second parameter is default text for input box. Both parameter is optional.
+
+Syntax:
+
+```
+$prompt$
+$prompt:title$
+$prompt:title|default text$
+```
+
+Example:
+
+```
+https://$prompt:Input subdomain|i$.example.com/$json:files[0].url$
+```
+
+---
+
+### base64
+
+Encode text to [Base64](https://en.wikipedia.org/wiki/Base64).
+
+Syntax:
+
+```
+$base64:text$
+```
+
+Example header:
+
+| Name | Value |
+| --- | --- |
+| Authorization | Basic $base64:username:password$ |
