@@ -27,7 +27,7 @@ For image uploader and file uploader `POST` request type is required along with 
 
 For text uploader and URL shortener, if you are using `GET` request type or `POST` request type with empty `File form name` then you need to have at least one argument which has `$input$` as value to supply text or URL to host. When doing request `$input$` text will be automatically replaced with text or URL depending on what uploader type you are using.
 
-When using `GET` request type arguments will be used as [query string](https://en.wikipedia.org/wiki/Query_string) like this: `https://example.com/upload.php?name=value&name2=value2`
+When using `GET` request type arguments will be used as [query string](https://en.wikipedia.org/wiki/Query_string) in background like this: `https://example.com/upload.php?name=value&name2=value2`
 
 ## Request URL
 
@@ -46,13 +46,6 @@ Left column is for argument name, right column for argument value.
 You can use dynamic values like `%mo` to get current month etc.
 
 There is one special value specific to `GET` request type; it is `$input$` which will be replaced with text or URL.
-
-Example argument for text uploader (URL shortener works in a similar way):
-
-| Name | Value |
-| --- | --- |
-| text | $input$ |
-| language | csharp |
 
 ## Response type
 
@@ -203,7 +196,7 @@ Syntax:
 $response$
 ```
 
-Example:
+Example URL:
 
 ```
 https://example.com/$response$
@@ -213,13 +206,19 @@ https://example.com/$response$
 
 ### input
 
-If you are using text custom uploader then this syntax will be replaced with text which you gonna upload. If it is URL shortener or URL sharing service then syntax will be replaced with URL. This syntax mainly used as argument value.
+If you are using text custom uploader then this syntax will be replaced with text which you gonna upload, if it is URL shortener or URL sharing service then syntax will be replaced with URL. This syntax mainly used as argument value.
 
 Syntax:
 
 ```
 $input$
 ```
+
+Example argument:
+
+| Name | Value |
+| --- | --- |
+| text | $input$ |
 
 ---
 
@@ -233,6 +232,12 @@ Syntax:
 $filename$
 ```
 
+Example argument:
+
+| Name | Value |
+| --- | --- |
+| title | $filename$ |
+
 ---
 
 ### random
@@ -245,7 +250,7 @@ Syntax:
 $random:value1|value2|value3$
 ```
 
-Example:
+Example URL:
 
 ```
 https://$random:subdomain1|subdomain2$.$random:domain1|domain2|domain3$.com/$json:files[0].url$
@@ -263,7 +268,7 @@ Syntax:
 $select:value1|value2|value3$
 ```
 
-Example:
+Example URL:
 
 ```
 https://$select:domain1.com|domain2.com|domain3.com$/$json:files[0].url$
@@ -285,7 +290,7 @@ $prompt:title$
 $prompt:title|default text$
 ```
 
-Example:
+Example URL:
 
 ```
 https://$prompt:Input subdomain|i$.example.com/$json:files[0].url$
