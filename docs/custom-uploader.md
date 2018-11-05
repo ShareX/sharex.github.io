@@ -21,6 +21,12 @@ You can export your custom uploader with `.sxcu` extension which allows users to
 
 If destination type is configured then ShareX can also set this custom uploader as selected custom uploader and change current destination to this custom uploader, so users won't need any additional configuration to use it.
 
+## Name
+
+In custom uploaders list this name will be used. Name field is optional. When it is left empty ShareX will use request URL domain as name automatically. It is suggested to leave name field empty unless you have multiple uploaders which using same domain.
+
+For example if request URL is `https://example.com/upload.php` and name field is empty, then `example.com` name will be used in custom uploaders list.
+
 ## Request type
 
 For image uploader and file uploader `POST` request type is required along with the `File form name`.
