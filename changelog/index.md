@@ -3,6 +3,53 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 12.3.0](https://github.com/ShareX/ShareX/releases/tag/v12.3.0) - 2018-11-09
+
+* Added two pass encoding option to screen recording; basically it records lossless with highest performance option then after recording is done, it applies your encoding options. That way you can select slow encoding option for low file size output without sacrificing recording performance
+* Added [WebP](https://developers.google.com/speed/webp/) encoding support to screen recording
+* Added [APNG](https://en.wikipedia.org/wiki/APNG) encoding support to screen recording
+* Added [AMF](https://gpuopen.com/gaming-product/advanced-media-framework/) encoding support to screen recording (by [@sylveon](https://github.com/sylveon))
+* Removed screen record CLI option because task actions already have same functionality and with new two pass encoding option it was not that required anymore
+* Added [Kutt](https://kutt.it) URL shortener support
+* Added [Backblaze B2](https://www.backblaze.com/b2/cloud-storage.html) file uploader support (by [@tinybarks](https://github.com/tinybarks))
+* Added Mexican Spanish language support (by [@absay](https://github.com/absay))
+* Save buttons in image editor will use task settings to generate name if file name is not supplied yet, that way user can save without use "Save as..." dialog first
+* Added URL filtering support to history window
+* Added search support to image history window
+* Moved image history settings from toolbar to its own settings window
+* Show total and filtered item count in image history window title bar
+* When a task is using OCR, save result to a text file with same name (by [@YueLinHo](https://github.com/YueLinHo))
+* Added "Use light resize nodes" option to region capture options menu which makes resize nodes transparent
+* Changes to personal path detection, you can find detailed info about how ShareX decides about personal path in [here](https://getsharex.com/docs/command-line-arguments#personal-path)
+* Modified default file name pattern to use random alphanumeric: `%pn_%ra{10}` for new installations. If you want previous date time file naming then you can replace it with: `%pn_%y-%mo-%d_%h-%mi-%s`
+* Support name pattern in custom capture path
+* When using `%pn` (process name) name pattern empty spaces will be replaced with underscore
+* Added starting step number option to step drawing tool (by [@Fyers](https://github.com/Fyers))
+* In image editor text input window, properly handle enter key with [CJK input](https://en.wikipedia.org/wiki/CJK_characters) (by [@tinybarks](https://github.com/tinybarks))
+* In custom uploader, regex syntax `|` character will be used as group separator instead of `,` to be consistent with other syntaxes, for backward compatibility `,` character is still going to be supported for some time
+* Removed support for old implicit custom uploader regex syntax such as `$1,1$` now regex syntax must be declared explicitly like this `$regex:1|1$`
+* Added select syntax to custom uploader parser which shows window for user to select single option; example syntax: `$select:domain1.com|domain2.com$`
+* Added prompt syntax to custom uploader parser which shows input dialog for user to type text; example syntaxes: `$prompt$` `$prompt:title$` `$prompt:title|default value$`
+* Added base64 syntax to custom uploader parser, example syntax for [authorization header](https://en.wikipedia.org/wiki/Basic_access_authentication): `Basic $base64:username:password$`
+* Support custom uploader syntax in arguments and headers too
+* You can find more info about all supported custom uploader syntax from [here](https://getsharex.com/docs/custom-uploader)
+* Use a cryptographically stronger random value generator, for example while generating random file name (by [@tinybarks](https://github.com/tinybarks))
+* Added option to automatically select last completed task in main window (Application settings -> Advanced tab -> AutoSelectLastCompletedTask)
+* Add upload log button to debug log window (by [@sylveon](https://github.com/sylveon))
+* Remember column widths of main window task list
+* Full screen image viewer will now show on active monitor (by [@Fyers](https://github.com/Fyers))
+* Allow toast notification to have image preview even when image isn't saved as file (by [@sylveon](https://github.com/sylveon))
+* Added support for extensionless uploads on [Google Cloud Storage](https://cloud.google.com/storage/) (by [@sylveon](https://github.com/sylveon))
+* Added expiry time option to [ownCloud](https://owncloud.org) / [Nextcloud](https://nextcloud.com) (by [@jdon](https://github.com/jdon))
+* Added Imgur album paging to support listing more than 50 albums on album list
+* FTPS upload was accepting SSL 3.0 and TLS 1.0 previously, now instead it will accept TLS 1.0, TLS 1.1 and TLS 1.2
+* Improved reliability of ShareX auto start on Microsoft Store installations (by [@sylveon](https://github.com/sylveon))
+* ShareX will automatically start after Microsoft Store finished updating ShareX (by [@sylveon](https://github.com/sylveon))
+* Now Windows shutdown will wait for ShareX to save settings instead of closing it before ShareX have time to save settings (by [@sylveon](https://github.com/sylveon))
+* Clipboard content viewer now will cache content and upload it instead of what is in clipboard when "OK" button is pressed (by [@CookieMichal](https://github.com/CookieMichal))
+* [Bidirectional control characters](https://en.wikipedia.org/wiki/Unicode_control_characters#Bidirectional_text_control) from file name will be removed before uploads
+* "Install dev build" button now always visible in [application settings window](https://getsharex.com/docs/dev-builds)
+
 ## [ShareX 12.2.0](https://github.com/ShareX/ShareX/releases/tag/v12.2.0) - 2018-06-22
 
 * Added new image editor / region capture keybinds:
