@@ -26,7 +26,7 @@ title: Changelog
 * When using `%pn` (process name) name pattern empty spaces will be replaced with underscore
 * Added starting step number option to step drawing tool (by [@Fyers](https://github.com/Fyers))
 * In image editor text input window, properly handle enter key with [CJK input](https://en.wikipedia.org/wiki/CJK_characters) (by [@tinybarks](https://github.com/tinybarks))
-* In custom uploader, regex syntax `|` character will be used as group separator instead of `,` to be consistent with other syntaxes, for backward compatibility `,` character is still going to be supported for some time
+* In custom uploader regex syntax `|` character will be used as group separator instead of `,` to be consistent with other syntaxes, for backward compatibility `,` character is still going to be supported for some time
 * Removed support for old implicit custom uploader regex syntax such as `$1,1$` now regex syntax must be declared explicitly like this `$regex:1|1$`
 * Added select syntax to custom uploader parser which shows window for user to select single option; example syntax: `$select:domain1.com|domain2.com$`
 * Added prompt syntax to custom uploader parser which shows input dialog for user to type text; example syntaxes: `$prompt$` `$prompt:title$` `$prompt:title|default value$`

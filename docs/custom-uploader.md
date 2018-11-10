@@ -78,7 +78,7 @@ You can find list of all available syntaxes with example usages at bottom.
 
 ### json
 
-You can use [JsonPath](http://goessner.net/articles/JsonPath/) to parse URL from [JSON](https://en.wikipedia.org/wiki/JSON) response.
+You can use [JsonPath](https://goessner.net/articles/JsonPath/) to parse URL from [JSON](https://en.wikipedia.org/wiki/JSON) response.
 
 Example response:
 
@@ -166,12 +166,12 @@ From regex list get index (`n`) result with group (`group`). Group can be index 
 Syntax:
 
 ```
-$regex:n,group$
+$regex:n|group$
 ````
 
-Example: `$regex:2,3$` means second regex in list and third group in regex result.
+Example: `$regex:2|3$` means second regex in list and third group in regex result.
 
-Example 2: `$regex:1,thumbnail$` means first regex in list and `thumbnail` named group in regex result.
+Example 2: `$regex:1|thumbnail$` means first regex in list and `thumbnail` named group in regex result.
 
 You can use multiple regex while parsing, for example if we have this response:
 
@@ -186,7 +186,7 @@ First regex using named group: `server: (?<serverid>\d+)`
 
 Second regex using numbered group: `filename: "(.+)"`
 
-In URL textbox use this syntax: `https://example.com/server/$regex:1,serverid$/image/$regex:2,1$`
+In URL textbox use this syntax: `https://example.com/server/$regex:1|serverid$/image/$regex:2|1$`
 
 Result URL will be: `https://example.com/server/41/image/image.png`
 
