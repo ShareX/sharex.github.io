@@ -72,6 +72,8 @@ These sytnaxes usable in this sections with few exceptions:
 
 For example syntaxes which involves parsing response only usable in URL sections as expected.
 
+> Note: If you would like to use `$` or `\` characters in any of syntax supported sections then you must escape them with `\`. Like this: `\$` `\\`
+
 You can find list of all available syntaxes with example usages at bottom.
 
 ---

@@ -619,7 +619,7 @@ footer {
     }
 
     img {
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
     }
     
     hr {
@@ -664,7 +664,8 @@ footer {
     blockquote {
         margin-top: 4px;
         padding: 0 1em;
-        border-left: 0.25em solid #dfe2e5;
+        color: #bfbfbf;
+        border-left: 0.25em solid #bfbfbf;
     }
 
     table {
