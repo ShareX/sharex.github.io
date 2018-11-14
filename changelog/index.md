@@ -20,19 +20,19 @@ title: Changelog
 * Show total and filtered item count in image history window title bar
 * When a task is using OCR, save result to a text file with same name (by [@YueLinHo](https://github.com/YueLinHo))
 * Added "Use light resize nodes" option to region capture options menu which makes resize nodes transparent
-* Changes to personal path detection, you can find detailed info about how ShareX decides about personal path in [here](https://getsharex.com/docs/command-line-arguments#personal-path)
+* Changes to personal path detection, you can find detailed info about how ShareX decides about personal path in [here](/docs/command-line-arguments#personal-path)
 * Modified default file name pattern to use random alphanumeric: `%pn_%ra{10}` for new installations. If you want previous date time file naming then you can replace it with: `%pn_%y-%mo-%d_%h-%mi-%s`
 * Support name pattern in custom capture path
 * When using `%pn` (process name) name pattern empty spaces will be replaced with underscore
 * Added starting step number option to step drawing tool (by [@Fyers](https://github.com/Fyers))
 * In image editor text input window, properly handle enter key with [CJK input](https://en.wikipedia.org/wiki/CJK_characters) (by [@tinybarks](https://github.com/tinybarks))
-* In custom uploader regex syntax `|` character will be used as group separator instead of `,` to be consistent with other syntaxes, for backward compatibility `,` character is still going to be supported for some time
-* Removed support for old implicit custom uploader regex syntax such as `$1,1$` now regex syntax must be declared explicitly like this `$regex:1|1$`
-* Added select syntax to custom uploader parser which shows window for user to select single option; example syntax: `$select:domain1.com|domain2.com$`
-* Added prompt syntax to custom uploader parser which shows input dialog for user to type text; example syntaxes: `$prompt$` `$prompt:title$` `$prompt:title|default value$`
-* Added base64 syntax to custom uploader parser, example syntax for [authorization header](https://en.wikipedia.org/wiki/Basic_access_authentication): `Basic $base64:username:password$`
-* Support custom uploader syntax in arguments and headers too
-* You can find more info about all supported custom uploader syntax from [here](https://getsharex.com/docs/custom-uploader)
+* In custom uploader [regex syntax](/docs/custom-uploader#regex) `|` character will be used as group separator instead of `,` to be consistent with other syntaxes, for backward compatibility `,` character is still going to be supported for some time
+* Removed support for old implicit custom uploader regex syntax such as `$1,1$` now [regex syntax](/docs/custom-uploader#regex) must be declared explicitly like this `$regex:1|1$`
+* Added [select syntax](/docs/custom-uploader#select) to custom uploader parser which shows window for user to select single option; example syntax: `$select:domain1.com|domain2.com$`
+* Added [prompt syntax](/docs/custom-uploader#prompt) to custom uploader parser which shows input dialog for user to type text; example syntaxes: `$prompt$` `$prompt:title$` `$prompt:title|default value$`
+* Added [base64 syntax](/docs/custom-uploader#base64) to custom uploader parser, example syntax for [authorization header](https://en.wikipedia.org/wiki/Basic_access_authentication): `Basic $base64:username:password$`
+* Added [custom uploader syntax](/docs/custom-uploader#custom-uploader-syntax) support for arguments and headers too
+    * Note: If you would like to use `$` or `\` characters in any of syntax supported sections then you must escape them with `\`. Like this: `\$` `\\`
 * Use a cryptographically stronger random value generator, for example while generating random file name (by [@tinybarks](https://github.com/tinybarks))
 * Added option to automatically select last completed task in main window (Application settings -> Advanced tab -> AutoSelectLastCompletedTask)
 * Add upload log button to debug log window (by [@sylveon](https://github.com/sylveon))
@@ -48,7 +48,7 @@ title: Changelog
 * Now Windows shutdown will wait for ShareX to save settings instead of closing it before ShareX have time to save settings (by [@sylveon](https://github.com/sylveon))
 * Clipboard content viewer now will cache content and upload it instead of what is in clipboard when "OK" button is pressed (by [@CookieMichal](https://github.com/CookieMichal))
 * [Bidirectional control characters](https://en.wikipedia.org/wiki/Unicode_control_characters#Bidirectional_text_control) from file name will be removed before uploads
-* "Install dev build" button now always visible in [application settings window](https://getsharex.com/docs/dev-builds)
+* "Install dev build" button now always visible in [application settings window](/docs/dev-builds)
 
 ## [ShareX 12.2.0](https://github.com/ShareX/ShareX/releases/tag/v12.2.0) - 2018-06-22
 
@@ -73,7 +73,7 @@ title: Changelog
         * <kbd>P</kbd> Pixelate
     * Other tools
         * <kbd>C</kbd> Crop image
-* You can see all available key bindings on this page: [https://getsharex.com/docs/region-capture](https://getsharex.com/docs/region-capture)
+* You can see all available key bindings from [here](/docs/region-capture)
 * Holding <kbd>Ctrl</kbd> will ignore shape intersection; that way you can, for example draw a rectangle inside another rectangle without selecting it
 * Added draggable custom scroll bar to the image editor, which automatically hides when the image is fully inside the window (by [@L1Q](https://github.com/L1Q))
 * Added gradient text color support to image editor "Text (Outline)" tool
@@ -157,7 +157,7 @@ title: Changelog
 * Added new Amazon S3 regions: China (Ningxia), EU (Paris)
 * Added [DigitalOcean Spaces](https://www.digitalocean.com/products/spaces/) Amsterdam, New York and Singapore endpoints to Amazon S3 regions list
 * Allow to disable public-read [ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html) on files uploaded via Amazon S3 (by [@sylveon](https://github.com/sylveon))
-* Added [random domain syntax](https://getsharex.com/docs/custom-uploader#random) support for Amazon S3 (by [@sylveon](https://github.com/sylveon))
+* Added [random domain syntax](/docs/custom-uploader#random) support for Amazon S3 (by [@sylveon](https://github.com/sylveon))
 * Added option to remove file extensions on Amazon S3 uploads (by [@sylveon](https://github.com/sylveon))
 * If [JPEG](https://en.wikipedia.org/wiki/JPEG) image contains orientation [metadata](https://en.wikipedia.org/wiki/Exif) then the image will be rotated automatically
 * Added "Show cursor" quick setting to main window and tray capture menu
@@ -216,8 +216,8 @@ title: Changelog
 * Custom uploader won't export with empty request url or destination type
 * While exporting custom uploader all default or empty values will be ignored, that way [JSON](https://en.wikipedia.org/wiki/JSON) output can be more compact
 * Added custom URL sharing service support, which can be used for example for [Discord webhooks](https://github.com/ShareX/CustomUploaders/search?utf8=%E2%9C%93&q=Discord+webhook)
-* Added [response syntax](https://getsharex.com/docs/custom-uploader#response) to custom uploader which can be used in URL fields
-* Added [random syntax](https://getsharex.com/docs/custom-uploader#random) support to custom uploader request URL
+* Added [response syntax](/docs/custom-uploader#response) to custom uploader which can be used in URL fields
+* Added [random syntax](/docs/custom-uploader#random) support to custom uploader request URL
 * Added Text/URL input to custom uploader arguments/headers value suggestion list
 * Renamed Picasa to [Google Photos](https://photos.google.com)
 * Removed dead uploaders: Someimage, Imgland, Minus, Uplea
@@ -244,7 +244,7 @@ title: Changelog
 * Removed https option for [Imgur](https://imgur.com) and instead always https will be used because now [it is used by default on Imgur](https://blog.imgur.com/2017/09/13/https-on-imgur/)
 * Show current version and latest version in update message box
 * In application settings window middle mouse clicking on pre-release check box will download latest dev build from [AppVeyor](https://ci.appveyor.com/project/ShareX/sharex) but it should be only used for testing purposes because dev builds can be unstable and therefore not recommended for production use
-* Updated design of [ShareX web site](https://getsharex.com) to have dark colors
+* Updated design of [ShareX web site](/) to have dark colors
 
 ## [ShareX 11.9.1](https://github.com/ShareX/ShareX/releases/tag/v11.9.1) - 2017-08-14
 
@@ -258,7 +258,7 @@ title: Changelog
 * Added multiple center point support to line and arrow tools
 * Added arrows on both ends option to arrow tool
 * Added batch image thumbnailer tool
-* Added random syntax to Custom uploader, which can be used to return random domain each upload, check [here for more info](https://getsharex.com/docs/custom-uploader#random)
+* Added [random syntax](/docs/custom-uploader#random) to custom uploader, which can be used to return random domain each upload
 * Added custom domain support for [Azure storage](https://azure.microsoft.com/en-us/services/storage/) (by [@Lego6245](https://github.com/Lego6245))
 * Added padding and border size option to text watermark
 * Added unread counter to news button
@@ -346,7 +346,6 @@ title: Changelog
 
 ## [ShareX 11.5.0](https://github.com/ShareX/ShareX/releases/tag/v11.5.0) - 2017-01-25
 
-* Changelog URL changed to [https://getsharex.com/changelog](https://getsharex.com/changelog)
 * Region capture related changes:
     * Added drop shadow support
     * Replaced rounded rectangle shapes with corner radius option to rectangle shapes
