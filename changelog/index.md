@@ -18,7 +18,7 @@ title: Changelog
 * Added search support to image history window
 * Moved image history settings from toolbar to its own settings window
 * Show total and filtered item count in image history window title bar
-* When a task is using OCR, save result to a text file with same name (by [@YueLinHo](https://github.com/YueLinHo))
+* When a task is using [OCR](https://en.wikipedia.org/wiki/Optical_character_recognition), save result to a text file with same name (by [@YueLinHo](https://github.com/YueLinHo))
 * Added "Use light resize nodes" option to region capture options menu which makes resize nodes transparent
 * Changes to personal path detection, you can find detailed info about how ShareX decides about personal path in [here](/docs/command-line-arguments#personal-path)
 * Modified default file name pattern to use random alphanumeric: `%pn_%ra{10}` for new installations. If you want previous date time file naming then you can replace it with: `%pn_%y-%mo-%d_%h-%mi-%s`
@@ -31,7 +31,7 @@ title: Changelog
 * Added [select syntax](/docs/custom-uploader#select) to custom uploader parser which shows window for user to select single option; example syntax: `$select:domain1.com|domain2.com$`
 * Added [prompt syntax](/docs/custom-uploader#prompt) to custom uploader parser which shows input dialog for user to type text; example syntaxes: `$prompt$` `$prompt:title$` `$prompt:title|default value$`
 * Added [base64 syntax](/docs/custom-uploader#base64) to custom uploader parser, example syntax for [authorization header](https://en.wikipedia.org/wiki/Basic_access_authentication): `Basic $base64:username:password$`
-* Added [custom uploader syntax](/docs/custom-uploader#custom-uploader-syntax) support for arguments and headers too
+* Added [custom uploader syntax](/docs/custom-uploader#custom-uploader-syntax) support to arguments and headers as well
     * Note: If you would like to use `$` or `\` characters in any of syntax supported sections then you must escape them with `\`. Like this: `\$` `\\`
 * Use a cryptographically stronger random value generator, for example while generating random file name (by [@tinybarks](https://github.com/tinybarks))
 * Added option to automatically select last completed task in main window (Application settings -> Advanced tab -> AutoSelectLastCompletedTask)

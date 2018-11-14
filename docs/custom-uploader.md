@@ -59,9 +59,9 @@ If URL textbox is empty then `Response text` or `Redirection URL` will be automa
 
 ## Custom uploader syntax
 
-There is special syntaxes which you can use to accomplish tasks like parsing URL from JSON response.
+There is a special syntax you can use to accomplish some tasks, like parsing URL from JSON responses.
 
-These sytnaxes usable in this sections with few exceptions:
+This syntax is usable in the following sections, with a few exceptions:
 
 * Request URL
 * Argument value
