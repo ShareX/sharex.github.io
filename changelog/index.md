@@ -3,6 +3,10 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 12.3.1](https://github.com/ShareX/ShareX/releases/tag/v12.3.1) - 2018-11-19
+
+* Bug fixes
+
 ## [ShareX 12.3.0](https://github.com/ShareX/ShareX/releases/tag/v12.3.0) - 2018-11-09
 
 * Added two pass encoding option to screen recording; basically it records lossless with highest performance option then after recording is done, it applies your encoding options. That way you can select slow encoding option for low file size output without sacrificing recording performance
