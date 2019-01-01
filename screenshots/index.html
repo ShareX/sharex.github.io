@@ -6,31 +6,13 @@ title: Screenshots
 <div class="container-screenshots">
     <div class="container">
         <div class="row">
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/Gn0Uw1O.png"><img src="https://i.imgur.com/Gn0Uw1Ob.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/EuWr1mL.png"><img src="https://i.imgur.com/EuWr1mLb.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/n88Wj25.png"><img src="https://i.imgur.com/n88Wj25b.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/73zi4cR.png"><img src="https://i.imgur.com/73zi4cRb.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/CtBrdSD.png"><img src="https://i.imgur.com/CtBrdSDb.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/eWhmaTG.png"><img src="https://i.imgur.com/eWhmaTGb.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/ZFIiTYl.png"><img src="https://i.imgur.com/ZFIiTYlb.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/GoXbsWG.png"><img src="https://i.imgur.com/GoXbsWGb.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/iKC9c13.png"><img src="https://i.imgur.com/iKC9c13b.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/J7ECnpp.png"><img src="https://i.imgur.com/J7ECnppb.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/UxlnHmy.png"><img src="https://i.imgur.com/UxlnHmyb.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/I9IzAHr.png"><img src="https://i.imgur.com/I9IzAHrb.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/ih4u03A.png"><img src="https://i.imgur.com/ih4u03Ab.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/eFrOn4l.png"><img src="https://i.imgur.com/eFrOn4lb.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/M7ZEWKT.png"><img src="https://i.imgur.com/M7ZEWKTb.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/3HNWYjw.png"><img src="https://i.imgur.com/3HNWYjwb.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/6yeoU8T.png"><img src="https://i.imgur.com/6yeoU8Tb.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/GoikvXk.png"><img src="https://i.imgur.com/GoikvXkb.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/n16NuUR.png"><img src="https://i.imgur.com/n16NuURb.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/7FBUK2G.png"><img src="https://i.imgur.com/7FBUK2Gb.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/QswVcd4.png"><img src="https://i.imgur.com/QswVcd4b.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/VXc83ut.png"><img src="https://i.imgur.com/VXc83utb.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/x2W5n2e.png"><img src="https://i.imgur.com/x2W5n2eb.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/OutI8d3.png"><img src="https://i.imgur.com/OutI8d3b.jpg"></a></div>
-            <div class="col-sm-2"><a data-fancybox="gallery" class="thumbnail" href="https://i.imgur.com/oKjr2VB.png"><img src="https://i.imgur.com/oKjr2VBb.jpg"></a></div>
+            {% for screenshot in site.data.screenshots %}
+            <div class="col-sm-2">
+                <a class="thumbnail" data-fancybox="gallery" data-caption="{{ screenshot.caption }}" href="/img/screenshots/{{ screenshot.name }}">
+                    <img src="/img/screenshots/{{ screenshot.thumbnail }}">
+                </a>
+            </div>
+            {% endfor %}
         </div>
     </div>
 </div>
