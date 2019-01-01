@@ -6,8 +6,7 @@ title: Screenshots
 <div class="container-screenshots">
     <div class="container">
         <div class="row">
-            {% for screenshot in site.data.screenshots %}
-            <div class="col-sm-2">
+            {% for screenshot in site.data.screenshots %}<div class="col-sm-2">
                 <a class="thumbnail" data-fancybox="gallery" data-caption="{{ screenshot.caption }}" href="/img/screenshots/{{ screenshot.name }}">
                     <img src="/img/screenshots/{{ screenshot.thumbnail }}">
                 </a>
