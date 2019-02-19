@@ -3,6 +3,71 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 12.4.0](https://github.com/ShareX/ShareX/releases/tag/v12.4.0) - 2019-02-20
+
+* Added screenshot delay shortcut to main window and tray capture menu
+* Added white ShareX icon option to "Application settings window -> Advanced tab"
+* Custom uploader related changes:
+    * Moved custom uploader settings to its own window in the destinations menu to make it easier to access
+    * Added request, response and test tabs to create more space
+    * Added "Parameters" option which will be used to generate URL [query string](https://en.wikipedia.org/wiki/Query_string)
+        * If the request URL contains a query string then it will be automatically converted to parameters for backward compatibility, and the query string will be removed from the request URL
+    * Added request "Body" option with these options:
+        * No body
+        * Form data (multipart/form-data)
+        * Form URL encoded (application/x-www-form-urlencoded)
+        * JSON (application/json)
+        * XML (application/xml)
+        * Binary
+    * For backward compatibility: if request method is POST then body will be set as "Form data", for rest of request methods "No body" will be set; if "No body" is selected then all arguments will be moved to parameters
+    * Allow overriding "Content-Type" and "Cookie" headers
+    * Added "Beautify" and "Minify" buttons for JSON data
+    * Added syntax highlighting support to all URL fields
+    * Added syntax menu to result URL fields
+    * Support `$filename$` syntax in request URL and result URLs
+    * Store application version in custom uploader JSON to be able to better support backward compatibility
+    * Improve custom uploader batch import speed
+    * Added response text tab in test tab which also has "JSON format" and "XML format" buttons to tidy response text
+    * Removed "Response type" option
+    * Added `$responseurl$` syntax, which can be used in place of previously removed redirection URL response type
+        * For backward compatibility: if redirection URL response type is used previously and URL field is empty then `$responseurl$` syntax will be added to URL field automatically
+    * Added `$header:name$` syntax, it can be used to get specific response header value
+        * For backward compatibility: if location header response type is used previously then `$header:location$` syntax will be added to URL field automatically, but unfortunately automatic conversion of headers response type won't be possible therefore warning text about it gonna be added to URL field
+    * Support drag & drop importing of sxcu files
+    * UI improvements to use data grid instead of add, update, remove buttons to let updating parameters, headers, arguments and regex list more easier
+    * Set automatic name watermark for name textbox to make it obvious that name field is optional and it will be generated automatically
+* Added following OCR related options to task settings window (by [@stuntguy3000](https://github.com/stuntguy3000)):
+    * Process OCR silently
+    * Process OCR on dialog open
+    * Automatically copy results to clipboard
+* When OCR is used for the first time, ask for permission from the user
+* Support long file paths on Windows 10 when [group policy](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) is enabled
+* Added "Filter missing files" option to image history
+* Added Amazon S3 signed payload option
+* Added delete input file option to "Task settings -> Actions", which will only delete file if the output file path is different from the input file path
+* Remember last save directory in image editor
+* Implement Google Photos API because [Picasa API is deprecated](https://developers.google.com/picasa-web/docs/3.0/deprecation) (by [@lucario](https://github.com/lucario))
+* Add user customizable gaussian blur to image effects (by [@sylveon](https://github.com/sylveon))
+* Added [Teknik](https://teknik.io) file uploader, text uploader and URL shortener (by [@uncled1023](https://github.com/uncled1023))
+* In FTP settings, respect "Append remote directory to URL path" option even when "URL path" is empty
+* In region capture, allow using proportional resizing <kbd>Shift</kbd> or snap resizing <kbd>Alt</kbd> together with corner moving <kbd>Ctrl</kbd>
+* Added copy image dimensions option to main window context menu
+* QR code decode button will now scan for all barcode types instead of just QR code
+* Removed webpage capture which was using Internet Explorer to render, because [built in browser capture methods](https://getsharex.com/docs/website-capture) are superior to this method
+* Added right click and middle click actions for toast notification (Task settings window -> Advanced tab)
+* Added optional setting to strip color space information chunks from PNG image (Application settings window -> Advanced tab)
+* Added another easter egg to about window
+* Show close button in region capture toolbar when Windows is in tablet mode
+* Added JPEG quality option to image thumbnailer
+* Added standard colors palette to the color picker dialog
+* In color picker dialog, double clicking color palette box will select that color and close dialog automatically
+* Added apply button for personal folder setting which will also restart ShareX so user don't have to manually
+* Allow changing name parser auto increment number from task settings window
+* Added early copy URL support (Task settings window -> Advanced tab) for Amazon S3 and Azure Storage
+* Added early copy URL support for Google Cloud Storage (by [@lucario](https://github.com/lucario))
+* Improved upload error output to include more details about request
+* Removed FTP client tool
+
 ## [ShareX 12.3.1](https://github.com/ShareX/ShareX/releases/tag/v12.3.1) - 2018-11-19
 
 * Bug fixes
