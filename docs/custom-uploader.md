@@ -11,10 +11,6 @@ The easiest way to learn how to configure custom uploader is by checking example
 
 You can also pull request your custom uploader there.
 
-## Destination type
-
-Destination type is used when users import custom uploader by double clicking the `.sxcu` file.
-
 ## Export / Import
 
 You can export your custom uploader with `.sxcu` extension which allows users to just double click that file to be able to use custom uploader.
@@ -27,35 +23,104 @@ In custom uploaders list this name will be used. Name field is optional. When it
 
 For example if request URL is `https://example.com/upload.php` and name field is empty, then `example.com` name will be used in custom uploaders list.
 
-## Request type
+## Destination type
 
-For image uploader and file uploader `POST` request type is required along with the `File form name`.
+Destination type is used when users import custom uploader by double clicking the `.sxcu` file.
 
-For text uploader and URL shortener, if you are using `GET` request type or `POST` request type with empty `File form name` then you need to have at least one argument which has `$input$` as value to supply text or URL to host. When doing request `$input$` text will be automatically replaced with text or URL depending on what uploader type you are using.
+## Request tab
 
-When using `GET` request type arguments will be used as [query string](https://en.wikipedia.org/wiki/Query_string) in background like this: `https://example.com/upload.php?name=value&name2=value2`
+HTTP request options are configured in this tab.
 
-## Request URL
+## Method
+
+List of HTTP request methods available:
+
+* GET
+* POST
+* PUT
+* PATCH
+* DELETE
+
+If request have no body and only parameters will be used then `GET` method is preferred. If body is `Form data (multipart/form-data` then `POST` method is preferred.
+
+## URL
+
+Request will be send to this URL.
 
 Example: `https://example.com/upload.php`
 
+## URL parameters
+
+Parameters will be used to create URL [query string](https://en.wikipedia.org/wiki/Query_string).
+
+For text uploader or URL shortener `$input$` syntax can be used as value to supply input text or URL.
+
+You can also use dynamic values like `%mo` to get current month etc.
+
+For example if you set parameters like this:
+
+| Name | Value |
+| --- | --- |
+| api_key | eUM14R4g4pMS |
+| private | true |
+
+Then query string will be appended to request URL like this when sending request:
+
+`https://example.com/upload.php?api_key=eUM14R4g4pMs&private=true`
+
+## Headers
+
+Headers can be used to pass additional information with request. Most of the time APIs use headers for authorization.
+
+Default request headers can be overridden too like these:
+
+* Accept
+* Content-Length
+* Content-Type
+* Cookie
+* Referer
+* User-Agent
+
+[Basic access authentication](https://en.wikipedia.org/wiki/Basic_access_authentication) example:
+
+| Name | Value |
+| --- | --- |
+| Authorization | Basic $base64:USERNAME:PASSWORD$ |
+
+API key example:
+
+| Name | Value |
+| --- | --- |
+| api_key | eUM14R4g4pMS |
+
+## Body
+
+Supported request body types:
+
+* No body
+* Form data (multipart/form-data)
+* Form URL encoded (application/x-www-form-urlencoded)
+* JSON (application/json)
+* XML (application/xml)
+* Binary
+
+Most of the time if API request method is `GET` then `No body` will be used with parameters. If request method is `POST` then `Form data (multipart/form-data)` body. But this is not always the case so you must check API documentation to make sure what request expects.
+
+## Body arguments
+
+For text uploader or URL shortener `$input$` syntax can be used as value to supply input text or URL.
+
 ## File form name
 
-This field can be only used when `Request type` is `POST`.
+This field can be only used when `Body` is `Form data (multipart/form-data)`.
 
 For example in this HTML code: `<input type="file" name="file_image">` file form name is `file_image`.
 
-## Arguments
+## Response tab
 
-Left column is for argument name, right column for argument value.
+This tab can be used to parse response to get URL result.
 
-You can use dynamic values like `%mo` to get current month etc.
-
-There is one special value specific to `GET` request type; it is `$input$` which will be replaced with text or URL.
-
-## Response type
-
-If URL textbox is empty then `Response text` or `Redirection URL` will be automatically used. So if response only returns URL then no need to write anything to URL textbox.
+If response only contains URL then no need to write anything to URL textbox.
 
 ## Custom uploader syntax
 
@@ -64,8 +129,9 @@ There is a special syntax you can use to accomplish some tasks, like parsing URL
 This syntax is usable in the following sections, with a few exceptions:
 
 * Request URL
-* Argument value
+* Parameter value
 * Header value
+* Body argument value
 * URL
 * Thumbnail URL
 * Deletion URL
@@ -75,6 +141,62 @@ For example syntaxes which involves parsing response only usable in URL sections
 > Note: If you would like to use `$` or `\` characters in any of syntax supported sections then you must escape them with `\`. Like this: `\$` `\\`
 
 You can find list of all available syntaxes with example usages at bottom.
+
+---
+
+### response
+
+If response only contains file name (or id) and if you would like to append it to domain then you can use this syntax.
+
+But if response just contains full URL then you don't have to use this syntax because empty URL textbox will use response automatically.
+
+Syntax:
+
+```
+$response$
+```
+
+Example URL:
+
+```
+https://example.com/$response$
+```
+
+---
+
+### responseurl
+
+Can be used to get redirection URL. If no redirection happened then it will be just request URL.
+
+Syntax:
+
+```
+$responseurl$
+```
+
+Example URL:
+
+```
+$responseurl$
+```
+
+---
+
+### header
+
+Can be used to get specific response header value.
+
+Syntax:
+
+```
+$header:name$
+```
+
+Example URL:
+
+```
+$header:location$
+```
 
 ---
 
@@ -191,24 +313,6 @@ Second regex using numbered group: `filename: "(.+)"`
 In URL textbox use this syntax: `https://example.com/server/$regex:1|serverid$/image/$regex:2|1$`
 
 Result URL will be: `https://example.com/server/41/image/image.png`
-
----
-
-### response
-
-If response only contains file name (or id) and if you would like to append it to domain then you can use this syntax.
-
-Syntax:
-
-```
-$response$
-```
-
-Example URL:
-
-```
-https://example.com/$response$
-```
 
 ---
 
