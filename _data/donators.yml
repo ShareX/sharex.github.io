@@ -69,6 +69,7 @@
 
 - name: EJH2
   github: https://github.com/EJH2
+  website: https://ej.gl
   amount: 50
 
 - name: TheTimmaeh
@@ -86,7 +87,7 @@
   amount: 30
 
 - name: Matthew Burnett
-  github: https://github.com/matthewburnett
+  github: https://github.com/lucario
   amount: 25
 
 - name: Patchy Knowly
