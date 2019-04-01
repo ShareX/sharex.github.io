@@ -3,6 +3,10 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 12.4.1](https://github.com/ShareX/ShareX/releases/tag/v12.4.1) - 2019-02-23
+
+* Bug fixes
+
 ## [ShareX 12.4.0](https://github.com/ShareX/ShareX/releases/tag/v12.4.0) - 2019-02-20
 
 * Added screenshot delay shortcut to main window and tray capture menu
