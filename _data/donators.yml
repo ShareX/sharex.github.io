@@ -122,3 +122,7 @@
 - name: Fuzz
   steam: https://steamcommunity.com/id/SammyFuzz
   amount: 20
+
+- name: Michelle Wexler
+  website: https://www.onrainsagi.com
+  amount: 50
