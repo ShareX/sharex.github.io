@@ -1,5 +1,10 @@
 [
   {
+    "DateTime": "2019-05-22T00:00:00Z",
+    "Text": "Follow us on Twitter for news, sneak peeks, and support!",
+    "URL": "https://twitter.com/GetShareX"
+  },
+  {
     "DateTime": "2019-02-23T00:00:00Z",
     "Text": "ShareX 12.4.1 has been released.",
     "URL": "https://getsharex.com/changelog"
