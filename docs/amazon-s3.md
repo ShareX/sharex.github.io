@@ -66,7 +66,7 @@ The bucket is where your uploaded files will be stored.
 * Select region you want bucket to be hosted in (You can use this web site to check ping of regions: [cloudping.info](http://www.cloudping.info))
 * Press `Next` 2 times, unless you want to change any default setting
 * Untick `Block all public access`
-* Press `Next` Once, unless you want to change any other settings
+* Press `Next` once, unless you want to change any other settings
 * Press `Create bucket`
 
 ### [Optional] Configure DNS for custom domain
