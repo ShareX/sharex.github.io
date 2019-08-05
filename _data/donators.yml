@@ -1,23 +1,23 @@
 - name: Zterio
   website: https://i5.io
-  amount: 320
+  amount: 380
 
 - name: Dinnerbone
   twitter: https://twitter.com/Dinnerbone
   website: https://dinnerbone.com
-  amount: 320
+  amount: 380
 
 - name: Dean Herbert
   twitter: https://twitter.com/ppy
   website: https://ppy.sh
-  amount: 292
+  amount: 362
 
 - name: Mattie Casper
-  amount: 190
+  amount: 215
 
 - name: xnaas
   website: https://www.xnaas.info
-  amount: 175
+  amount: 205
 
 - name: Hicoria
   facebook: https://www.facebook.com/hicoria
@@ -25,7 +25,7 @@
   amount: 150
 
 - name: Ralek
-  amount: 155
+  amount: 190
 
 - name: Christopher Baker
   amount: 125
@@ -33,18 +33,18 @@
 - name: Radley Sustaire
   github: https://github.com/RadGH
   website: https://radleysustaire.com
-  amount: 112
+  amount: 137
 
 - name: Kevin Ramsaur
   amount: 90
 
 - name: Botan ;)
   instagram: https://www.instagram.com/kyoukeiken
-  amount: 90
+  amount: 96
 
 - name: Mitchell Frith
   twitter: https://twitter.com/Mitch_SGG
-  amount: 95
+  amount: 115
 
 - name: Linus Willner
   twitter: https://twitter.com/linuswillner
@@ -61,7 +61,7 @@
 - name: Justin Wisecarver
   twitter: https://twitter.com/lithium720
   website: https://lithi.io
-  amount: 85
+  amount: 115
 
 - name: James Baggs
   github: https://github.com/jamesharrisonbaggs
@@ -74,7 +74,7 @@
 
 - name: TheTimmaeh
   twitter: https://twitter.com/TheTimmaeh
-  amount: 46
+  amount: 52
 
 - name: Nogar
   amount: 40
@@ -121,8 +121,11 @@
 
 - name: Fuzz
   steam: https://steamcommunity.com/id/SammyFuzz
-  amount: 20
+  amount: 620
 
 - name: Michelle Wexler
   website: https://www.onrainsagi.com
   amount: 50
+
+- name: Alexandr Kazakov
+  amount: 10
