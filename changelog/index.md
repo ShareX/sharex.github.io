@@ -33,7 +33,7 @@ title: Changelog
 * Added [Intel Quick Sync](https://en.wikipedia.org/wiki/Intel_Quick_Sync_Video) encoding support to screen recording, provides hardware H.264 encoding on Intel Sandy Bridge CPUs and up and hardware H.265 encoding on Skylake CPUs and up via a dedicated die on the processor chip (by [@sylveon](https://github.com/sylveon))
 * Added option to disable notification toast windows when active window is fullscreen (Task settings window -> Advanced tab -> DisableNotificationsOnFullscreen)
 * Added option to disable hotkeys when active window is fullscreen (Application settings window -> Advanced tab -> DisableHotkeysOnFullscreen)
-* Show balloon tip warning when application settings fail to save (Main reason we added this notification is because anti-virus softwares or the [controlled folder access](https://support.microsoft.com/en-us/help/4046851/windows-10-allow-blocked-app-windows-security) feature in Windows 10 tend to block ShareX from saving settings and users not become aware of it)
+* Show balloon tip warning when application settings fail to save (Main reason we added this notification was because anti-virus software or the [controlled folder access](https://support.microsoft.com/en-us/help/4046851/windows-10-allow-blocked-app-windows-security) feature in Windows 10 tend to block ShareX from saving settings without users being aware)
 * Added "Set public-read ACL on file" option to Google Cloud Storage (by [@lucario](https://github.com/lucario))
 * Support [wildcard characters](https://en.wikipedia.org/wiki/Wildcard_character) in history window filename filter and image history window search
 * Added random non ambiguous alphanumeric character support for file naming, example usage: `%rna{8}`
