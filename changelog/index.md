@@ -3,6 +3,45 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 13.0.0](https://github.com/ShareX/ShareX/releases/tag/v13.0.0) - 2019-08-24
+
+* Added thumbnail view mode to main window
+    * Added "Switch to list view" button to right click menu which can be used to return to list view
+    * Clicking on image file thumbnails shows fullscreen image preview
+    * For non-image files, file icon will be shown instead and clicking on them opens the file
+    * Clicking on thumbnail title will open URL or file path, depending on which one exists
+    * Added "Hide thumbnail title" button to right click menu to be able to have compact thumbnail view
+    * Colored glows at the top of thumbnails are status indicators; green means task is running, blue means task is done and red means upload failed
+    * File thumbnails can be dragged to copy file to Windows Explorer or another application
+* Added dark theme support which is enabled by default
+    * If you do not like the dark theme then you can return back to light theme by unchecking "Use dark theme" option from application settings window
+    * "Use dark theme" option only enables dark mode in main window and tray menu. If you would like all windows to use dark theme then check "Experimental dark theme" option in application settings window. The reason why we decided not to enable this option by default is because this option works by changing color properties of each control to dark theme colors but most controls in [Windows Forms](https://en.wikipedia.org/wiki/Windows_Forms) look bad when their color properties are changed or do not completely support changing the control colors
+* Added dark title bar support for Windows 10 17763 or higher (by [@sylveon](https://github.com/sylveon))
+* Moved "Use white ShareX icon" option to application settings general tab
+* Added image size label to fullscreen image viewer
+* Added select & move annotation tool (by [@Danielku15](https://github.com/Danielku15))
+* Added "Switch to drawing tool after shape selection" and "Switch to selection tool after shape drawing" annotation options (by [@Danielku15](https://github.com/Danielku15))
+* Added magnify annotation tool
+* Added [Zero Width Shortener](https://zws.im) URL shortener
+* Support video uploads to [Imgur](https://imgur.com) (Because Imgur is recognised as an image destination, to be able to upload video files to Imgur you must configure ShareX to upload mp4 files to Imgur from "Task settings window -> Uploader filters tab")
+* Support audio in [Gfycat](https://gfycat.com) video uploads
+* Support custom uploader syntax in FTP URL path
+* Added "Response info" tab to custom uploader settings window
+* Show update message box when about window update checker label is clicked instead of immediately downloading the update
+* If upload is stopped or failed when early copy URL option is enabled then clear the clipboard
+* Added expiration support to [Teknik](https://teknik.io) file and text uploaders
+* Added [Intel Quick Sync](https://en.wikipedia.org/wiki/Intel_Quick_Sync_Video) encoding support to screen recording, provides hardware H.264 encoding on Intel Sandy Bridge CPUs and up and hardware H.265 encoding on Skylake CPUs and up via a dedicated die on the processor chip (by [@sylveon](https://github.com/sylveon))
+* Added option to disable notification toast windows when active window is fullscreen (Task settings window -> Advanced tab -> DisableNotificationsOnFullscreen)
+* Added option to disable hotkeys when active window is fullscreen (Application settings window -> Advanced tab -> DisableHotkeysOnFullscreen)
+* Show balloon tip warning when application settings fail to save (Main reason we added this notification is because anti-virus softwares or the [controlled folder access](https://support.microsoft.com/en-us/help/4046851/windows-10-allow-blocked-app-windows-security) feature in Windows 10 tend to block ShareX from saving settings and users not become aware of it)
+* Added "Set public-read ACL on file" option to Google Cloud Storage (by [@lucario](https://github.com/lucario))
+* Support [wildcard characters](https://en.wikipedia.org/wiki/Wildcard_character) in history window filename filter and image history window search
+* Added random non ambiguous alphanumeric character support for file naming, example usage: `%rna{8}`
+* Added "Show stats" button to history window which shows statistics calculated from history
+* Added refresh button to image effects window
+* Added slice image effect
+* Added random position option to image watermark effect
+
 ## [ShareX 12.4.1](https://github.com/ShareX/ShareX/releases/tag/v12.4.1) - 2019-02-23
 
 * Bug fixes
