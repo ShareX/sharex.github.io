@@ -8,6 +8,9 @@
         $(".dropdown").on("show.bs.dropdown", function () {
             $('[data-toggle="popover"]').popover("hide");
         });
+        $(".modal").on("shown.bs.modal", function () {
+            $('[data-toggle="popover"]').popover("hide");
+        });
     });
 </script>
 
