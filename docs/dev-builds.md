@@ -7,6 +7,6 @@ title: Dev builds
 
 2. Click "Install dev build" button to start auto update progress.
 
-    If it gave error, most likely that could mean we uploaded new code changes and setup is not compiled with latest changes yet or latest code base is failing to compile. So you can wait few minutes and try clicking install button again.
+    If it gives you an error, it's most likely that we uploaded new code changes recently and setup has not compiled with latest changes yet or latest code base is failing to compile. So just wait a few minutes and try again.
 
     ![](/img/ScreenshotDevBuilds.png)
