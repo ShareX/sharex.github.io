@@ -8,7 +8,7 @@ title: Translation
 * Fluency in English
 * Good understanding of ShareX settings so that during translation you know exactly what you are translating
 * How to use GitHub so you can pull/push translations
-* Good patience - because translation can take long time and can be boring
+* Good patience - because translation can take a long time and can be boring
 * Please refrain from using machine translation e.g. Google Translate
 
 ## How to start translating?
@@ -17,7 +17,7 @@ We are using [ResX Resource Manager](https://github.com/tom-englert/ResXResource
 
 [https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager](https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager)
 
-Standalone version of it also exist here:
+Standalone version of it also exists here:
 
 [https://github.com/tom-englert/ResXResourceManager/releases](https://github.com/tom-englert/ResXResourceManager/releases) (Publish.zip)
 
