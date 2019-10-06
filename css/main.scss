@@ -116,6 +116,7 @@ body {
         
         .dropdown:hover .dropdown-menu {
             display:block;
+            z-index:1061;
         }
         
         .dropdown-menu {
