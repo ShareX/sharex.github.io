@@ -3,6 +3,53 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 13.1.0](https://github.com/ShareX/ShareX/releases/tag/v13.1.0) - 2020-03-01
+
+* Added "Theme" tab to the Application settings window
+    * If "Use custom theme" option is enabled then you can select "Dark" or "Light" theme presets from dropdown menu or make your own custom theme
+    * If you only want the main window to have custom theme then you can uncheck "Apply custom theme to all windows" option to disable automatic theming of other windows
+* Thumbnail view in main window now supports multi selection by holding <kbd>Ctrl</kbd> / <kbd>Shift</kbd> and selecting thumbnails
+* Thumbnail view now supports key shortcuts, previously only available in list view
+* Added thumbnail title location option to main window right click menu
+* Added "Run action" sub menu to main window task right click menu
+* Step annotation tool can now have a tail, which can be shown by dragging the resize node
+* Added week of year pattern for file naming: `%wy`
+* Added random emoji pattern for file naming: `%remoji{10}`
+* Added `URLEncodeIgnoreEmoji` option to Application settings Advanced tab which is needed when using emojis in file name. Currently this is only supported in [Amazon S3](https://aws.amazon.com/s3/) and [Google Cloud Storage](https://cloud.google.com/storage) uploaders
+* Added Persian language support (by [@pourmand1376](https://github.com/pourmand1376))
+* Added "Particles" image effect. For example, it can be used to [add snowflakes to screenshots](https://twitter.com/GetShareX/status/1207023568854360066)
+* Removed random position option from image watermark because "Particles" image effect can be used for the same purpose
+* Added multi color gradient support to border & background image effects
+* Preview image in image effects window now resizes automatically to fill empty area
+* Added social media buttons to bottom left of main window, such as [Twitter](https://twitter.com/GetShareX) and [Discord](https://discord.gg/ShareX)
+* Added "Video converter" tool, which supports encoding using these encoders:
+    * [H.264 / x264](https://en.wikipedia.org/wiki/X264)
+    * [H.265 / x265](https://en.wikipedia.org/wiki/X265)
+    * [VP8 (WebM)](https://en.wikipedia.org/wiki/VP8)
+    * [VP9 (WebM)](https://en.wikipedia.org/wiki/VP9)
+    * [MPEG-4 / Xvid](https://en.wikipedia.org/wiki/Xvid)
+    * [GIF](https://en.wikipedia.org/wiki/GIF)
+    * [WebP](https://en.wikipedia.org/wiki/WebP)
+    * [APNG](https://en.wikipedia.org/wiki/APNG)
+* Added "Image splitter" tool, which can be used for instance, to make giant emojis for Discord
+* Added color name label to color picker tool
+* Support special folder variables in "Actions" file paths, for example: `%ProgramFiles%`
+* Added [Opus](https://en.wikipedia.org/wiki/Opus_(audio_format)) as an option for FFmpeg audio codec (by [@Scrxtchy](https://github.com/Scrxtchy))
+* Added [VP9 (WebM)](https://en.wikipedia.org/wiki/VP9) encoding support to screen recording
+* In "Export / Import" tab added "Settings" and "History" checkboxes to let users select what they want to export
+* History is now stored as [JSON](https://en.wikipedia.org/wiki/JSON) instead of [XML](https://en.wikipedia.org/wiki/XML), XML history file will be automatically migrated to JSON history file on startup
+* Screen recording encoding progress percentage is now available in tray icon tooltip
+* History window now supports mass copying (by [@C03](https://github.com/C03))
+* Added screen color picker support to color dialogs in region capture
+* In QR code window, decode result links are now clickable
+* In file exists window support <kbd>Enter</kbd> and <kbd>Esc</kbd> inputs
+* Removed [Google+](https://plus.google.com) URL sharing service
+
+## [ShareX 13.0.1](https://github.com/ShareX/ShareX/releases/tag/v13.0.1) - 2019-08-28
+
+* Bug fixes
+* Removed [TinyPic](https://tinypic.com) image uploader
+
 ## [ShareX 13.0.0](https://github.com/ShareX/ShareX/releases/tag/v13.0.0) - 2019-08-24
 
 * Added thumbnail view mode to main window
