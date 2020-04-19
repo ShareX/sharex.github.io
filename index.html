@@ -275,21 +275,21 @@ layout: default
 <!-- begin olark code -->
 <script data-cfasync="false" type='text/javascript'>
     /*<![CDATA[*/
-    window.olark || (function(c) {
+    window.olark || (function (c) {
         var f = window,
             d = document,
             l = f.location.protocol == "https:" ? "https:" : "http:",
             z = c.name,
             r = "load";
-        var nt = function() {
-            f[z] = function() {
+        var nt = function () {
+            f[z] = function () {
                 (a.s = a.s || []).push(arguments)
             };
             var a = f[z]._ = {},
                 q = c.methods.length;
             while (q--) {
-                (function(n) {
-                    f[z][n] = function() {
+                (function (n) {
+                    f[z][n] = function () {
                         f[z]("call", n, arguments)
                     }
                 })(c.methods[q])
@@ -299,7 +299,7 @@ layout: default
             a.p = {
                 0: +new Date
             };
-            a.P = function(u) {
+            a.P = function (u) {
                 a.p[u] = new Date - a.p[0]
             };
 
@@ -308,7 +308,7 @@ layout: default
                 f[z](r)
             }
             f.addEventListener ? f.addEventListener(r, s, false) : f.attachEvent("on" + r, s);
-            var ld = function() {
+            var ld = function () {
                 function p(hd) {
                     hd = "head";
                     return ["<", hd, "></", hd, "><", i, ' onl' + 'oad="var d=', g, ";d.getElementsByTagName('head')[0].", j, "(d.", h, "('script')).", k, "='", l, "//", a.l, "'", '"', "></", i, ">"].join("")

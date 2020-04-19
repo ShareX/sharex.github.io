@@ -53,8 +53,7 @@ function GetReleases(repo) {
                 );
         }
 
-        if (totalDownloadCount > 0)
-        {
+        if (totalDownloadCount > 0) {
             $(".total-downloads").text(" (" + totalDownloadCount.toLocaleString() + " downloads)");
         }
 
