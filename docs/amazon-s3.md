@@ -18,7 +18,9 @@ We are going to create this policy to increase our security by giving only PutOb
 * Click `Service`, type `S3` and then select `S3`
 * Click `Actions`, type `PutObject` and then select both `PutObject` and `PutObjectAcl` to give only put object permission
 * Click `Resources`, make sure `Specific` is selected and then click the `Add ARN` link
-* Select `Any` to give access to all your buckets. You can uncheck `Any` later if you prefer to use a specific bucket name instead
+* Select `Any` to give access to all your buckets
+
+**Note:** You can uncheck `Any` later if you prefer to use a specific bucket name instead.
 * Select `Any` also for object name
 * Press `Add` in `Add ARN(s)` dialog
 * Press `Review policy`
