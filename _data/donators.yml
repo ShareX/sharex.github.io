@@ -1,6 +1,6 @@
 - name: Zterio
   website: https://i5.io
-  amount: 380
+  amount: 460
 
 - name: Dinnerbone
   twitter: https://twitter.com/Dinnerbone
@@ -10,14 +10,14 @@
 - name: Dean Herbert
   twitter: https://twitter.com/ppy
   website: https://ppy.sh
-  amount: 362
+  amount: 442
 
 - name: Mattie Casper
   amount: 215
 
 - name: xnaas
   website: https://www.xnaas.info
-  amount: 205
+  amount: 245
 
 - name: Hicoria
   facebook: https://www.facebook.com/hicoria
@@ -25,7 +25,7 @@
   amount: 150
 
 - name: Ralek
-  amount: 190
+  amount: 230
 
 - name: Christopher Baker
   amount: 125
@@ -33,14 +33,14 @@
 - name: Radley Sustaire
   github: https://github.com/RadGH
   website: https://radleysustaire.com
-  amount: 137
+  amount: 182
 
 - name: Kevin Ramsaur
   amount: 90
 
 - name: Botan ;)
   instagram: https://www.instagram.com/kyoukeiken
-  amount: 96
+  amount: 104
 
 - name: Mitchell Frith
   twitter: https://twitter.com/Mitch_SGG
@@ -61,7 +61,7 @@
 - name: Justin Wisecarver
   twitter: https://twitter.com/lithium720
   website: https://lithi.io
-  amount: 115
+  amount: 155
 
 - name: James Baggs
   github: https://github.com/jamesharrisonbaggs
@@ -74,7 +74,7 @@
 
 - name: TheTimmaeh
   twitter: https://twitter.com/TheTimmaeh
-  amount: 52
+  amount: 60
 
 - name: Nogar
   amount: 40
@@ -121,27 +121,27 @@
 
 - name: Fuzz
   steam: https://steamcommunity.com/id/SammyFuzz
-  amount: 620
+  amount: 700
 
 - name: Michelle Wexler
   website: https://www.onrainsagi.com
   amount: 50
 
 - name: Alexandr Kazakov
-  amount: 10
+  amount: 60
 
 - name: Junior™
   twitter: https://twitter.com/juniortm
-  amount: 20
+  amount: 25
 
 - name: Scott Sarver
-  amount: 10
+  amount: 70
 
 - name: Linistry
   facebook: https://www.facebook.com/Linistry
   instagram: https://www.instagram.com/officiallinistry
   website: https://linistry.com
-  amount: 70
+  amount: 100
 
 - name: Kamil Monicz
   github: https://github.com/Zaczero
@@ -149,4 +149,11 @@
   amount: 25
 
 - name: DiFFtY
+  amount: 20
+
+- name: Yme Brugts
+  github: https://github.com/ymebrugts
+  amount: 21
+
+- name: Hooke007
   amount: 10
