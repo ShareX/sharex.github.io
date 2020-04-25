@@ -157,3 +157,7 @@
 
 - name: Hooke007
   amount: 10
+
+- name: SafeShare.tv
+  website: https://safeshare.tv
+  amount: 450
