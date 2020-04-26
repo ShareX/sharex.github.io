@@ -49,6 +49,7 @@ We are going to create this policy to increase our security by giving only PutOb
 * Press `Next: Tags`
 * Press `Next: Review`
 * Press `Create user`
+
 **Important:** In this page, either make a record of `Access key ID` and `Secret access key` somewhere or press `Download .csv` to save them as a file. We need these later in ShareX.
 * Press `Close`
 
@@ -57,8 +58,9 @@ We are going to create this policy to increase our security by giving only PutOb
 You don't need to do these but it is suggested to keep your account secure.
 
 * Open [Identity and Access Management page (Dashboard)](https://console.aws.amazon.com/iam/home)
+* Make sure all security status items are checked as green on this page
 
-Make sure all security status items are checked as green on this page. You need to activate multi-factor authentication and create a password policy which should be easy.
+You may need to activate multi-factor authentication and create a password policy which should be easy.
 
 ### Create S3 bucket
 
@@ -69,7 +71,8 @@ The bucket is where your uploaded files will be stored.
 **Important:** If you are going to use your own domain with S3 then the bucket name should be the same as your CNAME. For example, if you want to use this URL: `https://i.example.com/image.png` then bucket name should be `i.example.com`. [Click here for more info.](http://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html#VirtualHostingCustomURLs)
 * Type the bucket name you want
 * Select the region you want the bucket to be hosted in
-You can use this website to check ping of regions: [cloudping.info](https://www.cloudping.info)
+
+**Tip:** You can use this website to check ping of regions: [cloudping.info](https://www.cloudping.info)
 * If you want your uploaded files to be accessible by URL then make sure `Block all public access` option is unchecked
 * Press `Create bucket`
 
