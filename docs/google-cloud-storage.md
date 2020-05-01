@@ -46,6 +46,7 @@ For example if you are using [Cloudflare](https://www.cloudflare.com), your buck
 * Fill bucket name same as which you created
 * For the upload path I suggest using `%y/%mo` which creates such folder `2017/12`
 * If you are using a custom domain fill it in. Google Cloud Storage doesn't support custom domain `https` natively, so unless you are using a tls proxy such as [Cloudflare](https://www.cloudflare.com), you must prepend `http` protocol to your domain. So in the custom domain box you would fill in exactly `http://i.example.com`
+* If you are using uniform permissions in your bucket, make sure to untick `Set public-read ACL on file`, since ACL isn't supported in uniform permission buckets. 
 * Now you can close destination settings window
 * In main window make sure to select Google Cloud Storage as destination for image uploader, text uploader and file uploader
 
