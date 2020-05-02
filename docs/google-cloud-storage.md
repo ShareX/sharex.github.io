@@ -26,6 +26,7 @@ Google Cloud Storage isn't free, it's billed based on usage, not a static monthl
 * Click `Create bucket`
 * If you plan on using a custom domain, you must first verify the domain using this [guide](https://cloud.google.com/storage/docs/domain-name-verification), then name your bucket the domain you're going to use. For example, `https://i.example.com/image.png` bucket should be named `i.example.com`
 * Storage class should be `regional` if you plan on using a CDN like [Cloudflare](https://www.cloudflare.com), or `multi-regional` if not.
+* Access control should be `Fine-grained` 
 * Click `Create`
 
 ### [Optional] Configure DNS for custom domain
