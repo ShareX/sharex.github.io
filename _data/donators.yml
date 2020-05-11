@@ -161,3 +161,8 @@
 - name: SafeShare.tv
   website: https://safeshare.tv
   amount: 450
+
+- name: Rosie Leung
+  github: https://github.com/rosieleung
+  website: https://rosieleung.com
+  amount: 60
