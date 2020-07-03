@@ -239,6 +239,10 @@ body {
     }
 }
 
+nav.navbar:hover ~ .popover {
+    pointer-events: none;
+}
+
 @media (max-width: 767px) {
     .popover {
         display: none !important;
