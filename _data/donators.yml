@@ -169,3 +169,7 @@
 
 - name: Jonathan@AmberstoneDigital
   amount: 10
+
+- name: John O'Reilly
+  twitter: https://twitter.com/John_O_Really
+  amount: 20
