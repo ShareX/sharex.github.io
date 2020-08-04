@@ -20,7 +20,8 @@ function GetLatestReleaseInfo() {
         }
 
         var releaseInfo = "Version: " + release.tag_name.substring(1) +
-            "\nSize: " + (asset.size / 1024 / 1024).toFixed(2) + " MB" +
+            "\nFile size: " + (asset.size / 1024 / 1024).toFixed(2) + " MB" +
+            "\nRelease date: " + moment(asset.updated_at).format("YYYY-MM-DD") +
             "\nReleased: " + timeAgo +
             "\nDownload count: " + downloadCount.toLocaleString();
 
