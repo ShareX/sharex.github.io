@@ -17,7 +17,7 @@ function GetReleases(repo) {
                 continue;
             }
             var asset = release.assets[0];
-            var fileSize = Math.round(asset.size / 1024);
+            var fileSize = asset.size / 1024 / 1024;
             var downloadCount = 0;
             for (var i2 = 0; i2 < release.assets.length; i2++) {
                 downloadCount += release.assets[i2].download_count;
@@ -38,7 +38,7 @@ function GetReleases(repo) {
                     .append($("<td>")
                         .append($("<a>")
                             .attr("href", asset.browser_download_url)
-                            .text(fileSize.toLocaleString() + " KB")
+                            .text(fileSize.toFixed(2) + " MB")
                         )
                     )
                     .append($("<td>")
