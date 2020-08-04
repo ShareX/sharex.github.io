@@ -18,7 +18,12 @@ function GetLatestReleaseInfo() {
         } else {
             timeAgo = (dateDiff / oneDay).toFixed(1) + " days ago";
         }
-        var releaseInfo = "Version: " + release.tag_name.substring(1) + "\nReleased: " + timeAgo + "\nDownload count: " + downloadCount.toLocaleString();
+
+        var releaseInfo = "Version: " + release.tag_name.substring(1) +
+            "\nSize: " + (asset.size / 1024 / 1024).toFixed(2) + " MB" +
+            "\nReleased: " + timeAgo +
+            "\nDownload count: " + downloadCount.toLocaleString();
+
         $(".sharex-download").attr("href", asset.browser_download_url);
         $(".sharex-download").attr("title", "<a href=\"downloads/\"><div>" + releaseInfo + "</div></a>");
 
