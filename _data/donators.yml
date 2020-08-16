@@ -173,3 +173,6 @@
 - name: John O'Reilly
   twitter: https://twitter.com/John_O_Really
   amount: 20
+
+- name: VJ Galaxy
+  amount: 10
