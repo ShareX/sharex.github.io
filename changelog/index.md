@@ -3,6 +3,78 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 13.2.0](https://github.com/ShareX/ShareX/releases/tag/v13.2.0) - 2020-08-31
+
+* Upgraded .NET Framework to version [4.7.2](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-472). If 4.7.2 or newer version of .NET Framework is not installed on system then it will be installed automatically by the ShareX installer
+* Added smart eraser annotation tool[*](https://twitter.com/GetShareX/status/1239899819910541313)
+* Added image alignment option to image combiner tool
+* Added experimental `UseAlternativeClipboardCopyImage` option to ["Application settings window -> Advanced tab"](https://twitter.com/GetShareX/status/1295347012775358465) which copies images to clipboard with these formats to let supported applications to read image with transparency and file name info:
+    * 24 bitmap with background filled white
+    * 32 bit PNG image
+    * 32 bit premultiplied DIB
+    * HTML fragment (for filename)
+* Added option to support transparent region selection in screen recorder
+* Added light version of dark icons which will be used automatically in main window and annotation bar when current theme is dark
+* Use custom theme colors in region capture tooltips
+* In region capture when moving, resizing or panning use grab cursor
+* Added hotkeys for image splitter, image thumbnailer, video converter and QR code (Decode from screen)
+* Added "Override screenshots folder" option to hotkey task settings window
+* Added icons to each hotkey task in hotkey task settings window
+* If checker size option of theme is 0 then use solid color for backgrounds
+* Region capture "Enable animations" option will also affect border ants animation
+* Added raw URL option to [Seafile](https://www.seafile.com) file uploader (by [@user6323](https://github.com/user6323))
+* Added "[Amazon S3 One Zone-Infrequent Access](https://aws.amazon.com/s3/storage-classes/#__)" and "[Amazon S3 Intelligent-Tiering](https://aws.amazon.com/s3/storage-classes/#Unknown_or_changing_access)" Amazon S3 storage classes
+* Added shared drive support to Google Drive file uploader (by [@SupSuper](https://github.com/SupSuper))
+* Added Portuguese language (by [@FarewellAngelina](https://github.com/FarewellAngelina))
+* Allow access level selection for [Box](https://www.box.com) file uploader shareable link (by [@fib25](https://github.com/fib25))
+* Removed apply theme button as theme changes will now be applied automatically
+* Removed experimental custom theme check box, so now it is always enabled if custom theme is enabled
+* Improvements to settings save/load system to avoid unexpected setting resets:
+    * When settings are saved to file, it is stored in [Windows hard disk cache](https://docs.microsoft.com/en-us/windows/win32/fileio/file-caching), so when electricity is lost or PC is not shutdown properly while settings are already in hard disk cache then this was causing the latest settings file and backup of previous settings file to be corrupted, whereas now ShareX bypasses hard disk cache while saving settings and copying backups to avoid this issue
+    *Added two more fallback options when loading settings: temp and last weekly backup file. So if the latest and previous setting files somehow manage to become corrupt then as a last resort ShareX will load the last weekly backup of the settings file. New settings load fallback order is:
+        * Latest setting file: `Documents\ShareX\ApplicationConfig.json`
+        * Temp latest setting file: `Documents\ShareX\ApplicationConfig.json.temp`
+        * Backup of previous setting file: `Documents\ShareX\Backup\ApplicationConfig.json`
+        * Last weekly backup file: `Documents\ShareX\Backup\ApplicationConfig-2020-05-W22.json`
+* Uploader passwords are now encrypted using [DPAPI](https://en.wikipedia.org/wiki/Data_Protection_API) while saving settings
+    * *Important:* If you would like to backup your settings then use "Application settings window -> Settings tab -> Export button" instead of copying `Documents\ShareX` folder, otherwise you may have problems with encrypted passwords
+* Improvements to gradient maker window which is mainly used for image effects:
+    * Added gradient presets list[*](https://twitter.com/GetShareX/status/1288114777181437956)
+    * Allow creating gradient even when start (0%) and end (100%) gradient stop is missing
+    * Gradient stops will be automatically ordered by location
+    * Added "Reverse" button to be able to reverse locations of gradient stops
+    * Show colors as icon in gradient stop list which also helps seeing transparent colors because of checkered background
+* Image effect related changes:
+    * Redesigned image effects window
+    * Register `.sxie` extension for ShareX image effects
+    * Added `-ImageEffect "filePath"` CLI command, which is what `.sxie` extension use
+    * Added image effect packager ("Packager" button in image effects window), which lets you create `.sxie` files. Advantage of packager compared to previous `.json` export is package can contain image files required for image effect to function, but also ease of importing image effects for users which is just double clicking `.sxie` file[*](https://twitter.com/GetShareX/status/1289192041398726659)
+        * You can check out the examples in the #image-effects channel in our [Discord server](https://discord.gg/ShareX) or show your image effects to us[*](https://twitter.com/GetShareX/status/1300199776126996481)
+    * Added "ImageEffects" folder to ShareX personal folder
+    * Added `%ShareXImageEffects%` path variable which will be used in all image effects which requires file or folder path, so when you supply path which is inside ShareX image effects folder then that section of the path will be automatically replaced with `%ShareXImageEffects%`. Reason for this is, if you share image effect to another user and if that users image effects folder is in custom location then path will still match correctly. Image effect packager also making sure that you can't select assets folder outside of ShareX image effects folder to make sure that paths will match correctly
+    * Added interpolation mode option to "Image" (previously called "Image watermark") image effect, for example `Nearest neighbor` is handy when you want to make image border with 1px length image and extend it to fill whole image length, without this option extended image was looking blurry because of anti aliasing while drawing enlarged image
+    * Added compositing mode option to "Image" image effect, for example `Source copy` option is handy when you want to draw image border corner which is rounded and contains transparency, those transparent pixels will be drawn directly without blending with image underneath that way you can make sure corners are transparent
+    * Added opacity option to "Image" image effect
+    * Added size aspect ratio support to "Image" image effect when `0` is used for width or height
+    * Added text rendering mode option to "Text watermark" image effect
+    * Added "Text" image effect, it allows drawing text with gradient outline and shadow[*](https://twitter.com/GetShareX/status/1285734759251968001)
+    * Added "RGB split" image effect (by [@L1Q](https://github.com/L1Q))
+    * Add "Force proportions" image effect (by [@L1Q](https://github.com/L1Q))
+    * Added palette size option to "Selective color" image effect
+    * Added padding and outline only options to "Outline" image effect
+    * *Backward compatibility breaking change:* Removed `GradientType`, `Color2` and `UseCustomGradient` options from image effects, instead `UseGradient` and `Gradient` options can be used
+* Added area and perimeter info to ruler tool
+* Added "Add image effects" button to main window task menu
+* Added `-ImageEffects "filePath"` CLI command
+* In main window thumbnail view if upload fails then shows error label top of thumbnail which when clicked will open error window
+* Added "Pick color from clipboard" button to color picker
+* If your clipboard contains color (hex or rgb) while opening any color dialog then it will load color from clipboard automatically and show tooltip to notify user
+* Updated [Kutt](https://kutt.it) API to v2 and added custom domain support
+* Removed file extension from YouTube video title
+* For new installations default tray middle click action now is "Upload from clipboard with content viewer"
+* Added display path options to directory indexer tool (by [@JamieSharpe](https://github.com/JamieSharpe))
+* Image editor auto crop tool will account all inserted images and annotations while calculating crop region (by [@Scrxtchy](https://github.com/Scrxtchy))
+
 ## [ShareX 13.1.0](https://github.com/ShareX/ShareX/releases/tag/v13.1.0) - 2020-03-01
 
 * Added "Theme" tab to the Application settings window
