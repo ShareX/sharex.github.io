@@ -37,7 +37,7 @@ title: Changelog
         * Backup of previous setting file: `Documents\ShareX\Backup\ApplicationConfig.json`
         * Last weekly backup file: `Documents\ShareX\Backup\ApplicationConfig-2020-05-W22.json`
 * Uploader passwords are now encrypted using [DPAPI](https://en.wikipedia.org/wiki/Data_Protection_API) while saving settings
-    * *Important:* If you would like to backup your settings then use "Application settings window -> Settings tab -> Export button" instead of copying `Documents\ShareX` folder, otherwise you may have problems with encrypted passwords
+    * **Important:** If you would like to backup your settings then use "Application settings window -> Settings tab -> Export button" instead of copying `Documents\ShareX` folder, otherwise you may have problems with encrypted passwords
 * Improvements to gradient maker window which is mainly used for image effects:
     * Added gradient presets list[*](https://twitter.com/GetShareX/status/1288114777181437956)
     * Allow creating gradient even when start (0%) and end (100%) gradient stop is missing
@@ -62,7 +62,7 @@ title: Changelog
     * Add "Force proportions" image effect (by [@L1Q](https://github.com/L1Q))
     * Added palette size option to "Selective color" image effect
     * Added padding and outline only options to "Outline" image effect
-    * *Backward compatibility breaking change:* Removed `GradientType`, `Color2` and `UseCustomGradient` options from image effects, instead `UseGradient` and `Gradient` options can be used
+    * **Backward compatibility breaking change:** Removed `GradientType`, `Color2` and `UseCustomGradient` options from image effects, instead `UseGradient` and `Gradient` options can be used
 * Added area and perimeter info to ruler tool
 * Added "Add image effects" button to main window task menu
 * Added `-ImageEffects "filePath"` CLI command
