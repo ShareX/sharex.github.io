@@ -170,9 +170,10 @@
 - name: Jonathan@AmberstoneDigital
   amount: 10
 
-- name: John O'Reilly
+- name: John O'Really
   twitter: https://twitter.com/John_O_Really
-  amount: 20
+  website: https://johno.re
+  amount: 60
 
 - name: VJ Galaxy
   amount: 10
