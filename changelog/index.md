@@ -3,7 +3,7 @@ layout: markdown
 title: Changelog
 ---
 
-## [ShareX 13.2.0](https://github.com/ShareX/ShareX/releases/tag/v13.2.0) - 2020-08-31
+## [ShareX 13.2.1](https://github.com/ShareX/ShareX/releases/tag/v13.2.1) - 2020-09-08
 
 * Upgraded .NET Framework to version [4.7.2](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-472). If 4.7.2 or newer version of .NET Framework is not installed on system then it will be installed automatically by the ShareX installer
 * Added smart eraser annotation tool[*](https://twitter.com/GetShareX/status/1239899819910541313)
