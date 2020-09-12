@@ -1468,8 +1468,5 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 
 ## ZUploader 1.0 - 2010-03-28
 
-* 1.0 - Initial version
+* 1.0 - Initial version which replaces parallel project [ZScreen 1.0 (2007-08-22) to 4.9 (2012-03-08)](https://raw.githubusercontent.com/ShareX/ZScreen_Google_Code/master/ZScreenLib/Documents/VersionHistory.txt)
 
-## ZScreen 1.0 (2007-08-22) to 4.9 (2012-03-08)
-
-* [ZScreen version history](https://raw.githubusercontent.com/ShareX/ZScreen_Google_Code/master/ZScreenLib/Documents/VersionHistory.txt)
