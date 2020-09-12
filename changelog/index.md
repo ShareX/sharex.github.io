@@ -5,6 +5,11 @@ title: Changelog
 
 ## [ShareX 13.2.1](https://github.com/ShareX/ShareX/releases/tag/v13.2.1) - 2020-09-08
 
+* Bug fixes
+* Updated FFmpeg download URL to [GitHub](https://github.com/ShareX/FFmpeg/releases) because [previous host has announced closure](https://twitter.com/Zeranoe/status/1300596971934224385)
+
+## [ShareX 13.2.0](https://github.com/ShareX/ShareX/releases/tag/v13.2.0) - 2020-08-31
+
 * Upgraded .NET Framework to version [4.7.2](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-472). If 4.7.2 or newer version of .NET Framework is not installed on system then it will be installed automatically by the ShareX installer
 * Added smart eraser annotation tool[*](https://twitter.com/GetShareX/status/1239899819910541313)
 * Added image alignment option to image combiner tool
