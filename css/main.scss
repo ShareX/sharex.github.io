@@ -369,11 +369,16 @@ nav.navbar:hover ~ .popover {
     padding-top: $container-padding-double;
     padding-bottom: $container-padding;
 
+    .card-columns {
+        column-gap: 0.75rem;
+    }
+
     .image-effect {
-        margin-bottom: $container-padding;
+        margin-bottom: $container-padding-half;
         padding: 1rem;
         background: $background-shade;
         text-align: center;
+        border: none;
         border-radius: 6px;
         box-shadow: 0px 4px 0px #121212;
 

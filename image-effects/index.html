@@ -5,17 +5,15 @@ title: Image effects
 
 <div class="container-image-effects">
     <div class="container">
-        <div class="row">
-            {% for image-effect in site.data.image-effects %}<div class="col-sm-4">
-                <div class="image-effect">
-                    <div class="image-effect-title">
-                        <a class="image-effect-name" href="/image-effects/{{ image-effect.name }}.sxie">{{ image-effect.title }}</a>
-                        <span class="image-effect-author">by {{ image-effect.author }}</span>
-                    </div>
-                    <a href="/image-effects/{{ image-effect.name }}.sxie">
-                        <img class="img-fluid" src="/img/image-effects/{{ image-effect.name }}.png" alt="{{ image-effect.title }} screenshot" />
-                    </a>
+        <div class="card-columns">
+            {% for image-effect in site.data.image-effects %}<div class="card image-effect">
+                <div class="image-effect-title">
+                    <a class="image-effect-name" href="/image-effects/{{ image-effect.name }}.sxie">{{ image-effect.title }}</a>
+                    <span class="image-effect-author">by {{ image-effect.author }}</span>
                 </div>
+                <a href="/image-effects/{{ image-effect.name }}.sxie">
+                    <img class="img-fluid" src="/img/image-effects/{{ image-effect.name }}.png" alt="{{ image-effect.title }} screenshot" />
+                </a>
             </div>
             {% endfor %}
         </div>
