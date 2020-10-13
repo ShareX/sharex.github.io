@@ -153,7 +153,7 @@
 
 - name: Yme Brugts
   github: https://github.com/ymebrugts
-  amount: 21
+  amount: 81
 
 - name: Hooke007
   amount: 10
@@ -177,3 +177,10 @@
 
 - name: VJ Galaxy
   amount: 10
+
+- name: Hestia
+  twitter: https://twitter.com/hestia__23
+  twitch: https://www.twitch.tv/hestia_23
+  youtube: https://www.youtube.com/user/23hestia
+  instagram: http://instagram.com/alethia23
+  amount: 45
