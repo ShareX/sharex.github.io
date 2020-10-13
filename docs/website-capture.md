@@ -59,6 +59,6 @@ If you want to take a full-page screen capture of a website, you can use the bui
     
 ## Chrome or Edge (using extensions)
 
-* Go to [Chrome extensions](https://console.aws.amazon.com/iam/home?#/policies) page and search for `full page screen capture`, and install.
+* Go to [Chrome extensions](https://chrome.google.com/webstore/category/extensions) page and search for `full page screen capture`, and install.
 
 * If you cannot decide which one to use, then we recommend [GoFullPage - Full Page Screen Capture](https://chrome.google.com/webstore/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl/related).
