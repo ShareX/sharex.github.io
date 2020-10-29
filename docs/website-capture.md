@@ -56,3 +56,9 @@ If you want to take a full-page screen capture of a website, you can use the bui
 7. Click the three dots on the right side of the device toolbar, then select `Capture full size screenshot` to initiate the capture:
 
     ![](/img/ScreenshotWebsiteCaptureChromeAlternative4.png)
+    
+## Chrome or Edge (using extensions)
+
+* Go to [Chrome extensions](https://chrome.google.com/webstore/category/extensions) page and search for `full page screen capture`, and install.
+
+* If you cannot decide which one to use, then we recommend [GoFullPage - Full Page Screen Capture](https://chrome.google.com/webstore/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl/related).
