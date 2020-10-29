@@ -3,6 +3,44 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 13.3.0](https://github.com/ShareX/ShareX/releases/tag/v13.3.0) - 2020-10-29
+
+**[Action Required] Important announcement for Windows 7 users:**
+
+We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Microsoft recommends that a specific TLS version should not be hardcoded](https://docs.microsoft.com/en-us/dotnet/framework/network-programming/tls) so that way the latest supported TLS protocols by the operating system can be used automatically. That is what we did too but then after our previous ShareX release we noticed even though Windows 7 supports TLS 1.2, it was still not using the latest version automatically and needed to hardcode TLS 1.2 in our code to support it. Therefore, due to the lack of TLS 1.2 support **auto updater of ShareX is broken for Windows 7 users** and ShareX must be updated manually from [ShareX web site](https://getsharex.com/downloads/) or you can download [dev build inside ShareX app](https://getsharex.com/docs/dev-builds).
+
+* Added image effects listing to after capture tasks sub menu
+* Added menu icon size option to region capture
+* Added lock menu option to region capture that way toolbar grips can be hidden
+* Added duplicate button and hotkey <kbd>Ctrl + D</kbd> to image editor
+* In image editor show menu tooltips for task status
+* Added option to swap <kbd>Enter</kbd> key behavior in annotation text input box
+* Added arrow head direction option (by [@Scrxtchy](https://github.com/Scrxtchy))
+* Added bayer scale option to GIF bayer dithering mode (by [@Scrxtchy](https://github.com/Scrxtchy))
+* Screen record encoding progress is now shown in tray icon
+* Added watch folder option to automatically move files to screenshots folder
+* Added "Replace result URL using regular expression substitutions" option to task settings
+* Added file compare support to "Hash check" tool
+* Added clipboard viewer tool
+* Created [image effects web page](https://getsharex.com/image-effects) which you can download example image effects, and also added link to it in image effects window
+* When `.sxie` file opened, ask for enabling image effects if not already enabled
+* Removed export/import buttons from image effects window, because packager button can be now used for exporting image effects
+* Added "Color depth" image effect (by [@somethingSTRANGE](https://github.com/somethingSTRANGE))
+* In "Image" image effect allow using `-1` for absolute size to use 100% canvas size, so `-1` width means 100% canvas width
+* Added margin mode option to "Canvas" image effect (by [@7coil](https://github.com/7coil))
+* Added context menu font option to theme settings
+* Visual changes to hotkey tips in main window
+* Added error message support to custom uploaders
+* Added Japanese language support (by [@kanaxx](https://github.com/kanaxx))
+* Removed <kbd>Q</kbd> hotkey from region capture because users keep pressing it accidentally
+* Added screen color picker format options to include 0-1 colors `$r1`, `$g1`, `$b1` (by [@JakeCover](https://github.com/JakeCover))
+* Added alternative screen color picker format, which can be used by <kbd>Ctrl + click</kbd>, default format is: `$r255, $g255, $b255` (by [@tomastalian3](https://github.com/tomastalian3))
+* Added screen color picker info text option, default format is: `RGB: $r255, $g255, $b255$nHex: $hex$nX: $x Y: $y`
+* Added maximum item limit option to history window
+* Using custom text notification window now instead of Windows notification/balloon tip
+* Added first time minimize to tray notification
+* Added "DevMode" option to application settings advanced tab, this option enables some hidden features such as "Restart ShareX as admin" button in tray menu
+
 ## [ShareX 13.2.1](https://github.com/ShareX/ShareX/releases/tag/v13.2.1) - 2020-09-08
 
 * Bug fixes
