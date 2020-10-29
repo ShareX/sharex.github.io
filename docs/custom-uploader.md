@@ -41,7 +41,7 @@ List of HTTP request methods available:
 * PATCH
 * DELETE
 
-If request have no body and only parameters will be used then `GET` method is preferred. If body is `Form data (multipart/form-data` then `POST` method is preferred.
+If request have no body and only parameters will be used then `GET` method is preferred. If body is `Form data (multipart/form-data)` then `POST` method is preferred.
 
 ## URL
 
@@ -135,6 +135,7 @@ This syntax is usable in the following sections, with a few exceptions:
 * URL
 * Thumbnail URL
 * Deletion URL
+* Error message
 
 For example syntaxes which involves parsing response only usable in URL sections as expected.
 
