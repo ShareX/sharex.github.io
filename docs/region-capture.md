@@ -12,6 +12,7 @@ title: Region capture
 * <kbd>Shift + Delete</kbd> Delete all shapes
 * <kbd>Ctrl + C</kbd> Copy position and size info
 * <kbd>Ctrl + V</kbd> Paste image or text
+* <kbd>Ctrl + D</kbd> Duplicate shape
 * <kbd>Ctrl + Z</kbd> Undo shape
 * <kbd>Arrow keys</kbd> Move cursor / Resize current shape from bottom right corner
 * <kbd>Alt + Arrow keys</kbd> Resize current shape from top left corner
@@ -45,7 +46,6 @@ title: Region capture
 * <kbd>Space</kbd> Fullscreen capture
 * <kbd>1, 2, 3 ... 0</kbd> Specific monitor capture
 * <kbd>~</kbd> Active monitor capture
-* <kbd>Q</kbd> Toggle multi region mode
 * <kbd>Double left click</kbd> <kbd>Enter</kbd> If multi region mode is enabled then capture regions
 
 ### Image editor
