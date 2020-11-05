@@ -427,24 +427,37 @@ Example header:
 | --- | --- |
 | Authorization | Basic $base64:username:password$ |
 
-## Generating SXCU files
+## SXCU file
 
-ShareX custom uploader (SXCU) files are JSON files at their core. The JSON schema looks like this:
-```
+ShareX custom uploader (SXCU) files are JSON files at their core. Example JSON schema looks like this:
+
+```json
 {
-  "Version": "13.2.1",
-  "DestinationType": "ImageUploader",
+  "Version": "13.3.0",
+  "Name": "Example",
+  "DestinationType": "ImageUploader, TextUploader, FileUploader",
   "RequestMethod": "POST",
-  "RequestURL": "example.com",
+  "RequestURL": "https://example.com",
   "Parameters": {
-    "ExampleParam": "ExampleValue"
+    "Parameter1": "Value1",
+    "Parameter2": "Value2",
+    "Parameter3": "Value3"
   },
   "Headers": {
-    "ExampleHeader": "ExampleValue"
+    "Header1": "Value1",
+    "Header2": "Value2",
+    "Header3": "Value3"
   },
   "Body": "MultipartFormData",
   "Arguments": {
-    "ExampleBody": "ExampleValue"
+    "Argument1": "Value1",
+    "Argument2": "Value2",
+    "Argument3": "Value3"
   },
-  "FileFormName": "FileNameHere"
+  "FileFormName": "file",
+  "URL": "$json:url$",
+  "ThumbnailURL": "$json:thumbnailurl$",
+  "DeletionURL": "$json:deletionurl$",
+  "ErrorMessage": "$json:error$"
 }
+```
