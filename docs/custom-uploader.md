@@ -437,7 +437,7 @@ ShareX custom uploader (SXCU) files are JSON files at their core. Example JSON s
   "Name": "Example",
   "DestinationType": "ImageUploader, TextUploader, FileUploader",
   "RequestMethod": "POST",
-  "RequestURL": "https://example.com",
+  "RequestURL": "https://example.com/upload.php",
   "Parameters": {
     "Parameter1": "Value1",
     "Parameter2": "Value2",
@@ -456,8 +456,8 @@ ShareX custom uploader (SXCU) files are JSON files at their core. Example JSON s
   },
   "FileFormName": "file",
   "URL": "$json:url$",
-  "ThumbnailURL": "$json:thumbnailurl$",
-  "DeletionURL": "$json:deletionurl$",
+  "ThumbnailURL": "$json:thumbnail_url$",
+  "DeletionURL": "$json:deletion_url$",
   "ErrorMessage": "$json:error$"
 }
 ```
