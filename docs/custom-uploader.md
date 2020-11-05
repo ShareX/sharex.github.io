@@ -429,7 +429,9 @@ Example header:
 
 ## SXCU file
 
-ShareX custom uploader (SXCU) files are JSON files at their core. Example JSON schema looks like this:
+ShareX custom uploader (SXCU) files are JSON files at their core.
+
+Example JSON schema looks like this:
 
 ```json
 {
@@ -461,3 +463,26 @@ ShareX custom uploader (SXCU) files are JSON files at their core. Example JSON s
   "ErrorMessage": "$json:error$"
 }
 ```
+
+Enums:
+
+* DestinationType
+  * None
+  * ImageUploader
+  * TextUploader
+  * FileUploader
+  * URLShortener
+  * URLSharingService
+* RequestMethod
+  * GET
+  * POST
+  * PUT
+  * PATCH
+  * DELETE
+* Body
+  * None
+  * MultipartFormData
+  * FormURLEncoded
+  * JSON
+  * XML
+  * Binary
