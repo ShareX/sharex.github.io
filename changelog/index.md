@@ -3,6 +3,18 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 13.4.0](https://github.com/ShareX/ShareX/releases/tag/v13.4.0) - 2020-12-16
+
+* Added thumbnail size option to main window right click menu
+* Added [Nord](https://www.nordtheme.com) dark & light themes (by [@botatooo](https://github.com/botatooo))
+* Added [Dracula](https://draculatheme.com) theme
+* Visual improvements to setting windows navigation bars
+* Added border style option to annotations (solid, dash, dot, dash dot, dash dot dot)
+* Added tile option to "Image" image effect
+* Support drag n drop `.sxie` files to image effects window
+* Added [CMYK](https://en.wikipedia.org/wiki/CMYK_color_model) support to screen color picker name format
+* Added title option to [Gfycat](https://gfycat.com) uploader
+
 ## [ShareX 13.3.0](https://github.com/ShareX/ShareX/releases/tag/v13.3.0) - 2020-10-29
 
 **[Action Required] Important announcement for Windows 7 users:**
