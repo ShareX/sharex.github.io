@@ -133,3 +133,7 @@
 - name: DiscordBorder
   title: Discord border
   author: Lustris
+
+- name: DiscordParticles
+  title: Discord particles
+  author: Lustris
