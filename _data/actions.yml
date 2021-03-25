@@ -1,0 +1,9 @@
+- name: Convert video to x264
+  filename: ffmpeg.exe
+  arguments: -i %input -c:v libx264 -preset medium -crf 23 -pix_fmt yuv420p -movflags +faststart -c:a aac -b:a 128k -y %output
+  extension: mp4
+
+- name: Convert video to GIF
+  filename: ffmpeg.exe
+  arguments: -i %input -lavfi "palettegen=stats_mode=full[palette],[0:v][palette]paletteuse=dither=sierra2_4a" -y %output
+  extension: gif
