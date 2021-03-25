@@ -4,12 +4,10 @@ title: Actions
 ---
 
 {% for action in site.data.actions %}
-## {{ action.name }}
+## {{ action.name }}{% if action.extension %} `{{ action.extension }}`{% endif %}
 
 ```
 {{ action.filename }} {{ action.arguments }}
-```{% if action.extension %}
-Output file name extension: `{{ action.extension }}`
-{% endif %}
+```
 
 {% endfor %}
