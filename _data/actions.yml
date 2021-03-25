@@ -8,6 +8,16 @@
   arguments: -i "$input" -c:v libx265 -preset medium -crf 28 -c:a aac -b:a 128k -y "$output"
   extension: mp4
 
+- name: Convert video to VP8
+  filename: ffmpeg.exe
+  arguments: -i "$input" -c:v libvpx -crf 10 -b:v 0 -c:a libvorbis -q:a 3 -y "$output"
+  extension: webm
+
+- name: Convert video to VP9
+  filename: ffmpeg.exe
+  arguments: -i "$input" -c:v libvpx-vp9 -crf 31 -b:v 0 -c:a libvorbis -q:a 3 -y "$output"
+  extension: webm
+
 - name: Convert video to GIF
   filename: ffmpeg.exe
   arguments: -i "$input" -lavfi "palettegen=stats_mode=full[palette],[0:v][palette]paletteuse=dither=sierra2_4a" -y "$output"
