@@ -1,3 +1,8 @@
+- name: Convert image to WebP
+  filename: cwebp.exe
+  arguments: '"$input" -q 75 -o "$output"'
+  extension: webp
+
 - name: Convert video to x264
   filename: ffmpeg.exe
   arguments: -i "$input" -c:v libx264 -preset medium -crf 23 -pix_fmt yuv420p -movflags +faststart -c:a aac -b:a 128k -y "$output"
