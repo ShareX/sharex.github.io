@@ -7,6 +7,10 @@
   filename: pngquant.exe
   arguments: '"$input" --ext=.png --force --skip-if-larger --speed 3 --strip'
 
+- name: Compress PNG file using OptiPNG
+  filename: optipng.exe
+  arguments: -o2 -strip all "$input"
+
 - name: Convert video to x264
   filename: ffmpeg.exe
   arguments: -i "$input" -c:v libx264 -preset medium -crf 23 -pix_fmt yuv420p -movflags +faststart -c:a aac -b:a 128k -y "$output"
