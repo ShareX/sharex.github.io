@@ -11,6 +11,11 @@
   filename: optipng.exe
   arguments: -o2 -strip all "$input"
 
+- name: Convert image to JPEG using ImageMagick
+  filename: magick.exe
+  arguments: convert "$input" -quality 85 -interlace plane -sampling-factor 4:2:0 -strip "$output"
+  extension: jpg
+
 - name: Convert video to x264
   filename: ffmpeg.exe
   arguments: -i "$input" -c:v libx264 -preset medium -crf 23 -pix_fmt yuv420p -movflags +faststart -c:a aac -b:a 128k -y "$output"
