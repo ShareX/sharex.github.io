@@ -3,11 +3,11 @@
   arguments: '"$input" -q 75 -o "$output"'
   extension: webp
 
-- name: Compress PNG file using pngquant
+- name: Compress PNG file lossy using pngquant
   filename: pngquant.exe
   arguments: '"$input" --ext=.png --force --skip-if-larger --speed 3 --strip'
 
-- name: Compress PNG file using OptiPNG
+- name: Compress PNG file lossless using OptiPNG
   filename: optipng.exe
   arguments: -o2 -strip all "$input"
 
