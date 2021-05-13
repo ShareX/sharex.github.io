@@ -3,6 +3,29 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 13.5.0](https://github.com/ShareX/ShareX/releases/tag/v13.5.0) - 2021-05-13
+
+* In task settings window, moved toast notification and sound settings from advanced tab to newly added notifications tab
+* Added drag and drop file support to toast notification (by [@Craftplacer](https://github.com/Craftplacer))
+* Added "Copy file" and "Copy file path" notification click actions
+* UI improvements to hotkey settings window
+* Added option to automatically cleanup old backup and log files
+* Removed "Test" tab from custom uploader settings window. It is now a separate window which can be used in different places
+* Removed "Response" tab from custom uploader settings window. Both request and response contents are now in the same panel with scroll bar. You can maximize window to see all contents directly
+* Added inspect window tool
+* Added "Auto fill background" option to image combiner tool
+* Added rotate flip option to "Image" image effect
+* Added dash style option to "Border" image effect
+* Updated [Zero Width Shortener](https://zws.im) API to v2, which now supports custom hosting
+* Actions now use `$` prefix instead of `%` for input and output. New prefix will not add quotes around file path to give more control to user
+* Created example actions web page: https://getsharex.com/actions
+* Added "UseAlternativeClipboardGetImage" option to application settings advanced tab, which lets getting image from clipboard with alpha channel
+* Added ability to use roman numerals in step annotation tool (by [@EdwardSierra](https://github.com/EdwardSierra))
+* Support lowercase step letters and roman numerals
+* Added [Vault.ooo](https://vault.ooo) file uploader (by [@shjonas](https://github.com/shjonas))
+* When hotkeys are disabled, show enable hotkeys button in hotkey settings window
+* ShareX uninstaller will now prompt to close ShareX on behalf of the user if it is currently running
+
 ## [ShareX 13.4.0](https://github.com/ShareX/ShareX/releases/tag/v13.4.0) - 2020-12-16
 
 * Added thumbnail size option to main window right click menu
