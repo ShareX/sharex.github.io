@@ -1,6 +1,6 @@
 ---
 layout: markdown
-title: Actions
+title: Example actions
 ---
 
 {% for action in site.data.actions %}
