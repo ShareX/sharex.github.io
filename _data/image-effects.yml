@@ -137,3 +137,7 @@
 - name: DiscordParticles
   title: Discord particles
   author: Lustris
+
+- name: FakeCursor
+  title: Fake cursor
+  author: okna
