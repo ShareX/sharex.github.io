@@ -15,7 +15,7 @@ After capture screen you can automatically run configured actions to post-proces
 * Fill **Arguments** and **Output file name extension** options using examples listed at bottom.
 * Check **Hidden window** option.
 * Click **OK** button.
-* Make sure checkbox for recently added action is checked.
+* Make sure the checkbox for recently added action is checked.
 * Close **Task settings** window.
 * In **Main window** make sure **After capture tasks -> Perform actions** option is checked.
 
@@ -24,7 +24,7 @@ After capture screen you can automatically run configured actions to post-proces
 {% for action in site.data.actions %}
 ### {{ action.name }}  
 **File name:** {% if action.link %}[{{ action.filename }}]({{ action.link }}){% else %}{{ action.filename }}{% endif %}  {% if action.extension %}
-**Output file name extension:** {{ action.extension }}  {% endif %}
+**Output file name extension:** `{{ action.extension }}`  {% endif %}
 **Arguments:**
 ```
 {{ action.arguments }}
