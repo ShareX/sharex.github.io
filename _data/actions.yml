@@ -3,15 +3,15 @@
   arguments: '"$input" -q 75 -o "$output"'
   extension: webp
 
-- name: Compress PNG file lossy using pngquant
+- name: Compress PNG file lossy
   filename: pngquant.exe
   arguments: '"$input" --ext=.png --force --skip-if-larger --speed 3 --strip'
 
-- name: Compress PNG file lossless using OptiPNG
+- name: Compress PNG file lossless
   filename: optipng.exe
   arguments: -o2 -strip all "$input"
 
-- name: Convert image to JPEG using ImageMagick
+- name: Convert image to JPEG
   filename: magick.exe
   arguments: convert "$input" -quality 85 -interlace plane -sampling-factor 4:2:0 -strip "$output"
   extension: jpg

@@ -12,8 +12,7 @@ After capture screen you can automatically run configured actions to post-proces
 * Open **Task settings** window.
 * Choose **Actions** tab and click **Add** button.
 * Choose **File path** of the third party application.
-* Fill **Arguments** using examples listed at bottom.
-* If example have extension mentioned at top right corner then use it for **Output file name extension**.
+* Fill **Arguments** and **Output file name extension** options using examples listed at bottom.
 * Check **Hidden window** option.
 * Click **OK** button.
 * Make sure checkbox for recently added action is checked.
@@ -23,8 +22,8 @@ After capture screen you can automatically run configured actions to post-proces
 ## Example actions
 
 {% for action in site.data.actions %}
-### {{ action.name }}{% if action.extension %} <code class="highlighter-rouge float-right">{{ action.extension }}</code>{% endif %}
-```
-{{ action.filename }} {{ action.arguments }}
-```
+### {{ action.name }}  
+**File name:** {{ action.filename }}  
+**Arguments:** `{{ action.arguments }}`{% if action.extension %}  
+**Output file name extension:** {{ action.extension }}{% endif %}
 {% endfor %}
