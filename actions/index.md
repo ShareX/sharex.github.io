@@ -20,8 +20,10 @@ After capture screen you can automatically run configured actions to post-proces
 * Close **Task settings** window.
 * In **Main window** make sure **After capture tasks -> Perform actions** option is checked.
 
+## Example actions
+
 {% for action in site.data.actions %}
-## {{ action.name }}{% if action.extension %} <code class="highlighter-rouge float-right">{{ action.extension }}</code>{% endif %}
+### {{ action.name }}{% if action.extension %} <code class="highlighter-rouge float-right">{{ action.extension }}</code>{% endif %}
 ```
 {{ action.filename }} {{ action.arguments }}
 ```
