@@ -23,7 +23,10 @@ After capture screen you can automatically run configured actions to post-proces
 
 {% for action in site.data.actions %}
 ### {{ action.name }}  
-**File name:** {{ action.filename }}  
-**Arguments:** `{{ action.arguments }}`{% if action.extension %}  
-**Output file name extension:** {{ action.extension }}{% endif %}
+**File name:** {% if action.link %}[{{ action.filename }}]({{ action.link }}){% else %}{{ action.filename }}{% endif %}  {% if action.extension %}
+**Output file name extension:** {{ action.extension }}  {% endif %}
+**Arguments:**
+```
+{{ action.arguments }}
+```
 {% endfor %}
