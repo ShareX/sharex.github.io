@@ -9,6 +9,8 @@ ShareX is written using [C# programming language](https://en.wikipedia.org/wiki/
 
 Recently Microsoft released [.NET Core](https://en.wikipedia.org/wiki/.NET_Framework#.NET_Core) which supports writing multi platform software but it is currently extremely limited and doesn't have UI or graphic related libraries. So .NET Core is currently only viable to make console only applications.
 
+There is a project called [WineHQ](https://en.wikipedia.org/wiki/Wine_(software)) that tries to translate Windows APIs into POSIX calls for example for Linux-based distros. In theory, ShareX should run with Wine. It also installs successfully and basic functions like QR codes work. But native calls like capturing the screen, selecting a color on the screen crash ShareX and some symbols aren't really looking good.
+
 ### How do I get ShareX to upload to my custom domain?
 
 There are many ways to do this, we recommend using our guides [Google Cloud Storage](/docs/google-cloud-storage) and [Amazon S3](/docs/amazon-s3).
