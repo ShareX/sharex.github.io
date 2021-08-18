@@ -67,3 +67,15 @@
   arguments: -i "$input" -f apng -plays 0 -y "$output"
   extension: apng
   link: https://www.ffmpeg.org
+
+- name: Compress file to ZIP
+  filename: 7z.exe
+  arguments: a -tzip "$output" "$input" -mx=9
+  extension: zip
+  link: https://www.7-zip.org
+
+- name: Compress file to 7z
+  filename: 7z.exe
+  arguments: a -t7z "$output" "$input" -mx=9
+  extension: 7z
+  link: https://www.7-zip.org
