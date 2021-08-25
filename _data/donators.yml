@@ -211,3 +211,7 @@
 
 - name: patriusek
   amount: 10
+
+- name: ORIGINAL ENERGIE
+  website: https://www.originalenergie.de
+  amount: 50
