@@ -3,6 +3,54 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 13.6.0](https://github.com/ShareX/ShareX/releases/tag/v13.6.0) - 2021-09-04
+
+* ShareX is now using [.NET Framework 4.8](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-48) which will be automatically downloaded if it is not available
+* Updated [Inno Setup to 6.2.0](https://jrsoftware.org/isdl.php) which has modernized graphics
+* Updated [Inno Setup Dependency Installer script](https://github.com/DomGries/InnoDependencyInstaller) which is now using the new built in Inno Setup downloader to download .NET Framework
+* Added "Glow" image effect, which allows you to make a gradient outer glow around your screenshots[*](https://twitter.com/GetShareX/status/1428506941777715201)
+* Removed social buttons toolbar and news button from the main window
+* Added Twitter button which will replace our previous news panel, please make sure to [follow our Twitter account](https://twitter.com/GetShareX) if you would like to receive ShareX related news or tips
+* Added Discord button, you can [join our Discord server](https://discord.gg/ShareX) to get support from the community
+* Added "Menu font" theme option, and changed default font size of menu and context menus to 9.75 pt
+* Added [Bing visual search](https://www.bing.com/visualsearch) button to the main window context menu and also as a URL sharing service destination, this works as both an image search and a great [OCR](https://en.wikipedia.org/wiki/Optical_character_recognition) service
+* Added quick image combine buttons to main window context menu[*](https://twitter.com/GetShareX/status/1404424993660936193)
+    * You must select multiple images from main window by holding <kbd>Ctrl</kbd> or <kbd>Shift</kbd> and then selecting multiple thumbnails to be able to see these buttons in right click context menu
+* When a screenshot is taken, the window title and process name of the active window is stored in history as meta tag
+    * This will greatly improve searching screenshots in the ShareX history window. For example if you take a screenshot from the Spotify window then you can either search "spotify" (process name) or specific artist name or song name (window title) which are stored in a meta tag. If you take screenshots on your browser, you can search the website you took it on (since the website name is generally in the Window Title)
+* Added an option to adjust JPEG quality automatically to fit best quality under target file size (Task settings -> Image)
+* Reorganized tools menu to group similar tools together with separators between them
+* Tweet message moved to upload menu from tools menu
+* Improved the "First time upload" dialog to save people from unintentional uploads: added big "Attention" text with red background and locked the "Yes" button for 5 seconds
+* Improved error message of custom uploaders to include more specific error messages with the host name included
+* Added multi line support to custom uploader argument value fields
+* Allow empty multipart/form-data value in custom uploader
+* Added copy URL buttons to response window
+* Added simple search bar to history window which lets you search by file name, window title and process name; you can also use [wildcard characters](https://en.wikipedia.org/wiki/Wildcard_character) while searching
+* Image history window search bar also supports searching meta tags now
+* Added advanced search button to the history window toolbar which toggles panel with more filtering options
+* The Image Preview now fills the right side, since the filtering options have been moved to advanced search
+* Added "Copy stats to clipboard" button to the history window toolbar
+* Added "Toggle more info" button to the history window toolbar, which toggles panel at bottom right to show more info about selected history entry such as tags
+* Added hotkeys to history window context menu entries:
+    * <kbd>Enter</kbd> Open URL or file
+    * <kbd>Ctrl + Enter</kbd> Open file
+    * <kbd>Shift + Enter</kbd> Open folder
+    * <kbd>Ctrl + C</kbd> Copy URL
+    * <kbd>Shift + C</kbd> Copy file
+    * <kbd>Alt + C</kbd> Copy image
+    * <kbd>Ctrl + Shift + C</kbd> Copy file path
+    * <kbd>Ctrl + U</kbd> Upload file
+    * <kbd>Ctrl + E</kbd> Edit image
+* Added history settings window, which currently contains:
+    * Maximum item limit (allows loading history window faster)
+    * Remember search input
+    * Remember window state
+* If dev mode is enabled then pressing <kbd>Ctrl + F5</kbd> while in the history window loads fake history data
+* If dev mode is enabled then main window title, tray icon text and about window will show full version info with build type and admin privilege status, for example: `ShareX 13.6.0 Dev (Debug, Admin)`
+* Removed ge.tt file uploader because it is no longer in service
+* "Delete file locally" after capture task now also works for file uploads if "Task settings -> Advanced -> UseAfterCaptureTasksDuringFileUpload" option is enabled
+
 ## [ShareX 13.5.0](https://github.com/ShareX/ShareX/releases/tag/v13.5.0) - 2021-05-13
 
 * In task settings window, moved toast notification and sound settings from advanced tab to newly added notifications tab
