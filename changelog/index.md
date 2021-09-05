@@ -5,7 +5,7 @@ title: Changelog
 
 ## [ShareX 13.6.0](https://github.com/ShareX/ShareX/releases/tag/v13.6.0) - 2021-09-04
 
-* ShareX is now using [.NET Framework 4.8](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-48) which will be automatically downloaded if it is not available
+* ShareX is now using [.NET Framework 4.8](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-48) which will be automatically downloaded if it is not available on the system
 * Updated [Inno Setup to 6.2.0](https://jrsoftware.org/isdl.php) which has modernized graphics
 * Updated [Inno Setup Dependency Installer script](https://github.com/DomGries/InnoDependencyInstaller) which is now using the new built in Inno Setup downloader to download .NET Framework
 * Added "Glow" image effect, which allows you to make a gradient outer glow around your screenshots[*](https://twitter.com/GetShareX/status/1428506941777715201)
