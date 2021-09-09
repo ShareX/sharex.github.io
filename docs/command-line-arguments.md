@@ -33,6 +33,14 @@ Example: `-RectangleRegion`, `-PrintScreen`, `-ClipboardUpload`, `-ScreenColorPi
 
 You can find the full list of hotkey actions from `public enum HotkeyType` in [here](https://github.com/ShareX/ShareX/blob/master/ShareX/Enums.cs).
 
+### -imageeditor "image file path"
+
+Opens ShareX image editor with specified image file.
+
+### -imageeffects "image file path"
+
+Opens ShareX image effects window with specified image file.
+
 ### -workflow "Hotkey description"
 
 You can execute your workflows (hotkey tasks) using their descriptions.
@@ -60,6 +68,10 @@ On startup of ShareX if hotkey registration fails then don't show hotkey registr
 ### -customuploader ".sxcu file path"
 
 Specified .sxcu file path used to add custom uploader configuration to ShareX. It is also used for `.sxcu` file association.
+
+### -imageeffect ".sxie file path"
+
+Specified .sxie file path used to add image effect configuration to ShareX. It is also used for `.sxie` file association.
 
 ## ShareX setup CLI
 
