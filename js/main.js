@@ -4,7 +4,7 @@ $(function () {
 
 function GetLatestReleaseInfo() {
     $.getJSON("https://api.github.com/repos/ShareX/ShareX/releases/latest").done(function (release) {
-        var asset = release.assets[0];
+        var asset = release.assets.find(asset => asset.name.endsWith(".exe"));
         var downloadCount = 0;
         for (var i = 0; i < release.assets.length; i++) {
             downloadCount += release.assets[i].download_count;

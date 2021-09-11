@@ -16,7 +16,7 @@ function GetReleases(repo) {
             if (release.assets.length === 0) {
                 continue;
             }
-            var asset = release.assets[0];
+            var asset = release.assets.find(asset => asset.name.endsWith(".exe"));
             var fileSize = asset.size / 1024 / 1024;
             var downloadCount = 0;
             for (var i2 = 0; i2 < release.assets.length; i2++) {
