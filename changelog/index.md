@@ -4,7 +4,6 @@ title: Changelog
 ---
 
 ## [ShareX 13.6.1](https://github.com/ShareX/ShareX/releases/tag/v13.6.1) - 2021-09-10
-## [ShareX 13.6.0](https://github.com/ShareX/ShareX/releases/tag/v13.6.0) - 2021-09-04
 
 * ShareX is now using [.NET Framework 4.8](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-48) which will be automatically downloaded if it is not available on the system
 * Updated [Inno Setup to 6.2.0](https://jrsoftware.org/isdl.php) which has modernized graphics
