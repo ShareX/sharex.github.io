@@ -7,7 +7,7 @@ $(document).ready(function () {
 });
 
 function GetReleases(repo) {
-    $.getJSON("https://api.github.com/repos/" + repo + "/releases").done(function (json) {
+    $.getJSON("https://api.github.com/repos/" + repo + "/releases?per_page=100").done(function (json) {
         var totalDownloadCount = 0;
         previousUpdatedAt = moment();
 
@@ -57,7 +57,7 @@ function GetReleases(repo) {
         }
 
         if (totalDownloadCount > 0) {
-            $(".total-downloads").text(" (" + totalDownloadCount.toLocaleString() + " downloads)");
+            $(".total-downloads").text("Total downloads: " + totalDownloadCount.toLocaleString());
         }
 
         $(".fa-spin").hide();
