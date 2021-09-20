@@ -17,7 +17,7 @@ title: Image effects
 <div class="container-image-effects">
     <div class="container">
         <div class="card-columns">
-            {% for image-effect in site.data.image-effects %}<div class="card image-effect">
+            {% for image-effect in site.data.image-effects reversed %}<div class="card image-effect">
                 <div class="image-effect-title">
                     <a class="image-effect-name" href="/image-effects/{{ image-effect.name }}.sxie">{% if image-effect.title %}{{ image-effect.title }}{% else %}{{ image-effect.name }}{% endif %}</a>
                     <span class="image-effect-author">by {{ image-effect.author }}</span>
