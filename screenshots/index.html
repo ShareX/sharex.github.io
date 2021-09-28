@@ -8,7 +8,7 @@ title: Screenshots
         <div class="row">
             {% for screenshot in site.data.screenshots %}<div class="col-sm-2">
                 <a class="thumbnail" data-fancybox="gallery" data-caption="{{ screenshot.caption }}" href="/img/screenshots/{{ screenshot.name }}">
-                    <img src="/img/screenshots/{{ screenshot.thumbnail }}">
+                    <img src="/img/screenshots/thumbnails/{{ screenshot.name | replace: '.png', '.jpg' }}">
                 </a>
             </div>
             {% endfor %}

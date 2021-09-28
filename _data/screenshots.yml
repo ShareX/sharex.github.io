@@ -1,99 +1,92 @@
-- name: Gn0Uw1O.png
-  thumbnail: Gn0Uw1O_th.jpg
+- name: MainWindow.png
   caption: Main window
 
-- name: EuWr1mL.png
-  thumbnail: EuWr1mL_th.jpg
-  caption: Region capture annotation
+- name: MainWindowContextMenu.png
+  caption: Main window context menu
 
-- name: n88Wj25.png
-  thumbnail: n88Wj25_th.jpg
-  caption: Region capture
+- name: MainWindowListView.png
+  caption: Main window (List view)
 
-- name: 73zi4cR.png
-  thumbnail: 73zi4cR_th.jpg
-  caption: Main window menus
+- name: MainWindowCaptureMenu.png
+  caption: Main window → Capture menu
 
-- name: CtBrdSD.png
-  thumbnail: CtBrdSD_th.jpg
-  caption: Destination settings
+- name: MainWindowUploadMenu.png
+  caption: Main window → Upload menu
 
-- name: eWhmaTG.png
-  thumbnail: eWhmaTG_th.jpg
-  caption: Main window
+- name: ClipboardUpload.png
+  caption: Upload menu → Clipboard upload
 
-- name: ZFIiTYl.png
-  thumbnail: ZFIiTYl_th.jpg
-  caption: Clipboard upload
+- name: MainWindowToolsMenu.png
+  caption: Main window → Tools menu
 
-- name: GoXbsWG.png
-  thumbnail: GoXbsWG_th.jpg
-  caption: Color picker tool
+- name: ColorPicker.png
+  caption: Tools menu → Color picker
 
-- name: iKC9c13.png
-  thumbnail: iKC9c13_th.jpg
-  caption: After capture tasks menu
+- name: ScreenColorPicker.png
+  caption: Tools menu → Screen color picker
 
-- name: J7ECnpp.png
-  thumbnail: J7ECnpp_th.jpg
-  caption: After upload tasks menu
+- name: VideoConverter.png
+  caption: Tools menu → Video converter
 
-- name: UxlnHmy.png
-  thumbnail: UxlnHmy_th.jpg
-  caption: Destination settings Imgur tab
+- name: ImageEditor.png
+  caption: Image editor
 
-- name: I9IzAHr.png
-  thumbnail: I9IzAHr_th.jpg
-  caption: Destination settings Dropbox tab
+- name: ImageEffects.png
+  caption: Image effects
 
-- name: ih4u03A.png
-  thumbnail: ih4u03A_th.jpg
-  caption: Destination settings custom uploaders tab
-
-- name: eFrOn4l.png
-  thumbnail: eFrOn4l_th.jpg
-  caption: Application settings
-
-- name: M7ZEWKT.png
-  thumbnail: M7ZEWKT_th.jpg
-  caption: Task settings image tab
-
-- name: 3HNWYjw.png
-  thumbnail: 3HNWYjw_th.jpg
-  caption: Task settings capture tab
-
-- name: QswVcd4.png
-  thumbnail: QswVcd4_th.jpg
-  caption: Task settings screen recorder tab
-
-- name: 6yeoU8T.png
-  thumbnail: 6yeoU8T_th.jpg
-  caption: Screen recording options
-
-- name: GoikvXk.png
-  thumbnail: GoikvXk_th.jpg
-  caption: Hotkey settings
-
-- name: n16NuUR.png
-  thumbnail: n16NuUR_th.jpg
-  caption: Scrolling capture
-
-- name: 7FBUK2G.png
-  thumbnail: 7FBUK2G_th.jpg
+- name: AutoCapture.png
   caption: Auto capture
 
-- name: VXc83ut.png
-  thumbnail: VXc83ut_th.jpg
-  caption: DNS changer tool
+- name: CombineImages.png
+  caption: Main window → Combine images
 
-- name: x2W5n2e.png
-  thumbnail: x2W5n2e_th.jpg
+- name: MainWindowAfterCaptureTasksMenu.png
+  caption: Main window → After capture tasks menu
+
+- name: MainWindowAfterUploadTasksMenu.png
+  caption: Main window → After upload tasks menu
+
+- name: DestinationSettingsImgurTab.png
+  caption: Destination settings → Imgur tab
+
+- name: DestinationSettingsAmazonS3Tab.png
+  caption: Destination settings → Amazon S3 tab
+
+- name: CustomUploaderSettings.png
+  caption: Custom uploader settings
+
+- name: ApplicationSettingsGeneralTab.png
+  caption: Application settings → General tab
+
+- name: ApplicationSettingsThemeTab.png
+  caption: Application settings → Theme tab
+
+- name: ApplicationSettingsThemeTab2.png
+  caption: Application settings → Theme tab
+
+- name: TaskSettingsNotificationsTab.png
+  caption: Task settings → Notifications tab
+
+- name: TaskSettingsImageTab.png
+  caption: Task settings → Image tab
+
+- name: TaskSettingsCaptureTab.png
+  caption: Task settings → Capture tab
+
+- name: TaskSettingsRegionCapture.png
+  caption: Task settings → Region capture tab
+
+- name: TaskSettingsScreenRecorderTab.png
+  caption: Task settings → Screen recorder tab
+
+- name: ScreenRecordingOptions.png
+  caption: Screen recording options
+
+- name: HotkeySettings.png
+  caption: Hotkey settings
+
+- name: History.png
   caption: History
 
-- name: OutI8d3.png
-  thumbnail: OutI8d3_th.jpg
+- name: ImageHistory.png
   caption: Image history
-
-- name: oKjr2VB.png
-  thumbnail: oKjr2VB_th.jpg
-  caption: Image effects
