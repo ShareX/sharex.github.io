@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
     var repo = GetParameterByName("repo");
     if (!repo) {
         repo = "ShareX/ShareX";
@@ -7,7 +7,7 @@ $(document).ready(function () {
 });
 
 function GetReleases(repo) {
-    $.getJSON("https://api.github.com/repos/" + repo + "/releases?per_page=100").done(function (json) {
+    $.getJSON("https://api.github.com/repos/" + repo + "/releases?per_page=100").done(function(json) {
         var totalDownloadCount = 0;
         previousUpdatedAt = moment();
 
@@ -16,10 +16,8 @@ function GetReleases(repo) {
             if (release.assets.length === 0) {
                 continue;
             }
-            var asset = release.assets.find(asset => asset.name.endsWith(".exe"));
-            if (!asset) {
-                continue;
-            }
+            var assets = release.assets.sort((a, b) => b.name.endsWith(".exe") - a.name.endsWith(".exe"));
+            var asset = assets[0];
             var fileSize = asset.size / 1024 / 1024;
             var downloadCount = 0;
             for (var i2 = 0; i2 < release.assets.length; i2++) {
