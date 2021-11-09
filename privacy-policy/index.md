@@ -8,6 +8,7 @@ title: Privacy policy
 No, ShareX does not collect any data of any kind. 
 
 You may wish to read the Privacy Policy of our destinations we support:
+- [Google Privacy & Terms](https://policies.google.com/privacy)
 - [YouTube Terms of Service](https://www.youtube.com/t/terms/)
 
 
