@@ -3,9 +3,13 @@ layout: markdown
 title: Privacy policy
 ---
 
-### Does ShareX collect any personal identifiable information?
+### Does ShareX collect any personally identifiable information?
 
-No, ShareX does not collect any data of any kind.
+No, ShareX does not collect any data of any kind. 
+
+You may wish to read the Privacy Policy of our destinations we support:
+- [YouTube Community Guidelines](https://www.youtube.com/intl/ALL_au/howyoutubeworks/policies/community-guidelines/)
+
 
 ### Why ShareX accesses my files?
 
