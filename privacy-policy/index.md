@@ -8,7 +8,7 @@ title: Privacy policy
 No, ShareX does not collect any data of any kind. 
 
 You may wish to read the Privacy Policy of our destinations we support:
-- [YouTube Community Guidelines](https://www.youtube.com/intl/ALL_au/howyoutubeworks/policies/community-guidelines/)
+- [YouTube Terms of Service](https://www.youtube.com/t/terms/)
 
 
 ### Why ShareX accesses my files?
