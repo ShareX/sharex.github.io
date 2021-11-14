@@ -1,6 +1,6 @@
 ---
 layout: markdown
-title: Privacy policy
+title: Privacy Policy
 ---
 
 # Application

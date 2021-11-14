@@ -1,14 +1,14 @@
 <footer>
-    <p>Copyright &copy; 2007-{{ site.time | date: '%Y' }} <a href="https://github.com/orgs/ShareX/people">{{ site.author }}</a></p>
+    <p>Copyright &copy; 2007-{{ site.time | date: '%Y' }} <a href="https://github.com/orgs/ShareX/people">{{ site.author }}</a> · <a href="/privacy-policy">Privacy Policy</a></p>
 </footer>
 
 <script>
-    $(function () {
+    $(function() {
         $("#sharex-twitter").popover("show");
-        $(".dropdown").on("show.bs.dropdown", function () {
+        $(".dropdown").on("show.bs.dropdown", function() {
             $('[data-toggle="popover"]').popover("hide");
         });
-        $(".modal").on("shown.bs.modal", function () {
+        $(".modal").on("shown.bs.modal", function() {
             $('[data-toggle="popover"]').popover("hide");
         });
     });
@@ -16,9 +16,9 @@
 
 {% if site.googleAnalyticsId and page.title != "Authorization" %}
 <script>
-    (function (i, s, o, g, r, a, m) {
+    (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
+        i[r] = i[r] || function() {
             (i[r].q = i[r].q || []).push(arguments)
         }, i[r].l = 1 * new Date();
         a = s.createElement(o),
