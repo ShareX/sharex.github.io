@@ -11,7 +11,7 @@ ShareX only sends files (images, text, video, etc.) selected or captured by the 
 
 ShareX checks for updates at startup, and also between intervals using GitHub API and downloads the updates from GitHub when the user permits it.
 
-You may wish to read the Privacy Policy of third party services we are using:
+ShareX implements YouTube API Services to support uploading videos to YouTube. You may wish to read the Privacy Policy of third party services we currently use:
 
 * [GitHub Privacy Statement](https://docs.github.com/en/github/site-policy/github-privacy-statement)
 * [Google Privacy & Terms](https://policies.google.com/privacy)
