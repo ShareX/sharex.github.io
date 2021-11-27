@@ -173,7 +173,7 @@
 - name: John O'Really
   twitter: https://twitter.com/John_O_Really
   website: https://johno.re
-  amount: 60
+  amount: 130
 
 - name: VJ Galaxy
   amount: 10
@@ -214,4 +214,10 @@
 
 - name: ORIGINAL ENERGIE
   website: https://www.originalenergie.de
+  amount: 50
+
+- name: Kirill Lavrishev
+  twitter: https://twitter.com/thekirillrocks
+  linkedin: https://www.linkedin.com/in/kirill-lavrishev/
+  website: https://rgbcode.com
   amount: 50
