@@ -188,3 +188,7 @@
 - name: Windows3.1
   title: Windows 3.1
   author: KawaiiZenbo
+
+- name: MacOS9
+  title: Mac OS 9
+  author: KawaiiZenbo
