@@ -13,3 +13,4 @@ highlighter: rouge
 
 kramdown:
   input: GFM
+  smart_quotes: ["apos", "apos", "quot", "quot"]
