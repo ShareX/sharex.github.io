@@ -29,7 +29,7 @@ title: Changelog
 * Color picker dialog now remembers color palette mode selection
 * Swapped move/resize hotkeys behavior in region capture so arrow keys now move shapes instead of resizing them
 * Removed debug, donate, twitter, discord and about buttons from tray menu to keep it more compact
-* Added default printer override option (by [@tajetaje](https://github.com/tajetaje)
+* Added default printer override option (by [@tajetaje](https://github.com/tajetaje))
 * Added "Show stats" button to history window
 * Added "Process names" to history stats, which let you see from which applications you took your screenshots most
 * Visual improvements in "Image history" window
