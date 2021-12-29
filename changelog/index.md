@@ -3,7 +3,50 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 13.7.0](https://github.com/ShareX/ShareX/releases/tag/v13.7.0) - 2021-12-29
+
+* Added "Main window" tab to "Application settings" window and moved related settings from main window right click menu to there
+* Added "Thumbnail click action" option to "Main window" tab:
+    * Default
+    * Select (double click opens the file)
+    * Open image viewer
+    * Open file
+    * Open folder
+    * Open URL
+    * Edit image
+* For screen recordings, get window info to be able to use in file naming and history tags, so that way it is now easier to search for videos in history window
+* Added "Sub folder pattern for window" option to "Application settings -> Paths", so that way `%pn` (process name) and `%t` (window title) formats can be used for screenshots folder
+* Added "Auto copy image to clipboard" option to image editor
+* System admins can now configure certain ShareX settings via registry. These settings should reside in either `HKEY_LOCAL_MACHINE\SOFTWARE\ShareX` key or `HKEY_CURRENT_USER\SOFTWARE\ShareX` key. Please note `HKEY_LOCAL_MACHINE` has priority over `HKEY_CURRENT_USER` while reading the settings.
+    * `DisableUpdateCheck` (REG_DWORD) registry value disables update checks
+    * `DisableUpload` (REG_DWORD) registry value disables uploads application wide (by [@Erik3003](https://github.com/Erik3003))
+    * `PersonalPath` (REG_SZ) registry value overrides personal path of ShareX, which is by default "Documents\ShareX" folder
+* Added "Borderless window" tool. Some games such as [Minecraft](https://www.minecraft.net) don’t let you take screenshots (screenshots looks black) while running in exclusive fullscreen mode and there is no in-game setting for fullscreen borderless too. Therefore, we wrote this tool to let us make the game fullscreen borderless and allow us to take screenshots from it
+* Support drag n drop file to "Video converter" window
+* Added region capture click action for "Capture last region"
+* Added "Stop screen recording" hotkey
+* Added "Toggle tray menu" hotkey
+* Color picker dialog now remembers color palette mode selection
+* Swapped move/resize hotkeys behavior in region capture so arrow keys now move shapes instead of resizing them
+* Removed debug, donate, twitter, discord and about buttons from tray menu to keep it more compact
+* Added default printer override option (by [@tajetaje](https://github.com/tajetaje)
+* Added "Show stats" button to history window
+* Added "Process names" to history stats, which let you see from which applications you took your screenshots most
+* Visual improvements in "Image history" window
+* Added "Replace color" image effect
+* In "Application settings" window, moved "Retry" tab contents to "Upload" tab, and moved "Results" tab contents to "Clipboard formats" tab
+* Added external site dropdown menu for OCR window (by [@IAmVisco](https://github.com/IAmVisco))
+* Added "Append file name to URL" option for ownCloud / Nextcloud (by [@EmilyLove26](https://github.com/EmilyLove26))
+* GitHub releases assets now include ".sha256" checksum files for setup and portable
+* Hotkey descriptions in "Hotkey settings" now have task-specific icons. Same for task dropdown in hotkey task settings.
+* YouTube video title, description and visibility can now be set before upload through new "Video options" dialog
+* Text uploads using ShareX browser extension now respects file naming settings
+
 ## [ShareX 13.6.1](https://github.com/ShareX/ShareX/releases/tag/v13.6.1) - 2021-09-10
+
+* Update translations
+
+## [ShareX 13.6.0](https://github.com/ShareX/ShareX/releases/tag/v13.6.0) - 2021-09-04
 
 * ShareX is now using [.NET Framework 4.8](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-48) which will be automatically downloaded if it is not available on the system
 * Updated [Inno Setup to 6.2.0](https://jrsoftware.org/isdl.php) which has modernized graphics
