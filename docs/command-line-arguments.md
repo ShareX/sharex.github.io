@@ -103,4 +103,20 @@ This is how ShareX decides about personal path in this order:
 5. If `Documents\ShareX\PersonalPath.cfg` file exists then use file path in it.
 6. Use default personal path: `Documents\ShareX`
 
-For example portable build of ShareX using 2. step there.
+For example portable build of ShareX using 2. step here.
+
+## Registry
+
+These registry settings should reside in either `HKEY_LOCAL_MACHINE\SOFTWARE\ShareX` key or `HKEY_CURRENT_USER\SOFTWARE\ShareX` key. `HKEY_LOCAL_MACHINE` has priority over `HKEY_CURRENT_USER` while reading the settings.
+
+### DisableUpdateCheck `REG_DWORD`
+
+Disables update checks.
+
+### DisableUpload `REG_DWORD`
+
+Disables uploads application wide.
+
+### PersonalPath `REG_SZ`
+
+Overrides personal path of ShareX, which is by default `%UserProfile%\Documents\ShareX` folder.
