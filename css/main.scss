@@ -8,7 +8,7 @@ $font: "Open Sans", sans-serif;
 $text-color: #ffffff;
 $text-color-2: #e7e9ea;
 $background-image: "/img/Background.png";
-$background: radial-gradient(at top, #353B44 -10%, #252932 60%);
+$background: linear-gradient(90deg, #242931, #2c313a, #242931);
 $background-shade: radial-gradient(at top, #272b31 -10%, #1b1f25 60%);
 $border-color: #444950;
 $header-line: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0%, transparent 80%) left bottom transparent no-repeat;
