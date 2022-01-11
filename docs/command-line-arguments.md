@@ -98,10 +98,10 @@ This is how ShareX decides about personal path in this order:
 1. If `-portable` or `-p` CLI flag exists then use `.\ShareX` folder.
 2. If empty `.\Portable` file exists then use `.\ShareX` folder.
 3. If `PersonalPath` value exists in registry then use it.
-4. If `%LocalAppData%\ShareX\PersonalPath.cfg` file exists then move it to `Documents\ShareX\PersonalPath.cfg`.
+4. If `%LocalAppData%\ShareX\PersonalPath.cfg` file exists then move it to `%UserProfile%\Documents\ShareX\PersonalPath.cfg`.
 5. If `.\PersonalPath.cfg` file exists then use file path in it.
-6. If `Documents\ShareX\PersonalPath.cfg` file exists then use file path in it.
-7. Use default personal path: `Documents\ShareX`
+6. If `%UserProfile%\Documents\ShareX\PersonalPath.cfg` file exists then use file path in it.
+7. Use default personal path: `%UserProfile%\Documents\ShareX`
 
 For example portable build of ShareX using 2. step here.
 
