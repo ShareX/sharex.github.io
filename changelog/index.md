@@ -17,7 +17,7 @@ title: Changelog
 * For screen recordings, get window info to be able to use in file naming and history tags, so that way it is now easier to search for videos in history window
 * Added "Sub folder pattern for window" option to "Application settings -> Paths", so that way `%pn` (process name) and `%t` (window title) formats can be used for screenshots folder
 * Added "Auto copy image to clipboard" option to image editor
-* System admins can now configure certain ShareX settings via registry. These settings should reside in either `HKEY_LOCAL_MACHINE\SOFTWARE\ShareX` key or `HKEY_CURRENT_USER\SOFTWARE\ShareX` key. Please note `HKEY_LOCAL_MACHINE` has priority over `HKEY_CURRENT_USER` while reading the settings.
+* System admins can now configure certain ShareX settings via registry. These settings should reside in either `HKEY_LOCAL_MACHINE\SOFTWARE\ShareX` key or `HKEY_CURRENT_USER\SOFTWARE\ShareX` key. Please note `HKEY_LOCAL_MACHINE` has priority over `HKEY_CURRENT_USER` while reading the settings.[*](/docs/command-line-arguments#registry)
     * `DisableUpdateCheck` (REG_DWORD) registry value disables update checks
     * `DisableUpload` (REG_DWORD) registry value disables uploads application wide (by [@Erik3003](https://github.com/Erik3003))
     * `PersonalPath` (REG_SZ) registry value overrides personal path of ShareX, which is by default "Documents\ShareX" folder
