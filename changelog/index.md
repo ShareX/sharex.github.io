@@ -51,13 +51,13 @@ title: Changelog
 * ShareX is now using [.NET Framework 4.8](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-48) which will be automatically downloaded if it is not available on the system
 * Updated [Inno Setup to 6.2.0](https://jrsoftware.org/isdl.php) which has modernized graphics
 * Updated [Inno Setup Dependency Installer script](https://github.com/DomGries/InnoDependencyInstaller) which is now using the new built in Inno Setup downloader to download .NET Framework
-* Added "Glow" image effect, which allows you to make a gradient outer glow around your screenshots[*](https://twitter.com/GetShareX/status/1428506941777715201)
+* Added "Glow" image effect, which allows you to make a gradient outer glow around your screenshots[*](https://twitter.com/ShareX/status/1428506941777715201)
 * Removed social buttons toolbar and news button from the main window
-* Added Twitter button which will replace our previous news panel, please make sure to [follow our Twitter account](https://twitter.com/GetShareX) if you would like to receive ShareX related news or tips
+* Added Twitter button which will replace our previous news panel, please make sure to [follow our Twitter account](https://twitter.com/ShareX) if you would like to receive ShareX related news or tips
 * Added Discord button, you can [join our Discord server](https://discord.gg/ShareX) to get support from the community
 * Added "Menu font" theme option, and changed default font size of menu and context menus to 9.75 pt
 * Added [Bing visual search](https://www.bing.com/visualsearch) button to the main window context menu and also as a URL sharing service destination, this works as both an image search and a great [OCR](https://en.wikipedia.org/wiki/Optical_character_recognition) service
-* Added quick image combine buttons to main window context menu[*](https://twitter.com/GetShareX/status/1404424993660936193)
+* Added quick image combine buttons to main window context menu[*](https://twitter.com/ShareX/status/1404424993660936193)
     * You must select multiple images from main window by holding <kbd>Ctrl</kbd> or <kbd>Shift</kbd> and then selecting multiple thumbnails to be able to see these buttons in right click context menu
 * When a screenshot is taken, the window title and process name of the active window is stored in history as meta tag
     * This will greatly improve searching screenshots in the ShareX history window. For example if you take a screenshot from the Spotify window then you can either search "spotify" (process name) or specific artist name or song name (window title) which are stored in a meta tag. If you take screenshots on your browser, you can search the website you took it on (since the website name is generally in the Window Title)
@@ -175,9 +175,9 @@ We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Micro
 ## [ShareX 13.2.0](https://github.com/ShareX/ShareX/releases/tag/v13.2.0) - 2020-08-31
 
 * Upgraded .NET Framework to version [4.7.2](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-472). If 4.7.2 or newer version of .NET Framework is not installed on system then it will be installed automatically by the ShareX installer
-* Added smart eraser annotation tool[*](https://twitter.com/GetShareX/status/1239899819910541313)
+* Added smart eraser annotation tool[*](https://twitter.com/ShareX/status/1239899819910541313)
 * Added image alignment option to image combiner tool
-* Added experimental `UseAlternativeClipboardCopyImage` option to ["Application settings window -> Advanced tab"](https://twitter.com/GetShareX/status/1295347012775358465) which copies images to clipboard with these formats to let supported applications to read image with transparency and file name info:
+* Added experimental `UseAlternativeClipboardCopyImage` option to ["Application settings window -> Advanced tab"](https://twitter.com/ShareX/status/1295347012775358465) which copies images to clipboard with these formats to let supported applications to read image with transparency and file name info:
     * 24 bitmap with background filled white
     * 32 bit PNG image
     * 32 bit premultiplied DIB
@@ -208,7 +208,7 @@ We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Micro
 * Uploader passwords are now encrypted using [DPAPI](https://en.wikipedia.org/wiki/Data_Protection_API) while saving settings
     * **Important:** If you would like to backup your settings then use "Application settings window -> Settings tab -> Export button" instead of copying `Documents\ShareX` folder, otherwise you may have problems with encrypted passwords
 * Improvements to gradient maker window which is mainly used for image effects:
-    * Added gradient presets list[*](https://twitter.com/GetShareX/status/1288114777181437956)
+    * Added gradient presets list[*](https://twitter.com/ShareX/status/1288114777181437956)
     * Allow creating gradient even when start (0%) and end (100%) gradient stop is missing
     * Gradient stops will be automatically ordered by location
     * Added "Reverse" button to be able to reverse locations of gradient stops
@@ -217,8 +217,8 @@ We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Micro
     * Redesigned image effects window
     * Register `.sxie` extension for ShareX image effects
     * Added `-ImageEffect "filePath"` CLI command, which is what `.sxie` extension use
-    * Added image effect packager ("Packager" button in image effects window), which lets you create `.sxie` files. Advantage of packager compared to previous `.json` export is package can contain image files required for image effect to function, but also ease of importing image effects for users which is just double clicking `.sxie` file[*](https://twitter.com/GetShareX/status/1289192041398726659)
-        * You can check out the examples in the #image-effects channel in our [Discord server](https://discord.gg/ShareX) or show your image effects to us[*](https://twitter.com/GetShareX/status/1300199776126996481)
+    * Added image effect packager ("Packager" button in image effects window), which lets you create `.sxie` files. Advantage of packager compared to previous `.json` export is package can contain image files required for image effect to function, but also ease of importing image effects for users which is just double clicking `.sxie` file[*](https://twitter.com/ShareX/status/1289192041398726659)
+        * You can check out the examples in the #image-effects channel in our [Discord server](https://discord.gg/ShareX) or show your image effects to us[*](https://twitter.com/ShareX/status/1300199776126996481)
     * Added "ImageEffects" folder to ShareX personal folder
     * Added `%ShareXImageEffects%` path variable which will be used in all image effects which requires file or folder path, so when you supply path which is inside ShareX image effects folder then that section of the path will be automatically replaced with `%ShareXImageEffects%`. Reason for this is, if you share image effect to another user and if that users image effects folder is in custom location then path will still match correctly. Image effect packager also making sure that you can't select assets folder outside of ShareX image effects folder to make sure that paths will match correctly
     * Added interpolation mode option to "Image" (previously called "Image watermark") image effect, for example `Nearest neighbor` is handy when you want to make image border with 1px length image and extend it to fill whole image length, without this option extended image was looking blurry because of anti aliasing while drawing enlarged image
@@ -226,7 +226,7 @@ We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Micro
     * Added opacity option to "Image" image effect
     * Added size aspect ratio support to "Image" image effect when `0` is used for width or height
     * Added text rendering mode option to "Text watermark" image effect
-    * Added "Text" image effect, it allows drawing text with gradient outline and shadow[*](https://twitter.com/GetShareX/status/1285734759251968001)
+    * Added "Text" image effect, it allows drawing text with gradient outline and shadow[*](https://twitter.com/ShareX/status/1285734759251968001)
     * Added "RGB split" image effect (by [@L1Q](https://github.com/L1Q))
     * Add "Force proportions" image effect (by [@L1Q](https://github.com/L1Q))
     * Added palette size option to "Selective color" image effect
@@ -258,11 +258,11 @@ We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Micro
 * Added random emoji pattern for file naming: `%remoji{10}`
 * Added `URLEncodeIgnoreEmoji` option to Application settings Advanced tab which is needed when using emojis in file name. Currently this is only supported in [Amazon S3](https://aws.amazon.com/s3/) and [Google Cloud Storage](https://cloud.google.com/storage) uploaders
 * Added Persian language support (by [@pourmand1376](https://github.com/pourmand1376))
-* Added "Particles" image effect. For example, it can be used to [add snowflakes to screenshots](https://twitter.com/GetShareX/status/1207023568854360066)
+* Added "Particles" image effect. For example, it can be used to [add snowflakes to screenshots](https://twitter.com/ShareX/status/1207023568854360066)
 * Removed random position option from image watermark because "Particles" image effect can be used for the same purpose
 * Added multi color gradient support to border & background image effects
 * Preview image in image effects window now resizes automatically to fill empty area
-* Added social media buttons to bottom left of main window, such as [Twitter](https://twitter.com/GetShareX) and [Discord](https://discord.gg/ShareX)
+* Added social media buttons to bottom left of main window, such as [Twitter](https://twitter.com/ShareX) and [Discord](https://discord.gg/ShareX)
 * Added "Video converter" tool, which supports encoding using these encoders:
     * [H.264 / x264](https://en.wikipedia.org/wiki/X264)
     * [H.265 / x265](https://en.wikipedia.org/wiki/X265)
