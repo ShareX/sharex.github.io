@@ -17,7 +17,7 @@ After capture screen you can automatically run configured actions to post-proces
 * Click **OK** button.
 * Make sure the checkbox for recently added action is checked.
 * Close **Task settings** window.
-* In **Main window** make sure **After capture tasks -> Perform actions** option is checked.
+* In **Main window** make sure both **After capture tasks -> Save image to file** and **After capture tasks -> Perform actions** options are checked.
 
 ## Example actions
 
