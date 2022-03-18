@@ -1,86 +1,86 @@
-- name: Convert image to WebP
+- name: Convert image to WebP using cwebp
   filename: cwebp.exe
   arguments: '"$input" -q 75 -o "$output"'
   extension: webp
   link: https://developers.google.com/speed/webp/download
 
-- name: Compress PNG file lossy
+- name: Compress PNG file lossy using pngquant
   filename: pngquant.exe
   arguments: '"$input" --ext=.png --force --skip-if-larger --speed 3 --strip'
   link: https://pngquant.org
 
-- name: Compress PNG file lossless
+- name: Compress PNG file lossless using OptiPNG
   filename: optipng.exe
   arguments: -o2 -strip all "$input"
   link: http://optipng.sourceforge.net
 
-- name: Convert image to JPEG
+- name: Convert image to JPEG using MozJPEG
   filename: cjpeg.exe
   arguments: -quality 90 -outfile "$output" "$input"
   extension: jpg
   link: https://github.com/mozilla/mozjpeg
 
-- name: Convert image to JPEG
+- name: Convert image to JPEG using ImageMagick
   filename: magick.exe
   arguments: convert "$input" -quality 85 -interlace plane -sampling-factor 4:2:0 -strip "$output"
   extension: jpg
   link: https://imagemagick.org
 
-- name: Convert video to x264
+- name: Convert video to x264 using FFmpeg
   filename: ffmpeg.exe
   arguments: -i "$input" -c:v libx264 -preset medium -crf 23 -pix_fmt yuv420p -movflags +faststart -c:a aac -b:a 128k -y "$output"
   extension: mp4
   link: https://www.ffmpeg.org
 
-- name: Convert video to x265
+- name: Convert video to x265 using FFmpeg
   filename: ffmpeg.exe
   arguments: -i "$input" -c:v libx265 -preset medium -crf 28 -c:a aac -b:a 128k -y "$output"
   extension: mp4
   link: https://www.ffmpeg.org
 
-- name: Convert video to VP8
+- name: Convert video to VP8 using FFmpeg
   filename: ffmpeg.exe
   arguments: -i "$input" -c:v libvpx -crf 10 -b:v 0 -c:a libvorbis -q:a 3 -y "$output"
   extension: webm
   link: https://www.ffmpeg.org
 
-- name: Convert video to VP9
+- name: Convert video to VP9 using FFmpeg
   filename: ffmpeg.exe
   arguments: -i "$input" -c:v libvpx-vp9 -crf 31 -b:v 0 -c:a libvorbis -q:a 3 -y "$output"
   extension: webm
   link: https://www.ffmpeg.org
 
-- name: Convert video to Xvid
+- name: Convert video to Xvid using FFmpeg
   filename: ffmpeg.exe
   arguments: -i "$input" -c:v libxvid -q:v 10 -c:a libmp3lame -q:a 4 -y "$output"
   extension: avi
   link: https://www.ffmpeg.org
 
-- name: Convert video to GIF
+- name: Convert video to GIF using FFmpeg
   filename: ffmpeg.exe
   arguments: -i "$input" -lavfi "palettegen=stats_mode=full[palette],[0:v][palette]paletteuse=dither=sierra2_4a" -y "$output"
   extension: gif
   link: https://www.ffmpeg.org
 
-- name: Convert video to WebP
+- name: Convert video to WebP using FFmpeg
   filename: ffmpeg.exe
   arguments: -i "$input" -c:v libwebp -lossless 0 -preset default -loop 0 -y "$output"
   extension: webp
   link: https://www.ffmpeg.org
 
-- name: Convert video to APNG
+- name: Convert video to APNG using FFmpeg
   filename: ffmpeg.exe
   arguments: -i "$input" -f apng -plays 0 -y "$output"
   extension: apng
   link: https://www.ffmpeg.org
 
-- name: Compress file to ZIP
+- name: Compress file to ZIP using 7-Zip
   filename: 7z.exe
   arguments: a -tzip "$output" "$input" -mx=9
   extension: zip
   link: https://www.7-zip.org
 
-- name: Compress file to 7z
+- name: Compress file to 7z using 7-Zip
   filename: 7z.exe
   arguments: a -t7z "$output" "$input" -mx=9
   extension: 7z
