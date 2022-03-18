@@ -15,6 +15,12 @@
   link: http://optipng.sourceforge.net
 
 - name: Convert image to JPEG
+  filename: cjpeg.exe
+  arguments: -quality 90 -outfile "$output" "$input"
+  extension: jpg
+  link: https://github.com/mozilla/mozjpeg
+
+- name: Convert image to JPEG
   filename: magick.exe
   arguments: convert "$input" -quality 85 -interlace plane -sampling-factor 4:2:0 -strip "$output"
   extension: jpg
