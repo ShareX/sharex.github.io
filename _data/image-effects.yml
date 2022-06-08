@@ -208,3 +208,7 @@
 - name: Windows11Taskbar
   title: Windows 11 taskbar
   author: hunter
+
+- name: BackgroundGradient
+  title: Background gradient
+  author: Jaex
