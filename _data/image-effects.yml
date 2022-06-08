@@ -212,3 +212,7 @@
 - name: BackgroundGradient
   title: Background gradient
   author: Jaex
+
+- name: macOSBigSur
+  title: macOS Big Sur
+  author: Cale111
