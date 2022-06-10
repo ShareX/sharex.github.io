@@ -15,7 +15,7 @@ title: Image effects
 </div>
 <div class="container-image-effects">
     <div class="container">
-        <div class="row" data-masonry='{"percentPosition": true }'>
+        <div class="row">
             {% for image-effect in site.data.image-effects reversed %}<div class="col-image-effect col-sm-6 col-lg-4">
                 <div class="card image-effect">
                     <div class="image-effect-title">
@@ -34,3 +34,14 @@ title: Image effects
 
 {% include common-js.html %}
 <script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+
+<script>
+    var $grid = $(".container-image-effects .row").masonry({
+        percentPosition: true
+    });
+
+    $grid.imagesLoaded().progress(function() {
+        $grid.masonry("layout");
+    });
+</script>
