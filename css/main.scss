@@ -374,15 +374,16 @@ nav.navbar:hover ~ .popover {
     padding-bottom: $container-padding;
 
     .col-image-effect {
-        padding: 0px $container-padding-half;
+        padding: 0px $container-padding-half / 2;
     }
 
     .image-effect {
-        margin-bottom: $container-padding;
+        margin-bottom: $container-padding-half;
         padding: 1rem;
         background: $background-shade;
         text-align: center;
         border: none;
+        border-bottom: 1px solid $border-color;
         border-radius: 6px;
 
         .image-effect-title {
