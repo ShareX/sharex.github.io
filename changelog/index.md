@@ -3,6 +3,66 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 14.0.0](https://github.com/ShareX/ShareX/releases/tag/v14.0.0) - 2022-07-01
+
+* Update our Twitter account link to new username [@ShareX](https://twitter.com/ShareX)
+* Support screen capturing cursor with bigger pointer size
+* Added Romanian language support (by [@Edward205](https://github.com/Edward205))
+* Added zoom support to image editor (by [@EricTetz](https://github.com/EricTetz))
+    * <kbd>Ctrl + Mouse wheel</kbd> Zoom centered on cursor
+    * <kbd>Ctrl + +</kbd> Zoom in
+    * <kbd>Ctrl + -</kbd> Zoom out
+    * <kbd>Ctrl + 0</kbd> Reset zoom
+    * <kbd>Ctrl + Alt + 0</kbd> Zoom to fit
+    * Added "Zoom to fit on open" option
+* Added canvas color button to image editor canvas size window
+* Added "Restrict region capture and cursor within the active monitor" option, which significantly improves the FPS of region capture for multi monitor owners by restricting region capture to active monitor only, so we highly recommend enabling this option if you own multiple monitors
+* Added FPS limit option for region capture/image editor, default value is 100, you can disable limit by setting value to 0
+* Allow 0 value for step annotation tool
+* [OCR](https://en.wikipedia.org/wiki/Optical_character_recognition) improvements:
+    * Added offline [OCR](https://en.wikipedia.org/wiki/Optical_character_recognition) support (requires Windows 10 or newer version to work)
+    * ShareX will show message box if OCR is unsupported in current operating system
+    * Moved OCR button to Tools menu from Capture menu
+    * Added "Scale factor" option which resizes image input before applying OCR, which improves OCR results
+    * Added customizable service links, by default these services available: [Google Translate](https://translate.google.com), [Google Search](https://www.google.com), [Bing](https://www.bing.com)
+    * Added "Select region" button to OCR window, which lets you do OCR from screen without reopening the tool
+* Fullscreen image preview improvements:
+    * Support navigation using <kbd>Left arrow</kbd>/<kbd>Right arrow</kbd> keys, mouse wheel or by clicking navigation buttons at sides
+    * Show file name, image size and image index at top
+    * Also added it as "Image viewer" tool
+    * Added `-ImageViewer "filePath"` CLI command
+* Added hotkeys for image viewer and borderless window tools
+* History window improvements:
+    * Use virtual mode in list which only populates visible part of the list so that way when user has significant amount of history entries startup time won't be affected
+    * Automatically search while typing
+    * Automatically apply filter when value changed
+    * Select first item after filtering
+    * Removed max item count setting from history window because with virtual mode it is not necessary anymore
+    * Moved advanced search panel to right side and added close button
+* Notification window improvements:
+    * Added option to automatically hide notification window when screen capturing/recording so that way when multiple screenshots taken in quick successions then notification window won't be visible in any of screenshots
+    * Show only last notification instead of showing multiple notifications on top of each other
+* Added `-hide_banner` to all FFmpeg arguments
+* Increased toast window duration decimal places by 1
+* Improved save image error message to suggest user to check anti virus [controlled folder access](https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034) feature
+* Removed [PortableApps](https://portableapps.com) support in favor of Portable builds at [GitHub releases page](https://github.com/ShareX/ShareX/releases)
+* Use current theme in update message box and downloader window
+* Don't show update message box for dev build install
+* Added bitrate option for x264 video encoder
+* Support FFmpeg 5.0 when refreshing device list
+* Custom uploader improvements:
+    * Rewritten custom uploader syntax parser from scratch, now using `{` and `}` for syntax boundaries instead of `$`, that way syntax can be used recursively inside each other
+    * Removed regex list, instead first parameter of [regex function](https://getsharex.com/docs/custom-uploader#regex) must be used for regex pattern, for example: `{regex:href="(.+)"|1}`
+    * Removed parse response section because not necessary anymore with remove of regex list
+    * ShareX is going to try its best to automatically migrate old custom uploaders to new syntax but there are a few things like regex syntax that cannot be auto migrated
+    * Added custom uploader syntax test button near URL textbox
+* Use text upload window when doing custom uploader text upload test
+* Renamed Lithiio file uploader to LobFile, update LobFile API to v3
+* Added "Pin to top" button to Inspect window tool (by [@leumasme](https://github.com/leumasme))
+* In image effects window, allow configuring custom name for each effects
+* Removed [Streamable](https://streamable.com) anonymous upload option because not supported by Streamable anymore
+* Deleted VideoBin because their API is not available anymore
+
 ## [ShareX 13.7.0](https://github.com/ShareX/ShareX/releases/tag/v13.7.0) - 2021-12-29
 
 * Added "Main window" tab to "Application settings" window and moved related settings from main window right click menu to there
