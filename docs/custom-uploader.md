@@ -7,10 +7,6 @@ title: Custom uploader guide
 
 Custom uploader system in ShareX let users to upload image/text/file to hosting services or shorten/share URL. This feature is mainly used by users who host their own hosting services.
 
-The easiest way to learn how to configure custom uploader is by checking example custom uploaders: [https://github.com/ShareX/CustomUploaders](https://github.com/ShareX/CustomUploaders)
-
-You can also pull request your custom uploader there.
-
 ## Export / Import
 
 You can export your custom uploader with `.sxcu` extension which allows users to just double click that file to be able to use custom uploader.
@@ -27,10 +23,6 @@ For example if request URL is `https://example.com/upload.php` and name field is
 
 Destination type is used when users import custom uploader by double clicking the `.sxcu` file.
 
-## Request tab
-
-HTTP request options are configured in this tab.
-
 ## Method
 
 List of HTTP request methods available:
@@ -41,9 +33,9 @@ List of HTTP request methods available:
 * PATCH
 * DELETE
 
-If request have no body and only parameters will be used then `GET` method is preferred. If body is `Form data (multipart/form-data)` then `POST` method is preferred.
+If request don't have body and only parameters gonna be used then `GET` method is preferred. If body is `Form data (multipart/form-data)` then `POST` method is preferred.
 
-## URL
+## Request URL
 
 Request will be send to this URL.
 
@@ -53,7 +45,7 @@ Example: `https://example.com/upload.php`
 
 Parameters will be used to create URL [query string](https://en.wikipedia.org/wiki/Query_string).
 
-For text uploader or URL shortener `$input$` syntax can be used as value to supply input text or URL.
+For text uploader or URL shortener `{input}` syntax can be used as value to supply input text or URL.
 
 You can also use dynamic values like `%mo` to get current month etc.
 
@@ -85,7 +77,7 @@ Default request headers can be overridden too like these:
 
 | Name | Value |
 | --- | --- |
-| Authorization | Basic $base64:USERNAME:PASSWORD$ |
+| Authorization | Basic **{base64:USERNAME:PASSWORD}** |
 
 API key example:
 
@@ -108,7 +100,7 @@ Most of the time if API request method is `GET` then `No body` will be used with
 
 ## Body arguments
 
-For text uploader or URL shortener `$input$` syntax can be used as value to supply input text or URL.
+For text uploader or URL shortener `{input}` syntax can be used as value to supply input text or URL.
 
 ## File form name
 
@@ -116,11 +108,16 @@ This field can be only used when `Body` is `Form data (multipart/form-data)`.
 
 For example in this HTML code: `<input type="file" name="file_image">` file form name is `file_image`.
 
-## Response tab
+## URL
 
-This tab can be used to parse response to get URL result.
+* URL
+* Deletion URL
+* Thumbnail URL
+* Error message
 
-If response only contains URL then no need to write anything to URL textbox.
+These textboxes can be used to parse response to get URL result. If response only contains URL then no need to write anything to URL textbox.
+
+Make sure to also parse error message so ShareX can show user friendly error message to users.
 
 ## Custom uploader syntax
 
@@ -139,7 +136,7 @@ This syntax is usable in the following sections, with a few exceptions:
 
 For example syntaxes which involves parsing response only usable in URL sections as expected.
 
-> Note: If you would like to use `$` or `\` characters in any of syntax supported sections then you must escape them with `\`. Like this: `\$` `\\`
+**Note:** If you would like to use `{`, `}`, `|` or `\` characters in any of syntax supported sections then you can escape them with `\` character. For example: `\{`
 
 You can find list of all available syntaxes with example usages at bottom.
 
@@ -154,13 +151,13 @@ But if response just contains full URL then you don't have to use this syntax be
 Syntax:
 
 ```
-$response$
+{response}
 ```
 
 Example URL:
 
 ```
-https://example.com/$response$
+https://example.com/{response}
 ```
 
 ---
@@ -172,13 +169,13 @@ Can be used to get redirection URL. If no redirection happened then it will be j
 Syntax:
 
 ```
-$responseurl$
+{responseurl}
 ```
 
 Example URL:
 
 ```
-$responseurl$
+{responseurl}
 ```
 
 ---
@@ -190,13 +187,13 @@ Can be used to get specific response header value.
 Syntax:
 
 ```
-$header:name$
+{header:name}
 ```
 
 Example URL:
 
 ```
-$header:location$
+{header:location}
 ```
 
 ---
@@ -219,7 +216,7 @@ Example response:
 Syntax:
 
 ```
-$json:data.link$
+{json:data.link}
 ```
 
 Example response 2:
@@ -239,7 +236,7 @@ Example response 2:
 Syntax:
 
 ```
-$json:files[0].url$
+{json:files[0].url}
 ```
 
 ---
@@ -263,7 +260,7 @@ Example response:
 Syntax:
 
 ```
-$xml:/files/file[1]/url$
+{xml:/files/file[1]/url}
 ```
 
 ---
@@ -272,48 +269,31 @@ $xml:/files/file[1]/url$
 
 If response is not [JSON](https://en.wikipedia.org/wiki/JSON) or [XML](https://en.wikipedia.org/wiki/XML) then you can use [Regular expression (Regex)](https://en.wikipedia.org/wiki/Regular_expression) to parse response text.
 
-After writing your regex and adding it to regex list then you can use "Add syntax to URL field" button for ShareX to guess correct syntax and add selected regex to URL textbox.
-
-To manually add regex to URL textbox these syntax can be used:
-
-From regex list get index (`n`) result. `n` must be number and first item in list is 1.
-
 Syntax:
 
 ```
-$regex:n$
+{regex:regexPattern}
+{regex:regexPattern|groupIndex}
+{regex:regexPattern|groupName}
 ```
 
-Example: `$regex:1$` means get first regex result from list.
-
-From regex list get index (`n`) result with group (`group`). Group can be index or text.
-
-Syntax:
+Example:
 
 ```
-$regex:n|group$
-````
-
-Example: `$regex:2|3$` means second regex in list and third group in regex result.
-
-Example 2: `$regex:1|thumbnail$` means first regex in list and `thumbnail` named group in regex result.
-
-You can use multiple regex while parsing, for example if we have this response:
-
-```css
-server: 41
-image_size: "250x200"
-filename: "image.png"
-file_size: 52687
+{regex:(?<=href=").+(?=")}
 ```
 
-First regex using named group: `server: (?<serverid>\d+)`
+Example with group index:
 
-Second regex using numbered group: `filename: "(.+)"`
+```
+{regex:href="(.+)"|1}
+```
 
-In URL textbox use this syntax: `https://example.com/server/$regex:1|serverid$/image/$regex:2|1$`
+Example with group name:
 
-Result URL will be: `https://example.com/server/41/image/image.png`
+```
+{regex:href="(?<url>.+)"|url}
+```
 
 ---
 
@@ -324,32 +304,32 @@ If you are using text custom uploader then this syntax will be replaced with tex
 Syntax:
 
 ```
-$input$
+{input}
 ```
 
 Example argument:
 
 | Name | Value |
 | --- | --- |
-| text | $input$ |
+| text | **{input}** |
 
 ---
 
 ### filename
 
-This syntax will be replaced with file name. Most of the time you don't need to use this syntax because when doing POST file upload, file name already included in request.
+This syntax will be replaced with file name. Most of the time you don't need to use this syntax because when doing multipart/form-data file upload, file name already included in request.
 
 Syntax:
 
 ```
-$filename$
+{filename}
 ```
 
 Example argument:
 
 | Name | Value |
 | --- | --- |
-| title | $filename$ |
+| title | **{filename}** |
 
 ---
 
@@ -360,13 +340,13 @@ If you would like to use random domain each upload you can use this syntax.
 Syntax:
 
 ```
-$random:value1|value2|value3$
+{random:value1|value2|value3}
 ```
 
 Example URL:
 
 ```
-https://$random:subdomain1|subdomain2$.$random:domain1|domain2|domain3$.com/$json:files[0].url$
+https://{random:subdomain1|subdomain2}.{random:domain1|domain2|domain3}.com/{json:files[0].url}
 ```
 
 ---
@@ -378,13 +358,13 @@ This will show window with all values as buttons. So you can select dynamically 
 Syntax:
 
 ```
-$select:value1|value2|value3$
+{select:value1|value2|value3}
 ```
 
 Example URL:
 
 ```
-https://$select:domain1.com|domain2.com|domain3.com$/$json:files[0].url$
+https://{select:domain1.com|domain2.com|domain3.com}/{json:files[0].url}
 ```
 
 ---
@@ -398,15 +378,15 @@ First parameter is window title, second parameter is default text for input box.
 Syntax:
 
 ```
-$prompt$
-$prompt:title$
-$prompt:title|default text$
+{prompt}
+{prompt:title}
+{prompt:title|default text}
 ```
 
 Example URL:
 
 ```
-https://$prompt:Input subdomain|i$.example.com/$json:files[0].url$
+https://{prompt:Input subdomain|i}.example.com/{json:files[0].url}
 ```
 
 ---
@@ -418,14 +398,14 @@ Encode text to [Base64](https://en.wikipedia.org/wiki/Base64).
 Syntax:
 
 ```
-$base64:text$
+{base64:text}
 ```
 
 Example header:
 
 | Name | Value |
 | --- | --- |
-| Authorization | Basic $base64:username:password$ |
+| Authorization | Basic **{base64:username:password}** |
 
 ## SXCU file
 
@@ -435,7 +415,7 @@ Example JSON schema looks like this:
 
 ```json
 {
-  "Version": "13.3.0",
+  "Version": "14.0.0",
   "Name": "Example",
   "DestinationType": "ImageUploader, TextUploader, FileUploader",
   "RequestMethod": "POST",
@@ -457,10 +437,10 @@ Example JSON schema looks like this:
     "Argument3": "Value3"
   },
   "FileFormName": "file",
-  "URL": "$json:url$",
-  "ThumbnailURL": "$json:thumbnail_url$",
-  "DeletionURL": "$json:deletion_url$",
-  "ErrorMessage": "$json:error$"
+  "URL": "{json:url}",
+  "ThumbnailURL": "{json:thumbnail_url}",
+  "DeletionURL": "{json:deletion_url}",
+  "ErrorMessage": "{json:error}"
 }
 ```
 
