@@ -20,7 +20,7 @@ title: Changelog
 * Added FPS limit option for region capture/image editor, default value is 100, you can disable limit by setting value to 0
 * Allow 0 value for step annotation tool
 * [OCR](https://en.wikipedia.org/wiki/Optical_character_recognition) improvements:
-    * Added offline [OCR](https://en.wikipedia.org/wiki/Optical_character_recognition) support (requires Windows 10 or newer version to work)
+    * Added offline OCR support (requires Windows 10 or newer version to work)
     * ShareX will show message box if OCR is unsupported in current operating system
     * Moved OCR button to Tools menu from Capture menu
     * Added "Scale factor" option which resizes image input before applying OCR, which improves OCR results
@@ -56,7 +56,7 @@ title: Changelog
     * Removed parse response section because not necessary anymore with remove of regex list
     * ShareX is going to try its best to automatically migrate old custom uploaders to new syntax but there are a few things like regex syntax that cannot be auto migrated
     * Added custom uploader syntax test button near URL textbox
-* Use text upload window when doing custom uploader text upload test
+    * Use text upload window when doing custom uploader text upload test
 * Renamed Lithiio file uploader to LobFile, update LobFile API to v3
 * Added "Pin to top" button to Inspect window tool (by [@leumasme](https://github.com/leumasme))
 * In image effects window, allow configuring custom name for each effects
