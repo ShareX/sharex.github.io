@@ -202,7 +202,14 @@ Example URL:
 
 You can use [JsonPath](https://goessner.net/articles/JsonPath/) to parse URL from [JSON](https://en.wikipedia.org/wiki/JSON) response.
 
-Example response:
+Syntax:
+
+```
+{json:jsonPath}
+{json:input|jsonPath}
+```
+
+Example:
 
 ```json
 {
@@ -213,13 +220,11 @@ Example response:
 }
 ```
 
-Syntax:
-
 ```
 {json:data.link}
 ```
 
-Example response 2:
+Example 2:
 
 ```json
 {  
@@ -233,8 +238,6 @@ Example response 2:
 }
 ```
 
-Syntax:
-
 ```
 {json:files[0].url}
 ```
@@ -245,7 +248,14 @@ Syntax:
 
 You can use [XPath](https://www.w3schools.com/xml/xpath_syntax.asp) to parse URL from [XML](https://en.wikipedia.org/wiki/XML) response.
 
-Example response:
+Syntax:
+
+```
+{xml:xpath}
+{xml:input|xpath}
+```
+
+Example:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -257,8 +267,6 @@ Example response:
 </files>
 ```
 
-Syntax:
-
 ```
 {xml:/files/file[1]/url}
 ```
@@ -269,12 +277,16 @@ Syntax:
 
 If response is not [JSON](https://en.wikipedia.org/wiki/JSON) or [XML](https://en.wikipedia.org/wiki/XML) then you can use [Regular expression (Regex)](https://en.wikipedia.org/wiki/Regular_expression) to parse response text.
 
+While writing regex pattern don't forget to escape `{`, `}`, `|`, `\` characters with `\`.
+
 Syntax:
 
 ```
 {regex:regexPattern}
 {regex:regexPattern|groupIndex}
 {regex:regexPattern|groupName}
+{regex:input|regexPattern|groupIndex}
+{regex:input|regexPattern|groupName}
 ```
 
 Example:
