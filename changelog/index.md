@@ -3,6 +3,33 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 14.1.0](https://github.com/ShareX/ShareX/releases/tag/v14.1.0) - 2022-07-15
+
+* Added Polish language support (by [@RikoDEV](https://github.com/RikoDEV))
+* [OCR](https://en.wikipedia.org/wiki/Optical_character_recognition) improvements:
+    * OCR window layout changes
+    * Added OCR help button near languages option which opens the [OCR help page](https://getsharex.com/docs/ocr), so users can see how to install more OCR languages
+    * Sort OCR languages alphabetically
+    * Remove spaces between words in [CJK languages](https://en.wikipedia.org/wiki/CJK_characters)
+    * Reverse order of words in [RTL languages](https://en.wikipedia.org/wiki/Right-to-left_script)
+    * Added single line option
+    * After OCR automatically select result textbox
+    * Added new OCR service links:
+        * [Google Images](https://www.google.com/imghp)
+        * [DuckDuckGo](https://duckduckgo.com)
+        * [DeepL](https://www.deepl.com/translator)
+    * Added copy all button
+* Added input parameter support to custom uploader parse functions:
+    * `{json:input|jsonPath}`
+    * `{xml:input|xpath}`
+    * `{regex:input|pattern|group}`
+* Don't show notification window in <kbd>Alt + Tab</kbd> menu
+* Support portable dev build update
+
+## [ShareX 14.0.1](https://github.com/ShareX/ShareX/releases/tag/v14.0.1) - 2022-07-08
+
+* Bug fixes
+
 ## [ShareX 14.0.0](https://github.com/ShareX/ShareX/releases/tag/v14.0.0) - 2022-07-01
 
 * Update our Twitter account link to new username [@ShareX](https://twitter.com/ShareX)
