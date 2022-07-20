@@ -25,7 +25,6 @@ function GetReleases(repo) {
             }
             totalDownloadCount += downloadCount;
             var publishedAt = new Date(release.published_at);
-            var publishedAtDate = publishedAt.toISOString().split("T")[0];
             var activeDays = (previousPublishedAt - publishedAt) / (1000 * 60 * 60 * 24);
             previousPublishedAt = publishedAt;
             $(".table-downloads tbody")
@@ -44,7 +43,7 @@ function GetReleases(repo) {
                         )
                     )
                     .append($("<td>")
-                        .text(publishedAtDate)
+                        .text(publishedAt.toLocaleDateString("en-CA"))
                     )
                     .append($("<td>")
                         .text(activeDays.toFixed(1))

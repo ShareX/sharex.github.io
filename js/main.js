@@ -9,7 +9,7 @@ function GetLatestReleaseInfo() {
         for (var i = 0; i < release.assets.length; i++) {
             downloadCount += release.assets[i].download_count;
         }
-        var releaseDate = new Date(asset.updated_at).toISOString().split("T")[0];
+        var releaseDate = new Date(asset.updated_at).toLocaleDateString("en-CA");
         var oneHour = 60 * 60 * 1000;
         var oneDay = 24 * oneHour;
         var dateDiff = new Date() - new Date(asset.updated_at);
