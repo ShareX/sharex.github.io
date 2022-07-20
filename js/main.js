@@ -9,6 +9,7 @@ function GetLatestReleaseInfo() {
         for (var i = 0; i < release.assets.length; i++) {
             downloadCount += release.assets[i].download_count;
         }
+        var releaseDate = new Date(asset.updated_at).toISOString().split("T")[0];
         var oneHour = 60 * 60 * 1000;
         var oneDay = 24 * oneHour;
         var dateDiff = new Date() - new Date(asset.updated_at);
@@ -21,7 +22,7 @@ function GetLatestReleaseInfo() {
 
         var releaseInfo = "Version: " + release.tag_name.substring(1) +
             "\nFile size: " + (asset.size / 1024 / 1024).toFixed(2) + " MB" +
-            "\nRelease date: " + moment(asset.updated_at).format("YYYY-MM-DD") +
+            "\nRelease date: " + releaseDate +
             "\nReleased: " + timeAgo +
             "\nDownload count: " + downloadCount.toLocaleString();
 

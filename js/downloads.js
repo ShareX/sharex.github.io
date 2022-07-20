@@ -9,7 +9,7 @@ $(document).ready(function() {
 function GetReleases(repo) {
     $.getJSON("https://api.github.com/repos/" + repo + "/releases?per_page=100").done(function(json) {
         var totalDownloadCount = 0;
-        previousPublishedAt = moment();
+        previousPublishedAt = new Date();
 
         for (var i = 0; i < json.length; i++) {
             var release = json[i];
@@ -24,8 +24,9 @@ function GetReleases(repo) {
                 downloadCount += release.assets[i2].download_count;
             }
             totalDownloadCount += downloadCount;
-            var publishedAt = moment(release.published_at);
-            var activeDays = previousPublishedAt.diff(publishedAt, "days", true);
+            var publishedAt = new Date(release.published_at);
+            var publishedAtDate = publishedAt.toISOString().split("T")[0];
+            var activeDays = (previousPublishedAt - publishedAt) / (1000 * 60 * 60 * 24);
             previousPublishedAt = publishedAt;
             $(".table-downloads tbody")
                 .append($("<tr>")
@@ -43,7 +44,7 @@ function GetReleases(repo) {
                         )
                     )
                     .append($("<td>")
-                        .text(moment(publishedAt).format("YYYY-MM-DD HH:mm"))
+                        .text(publishedAtDate)
                     )
                     .append($("<td>")
                         .text(activeDays.toFixed(1))
