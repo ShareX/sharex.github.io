@@ -1,9 +1,9 @@
-$(function () {
+$(function() {
     GetLatestReleaseInfo();
 });
 
 function GetLatestReleaseInfo() {
-    $.getJSON("https://api.github.com/repos/ShareX/ShareX/releases/latest").done(function (release) {
+    $.getJSON("https://api.github.com/repos/ShareX/ShareX/releases/latest").done(function(release) {
         var asset = release.assets.find(asset => asset.name.endsWith(".exe"));
         var downloadCount = 0;
         for (var i = 0; i < release.assets.length; i++) {
@@ -38,18 +38,18 @@ function InitTooltip(obj, fadeDelay) {
         trigger: "manual",
         html: true,
         animation: false
-    }).on("mouseenter", function () {
+    }).on("mouseenter", function() {
         obj.tooltip("show");
-    }).on("mouseleave", function () {
-        setTimeout(function () {
+    }).on("mouseleave", function() {
+        setTimeout(function() {
             if (!obj.is(":hover") && $(".tooltip").length && !$(".tooltip").is(":hover")) {
                 obj.tooltip("hide");
             }
         }, fadeDelay);
     });
 
-    $(document).on("mouseleave", ".tooltip", function () {
-        setTimeout(function () {
+    $(document).on("mouseleave", ".tooltip", function() {
+        setTimeout(function() {
             if (!obj.is(":hover") && $(".tooltip").length && !$(".tooltip").is(":hover")) {
                 obj.tooltip("hide");
             }

@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
     var code = GetParameterByName("code");
 
     if (!code) {
@@ -9,6 +9,14 @@ $(document).ready(function () {
         $("#panel-callback").addClass("panel-success");
         $("#title").text("Please paste following code in ShareX");
         $("#code").val(code);
+
+        $("#callback-code .btn").on("click", function() {
+            navigator.clipboard.writeText(code).then(function() {
+                $("#callback-code .btn").text("Copied!");
+            }, function() {
+                $("#callback-code .btn").text("Copy failed.");
+            });
+        });
     } else {
         var error = GetParameterByName("error");
 
@@ -25,16 +33,6 @@ $(document).ready(function () {
         $("#callback-code").hide();
         $("#callback-error").show();
     }
-
-    var clipboard = new ClipboardJS(".btn");
-
-    clipboard.on("success", function (e) {
-        $("#callback-code .btn").text("Copied!");
-    });
-
-    clipboard.on("error", function (e) {
-        $("#callback-code .btn").text("Copy failed.");
-    });
 });
 
 function GetParameterByName(name, url) {
