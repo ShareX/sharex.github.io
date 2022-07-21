@@ -11,7 +11,8 @@ $(document).ready(function() {
         $("#code").val(code);
 
         $("#callback-code .btn").on("click", function() {
-            navigator.clipboard.writeText(code).then(function() {
+            var textToCopy = $("#code").val();
+            navigator.clipboard.writeText(textToCopy).then(function() {
                 $("#callback-code .btn").text("Copied!");
             }, function() {
                 $("#callback-code .btn").text("Copy failed.");

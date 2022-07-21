@@ -533,16 +533,18 @@ footer {
     }
     
     #callback-code .btn {
-        width: 150px;
+        width: 200px;
         padding: 6px 12px;
         margin: 0px;
-        font-size: 14px;
+        font-size: 1rem;
         box-shadow: none;
+        border-color: rgba(0, 0, 0, 0.125);
 
         &:hover, &:active, &:focus {
             color: $text-color;
             background-color: $button-color;
             top: 0px;
+            text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
         }
     }
 
