@@ -10,7 +10,6 @@
                 <li class="nav-item{% if page.title == 'Downloads' %} active{% endif %}"><a class="nav-link" href="/downloads/">Downloads</a></li>
                 <li class="nav-item{% if page.title == 'Changelog' %} active{% endif %}"><a class="nav-link" href="/changelog/">Changelog</a></li>
                 <li class="nav-item{% if page.title == 'Screenshots' %} active{% endif %}"><a class="nav-link" href="/screenshots/">Screenshots</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ site.github }}">GitHub</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Docs</a>
                     <div class="dropdown-menu">
@@ -28,10 +27,11 @@
                         <a class="dropdown-item" href="/brand-assets">Brand assets</a>
                     </div>
                 </li>
-                <li class="nav-item"><a id="sharex-twitter" class="nav-link" href="https://twitter.com/{{ site.twitter }}" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="manual" data-content="Follow us on Twitter!">Twitter</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://discord.gg/ShareX">Discord</a></li>
-                <li class="nav-item"><a class="nav-link" href="http://store.steampowered.com/app/400040/">Steam</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://www.microsoft.com/store/apps/9nblggh4z1sp">Microsoft Store</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ site.github }}"><i class="fab fa-github mr-2"></i>GitHub</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://twitter.com/{{ site.twitter }}"><i class="fab fa-twitter mr-2"></i>Twitter</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://discord.gg/ShareX"><i class="fab fa-discord mr-2"></i>Discord</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.microsoft.com/store/apps/9nblggh4z1sp"><i class="fab fa-microsoft mr-2"></i>Microsoft Store</a></li>
+                <li class="nav-item"><a class="nav-link" href="http://store.steampowered.com/app/400040/"><i class="fab fa-steam mr-2"></i>Steam</a></li>
                 <li class="nav-item{% if page.title == 'Donate' %} active{% endif %}"><a class="nav-link" href="/donate/">Donate</a></li>
             </ul>
         </div>
