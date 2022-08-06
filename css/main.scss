@@ -20,16 +20,16 @@ $container-padding-double: $container-padding * 2;
 
 ::-webkit-scrollbar, ::-webkit-scrollbar-corner {
     width: 15px;
-    background-color: #313642;
+    background-color: $background-highlight;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: rgba(255, 255, 255, 0.1);
     min-height: 60px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 
     &:hover {
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, 0.15);
     }
 }
 
@@ -186,8 +186,7 @@ body {
     margin-top: 8px;
 
     .tooltip-inner {
-        background-color: $background-alt;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        background-color: $background-highlight;
         padding: 0px;
         max-width: none;
     }
@@ -225,7 +224,7 @@ body {
     padding: $container-padding 0px;
     
     h1 {
-        font-size: 70px;
+        font-size: 80px;
     }
     
     a {
@@ -669,9 +668,9 @@ footer {
         margin: 0px;
         font-size: 85%;
         color: #d5d5d6;
-        background-color: #21262d;
+        background-color: $background-highlight;
         border-radius: 3px;
-        box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
+        border-top: 1px solid lighten($background-highlight, 5%);
         word-break: break-word;
     }
     
