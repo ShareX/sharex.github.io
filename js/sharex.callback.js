@@ -6,33 +6,29 @@ $(document).ready(function() {
     }
 
     if (code) {
-        $("#panel-callback").addClass("panel-success");
         $("#title").text("Please paste following code in ShareX");
         $("#code").val(code);
 
-        $("#callback-code .btn").on("click", function() {
+        $(".container-callback .btn").on("click", function() {
             var textToCopy = $("#code").val();
             navigator.clipboard.writeText(textToCopy).then(function() {
-                $("#callback-code .btn").text("Copied!");
+                $(".container-callback .btn").text("Copied!");
             }, function() {
-                $("#callback-code .btn").text("Copy failed.");
+                $(".container-callback .btn").text("Copy failed.");
             });
         });
     } else {
         var error = GetParameterByName("error");
 
         if (error) {
-            $("#panel-callback").addClass("panel-danger");
             $("#title").text("ShareX is not properly authorized");
-            $("#callback-error").text("Error: " + error);
+            $("#code").val("Error: " + error);
         } else {
-            $("#panel-callback").addClass("panel-warning");
             $("#title").text("Invalid access");
-            $("#callback-error").text("Unexpected error occured.");
+            $("#code").val("Unexpected error occured.");
         }
 
-        $("#callback-code").hide();
-        $("#callback-error").show();
+        $(".container-callback .btn").hide();
     }
 });
 

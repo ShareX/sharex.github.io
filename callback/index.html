@@ -5,19 +5,10 @@ title: Authorization
 
 <div class="container-callback">
     <div class="container">
-        <div id="panel-callback" class="card text-white bg-dark">
-            <div class="card-header">
-                <span id="title" />
-            </div>
-            <div class="card-body">
-                <div id="callback-code" class="input-group">
-                    <input id="code" type="text" class="form-control" onfocus="this.select()" />
-                    <div class="input-group-append">
-                        <button class="btn btn-default" type="button">Copy to clipboard</button>
-                    </div>
-                </div>
-                <span id="callback-error" />
-            </div>
+        <h1 id="title"></h1>
+        <div>
+            <input id="code" type="text" class="form-control" onfocus="this.select()" />
+            <a class="btn" role="button">Copy to clipboard</a>
         </div>
     </div>
 </div>
