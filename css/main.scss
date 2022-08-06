@@ -691,7 +691,7 @@ footer {
         font-size: 13px;
         color: #555;
         vertical-align: middle;
-        background-color: #fcfcfc;
+        background-color: #f5f5f5;
         border: solid 1px #ccc;
         border-bottom-color: #bbb;
         border-radius: 3px;
@@ -706,25 +706,23 @@ footer {
     }
 
     table {
-        display: block;
-        width: 100%;
-        overflow: auto;
         margin-top: 0;
         margin-bottom: 1rem;
         font-size: 14px;
-    }
+        border: 1px solid $background-border;
 
-    tr {
-        background: #252932;
-    }
+        th,
+        td {
+            border: 1px solid $background-border;
+            padding: 6px 13px;
+        }
 
-    tbody tr:nth-of-type(odd) {
-        background-color: #20242b;
-    }
-
-    table th,
-    table td {
-        border: 1px solid #3d414a;
-        padding: 6px 13px;
+        tr {
+            background-color: $background;
+        }
+    
+        tbody tr:nth-of-type(odd) {
+            background-color: $background-alt;
+        }
     }
 }
