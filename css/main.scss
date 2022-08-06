@@ -5,6 +5,7 @@
 @import "highlight";
 
 $font: "Open Sans", sans-serif;
+$font-header: "Roboto Condensed", "Open Sans", sans-serif;
 $text-color: #fafafa;
 $text-color-2: #e7e9ea;
 $background: #242424;
@@ -160,15 +161,10 @@ body {
     margin-bottom: 0px;
     
     h1 {
+        font-family: $font-header;
         font-size: 120px;
         margin-top: 0px;
         margin-bottom: 10px;
-    }
-
-    @media (max-width: 575px) {
-        h1 {
-            font-size: 70px;
-        }
     }
     
     p {
@@ -245,33 +241,6 @@ body {
         text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
         font-size: 35px;
         margin: 0px;
-    }
-}
-
-#download-btn-container div {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-@media (max-width: 767.98px) {
-    #download-btn-container div {
-        margin-top: 10px;
-    }
-}
-
-@media (min-width: 768px) {
-    #download-btn-container {
-        display: inline-block;
-
-        div {
-            position: relative;
-
-            span {
-                position: absolute;
-                width: 100%;
-                top: 10px;
-                left: 0px;
-            }
-        }
     }
 }
 
