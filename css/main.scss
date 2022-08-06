@@ -5,15 +5,14 @@
 @import "highlight";
 
 $font: "Open Sans", sans-serif;
-$text-color: #fcfcfc;
+$text-color: #fafafa;
 $text-color-2: #e7e9ea;
 $background: #242424;
-$background-border: #2a2a2a;
-$background-shade: #272727;
-$background-shade-border: #2d2d2d;
-$header-line: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0%, transparent 80%) left bottom transparent no-repeat;
-$button-color: #2c2c2c;
-$button-color-shade: #232425;
+$background-border: #222222;
+$background-alt: #272727;
+$background-alt-border: #2c2c2c;
+$background-highlight: #2e2e2e;
+$header-line: linear-gradient(to right, rgba(255, 255, 255, 0.2) 0%, transparent 80%) left bottom transparent no-repeat;
 $container-padding: 2rem;
 $container-padding-half: $container-padding / 2;
 $container-padding-double: $container-padding * 2;
@@ -38,7 +37,7 @@ html {
 }
 
 body {
-    background: $background-shade;
+    background: $background-alt;
     color: $text-color;
     font-family: $font;
 
@@ -56,30 +55,29 @@ body {
 
     .btn {
         color: $text-color;
-        background-color: $button-color;
+        background-color: $background-highlight;
+        border-top: 1px solid lighten($background-highlight, 5%);
         border-radius: 5px;
         padding: 10px 0px;
         margin: 10px 10px 0px 10px;
         font-size: 20px;
-        box-shadow: 0px 5px 0px $button-color-shade;
         position: relative;
         transition: none;
 
         &:hover {
             color: $text-color;
-            text-shadow: 0px 0px 30px #ffffff;
+            background-color: lighten($background-highlight, 1%);
         }
 
         &:focus {
             color: $text-color;
+            box-shadow: none;
             outline: none;
-            box-shadow: 0px 5px 0px $button-color-shade;
         }
         
         &:active {
             color: $text-color;
-            box-shadow: 0px 2px 0px $button-color-shade;
-            top: 3px;
+            background-color: lighten($background-highlight, 3%);
         }
     }
 
@@ -89,8 +87,8 @@ body {
 }
 
 .navbar {
-    background-color: $background-shade;
-    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.2);
+    background-color: $background-alt;
+    border-bottom: 1px solid $background-border;
     padding: 0px;
     
     .navbar-nav {
@@ -123,7 +121,7 @@ body {
         }
         
         .dropdown-menu {
-            background-color: $background-shade;
+            background-color: $background-alt;
             box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.3);
             border: none;
             margin-top: 0px;
@@ -138,10 +136,9 @@ body {
     }
     
     .navbar-toggler {
-        background-color: $button-color;
+        background-color: $background-highlight;
         border: none;
         margin: 10px;
-        box-shadow: 0px 3px 0px $button-color-shade;
 
         span {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -193,8 +190,8 @@ body {
     margin-top: 8px;
 
     .tooltip-inner {
-        background-color: $background-shade;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        background-color: $background-alt;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         padding: 0px;
         max-width: none;
     }
@@ -228,7 +225,7 @@ body {
 
 .jumbotron-compact {
     background: $background;
-    border-bottom: 1px solid $background-shade-border;
+    border-bottom: 1px solid $background-alt-border;
     padding: $container-padding 0px;
     
     h1 {
@@ -279,8 +276,8 @@ body {
 }
 
 .container-screenshot {
-    background: $background-shade;
-    border-top: 1px solid $background-shade-border;
+    background: $background-alt;
+    border-top: 1px solid $background-alt-border;
     padding-top: $container-padding-double;
     padding-bottom: $container-padding-double;
     text-align: center;
@@ -303,8 +300,8 @@ body {
     border-top: 1px solid $background-border;
     
     &:nth-of-type(even) {
-        background: $background-shade;
-        border-top: 1px solid $background-shade-border;
+        background: $background-alt;
+        border-top: 1px solid $background-alt-border;
     }
     
     h3 {
@@ -392,8 +389,7 @@ body {
 }
 
 footer {
-    background-color: #1d2127;
-    border-top: 1px solid #1d1d1f;
+    background-color: darken($background, 2%);
     color: $text-color;
     padding: 20px 0px;
     text-align: center;
@@ -413,7 +409,7 @@ footer {
     padding-top: $container-padding;
     padding-bottom: $container-padding-half;
     font-size: 16px;
-    background: $background-shade;
+    background: $background-alt;
     color: $text-color-2;
     border-bottom: 1px solid $background-border;
 
@@ -445,7 +441,7 @@ footer {
 }
 
 .crypto-modal {
-    color: $button-color;
+    color: $background-highlight;
 
     .close {
         font-size: 30px;
@@ -514,7 +510,7 @@ footer {
 
         &:hover, &:active, &:focus {
             color: $text-color;
-            background-color: $button-color;
+            background-color: $background-highlight;
             top: 0px;
             text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
         }
