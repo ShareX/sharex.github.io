@@ -13,7 +13,7 @@ $background-border: #222222;
 $background-alt: #272727;
 $background-alt-border: #2c2c2c;
 $background-highlight: #2e2e2e;
-$header-line: linear-gradient(to right, rgba(255, 255, 255, 0.2) 0%, transparent 80%) left bottom transparent no-repeat;
+$header-line: linear-gradient(to right, rgba(255, 255, 255, 0.15) 0%, transparent 80%) left bottom transparent no-repeat;
 $container-padding: 2rem;
 $container-padding-half: $container-padding / 2;
 $container-padding-double: $container-padding * 2;
@@ -61,8 +61,8 @@ body {
         border-radius: 5px;
         padding: 10px 0px;
         margin: 10px 10px 0px 10px;
-        font-size: 20px;
-        position: relative;
+        font-size: 22px;
+        font-weight: 300;
         transition: none;
 
         &:hover {
@@ -162,7 +162,7 @@ body {
     
     h1 {
         font-family: $font-header;
-        font-size: 120px;
+        font-size: 130px;
         margin-top: 0px;
         margin-bottom: 10px;
     }
@@ -274,7 +274,8 @@ body {
     }
     
     h3 {
-        font-size: 28px;
+        font-family: $font-header;
+        font-size: 30px;
         margin: $container-padding-half 0px;
     }
 
