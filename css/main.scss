@@ -7,7 +7,7 @@
 $font: "Open Sans", sans-serif;
 $font-header: "Roboto Condensed", "Open Sans", sans-serif;
 $text-color: #fafafa;
-$text-color-2: #e7e9ea;
+$text-color-alt: #e7e9ea;
 $background: #242424;
 $background-border: #222222;
 $background-alt: #272727;
@@ -109,7 +109,6 @@ body {
         a:hover,
         a:hover:focus {
             background-color: rgba(0, 0, 0, 0.1);
-            text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 0px 25px rgba(255, 255, 255, 0.6);
         }
         
         a:focus {
@@ -232,12 +231,11 @@ body {
         text-decoration: none;
 
         &:hover {
-            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(255, 255, 255, 0.2);
+            text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
         }
     }
     
     p {
-        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
         font-size: 35px;
         margin: 0px;
     }
@@ -263,7 +261,7 @@ body {
 .container-features {
     padding-top: $container-padding;
     padding-bottom: $container-padding;
-    color: $text-color-2;
+    color: $text-color-alt;
     background: $background;
     border-top: 1px solid $background-border;
     
@@ -278,7 +276,7 @@ body {
     }
 
     h3 a {
-        color: $text-color-2;
+        color: $text-color-alt;
         text-decoration: none;
     }
     
@@ -329,7 +327,7 @@ body {
             .image-effect-author {
                 display: none;
                 font-weight: 300;
-                color: $text-color-2;
+                color: $text-color-alt;
             }
         }
     }
@@ -378,7 +376,7 @@ footer {
     padding-bottom: $container-padding-half;
     font-size: 16px;
     background: $background-alt;
-    color: $text-color-2;
+    color: $text-color-alt;
     border-bottom: 1px solid $background-border;
 
     p {
@@ -513,15 +511,20 @@ footer {
         }
         
         tr {
-            background: #252932;
+            background: $background;
         }
         
         tbody tr:nth-of-type(odd) {
-            background-color: #20242b;
+            background-color: $background-alt;
         }
 
-        &, table, th, td {
-            border: 1px solid #3d414a;
+        & {
+            border: 1px solid $background-border;
+        }
+
+        th, td {
+            border: none;
+            border-top: 1px solid $background-border;
         }
     }
 }
@@ -531,7 +534,7 @@ footer {
     padding-bottom: $container-padding-half;
 
     .thumbnail {
-        background-color: #1c2026;
+        background-color: $background-border;
         display: block;
         border: none;
         border-radius: 4px;
@@ -576,7 +579,7 @@ footer {
 }
 
 .markdown {
-    color: #e4e4e4;
+    color: $text-color-alt;
     font-size: 17px;
     font-weight: 300;
     padding-top: $container-padding;
@@ -613,7 +616,7 @@ footer {
         left: 0.5em;
         opacity: 0;
         font-size: 0.8em;
-        color: $text-color-2;
+        color: $text-color-alt;
         transition: opacity 0.2s ease-in-out 0.1s;
     }
 
@@ -655,25 +658,32 @@ footer {
         border-top: 1px solid transparent;
     }
 
-    pre {
+    .highlight {
         border-radius: 5px;
-        background-color: #1b1f25;
-        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+        color: darken($text-color-alt, 10%);
+        background-color: $background-highlight;
         border: none;
-        padding: 1rem;
+
+        pre {
+            padding: 1rem;
+        }
+    }
+
+    div.highlight {
+        border-top: 1px solid lighten($background-highlight, 5%);
     }
 
     code.highlighter-rouge {
-        padding: 3px 5px;
+        padding: 3px 6px;
         margin: 0px;
         font-size: 85%;
-        color: #d5d5d6;
+        color: darken($text-color-alt, 10%);
         background-color: $background-highlight;
         border-radius: 3px;
         border-top: 1px solid lighten($background-highlight, 5%);
         word-break: break-word;
     }
-    
+
     kbd {
         display: inline-block;
         padding: 0px 6px 1px 6px;
@@ -703,7 +713,7 @@ footer {
         margin-bottom: 1rem;
         font-size: 14px;
     }
-     
+
     tr {
         background: #252932;
     }
