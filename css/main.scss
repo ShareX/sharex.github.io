@@ -121,8 +121,9 @@ body {
         }
         
         .dropdown-menu {
-            background-color: $background-alt;
-            box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            background-color: rgba($background-alt, 0.9);
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
             border: none;
             margin-top: 0px;
             border-top-left-radius: 0px;
@@ -185,7 +186,9 @@ body {
     margin-top: 8px;
 
     .tooltip-inner {
-        background-color: $background-highlight;
+        backdrop-filter: blur(10px);
+        background-color: rgba($background-highlight, 0.5);
+        border-radius: 5px;
         padding: 0px;
         max-width: none;
     }
@@ -434,14 +437,13 @@ footer {
     }
     
     .table {
-        background-color: #22272f;
+        background-color: $background;
         border-radius: 6px;
         box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
         margin-top: $container-padding-half;
 
         th {
             border-top: none;
-            border-bottom: 3px solid #1b64ab;
         }
 
         td {
@@ -453,7 +455,7 @@ footer {
         }
 
         tr:nth-of-type(even) {
-            background-color: #242a35;
+            background-color: $background-alt;
         }
     }
 }
@@ -502,26 +504,19 @@ footer {
     }
     
     .table-downloads {
-        display: none;
+        background-color: $background;
+        border: 1px solid $background-border;
         
         .badge {
             font-weight: 400;
             padding: 4px;
             box-shadow: 0px 1px 0px rgba(158, 0, 0, 1);
         }
-        
-        tr {
-            background: $background;
-        }
-        
+
         tbody tr:nth-of-type(odd) {
             background-color: $background-alt;
         }
-
-        & {
-            border: 1px solid $background-border;
-        }
-
+        
         th, td {
             border: none;
             border-top: 1px solid $background-border;
