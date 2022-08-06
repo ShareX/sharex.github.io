@@ -5,16 +5,15 @@
 @import "highlight";
 
 $font: "Open Sans", sans-serif;
-$text-color: #ffffff;
+$text-color: #fcfcfc;
 $text-color-2: #e7e9ea;
-$background-image: "/img/Background.png";
-$background: linear-gradient(90deg, #242931, #2c313a, #242931);
-$background-shade: radial-gradient(at top, #272b31 -10%, #1b1f25 60%);
-$border-color: #444950;
+$background: #242424;
+$background-border: #2a2a2a;
+$background-shade: #272727;
+$background-shade-border: #2d2d2d;
 $header-line: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0%, transparent 80%) left bottom transparent no-repeat;
-$button-color: #393d45;
+$button-color: #2c2c2c;
 $button-color-shade: #232425;
-$navbar-color: #313642;
 $container-padding: 2rem;
 $container-padding-half: $container-padding / 2;
 $container-padding-double: $container-padding * 2;
@@ -39,7 +38,7 @@ html {
 }
 
 body {
-    background: $background;
+    background: $background-shade;
     color: $text-color;
     font-family: $font;
 
@@ -90,8 +89,8 @@ body {
 }
 
 .navbar {
-    background-color: $navbar-color;
-    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.3);
+    background-color: $background-shade;
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.2);
     padding: 0px;
     
     .navbar-nav {
@@ -124,7 +123,7 @@ body {
         }
         
         .dropdown-menu {
-            background-color: $navbar-color;
+            background-color: $background-shade;
             box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.3);
             border: none;
             margin-top: 0px;
@@ -157,7 +156,7 @@ body {
 }
 
 .jumbotron {
-    background: radial-gradient(at top, #3e434e -20%, #20232b 90%);
+    background: $background;
     color: $text-color;
     padding-top: 0px;
     padding: 50px 0px 60px;
@@ -194,7 +193,7 @@ body {
     margin-top: 8px;
 
     .tooltip-inner {
-        background-color: $navbar-color;
+        background-color: $background-shade;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
         padding: 0px;
         max-width: none;
@@ -228,8 +227,8 @@ body {
 }
 
 .jumbotron-compact {
-    background: $background-shade;
-    border-bottom: 1px solid $border-color;
+    background: $background;
+    border-bottom: 1px solid $background-shade-border;
     padding: $container-padding 0px;
     
     h1 {
@@ -280,8 +279,8 @@ body {
 }
 
 .container-screenshot {
-    background: $background;
-    border-top: 1px solid $border-color;
+    background: $background-shade;
+    border-top: 1px solid $background-shade-border;
     padding-top: $container-padding-double;
     padding-bottom: $container-padding-double;
     text-align: center;
@@ -301,11 +300,11 @@ body {
     padding-bottom: $container-padding;
     color: $text-color-2;
     background: $background;
-    border-top: 1px solid $border-color;
+    border-top: 1px solid $background-border;
     
     &:nth-of-type(even) {
-        border-top: 1px solid #39393a;
         background: $background-shade;
+        border-top: 1px solid $background-shade-border;
     }
     
     h3 {
@@ -354,10 +353,9 @@ body {
     .image-effect {
         margin-bottom: $container-padding-half;
         padding: 1rem;
-        background: $background-shade;
+        background: $background;
         text-align: center;
         border: none;
-        border-bottom: 1px solid $border-color;
         border-radius: 6px;
 
         .image-effect-title {
@@ -415,9 +413,9 @@ footer {
     padding-top: $container-padding;
     padding-bottom: $container-padding-half;
     font-size: 16px;
-    background: $background;
+    background: $background-shade;
     color: $text-color-2;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $background-border;
 
     p {
         margin-bottom: $container-padding;
