@@ -23,7 +23,7 @@ title: Changelog
     * `{json:input|jsonPath}`
     * `{xml:input|xpath}`
     * `{regex:input|pattern|group}`
-* Don't show notification window in <kbd>Alt + Tab</kbd> menu
+* Don't show notification window in <kbd>Alt</kbd> + <kbd>Tab</kbd> menu
 * Support portable dev build update
 
 ## [ShareX 14.0.1](https://github.com/ShareX/ShareX/releases/tag/v14.0.1) - 2022-07-08
@@ -36,11 +36,11 @@ title: Changelog
 * Support screen capturing cursor with bigger pointer size
 * Added Romanian language support (by [@Edward205](https://github.com/Edward205))
 * Added zoom support to image editor (by [@EricTetz](https://github.com/EricTetz))
-    * <kbd>Ctrl + Mouse wheel</kbd> Zoom centered on cursor
-    * <kbd>Ctrl + +</kbd> Zoom in
-    * <kbd>Ctrl + -</kbd> Zoom out
-    * <kbd>Ctrl + 0</kbd> Reset zoom
-    * <kbd>Ctrl + Alt + 0</kbd> Zoom to fit
+    * <kbd>Ctrl</kbd> + <kbd>Mouse wheel</kbd> Zoom centered on cursor
+    * <kbd>Ctrl</kbd> + <kbd>+</kbd> Zoom in
+    * <kbd>Ctrl</kbd> + <kbd>-</kbd> Zoom out
+    * <kbd>Ctrl</kbd> + <kbd>0</kbd> Reset zoom
+    * <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>0</kbd> Zoom to fit
     * Added "Zoom to fit on open" option
 * Added canvas color button to image editor canvas size window
 * Added "Restrict region capture and cursor within the active monitor" option, which significantly improves the FPS of region capture for multi monitor owners by restricting region capture to active monitor only, so we highly recommend enabling this option if you own multiple monitors
@@ -54,7 +54,7 @@ title: Changelog
     * Added customizable service links, by default these services available: [Google Translate](https://translate.google.com), [Google Search](https://www.google.com), [Bing](https://www.bing.com)
     * Added "Select region" button to OCR window, which lets you do OCR from screen without reopening the tool
 * Fullscreen image preview improvements:
-    * Support navigation using <kbd>Left arrow</kbd>/<kbd>Right arrow</kbd> keys, mouse wheel or by clicking navigation buttons at sides
+    * Support navigation using <kbd>Left arrow</kbd> / <kbd>Right arrow</kbd> keys, mouse wheel or by clicking navigation buttons at sides
     * Show file name, image size and image index at top
     * Also added it as "Image viewer" tool
     * Added `-ImageViewer "filePath"` CLI command
@@ -164,19 +164,19 @@ title: Changelog
 * Added "Toggle more info" button to the history window toolbar, which toggles panel at bottom right to show more info about selected history entry such as tags
 * Added hotkeys to history window context menu entries:
     * <kbd>Enter</kbd> Open URL or file
-    * <kbd>Ctrl + Enter</kbd> Open file
-    * <kbd>Shift + Enter</kbd> Open folder
-    * <kbd>Ctrl + C</kbd> Copy URL
-    * <kbd>Shift + C</kbd> Copy file
-    * <kbd>Alt + C</kbd> Copy image
-    * <kbd>Ctrl + Shift + C</kbd> Copy file path
-    * <kbd>Ctrl + U</kbd> Upload file
-    * <kbd>Ctrl + E</kbd> Edit image
+    * <kbd>Ctrl</kbd> + <kbd>Enter</kbd> Open file
+    * <kbd>Shift</kbd> + <kbd>Enter</kbd> Open folder
+    * <kbd>Ctrl</kbd> + <kbd>C</kbd> Copy URL
+    * <kbd>Shift</kbd> + <kbd>C</kbd> Copy file
+    * <kbd>Alt</kbd> + <kbd>C</kbd> Copy image
+    * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> Copy file path
+    * <kbd>Ctrl</kbd> + <kbd>U</kbd> Upload file
+    * <kbd>Ctrl</kbd> + <kbd>E</kbd> Edit image
 * Added history settings window, which currently contains:
     * Maximum item limit (allows loading history window faster)
     * Remember search input
     * Remember window state
-* If dev mode is enabled then pressing <kbd>Ctrl + F5</kbd> while in the history window loads fake history data
+* If dev mode is enabled then pressing <kbd>Ctrl</kbd> + <kbd>F5</kbd> while in the history window loads fake history data
 * If dev mode is enabled then main window title, tray icon text and about window will show full version info with build type and admin privilege status, for example: `ShareX 13.6.0 Dev (Debug, Admin)`
 * Removed ge.tt file uploader because it is no longer in service
 * "Delete file locally" after capture task now also works for file uploads if "Task settings -> Advanced -> UseAfterCaptureTasksDuringFileUpload" option is enabled
@@ -225,7 +225,7 @@ We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Micro
 * Added image effects listing to after capture tasks sub menu
 * Added menu icon size option to region capture
 * Added lock menu option to region capture that way toolbar grips can be hidden
-* Added duplicate button and hotkey <kbd>Ctrl + D</kbd> to image editor
+* Added duplicate button and hotkey <kbd>Ctrl</kbd> + <kbd>D</kbd> to image editor
 * In image editor show menu tooltips for task status
 * Added option to swap <kbd>Enter</kbd> key behavior in annotation text input box
 * Added arrow head direction option (by [@Scrxtchy](https://github.com/Scrxtchy))
@@ -247,7 +247,7 @@ We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Micro
 * Added Japanese language support (by [@kanaxx](https://github.com/kanaxx))
 * Removed <kbd>Q</kbd> hotkey from region capture because users keep pressing it accidentally
 * Added screen color picker format options to include 0-1 colors `$r1`, `$g1`, `$b1` (by [@JakeCover](https://github.com/JakeCover))
-* Added alternative screen color picker format, which can be used by <kbd>Ctrl + click</kbd>, default format is: `$r255, $g255, $b255` (by [@tomastalian3](https://github.com/tomastalian3))
+* Added alternative screen color picker format, which can be used by <kbd>Ctrl</kbd> + <kbd>Click</kbd>, default format is: `$r255, $g255, $b255` (by [@tomastalian3](https://github.com/tomastalian3))
 * Added screen color picker info text option, default format is: `RGB: $r255, $g255, $b255$nHex: $hex$nX: $x Y: $y`
 * Added maximum item limit option to history window
 * Using custom text notification window now instead of Windows notification/balloon tip
@@ -541,11 +541,11 @@ We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Micro
 
 * Added new image editor / region capture keybinds:
     * Image editor
-        * <kbd>Ctrl + S</kbd> Save image
-        * <kbd>Ctrl + Shift + S</kbd> Save image as...
-        * <kbd>Ctrl + Shift + C</kbd> Copy image to clipboard
-        * <kbd>Ctrl + U</kbd> Upload image
-        * <kbd>Ctrl + P</kbd> Print image
+        * <kbd>Ctrl</kbd> + <kbd>S</kbd> Save image
+        * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> Save image as...
+        * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> Copy image to clipboard
+        * <kbd>Ctrl</kbd> + <kbd>U</kbd> Upload image
+        * <kbd>Ctrl</kbd> + <kbd>P</kbd> Print image
     * Drawing tools
         * <kbd>R</kbd> Rectangle
         * <kbd>E</kbd> Ellipse
@@ -635,7 +635,7 @@ We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Micro
 * Added image interpolation mode option to "Image (File)" and "Image (Screen)" tools
 * Added "Drop shadow color" option
 * Added "Auto close editor on task" option, for example if you click "Upload image" on image editor toolbar then editor will close automatically if this option is enabled
-* In image editor paste <kbd>Ctrl + V</kbd> also gonna check for image files addition to image
+* In image editor paste <kbd>Ctrl</kbd> + <kbd>V</kbd> also gonna check for image files addition to image
 * Holding <kbd>Ctrl</kbd> while using sticker tool will use last sticker instead of opening sticker picker
 * Holding <kbd>Ctrl</kbd> while using image file tool will use last image file instead of opening file dialog
 * Added image editor startup dialog when editor is opened from tools menu
@@ -712,7 +712,7 @@ We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Micro
 * Added markdown copy options to main window task context menu
 * Removed [Amazon S3](https://aws.amazon.com/s3/) reduced redundancy storage option because it is now deprecated and even costs more than standard storage to encourage moving to standard storage
 * Added [standard infrequent access storage](https://aws.amazon.com/s3/storage-classes/) option to [Amazon S3](https://aws.amazon.com/s3/)
-* Hide notification window from <kbd>Alt + Tab</kbd> and <kbd>Win + Tab</kbd> menu (by [@sylveon](https://github.com/sylveon))
+* Hide notification window from <kbd>Alt</kbd> + <kbd>Tab</kbd> and <kbd>Win</kbd> + <kbd>Tab</kbd> menu (by [@sylveon](https://github.com/sylveon))
 * Implemented latest [paste.ee](https://paste.ee/) API, this will cause previous authentication setting to reset
 * Implemented latest [Flickr](https://www.flickr.com/) API which is using OAuth for authentication now, this will cause previous authentication setting to reset
 * Added direct link option to [Flickr](https://www.flickr.com/)
@@ -726,7 +726,7 @@ We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Micro
 * Pressing <kbd>Esc</kbd> in quick task menu will close it
 * Added verbose request logs option to application settings advanced tab which can be used to debug upload related issues
 * Added drag and drop file from history window support (by [@campbeb](https://github.com/campbeb))
-* Support <kbd>Ctrl + A</kbd> in OCR results window (by [@campbeb](https://github.com/campbeb))
+* Support <kbd>Ctrl</kbd> + <kbd>A</kbd> in OCR results window (by [@campbeb](https://github.com/campbeb))
 * Main window image preview can now be positioned on the bottom (by [@campbeb](https://github.com/campbeb))
 * Removed https option for [Imgur](https://imgur.com) and instead always https will be used because now [it is used by default on Imgur](https://blog.imgur.com/2017/09/13/https-on-imgur/)
 * Show current version and latest version in update message box
@@ -771,7 +771,7 @@ We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Micro
 * Changes to default annotation settings
 * In order to increase image annotation performance some tools are now using lower quality rendering during annotation, but higher quality for final output
 * Added curved edge support to torn edges image effect
-* Added Screen recording (GIF) default hotkey <kbd>Ctrl + Shift + Print Screen</kbd> for new installations
+* Added Screen recording (GIF) default hotkey <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Print screen</kbd> for new installations
 * Added configurable environments support for [Azure storage](https://azure.microsoft.com/en-us/services/storage/) (by [@nta](https://github.com/nta))
 * Added infinity expire time option to [Plik](https://github.com/root-gg/plik) file uploader (by [@mxschmitt](https://github.com/mxschmitt))
 * PNG bit depth is now configurable through task settings. Automatic detection will scan the image and apply best option for lower file size without quality loss
@@ -808,7 +808,7 @@ We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Micro
 ## [ShareX 11.6.0](https://github.com/ShareX/ShareX/releases/tag/v11.6.0) - 2017-02-23
 
 * Added outlined text drawing tool `Drawing: Text (Outline)` to region capture, previous text drawing tool was named as `Drawing: Text (Background)`
-* In region capture text input window pressing <kbd>Enter</kbd> accepts text and close input window, <kbd>Ctrl + Enter</kbd> inserts new line
+* In region capture text input window pressing <kbd>Enter</kbd> accepts text and close input window, <kbd>Ctrl</kbd> + <kbd>Enter</kbd> inserts new line
 * Added cancel button to region capture text input window which ignores text changes and close input window, you can also press <kbd>Esc</kbd>
 * Added ShareX Firefox addon (Application settings -> Integration tab)
 * Added [Azure Storage](https://azure.microsoft.com/en-us/services/storage/) support (by [@wi5nia](https://github.com/wi5nia))
@@ -817,17 +817,17 @@ We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Micro
 * Allow drag n drop file upload support to actions toolbar
 * Added additional hotkeys for main window task list and hotkey info text for its right click menu items
     * Open URL <kbd>Enter</kbd>
-    * Open file <kbd>Ctrl + Enter</kbd>
-    * Open folder <kbd>Shift + Enter</kbd>
-    * Copy URL <kbd>Ctrl + C</kbd>
-    * Copy file <kbd>Shift + C</kbd>
-    * Copy image <kbd>Alt + C</kbd>
-    * Copy file path <kbd>Ctrl + Shift + C</kbd>
-    * Upload <kbd>Ctrl + U</kbd>
-    * Download <kbd>Ctrl + D</kbd>
-    * Edit image <kbd>Ctrl + E</kbd>
+    * Open file <kbd>Ctrl</kbd> + <kbd>Enter</kbd>
+    * Open folder <kbd>Shift</kbd> + <kbd>Enter</kbd>
+    * Copy URL <kbd>Ctrl</kbd> + <kbd>C</kbd>
+    * Copy file <kbd>Shift</kbd> + <kbd>C</kbd>
+    * Copy image <kbd>Alt</kbd> + <kbd>C</kbd>
+    * Copy file path <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd>
+    * Upload <kbd>Ctrl</kbd> + <kbd>U</kbd>
+    * Download <kbd>Ctrl</kbd> + <kbd>D</kbd>
+    * Edit image <kbd>Ctrl</kbd> + <kbd>E</kbd>
     * Delete task from list <kbd>Del</kbd>
-    * Delete file locally <kbd>Shift + Del</kbd>
+    * Delete file locally <kbd>Shift</kbd> + <kbd>Del</kbd>
 * Removed info button from main window because most tasks hotkey visible in right click menu now
 * Removed sli.mg image uploader because the service is dead
 
@@ -838,9 +838,9 @@ We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Micro
     * Replaced rounded rectangle shapes with corner radius option to rectangle shapes
     * Added capture last region button to capture menu
     * Added edit menu to toolbar:
-        * Undo <kbd>Ctrl + Z</kbd>
+        * Undo <kbd>Ctrl</kbd> + <kbd>Z</kbd>
         * Delete <kbd>Del</kbd>
-        * Delete all <kbd>Shift + Del</kbd>
+        * Delete all <kbd>Shift</kbd> + <kbd>Del</kbd>
         * Bring to front <kbd>Home</kbd>
         * Bring forward <kbd>Page up</kbd>
         * Send backward <kbd>Page down</kbd>
@@ -886,15 +886,15 @@ We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Micro
 * Region capture related changes:
     * Added speech balloon drawing tool which works similar to text drawing tool but have moveable tail
     * Added image drawing tool so now you can select image from file dialog
-    * Added support to paste image or text using <kbd>Ctrl + V</kbd> key
+    * Added support to paste image or text using <kbd>Ctrl</kbd> + <kbd>V</kbd> key
     * Allow region capture right click menu to be closed by right clicking inside region capture window
     * Using rounded cap for line/arrow drawing
     * All region capture related tasks (screen color picker, ruler, screen record region selection etc.) will use currently configured region capture options such as magnifier, crosshair, snap size etc.
     * In text drawing tool, rectangle will be automatically resized according to initial text size so no need to drag rectangle when adding text anymore
     * Added corner radius setting to text drawing
-    * In text input window, pressing <kbd>Ctrl + Enter</kbd> will close window
+    * In text input window, pressing <kbd>Ctrl</kbd> + <kbd>Enter</kbd> will close window
     * In text input window, if a non-existent font was selected, automatically default to Arial font
-    * Swapped <kbd>Mouse wheel</kbd> tool changing keybind with <kbd>Ctrl + Mouse wheel</kbd> magnifier zoom changing keybind, otherwise people can change tool accidentally; so <kbd>Mouse wheel</kbd> will only change magnifier size now which will be less problematic than changing tool accidentally
+    * Swapped <kbd>Mouse wheel</kbd> tool changing keybind with <kbd>Ctrl</kbd> + <kbd>Mouse wheel</kbd> magnifier zoom changing keybind, otherwise people can change tool accidentally; so <kbd>Mouse wheel</kbd> will only change magnifier size now which will be less problematic than changing tool accidentally
     * Change pixel offset mode dynamically depending on pen size to draw line, rounded rectangle etc. aligned to exact pixels to avoid blurry lines
     * Removed `Region capture (Simple annotate)` hotkey because now current region capture have all features of old region capture annotate window
 * Using [AppVeyor](https://www.appveyor.com) build server to compile and build ShareX setup/portable files and release them automatically without any user interaction that way it will increase security of our releases
@@ -922,13 +922,13 @@ We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Micro
     * After shape is created in freehand region, node will be shown at last point which you can drag it to continue drawing
     * When region capture opened show current region type at top momentarily
     * Removed freehand & polygon capture from capture menu because region capture has better version of it now
-    * Pressing <kbd>Ctrl + Z</kbd> will undo shape additions (So you can hold it to remove all previously added shapes)
+    * Pressing <kbd>Ctrl</kbd> + <kbd>Z</kbd> will undo shape additions (So you can hold it to remove all previously added shapes)
     * After any shape is created <kbd>Arrow keys</kbd> will resize from bottom right instead of top left, you can hold <kbd>Alt</kbd> to resize from top left
-    * Support using <kbd>W, A, S, D</kbd> keys to move or resize shapes
+    * Support using <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, <kbd>D</kbd> keys to move or resize shapes
     * When dragging resize nodes, node will center to cursor position that way magnifier can point exact pixel at corner
     * <kbd>Q</kbd> key will swap between multi region mode and quick region mode
     * For non rectangle shape regions output will be cut with anti aliasing
-    * When <kbd>right click</kbd> before open options menu select shape under cursor
+    * When <kbd>Right click</kbd> before open options menu select shape under cursor
     * Note: If you have low [FPS](https://en.wikipedia.org/wiki/Frame_rate) then hiding tips with <kbd>F1</kbd> will increase FPS greatly because text rendering every frame is costly
 * Allow reordering hotkeys in `Hotkey settings window`
 * ShareX main window: Added "Download" button to task right click menu for tasks which have file URL
@@ -978,7 +978,7 @@ We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Micro
 ## [ShareX 11.0.0](https://github.com/ShareX/ShareX/releases/tag/v11.0.0) - 2016-06-10
 
 * Added annotation support inside region capture.
-In region capture you can <kbd>right click</kbd> to open menu which you can select annotation tool, capture fullscreen/monitor or be able to change region capture options. You can use <kbd>middle click</kbd> to cancel capture.
+In region capture you can <kbd>Right click</kbd> to open menu which you can select annotation tool, capture fullscreen/monitor or be able to change region capture options. You can use <kbd>Middle click</kbd> to cancel capture.
     * These are the currently available annotation tools:
         * Region
             * Rectangle
@@ -1027,7 +1027,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Region capture tips will show in active monitor instead of primary monitor
 * "Quick task menu" and "After capture window" after capture tasks now can be used in all image related tasks
 * Before uploading ShareX will check current destination config requirements and if config is not valid then will stop the task, warn user about invalid config and open destination settings window with current upload destination tab selected so user can check config easily
-* Added <kbd>Shift + C</kbd> hotkey to main window list to be able to copy selected file
+* Added <kbd>Shift</kbd> + <kbd>C</kbd> hotkey to main window list to be able to copy selected file
 * Added tip icon to top right corner of main window to show tips and hotkeys that can be used in main window
 * Added support to be able to drag file from main window list to Windows Explorer or any other software (Holding <kbd>Ctrl</kbd> while dragging will copy URL or file path instead of file)
 * Added custom region hotkeys for "Screen recording" and "Screen recording (GIF)"
@@ -1117,7 +1117,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Moved "Show after capture window" and "Show before upload window" to "After capture tasks" menu in main window
 * Moved "Show after upload window" to "After upload tasks" menu in main window
 * Added "After upload" tab and image size label to "After capture" window
-* Default hotkey for <kbd>Ctrl + Print Screen</kbd> changed to "Capture region (Windows and controls)"
+* Default hotkey for <kbd>Ctrl</kbd> + <kbd>Print screen</kbd> changed to "Capture region (Windows and controls)"
 * Added [JSON](https://en.wikipedia.org/wiki/JSON) and [XML](https://en.wikipedia.org/wiki/XML) response parsing support to custom uploaders using [JsonPath](http://goessner.net/articles/JsonPath/) and [XPath](http://www.w3schools.com/xsl/xpath_syntax.asp) syntax
 * Added "Add syntax" button for [Regex](https://en.wikipedia.org/wiki/Regular_expression) section in custom uploaders
 * Canceling save as dialog will still continue uploading instead of stopping the task
@@ -1194,7 +1194,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added region capture border glowing for non-active regions
 * Added Imgur GIFV URL option
 * Added optional square magnifier option
-* In main window list <kbd>Shift + Delete</kbd> will delete file locally
+* In main window list <kbd>Shift</kbd> + <kbd>Delete</kbd> will delete file locally
 * Added separate show cursor setting for screen recording
 * "Post capture tasks" and "Before upload" windows will show custom uploaders with their names
 * Removed "Portable mode" from installer instead added Portable zip file to release section
@@ -1205,7 +1205,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added [ShareX Greenlight](http://steamcommunity.com/sharedfiles/filedetails/?id=491692781) buttons to main window where you could vote to help us or just hide it permanently
 * When ShareX window minimizes to tray it will now save all settings
 * "Rectangle region capture" renamed to "Region capture"
-* Rounded rectangle, ellipse, triangle, diamond region captures moved to "Region capture" which you can activate them with <kbd>Numpad 1, 2, 3, 4</kbd> keys
+* Rounded rectangle, ellipse, triangle, diamond region captures moved to "Region capture" which you can activate them with <kbd>Numpad 1</kbd>, <kbd>Numpad 2</kbd>, <kbd>Numpad 3</kbd>, <kbd>Numpad 4</kbd> keys
 * Added "Copy URL" option for "ToastWindowClickAction" setting in "Task Settings -> Advanced" tab
 * Added tray menu item and hotkey to be able to "Disable/Enable hotkeys"
 * Imgur GIF uploads now use GIFV link
@@ -1247,7 +1247,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Added tips to region capture (<kbd>F1</kbd> key will hide/show it)
 * Region capture startup time improvement
 * Region capture rectangle info will be shown at the top of the region instead of inside
-* Added coordinate info in region capture under magnifier (pressing <kbd>Ctrl + C</kbd> will copy coordinate to clipboard)
+* Added coordinate info in region capture under magnifier (pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> will copy coordinate to clipboard)
 * Numeric keys will capture the corresponding monitor while in region capture e.g. <kbd>2</kbd> will capture second monitor
 * In region capture <kbd>~</kbd> key will capture monitor where cursor is
 * WebM changes to improve frame rate and quality
@@ -1258,7 +1258,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 * Improved Twitter UI in destination settings
 * Added skip message box and default message settings for Twitter
 * Error message boxes for FTP client and Tweet message if valid account is not found
-* In main window list <kbd>Ctrl + C</kbd> and <kbd>Ctrl + X</kbd> will check for shortened url, normal url, and file path to copy in that order. <kbd>Ctrl + Shift + C</kbd> will copy file path.
+* In main window list <kbd>Ctrl</kbd> + <kbd>C</kbd> and <kbd>Ctrl</kbd> + <kbd>X</kbd> will check for shortened url, normal url, and file path to copy in that order. <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> will copy file path.
 
 ## [ShareX 9.9.0](https://github.com/ShareX/ShareX/releases/tag/v9.9.0) - 2015-04-12
 
@@ -1598,7 +1598,11 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 
 ## ShareX 6.3.0.212 - 2012-08-03
 
-* Added new hotkeys to main window, history, image history: <kbd>Enter</kbd> = Open URL, <kbd>Ctrl + Enter</kbd> = Open file, <kbd>Ctrl + C</kbd> = Copy URL, <kbd>F5</kbd> = Refresh
+* Added new hotkeys to main window, history, image history:
+    * <kbd>Enter</kbd> Open URL
+    * <kbd>Ctrl</kbd> + <kbd>Enter</kbd> Open file
+    * <kbd>Ctrl</kbd> + <kbd>C</kbd> Copy URL
+    * <kbd>F5</kbd> Refresh
 * Added separate name format for active window capture
 * Moved magnifier out of text area
 * Added the option of capturing Active Windows without borders
@@ -1689,7 +1693,7 @@ In region capture you can <kbd>right click</kbd> to open menu which you can sele
 
 ## ZUploader 3.8 - 2011-01-02
 
-* 3.8 - Added ClipboardUpload hotkey <kbd>Ctrl + Page up</kbd>
+* 3.8 - Added ClipboardUpload hotkey <kbd>Ctrl</kbd> + <kbd>Page up</kbd>
 * 3.7 - Added upload queue system to limit simultaneous uploads
 
 ## ZUploader 3.6 - 2010-12-15
