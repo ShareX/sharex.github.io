@@ -6,7 +6,7 @@
 // Variables
 
 $font: "Open Sans", sans-serif;
-$font-header: "Roboto Condensed", "Open Sans", sans-serif;
+$font-header: "Roboto Condensed", $font;
 $text-color: #fafafa;
 $text-color-alt: #e7e9ea;
 $background: #242424;
