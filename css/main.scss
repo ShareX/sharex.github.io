@@ -81,7 +81,7 @@ body {
     }
 
     .btn {
-        color: $text-color;
+        color: $text-color-alt;
         background-color: $background-highlight;
         border-top: 1px solid lighten($background-highlight, 5%);
         border-radius: 5px;
@@ -105,6 +105,10 @@ body {
         &:active {
             color: $text-color;
             background-color: lighten($background-highlight, 3%);
+        }
+
+        i {
+            margin-left: 15px;
         }
     }
 
@@ -143,7 +147,6 @@ body {
 
         .dropdown:hover .dropdown-menu {
             display: block;
-            z-index: 1061;
         }
 
         .dropdown-menu {
@@ -159,6 +162,10 @@ body {
         .dropdown-toggle::after {
             margin-left: 6px;
             vertical-align: middle;
+        }
+
+        i {
+            margin-right: 0.5rem;
         }
     }
 
