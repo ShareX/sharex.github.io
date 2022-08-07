@@ -129,7 +129,7 @@ body {
 
         .nav-item.active,
         .nav-item.dropdown.show {
-            background-color: rgba(0, 0, 0, 0.1);
+            background-color: $background;
         }
 
         a {
@@ -138,7 +138,7 @@ body {
 
         a:hover,
         a:hover:focus {
-            background-color: rgba(0, 0, 0, 0.1);
+            background-color: $background;
         }
 
         a:focus {
