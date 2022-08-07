@@ -1,8 +1,9 @@
 ---
 ---
 
-@import "sticky-footer";
 @import "highlight";
+
+// Variables
 
 $font: "Open Sans", sans-serif;
 $font-header: "Roboto Condensed", "Open Sans", sans-serif;
@@ -18,6 +19,8 @@ $container-padding: 2rem;
 $container-padding-half: $container-padding / 2;
 $container-padding-double: $container-padding * 2;
 
+// Scrollbar
+
 ::-webkit-scrollbar, ::-webkit-scrollbar-corner {
     width: 15px;
     background-color: $background-highlight;
@@ -32,6 +35,26 @@ $container-padding-double: $container-padding * 2;
         background-color: rgba(255, 255, 255, 0.15);
     }
 }
+
+// Sticy footer
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 61px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 61px;
+}
+
+// Theme
 
 html {
     font-size: 14px;
