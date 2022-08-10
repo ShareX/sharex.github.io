@@ -61,6 +61,11 @@ title: Keybinds
 | Keybind | Description |
 | --- | --- |
 | <kbd>Hold middle click</kbd> | Pan image |
+| <kbd>Ctrl</kbd> + <kbd>Mouse wheel</kbd> | Zoom centered on cursor |
+| <kbd>Ctrl</kbd> + <kbd>+</kbd> | Zoom in |
+| <kbd>Ctrl</kbd> + <kbd>-</kbd> | Zoom out |
+| <kbd>Ctrl</kbd> + <kbd>0</kbd> | Reset zoom |
+| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>0</kbd> | Zoom to fit |
 | <kbd>Enter</kbd> | Close image editor and continue task with changes applied |
 | <kbd>Right click</kbd> / <kbd>Space</kbd> | Close image editor and continue task without apply changes |
 | <kbd>Esc</kbd> | Close image editor and cancel task |
