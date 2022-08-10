@@ -3,7 +3,7 @@ layout: markdown
 title: Privacy Policy
 ---
 
-# Application
+## Application
 
 ShareX does not collect any data of any kind, including personally identifiable information. 
 
@@ -19,7 +19,7 @@ ShareX implements YouTube API Services to support uploading videos to YouTube. Y
 * [YouTube API Terms of Service](https://developers.google.com/youtube/terms/api-services-terms-of-service)
 * [OCR.space Privacy Policy](http://ocr.space/privacypolicy)
 
-# Website
+## Website
 
 Our web site uses Google Analytics, which helps us to see page view counts.
 
