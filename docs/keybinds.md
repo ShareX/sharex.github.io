@@ -3,7 +3,7 @@ layout: markdown
 title: Keybinds
 ---
 
-## Region capture & image editor
+## Region capture / Image editor
 
 ### Common
 
@@ -91,3 +91,15 @@ title: Keybinds
 | <kbd>B</kbd> | Blur |
 | <kbd>P</kbd> | Pixelate |
 | <kbd>C</kbd> | Crop image |
+
+## Pin to screen
+
+| Keybind | Description |
+| --- | --- |
+| <kbd>Hold left click</kbd> | Move image |
+| <kbd>Right click</kbd> / <kbd>Escape</kbd> | Close image |
+| <kbd>Middle click</kbd> | Reset image |
+| <kbd>Double click</kbd> | Minimize image |
+| <kbd>Mouse wheel</kbd> / <kbd>+</kbd> <kbd>-</kbd> | Change image scale |
+| <kbd>Ctrl</kbd> + <kbd>Mouse wheel</kbd> / <kbd>Ctrl</kbd> + <kbd>+</kbd> <kbd>-</kbd> | Change image opacity |
+| <kbd>Ctrl</kbd> + <kbd>C</kbd> | Copy image |
