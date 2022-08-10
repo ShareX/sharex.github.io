@@ -5,7 +5,7 @@ title: Keybinds
 
 ## Region capture & image editor
 
-### General
+### Common
 
 | Keybind | Description |
 | --- | --- |
@@ -45,7 +45,7 @@ title: Keybinds
 | <kbd>Hold left click</kbd> | Move shape |
 | <kbd>Right click</kbd> / <kbd>Delete</kbd> | Delete shape |
 
-### Region capture
+### Region capture only
 
 | Keybind | Description |
 | --- | --- |
@@ -56,7 +56,7 @@ title: Keybinds
 | <kbd>~</kbd> | Active monitor capture |
 | <kbd>Double left click</kbd> / <kbd>Enter</kbd> | If multi region mode is enabled then capture regions |
 
-### Image editor
+### Image editor only
 
 | Keybind | Description |
 | --- | --- |
@@ -70,15 +70,7 @@ title: Keybinds
 | <kbd>Ctrl</kbd> + <kbd>U</kbd> | Upload image |
 | <kbd>Ctrl</kbd> + <kbd>P</kbd> | Print image |
 
-### Region tools
-
-| Keybind | Description |
-| --- | --- |
-| <kbd>Tab</kbd> | Rectangle |
-| | Ellipse |
-| | Freehand |
-
-### Drawing tools
+### Tools
 
 | Keybind | Description |
 | --- | --- |
@@ -91,15 +83,6 @@ title: Keybinds
 | <kbd>T</kbd> | Text (Background) |
 | <kbd>S</kbd> | Speech balloon |
 | <kbd>I</kbd> | Step |
-| | Image (File) |
-| | Image (Screen) |
-| | Sticker |
-| | Cursor |
 | <kbd>B</kbd> | Blur |
 | <kbd>P</kbd> | Pixelate |
-
-### Other tools
-
-| Keybind | Description |
-| --- | --- |
 | <kbd>C</kbd> | Crop image |
