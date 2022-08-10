@@ -16,9 +16,9 @@ title: Keybinds
 | <kbd>Ctrl</kbd> + <kbd>V</kbd> | Paste image or text |
 | <kbd>Ctrl</kbd> + <kbd>D</kbd> | Duplicate shape |
 | <kbd>Ctrl</kbd> + <kbd>Z</kbd> | Undo shape |
-| <kbd>Arrow keys</kbd> | Move cursor / Resize current shape from bottom right corner |
+| <kbd>Arrow keys</kbd> | Move cursor / Move current shape |
+| <kbd>Ctrl</kbd> + <kbd>Arrow keys</kbd> | Resize current shape from bottom right corner |
 | <kbd>Alt</kbd> + <kbd>Arrow keys</kbd> | Resize current shape from top left corner |
-| <kbd>Ctrl</kbd> + <kbd>Arrow keys</kbd> | Move current shape |
 | <kbd>Shift</kbd> + <kbd>Arrow keys</kbd> | Resize or move faster |
 | <kbd>Home</kbd> | Move current shape top |
 | <kbd>End</kbd> | Move current shape bottom |
