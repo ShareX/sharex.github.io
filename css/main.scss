@@ -645,11 +645,22 @@ footer {
     h6 {
         color: $text-color;
         font-weight: 300;
-        margin-bottom: 1rem;
+        margin-bottom: $container-padding-half;
 
         a {
             text-decoration: none;
         }
+    }
+
+    h1,
+    h2 {
+        padding-bottom: 5px;
+        background: $header-line;
+        background-size: 100% 1px;
+    }
+
+    h2:not(:first-child) {
+        margin-top: $container-padding;
     }
 
     .header-link {
@@ -667,17 +678,6 @@ footer {
     h5:hover .header-link,
     h6:hover .header-link {
         opacity: 1;
-    }
-
-    h1,
-    h2 {
-        padding-bottom: 5px;
-        background: $header-line;
-        background-size: 100% 1px;
-    }
-
-    h4 {
-        margin-top: 15px;
     }
 
     ul,
@@ -748,7 +748,7 @@ footer {
 
     table {
         margin-top: 0;
-        margin-bottom: 1rem;
+        margin-bottom: $container-padding-half;
         font-size: 15px;
         border: 1px solid $background-highlight;
 
