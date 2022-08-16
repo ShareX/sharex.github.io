@@ -580,7 +580,7 @@ We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Micro
 * Added [Cloudflare DNS](https://1.1.1.1) to DNS changer tool
 * Added [Firebase](https://firebase.google.com) Dynamic Links URL shortener (by [@matthewburnett](https://github.com/matthewburnett))
 * Added [YouTube](https://www.youtube.com) file uploader (by [@SupSuper](https://github.com/SupSuper))
-    * Tip: There is no specific destination type for videos but you can use uploader filters to force files with video extensions to upload to desired destinations [like this](/img/ScreenshotChangelogUploaderFilters.png)
+    * Tip: There is no specific destination type for videos but you can use uploader filters to force files with video extensions to upload to desired destinations
 * Added [Google Cloud Storage](https://cloud.google.com/storage/) file uploader (by [@matthewburnett](https://github.com/matthewburnett))
 * Updated [OneDrive](https://onedrive.live.com) uploader to [Microsoft Graph API](https://developer.microsoft.com/en-us/graph), this change allows using OneDrive for Business and uploading higher size files (by [@SupSuper](https://github.com/SupSuper))
     * Note: If you were using OneDrive destination, you need to re-authenticate
