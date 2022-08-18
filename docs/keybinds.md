@@ -79,6 +79,7 @@ title: Keybinds
 
 | Keybind | Description |
 | --- | --- |
+| <kbd>M</kbd> | Select and move |
 | <kbd>R</kbd> | Rectangle |
 | <kbd>E</kbd> | Ellipse |
 | <kbd>F</kbd> | Freehand |
@@ -90,7 +91,9 @@ title: Keybinds
 | <kbd>I</kbd> | Step |
 | <kbd>B</kbd> | Blur |
 | <kbd>P</kbd> | Pixelate |
+| <kbd>H</kbd> | Highlight |
 | <kbd>C</kbd> | Crop image |
+| <kbd>X</kbd> | Cut out |
 
 ## Pin to screen
 
