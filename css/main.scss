@@ -277,9 +277,17 @@ body {
     }
 }
 
-.container-screenshot {
+.container-fluid {
     background: $background-alt;
     border-top: 1px solid $background-alt-border;
+
+    &:nth-of-type(even) {
+        background: $background;
+        border-top: 1px solid $background-border;
+    }
+}
+
+.container-screenshot {
     padding-top: $container-padding-double;
     padding-bottom: $container-padding-double;
     text-align: center;
@@ -298,13 +306,6 @@ body {
     padding-top: $container-padding;
     padding-bottom: $container-padding;
     color: $text-color-alt;
-    background: $background;
-    border-top: 1px solid $background-border;
-
-    &:nth-of-type(even) {
-        background: $background-alt;
-        border-top: 1px solid $background-alt-border;
-    }
 
     h3 {
         font-family: $font-header;
