@@ -5,12 +5,12 @@ $(function() {
 
 function GetLatestReleaseInfo() {
     $.getJSON("https://api.github.com/repos/ShareX/ShareX/releases/latest").done(function(release) {
-        UpdateDownloadButton(release, $(".sharex-setup"), ".exe");
-        UpdateDownloadButton(release, $(".sharex-portable"), ".zip");
+        UpdateDownloadButton(release, ".exe", $(".sharex-setup"));
+        UpdateDownloadButton(release, ".zip", $(".sharex-portable"));
     });
 }
 
-function UpdateDownloadButton(release, element, assetExtension) {
+function UpdateDownloadButton(release, assetExtension, element) {
     let asset = release.assets.find(asset => asset.name.endsWith(assetExtension));
     let releaseInfo = "Version: " + release.tag_name.substring(1) +
         "\nFile size: " + (asset.size / 1024 / 1024).toFixed(2) + " MB" +

@@ -93,7 +93,8 @@ body {
 
         &:hover {
             color: $text-color;
-            background-color: lighten($background-highlight, 1%);
+            background-color: lighten($background-highlight, 1.5%);
+            text-shadow: none;
         }
 
         &:focus {
