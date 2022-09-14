@@ -1,6 +1,6 @@
 - name: Zterio
   website: https://i5.io
-  amount: 460
+  amount: 485
 
 - name: Dinnerbone
   twitter: https://twitter.com/Dinnerbone
@@ -10,14 +10,14 @@
 - name: Dean Herbert
   twitter: https://twitter.com/ppy
   website: https://ppy.sh
-  amount: 442
+  amount: 732
 
 - name: Mattie Casper
   amount: 215
 
 - name: xnaas
   website: https://xnaas.info
-  amount: 245
+  amount: 390
 
 - name: Hicoria
   facebook: https://www.facebook.com/hicoria
@@ -25,7 +25,7 @@
   amount: 150
 
 - name: Ralek
-  amount: 230
+  amount: 245
 
 - name: Christopher Baker
   amount: 125
@@ -33,14 +33,14 @@
 - name: Radley Sustaire
   github: https://github.com/RadGH
   website: https://radleysustaire.com
-  amount: 182
+  amount: 322
 
 - name: Kevin Ramsaur
   amount: 90
 
 - name: Botan ;)
   instagram: https://www.instagram.com/kyoukeiken
-  amount: 104
+  amount: 133
 
 - name: Mitchell Frith
   twitter: https://twitter.com/Mitch_SGG
@@ -62,7 +62,7 @@
   twitter: https://twitter.com/lithium720
   github: https://github.com/lithium720
   website: https://lobfile.com
-  amount: 155
+  amount: 240
 
 - name: James Baggs
   github: https://github.com/jamesharrisonbaggs
@@ -75,7 +75,7 @@
 
 - name: TheTimmaeh
   twitter: https://twitter.com/TheTimmaeh
-  amount: 60
+  amount: 89
 
 - name: Nogar
   amount: 40
@@ -133,7 +133,7 @@
 
 - name: Junior™
   twitter: https://twitter.com/juniortm
-  amount: 25
+  amount: 27
 
 - name: Scott Sarver
   amount: 70
@@ -142,7 +142,7 @@
   facebook: https://www.facebook.com/Linistry
   instagram: https://www.instagram.com/officiallinistry
   website: https://linistry.com
-  amount: 100
+  amount: 230
 
 - name: Kamil Monicz
   github: https://github.com/Zaczero
@@ -150,23 +150,23 @@
   amount: 25
 
 - name: DiFFtY
-  amount: 20
+  amount: 220
 
 - name: Yme Brugts
   github: https://github.com/ymebrugts
   amount: 81
 
 - name: Hooke007
-  amount: 10
+  amount: 40
 
 - name: SafeShare.tv
   website: https://safeshare.tv
-  amount: 450
+  amount: 930
 
 - name: Rosie Leung
   github: https://github.com/rosieleung
   website: https://rosieleung.com
-  amount: 60
+  amount: 80
 
 - name: Jonathan@AmberstoneDigital
   amount: 10
@@ -174,17 +174,17 @@
 - name: John O'Really
   twitter: https://twitter.com/John_O_Really
   website: https://johno.re
-  amount: 130
+  amount: 180
 
 - name: VJ Galaxy
-  amount: 10
+  amount: 21
 
 - name: Hestia
   twitter: https://twitter.com/hestia__23
   twitch: https://www.twitch.tv/hestia_23
   youtube: https://www.youtube.com/user/23hestia
   instagram: http://instagram.com/alethia23
-  amount: 45
+  amount: 125
 
 - name: RANKTW
   github: https://github.com/RANKTW
@@ -195,7 +195,7 @@
 
 - name: Joingames
   website: https://joingames.net
-  amount: 50
+  amount: 350
 
 - name: Neo
   amount: 30
@@ -208,7 +208,7 @@
 - name: Dapal
   github: https://github.com/dapal-003
   steam: https://steamcommunity.com/id/Dapal-003/
-  amount: 20
+  amount: 40
 
 - name: patriusek
   steam: https://steamcommunity.com/id/patriusek
@@ -216,7 +216,7 @@
 
 - name: ORIGINAL ENERGIE
   website: https://www.originalenergie.de
-  amount: 50
+  amount: 585
 
 - name: Kirill Lavrishev
   twitter: https://twitter.com/thekirillrocks
@@ -226,9 +226,13 @@
 
 - name: Colin McMahon
   website: https://mcmahongroup.ca
-  amount: 75
+  amount: 120
 
 - name: ACertainCoder
   github: https://github.com/ACertainCoder
   steam: https://steamcommunity.com/id/acertaincoder
-  amount: 37
+  amount: 56
+
+- name: React2WP
+  website: https://react2wp.com
+  amount: 100
