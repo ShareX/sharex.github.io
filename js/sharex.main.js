@@ -1,12 +1,15 @@
 $(function() {
     GetLatestReleaseInfo();
-    GetAppVeyorArtifact("ShareX", "sharex", "develop", "Setup", $(".sharex-dev-build"));
 });
 
 function GetLatestReleaseInfo() {
     $.getJSON("https://api.github.com/repos/ShareX/ShareX/releases/latest").done(function(release) {
         UpdateDownloadButton(release, ".exe", $(".sharex-setup"));
         UpdateDownloadButton(release, ".zip", $(".sharex-portable"));
+    });
+
+    $.getJSON("https://api.github.com/repos/ShareX/DevBuilds/releases/latest").done(function(release) {
+        UpdateDownloadButton(release, ".exe", $(".sharex-dev-build"));
     });
 }
 
@@ -21,25 +24,5 @@ function UpdateDownloadButton(release, assetExtension, element) {
     element.attr("title", releaseInfo);
     element.tooltip({
         trigger: "hover"
-    });
-}
-
-function GetAppVeyorArtifact(accountName, projectSlug, branch, deploymentName, element) {
-    let apiUrl = "https://ci.appveyor.com/api";
-    $.getJSON(`${apiUrl}/projects/${accountName}/${projectSlug}/branch/${branch}`).done(function(project) {
-        let jobId = project.build.jobs[0].jobId;
-        $.getJSON(`${apiUrl}/buildjobs/${jobId}/artifacts`).done(function(artifacts) {
-            let artifact = artifacts.find(artifact => artifact.name === deploymentName);
-            let artifactFileName = artifact.fileName;
-            let downloadURL = `${apiUrl}/buildjobs/${jobId}/artifacts/${artifactFileName}`;
-            let artifactInfo = "File name: " + artifactFileName +
-                "\nFile size: " + (artifact.size / 1024 / 1024).toFixed(2) + " MB";
-
-            element.attr("href", downloadURL);
-            element.attr("title", artifactInfo);
-            element.tooltip({
-                trigger: "hover"
-            });
-        });
     });
 }
