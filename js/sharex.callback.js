@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var code = GetParameterByName("code");
+    let code = GetParameterByName("code");
 
     if (!code) {
         code = GetParameterByName("oauth_verifier");
@@ -10,7 +10,7 @@ $(document).ready(function() {
         $("#code").val(code);
 
         $(".container-callback .btn").on("click", function() {
-            var textToCopy = $("#code").val();
+            let textToCopy = $("#code").val();
             navigator.clipboard.writeText(textToCopy).then(function() {
                 $(".container-callback .btn").text("Copied!");
             }, function() {
@@ -18,7 +18,7 @@ $(document).ready(function() {
             });
         });
     } else {
-        var error = GetParameterByName("error");
+        let error = GetParameterByName("error");
 
         if (error) {
             $("#title").text("ShareX is not properly authorized");
@@ -35,8 +35,8 @@ $(document).ready(function() {
 function GetParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
-    var results = regex.exec(url);
+    let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
+    let results = regex.exec(url);
     if (!results) return null;
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));

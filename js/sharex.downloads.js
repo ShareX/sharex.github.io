@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var repo = GetParameterByName("repo");
+    let repo = GetParameterByName("repo");
     if (!repo) {
         repo = "ShareX/ShareX";
     }
@@ -8,24 +8,24 @@ $(document).ready(function() {
 
 function GetReleases(repo) {
     $.getJSON("https://api.github.com/repos/" + repo + "/releases?per_page=100").done(function(json) {
-        var totalDownloadCount = 0;
-        previousPublishedAt = new Date();
+        let totalDownloadCount = 0;
+        let previousPublishedAt = new Date();
 
-        for (var i = 0; i < json.length; i++) {
-            var release = json[i];
+        for (let i = 0; i < json.length; i++) {
+            let release = json[i];
             if (release.assets.length === 0) {
                 continue;
             }
-            var assets = release.assets.sort((a, b) => b.name.endsWith(".exe") - a.name.endsWith(".exe"));
-            var asset = assets[0];
-            var fileSize = asset.size / 1024 / 1024;
-            var downloadCount = 0;
-            for (var i2 = 0; i2 < release.assets.length; i2++) {
+            let assets = release.assets.sort((a, b) => b.name.endsWith(".exe") - a.name.endsWith(".exe"));
+            let asset = assets[0];
+            let fileSize = asset.size / 1024 / 1024;
+            let downloadCount = 0;
+            for (let i2 = 0; i2 < release.assets.length; i2++) {
                 downloadCount += release.assets[i2].download_count;
             }
             totalDownloadCount += downloadCount;
-            var publishedAt = new Date(release.published_at);
-            var activeDays = (previousPublishedAt - publishedAt) / (1000 * 60 * 60 * 24);
+            let publishedAt = new Date(release.published_at);
+            let activeDays = (previousPublishedAt - publishedAt) / (1000 * 60 * 60 * 24);
             previousPublishedAt = publishedAt;
             $(".table-downloads tbody")
                 .append($("<tr>")
@@ -66,8 +66,8 @@ function GetReleases(repo) {
 function GetParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
-    var results = regex.exec(url);
+    let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
+    let results = regex.exec(url);
     if (!results) return null;
     if (!results[2]) return "";
     return decodeURIComponent(results[2].replace(/\+/g, " "));
