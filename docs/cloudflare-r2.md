@@ -5,9 +5,9 @@ title: Cloudflare R2 guide
 
 ## How to configure Cloudflare R2 and use it in ShareX
 
-Make an account for [Cloudflare](https://cloudflare.com)
+Make an account for [Cloudflare](https://cloudflare.com).
 
-Ensure that your domain is [added](https://developers.cloudflare.com/fundamentals/get-started/setup/add-site/) onto Cloudflare and verified with NS (Name Server) records on your domain registrar. Your domain has to be run through Cloudflare otherwise this won't work at all, and you'll be unable to use R2 / Cloudflare CDN to host your images.
+Ensure that your domain is [added](https://developers.cloudflare.com/fundamentals/get-started/setup/add-site/) onto Cloudflare and verified with NS (Name Server) records on your domain registrar. Your domain has to be hosted through Cloudflare otherwise this won't work at all, and you will be unable to use R2 / Cloudflare CDN to host your images.
 
 While R2 is not free, it does have a generous free tier. The full pricing is available to see [here](https://developers.cloudflare.com/r2/platform/pricing/).
 
@@ -45,7 +45,7 @@ This will have connected your domain to the R2 bucket, and will allow any object
 6. Fill `Bucket name:` with the Bucket Name you picked on Cloudflare.
 7. Change `Upload path:` to your preference. 
 8. Update `Use custom domain:` to the domain that you selected in the first step.
-9. **Ignore the Rest of the Settings**
+9. Ignore the rest of the settings.
 10. In `Destinations`, Select `Image uploader:` and change it to `File Uploader -> Amazon S3`.
 11. Take a screenshot, and ensure that it uploads correctly.
 
