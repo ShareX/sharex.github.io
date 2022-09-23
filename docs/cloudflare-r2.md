@@ -37,7 +37,7 @@ This will have connected your domain to the R2 bucket, and will allow any object
 
 ### To configure uploading with ShareX: 
 
-1. In `Destinations`, Select `Destination Settings`.
+1. In `Destinations`, select `Destination Settings`.
 2. Scroll down to `Amazon S3` and select it.
 3. Using the `Access Key ID` & `Secret access key` fill in the two top boxes.
 4. Select "`Endpoint:`" and type `<ACCOUNT_ID>.r2.cloudflarestorage.com`. (you can find your account ID on the right hand side of your [Dashboard](https://dash.cloudflare.com/?to=/:account/r2))
@@ -46,7 +46,7 @@ This will have connected your domain to the R2 bucket, and will allow any object
 7. Change `Upload path:` to your preference. 
 8. Update `Use custom domain:` to the domain that you selected in the first step.
 9. Ignore the rest of the settings.
-10. In `Destinations`, Select `Image uploader:` and change it to `File Uploader -> Amazon S3`.
+10. In `Destinations`, select `Image uploader:` and change it to `File Uploader -> Amazon S3`.
 11. Take a screenshot, and ensure that it uploads correctly.
 
 Now you are ready to use [Cloudflare R2](https://www.cloudflare.com/products/r2) in ShareX!
