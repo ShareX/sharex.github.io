@@ -1,8 +1,10 @@
 $(document).ready(function() {
     let repo = GetParameterByName("repo");
+
     if (!repo) {
         repo = "ShareX/ShareX";
     }
+
     GetReleases(repo);
 });
 
@@ -16,7 +18,7 @@ function GetReleases(repo) {
             if (release.assets.length === 0) {
                 continue;
             }
-            let assets = release.assets.sort((a, b) => b.name.endsWith(".exe") - a.name.endsWith(".exe"));
+            let assets = release.assets.sort((a, b) => b.name.endsWith(".exe") - a.name.endsWith(".exe") || b.download_count - a.download_count);
             let asset = assets[0];
             let fileSize = asset.size / 1024 / 1024;
             let downloadCount = 0;
