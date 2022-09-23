@@ -1,6 +1,6 @@
 ---
 layout: markdown
-title: Cloudflare R2 Guide
+title: Cloudflare R2 guide
 ---
 
 ## How to configure Cloudflare R2 and use it in ShareX
@@ -15,11 +15,11 @@ While R2 is not free, it does have a generous free tier. The full pricing is ava
 
 1. Open [R2](https://dash.cloudflare.com/?to=/:account/r2).
 2. Select `Create bucket`.
-3. Type in your bucket name of choice, and click Create Bucket.
+3. Type in your bucket name of choice, and click `Create Bucket`.
 4. Select `Settings`.
-5. Scroll to `Public Access` and select `Allow Access`
+5. Scroll to `Public Access` and select `Allow Access`.
 6. Type in `allow` to confirm.
-7. Scroll to `Domain Access` and select `Connect Domain`
+7. Scroll to `Domain Access` and select `Connect Domain`.
 8. Type in your domain and select `Continue`.
 9. Select `Connect domain`.
 
@@ -37,14 +37,16 @@ This will have connected your domain to the R2 bucket, and will allow any object
 
 ### To configure uploading with ShareX: 
 
-1. In `Destinations`, Select `Destination Settings`
+1. In `Destinations`, Select `Destination Settings`.
 2. Scroll down to `Amazon S3` and select it.
 3. Using the `Access Key ID` & `Secret access key` fill in the two top boxes.
-4. Select "`Endpoint:`" and type `<ACCOUNT_ID>.r2.cloudflarestorage.com` (you can find your account ID on the right hand side of your Dashboard)
-5. Set `Region:` to `auto`
+4. Select "`Endpoint:`" and type `<ACCOUNT_ID>.r2.cloudflarestorage.com`. (you can find your account ID on the right hand side of your [Dashboard](https://dash.cloudflare.com/?to=/:account/r2))
+5. Set `Region:` to `auto`.
 6. Fill `Bucket name:` with the Bucket Name you picked on Cloudflare.
 7. Change `Upload path:` to your preference. 
 8. Update `Use custom domain:` to the domain that you selected in the first step.
 9. **Ignore the Rest of the Settings**
-10. In `Destinations`, Select `Image uploader:` and change it to `File Uploader -> Amazon S3`
+10. In `Destinations`, Select `Image uploader:` and change it to `File Uploader -> Amazon S3`.
 11. Take a screenshot, and ensure that it uploads correctly.
+
+Now you are ready to use [Cloudflare R2](https://www.cloudflare.com/products/r2) in ShareX!
