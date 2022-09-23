@@ -17,11 +17,9 @@ While R2 is not free, it does have a generous free tier. The full pricing is ava
 2. Select `Create bucket`.
 3. Type in your bucket name of choice, and click `Create Bucket`.
 4. Select `Settings`.
-5. Scroll to `Public Access` and select `Allow Access`.
-6. Type in `allow` to confirm.
-7. Scroll to `Domain Access` and select `Connect Domain`.
-8. Type in your domain and select `Continue`.
-9. Select `Connect domain`.
+5. Scroll to `Domain Access` and select `Connect Domain`.
+6. Type in your domain and select `Continue`.
+7. Select `Connect domain`.
 
 This will have connected your domain to the R2 bucket, and will allow any objects inside of that bucket to be accessible by the selected domain.
 
