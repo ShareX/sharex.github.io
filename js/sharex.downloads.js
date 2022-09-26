@@ -8,10 +8,17 @@ $(document).ready(function() {
     GetReleases(repo);
 });
 
-function GetReleases(repo) {
-    $.getJSON("https://api.github.com/repos/" + repo + "/releases?per_page=100").done(function(json) {
-        let totalDownloadCount = 0;
-        let previousPublishedAt = new Date();
+async function GetReleases(repo) {
+    let perPage = 100;
+    let page = 1;
+    let totalDownloadCount = 0;
+    let previousPublishedAt = new Date();
+
+    while (true) {
+        let response = await fetch(`https://api.github.com/repos/${repo}/releases?per_page=${perPage}&page=${page}`);
+        if (!response.ok) return;
+
+        let json = await response.json();
 
         for (let i = 0; i < json.length; i++) {
             let release = json[i];
@@ -62,7 +69,11 @@ function GetReleases(repo) {
 
         $(".fa-spin").hide();
         $(".table-downloads").fadeIn();
-    });
+
+        if (json.length < perPage) return;
+
+        page++;
+    }
 }
 
 function GetParameterByName(name, url) {
