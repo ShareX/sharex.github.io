@@ -21,7 +21,7 @@ While R2 is not free, it does have a generous free tier. The full pricing is ava
 6. Type in your domain and select `Continue`.
 7. Select `Connect domain`.
 
-This will have connected your domain to the R2 bucket, and will allow any objects inside of that bucket to be accessible by the selected domain.
+This will connect your domain to the R2 bucket, and will allow any objects inside of that bucket to be accessible by the selected domain.
 
 ### To create an API token:
 
