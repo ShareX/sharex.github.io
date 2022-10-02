@@ -730,16 +730,16 @@ footer {
 
     kbd {
         display: inline-block;
-        padding: 0px 7px 2px 7px;
+        padding: 1px 7px;
         margin: 0px 2px;
         font-size: 13px;
-        color: $background-highlight;
+        background-color: lighten($background-highlight, 5%);
+        color: $text-color-alt;
         vertical-align: middle;
-        background-color: $text-color;
-        border: solid 1px $text-color-alt;
-        border-bottom-color: darken($text-color-alt, 20%);
+        border: 1px solid transparent;
+        border-top-color: lighten($background-highlight, 10%);
         border-radius: 3px;
-        box-shadow: inset 0 -2px 0 darken($text-color-alt, 20%);
+        box-shadow: 0px 3px 0px $background-border;
     }
 
     blockquote {
