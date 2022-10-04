@@ -343,6 +343,9 @@ body {
         font-size: 18px;
         font-weight: 300;
         margin-bottom: $container-padding-half;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
     }
 }
