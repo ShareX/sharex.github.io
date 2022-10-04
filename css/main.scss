@@ -47,14 +47,14 @@ html {
 }
 
 body {
-    margin-bottom: 61px;
+    margin-bottom: 71px;
 }
 
 footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 61px;
+    height: 71px;
 }
 
 // Theme
@@ -339,7 +339,7 @@ body {
         }
     }
 
-    .col-sm-3 {
+    .row div {
         font-size: 18px;
         font-weight: 300;
         margin-bottom: $container-padding-half;
@@ -385,7 +385,9 @@ body {
 footer {
     background-color: darken($background, 2%);
     color: $text-color;
-    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     font-size: 16px;
     font-weight: 300;
