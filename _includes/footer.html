@@ -2,6 +2,14 @@
     <p>Copyright &copy; 2007-{{ site.time | date: '%Y' }} <a href="https://github.com/orgs/ShareX/people">{{ site.author }}</a> · <a href="/privacy-policy">Privacy Policy</a></p>
 </footer>
 
+<script>
+    $(document).ready(function() {
+        $(".nav-social a").tooltip({
+            trigger: "hover"
+        });
+    });
+</script>
+
 {% if site.googleAnalyticsId and page.title != "Authorization" %}
 <script>
     (function(i, s, o, g, r, a, m) {

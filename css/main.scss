@@ -125,7 +125,13 @@ body {
     border-bottom: 1px solid $background-border;
     padding: 0px;
 
-    .navbar-nav {
+    @media (min-width: 1200px) {
+        .container-home {
+            max-width: 850px;
+        }
+    }
+
+    .navbar-nav.nav-main {
         .nav-item > a {
             padding: 15px;
         }
@@ -169,6 +175,23 @@ body {
 
         i {
             margin-right: 0.5rem;
+        }
+    }
+
+    .navbar-nav.nav-social {
+        flex-direction: row;
+
+        a {
+            font-size: 22px;
+            padding: 3px 5px;
+            margin: 0px 3px;
+            background: $background-highlight;
+            border-radius: 5px;
+
+            &:hover {
+                background-color: lighten($background-highlight, 1.5%);
+                text-shadow: none;
+            }
         }
     }
 

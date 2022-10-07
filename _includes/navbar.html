@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand-md">
-    <div class="container">
+    <div class="container {% unless page.title %}container-home{% endunless %}">
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse {% unless page.title %}justify-content-center{% endunless %}" id="navbar">
-            <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav nav-main mr-auto">
                 <li class="nav-item{% unless page.title %} active{% endunless %}"><a class="nav-link" href="/">Home</a></li>
                 <li class="nav-item{% if page.title == 'Downloads' %} active{% endif %}"><a class="nav-link" href="/downloads">Downloads</a></li>
                 <li class="nav-item{% if page.title == 'Changelog' %} active{% endif %}"><a class="nav-link" href="/changelog">Changelog</a></li>
@@ -28,9 +28,17 @@
                     </div>
                 </li>
                 <li class="nav-item{% if page.title == 'Donate' %} active{% endif %}"><a class="nav-link" href="/donate">Donate</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ site.github }}"><i class="fab fa-github"></i>GitHub</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://twitter.com/{{ site.twitter }}"><i class="fab fa-twitter"></i>Twitter</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://discord.gg/ShareX"><i class="fab fa-discord"></i>Discord</a></li>
+            </ul>
+
+            <ul class="navbar-nav nav-social">
+                <li class="nav-item"><a class="nav-link" href="{{ site.github }}" data-toggle="tooltip" data-placement="bottom" title="GitHub">
+                        <i class="fab fa-github fa-fw"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://twitter.com/{{ site.twitter }}" data-toggle="tooltip" data-placement="bottom" title="Twitter">
+                        <i class="fab fa-twitter fa-fw"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://discord.gg/ShareX" data-toggle="tooltip" data-placement="bottom" title="Discord">
+                        <i class="fab fa-discord fa-fw"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.reddit.com/r/sharex" data-toggle="tooltip" data-placement="bottom" title="Reddit">
+                        <i class="fab fa-reddit-alien fa-fw"></i></a></li>
             </ul>
         </div>
     </div>
