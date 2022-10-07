@@ -186,7 +186,7 @@ body {
             padding: 3px 5px;
             margin: 0px 3px;
             background: $background-highlight;
-            border-radius: 5px;
+            border-radius: 50%;
 
             &:hover {
                 background-color: lighten($background-highlight, 1.5%);
