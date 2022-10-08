@@ -178,6 +178,13 @@ body {
         }
     }
 
+    @media (max-width: 767.98px) {
+        .navbar-nav.nav-social {
+            margin: 15px 0px;
+            justify-content: center;
+        }
+    }
+
     .navbar-nav.nav-social {
         flex-direction: row;
 
