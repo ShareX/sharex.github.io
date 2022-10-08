@@ -125,7 +125,7 @@ body {
     border-bottom: 1px solid $background-border;
     padding: 0px;
 
-    @media (min-width: 1200px) {
+    @media (min-width: 992px) {
         .container-home {
             max-width: 850px;
         }
