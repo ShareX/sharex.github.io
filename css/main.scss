@@ -233,6 +233,12 @@ body {
         margin-bottom: 10px;
     }
 
+    @media (max-width: 575.98px) {
+        h1 {
+            font-size: 100px;
+        }
+    }
+
     p {
         margin: 25px 0px 35px;
         font-size: 25px;
