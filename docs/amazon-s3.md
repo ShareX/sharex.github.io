@@ -72,6 +72,7 @@ The bucket is where your uploaded files will be stored.
 **Important:** If you are going to use your own domain with S3 then the bucket name should be the same as your CNAME. For example, if you want to use this URL: `https://i.example.com/image.png` then bucket name should be `i.example.com`. [Click here for more info.](http://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html#VirtualHostingCustomURLs)
 * Type the bucket name you want
 * Select the region you want the bucket to be hosted in
+* Ensure ``ACLs enabled`` is checked under **Object Ownership**
 
 **Tip:** You can use this website to check ping of regions: [cloudping.info](https://www.cloudping.info)
 * If you want your uploaded files to be accessible by URL then make sure `Block all public access` option is unchecked
