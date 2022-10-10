@@ -209,6 +209,10 @@ body {
         padding: 6px 14px;
         margin: 10px;
 
+        &:hover {
+            background-color: lighten($background-highlight, 1.5%);
+        }
+
         span {
             display: flex;
             justify-content: center;
