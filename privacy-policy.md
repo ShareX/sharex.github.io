@@ -17,7 +17,6 @@ ShareX implements YouTube API Services to support uploading videos to YouTube. Y
 * [Google Privacy & Terms](https://policies.google.com/privacy)
 * [YouTube Terms of Service](https://www.youtube.com/t/terms/)
 * [YouTube API Terms of Service](https://developers.google.com/youtube/terms/api-services-terms-of-service)
-* [OCR.space Privacy Policy](http://ocr.space/privacypolicy)
 
 ## Website
 
