@@ -1,5 +1,7 @@
 $(document).ready(function() {
-    GetLatestReleaseInfo();
+    $(".sharex-download").one("click", function() {
+        GetLatestReleaseInfo();
+    });
 });
 
 function GetLatestReleaseInfo() {
