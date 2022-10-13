@@ -43,6 +43,7 @@ This will connect your domain to the R2 bucket, and will allow any objects insid
 6. Fill `Bucket name:` with the Bucket Name you picked on Cloudflare.
 7. Change `Upload path:` to your preference. 
 8. Update `Use custom domain:` to the domain that you selected in the first step.
+9. Untick "Set public-read ACL on file".
 9. Ignore the rest of the settings.
 10. In `Destinations`, select `Image uploader:` and change it to `File Uploader -> Amazon S3`.
 11. Take a screenshot, and ensure that it uploads correctly.
