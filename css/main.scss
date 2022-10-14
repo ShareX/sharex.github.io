@@ -104,6 +104,10 @@ body {
             outline: none;
         }
 
+        &:focus-visible {
+            outline: $text-color solid 1px;
+        }
+
         &:active {
             background-color: lighten($background-highlight, 3%);
             color: $text-color;
