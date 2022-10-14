@@ -1,5 +1,7 @@
 $(document).ready(function() {
-    $(".sharex-download").one("click", function() {
+    $(".sharex-download").on("mouseenter click", function() {
+        $(this).off("mouseenter click");
+
         GetLatestReleaseInfo();
     });
 });
