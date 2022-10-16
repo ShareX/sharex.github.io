@@ -162,8 +162,7 @@ body {
         }
 
         .dropdown-menu {
-            backdrop-filter: blur(10px);
-            background-color: rgba($background-alt, 0.9);
+            background-color: $background-alt;
             box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.4);
             border: none;
             margin-top: 0px;
@@ -286,8 +285,7 @@ body {
     margin-top: 8px;
 
     .tooltip-inner {
-        backdrop-filter: blur(10px);
-        background-color: rgba($background-highlight, 0.5);
+        background-color: $background-highlight;
         border-radius: 5px;
         padding: 7px 12px;
         max-width: none;
