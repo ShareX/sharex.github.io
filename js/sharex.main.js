@@ -9,7 +9,7 @@ $(document).ready(function() {
 function GetLatestReleaseInfo() {
     $.getJSON("https://api.github.com/repos/ShareX/ShareX/releases/latest").done(function(release) {
         UpdateDownloadButton(release, ".exe", $(".sharex-setup"));
-        UpdateDownloadButton(release, ".zip", $(".sharex-portable"));
+        UpdateDownloadButton(release, "portable.zip", $(".sharex-portable"));
     });
 
     $.getJSON("https://api.github.com/repos/ShareX/DevBuilds/releases/latest").done(function(release) {
