@@ -33,8 +33,8 @@ async function GetReleases(repo) {
                 if (asset.name.endsWith(".sha256")) {
                     continue;
                 }
-                let fileSize = asset.size / 1024 / 1024;
                 downloadCount += asset.download_count;
+                let fileSize = asset.size / 1024 / 1024;
                 releaseInfo += `
                     <div class="downloads-asset-info">
                         <a href="${asset.browser_download_url}">${asset.name}<span>${fileSize.toFixed(2)} MB</span></a>
@@ -49,8 +49,7 @@ async function GetReleases(repo) {
             $(".table-downloads tbody").append(`
                 <tr class="downloads-release-info collapsed" data-toggle="collapse" data-target="#collapse${release.id}">
                     <td>
-                        <i class="fa"></i>
-                        <a href="${release.html_url}">${release.name}</a>
+                        <i class="fa"></i> ${release.name}
                         ${release.prerelease ? '<div class="float-right"><span class="badge badge-danger">Pre-release</span></div>' : ""}
                     </td>
                     <td>${publishedAt.toLocaleDateString("en-CA")}</td>
