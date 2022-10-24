@@ -57,9 +57,11 @@ async function GetReleases(repo) {
                     <td>${activeDays.toFixed(1)}</td>
                     <td>${downloadCount.toLocaleString()}</td>
                 </tr>
-                <tr class="collapse downloads-assets" id="collapse${release.id}" colspan="100%" data-parent=".table-downloads">
+                <tr class="downloads-assets" colspan="100%">
                     <td>
-                        ${releaseInfo}
+                        <div class="collapse" id="collapse${release.id}" data-parent=".table-downloads">
+                            ${releaseInfo}
+                        </div>
                     </td>
                 </tr>
             `);
