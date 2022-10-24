@@ -647,6 +647,10 @@ footer {
                     text-decoration: none;
                 }
 
+                i {
+                    margin-right: 6px;
+                }
+
                 span {
                     padding: 3px 6px;
                     margin: 0px;
@@ -654,8 +658,11 @@ footer {
                     background-color: $background-highlight;
                     color: darken($text-color-alt, 10%);
                     border-radius: 3px;
-                    border-top: 1px solid lighten($background-highlight, 5%);
-                    margin-left: 10px;
+                    margin-left: 5px;
+                }
+
+                a:hover span {
+                    text-shadow: none;
                 }
             }
         }
