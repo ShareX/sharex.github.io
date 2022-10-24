@@ -25,12 +25,21 @@ async function GetReleases(repo) {
             if (release.assets.length === 0) {
                 continue;
             }
-            let assets = release.assets.sort((a, b) => b.name.endsWith(".exe") - a.name.endsWith(".exe") || b.download_count - a.download_count);
-            let asset = assets[0];
-            let fileSize = asset.size / 1024 / 1024;
+            let assets = release.assets.sort((a, b) => b.name.endsWith(".exe") - a.name.endsWith(".exe"));
             let downloadCount = 0;
-            for (let i2 = 0; i2 < release.assets.length; i2++) {
-                downloadCount += release.assets[i2].download_count;
+            let releaseInfo = "";
+            for (let i2 = 0; i2 < assets.length; i2++) {
+                let asset = assets[i2];
+                if (asset.name.endsWith(".sha256")) {
+                    continue;
+                }
+                let fileSize = asset.size / 1024 / 1024;
+                downloadCount += asset.download_count;
+                releaseInfo += `
+                    <div class="downloads-asset-info">
+                        <a href="${asset.browser_download_url}">${asset.name}<span>${fileSize.toFixed(2)} MB</span></a>
+                    </div>
+                `;
             }
             totalDownloadCount += downloadCount;
             let publishedAt = new Date(release.published_at);
@@ -38,17 +47,20 @@ async function GetReleases(repo) {
             previousPublishedAt = publishedAt;
 
             $(".table-downloads tbody").append(`
-                <tr>
+                <tr class="downloads-release-info collapsed" data-toggle="collapse" data-target="#collapse${release.id}">
                     <td>
-                        <a href="${release.html_url}">${asset.name}</a>
+                        <i class="fa"></i>
+                        <a href="${release.html_url}">${release.name}</a>
                         ${release.prerelease ? '<div class="float-right"><span class="badge badge-danger">Pre-release</span></div>' : ""}
-                    </td>
-                    <td>
-                        <a href="${asset.browser_download_url}">${fileSize.toFixed(2)} MB</a>
                     </td>
                     <td>${publishedAt.toLocaleDateString("en-CA")}</td>
                     <td>${activeDays.toFixed(1)}</td>
                     <td>${downloadCount.toLocaleString()}</td>
+                </tr>
+                <tr class="collapse downloads-assets" id="collapse${release.id}" colspan="100%">
+                    <td>
+                        ${releaseInfo}
+                    </td>
                 </tr>
             `);
         }

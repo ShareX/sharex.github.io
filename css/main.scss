@@ -590,10 +590,31 @@ footer {
         background-color: $background;
         border-radius: 8px;
 
-        .badge {
-            font-weight: 400;
-            padding: 5px;
-            box-shadow: 0px 1px 0px rgba(158, 0, 0, 1);
+        .downloads-release-info {
+            background-color: darken($background-alt, 0.5%);
+
+            .fa {
+                margin: 0px 10px;
+            }
+
+            .fa:before {
+                content: "\f078";
+            }
+
+            &.collapsed .fa:before {
+                content: "\f054";
+            }
+
+            &:hover {
+                background-color: $background-highlight;
+                cursor: pointer;
+            }
+
+            .badge {
+                font-weight: 400;
+                padding: 5px;
+                box-shadow: 0px 1px 0px rgba(158, 0, 0, 1);
+            }
         }
 
         th {
@@ -607,8 +628,35 @@ footer {
             font-size: 15px;
         }
 
-        tbody tr:nth-of-type(odd) {
-            background-color: darken($background-alt, 0.5%);
+        .collapsing {
+            transition: none;
+        }
+
+        .downloads-assets {
+            background-color: $background;
+
+            td {
+                padding: 0px 20px;
+            }
+
+            .downloads-asset-info {
+                margin: 20px 0px;
+
+                a {
+                    text-decoration: none;
+                }
+
+                span {
+                    padding: 3px 6px;
+                    margin: 0px;
+                    font-size: 85%;
+                    background-color: $background-highlight;
+                    color: darken($text-color-alt, 10%);
+                    border-radius: 3px;
+                    border-top: 1px solid lighten($background-highlight, 5%);
+                    margin-left: 10px;
+                }
+            }
         }
     }
 }
