@@ -590,6 +590,10 @@ footer {
         background-color: $background;
         border-radius: 8px;
 
+        .downloads-release-name {
+            width: 50%;
+        }
+
         .downloads-release-info {
             background-color: darken($background-alt, 0.5%);
 
