@@ -36,31 +36,21 @@ async function GetReleases(repo) {
             let publishedAt = new Date(release.published_at);
             let activeDays = (previousPublishedAt - publishedAt) / (1000 * 60 * 60 * 24);
             previousPublishedAt = publishedAt;
-            $(".table-downloads tbody")
-                .append($("<tr>")
-                    .append($("<td>")
-                        .append($("<a>")
-                            .attr("href", release.html_url)
-                            .text(asset.name)
-                        )
-                        .append(release.prerelease ? "<div class=\"float-right\"><span class=\"badge badge-danger\">Pre-release</span></div>" : "")
-                    )
-                    .append($("<td>")
-                        .append($("<a>")
-                            .attr("href", asset.browser_download_url)
-                            .text(fileSize.toFixed(2) + " MB")
-                        )
-                    )
-                    .append($("<td>")
-                        .text(publishedAt.toLocaleDateString("en-CA"))
-                    )
-                    .append($("<td>")
-                        .text(activeDays.toFixed(1))
-                    )
-                    .append($("<td>")
-                        .text(downloadCount.toLocaleString())
-                    )
-                );
+
+            $(".table-downloads tbody").append(`
+                <tr>
+                    <td>
+                        <a href="${release.html_url}">${asset.name}</a>
+                        ${release.prerelease ? '<div class="float-right"><span class="badge badge-danger">Pre-release</span></div>' : ""}
+                    </td>
+                    <td>
+                        <a href="${asset.browser_download_url}">${fileSize.toFixed(2)} MB</a>
+                    </td>
+                    <td>${publishedAt.toLocaleDateString("en-CA")}</td>
+                    <td>${activeDays.toFixed(1)}</td>
+                    <td>${downloadCount.toLocaleString()}</td>
+                </tr>
+            `);
         }
 
         if (totalDownloadCount > 0) {
