@@ -18,12 +18,13 @@ $(document).ready(function() {
 });
 
 async function GetReleases(repo) {
+    if (!repo) {
+        repo = "ShareX/ShareX";
+    }
+
     $(".table-downloads tbody tr").remove();
     $(".total-downloads").text("");
     $(".table-downloads").hide();
-
-    if (!repo) return;
-
     $(".fa-spin").show();
 
     let perPage = 100;
