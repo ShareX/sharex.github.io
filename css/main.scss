@@ -581,6 +581,17 @@ footer {
         width: 500px;
         margin-bottom: 20px;
 
+        .feedback-icon {
+            position: absolute;
+            width: auto;
+            bottom: 10px;
+            right: 12px;
+            top: 6px;
+            margin-top: 0;
+            z-index: 4;
+            font-size: 25px;
+        }
+
         #downloads-repo {
             height: auto;
             background-color: lighten($background-highlight, 5%);
