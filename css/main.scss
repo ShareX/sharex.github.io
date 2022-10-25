@@ -575,14 +575,43 @@ footer {
     padding-top: $container-padding;
     padding-bottom: $container-padding-half;
 
-    h1 {
+    .downloads-repo-container {
         font-size: 18px;
-        margin-top: 0px;
+        font-weight: 300;
+        width: 500px;
         margin-bottom: 20px;
+
+        #downloads-repo {
+            height: auto;
+            background-color: lighten($background-highlight, 5%);
+            color: $text-color-alt;
+            border: none;
+            border-top: 1px solid lighten($background-highlight, 10%);
+            border-left: 2px solid $background-highlight;
+            box-shadow: none;
+            font-size: 25px;
+            font-weight: 300;
+            padding-left: 15px;
+        }
+
+        span.input-group-text {
+            height: auto;
+            background-color: $background-highlight;
+            color: $text-color-alt;
+            border: none;
+            border-top: 1px solid lighten($background-highlight, 10%);
+            box-shadow: none;
+            font-size: 25px;
+            font-weight: 300;
+            padding-left: 15px;
+        }
     }
 
     .total-downloads {
+        font-size: 18px;
         font-weight: 300;
+        margin-top: 0px;
+        margin-bottom: 20px;
     }
 
     .table-downloads {

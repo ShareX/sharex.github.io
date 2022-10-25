@@ -5,10 +5,27 @@ $(document).ready(function() {
         repo = "ShareX/ShareX";
     }
 
+    let repoInput = $("#downloads-repo");
+    repoInput.val(repo);
+    repoInput.keyup(function(e) {
+        if (e.keyCode == 13) {
+            repo = repoInput.val();
+            GetReleases(repo)
+        }
+    });
+
     GetReleases(repo);
 });
 
 async function GetReleases(repo) {
+    $(".table-downloads tbody tr").remove();
+    $(".total-downloads").text("");
+    $(".table-downloads").hide();
+
+    if (!repo) return;
+
+    $(".fa-spin").show();
+
     let perPage = 100;
     let page = 1;
     let totalDownloadCount = 0;
