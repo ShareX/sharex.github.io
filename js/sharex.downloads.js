@@ -53,8 +53,7 @@ async function GetReleases(repo) {
             $(".table-downloads tbody").append(`
                 <tr class="downloads-release-info collapsed" data-toggle="collapse" data-target="#collapse${release.id}">
                     <td>
-                        <i class="fa"></i>
-                        ${EscapeHtml(release.name)}
+                        <i class="fa fa-fw"></i>${EscapeHtml(release.name)}
                         ${release.prerelease ? '<div class="float-right"><span class="badge badge-danger">Pre-release</span></div>' : ""}
                     </td>
                     <td>${publishedAt.toLocaleDateString("en-CA")}</td>
