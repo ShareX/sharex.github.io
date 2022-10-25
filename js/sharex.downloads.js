@@ -36,13 +36,13 @@ async function GetReleases(repo) {
                 downloadCount += asset.download_count;
                 let fileSize = asset.size / 1024 / 1024;
                 releaseInfo += `
-                    <div class="downloads-asset-info">
-                        <a href="${asset.browser_download_url}">
+                    <a href="${asset.browser_download_url}">
+                        <div class="downloads-asset-info">
                             ${EscapeHtml(asset.name)}
                             <span><i class="fa-solid fa-file"></i>${fileSize.toFixed(2)} MB</span>
                             <span><i class="fa-solid fa-arrow-down"></i>${asset.download_count.toLocaleString()}</span>
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                 `;
             }
             totalDownloadCount += downloadCount;
@@ -63,7 +63,9 @@ async function GetReleases(repo) {
                 <tr class="downloads-assets">
                     <td colspan="100%">
                         <div class="collapse" id="collapse${release.id}" data-parent=".table-downloads">
-                            ${releaseInfo}
+                            <div class="downloads-assets-container">
+                                ${releaseInfo}
+                            </div>
                         </div>
                     </td>
                 </tr>

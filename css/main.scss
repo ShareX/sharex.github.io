@@ -590,6 +590,18 @@ footer {
         background-color: $background;
         border-radius: 8px;
 
+        th {
+            border: none;
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        td {
+            border: none;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
         .downloads-release-name {
             width: 50%;
         }
@@ -621,48 +633,41 @@ footer {
             }
         }
 
-        th {
-            border: none;
-            font-size: 18px;
-            font-weight: 300;
-        }
-
-        td {
-            border: none;
-            font-size: 16px;
-            font-weight: 300;
-        }
-
         .downloads-assets {
             background-color: $background;
 
             td {
-                padding: 0px 20px;
+                padding: 0px;
             }
 
-            .downloads-asset-info {
-                margin: 20px 0px;
+            .downloads-assets-container {
+                padding: 10px 0px;
 
                 a {
                     text-decoration: none;
                 }
 
-                i {
-                    margin-right: 6px;
-                }
+                .downloads-asset-info {
+                    padding: 10px 20px;
 
-                span {
-                    padding: 3px 6px;
-                    margin: 0px;
-                    font-size: 85%;
-                    background-color: $background-highlight;
-                    color: darken($text-color-alt, 10%);
-                    border-radius: 3px;
-                    margin-left: 5px;
-                }
+                    &:hover {
+                        background-color: $background-alt;
+                        text-shadow: none;
+                    }
 
-                a:hover span {
-                    text-shadow: none;
+                    i {
+                        margin-right: 6px;
+                    }
+
+                    span {
+                        padding: 3px 6px;
+                        margin: 0px;
+                        font-size: 85%;
+                        background-color: $background-highlight;
+                        color: darken($text-color-alt, 10%);
+                        border-radius: 3px;
+                        margin-left: 5px;
+                    }
                 }
             }
         }
