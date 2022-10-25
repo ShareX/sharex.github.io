@@ -38,7 +38,7 @@ async function GetReleases(repo) {
                 releaseInfo += `
                     <div class="downloads-asset-info">
                         <a href="${asset.browser_download_url}">
-                            ${asset.name}
+                            ${EscapeHtml(asset.name)}
                             <span><i class="fa-solid fa-file"></i>${fileSize.toFixed(2)} MB</span>
                             <span><i class="fa-solid fa-arrow-down"></i>${asset.download_count.toLocaleString()}</span>
                         </a>
@@ -54,7 +54,7 @@ async function GetReleases(repo) {
                 <tr class="downloads-release-info collapsed" data-toggle="collapse" data-target="#collapse${release.id}">
                     <td>
                         <i class="fa"></i>
-                        ${release.name}
+                        ${EscapeHtml(release.name)}
                         ${release.prerelease ? '<div class="float-right"><span class="badge badge-danger">Pre-release</span></div>' : ""}
                     </td>
                     <td>${publishedAt.toLocaleDateString("en-CA")}</td>
