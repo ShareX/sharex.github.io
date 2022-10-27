@@ -8,6 +8,12 @@ function GetParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+function SetParameter(name, value) {
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.set(name, value);
+    window.location.search = urlParams;
+}
+
 let entityMap = {
     '&': '&amp;',
     '<': '&lt;',

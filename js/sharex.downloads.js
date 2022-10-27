@@ -10,7 +10,10 @@ $(document).ready(function() {
     repoInput.keyup(function(e) {
         if (e.keyCode == 13) {
             repo = repoInput.val();
-            GetReleases(repo)
+            GetReleases(repo);
+            if (repo) {
+                SetParameter("repo", repo);
+            }
         }
     });
 
