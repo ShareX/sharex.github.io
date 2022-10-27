@@ -37,7 +37,7 @@ async function GetReleases(repo) {
 
     while (true) {
         let response = await fetch(`https://api.github.com/repos/${repo}/releases?per_page=${perPage}&page=${page}`);
-        if (!response.ok) return;
+        if (!response.ok) break;
 
         let json = await response.json();
 
@@ -93,15 +93,15 @@ async function GetReleases(repo) {
             `);
         }
 
-        if (totalDownloadCount > 0) {
-            $(".total-downloads").text("Total downloads: " + totalDownloadCount.toLocaleString());
-        }
-
-        $(".fa-spin").hide();
-        $(".table-downloads").fadeIn();
-
-        if (json.length < perPage) return;
+        if (json.length < perPage) break;
 
         page++;
     }
+
+    if (totalDownloadCount > 0) {
+        $(".total-downloads").text("Total downloads: " + totalDownloadCount.toLocaleString());
+    }
+
+    $(".fa-spin").hide();
+    $(".table-downloads").fadeIn();
 }
