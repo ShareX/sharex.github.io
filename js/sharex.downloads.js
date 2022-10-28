@@ -97,7 +97,6 @@ async function GetReleases(repo) {
             `);
         }
 
-        $(".fa-spin").hide();
         $(".total-downloads-value").text(totalDownloadCount.toLocaleString());
         $(".total-downloads").fadeIn();
         $(".table-downloads").fadeIn();
