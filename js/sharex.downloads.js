@@ -97,16 +97,15 @@ async function GetReleases(repo) {
             `);
         }
 
+        $(".fa-spin").hide();
+        $(".total-downloads-value").text(totalDownloadCount.toLocaleString());
+        $(".total-downloads").fadeIn();
+        $(".table-downloads").fadeIn();
+
         if (json.length < perPage) break;
 
         page++;
     }
 
-    if (totalDownloadCount > 0) {
-        $(".total-downloads-value").text(totalDownloadCount.toLocaleString());
-        $(".total-downloads").fadeIn();
-    }
-
     $(".fa-spin").hide();
-    $(".table-downloads").fadeIn();
 }
