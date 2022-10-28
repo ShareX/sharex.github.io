@@ -15,7 +15,7 @@ $(document).ready(function() {
                 SetParameter("repo", repo);
             }
             else {
-                ClearParameter();
+                ClearParameters();
             }
         }
     });

@@ -12,7 +12,7 @@ function SetParameter(name, value) {
     window.history.replaceState(null, null, `?${name}=${value}`);
 }
 
-function ClearParameter() {
+function ClearParameters() {
     window.history.replaceState(null, null, window.location.pathname);
 }
 
