@@ -623,13 +623,20 @@ footer {
         display: none;
         font-size: 16px;
         font-weight: 300;
-        margin-top: 0px;
-        margin-bottom: 20px;
+        margin-top: -15px;
+        margin-bottom: 15px;
         float: right;
-        text-align: right;
+        background-color: $background;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
 
         .total-downloads-label {
             font-size: 20px;
+        }
+
+        .total-downloads-value {
+            margin-left: 6px;
         }
     }
 
