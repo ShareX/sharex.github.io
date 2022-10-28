@@ -12,6 +12,10 @@ function SetParameter(name, value) {
     window.history.replaceState(null, null, `?${name}=${value}`);
 }
 
+function ClearParameter() {
+    window.history.replaceState(null, null, window.location.pathname);;
+}
+
 let entityMap = {
     '&': '&amp;',
     '<': '&lt;',
