@@ -9,9 +9,7 @@ function GetParameterByName(name, url) {
 }
 
 function SetParameter(name, value) {
-    const urlParams = new URLSearchParams(window.location.search);
-    urlParams.set(name, value);
-    window.location.search = urlParams;
+    window.history.replaceState(null, null, `?${name}=${value}`);
 }
 
 let entityMap = {
