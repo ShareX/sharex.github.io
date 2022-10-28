@@ -13,7 +13,7 @@ function SetParameter(name, value) {
 }
 
 function ClearParameter() {
-    window.history.replaceState(null, null, window.location.pathname);;
+    window.history.replaceState(null, null, window.location.pathname);
 }
 
 let entityMap = {
