@@ -576,10 +576,10 @@ footer {
     padding-bottom: $container-padding-half;
 
     .downloads-repo-container {
-        font-size: 18px;
         font-weight: 300;
         width: 500px;
         margin-bottom: 20px;
+        float: left;
 
         .feedback-icon {
             position: absolute;
@@ -601,7 +601,7 @@ footer {
             border-top: 1px solid lighten($background-highlight, 10%);
             border-left: 2px solid $background-highlight;
             box-shadow: none;
-            font-size: 25px;
+            font-size: 24px;
             font-weight: 300;
             padding-left: 15px;
         }
@@ -613,17 +613,23 @@ footer {
             border: none;
             border-top: 1px solid lighten($background-highlight, 10%);
             box-shadow: none;
-            font-size: 25px;
+            font-size: 24px;
             font-weight: 300;
             padding-left: 15px;
         }
     }
 
     .total-downloads {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 300;
         margin-top: 0px;
         margin-bottom: 20px;
+        float: right;
+        text-align: right;
+
+        .total-downloads-label {
+            font-size: 20px;
+        }
     }
 
     .table-downloads {
@@ -633,7 +639,7 @@ footer {
 
         th {
             border: none;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 300;
         }
 

@@ -26,7 +26,8 @@ async function GetReleases(repo) {
     }
 
     $(".table-downloads tbody tr").remove();
-    $(".total-downloads").text("");
+    $(".total-downloads").hide();
+    $(".total-downloads-value").text("");
     $(".table-downloads").hide();
     $(".fa-spin").show();
 
@@ -99,7 +100,8 @@ async function GetReleases(repo) {
     }
 
     if (totalDownloadCount > 0) {
-        $(".total-downloads").text("Total downloads: " + totalDownloadCount.toLocaleString());
+        $(".total-downloads-value").text(totalDownloadCount.toLocaleString());
+        $(".total-downloads").fadeIn();
     }
 
     $(".fa-spin").hide();
