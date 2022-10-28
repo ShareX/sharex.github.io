@@ -582,12 +582,12 @@ footer {
         float: left;
 
         .feedback-icon {
+            display: flex;
+            align-items: center;
             position: absolute;
-            width: auto;
-            bottom: 10px;
+            top: 0px;
+            bottom: 0px;
             right: 12px;
-            top: 6px;
-            margin-top: 0;
             z-index: 4;
             font-size: 25px;
             pointer-events: none;
