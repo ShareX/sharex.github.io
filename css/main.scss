@@ -691,7 +691,19 @@ footer {
             .badge {
                 font-weight: 400;
                 padding: 5px;
-                box-shadow: 0px 1px 0px rgba(158, 0, 0, 1);
+                background-color: transparent;
+                border-radius: 4px;
+                float: right;
+            }
+
+            .badge-warning {
+                border: 1px solid #d29922;
+                color: #d29922;
+            }
+
+            .badge-success {
+                border: 1px solid #3fb950;
+                color: #3fb950;
             }
         }
 

@@ -38,6 +38,7 @@ async function GetReleases(repo) {
     let page = 1;
     let totalDownloadCount = 0;
     let previousPublishedAt = new Date();
+    let latest = true;
 
     while (true) {
         let response = await fetch(`https://api.github.com/repos/${repo}/releases?per_page=${perPage}&page=${page}`);
@@ -79,7 +80,8 @@ async function GetReleases(repo) {
                 <tr class="downloads-release-info collapsed" data-toggle="collapse" data-target="#collapse${release.id}">
                     <td>
                         <i class="fa fa-fw"></i>${EscapeHtml(release.name)}
-                        ${release.prerelease ? '<div class="float-right"><span class="badge badge-danger">Pre-release</span></div>' : ""}
+                        ${latest ? '<span class="badge badge-success">Latest</span>' : ""}
+                        ${release.prerelease ? '<span class="badge badge-warning">Pre-release</span>' : ""}
                     </td>
                     <td>${publishedAt.toLocaleDateString("en-CA")}</td>
                     <td>${activeDays.toFixed(1)}</td>
@@ -95,6 +97,8 @@ async function GetReleases(repo) {
                     </td>
                 </tr>
             `);
+
+            latest = false;
         }
 
         $(".total-downloads-value").text(totalDownloadCount.toLocaleString());
