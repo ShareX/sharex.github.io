@@ -64,8 +64,8 @@ async function GetReleases(repo) {
                     <a href="${asset.browser_download_url}">
                         <div class="downloads-asset-info">
                             ${EscapeHtml(asset.name)}
-                            <span><i class="fa-solid fa-file"></i>${fileSize.toFixed(2)} MB</span>
-                            <span><i class="fa-solid fa-arrow-down"></i>${asset.download_count.toLocaleString()}</span>
+                            <span class="downloads-badge"><i class="fa-solid fa-file"></i>${fileSize.toFixed(2)} MB</span>
+                            <span class="downloads-badge"><i class="fa-solid fa-arrow-down"></i>${asset.download_count.toLocaleString()}</span>
                         </div>
                     </a>
                 `;

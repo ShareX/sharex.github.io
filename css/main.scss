@@ -619,24 +619,31 @@ footer {
         }
     }
 
+    .downloads-badge {
+        padding: 3px 6px;
+        margin: 0px;
+        font-size: 85%;
+        font-weight: 300;
+        background-color: $background-highlight;
+        color: $text-color-alt;
+        border-radius: 3px;
+
+        i {
+            margin-right: 6px;
+        }
+    }
+
     .total-downloads {
         display: none;
         font-size: 16px;
         font-weight: 300;
-        margin-top: -15px;
-        margin-bottom: 15px;
         float: right;
-        background-color: $background;
-        padding: 10px;
-        border-radius: 8px;
         text-align: center;
+        margin-top: -5px;
 
         .total-downloads-label {
             font-size: 20px;
-        }
-
-        .total-downloads-value {
-            margin-left: 6px;
+            margin-bottom: 3px;
         }
     }
 
@@ -710,17 +717,7 @@ footer {
                         text-shadow: none;
                     }
 
-                    i {
-                        margin-right: 6px;
-                    }
-
-                    span {
-                        padding: 3px 6px;
-                        margin: 0px;
-                        font-size: 85%;
-                        background-color: $background-highlight;
-                        color: darken($text-color-alt, 10%);
-                        border-radius: 3px;
+                    .downloads-badge {
                         margin-left: 5px;
                     }
                 }
