@@ -220,7 +220,7 @@ title: Changelog
 
 **[Action Required] Important announcement for Windows 7 users:**
 
-We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Microsoft recommends that a specific TLS version should not be hardcoded](https://docs.microsoft.com/en-us/dotnet/framework/network-programming/tls) so that way the latest supported TLS protocols by the operating system can be used automatically. That is what we did too but then after our previous ShareX release we noticed even though Windows 7 supports TLS 1.2, it was still not using the latest version automatically and needed to hardcode TLS 1.2 in our code to support it. Therefore, due to the lack of TLS 1.2 support **auto updater of ShareX is broken for Windows 7 users** and ShareX must be updated manually from [ShareX web site](https://getsharex.com/downloads/) or you can download [dev build inside ShareX app](https://getsharex.com/docs/dev-builds).
+We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Microsoft recommends that a specific TLS version should not be hardcoded](https://docs.microsoft.com/en-us/dotnet/framework/network-programming/tls) so that way the latest supported TLS protocols by the operating system can be used automatically. That is what we did too but then after our previous ShareX release we noticed even though Windows 7 supports TLS 1.2, it was still not using the latest version automatically and needed to hardcode TLS 1.2 in our code to support it. Therefore, due to the lack of TLS 1.2 support **auto updater of ShareX is broken for Windows 7 users** and ShareX must be updated manually from [ShareX web site](https://getsharex.com/downloads) or you can download [dev build inside ShareX app](https://getsharex.com/docs/dev-builds).
 
 * Added image effects listing to after capture tasks sub menu
 * Added menu icon size option to region capture
@@ -471,7 +471,7 @@ We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Micro
 * In region capture, allow using proportional resizing <kbd>Shift</kbd> or snap resizing <kbd>Alt</kbd> together with corner moving <kbd>Ctrl</kbd>
 * Added copy image dimensions option to main window context menu
 * QR code decode button will now scan for all barcode types instead of just QR code
-* Removed webpage capture which was using Internet Explorer to render, because [built in browser capture methods](https://getsharex.com/docs/website-capture) are superior to this method
+* Removed webpage capture which was using Internet Explorer to render, because built in browser capture methods are superior to this method
 * Added right click and middle click actions for toast notification (Task settings window -> Advanced tab)
 * Added optional setting to strip color space information chunks from PNG image (Application settings window -> Advanced tab)
 * Added another easter egg to about window
