@@ -51,21 +51,17 @@ async function GetReleases(repo) {
             if (release.assets.length === 0) {
                 continue;
             }
-            let assets = release.assets.sort((a, b) => b.name.endsWith(".exe") - a.name.endsWith(".exe"));
+            let assets = release.assets.sort((a, b) => b.name.endsWith(".exe") - a.name.endsWith(".exe") || b.name.endsWith(".exe.sha256") - a.name.endsWith(".exe.sha256"));
             let downloadCount = 0;
             let releaseInfo = "";
             for (let i2 = 0; i2 < assets.length; i2++) {
                 let asset = assets[i2];
-                if (asset.name.endsWith(".sha256")) {
-                    continue;
-                }
                 downloadCount += asset.download_count;
-                let fileSize = asset.size / 1024 / 1024;
                 releaseInfo += `
                     <a href="${asset.browser_download_url}">
                         <div class="downloads-asset-info">
                             ${EscapeHtml(asset.name)}
-                            <span class="downloads-badge"><i class="fa-solid fa-file"></i>${fileSize.toFixed(2)} MB</span>
+                            <span class="downloads-badge"><i class="fa-solid fa-file"></i>${FormatBytes(asset.size, 2)}</span>
                             <span class="downloads-badge"><i class="fa-solid fa-arrow-down"></i>${asset.download_count.toLocaleString()}</span>
                         </div>
                     </a>
