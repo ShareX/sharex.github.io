@@ -82,6 +82,7 @@ body {
     }
 
     .btn {
+        position: relative;
         background-color: $background-highlight;
         color: $text-color-alt;
         border-top: 1px solid lighten($background-highlight, 5%);
@@ -117,6 +118,10 @@ body {
             margin-left: 15px;
 
             &.fa-star {
+                position: absolute;
+                top: -11px;
+                right: -11px;
+                font-size: 22px;
                 color: #ffb100;
                 animation: pop-out 0.3s ease 0.2s 1 both;
             }
