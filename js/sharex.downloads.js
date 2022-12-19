@@ -44,20 +44,23 @@ async function GetReleases(repo) {
         let response = await fetch(`https://api.github.com/repos/${repo}/releases?per_page=${perPage}&page=${page}`);
         if (!response.ok) break;
 
-        let json = await response.json();
+        let releases = await response.json();
 
-        for (let i = 0; i < json.length; i++) {
-            let release = json[i];
-            if (release.assets.length === 0) {
-                continue;
-            }
-            let assets = release.assets.sort((a, b) => b.name.endsWith(".exe") - a.name.endsWith(".exe") || b.name.endsWith(".exe.sha256") - a.name.endsWith(".exe.sha256"));
-            let downloadCount = 0;
-            let releaseInfo = "";
-            for (let i2 = 0; i2 < assets.length; i2++) {
-                let asset = assets[i2];
-                downloadCount += asset.download_count;
-                releaseInfo += `
+        if (releases.length > 0) {
+            releases = releases.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
+
+            for (let i = 0; i < releases.length; i++) {
+                let release = releases[i];
+                if (release.assets.length === 0) {
+                    continue;
+                }
+                let assets = release.assets.sort((a, b) => b.name.endsWith(".exe") - a.name.endsWith(".exe") || b.name.endsWith(".exe.sha256") - a.name.endsWith(".exe.sha256"));
+                let downloadCount = 0;
+                let releaseInfo = "";
+                for (let i2 = 0; i2 < assets.length; i2++) {
+                    let asset = assets[i2];
+                    downloadCount += asset.download_count;
+                    releaseInfo += `
                     <a href="${asset.browser_download_url}">
                         <div class="downloads-asset-info">
                             ${EscapeHtml(asset.name)}
@@ -66,13 +69,13 @@ async function GetReleases(repo) {
                         </div>
                     </a>
                 `;
-            }
-            totalDownloadCount += downloadCount;
-            let publishedAt = new Date(release.published_at);
-            let activeDays = (previousPublishedAt - publishedAt) / (1000 * 60 * 60 * 24);
-            previousPublishedAt = publishedAt;
+                }
+                totalDownloadCount += downloadCount;
+                let publishedAt = new Date(release.published_at);
+                let activeDays = (previousPublishedAt - publishedAt) / (1000 * 60 * 60 * 24);
+                previousPublishedAt = publishedAt;
 
-            $(".table-downloads tbody").append(`
+                $(".table-downloads tbody").append(`
                 <tr class="downloads-release-info collapsed" data-toggle="collapse" data-target="#collapse${release.id}">
                     <td>
                         <i class="fa fa-fw"></i>${EscapeHtml(release.name)}
@@ -94,14 +97,15 @@ async function GetReleases(repo) {
                 </tr>
             `);
 
-            latest = false;
+                latest = false;
+            }
         }
 
         $(".total-downloads-value").text(totalDownloadCount.toLocaleString());
         $(".total-downloads").fadeIn();
         $(".table-downloads").fadeIn();
 
-        if (json.length < perPage) break;
+        if (releases.length < perPage) break;
 
         page++;
     }
