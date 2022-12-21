@@ -473,7 +473,7 @@ footer {
     font-weight: 300;
 
     p {
-        margin: $container-padding-half 0px 0px 0px;
+        margin: 10px 0px 0px 0px;
     }
 
     a,
@@ -749,16 +749,20 @@ footer {
             }
 
             .downloads-assets-container {
-                padding: 10px 0px;
-
                 a {
                     text-decoration: none;
                 }
 
                 .downloads-asset-info {
-                    padding: 10px 20px;
+                    margin: 8px;
 
-                    &:hover {
+                    div {
+                        background-color: darken($background-alt, 0.5%);
+                        padding: 10px 15px;
+                        border-radius: 8px;
+                    }
+
+                    div:hover {
                         background-color: $background-alt;
                         text-shadow: none;
                     }

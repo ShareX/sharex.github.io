@@ -61,13 +61,15 @@ async function GetReleases(repo) {
                     let asset = assets[i2];
                     downloadCount += asset.download_count;
                     releaseInfo += `
-                    <a href="${asset.browser_download_url}">
-                        <div class="downloads-asset-info">
-                            ${EscapeHtml(asset.name)}
-                            <span class="downloads-badge"><i class="fa-solid fa-file"></i>${FormatBytes(asset.size, 2)}</span>
-                            <span class="downloads-badge"><i class="fa-solid fa-arrow-down"></i>${asset.download_count.toLocaleString()}</span>
-                        </div>
-                    </a>
+                    <div class="downloads-asset-info">
+                        <a href="${asset.browser_download_url}">
+                            <div>
+                                ${EscapeHtml(asset.name)}
+                                <span class="downloads-badge"><i class="fa-solid fa-file"></i>${FormatBytes(asset.size, 2)}</span>
+                                <span class="downloads-badge"><i class="fa-solid fa-arrow-down"></i>${asset.download_count.toLocaleString()}</span>
+                            </div>
+                        </a>
+                    </div>
                 `;
                 }
                 totalDownloadCount += downloadCount;
