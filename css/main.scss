@@ -46,14 +46,14 @@ html {
 }
 
 body {
-    margin-bottom: 71px;
+    margin-bottom: 120px;
 }
 
 footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 71px;
+    height: 120px;
 }
 
 // Theme
@@ -473,7 +473,7 @@ footer {
     font-weight: 300;
 
     p {
-        margin: 0px;
+        margin: $container-padding-half 0px 0px 0px;
     }
 
     a,
