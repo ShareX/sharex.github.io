@@ -473,13 +473,21 @@ footer {
     font-weight: 300;
 
     p {
-        margin: 10px 0px 0px 0px;
+        margin: 20px 0px 0px 0px;
     }
 
     a,
     a:focus,
     a:hover {
         color: $text-color;
+    }
+
+    .shields {
+        margin: 5px;
+
+        img {
+            height: 23px;
+        }
     }
 }
 
