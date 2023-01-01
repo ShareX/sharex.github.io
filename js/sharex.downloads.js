@@ -54,7 +54,7 @@ async function GetReleases(repo) {
                 if (release.assets.length === 0) {
                     continue;
                 }
-                let assets = release.assets.sort((a, b) => b.name.endsWith(".exe") - a.name.endsWith(".exe") || b.name.endsWith(".exe.sha256") - a.name.endsWith(".exe.sha256"));
+                let assets = release.assets.sort((a, b) => a.id - b.id);
                 let downloadCount = 0;
                 let releaseInfo = "";
                 for (let i2 = 0; i2 < assets.length; i2++) {
