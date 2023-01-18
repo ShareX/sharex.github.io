@@ -91,6 +91,26 @@ After setup is complete ShareX won't run automatically.
 
 This command makes sure that the setup will not apply initial tasks again such as creating desktop shortcut or context menu entries. It is used when ShareX updating.
 
+## Registry
+
+These registry settings should reside in either `HKEY_LOCAL_MACHINE\SOFTWARE\ShareX` key or `HKEY_CURRENT_USER\SOFTWARE\ShareX` key. `HKEY_LOCAL_MACHINE` has priority over `HKEY_CURRENT_USER` while reading the settings.
+
+### DisableUpdateCheck `REG_DWORD`
+
+Disables update checks.
+
+### DisableUpload `REG_DWORD`
+
+Disables uploads application wide.
+
+### DisableLogging `REG_DWORD`
+
+Disables debug log file saving.
+
+### PersonalPath `REG_SZ`
+
+Overrides personal path of ShareX, which is by default `%UserProfile%\Documents\ShareX` folder.
+
 ## Personal path
 
 This is how ShareX decides about personal path in this order:
@@ -104,19 +124,3 @@ This is how ShareX decides about personal path in this order:
 7. Use default personal path: `%UserProfile%\Documents\ShareX`
 
 For example portable build of ShareX using 2. step here.
-
-## Registry
-
-These registry settings should reside in either `HKEY_LOCAL_MACHINE\SOFTWARE\ShareX` key or `HKEY_CURRENT_USER\SOFTWARE\ShareX` key. `HKEY_LOCAL_MACHINE` has priority over `HKEY_CURRENT_USER` while reading the settings.
-
-### DisableUpdateCheck `REG_DWORD`
-
-Disables update checks.
-
-### DisableUpload `REG_DWORD`
-
-Disables uploads application wide.
-
-### PersonalPath `REG_SZ`
-
-Overrides personal path of ShareX, which is by default `%UserProfile%\Documents\ShareX` folder.
