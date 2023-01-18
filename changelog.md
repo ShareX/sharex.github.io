@@ -3,6 +3,70 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 15.0.0](https://github.com/ShareX/ShareX/releases/tag/v15.0.0) - 2023-01-18 {#v15.0.0}
+
+Our [GitHub Sponsors profile](https://github.com/sponsors/Jaex) is live! You can sponsor us to support the development of the ShareX project.
+Thanks to GitHub Sponsors Matching Fund, we are receiving double the amount of donations, therefore GitHub Sponsors is the best way to support us!
+
+* Added new "Dark" theme, and renamed previous theme to "Night"[*](https://twitter.com/ShareX/status/1558720652768694273)
+    * If you did not add a new theme manually then ShareX will assume theme settings are default and add the new theme automatically, otherwise you must reset theme settings to default to get it
+* Updated our website theme to fit to new ShareX dark theme: [getsharex.com](https://getsharex.com)
+* Added "Pin to screen" tool[*](https://twitter.com/ShareX/status/1550406179003813894)
+    * Available methods to use the tool[*](https://twitter.com/ShareX/status/1552138814973480962):
+        * Tools menu → Pin to screen
+        * Main window right click context menu → Pin to screen (<kbd>Ctrl + P</kbd> shortcut)
+        * History/Image history window right click context menu → Pin to screen (<kbd>Ctrl + P</kbd> shortcut)
+        * After capture tasks → Pin to screen
+        * Toast notification click action option → Pin to screen
+        * Create a hotkey
+    * Available hotkeys that users can create:
+        * Tools → Pin to screen
+        * Tools → Pin to screen (From screen)
+        * Tools → Pin to screen (From clipboard)
+        * Tools → Pin to screen (From file)
+    * Pin to screen [keybinds](https://getsharex.com/docs/keybinds#pin-to-screen):
+        * <kbd>Hold left click</kbd> Move image
+        * <kbd>Right click</kbd> / <kbd>Escape</kbd> Close image
+        * <kbd>Middle click</kbd> Reset image
+        * <kbd>Double click</kbd> Minimize image
+        * <kbd>Mouse wheel</kbd> / <kbd>+</kbd> <kbd>-</kbd> Change image scale
+        * <kbd>Ctrl</kbd> + <kbd>Mouse wheel</kbd> / <kbd>Ctrl</kbd> + <kbd>+</kbd> <kbd>-</kbd> Change image opacity
+        * <kbd>Ctrl</kbd> + <kbd>C</kbd> Copy image
+* Hotkey settings window visual improvements
+* Allow changing hotkey tasks without opening task settings window, instead dropdown menu could be used, which also gonna make creating new hotkeys easier[*](https://twitter.com/ShareX/status/1553798642523316224)
+* Hotkeys which have their task settings overridden by the user are now indicated by "*" character at the end of hotkey task name
+* Added "Cut out" tool to image editor (by [@nielsmh](https://github.com/nielsmh))
+    * Available cut out effects:
+        * No effect
+        * Sawtooth
+        * Torn edges
+        * Wave
+    * <kbd>X</kbd> keybind can be used to select the tool
+* Added "Wave edge" image effect (by [@nielsmh](https://github.com/nielsmh))
+* Uploader configurations now assume `https://` by default if prefix is missing from URL entered by user
+* When downloading file to reupload, ShareX will request the file name from the server instead of parsing it from URL, this feature is mainly used with ShareX browser extensions because extension gives URL to ShareX which then downloads the file from URL to reupload it
+* If system admin disabled upload through [registry](https://getsharex.com/docs/command-line-arguments#registry) then on first ShareX run disable after capture upload option too
+* Using [GitHub Actions](https://github.com/features/actions) to release builds now instead of [AppVeyor](https://www.appveyor.com)
+* Use ShareX theme in screen recording overlay
+* Added "Pause" support to screen recording[*](https://twitter.com/ShareX/status/1566154367887183873)
+* Added "Pause screen recording" hotkey
+* Added support to move recording region while recording is paused[*](https://twitter.com/ShareX/status/1566471627000479745)
+* All ShareX builds now include [FFmpeg 5.1 64-bit](https://github.com/ShareX/FFmpeg/releases/tag/v5.1) built-in, 32-bit OS users can override FFmpeg path to use their own FFmpeg binaries
+* Removed FFmpeg download button because it is not necessary anymore
+* Added "Freehand arrow" annotation tool
+* Increase text annotation maximum font size to 300 from 100
+* While annotating when <kbd>Ctrl</kbd> key is hold also disable selection of resize nodes
+* Dev builds are now stored in [ShareX/DevBuilds](https://github.com/ShareX/DevBuilds) repository
+* "Install dev build" button now shows update message box and downloads the dev builds from [ShareX/DevBuilds](https://github.com/ShareX/DevBuilds) repository
+* In auto update message box if "No" button is pressed then disable auto update check until ShareX is restarted
+* Added support to quickly combine images in main window by drag and dropping thumbnails to top of each other
+* Allow closing OCR window with <kbd>Esc</kbd> key
+* In "Hash check" window allow dragging file to second file path textbox
+* Include uploader name in upload error notifications
+* Added "Wrap after" option and image count label to "Image combiner" tool
+* Implemented [OAuth loopback IP address flow](https://developers.google.com/identity/protocols/oauth2/native-app#redirect-uri_loopback) for Google Drive, Google Photos, Google Cloud Storage and YouTube because the rest of authentication methods are [deprecated for desktop apps by Google](https://developers.googleblog.com/2022/02/making-oauth-flows-safer.html#instructions-oob)
+* Added "DisableLogging" [registry setting](https://getsharex.com/docs/command-line-arguments#registry) (Disables debug log file saving)
+
 ## [ShareX 14.1.0](https://github.com/ShareX/ShareX/releases/tag/v14.1.0) - 2022-07-15 {#v14.1.0}
 
 * Added Polish language support (by [@RikoDEV](https://github.com/RikoDEV))
