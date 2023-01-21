@@ -61,7 +61,7 @@ async function GetReleases(repo) {
                     <a href="${release.html_url}">
                         <div>
                             ${EscapeHtml(release.name)}
-                            <span class="downloads-badge"><i class="fa-solid fa-tag"></i>${release.tag_name}</span>
+                            <span class="downloads-badge"><i class="fa-solid fa-tag"></i>${EscapeHtml(release.tag_name)}</span>
                         </div>
                     </a>
                 </div>
