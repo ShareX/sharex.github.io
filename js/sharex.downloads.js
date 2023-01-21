@@ -56,7 +56,16 @@ async function GetReleases(repo) {
                 }
                 let assets = release.assets.sort((a, b) => b.download_count - a.download_count || a.name.localeCompare(b.name));
                 let downloadCount = 0;
-                let releaseInfo = "";
+                let releaseInfo = `
+                <div class="downloads-asset-info">
+                    <a href="${release.html_url}">
+                        <div>
+                            ${EscapeHtml(release.name)}
+                            <span class="downloads-badge"><i class="fa-solid fa-tag"></i>${release.tag_name}</span>
+                        </div>
+                    </a>
+                </div>
+                `;
                 for (let i2 = 0; i2 < assets.length; i2++) {
                     let asset = assets[i2];
                     downloadCount += asset.download_count;
@@ -70,7 +79,7 @@ async function GetReleases(repo) {
                             </div>
                         </a>
                     </div>
-                `;
+                    `;
                 }
                 totalDownloadCount += downloadCount;
                 let publishedAt = new Date(release.published_at);
@@ -97,7 +106,7 @@ async function GetReleases(repo) {
                         </div>
                     </td>
                 </tr>
-            `);
+                `);
 
                 latest = false;
             }
