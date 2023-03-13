@@ -1698,6 +1698,7 @@ In region capture you can <kbd>Right click</kbd> to open menu which you can sele
 ## ShareX 6.0.0.161 - 2012-06-09
 
 * Rebranded as ShareX
+* New ShareX logo and icon (by [@mpql](https://github.com/mpql))
 * Improved right click menu to include more open/copy options
 * Added support to preview image in the main window
 * Added support to run External Programs
