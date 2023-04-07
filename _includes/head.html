@@ -9,6 +9,15 @@
 
     <title>{% if page.title %}{{ page.title }} - {{ site.name }}{% elsif site.title %}{{ site.title }}{% endif %}</title>
 
+    <script type="application/ld+json">
+    {
+        "@context" : "https://schema.org",
+        "@type" : "WebSite",
+        "name" : "ShareX",
+        "url" : "https://getsharex.com"
+    }
+    </script>
+
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@{{ site.twitter }}">
