@@ -10,8 +10,62 @@ title: Donate
         <p class="alert alert-primary">Thanks to GitHub Sponsors Matching Fund, we are receiving double the amount of donations, therefore <a class="alert-link" href="https://github.com/sponsors/Jaex">GitHub Sponsors</a> is the best way to support us!</p>
 
         <div class="text-center">
-            <a class="btn" role="button" href="https://github.com/sponsors/Jaex"><img src="/img/GitHub.png" /><span>GitHub Sponsor<i class="fa-solid fa-star"></i></span></a>
-            <a class="btn" role="button" href="https://www.patreon.com/ShareX"><img src="/img/Patreon.png" /><span>Patreon</span></a>
+            <a class="btn" role="button" href="https://github.com/sponsors/Jaex">
+                <i class="fa-brands fa-github"></i>GitHub Sponsor<i class="fa-solid fa-star"></i>
+            </a>
+            <a class="btn" role="button" href="https://www.patreon.com/ShareX">
+                <i class="fa-brands fa-patreon"></i>Patreon
+            </a>
+            <a class="btn" role="button" href="#" data-toggle="modal" data-target="#bitcoin-modal">
+                <i class="fa-brands fa-bitcoin"></i>Bitcoin
+            </a>
+            <a class="btn" role="button" href="#" data-toggle="modal" data-target="#ethereum-modal">
+                <i class="fa-brands fa-ethereum"></i>Ethereum
+            </a>
+        </div>
+
+        <div id="bitcoin-modal" class="modal fade crypto-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title w-100 text-center"><i class="fa-brands fa-bitcoin"></i>Bitcoin</h4>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <img class="crypto-qr" src="/img/Bitcoin_QR.png" />
+                            <div class="crypto-address">
+                                <input type="text" class="form-control" value="bc1qqcxjwyle23gnwscec2d2ef3n7hh5pl9yq6fthq" readonly />
+                                <a class="btn btn-clipboard-copy" role="button">Copy to clipboard</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ethereum-modal" class="modal fade crypto-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title w-100 text-center"><i class="fa-brands fa-ethereum"></i>Ethereum</h4>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <img class="crypto-qr" src="/img/Ethereum_QR.png" />
+                            <div class="crypto-address">
+                                <input type="text" class="form-control" value="0x01A2912Ed1CB69E51EE267614d73BfBccE385E09" readonly />
+                                <a class="btn btn-clipboard-copy" role="button">Copy to clipboard</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -49,3 +103,4 @@ title: Donate
 </div>
 
 {% include common-js.html %}
+<script src="/js/sharex.donate.js"></script>

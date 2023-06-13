@@ -504,22 +504,12 @@ footer {
     }
 
     .btn {
-        margin-left: 0px;
-        margin-top: 0px;
-        margin-bottom: 1rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        margin: 0px $container-padding-half $container-padding-half 0px;
+        padding: $container-padding-half;
 
-        img {
+        .fa-brands {
+            margin-left: 0px;
             margin-right: 10px;
-        }
-
-        i {
-            margin-left: 10px;
-        }
-
-        span {
-            vertical-align: middle;
         }
     }
 }
@@ -531,22 +521,54 @@ footer {
 }
 
 .crypto-modal {
-    color: $background-highlight;
+    .modal-content {
+        background-color: $background-alt;
+        color: $text-color;
 
-    .close {
-        font-size: 30px;
-    }
+        .modal-header {
+            border-bottom: none;
 
-    .crypto-qr {
-        margin: 20px;
-    }
+            .modal-title {
+                font-size: 25px;
+                font-weight: 300;
 
-    .crypto-address {
-        margin: 15px 5px 5px 5px;
+                .fa-brands {
+                    margin-right: 10px;
+                }
+            }
 
-        .card-body {
-            font-size: 18px;
-            padding: 5px;
+            .close {
+                color: $text-color;
+                font-size: 30px;
+            }
+        }
+
+        .crypto-qr {
+            margin: 0px $container-padding $container-padding $container-padding;
+        }
+
+        .crypto-address {
+            display: flex;
+
+            input {
+                height: auto;
+                background-color: lighten($background-highlight, 5%);
+                color: $text-color-alt;
+                border: none;
+                border-top: 1px solid lighten($background-highlight, 10%);
+                box-shadow: none;
+                font-size: 20px;
+                font-weight: 300;
+                padding-left: 15px;
+                text-align: center;
+            }
+
+            .btn {
+                margin: 0px 0px 0px 15px;
+                padding: 10px 15px;
+                white-space: nowrap;
+                width: 280px;
+            }
         }
     }
 }
