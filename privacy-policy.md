@@ -11,12 +11,16 @@ ShareX only sends files (images, text, video, etc.) selected or captured by the 
 
 ShareX checks for updates at startup, and also between intervals using GitHub API and downloads the updates from GitHub when the user permits it.
 
-ShareX implements YouTube API Services to support uploading videos to YouTube. You may wish to read the Privacy Policy of third party services we currently use:
+ShareX utilizes YouTube API Services to facilitate video uploads to YouTube. By using ShareX's API clients for YouTube services, users agree to abide by the YouTube Terms of Service.
+
+ShareX encourages users to review the Privacy Policies of the third-party services we currently integrate with:
 
 * [GitHub Privacy Statement](https://docs.github.com/en/github/site-policy/github-privacy-statement)
 * [Google Privacy & Terms](https://policies.google.com/privacy)
 * [YouTube Terms of Service](https://www.youtube.com/t/terms/)
 * [YouTube API Terms of Service](https://developers.google.com/youtube/terms/api-services-terms-of-service)
+
+Please take the time to familiarize yourself with these documents to understand how your information is handled when utilizing our services.
 
 ## Website
 
