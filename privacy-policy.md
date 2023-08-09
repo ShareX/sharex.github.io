@@ -22,6 +22,8 @@ ShareX encourages users to review the Privacy Policies of the third-party servic
 
 Please take the time to familiarize yourself with these documents to understand how your information is handled when utilizing our services.
 
+Users are able to contact the development team via https://github.com/ShareX/ShareX/issues
+
 ## Website
 
 Our web site uses Google Analytics, which helps us to see page view counts.
