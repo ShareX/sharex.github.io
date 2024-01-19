@@ -82,14 +82,14 @@ title: Donate
                 {% for donator in sortedDonators %}
                 <tr>
                     <td>{{ donator.name }}
-                        {% if donator.twitter %}<a href="{{ donator.twitter }}"><i class="fab fa-twitter"></i></a>{% endif %}
-                        {% if donator.facebook %}<a href="{{ donator.facebook }}"><i class="fab fa-facebook"></i></a>{% endif %}
-                        {% if donator.github %}<a href="{{ donator.github }}"><i class="fab fa-github"></i></a>{% endif %}
-                        {% if donator.twitch %}<a href="{{ donator.twitch }}"><i class="fab fa-twitch"></i></a>{% endif %}
-                        {% if donator.youtube %}<a href="{{ donator.youtube }}"><i class="fab fa-youtube"></i></a>{% endif %}
-                        {% if donator.linkedin %}<a href="{{ donator.linkedin }}"><i class="fab fa-linkedin"></i></a>{% endif %}
-                        {% if donator.instagram %}<a href="{{ donator.instagram }}"><i class="fab fa-instagram"></i></a>{% endif %}
-                        {% if donator.steam %}<a href="{{ donator.steam }}"><i class="fab fa-steam"></i></a>{% endif %}
+                        {% if donator.twitter %}<a href="{{ donator.twitter }}"><i class="fa-brands fa-x-twitter"></i></a>{% endif %}
+                        {% if donator.facebook %}<a href="{{ donator.facebook }}"><i class="fa-brands fa-facebook"></i></a>{% endif %}
+                        {% if donator.github %}<a href="{{ donator.github }}"><i class="fa-brands fa-github"></i></a>{% endif %}
+                        {% if donator.twitch %}<a href="{{ donator.twitch }}"><i class="fa-brands fa-twitch"></i></a>{% endif %}
+                        {% if donator.youtube %}<a href="{{ donator.youtube }}"><i class="fa-brands fa-youtube"></i></a>{% endif %}
+                        {% if donator.linkedin %}<a href="{{ donator.linkedin }}"><i class="fa-brands fa-linkedin"></i></a>{% endif %}
+                        {% if donator.instagram %}<a href="{{ donator.instagram }}"><i class="fa-brands fa-instagram"></i></a>{% endif %}
+                        {% if donator.steam %}<a href="{{ donator.steam }}"><i class="fa-brands fa-steam"></i></a>{% endif %}
                     </td>
                     <td>{% if donator.website %}<a href="{{ donator.website }}">{{ donator.website }}</a>{% endif %}</td>
                     <td>{% if donator.amount %}${{ donator.amount }}{% else %}*{% endif %}</td>
