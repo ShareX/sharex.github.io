@@ -3,6 +3,145 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX Dev build](https://getsharex.com/docs/dev-builds) - 2024-01-20 {#dev}
+
+* Screen recording improvements:
+    * Update [FFmpeg](https://ffmpeg.org) to version [6.1](https://github.com/ShareX/FFmpeg/releases/tag/v6.1)
+    * Added ddagrab ([Desktop Duplication API](https://learn.microsoft.com/en-us/windows/win32/direct3ddxgi/desktop-dup-api)) support to screen recording[*](https://twitter.com/ShareX/status/1703405447821009408)
+        * If you have an NVIDIA GPU, it is recommended to use ddagrab with the [NVENC](https://en.wikipedia.org/wiki/Nvidia_NVENC) video encoder together, as [NVENC](https://en.wikipedia.org/wiki/Nvidia_NVENC) can access captured frames from the GPU directly
+    * Added "Pause" button to screen recording tray menu
+    * Screen recording options window UI improvements[*](https://twitter.com/ShareX/status/1738778687363833873)
+    * Update "Preset" options of [NVENC](https://en.wikipedia.org/wiki/Nvidia_NVENC) video encoder
+    * Added "Tune" option to [NVENC](https://en.wikipedia.org/wiki/Nvidia_NVENC) video encoder
+    * Update "Usage" options of AMF video encoder
+    * Added "Bitrate" option to AMF video encoder
+    * Update "Palette mode" & "Dithering mode" options of [GIF](https://en.wikipedia.org/wiki/GIF) encoder
+    * Added "Reset options" button to Screen recording options window
+    * Increase the maximum [FPS](https://en.wikipedia.org/wiki/Frame_rate) option limit for screen recording when dev mode is enabled[*](https://twitter.com/ShareX/status/1703405451755348381)
+* Rewrote scrolling capture support from scratch:
+    * New scrolling capture window which have simpler/user friendly UI compared to before[*](https://twitter.com/ShareX/status/1739498279048536202)
+    * New algorithm to improve image combining/detection accuracy with support to fallback to old algorithm if combining/detection fails
+    * Removed most of scrolling capture options that was exists before and new algorithm tries to automate it much as possible to keep it simple to use
+    * Image combining performance improvements
+    * Image combining now happens between captures instead of combining all images at the end, which means users don't have to wait for long processing time at the end of the scrolling capture anymore
+    * Preview image can be panned by holding mouse left click
+    * Added scrolling capture options window with these options:
+        * Start delay
+        * Automatically scroll to top
+        * Scroll delay
+        * Scroll amount
+        * Automatically upload / save
+        * Show scrolling capture region
+    * Scrolling capture hotkey now acts as both start and stop
+* Image editor improvements:
+    * Implemented proper undo/redo support to image editor (by [@gregorygregio](https://github.com/gregorygregio))
+    * Previously, the image editor unsaved changes dialog asked if the user would like to close the image editor, now instead it asks if the user would like to save the changes with "Yes", "No" and "Cancel" buttons (by [@gregorygregio](https://github.com/gregorygregio))
+    * Added "Load image from URL" button to the image editor startup window
+* Added "Image beautifier" tool:
+    * Added "Beautify image" button to task context menu
+    * Added "Beautify image" after capture task
+    * Added hotkey for "Image beautifier" tool
+    * The image beautifier tool contains the following image effect options:
+        * Margin
+        * Padding
+        * Smart padding
+        * Rounded corner
+        * Shadow radius
+        * Shadow opacity
+        * Shadow distance
+        * Shadow angle
+        * Shadow color
+        * Background:
+            * Gradient
+            * Color
+            * Image
+            * Desktop
+            * Transparent
+* "Pin to screen" tool improvements:
+    * Added toolbar with these buttons:
+        * Copy
+        * Scale
+        * Options
+        * Close
+    * Automatically hide the toolbar if it is bigger than the pinned area
+    * Added pin to screen options window with these options[*](https://twitter.com/ShareX/status/1711255752470405319):
+        * Placement
+        * Placement offset
+        * Top most
+        * Keep center location
+        * Shadow
+        * Border
+        * Border size
+        * Border color
+        * Minimize size
+    * Support pinning context menus/popups
+    * Do not round the corners of the pinned area on Windows 11
+    * Each "Pin to screen" now runs in separate thread
+* "Video converter" tool improvements:
+    * Added [AV1](https://en.wikipedia.org/wiki/AV1) video encoder
+    * Added [NVENC](https://en.wikipedia.org/wiki/Nvidia_NVENC) H.264 & HEVC video encoders
+    * Added [Quick Sync](https://en.wikipedia.org/wiki/Intel_Quick_Sync_Video) H.264 & HEVC video encoders
+    * Added AMF H.264 & HEVC video encoders
+    * Added "Use bitrate" option
+    * Always show custom arguments on UI
+    * Allow overriding file extension by editing the "Output file name"
+    * Do not use audio encoder if input file is gif, webp, png or apng
+* "QR code" tool improvements:
+    * New layout for the QR code window[*](https://twitter.com/ShareX/status/1739156529612198280)
+    * Added "QR code size" option
+    * Added "Copy image", "Save image" and "Upload image" buttons
+* "Inspect window" tool improvements:
+    * New layout for the tool window[*](https://twitter.com/ShareX/status/1737300998865961232)
+    * Added window list
+    * Added "Top most" option
+    * Added "Opacity" option
+* Rename "Hash check" tool to "Hash checker"
+* Hash checker tool UI improvements[*](https://twitter.com/ShareX/status/1738465768424010021)
+* "OCR" tool improvements:
+    * Improved OCR scale factor option performance, enabling faster upscaling of images before applying OCR
+    * While doing OCR, preserve spaces in the Korean language
+    * Added "Close OCR window after opening service link" option (Task settings window -> OCR tab) (by [@gregorygregio](https://github.com/gregorygregio))
+* Added "Capture pre configured window" hotkey, the window is configurable from "Task settings window -> Capture tab"
+* Improve the visuals of hotkey tips in the ShareX main window
+* ShareX [browser extension](https://chromewebstore.google.com/detail/sharex/nlkoigbdolhchiicbonbihbphgamnaoc) update:
+    * Added "Shorten URL with ShareX" button
+    * Renamed "Upload with ShareX" buttons to specify exact action:
+        * Upload image with ShareX
+        * Upload video with ShareX
+        * Upload audio with ShareX
+        * Upload text with ShareX
+* Added an option to use after capture tasks for browser extension image uploads (Task settings window -> Advanced tab -> ProcessImagesDuringExtensionUpload)
+* Added an additional 383 gradient presets to the gradient picker window
+* Display gradient presets in a grid format within the gradient picker window
+* Image effects improvements:
+    * Added "Use random image effect" option (Task settings window -> Effects tab)
+    * Added image effect option summaries near effect names, for example: `Border: 5px`, `Resize: 250px, 200px`
+    * Added "Background image" image effect
+    * Added "Border size" & "Border color" options to "Pixelate" image effect
+    * Added "Padding" option to "Auto crop" image effect
+    * Added "Auto resize" option to "Shadow" image effect
+    * Added "Background" & "Edge overlap" options to "Particles" image effect[*](https://twitter.com/ShareX/status/1730456717182259618)
+    * Added "Radius" option to "Gaussian blur" image effect
+* Added Hebrew language support (by [@erelado](https://github.com/erelado))
+* Added "Cache-Control header" option to [Azure Storage](https://azure.microsoft.com/en-us/products/category/storage) file uploader (by [@Scrxtchy](https://github.com/Scrxtchy))
+* Added "Use direct link" option to [OneDrive](https://onedrive.live.com) file uploader (by [@Yi-pixel](https://github.com/Yi-pixel))
+* Update [Dropbox](https://www.dropbox.com) direct link format
+* Removed Gfycat uploader
+* Removed Teknik uploader
+* If an error occurs during clipboard upload, display a message box asking the user if they would like to retry the upload
+* If the user attempts to close the application while a screen recording is active, a message box will appear, asking if they would like to abort the screen recording
+* Increase custom uploader settings window width
+* Added "outputbox" custom uploader syntax which shows output dialog, example syntaxes: `{outputbox:text}`, `{outputbox:title|text}`
+* Renamed `{prompt}` custom uploader syntax to `{inputbox}`
+* Slight tray icon animation changes
+* Support for closing the window with the <kbd>Escape</kbd> key has been added to most of the windows
+* Update "Google image search" button to use "Google Lens" instead because "Google image search" is deprecated
+* Moved the "Automatically check for updates" option to the "General" tab from the "Advanced" tab
+* Automatically register failed hotkeys on hotkey settings window startup
+* Added support for individual hex color channels in the screen color picker: `rhex`, `ghex`, `bhex`, `rHEX`, `gHEX`, `bHEX` (by [@yevhenii-sir](https://github.com/yevhenii-sir))
+* Do not save default hotkey task settings to decrease HotkeysConfig.json file size significantly
+* Show detailed upload progress in main window when dev mode is enabled
+
 ## [ShareX 15.0.0](https://github.com/ShareX/ShareX/releases/tag/v15.0.0) - 2023-01-18 {#v15.0.0}
 
 Our [GitHub Sponsors profile](https://github.com/sponsors/Jaex) is live! You can sponsor us to support the development of the ShareX project.
