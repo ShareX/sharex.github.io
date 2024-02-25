@@ -3,7 +3,7 @@ layout: markdown
 title: Changelog
 ---
 
-## [ShareX Dev build](https://getsharex.com/docs/dev-builds) - 2024-01-20 {#dev}
+## [ShareX Dev build](https://getsharex.com/docs/dev-builds) - 2024-02-25 {#dev}
 
 * Screen recording improvements:
     * Update [FFmpeg](https://ffmpeg.org) to version [6.1](https://github.com/ShareX/FFmpeg/releases/tag/v6.1)
@@ -37,6 +37,7 @@ title: Changelog
     * Implemented proper undo/redo support to image editor (by [@gregorygregio](https://github.com/gregorygregio))
     * Previously, the image editor unsaved changes dialog asked if the user would like to close the image editor, now instead it asks if the user would like to save the changes with "Yes", "No" and "Cancel" buttons (by [@gregorygregio](https://github.com/gregorygregio))
     * Added "Load image from URL" button to the image editor startup window
+    * In image editor use <kbd>Ctrl + C</kbd> instead of <kbd>Ctrl + Shift + C</kbd> to copy image to clipboard
 * Added "Image beautifier" tool:
     * Added "Beautify image" button to task context menu
     * Added "Beautify image" after capture task
@@ -103,6 +104,7 @@ title: Changelog
     * Added "Close OCR window after opening service link" option (Task settings window -> OCR tab) (by [@gregorygregio](https://github.com/gregorygregio))
 * Added "Capture pre configured window" hotkey, the window is configurable from "Task settings window -> Capture tab"
 * Improve the visuals of hotkey tips in the ShareX main window
+* Added auto complete support to history & image history window search box
 * ShareX [browser extension](https://chromewebstore.google.com/detail/sharex/nlkoigbdolhchiicbonbihbphgamnaoc) update:
     * Added "Shorten URL with ShareX" button
     * Renamed "Upload with ShareX" buttons to specify exact action:
@@ -136,11 +138,15 @@ title: Changelog
 * Slight tray icon animation changes
 * Support for closing the window with the <kbd>Escape</kbd> key has been added to most of the windows
 * Update "Google image search" button to use "Google Lens" instead because "Google image search" is deprecated
+* Rename Twitter to X and update the logo
 * Moved the "Automatically check for updates" option to the "General" tab from the "Advanced" tab
 * Automatically register failed hotkeys on hotkey settings window startup
 * Added support for individual hex color channels in the screen color picker: `rhex`, `ghex`, `bhex`, `rHEX`, `gHEX`, `bHEX` (by [@yevhenii-sir](https://github.com/yevhenii-sir))
 * Do not save default hotkey task settings to decrease HotkeysConfig.json file size significantly
 * Show detailed upload progress in main window when dev mode is enabled
+* If the user does not have administrator permissions, the setup will automatically set `{localappdata}\Programs` as the default installation path
+* Implement single-instance support using [named pipes](https://learn.microsoft.com/en-us/windows/win32/ipc/named-pipes) instead of [IPC](https://en.wikipedia.org/wiki/Inter-process_communication) for preparation for .NET upgrade in the future because IPC is deprecated in .NET
+* Added "Disable Print Screen key for Snipping Tool" option to setup
 
 ## [ShareX 15.0.0](https://github.com/ShareX/ShareX/releases/tag/v15.0.0) - 2023-01-18 {#v15.0.0}
 
