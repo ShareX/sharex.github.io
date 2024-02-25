@@ -37,7 +37,7 @@ title: Changelog
     * Implemented proper undo/redo support to image editor (by [@gregorygregio](https://github.com/gregorygregio))
     * Previously, the image editor unsaved changes dialog asked if the user would like to close the image editor, now instead it asks if the user would like to save the changes with "Yes", "No" and "Cancel" buttons (by [@gregorygregio](https://github.com/gregorygregio))
     * Added "Load image from URL" button to the image editor startup window
-    * In image editor use <kbd>Ctrl + C</kbd> instead of <kbd>Ctrl + Shift + C</kbd> to copy image to clipboard
+    * In image editor use <kbd>Ctrl</kbd> + <kbd>C</kbd> instead of <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> to copy image to clipboard
 * Added "Image beautifier" tool:
     * Added "Beautify image" button to task context menu
     * Added "Beautify image" after capture task
@@ -159,8 +159,8 @@ Thanks to GitHub Sponsors Matching Fund, we are receiving double the amount of d
 * Added "Pin to screen" tool[*](https://twitter.com/ShareX/status/1550406179003813894)
     * Available methods to use the tool[*](https://twitter.com/ShareX/status/1552138814973480962):
         * Tools menu → Pin to screen
-        * Main window right click context menu → Pin to screen (<kbd>Ctrl + P</kbd> shortcut)
-        * History/Image history window right click context menu → Pin to screen (<kbd>Ctrl + P</kbd> shortcut)
+        * Main window right click context menu → Pin to screen (<kbd>Ctrl</kbd> + <kbd>P</kbd> shortcut)
+        * History/Image history window right click context menu → Pin to screen (<kbd>Ctrl</kbd> + <kbd>P</kbd> shortcut)
         * After capture tasks → Pin to screen
         * Toast notification click action option → Pin to screen
         * Create a hotkey
