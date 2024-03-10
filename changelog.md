@@ -3,7 +3,7 @@ layout: markdown
 title: Changelog
 ---
 
-## [ShareX Dev build](https://getsharex.com/docs/dev-builds) - 2024-02-25 {#dev}
+## [ShareX 16.0.0](https://github.com/ShareX/ShareX/releases/tag/v16.0.0) - 2024-03-10 {#v16.0.0}
 
 * Screen recording improvements:
     * Update [FFmpeg](https://ffmpeg.org) to version [6.1](https://github.com/ShareX/FFmpeg/releases/tag/v6.1)
@@ -112,6 +112,7 @@ title: Changelog
         * Upload video with ShareX
         * Upload audio with ShareX
         * Upload text with ShareX
+* Added [Data URL](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) support for browser extension [base64](https://en.wikipedia.org/wiki/Base64) image uploads
 * Added an option to use after capture tasks for browser extension image uploads (Task settings window -> Advanced tab -> ProcessImagesDuringExtensionUpload)
 * Added an additional 383 gradient presets to the gradient picker window
 * Display gradient presets in a grid format within the gradient picker window
