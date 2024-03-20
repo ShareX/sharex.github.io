@@ -15,7 +15,8 @@ title: Keybinds
 | <kbd>Ctrl</kbd> + <kbd>C</kbd> | Copy position and size info |
 | <kbd>Ctrl</kbd> + <kbd>V</kbd> | Paste image or text |
 | <kbd>Ctrl</kbd> + <kbd>D</kbd> | Duplicate shape |
-| <kbd>Ctrl</kbd> + <kbd>Z</kbd> | Undo shape |
+| <kbd>Ctrl</kbd> + <kbd>Z</kbd> | Undo |
+| <kbd>Ctrl</kbd> + <kbd>Y</kbd> | Redo |
 | <kbd>Arrow keys</kbd> | Move cursor / Move current shape |
 | <kbd>Ctrl</kbd> + <kbd>Arrow keys</kbd> | Resize current shape from bottom right corner |
 | <kbd>Alt</kbd> + <kbd>Arrow keys</kbd> | Resize current shape from top left corner |
@@ -71,7 +72,7 @@ title: Keybinds
 | <kbd>Esc</kbd> | Close image editor and cancel task |
 | <kbd>Ctrl</kbd> + <kbd>S</kbd> | Save image |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> | Save image as... |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> | Copy image to clipboard |
+| <kbd>Ctrl</kbd> + <kbd>C</kbd> | Copy image to clipboard |
 | <kbd>Ctrl</kbd> + <kbd>U</kbd> | Upload image |
 | <kbd>Ctrl</kbd> + <kbd>P</kbd> | Print image |
 
