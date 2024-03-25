@@ -19,7 +19,7 @@ title: Changelog
     * Update "Palette mode" & "Dithering mode" options of [GIF](https://en.wikipedia.org/wiki/GIF) encoder
     * Added "Reset options" button to Screen recording options window
     * Increase the maximum [FPS](https://en.wikipedia.org/wiki/Frame_rate) option limit for screen recording when dev mode is enabled[*](https://twitter.com/ShareX/status/1703405451755348381)
-* Rewrote scrolling capture support from scratch:
+* Rewrote [scrolling capture](https://getsharex.com/docs/scrolling-screenshot) support from scratch:
     * New scrolling capture window which have simpler/user friendly UI compared to before[*](https://twitter.com/ShareX/status/1739498279048536202)
     * New algorithm to improve image combining/detection accuracy with support to fallback to old algorithm if combining/detection fails
     * Removed most of scrolling capture options that was exists before and new algorithm tries to automate it much as possible to keep it simple to use
