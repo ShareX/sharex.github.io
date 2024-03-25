@@ -1,6 +1,6 @@
 ---
 layout: markdown
-title: Custom uploader guide
+title: Custom uploader
 ---
 
 ## What is custom uploader?
