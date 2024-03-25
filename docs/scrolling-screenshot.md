@@ -28,6 +28,12 @@ Animated elements, such as videos, GIFs, or dynamic content, can also pose a cha
 
 Similar to the previous problem, making a custom region selection can help exclude animated elements from the capture. By manually selecting the desired content, you can ensure a more accurate and reliable scrolling capture.
 
+### Hover-related issues
+
+Another common challenge in scrolling capture is related to hover effects. When scrolling, if the cursor moves over a section of the webpage with hover effects, it can trigger changes in the appearance, such as background color or highlighting. This can result in inaccurate or inconsistent captures.
+
+To mitigate this issue, it is recommended to move the cursor away from the content, preferably to the top of the scroll bars. By doing so, you can minimize the chances of triggering hover effects during the scrolling capture process.
+
 ## Conclusion
 
 Scrolling capture in ShareX is a powerful feature that allows you to capture entire webpages or documents. However, it may encounter difficulties when dealing with static or animated elements. By following the suggested solutions and making custom region selections, you may overcome these challenges and achieve successful scrolling captures.
