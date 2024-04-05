@@ -381,7 +381,7 @@ https://{select:domain1.com|domain2.com|domain3.com}/{json:files[0].url}
 
 ---
 
-### prompt
+### inputbox
 
 This will show input box for user to input text. This syntax can be used if user prefer to write different value for argument or URL part each upload.
 
@@ -390,15 +390,15 @@ First parameter is window title, second parameter is default text for input box.
 Syntax:
 
 ```
-{prompt}
-{prompt:title}
-{prompt:title|default text}
+{inputbox}
+{inputbox:title}
+{inputbox:title|default text}
 ```
 
 Example URL:
 
 ```
-https://{prompt:Input subdomain|i}.example.com/{json:files[0].url}
+https://{inputbox:Input subdomain|i}.example.com/{json:files[0].url}
 ```
 
 ---
