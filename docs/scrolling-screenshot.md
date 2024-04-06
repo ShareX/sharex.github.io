@@ -7,7 +7,19 @@ title: Scrolling screenshot
 
 Scrolling screenshot, also known as scrolling capture, is a feature in ShareX that allows you to capture an entire webpage or document that extends beyond the visible screen. It automatically combines multiple screenshots into a single image, giving you a complete view of the content.
 
-## How scrolling capture works in ShareX
+## How to take a scrolling screenshot?
+
+To take a scrolling screenshot in ShareX, follow these steps:
+
+1. Open ShareX main window or tray menu.
+2. Go to "Capture -> Scrolling capture" menu option.
+3. Alternatively, you can create a custom hotkey for "Start/Stop scrolling capture" in the hotkey settings window.
+4. Make a region selection to define the area you want to capture.
+5. Once the region is selected, the scrolling capture will automatically start.
+6. ShareX will scroll and capture the content until it reaches the end of the scroll.
+7. Finally, ShareX will display the result image of the scrolling capture.
+
+## How scrolling capture works in ShareX?
 
 1. ShareX takes an initial screenshot of the visible portion of the webpage/document.
 2. It then compares subsequent screenshots with the previous one to identify any changes.
