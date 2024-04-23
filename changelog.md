@@ -4,6 +4,9 @@ title: Changelog
 ---
 
 ## [ShareX 16.0.1](https://github.com/ShareX/ShareX/releases/tag/v16.0.1) - 2024-03-17 {#v16.0.1}
+
+* Bug fixes
+
 ## [ShareX 16.0.0](https://github.com/ShareX/ShareX/releases/tag/v16.0.0) - 2024-03-10 {#v16.0.0}
 
 * Screen recording improvements:
