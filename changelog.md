@@ -14,7 +14,7 @@ title: Changelog
     * Scrolling capture automatically stops if the first image combine attempt fails.
     * Improved image combining performance.
     * Mouse wheel input is now ignored within the scrolling capture region.
-    * Added help button to scrolling capture window, which opens this page: https://getsharex.com/docs/scrolling-screenshot
+    * Added help button to scrolling capture window, which opens this page: [https://getsharex.com/docs/scrolling-screenshot](https://getsharex.com/docs/scrolling-screenshot)
 * Update [FFmpeg](https://ffmpeg.org) to version [7.0](https://github.com/ShareX/FFmpeg/releases/tag/v7.0).
 * Previously, releasing the <kbd>Escape</kbd> key would close the active window. Now, it will also check if the <kbd>Escape</kbd> key was initially pressed in the active window as well.
 * Improved task icon detection in "Quick task menu".
