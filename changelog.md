@@ -3,6 +3,27 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX Dev build](https://getsharex.com/docs/dev-builds) - 2024-04-23 {#dev}
+
+* Added an "Update channel" option to the "Application settings" window with the following options:
+    * Release
+    * Pre-release
+    * Dev
+* Scrolling capture improvements:
+    * Added scrolling capture [status indicator](https://getsharex.com/docs/scrolling-screenshot#status-indicator).
+    * Scrolling capture automatically stops if the first image combine attempt fails.
+    * Improved image combining performance.
+    * Mouse wheel input is now ignored within the scrolling capture region.
+    * Added help button to scrolling capture window, which opens this page: https://getsharex.com/docs/scrolling-screenshot
+* Update [FFmpeg](https://ffmpeg.org) to version [7.0](https://github.com/ShareX/FFmpeg/releases/tag/v7.0).
+* Previously, releasing the <kbd>Escape</kbd> key would close the active window. Now, it will also check if the <kbd>Escape</kbd> key was initially pressed in the active window as well.
+* Improved task icon detection in "Quick task menu".
+* Added "Cut out background color" option for image editor "Cut out" tool (by [@flmbray](https://github.com/flmbray)).
+* Browser extension [host manifest](https://developer.chrome.com/docs/extensions/develop/concepts/native-messaging#native-messaging-host) files are now stored in app folder instead of `Documents\ShareX\Tools` folder.
+* Added "Enable browser extension support" option to setup.
+* Google has forced us to use a more restrictive [API scope (/auth/drive.file)](https://developers.google.com/drive/api/guides/api-specific-auth#drive-scopes) for [Google Drive](https://www.google.com/drive/), which does not allow us to see files or folders anymore. Because of this, we cannot provide folder listing and selection support anymore.
+    * However, there is a workaround. You can navigate to the Google Drive website in your browser, open the folder you want to upload to, and then copy the folder ID from the browser's address bar to "Folder ID" textbox.
+
 ## [ShareX 16.0.1](https://github.com/ShareX/ShareX/releases/tag/v16.0.1) - 2024-03-17 {#v16.0.1}
 
 * Bug fixes
