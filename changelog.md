@@ -3,12 +3,13 @@ layout: markdown
 title: Changelog
 ---
 
-## [ShareX Dev build](https://getsharex.com/docs/dev-builds) - 2024-04-23 {#dev}
+## [ShareX 16.1.0](https://github.com/ShareX/ShareX/releases/tag/v16.1.0) - 2024-05-09 {#v16.1.0}
 
 * Added an "Update channel" option to the "Application settings" window with the following options:
     * Release
     * Pre-release
     * Dev
+* Added "Background dim strength" region capture option.
 * Scrolling capture improvements:
     * Added scrolling capture [status indicator](https://getsharex.com/docs/scrolling-screenshot#status-indicator).
     * Scrolling capture automatically stops if the first image combine attempt fails.
@@ -20,6 +21,7 @@ title: Changelog
 * Improved task icon detection in "Quick task menu".
 * Added "Cut out background color" option for image editor "Cut out" tool (by [@flmbray](https://github.com/flmbray)).
 * Browser extension [host manifest](https://developer.chrome.com/docs/extensions/develop/concepts/native-messaging#native-messaging-host) files are now stored in app folder instead of `Documents\ShareX\Tools` folder.
+* Improved update downloader progress text.
 * Added "Enable browser extension support" option to setup.
 * Google has forced us to use a more restrictive [API scope (/auth/drive.file)](https://developers.google.com/drive/api/guides/api-specific-auth#drive-scopes) for [Google Drive](https://www.google.com/drive/), which does not allow us to see files or folders anymore. Because of this, we cannot provide folder listing and selection support anymore.
     * However, there is a workaround. You can navigate to the Google Drive website in your browser, open the folder you want to upload to, and then copy the folder ID from the browser's address bar to "Folder ID" textbox.
