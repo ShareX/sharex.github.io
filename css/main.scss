@@ -1016,4 +1016,25 @@ footer {
             background-color: $background-alt;
         }
     }
+
+    .badge {
+        padding: 5px 7px;
+        margin-left: 5px;
+        font-size: 90%;
+        font-weight: 300;
+        background-color: $background-highlight;
+        color: $text-color-alt;
+        border-radius: 100px;
+        vertical-align: middle;
+        text-decoration: none;
+
+        &:hover {
+            background-color: lighten($background-highlight, 1.5%);
+            text-shadow: none;
+        }
+
+        i {
+            margin-right: 5px;
+        }
+    }
 }
