@@ -496,10 +496,10 @@ footer {
 .container-donate {
     padding-top: $container-padding;
     padding-bottom: $container-padding-half;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 300;
     background-color: $background-alt;
     color: $text-color-alt;
-    border-bottom: 1px solid $background-border;
 
     p {
         margin-bottom: $container-padding;
@@ -514,12 +514,6 @@ footer {
             margin-right: 10px;
         }
     }
-}
-
-.container-donate-2 {
-    padding-top: $container-padding;
-    padding-bottom: $container-padding-half;
-    background-color: $background;
 }
 
 .crypto-modal {
@@ -571,38 +565,6 @@ footer {
                 white-space: nowrap;
                 width: 280px;
             }
-        }
-    }
-}
-
-.patrons-panel {
-    a {
-        text-decoration: underline;
-        text-decoration-color: rgba(255, 255, 255, 0.5);
-    }
-
-    .fa-brands {
-        font-size: 18px;
-        vertical-align: middle;
-    }
-
-    .table {
-        background-color: $background;
-        border-radius: 6px;
-        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
-        margin-top: $container-padding-half;
-
-        th,
-        td {
-            border: none;
-        }
-
-        td:first-child a {
-            margin-left: 0.5rem;
-        }
-
-        tr:nth-of-type(even) {
-            background-color: $background-alt;
         }
     }
 }

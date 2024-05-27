@@ -5,7 +5,7 @@ title: Donate
 
 <div class="container-donate">
     <div class="container">
-        <p>We've been developing ShareX for the past {{ site.time | date: '%Y' | minus: 2008 }} years. It always has been, and will continue to be, free and open source software. ShareX isn't just free in terms of price; there are no advertisements. Just like our users, we don't like ads. Donations are our only source of income and allow us to keep ShareX free. If you would like to support our project then please consider donating.</p>
+        <p>We've been developing ShareX for the past {{ site.time | date: '%Y' | minus: 2008 }} years. It has always been, and will continue to be, free and open-source software. ShareX isn't just free in terms of price; there are no advertisements. Like our users, we don't like ads. Donations are our only source of income and allow us to keep ShareX free. If you would like to support our project, please consider donating.</p>
 
         <div class="text-center">
             <a class="btn" role="button" href="https://github.com/sponsors/Jaex">
@@ -64,38 +64,6 @@ title: Donate
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-
-<div class="container-donate-2">
-    <div class="container">
-        <div class="patrons-panel">
-            <h3>Donators</h3>
-            <table class="table">
-                <tr>
-                    <th>Name</th>
-                    <th>Website</th>
-                    <th>Total donation amount</th>
-                </tr>
-                {% assign sortedDonators = site.data.donators | sort: "amount" | reverse %}
-                {% for donator in sortedDonators %}
-                <tr>
-                    <td>{{ donator.name }}
-                        {% if donator.twitter %}<a href="{{ donator.twitter }}"><i class="fa-brands fa-x-twitter"></i></a>{% endif %}
-                        {% if donator.facebook %}<a href="{{ donator.facebook }}"><i class="fa-brands fa-facebook"></i></a>{% endif %}
-                        {% if donator.github %}<a href="{{ donator.github }}"><i class="fa-brands fa-github"></i></a>{% endif %}
-                        {% if donator.twitch %}<a href="{{ donator.twitch }}"><i class="fa-brands fa-twitch"></i></a>{% endif %}
-                        {% if donator.youtube %}<a href="{{ donator.youtube }}"><i class="fa-brands fa-youtube"></i></a>{% endif %}
-                        {% if donator.linkedin %}<a href="{{ donator.linkedin }}"><i class="fa-brands fa-linkedin"></i></a>{% endif %}
-                        {% if donator.instagram %}<a href="{{ donator.instagram }}"><i class="fa-brands fa-instagram"></i></a>{% endif %}
-                        {% if donator.steam %}<a href="{{ donator.steam }}"><i class="fa-brands fa-steam"></i></a>{% endif %}
-                    </td>
-                    <td>{% if donator.website %}<a href="{{ donator.website }}">{{ donator.website }}</a>{% endif %}</td>
-                    <td>{% if donator.amount %}${{ donator.amount }}{% else %}*{% endif %}</td>
-                </tr>
-                {% endfor %}
-            </table>
         </div>
     </div>
 </div>
