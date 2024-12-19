@@ -216,3 +216,7 @@
 - name: macOSBigSur
   title: macOS Big Sur
   author: Cale111
+
+- name: RegionCapture
+  title: Region capture
+  author: Jaex
