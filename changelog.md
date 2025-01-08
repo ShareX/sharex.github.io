@@ -3,6 +3,37 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 17.0.0](https://github.com/ShareX/ShareX/releases/tag/v17.0.0) - 2025-01-08 {#v17.0.0}
+
+* Scrolling capture improvements:
+    * Automatically ignores 50px from the bottom during scrolling captures, useful for cases like horizontal scrollbars at the bottom.
+    * Added an "Auto ignore bottom edge" option, which compares two images to identify static parts at the bottom, in addition to the default 50px.
+    * Added a "Copy" button to the scrolling capture window.
+* Added notification sound to certain actions: <a class="badge" href="https://x.com/ShareX/status/1809810873847828676"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+    * Screen recording stop/pause/abort actions.
+    * Scrolling capture action.
+    * "Pin to screen" tool.
+    * "Screen color picker" tool.
+    * "Borderless window" tool.
+    * Browser extension action.
+    * Silent OCR action.
+    * "Disable/Enable hotkeys" action.
+* Added "Play sound after action is completed" option.
+* Added "Use custom action completed sound" option.
+* Removed toast notification from silent OCR action.
+* Removed "Disable notifications" option.
+* Added Arabic language support. <a class="badge" href="https://github.com/OthmanAliModaes"><i class="fa-brands fa-github"></i>OthmanAliModaes</a>
+* When "DisableUpload" [registry](https://getsharex.com/docs/command-line-arguments#registry) is set, hide upload related items in the main window.
+* Save tasks to history regardless of failed or stopped upload.
+* Allow restoring borderless window in "Borderless window" tool.
+* Added "Make active window borderless" hotkey.
+* Added "Make active window top most" hotkey.
+* Added "Pin to screen (Close all)" hotkey.
+* Removed YouTube icon because Google does not allow us to use a 16x16 size logo.
+* Removed Google Photos image uploader. (Reason: [https://developers.googleblog.com/en/google-photos-picker-api-launch-and-library-api-updates/](https://developers.googleblog.com/en/google-photos-picker-api-launch-and-library-api-updates/))
+* Removed adf.ly URL shortener.
+* Removed backward compatibility for .sxcu files generated before ShareX 12.4.0. <a class="badge" href="https://x.com/ShareX/status/1868484159284392302"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+
 ## [ShareX 16.1.0](https://github.com/ShareX/ShareX/releases/tag/v16.1.0) - 2024-05-09 {#v16.1.0}
 
 * Added an "Update channel" option to the "Application settings" window with the following options:
