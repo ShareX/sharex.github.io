@@ -33,13 +33,12 @@ Example: `-RectangleRegion`, `-PrintScreen`, `-ClipboardUpload`, `-ScreenColorPi
 
 You can find the full list of hotkey actions from `public enum HotkeyType` in [here](https://github.com/ShareX/ShareX/blob/master/ShareX/Enums.cs).
 
-### -imageeditor "image file path"
+These actions support additional parameters:
 
-Opens ShareX image editor with specified image file.
-
-### -imageeffects "image file path"
-
-Opens ShareX image effects window with specified image file.
+* `-ImageEditor "image file path"`
+* `-ImageBeautifier "image file path"`
+* `-ImageEffects "image file path"`
+* `-ImageViewer "image file path"`
 
 ### -workflow "Hotkey description"
 
