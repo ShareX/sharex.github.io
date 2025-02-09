@@ -35,6 +35,8 @@ You can find the full list of hotkey actions from `public enum HotkeyType` in [h
 
 These actions support additional parameters:
 
+* `-PinToScreen "image file path"`
+* `-PinToScreenFromFile "image file path"`
 * `-ImageEditor "image file path"`
 * `-ImageBeautifier "image file path"`
 * `-ImageEffects "image file path"`
