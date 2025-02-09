@@ -41,6 +41,7 @@ These actions support additional parameters:
 * `-ImageBeautifier "image file path"`
 * `-ImageEffects "image file path"`
 * `-ImageViewer "image file path"`
+* `-VideoConverter "video file path"`
 
 ### -workflow "Hotkey description"
 
