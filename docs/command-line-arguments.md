@@ -42,6 +42,7 @@ These actions support additional parameters:
 * `-ImageEffects "image file path"`
 * `-ImageViewer "image file path"`
 * `-VideoConverter "video file path"`
+* `-OCR "image file path"`
 
 ### -workflow "Hotkey description"
 
