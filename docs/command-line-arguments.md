@@ -43,6 +43,7 @@ These actions support additional parameters:
 * `-ImageViewer "image file path"`
 * `-VideoConverter "video file path"`
 * `-OCR "image file path"`
+* `-QRCode "image file path"`
 
 ### -workflow "Hotkey description"
 
