@@ -115,6 +115,33 @@ Disables debug log file saving.
 
 Overrides personal path of ShareX, which is by default `%UserProfile%\Documents\ShareX` folder.
 
+## Context menu
+
+By using ShareX command line arguments, you can add custom actions to the Windows context menu.
+
+The ShareX app uses the registry to add "Upload with ShareX" and "Edit with ShareX" options to the Windows context menu. Similarly, you can modify the registry to add other ShareX actions.
+
+For example, to add a "Pin to screen" button for image files, you can use the following registry files:
+
+**AddPinToScreen.reg**
+```
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\SystemFileAssociations\image\shell\ShareXPinToScreen]
+@="Pin to screen"
+"Icon"="\"C:\\Program Files\\ShareX\\ShareX.exe\",0"
+
+[HKEY_CURRENT_USER\Software\Classes\SystemFileAssociations\image\shell\ShareXPinToScreen\command]
+@="\"C:\\Program Files\\ShareX\\ShareX.exe\" -PinToScreen \"%1\""
+```
+
+**RemovePinToScreen.reg**
+```
+Windows Registry Editor Version 5.00
+
+[-HKEY_CURRENT_USER\Software\Classes\SystemFileAssociations\image\shell\ShareXPinToScreen]
+```
+
 ## Personal path
 
 This is how ShareX decides about personal path in this order:
