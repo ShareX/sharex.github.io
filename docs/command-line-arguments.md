@@ -33,8 +33,9 @@ Example: `-RectangleRegion`, `-PrintScreen`, `-ClipboardUpload`, `-ScreenColorPi
 
 You can find the full list of hotkey actions from `public enum HotkeyType` in [here](https://github.com/ShareX/ShareX/blob/master/ShareX/Enums.cs).
 
-These actions support additional parameters:
+These actions support additional parameter:
 
+* `-FileUpload "file path"`
 * `-PinToScreen "image file path"`
 * `-PinToScreenFromFile "image file path"`
 * `-ImageEditor "image file path"`
@@ -44,6 +45,7 @@ These actions support additional parameters:
 * `-VideoConverter "video file path"`
 * `-OCR "image file path"`
 * `-QRCode "image file path"`
+* `-HashCheck "file path"`
 
 ### -workflow "Hotkey description"
 
