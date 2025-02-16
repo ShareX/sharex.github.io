@@ -385,7 +385,7 @@ https://{select:domain1.com|domain2.com|domain3.com}/{json:files[0].url}
 
 This will show input box for user to input text. This syntax can be used if user prefer to write different value for argument or URL part each upload.
 
-First parameter is window title, second parameter is default text for input box. Both parameter is optional.
+First parameter is window title, second parameter is default text for input box. Both parameters are optional.
 
 Syntax:
 
@@ -399,6 +399,25 @@ Example URL:
 
 ```
 https://{inputbox:Input subdomain|i}.example.com/{json:files[0].url}
+```
+
+---
+
+### outputbox
+
+This will display an output box with the specified text. It can be used for non-uploader requests, such as prompting AI and viewing the result.
+
+Syntax:
+
+```
+{outputbox:text}
+{outputbox:title|text}
+```
+
+Example URL:
+
+```
+{outputbox:Result|{json:choices[0].message.content}}
 ```
 
 ---
@@ -427,7 +446,7 @@ Example JSON schema looks like this:
 
 ```json
 {
-  "Version": "14.0.0",
+  "Version": "17.0.0",
   "Name": "Example",
   "DestinationType": "ImageUploader, TextUploader, FileUploader",
   "RequestMethod": "POST",
