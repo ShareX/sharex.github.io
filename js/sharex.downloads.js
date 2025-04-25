@@ -45,6 +45,7 @@ async function GetReleases(repo) {
         if (!response.ok) break;
 
         let releases = await response.json();
+        if (!Array.isArray(releases)) break;
 
         if (releases.length > 0) {
             releases = releases.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
