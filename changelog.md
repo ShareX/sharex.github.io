@@ -3,6 +3,29 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 17.1.0](https://github.com/ShareX/ShareX/releases/tag/v17.1.0) - 2025-05-26 {#v17.1.0}
+
+* Added "Metadata" tool to view file metadata and strip non-essential metadata from media files. <a class="badge" href="https://x.com/ShareX/status/1920392978343833909"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+* Added "Metadata" tool hotkey.
+* Added a custom scrollbar to ShareX's main window to support the dark theme. <a class="badge" href="https://x.com/ShareX/status/1918243985883029785"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+* Update [FFmpeg](https://ffmpeg.org) to [7.1](https://github.com/ShareX/FFmpeg/releases/tag/v7.1).
+* Added icons to "Workflows" menu items.
+* Added command line arguments:
+    * -PinToScreen "image file path"
+    * -PinToScreenFromFile "image file path"
+    * -VideoConverter "video file path"
+    * -OCR "image file path"
+    * -QRCode "image file path"
+    * -HashCheck "file path"
+    * -FileUpload "file path"
+    * -Metadata "file path"
+    * -StripMetadata "file path"
+* Added notification sound to "Hash checker" tool.
+* Removed DNS changer tool.
+* Improved [H.265 support for Apple products](https://trac.ffmpeg.org/wiki/Encode/H.265#FinalCutandApplestuffcompatibility).
+* Allow moving pinned images with arrow keys.
+* Removed "Use custom theme" option, it is now always enabled.
+
 ## [ShareX 17.0.0](https://github.com/ShareX/ShareX/releases/tag/v17.0.0) - 2025-01-08 {#v17.0.0}
 
 * Scrolling capture improvements:
