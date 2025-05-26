@@ -46,6 +46,8 @@ These actions support additional parameter:
 * `-OCR "image file path"`
 * `-QRCode "image file path"`
 * `-HashCheck "file path"`
+* `-Metadata "file path"`
+* `-StripMetadata "file path"`
 
 ### -workflow "Hotkey description"
 
