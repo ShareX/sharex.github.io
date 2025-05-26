@@ -11,7 +11,7 @@ title: Changelog
 * Update [FFmpeg](https://ffmpeg.org) to [7.1](https://github.com/ShareX/FFmpeg/releases/tag/v7.1).
 * Improved [H.265 support for Apple products](https://trac.ffmpeg.org/wiki/Encode/H.265#FinalCutandApplestuffcompatibility).
 * Added icons to "Workflows" menu items.
-* Added command line arguments:
+* Added [command line arguments](https://getsharex.com/docs/command-line-arguments):
     * -PinToScreen "image file path"
     * -PinToScreenFromFile "image file path"
     * -VideoConverter "video file path"
