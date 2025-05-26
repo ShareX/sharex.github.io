@@ -9,6 +9,7 @@ title: Changelog
 * Added "Metadata" tool hotkey.
 * Added a custom scrollbar to ShareX's main window to support the dark theme. <a class="badge" href="https://x.com/ShareX/status/1918243985883029785"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
 * Update [FFmpeg](https://ffmpeg.org) to [7.1](https://github.com/ShareX/FFmpeg/releases/tag/v7.1).
+* Improved [H.265 support for Apple products](https://trac.ffmpeg.org/wiki/Encode/H.265#FinalCutandApplestuffcompatibility).
 * Added icons to "Workflows" menu items.
 * Added command line arguments:
     * -PinToScreen "image file path"
@@ -22,7 +23,6 @@ title: Changelog
     * -StripMetadata "file path"
 * Added notification sound to "Hash checker" tool.
 * Removed DNS changer tool.
-* Improved [H.265 support for Apple products](https://trac.ffmpeg.org/wiki/Encode/H.265#FinalCutandApplestuffcompatibility).
 * Allow moving pinned images with arrow keys.
 * Removed "Use custom theme" option, it is now always enabled.
 
