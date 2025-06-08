@@ -3,6 +3,14 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 17.1.1 Dev](https://getsharex.com/docs/dev-builds) - 2025-06-08 {#dev}
+
+* Added quick QR code scan button to QR code tool
+* Added notification sound to QR code scan
+* Added "QR code (Scan region)" hotkey
+* Support showing thumbnails for video files in main window
+* Added custom icon for `.sxcu` and `.sxie` files
+
 ## [ShareX 17.1.0](https://github.com/ShareX/ShareX/releases/tag/v17.1.0) - 2025-05-26 {#v17.1.0}
 
 * Added "Metadata" tool to view file metadata and strip non-essential metadata from media files. <a class="badge" href="https://x.com/ShareX/status/1920392978343833909"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
