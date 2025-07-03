@@ -3,13 +3,28 @@ layout: markdown
 title: Changelog
 ---
 
-## [ShareX 17.1.1 Dev](https://getsharex.com/docs/dev-builds) - 2025-06-08 {#dev}
+## [ShareX 18.0.0 Dev](https://getsharex.com/docs/dev-builds) - 2025-07-02 {#dev}
 
-* Added quick QR code scan button to QR code tool
-* Added notification sound to QR code scan
-* Added "QR code (Scan region)" hotkey
-* Support showing thumbnails for video files in main window
-* Added custom icon for `.sxcu` and `.sxie` files
+* Upgraded the ShareX project from .NET Framework 4.8 to .NET 9.0.
+    * .NET 9.0 is self-contained, so it does not need to be installed separately. However, as a result, the ShareX setup size will be around 100 MB.
+    * Windows 7 is no longer supported, as .NET 9.0 officially supports only Windows 10 64-bit or higher.
+* Added quick QR code scan button to QR code tool.
+* Added notification sound to QR code scan.
+* Added "QR code (Scan region)" hotkey.
+* Support showing thumbnails for video files in main window.
+* Added play icon to video thumbnails.
+* Added custom icon for `.sxcu` and `.sxie` files.
+* Added "Scroll method" option to scrolling capture.
+* Added notification sound to copy actions.
+* Support file drag and drop in "Metadata" tool.
+* Added "Automatically hide desktop icons" option. <a class="badge" href="https://x.com/ShareX/status/1933237028709179609"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+* When showing main window if it is out of bounds then center the main window.
+* In main window moved "Destination settings" and "Custom uploader settings" buttons to parent menu.
+* About window design changes.
+* Added more links to about window.
+* Added "Delete file locally" toast click action.
+* Removed Twitter destination.
+* Removed Jira destination.
 
 ## [ShareX 17.1.0](https://github.com/ShareX/ShareX/releases/tag/v17.1.0) - 2025-05-26 {#v17.1.0}
 
