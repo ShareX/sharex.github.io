@@ -3,7 +3,7 @@ layout: markdown
 title: Changelog
 ---
 
-## [ShareX 18.0.0 Dev](https://getsharex.com/docs/dev-builds) - 2025-07-02 {#dev}
+## [ShareX 18.0.0 Dev](https://getsharex.com/docs/dev-builds) - 2025-07-24 {#dev}
 
 * Upgraded the ShareX project from .NET Framework 4.8 to .NET 9.0.
     * .NET 9.0 is self-contained, so it does not need to be installed separately. However, as a result, the ShareX setup size will be around 100 MB. <a class="badge" href="https://x.com/ShareX/status/1938432188464152825"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
