@@ -6,21 +6,21 @@ title: Changelog
 ## [ShareX 18.0.0 Dev](https://getsharex.com/docs/dev-builds) - 2025-07-02 {#dev}
 
 * Upgraded the ShareX project from .NET Framework 4.8 to .NET 9.0.
-    * .NET 9.0 is self-contained, so it does not need to be installed separately. However, as a result, the ShareX setup size will be around 100 MB.
+    * .NET 9.0 is self-contained, so it does not need to be installed separately. However, as a result, the ShareX setup size will be around 100 MB. <a class="badge" href="https://x.com/ShareX/status/1938432188464152825"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
     * Windows 7 is no longer supported, as .NET 9.0 officially supports only Windows 10 64-bit or higher.
 * History changes:
     * History & image history is now using [SQLite](https://en.wikipedia.org/wiki/SQLite) database instead of [JSON](https://en.wikipedia.org/wiki/JSON) text.
         * History.json will be automatically migrated to History.db on ShareX startup.
-    * Added "Favorite" button.
+    * Added "Favorite" button. <a class="badge" href="https://x.com/ShareX/status/1944475051455369299"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
     * Added "Edit tag" button.
-    * Added "Edit item" button.
+    * Added "Edit item" button. <a class="badge" href="https://x.com/ShareX/status/1942946957145563286"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
     * Added "Rename file" button.
     * Added "Delete item" button. (<kbd>Del</kbd>)
     * Added "Delete file & item" button. (<kbd>Shift</kbd> + <kbd>Del</kbd>)
     * Removed more info button.
     * Added "Only show image files" option to image history.
     * Added "Show stats" button to image history.
-    * Added icons to context menu.
+    * Added icons to context menu. <a class="badge" href="https://x.com/ShareX/status/1948417914949763484"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
 * Added quick QR code scan button to QR code tool.
 * Added notification sound to QR code scan.
 * Added "QR code (Scan region)" hotkey.
