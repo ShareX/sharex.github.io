@@ -3,29 +3,29 @@ layout: markdown
 title: Custom uploader
 ---
 
-## What is custom uploader?
+## What is a custom uploader?
 
-Custom uploader system in ShareX let users to upload image/text/file to hosting services or shorten/share URL. This feature is mainly used by users who host their own hosting services.
+The custom uploader system in ShareX lets users upload images, text, or files to hosting services or shorten/share URLs. This feature is mainly used by users who host their own hosting services.
 
 ## Export / Import
 
-You can export your custom uploader with `.sxcu` extension which allows users to just double click that file to be able to use custom uploader.
+You can export your custom uploader with a `.sxcu` extension, which allows users to just double-click that file to use the custom uploader.
 
-If destination type is configured then ShareX can also set this custom uploader as selected custom uploader and change current destination to this custom uploader, so users won't need any additional configuration to use it.
+If the destination type is configured, ShareX can also set this custom uploader as the selected custom uploader and change the current destination to this custom uploader, so users won't need any additional configuration to use it.
 
 ## Name
 
-In custom uploaders list this name will be used. Name field is optional. When it is left empty ShareX will use request URL domain as name automatically. It is suggested to leave name field empty unless you have multiple uploaders which using same domain.
+This name will be used in the custom uploaders list. The name field is optional. When it is left empty, ShareX will automatically use the request URL domain as the name. It is suggested to leave the name field empty unless you have multiple uploaders that use the same domain.
 
-For example if request URL is `https://example.com/upload.php` and name field is empty, then `example.com` name will be used in custom uploaders list.
+For example, if the request URL is `https://example.com/upload.php` and the name field is empty, then `example.com` will be used in the custom uploaders list.
 
 ## Destination type
 
-Destination type is used when users import custom uploader by double clicking the `.sxcu` file.
+The destination type is used when users import a custom uploader by double-clicking the `.sxcu` file.
 
 ## Method
 
-List of HTTP request methods available:
+List of available HTTP request methods:
 
 * GET
 * POST
@@ -33,38 +33,38 @@ List of HTTP request methods available:
 * PATCH
 * DELETE
 
-If request don't have body and only parameters gonna be used then `GET` method is preferred. If body is `Form data (multipart/form-data)` then `POST` method is preferred.
+If a request doesn't have a body and only parameters are going to be used, then the `GET` method is preferred. If the body is `Form data (multipart/form-form-data)`, then the `POST` method is preferred.
 
 ## Request URL
 
-Request will be send to this URL.
+The request will be sent to this URL.
 
 Example: `https://example.com/upload.php`
 
 ## URL parameters
 
-Parameters will be used to create URL [query string](https://en.wikipedia.org/wiki/Query_string).
+Parameters will be used to create a URL [query string](https://en.wikipedia.org/wiki/Query_string).
 
-For text uploader or URL shortener `{input}` syntax can be used as value to supply input text or URL.
+For a text uploader or URL shortener, the `{input}` syntax can be used as a value to supply input text or a URL.
 
-You can also use dynamic values like `%mo` to get current month etc.
+You can also use dynamic values like `%mo` to get the current month, etc.
 
-For example if you set parameters like this:
+For example, if you set parameters like this:
 
 | Name | Value |
 | --- | --- |
 | api_key | eUM14R4g4pMS |
 | private | true |
 
-Then query string will be appended to request URL like this when sending request:
+Then the query string will be appended to the request URL like this when sending a request:
 
 `https://example.com/upload.php?api_key=eUM14R4g4pMs&private=true`
 
 ## Headers
 
-Headers can be used to pass additional information with request. Most of the time APIs use headers for authorization.
+Headers can be used to pass additional information with a request. Most of the time, APIs use headers for authorization.
 
-Default request headers can be overridden too like these:
+Default request headers can be overridden too, like these:
 
 * Accept
 * Content-Length
@@ -96,17 +96,17 @@ Supported request body types:
 * XML (application/xml)
 * Binary
 
-Most of the time if API request method is `GET` then `No body` will be used with parameters. If request method is `POST` then `Form data (multipart/form-data)` body. But this is not always the case so you must check API documentation to make sure what request expects.
+Most of the time, if the API request method is `GET`, then `No body` will be used with parameters. If the request method is `POST`, then `Form data (multipart/form-data)` will be used for the body. But this is not always the case, so you must check the API documentation to make sure what the request expects.
 
 ## Body arguments
 
-For text uploader or URL shortener `{input}` syntax can be used as value to supply input text or URL.
+For a text uploader or URL shortener, the `{input}` syntax can be used as a value to supply input text or a URL.
 
 ## File form name
 
-This field can be only used when `Body` is `Form data (multipart/form-data)`.
+This field can only be used when `Body` is `Form data (multipart/form-data)`.
 
-For example in this HTML code: `<input type="file" name="file_image">` file form name is `file_image`.
+For example, in this HTML code: `<input type="file" name="file_image">`, the file form name is `file_image`.
 
 ## URL
 
@@ -115,13 +115,13 @@ For example in this HTML code: `<input type="file" name="file_image">` file form
 * Thumbnail URL
 * Error message
 
-These textboxes can be used to parse response to get URL result. If response only contains URL then no need to write anything to URL textbox.
+These text boxes can be used to parse the response to get the URL result. If the response only contains a URL, then there is no need to write anything in the URL text box.
 
-Make sure to also parse error message so ShareX can show user friendly error message to users.
+Make sure to also parse the error message so ShareX can show a user-friendly error message to users.
 
 ## Custom uploader syntax
 
-There is a special syntax you can use to accomplish some tasks, like parsing URL from JSON responses.
+There is a special syntax you can use to accomplish some tasks, like parsing a URL from JSON responses.
 
 This syntax is usable in the following sections, with a few exceptions:
 
@@ -134,19 +134,19 @@ This syntax is usable in the following sections, with a few exceptions:
 * Deletion URL
 * Error message
 
-For example syntaxes which involves parsing response only usable in URL sections as expected.
+For example, syntaxes that involve parsing a response are only usable in URL sections, as expected.
 
-**Note:** If you would like to use `{`, `}`, `|` or `\` characters in any of syntax supported sections then you can escape them with `\` character. For example: `\{`
+**Note:** If you would like to use `{`, `}`, `|`, or `\` characters in any of the syntax-supported sections, you can escape them with a `\` character. For example: `\{`
 
-You can find list of all available syntaxes with example usages at bottom.
+You can find a list of all available syntaxes with example usages at the bottom.
 
 ---
 
 ### response
 
-If response only contains file name (or id) and if you would like to append it to domain then you can use this syntax.
+If the response only contains a file name (or id) and you would like to append it to the domain, you can use this syntax.
 
-But if response just contains full URL then you don't have to use this syntax because empty URL textbox will use response automatically.
+But if the response just contains the full URL, then you don't have to use this syntax because an empty URL text box will use the response automatically.
 
 Syntax:
 
