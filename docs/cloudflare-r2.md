@@ -3,7 +3,7 @@ layout: markdown
 title: Cloudflare R2 guide
 ---
 
-## How to Configure Cloudflare R2 and Use It in ShareX
+## How to Configure Cloudflare R2 and use it in ShareX
 
 Create an account on [Cloudflare](https://cloudflare.com).
 
