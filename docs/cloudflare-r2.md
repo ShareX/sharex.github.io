@@ -3,49 +3,49 @@ layout: markdown
 title: Cloudflare R2 guide
 ---
 
-## How to configure Cloudflare R2 and use it in ShareX
+## How to Configure Cloudflare R2 and Use It in ShareX
 
-Make an account for [Cloudflare](https://cloudflare.com).
+Create an account on [Cloudflare](https://cloudflare.com).
 
-Ensure that your domain is [added](https://developers.cloudflare.com/fundamentals/get-started/setup/add-site/) onto Cloudflare and verified with NS (Name Server) records on your domain registrar. Your domain has to be hosted through Cloudflare otherwise this won't work at all, and you will be unable to use R2 / Cloudflare CDN to host your images.
+Ensure your domain is [added](https://developers.cloudflare.com/fundamentals/get-started/setup/add-site/) to Cloudflare and verified using NS (Name Server) records on your domain registrar. Your domain **must** be hosted through Cloudflare; otherwise, this will not work, and you won't be able to use R2 or the Cloudflare CDN to host your images.
 
-While R2 is not free, it does have a generous free tier. The full pricing is available to see [here](https://developers.cloudflare.com/r2/platform/pricing/).
+While R2 is not entirely free, it offers a generous free tier. You can view the full pricing details [here](https://developers.cloudflare.com/r2/platform/pricing/).
 
-### To create a bucket: 
+### Create a Bucket
 
 1. Open [R2](https://dash.cloudflare.com/?to=/:account/r2).
-2. Select `Create bucket`.
-3. Type in your bucket name of choice, and click `Create Bucket`.
-4. Select `Settings`.
-5. Scroll to `Domain Access` and select `Connect Domain`.
-6. Type in your domain and select `Continue`.
-7. Select `Connect domain`.
+2. Click `Create bucket`.
+3. Enter your desired bucket name and click `Create Bucket`.
+4. Go to the `Settings` tab.
+5. Scroll to the `Domain Access` section and click `Connect Domain`.
+6. Enter your domain name and click `Continue`.
+7. Click `Connect domain`.
 
-This will connect your domain to the R2 bucket, and will allow any objects inside of that bucket to be accessible by the selected domain.
+This will connect your domain to the R2 bucket, allowing any objects stored in it to be accessed through the specified domain.
 
-### To create an API token:
+### Create an API Token
 
-1.  Open [R2](https://dash.cloudflare.com/?to=/:account/r2).
-2.  Select `Manage R2 API Tokens` on the right top side of the dashboard.
-3.  Select `Create API token`.
-4.  Select the pencil icon or `R2 Token` text to edit your API token name.
-5.  Under `Permissions`, select `Read` or `Edit` for your token.
-6.  Select `Create API Token`.
-7.  Save a copy of your `Access Key ID` and `Secret access key` for the next step.
+1. Open [R2](https://dash.cloudflare.com/?to=/:account/r2).
+2. Click `Manage R2 API Tokens` in the top-right corner of the dashboard.
+3. Click `Create API token`.
+4. Click the pencil icon or `R2 Token` text to rename your API token.
+5. Under `Permissions`, select `Read` or `Edit`, depending on your needs.
+6. Click `Create API Token`.
+7. Save your `Access Key ID` and `Secret Access Key`. You will need them in the next step.
 
-### To configure uploading with ShareX: 
+### Configure Uploading with ShareX
 
-1. In `Destinations`, select `Destination Settings`.
-2. Scroll down to `Amazon S3` and select it.
-3. Using the `Access Key ID` & `Secret access key` fill in the two top boxes.
-4. Select "`Endpoint:`" and type `<ACCOUNT_ID>.r2.cloudflarestorage.com`. (you can find your account ID on the right hand side of your [Dashboard](https://dash.cloudflare.com/?to=/:account/r2))
-5. Set `Region:` to `auto`.
-6. Fill `Bucket name:` with the Bucket Name you picked on Cloudflare.
-7. Change `Upload path:` to your preference. 
-8. Update `Use custom domain:` to the domain that you selected in the first step.
-9. Untick "Set public-read ACL on file".
-10. Ignore the rest of the settings.
-11. In `Destinations`, select `Image uploader:` and change it to `File Uploader -> Amazon S3`.
-12. Take a screenshot, and ensure that it uploads correctly.
+1. In ShareX, go to `Destinations -> Destination Settings`.
+2. Scroll down and select `Amazon S3`.
+3. Enter your `Access Key ID` and `Secret Access Key` in the appropriate fields.
+4. In the `Endpoint:` field, enter `<ACCOUNT_ID>.r2.cloudflarestorage.com`. (You can find your account ID on the right-hand side of your [dashboard](https://dash.cloudflare.com/?to=/:account/r2).)
+5. Set the `Region:` field to `auto`.
+6. Enter your bucket name in the `Bucket name:` field.
+7. Set the `Upload path:` to your preferred structure (e.g., `%y/%mo`).
+8. In `Use custom domain:`, enter the domain you configured earlier (e.g., `https://cdn.example.com`).
+9. Uncheck `Set public-read ACL on file`.
+10. Leave the other settings as-is.
+11. Go to `Destinations -> Image uploader:` and set it to `File Uploader -> Amazon S3`.
+12. Take a screenshot and verify that the upload works correctly.
 
-Now you are ready to use [Cloudflare R2](https://www.cloudflare.com/products/r2) in ShareX!
+Now you're ready to use [Cloudflare R2](https://www.cloudflare.com/products/r2) with ShareX!
