@@ -113,5 +113,5 @@ So the target should be `{bucketname}.{endpoint}`
 
 ---
 
-You're now ready to use [Amazon S3](https://aws.amazon.com/s3/) with ShareX!
+Now you're ready to use [Amazon S3](https://aws.amazon.com/s3/) with ShareX!
 
