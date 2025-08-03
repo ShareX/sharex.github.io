@@ -164,7 +164,7 @@ https://example.com/{response}
 
 ### responseurl
 
-Can be used to get redirection URL. If no redirection happened then it will be just request URL.
+Can be used to get a redirection URL. If no redirection happens, then it will be just the request URL.
 
 Syntax:
 
@@ -182,7 +182,7 @@ Example URL:
 
 ### header
 
-Can be used to get specific response header value.
+Can be used to get a specific response header value.
 
 Syntax:
 
@@ -200,7 +200,7 @@ Example URL:
 
 ### json
 
-You can use [JsonPath](https://goessner.net/articles/JsonPath/) to parse URL from [JSON](https://en.wikipedia.org/wiki/JSON) response.
+You can use [JsonPath](https://goessner.net/articles/JsonPath/) to parse a URL from a [JSON](https://en.wikipedia.org/wiki/JSON) response.
 
 Syntax:
 
@@ -246,7 +246,7 @@ Example 2:
 
 ### xml
 
-You can use [XPath](https://www.w3schools.com/xml/xpath_syntax.asp) to parse URL from [XML](https://en.wikipedia.org/wiki/XML) response.
+You can use [XPath](https://www.w3schools.com/xml/xpath_syntax.asp) to parse URL from an [XML](https://en.wikipedia.org/wiki/XML) response.
 
 Syntax:
 
@@ -275,9 +275,9 @@ Example:
 
 ### regex
 
-If response is not [JSON](https://en.wikipedia.org/wiki/JSON) or [XML](https://en.wikipedia.org/wiki/XML) then you can use [Regular expression (Regex)](https://en.wikipedia.org/wiki/Regular_expression) to parse response text.
+If the response is not [JSON](https://en.wikipedia.org/wiki/JSON) or [XML](https://en.wikipedia.org/wiki/XML), then you can use [Regular expression (Regex)](https://en.wikipedia.org/wiki/Regular_expression) to parse the response text.
 
-While writing regex pattern don't forget to escape `{`, `}`, `|`, `\` characters with `\`.
+While writing a regex pattern, don't forget to escape `{`, `}`, `|`, `\` characters with `\`.
 
 Syntax:
 
@@ -311,7 +311,7 @@ Example with group name:
 
 ### input
 
-If you are using text custom uploader then this syntax will be replaced with text which you gonna upload, if it is URL shortener or URL sharing service then syntax will be replaced with URL. This syntax mainly used as argument value.
+If you are using a text custom uploader, then this syntax will be replaced with the text you are going to upload. If it is a URL shortener or URL sharing service, then the syntax will be replaced with the URL. This syntax is mainly used as an argument value.
 
 Syntax:
 
@@ -329,7 +329,7 @@ Example argument:
 
 ### filename
 
-This syntax will be replaced with file name. Most of the time you don't need to use this syntax because when doing multipart/form-data file upload, file name already included in request.
+This syntax will be replaced with the file name. Most of the time, you don't need to use this syntax because when doing a multipart/form-data file upload, the file name is already included in the request.
 
 Syntax:
 
@@ -347,7 +347,7 @@ Example argument:
 
 ### random
 
-If you would like to use random domain each upload you can use this syntax.
+If you would like to use a random domain for each upload, you can use this syntax.
 
 Syntax:
 
@@ -365,7 +365,7 @@ https://{random:subdomain1|subdomain2}.{random:domain1|domain2|domain3}.com/{jso
 
 ### select
 
-This will show window with all values as buttons. So you can select dynamically which text input to use. This syntax can be useful if you have multiple domains and would like to select specific domain each upload.
+This will show a window with all values as buttons. So you can dynamically select which text input to use. This syntax can be useful if you have multiple domains and would like to select a specific domain for each upload.
 
 Syntax:
 
@@ -383,9 +383,9 @@ https://{select:domain1.com|domain2.com|domain3.com}/{json:files[0].url}
 
 ### inputbox
 
-This will show input box for user to input text. This syntax can be used if user prefer to write different value for argument or URL part each upload.
+This will show an input box for the user to input text. This syntax can be used if a user prefers to write a different value for an argument or URL part for each upload.
 
-First parameter is window title, second parameter is default text for input box. Both parameters are optional.
+The first parameter is the window title, and the second parameter is the default text for the input box. Both parameters are optional.
 
 Syntax:
 
@@ -442,7 +442,7 @@ Example header:
 
 ShareX custom uploader (SXCU) files are JSON files at their core.
 
-Example JSON schema looks like this:
+An example JSON schema looks like this:
 
 ```json
 {
