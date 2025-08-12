@@ -22,7 +22,7 @@ title: Changelog
     * Added "Only show image files" option to image history.
     * Added "Show stats" button to image history.
     * Added icons to context menu. <a class="badge" href="https://x.com/ShareX/status/1948417914949763484"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
-* Added quick QR code scan button to QR code tool.
+* Added quick QR code scan button to QR code tool. <a class="badge" href="https://x.com/ShareX/status/1927066634470011177"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
 * Added notification sound to QR code scan.
 * Added "QR code (Scan region)" hotkey.
 * Support showing thumbnails for video files in main window.
