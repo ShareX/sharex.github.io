@@ -3,7 +3,7 @@ layout: markdown
 title: Changelog
 ---
 
-## [ShareX 18.0.0 Dev](https://getsharex.com/docs/dev-builds) - 2025-07-24 {#dev}
+## [ShareX 18.0.0](https://github.com/ShareX/ShareX/releases/tag/v18.0.0) - 2025-08-12 {#v18.0.0}
 
 * Upgraded the ShareX project from .NET Framework 4.8 to .NET 9.0.
     * .NET 9.0 is self-contained, so it does not need to be installed separately. However, as a result, the ShareX setup size will be around 100 MB. <a class="badge" href="https://x.com/ShareX/status/1938432188464152825"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
@@ -11,6 +11,7 @@ title: Changelog
 * History changes:
     * History & image history is now using [SQLite](https://en.wikipedia.org/wiki/SQLite) database instead of [JSON](https://en.wikipedia.org/wiki/JSON) text.
         * History.json will be automatically migrated to History.db on ShareX startup.
+    * Added "Import folder" support, allowing you to select a folder and import all image files into ShareX history. <a class="badge" href="https://x.com/ShareX/status/1954367725108609092"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
     * Added "Favorite" button. <a class="badge" href="https://x.com/ShareX/status/1944475051455369299"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
     * Added "Edit tag" button.
     * Added "Edit item" button. <a class="badge" href="https://x.com/ShareX/status/1942946957145563286"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
