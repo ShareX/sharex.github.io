@@ -3,6 +3,10 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 18.0.1](https://github.com/ShareX/ShareX/releases/tag/v18.0.1) - 2025-08-19 {#v18.0.1}
+
+* Bug fixes
+
 ## [ShareX 18.0.0](https://github.com/ShareX/ShareX/releases/tag/v18.0.0) - 2025-08-12 {#v18.0.0}
 
 * Upgraded the ShareX project from .NET Framework 4.8 to .NET 9.0.
