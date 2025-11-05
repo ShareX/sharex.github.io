@@ -18,15 +18,15 @@ title: Keybinds
 | <kbd>Ctrl</kbd> + <kbd>Z</kbd> | Undo |
 | <kbd>Ctrl</kbd> + <kbd>Y</kbd> | Redo |
 | <kbd>Arrow keys</kbd> | Move cursor / Move current shape |
-| <kbd>Ctrl</kbd> + <kbd>Arrow keys</kbd> | Resize current shape from bottom right corner |
-| <kbd>Alt</kbd> + <kbd>Arrow keys</kbd> | Resize current shape from top left corner |
+| <kbd>Ctrl</kbd> + <kbd>Arrow keys</kbd> | Resize current shape from bottom-right corner |
+| <kbd>Alt</kbd> + <kbd>Arrow keys</kbd> | Resize current shape from top-left corner |
 | <kbd>Shift</kbd> + <kbd>Arrow keys</kbd> | Resize or move faster |
-| <kbd>Home</kbd> | Move current shape top |
-| <kbd>End</kbd> | Move current shape bottom |
+| <kbd>Home</kbd> | Move current shape to top |
+| <kbd>End</kbd> | Move current shape to bottom |
 | <kbd>Page up</kbd> | Move current shape up |
 | <kbd>Page down</kbd> | Move current shape down |
 | <kbd>Mouse wheel</kbd> | Change magnifier size |
-| <kbd>Hold Ctrl</kbd> | Disables shape selection to allow drawing shape top of another shape |
+| <kbd>Hold Ctrl</kbd> | Disable shape selection to allow drawing on top of another shape |
 
 ##### While creating region
 
@@ -38,7 +38,7 @@ title: Keybinds
 | <kbd>Hold Shift</kbd> | Proportional resizing |
 | <kbd>Hold Alt</kbd> | Snap selection to preset sizes |
 
-##### When cursor top of shape
+##### When cursor is on top of a shape
 
 | Keybind | Description |
 | --- | --- |
@@ -55,7 +55,7 @@ title: Keybinds
 | <kbd>Space</kbd> | Fullscreen capture |
 | <kbd>1</kbd> / <kbd>2</kbd> / <kbd>3</kbd> ... <kbd>0</kbd> | Specific monitor capture |
 | <kbd>~</kbd> | Active monitor capture |
-| <kbd>Double left click</kbd> / <kbd>Enter</kbd> | If multi region mode is enabled then capture regions |
+| <kbd>Double left click</kbd> / <kbd>Enter</kbd> | If multi-region mode is enabled, then capture regions |
 
 ### Image editor only
 
@@ -68,7 +68,7 @@ title: Keybinds
 | <kbd>Ctrl</kbd> + <kbd>0</kbd> | Reset zoom |
 | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>0</kbd> | Zoom to fit |
 | <kbd>Enter</kbd> | Close image editor and continue task with changes applied |
-| <kbd>Right click</kbd> / <kbd>Space</kbd> | Close image editor and continue task without apply changes |
+| <kbd>Right click</kbd> / <kbd>Space</kbd> | Close image editor and continue task without applying changes |
 | <kbd>Esc</kbd> | Close image editor and cancel task |
 | <kbd>Ctrl</kbd> + <kbd>S</kbd> | Save image |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> | Save image as... |
