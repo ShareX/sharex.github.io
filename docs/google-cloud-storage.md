@@ -16,7 +16,7 @@ title: Google Cloud Storage guide
 
 [Google Cloud Storage Pricing](https://cloud.google.com/storage/pricing)
 
-Google Cloud Storage isn't free; it's billed based on usage, not a static monthly fee. Storage is very cheap—most users' bills will be free or 1–2 cents a month.
+Google Cloud Storage isn't free; it's billed based on usage, not a static monthly fee. Storage is very cheap - most users' bills will be free or 1-2 cents a month.
 
 * Open [billing](https://console.cloud.google.com/billing) and set up a profile
 
