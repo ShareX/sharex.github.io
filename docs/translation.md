@@ -8,7 +8,7 @@ title: Translation
 * Fluency in English
 * Good understanding of ShareX settings so that, during translation, you know exactly what you are translating
 * How to use GitHub so you can pull/push translations
-* Patience — translation can take a long time and can be boring
+* Patience - translation can take a long time and can be boring
 * Please refrain from using machine translation, e.g., Google Translate
 
 ## How to start translating?
