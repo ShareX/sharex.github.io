@@ -3,7 +3,7 @@ layout: markdown
 title: Changelog
 ---
 
-## [ShareX 19.0.0](https://github.com/ShareX/ShareX/releases/tag/v19.0.0) - 2026-01-20 {#v19.0.0}
+## [ShareX 19.0.1](https://github.com/ShareX/ShareX/releases/tag/v19.0.1) - 2026-01-20 {#v19.0.1}
 
 * Automatic upload is now disabled by default for new installations.
 * Added "Analyze image" AI tool.
