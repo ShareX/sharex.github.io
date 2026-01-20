@@ -3,9 +3,33 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 19.0.0](https://github.com/ShareX/ShareX/releases/tag/v19.0.0) - 2026-01-20 {#v19.0.0}
+
+* Automatic upload is now disabled by default for new installations.
+* Added "Analyze image" AI tool.
+    * AI providers:
+        * OpenAI ChatGPT
+        * Google Gemini <a class="badge" href="https://github.com/f1sherb0y"><i class="fa-brands fa-github"></i>f1sherb0y</a>
+        * OpenRouter <a class="badge" href="https://github.com/f1sherb0y"><i class="fa-brands fa-github"></i>f1sherb0y</a>
+        * Custom <a class="badge" href="https://github.com/f1sherb0y"><i class="fa-brands fa-github"></i>f1sherb0y</a>
+* Update [FFmpeg](https://ffmpeg.org) to version [8.0](https://github.com/ShareX/FFmpeg/releases/tag/v8.0).
+* Added "Spotlight" tool to region capture/image editor.
+* Added cross at center of regions in region capture.
+* Region capture (Light & Transparent) improvements to make region selection smoother.
+* Added "Automatically load more images" setting to Image history.
+* Added "Thumbnail height" setting to Image history.
+* Added "Stop auto capture" hotkey. <a class="badge" href="https://github.com/BallisticLingonberries"><i class="fa-brands fa-github"></i>BallisticLingonberries</a>
+* When exporting settings include computer name on file name.
+* Support rotating and flipping stickers in region capture/image editor via <kbd>Ctrl</kbd> + <kbd>Arrow keys</kbd> hotkey. <a class="badge" href="https://github.com/Ruandv"><i class="fa-brands fa-github"></i>Ruandv</a>
+* Added `UseMachineSpecificUploadersConfig` option to "Application settings -> Advanced tab".
+* Added "Skip files" option to "Directory indexer" tool.
+* Added "Scale step" option to "Pin to screen" tool. <a class="badge" href="https://github.com/michalkr52"><i class="fa-brands fa-github"></i>michalkr52</a>
+* Use [mpdecimate filter](https://trembit.com/blog/ffmpeg-mpdecimate-filter-for-dummies/) while doing recording screen as GIF. <a class="badge" href="https://github.com/cookieguru"><i class="fa-brands fa-github"></i>cookieguru</a>
+* Use `Microsoft.Data.Sqlite` library instead of `System.Data.SQLite` library. <a class="badge" href="https://github.com/BrycensRanch"><i class="fa-brands fa-github"></i>BrycensRanch</a>
+
 ## [ShareX 18.0.1](https://github.com/ShareX/ShareX/releases/tag/v18.0.1) - 2025-08-19 {#v18.0.1}
 
-* Bug fixes
+* Bug fixes.
 
 ## [ShareX 18.0.0](https://github.com/ShareX/ShareX/releases/tag/v18.0.0) - 2025-08-12 {#v18.0.0}
 
