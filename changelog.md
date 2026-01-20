@@ -13,7 +13,7 @@ title: Changelog
         * OpenRouter <a class="badge" href="https://github.com/f1sherb0y"><i class="fa-brands fa-github"></i>f1sherb0y</a>
         * Custom <a class="badge" href="https://github.com/f1sherb0y"><i class="fa-brands fa-github"></i>f1sherb0y</a>
 * Update [FFmpeg](https://ffmpeg.org) to version [8.0](https://github.com/ShareX/FFmpeg/releases/tag/v8.0).
-* Added "Spotlight" tool to region capture/image editor.
+* Added "Spotlight" tool to region capture/image editor. <a class="badge" href="https://x.com/ShareX/status/1972233757844525370"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
 * Added cross at center of regions in region capture.
 * Region capture (Light & Transparent) improvements to make region selection smoother.
 * Added "Automatically load more images" setting to Image history.
