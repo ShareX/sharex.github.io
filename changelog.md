@@ -3,6 +3,7 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 19.0.2](https://github.com/ShareX/ShareX/releases/tag/v19.0.2) - 2026-01-28 {#v19.0.2}
 ## [ShareX 19.0.1](https://github.com/ShareX/ShareX/releases/tag/v19.0.1) - 2026-01-20 {#v19.0.1}
 
 * Automatic upload is now disabled by default for new installations.
@@ -24,7 +25,6 @@ title: Changelog
 * Added `UseMachineSpecificUploadersConfig` option to "Application settings -> Advanced tab".
 * Added "Skip files" option to "Directory indexer" tool.
 * Added "Scale step" option to "Pin to screen" tool. <a class="badge" href="https://github.com/michalkr52"><i class="fa-brands fa-github"></i>michalkr52</a>
-* Use [mpdecimate filter](https://trembit.com/blog/ffmpeg-mpdecimate-filter-for-dummies/) while doing recording screen as GIF. <a class="badge" href="https://github.com/cookieguru"><i class="fa-brands fa-github"></i>cookieguru</a>
 * Use `Microsoft.Data.Sqlite` library instead of `System.Data.SQLite` library. <a class="badge" href="https://github.com/BrycensRanch"><i class="fa-brands fa-github"></i>BrycensRanch</a>
 
 ## [ShareX 18.0.1](https://github.com/ShareX/ShareX/releases/tag/v18.0.1) - 2025-08-19 {#v18.0.1}
