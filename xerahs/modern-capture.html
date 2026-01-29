@@ -6,35 +6,36 @@ title: Modern Screen Capture Technology
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
-            <h1>Modern Screen Capture</h1>
-            <p class="lead">XerahS leverages the latest operating system APIs to provide high-performance, low-latency screen recording.</p>
-            
-            <h2 class="mt-4">Windows.Graphics.Capture API</h2>
-            <p>
-                By default, XerahS utilizes the <strong>Windows.Graphics.Capture</strong> API (available in Windows 10 version 1803 and later). 
-                This modern API allows for:
-            </p>
-            <ul>
-                <li><strong>Hardware Acceleration:</strong> Direct GPU access for capturing screen contents with minimal CPU overhead.</li>
-                <li><strong>Window Exclusion:</strong> The ability to exclude the recorder's own windows or overlays from the final capture.</li>
-                <li><strong>Cursor Capture:</strong> High-fidelity hardware cursor compositing.</li>
-                <li><strong>High Frame Rates:</strong> Smooth 60 FPS+ recording capabilities for gaming and high-motion content.</li>
-            </ul>
-
-            <h2 class="mt-4">Robust Fallback: FFmpeg</h2>
-            <p>
-                We understand that not every environment supports the latest APIs. For maximum compatibility, XerahS includes a robust 
-                fallback mechanism powered by <strong>FFmpeg</strong>.
-            </p>
-            <p>
-                If the modern capture APIs are unavailable (e.g., on older Windows versions) or if a specific recording configuration requires it, 
-                XerahS automatically switches to using FFmpeg directly. This ensures that you can always capture your screen, regardless of your hardware 
-                or OS version.
-            </p>
+            <h1>Modern Screen Capture Architecture</h1>
+            <p class="lead">XerahS leverages native, high-performance APIs across all supported platforms to provide low-latency, hardware-accelerated screen recording.</p>
 
             <div class="alert alert-info mt-4" role="alert">
-                <strong>Did you know?</strong> This dual-engine approach allows XerahS to be lightweight and modern while maintaining the battle-tested reliability of ShareX's traditional capture methods.
+                <strong>Modern Architecture:</strong> XerahS prioritizes modern OS APIs (like DXGI on Windows or ScreenCaptureKit on macOS) but maintains a robust fallback chain to legacy methods (like GDI+ or CLI tools) to ensure maximum compatibility.
             </div>
+
+            <h2 class="mt-5"><i class="fab fa-windows"></i> Windows</h2>
+            <p>On Windows 10 (1803+) and Windows 11, XerahS utilizes the <strong>Windows.Graphics.Capture (WGC)</strong> and <strong>DXGI Desktop Duplication</strong> APIs.</p>
+            <ul>
+                <li><strong>Technology:</strong> Direct3D11 & WinRT Integration.</li>
+                <li><strong>Benefits:</strong> Zero-copy GPU capture, exclusive fullscreen game support, and hardware cursor compositing.</li>
+                <li><strong>Fallback:</strong> Automatically switches to <strong>GDI+ (Windows Forms)</strong> on older versions (Windows 7/8) or if hardware acceleration is unavailable.</li>
+            </ul>
+
+            <h2 class="mt-4"><i class="fab fa-apple"></i> macOS</h2>
+            <p>For macOS 12.3 (Monterey) and newer, XerahS integrates with the native <strong>ScreenCaptureKit</strong> framework.</p>
+            <ul>
+                <li><strong>Technology:</strong> Native Objective-C bridge to ScreenCaptureKit.</li>
+                <li><strong>Benefits:</strong> High-performance capture with minimal CPU usage, fully adhering to macOS privacy and security standards.</li>
+                <li><strong>Fallback:</strong> Uses the <strong>screencapture CLI</strong> tool on older macOS versions or if permissions are restricted.</li>
+            </ul>
+
+            <h2 class="mt-4"><i class="fab fa-linux"></i> Linux</h2>
+            <p>XerahS supports the diverse Linux ecosystem, including modern Wayland compositors.</p>
+            <ul>
+                <li><strong>Technology:</strong> DBus communication with <strong>XDG Desktop Portals</strong> (ScreenCast/Screenshot) and native tools (Spectacle, Gnome Screenshot).</li>
+                <li><strong>Benefits:</strong> Native support for Wayland sessions (GNOME, KDE Plasma) without relying on XWayland.</li>
+                <li><strong>Fallback:</strong> Defaults to <strong>X11 XGetImage</strong> for legacy X Server sessions ensuring broad compatibility.</li>
+            </ul>
             
             <div class="mt-5">
                 <a class="btn btn-primary" href="/xerahs/">Back to Home</a>
