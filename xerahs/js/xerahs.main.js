@@ -21,7 +21,7 @@ function UpdateXerahsDownloadButton(release, assetExtension, element) {
     let asset = release.assets.find(asset => asset.name.endsWith(assetExtension));
     if (asset) {
         let releaseInfo = "Version: " + release.tag_name +
-            "\nFile size: " + (asset.size / 1024 / 1024).toFixed(2) + " MB" +
+            "\nFile size: " + (asset.size / 1024 / 1024).toFixed(2) + " MiB" +
             "\nRelease date: " + new Date(asset.updated_at).toLocaleDateString("en-CA") +
             "\nDownload count: " + asset.download_count.toLocaleString();
 
