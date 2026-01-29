@@ -4,11 +4,15 @@ title: Changelog
 ---
 
 ## [ShareX 19.0.2](https://github.com/ShareX/ShareX/releases/tag/v19.0.2) - 2026-01-28 {#v19.0.2}
+
+* Bug fixes.
+
 ## [ShareX 19.0.1](https://github.com/ShareX/ShareX/releases/tag/v19.0.1) - 2026-01-20 {#v19.0.1}
 
 * Automatic upload is now disabled by default for new installations.
-* Added "Analyze image" AI tool.
-    * AI providers:
+* Added "Analyze image" tool (opt-in, disabled by default).
+    * Users must provide their own API keys to use this feature.
+    * Supported providers:
         * OpenAI ChatGPT
         * Google Gemini <a class="badge" href="https://github.com/f1sherb0y"><i class="fa-brands fa-github"></i>f1sherb0y</a>
         * OpenRouter <a class="badge" href="https://github.com/f1sherb0y"><i class="fa-brands fa-github"></i>f1sherb0y</a>
