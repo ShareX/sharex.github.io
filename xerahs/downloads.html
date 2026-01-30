@@ -12,22 +12,36 @@ title: Downloads
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-            <h2>Latest Release</h2>
-            <p>Download the latest version of XerahS from GitHub.</p>
-            <div class="mt-4">
-                <a class="btn xerahs-download btn-lg" role="button" href="https://github.com/ShareX/XerahS/releases/latest">
-                    Download XerahS<i class="fa-solid fa-download"></i>
-                </a>
+<div class="container-downloads">
+    <div class="container">
+        <div class="downloads-repo-container input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Repo</span>
             </div>
-            <div class="mt-3">
-                <a href="https://github.com/ShareX/XerahS/releases">View all releases and changelogs on GitHub</a>
+            <div class="feedback-icon">
+                <i class="fa-solid fa-gear fa-spin"></i>
             </div>
+            <input id="downloads-repo" type="text" class="form-control" />
         </div>
+        <div class="total-downloads">
+            <div class="total-downloads-label">Total downloads</div>
+            <span class="downloads-badge"><i class="fa-solid fa-arrow-down"></i><span class="total-downloads-value"></span></span>
+        </div>
+        <table class="table table-downloads">
+            <thead>
+                <tr>
+                    <th class="downloads-release-name">Release name</th>
+                    <th>Release date</th>
+                    <th>Active days</th>
+                    <th>Download count</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </div>
 </div>
 
 {% include common-js.html %}
-<script src="/xerahs/js/xerahs.main.js"></script>
+<script src="/js/sharex.common.js"></script>
+<script src="/xerahs/js/xerahs.downloads.js"></script>
