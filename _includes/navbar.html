@@ -9,9 +9,15 @@
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav nav-main mr-auto">
                 <li class="nav-item{% unless page.title %} active{% endunless %}"><a class="nav-link" href="/">Home</a></li>
-                <li class="nav-item{% if page.title == 'Downloads' %} active{% endif %}"><a class="nav-link" href="/downloads">Downloads</a></li>
-                <li class="nav-item{% if page.title == 'Changelog' %} active{% endif %}"><a class="nav-link" href="/changelog">Changelog</a></li>
-                <li class="nav-item{% if page.title == 'Screenshots' %} active{% endif %}"><a class="nav-link" href="/screenshots">Screenshots</a></li>
+                <li class="nav-item{% if page.title == 'Downloads' %} active{% endif %}">
+                    <a class="nav-link" href="{% if page.url contains '/xerahs/' %}/xerahs/downloads{% else %}/downloads{% endif %}">Downloads</a>
+                </li>
+                <li class="nav-item{% if page.title == 'Changelog' %} active{% endif %}">
+                    <a class="nav-link" href="{% if page.url contains '/xerahs/' %}https://github.com/ShareX/XerahS/releases{% else %}/changelog{% endif %}">Changelog</a>
+                </li>
+                <li class="nav-item{% if page.title == 'Screenshots' %} active{% endif %}">
+                    <a class="nav-link" href="{% if page.url contains '/xerahs/' %}/xerahs/screenshots{% else %}/screenshots{% endif %}">Screenshots</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Other</a>
                     <div class="dropdown-menu">
