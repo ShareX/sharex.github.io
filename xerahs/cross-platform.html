@@ -1,0 +1,66 @@
+---
+layout: default
+title: Cross-Platform Architecture
+---
+
+<div class="jumbotron jumbotron-compact">
+    <div class="container">
+        <h1>
+            <a href="/xerahs/">XerahS</a>
+        </h1>
+        <p>Cross-Platform Architecture</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Platform Abstraction Layer</h1>
+            <p class="lead">XerahS is built on a strict "Core / Platform" separation model, ensuring that the business logic remains purely cross-platform while leveraging native capabilities on each OS.</p>
+            
+            <h2 class="mt-4">Architecture Overview</h2>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <h3><i class="fas fa-layer-group"></i> Core (Platform Agnostic)</h3>
+                    <p>The <code>XerahS.Core</code> and <code>XerahS.Common</code> libraries contain 100% of the application logic but have zero dependencies on Windows Forms, WPF, or any OS-specific APIs. They communicate with the OS exclusively through abstract interfaces defined in <code>XerahS.Platform.Abstractions</code>.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3><i class="fas fa-desktop"></i> Platform Implementations</h3>
+                    <p>Specific projects (<code>XerahS.Platform.Windows</code>, <code>.Linux</code>, <code>.MacOS</code>) implement these interfaces using native APIs (Win32/WinRT, X11/Wayland/DBus, Cocoa/ScreenCaptureKit) and are injected at runtime.</p>
+                </div>
+            </div>
+
+            <h2 class="mt-5">Supported Platforms</h2>
+            
+            <h3 class="mt-4"><i class="fab fa-windows"></i> Windows</h3>
+            <p>On Windows, XerahS utilizes a hybrid of modern <strong>WinRT</strong> APIs (for high-performance capture) and traditional <strong>Win32</strong> (for low-level window management). It fully supports Windows 10 and 11, including dark mode integration and toast notifications.</p>
+
+            <h3 class="mt-4"><i class="fab fa-linux"></i> Linux</h3>
+            <p>The Linux implementation favors modern standards while maintaining broad compatibility:</p>
+            <ul>
+                <li><strong>Wayland Support:</strong> Uses XDG Desktop Portals and DBus for screen capture and global shortcuts, ensuring compatibility with GNOME and KDE Plasma.</li>
+                <li><strong>X11 Fallback:</strong> Retains support for legacy X11 environments using XLib and XExtensions.</li>
+                <li><strong>AppImage:</strong> Distributed as a single AppImage for easy deployment across distros.</li>
+            </ul>
+
+            <h3 class="mt-4"><i class="fab fa-apple"></i> macOS</h3>
+            <p>XerahS wraps native macOS frameworks to provide a seamless experience:</p>
+            <ul>
+                <li><strong>ScreenCaptureKit:</strong> High-performance, low-overhead screen recording on macOS Monterey and newer.</li>
+                <li><strong>Cocoa Interop:</strong> Native window management and menu bar integration.</li>
+                <li><strong>Universal Binary:</strong> Optimization for both Apple Silicon and Intel Macs.</li>
+            </ul>
+
+            <div class="alert alert-info mt-4" role="alert">
+                <strong>Avalonia UI:</strong> The user interface is built with Avalonia UI, providing a pixel-perfect, hardware-accelerated experience that looks consistent across all operating systems.
+            </div>
+
+            <div class="mt-5">
+                <a class="btn btn-primary" href="/xerahs/">Back to Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include common-js.html %}
+<script src="/xerahs/js/xerahs.main.js"></script>
