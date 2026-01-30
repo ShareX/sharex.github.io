@@ -31,14 +31,14 @@ Based on the XerahS source code, please capture the following views to showcase 
 - `placeholder.png`: Default placeholder.
 - `xerahs/`:
     - `main-window.png`
+    - `destinations.png`
     - `settings-general.png`
     - `workflows-list.png`
     - `workflow-editor.png`
-    - `region-capture.png`
-    - `destinations.png`
+    - `color-picker.png`
 - `editor/`:
     - `editor-main.png`
-    - `editor-tools.png`
+    - `editor-effects.png`
 
 ## Usage
 
