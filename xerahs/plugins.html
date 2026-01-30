@@ -1,0 +1,62 @@
+---
+layout: default
+title: Plugin Architecture
+---
+
+<div class="jumbotron jumbotron-compact">
+    <div class="container">
+        <h1>
+            <a href="/xerahs/">XerahS</a>
+        </h1>
+        <p>Plugin Architecture</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Plugin-Based Architecture</h1>
+            <p class="lead">XerahS features a modular, plugin-based architecture for upload destinations, enabling the community to easily extend functionality without modifying the core codebase.</p>
+            
+            <h2 class="mt-4">Overview</h2>
+            <p>Unlike ShareX, where all uploaders are compiled into the main application, XerahS isolates destinations into standalone plugins. This ensures:</p>
+            <ul>
+                <li><strong>Modularity:</strong> Users only install what they need, keeping the base application lightweight.</li>
+                <li><strong>Stability:</strong> Issues in a single plugin (like Imgur or S3) do not crash the main application.</li>
+                <li><strong>Updates:</strong> Plugins can be updated independently of the main XerahS version.</li>
+            </ul>
+
+            <h2 class="mt-4">The .sxadp Package System</h2>
+            <p>Plugins are distributed as <code>.sxadp</code> (ShareX Avalonia Plugin) files. These are essentially ZIP archives containing:</p>
+            <ul>
+                <li><strong>Assembly DLL:</strong> The compiled C# code implementing the <code>IUploader</code> interface.</li>
+                <li><strong>Manifest (plugin.json):</strong> Defining metadata like Name, Version, Author, and unique Plugin ID.</li>
+                <li><strong>Resources:</strong> Any icons or assets required by the plugin.</li>
+            </ul>
+
+            <h3 class="mt-3">Installation</h3>
+            <p>Installing a plugin is simple:</p>
+            <ol>
+                <li>Download the <code>.sxadp</code> file.</li>
+                <li>Navigate to <strong>Application Settings -> Uploaders</strong>.</li>
+                <li>Click <strong>Install Plugin...</strong> and select the file.</li>
+            </ol>
+            <p>The system validates the manifest and API version compatibility before installing it to the `Plugins/` directory.</p>
+
+            <h2 class="mt-4">Development</h2>
+            <p>Developers can create their own plugins by referencing the <code>XerahS.Core</code> library and implementing the <code>IUploader</code> interface. The API provides:</p>
+            <ul>
+                <li><strong>Authentication Helpers:</strong> OAuth2 and API key management.</li>
+                <li><strong>Result Handling:</strong> Simplified methods to return URLs, direct links, or error messages.</li>
+                <li><strong>UI Integration:</strong> Automatically generated settings UI based on property attributes.</li>
+            </ul>
+
+            <div class="mt-5">
+                <a class="btn btn-primary" href="/xerahs/">Back to Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include common-js.html %}
+<script src="/xerahs/js/xerahs.main.js"></script>
