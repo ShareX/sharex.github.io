@@ -1,0 +1,40 @@
+---
+layout: default
+title: Changelog
+---
+
+<div class="jumbotron jumbotron-compact">
+    <div class="container">
+        <h1>
+            <a href="/xerahs/">XerahS</a>
+        </h1>
+        <p>Changelog</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="changelog-content">
+                <p class="text-center"><i class="fas fa-spinner fa-spin fa-3x"></i><br>Loading changelog...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include common-js.html %}
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+    $(document).ready(function() {
+        const changelogUrl = "https://raw.githubusercontent.com/ShareX/XerahS/refs/heads/develop/docs/CHANGELOG.md";
+        
+        $.get(changelogUrl)
+            .done(function(data) {
+                const htmlContent = marked.parse(data);
+                $("#changelog-content").html(htmlContent);
+            })
+            .fail(function() {
+                $("#changelog-content").html('<div class="alert alert-danger">Failed to load changelog from GitHub. <a href="https://github.com/ShareX/XerahS/blob/develop/docs/CHANGELOG.md" target="_blank">View on GitHub</a></div>');
+            });
+    });
+</script>
