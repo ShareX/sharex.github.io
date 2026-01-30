@@ -8,17 +8,23 @@ $(document).ready(function() {
 
 function GetLatestXerahsReleaseInfo() {
     $.getJSON("https://api.github.com/repos/ShareX/XerahS/releases/latest").done(function(release) {
-        UpdateXerahsDownloadButton(release, ".exe", $(".xerahs-download"));
+        UpdateXerahsDownloadButton(release, asset => asset.name.toLowerCase().includes("win-x64") && asset.name.endsWith(".exe"), $(".xerahs-download-win-x64"));
+        UpdateXerahsDownloadButton(release, asset => asset.name.toLowerCase().includes("win-arm64") && asset.name.endsWith(".exe"), $(".xerahs-download-win-arm64"));
+        
+        UpdateXerahsDownloadButton(release, asset => asset.name.toLowerCase().includes("osx-x64"), $(".xerahs-download-mac-x64"));
+        UpdateXerahsDownloadButton(release, asset => asset.name.toLowerCase().includes("osx-arm64"), $(".xerahs-download-mac-arm64"));
+        
+        UpdateXerahsDownloadButton(release, asset => asset.name.toLowerCase().includes("linux"), $(".xerahs-download-linux"));
     }).fail(function() {
         // Fallback is handled by the initial href in HTML
         console.log("Failed to fetch XerahS release info.");
     });
 }
 
-function UpdateXerahsDownloadButton(release, assetExtension, element) {
+function UpdateXerahsDownloadButton(release, filterPredicate, element) {
     if (!element.length) return;
 
-    let asset = release.assets.find(asset => asset.name.endsWith(assetExtension));
+    let asset = release.assets.find(filterPredicate);
     if (asset) {
         let releaseInfo = "Version: " + release.tag_name +
             "\nFile size: " + (asset.size / 1024 / 1024).toFixed(2) + " MiB" +
@@ -28,8 +34,10 @@ function UpdateXerahsDownloadButton(release, assetExtension, element) {
         element.attr("href", asset.browser_download_url);
         element.attr("title", releaseInfo);
         // Initialize tooltip if not already
-        element.tooltip({
-            trigger: "hover"
-        });
+        if (typeof element.tooltip === 'function') {
+            element.tooltip({
+                trigger: "hover"
+            });
+        }
     }
 }
