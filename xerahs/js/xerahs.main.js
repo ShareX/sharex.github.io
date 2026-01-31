@@ -8,13 +8,13 @@ $(document).ready(function() {
 
 function GetLatestXerahsReleaseInfo() {
     $.getJSON("https://api.github.com/repos/ShareX/XerahS/releases/latest").done(function(release) {
-        UpdateXerahsDownloadButton(release, asset => asset.name.toLowerCase().includes("win-x64") && asset.name.endsWith(".exe"), $(".xerahs-download-win-x64"));
-        UpdateXerahsDownloadButton(release, asset => asset.name.toLowerCase().includes("win-arm64") && asset.name.endsWith(".exe"), $(".xerahs-download-win-arm64"));
+        UpdateXerahsDownloadButton(release, asset => asset.name.toLowerCase().startsWith("xerahs") && asset.name.toLowerCase().includes("win-x64") && asset.name.endsWith(".exe"), $(".xerahs-download-win-x64"));
+        UpdateXerahsDownloadButton(release, asset => asset.name.toLowerCase().startsWith("xerahs") && asset.name.toLowerCase().includes("win-arm64") && asset.name.endsWith(".exe"), $(".xerahs-download-win-arm64"));
         
-        UpdateXerahsDownloadButton(release, asset => asset.name.toLowerCase().includes("osx-x64"), $(".xerahs-download-mac-x64"));
-        UpdateXerahsDownloadButton(release, asset => asset.name.toLowerCase().includes("osx-arm64"), $(".xerahs-download-mac-arm64"));
+        UpdateXerahsDownloadButton(release, asset => asset.name.toLowerCase().startsWith("xerahs") && asset.name.toLowerCase().includes("osx-x64"), $(".xerahs-download-mac-x64"));
+        UpdateXerahsDownloadButton(release, asset => asset.name.toLowerCase().startsWith("xerahs") && asset.name.toLowerCase().includes("osx-arm64"), $(".xerahs-download-mac-arm64"));
         
-        UpdateXerahsDownloadButton(release, asset => asset.name.toLowerCase().includes("linux"), $(".xerahs-download-linux"));
+        UpdateXerahsDownloadButton(release, asset => asset.name.toLowerCase().startsWith("xerahs") && asset.name.toLowerCase().includes("linux-x64"), $(".xerahs-download-linux-x64"));
     }).fail(function() {
         // Fallback is handled by the initial href in HTML
         console.log("Failed to fetch XerahS release info.");
