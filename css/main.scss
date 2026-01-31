@@ -300,6 +300,41 @@ body {
         width: 200px;
     }
 
+    .xerahs-download-platform {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .xerahs-download-title {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 32px;
+        line-height: 1.2;
+        margin-bottom: $container-padding-half / 2;
+
+        i {
+            width: 20px;
+            line-height: 1;
+            text-align: center;
+        }
+    }
+
+    .xerahs-download-buttons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: $container-padding-half / 2;
+        min-height: 96px;
+
+        .btn {
+            margin: 0px;
+        }
+    }
+
     #download-panel {
         div {
             background-color: $background-alt;
