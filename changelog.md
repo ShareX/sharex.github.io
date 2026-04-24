@@ -3,6 +3,92 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 20.0.0](https://github.com/ShareX/ShareX/releases/tag/v20.0.0) - 2026-04-24 {#v20.0.0}
+
+* Added native [ARM64](https://en.wikipedia.org/wiki/AArch64) support for ShareX via the [Microsoft Store](https://www.microsoft.com/store/apps/9nblggh4z1sp).
+* Introduced a new Image Editor built with [Avalonia UI](https://avaloniaui.net), delivering a modern interface and improved user experience. It features 18 annotation tools, a background beautifier, 232 image effects, and retains most of the functionality from the Legacy Image Editor.
+    * Annotation tools:
+        * <kbd>V</kbd> Select
+        * <kbd>R</kbd> Rectangle
+        * <kbd>E</kbd> Ellipse
+        * <kbd>L</kbd> Line
+        * <kbd>A</kbd> Arrow
+        * <kbd>F</kbd> Freehand
+        * <kbd>T</kbd> Text
+        * <kbd>J</kbd> Emoji (Supports [Microsoft 3D Fluent emojis](https://github.com/microsoft/fluentui-emoji))
+        * <kbd>O</kbd> Speech Balloon
+        * <kbd>N</kbd> Step
+        * <kbd>H</kbd> Highlight
+        * <kbd>W</kbd> Smart Eraser
+        * <kbd>B</kbd> Blur
+        * <kbd>P</kbd> Pixelate
+        * <kbd>M</kbd> Magnify
+        * <kbd>S</kbd> Spotlight
+        * <kbd>C</kbd> Crop
+        * <kbd>U</kbd> Cut Out
+    * Background tools:
+        * Margin
+        * Padding
+        * Smart padding
+        * Rounded corner
+        * Shadow radius
+        * Ratio
+        * Background (Gradient, Color, Transparent, Image, Wallpaper)
+    * Image effects (232)
+        * Manipulations (35)
+        * Adjustments (32)
+        * Filters (149)
+        * Drawings (16)
+    * File menu keybinds:
+        * <kbd>Ctrl</kbd> + <kbd>N</kbd> New...
+        * <kbd>Ctrl</kbd> + <kbd>O</kbd> Open...
+        * <kbd>Ctrl</kbd> + <kbd>S</kbd> Save
+        * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> Save as...
+        * <kbd>Escape</kbd> Exit
+    * Task keybinds:
+        * <kbd>Enter</kbd> Run after capture tasks
+        * <kbd>Escape</kbd> Cancel
+        * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> Copy image to clipboard
+        * <kbd>Ctrl</kbd> + <kbd>S</kbd> Save image
+        * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> Save image as...
+        * <kbd>Ctrl</kbd> + <kbd>P</kbd> Pin image to screen
+        * <kbd>Ctrl</kbd> + <kbd>U</kbd> Upload image
+    * Context menu keybinds:
+        * <kbd>Ctrl</kbd> + <kbd>Z</kbd> Undo
+        * <kbd>Ctrl</kbd> + <kbd>Y</kbd> Redo
+        * <kbd>Delete</kbd> Delete
+        * <kbd>Shift</kbd> + <kbd>Delete</kbd> Delete all
+        * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> Flatten
+        * <kbd>Ctrl</kbd> + <kbd>X</kbd> Cut
+        * <kbd>Ctrl</kbd> + <kbd>C</kbd> Copy
+        * <kbd>Ctrl</kbd> + <kbd>V</kbd> Paste
+        * <kbd>Ctrl</kbd> + <kbd>D</kbd> Duplicate
+        * <kbd>Home</kbd> Bring to front
+        * <kbd>Page Up</kbd> Bring forward
+        * <kbd>Page Down</kbd> Send backward
+        * <kbd>End</kbd> Send to back
+    * "Task settings -> Tools -> Image editor" options:
+        * Use legacy image editor
+        * Use system theme
+        * Use system accent color
+        * Remember window state
+        * Show exit confirmation
+        * Zoom to fit on open
+        * Auto close editor on task
+        * Auto copy image to clipboard
+* Added option to disable capture region crosshair. <a class="badge" href="https://github.com/1rubyrain"><i class="fa-brands fa-github"></i>1rubyrain</a>
+* Added [PrivateBin](https://privatebin.info) text uploader. <a class="badge" href="https://github.com/SoNiice"><i class="fa-brands fa-github"></i>SoNiice</a>
+* Removed [MEGA](https://mega.io) file uploader due to unmaintained library.
+* Added "Load models" button to populate OpenAI models automatically. <a class="badge" href="https://github.com/CPatelCLT"><i class="fa-brands fa-github"></i>CPatelCLT</a>
+* Added tick/cross icon to the hash checker target section to display the verification result.
+* Added smoothing and curve interpolation to freehand drawing tools. <a class="badge" href="https://github.com/maxwellshepherd"><i class="fa-brands fa-github"></i>maxwellshepherd</a>
+* Improved [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol) upload speed. <a class="badge" href="https://github.com/WinterPhoenix"><i class="fa-brands fa-github"></i>WinterPhoenix</a>
+* Added filtering for non-activatable tool windows during region capture. <a class="badge" href="https://github.com/purr"><i class="fa-brands fa-github"></i>purr</a>
+* Added OpenAI Legacy AI Provider option to support local deployments. <a class="badge" href="https://github.com/qqq-qqqq"><i class="fa-brands fa-github"></i>qqq-qqqq</a>
+* Removed Custom AI Provider option instead OpenAI provider can be used for same purpose.
+* Removed Blob Emojis because instead [Microsoft 3D Fluent emojis](https://github.com/microsoft/fluentui-emoji) are used now.
+* Added "Copy folder path to clipboard" option to "After capture tasks" menu. <a class="badge" href="https://github.com/Maksymilian-Turkot"><i class="fa-brands fa-github"></i>Maksymilian-Turkot</a>
+
 ## [ShareX 19.0.2](https://github.com/ShareX/ShareX/releases/tag/v19.0.2) - 2026-01-28 {#v19.0.2}
 
 * Bug fixes.
