@@ -3,7 +3,7 @@ layout: markdown
 title: Changelog
 ---
 
-## [ShareX 20.0.0](https://github.com/ShareX/ShareX/releases/tag/v20.0.0) - 2026-04-24 {#v20.0.0}
+## [ShareX 20.0.2](https://github.com/ShareX/ShareX/releases/tag/v20.0.2) - 2026-04-24 {#v20.0.2}
 
 * Added native [ARM64](https://en.wikipedia.org/wiki/AArch64) support for ShareX via the [Microsoft Store](https://www.microsoft.com/store/apps/9nblggh4z1sp).
 * Introduced a new Image Editor built with [Avalonia UI](https://avaloniaui.net), delivering a modern interface and improved user experience. It features 18 annotation tools, a background beautifier, 232 image effects, and retains most of the functionality from the Legacy Image Editor.
