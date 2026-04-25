@@ -15,7 +15,7 @@ title: Changelog
         * <kbd>A</kbd> Arrow
         * <kbd>F</kbd> Freehand
         * <kbd>T</kbd> Text
-        * <kbd>J</kbd> Emoji (Supports [Microsoft 3D Fluent emojis](https://github.com/microsoft/fluentui-emoji))
+        * <kbd>J</kbd> Emoji (Supports [Microsoft 3D Fluent emojis](https://github.com/microsoft/fluentui-emoji)) <a class="badge" href="https://x.com/ShareX/status/2041953520706875831"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
         * <kbd>O</kbd> Speech Balloon
         * <kbd>N</kbd> Step
         * <kbd>H</kbd> Highlight
