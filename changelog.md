@@ -3,7 +3,7 @@ layout: markdown
 title: Changelog
 ---
 
-## [ShareX 20.0.3](https://github.com/ShareX/ShareX/releases/tag/v20.0.3) - 2026-05-01 {#v20.0.3}
+## [ShareX 20.0.4](https://github.com/ShareX/ShareX/releases/tag/v20.0.4) - 2026-05-01 {#v20.0.4}
 ## [ShareX 20.0.2](https://github.com/ShareX/ShareX/releases/tag/v20.0.2) - 2026-04-24 {#v20.0.2}
 
 * Added native [ARM64](https://en.wikipedia.org/wiki/AArch64) support for ShareX via the [Microsoft Store](https://www.microsoft.com/store/apps/9nblggh4z1sp).
