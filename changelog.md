@@ -69,7 +69,7 @@ title: Changelog
         * <kbd>Page Down</kbd> Send backward
         * <kbd>End</kbd> Send to back
     * "Task settings -> Tools -> Image editor" options:
-        * Use legacy image editor
+        * **Use legacy image editor**
         * Use system theme
         * Use system accent color
         * Remember window state
