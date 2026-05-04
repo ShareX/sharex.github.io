@@ -5,45 +5,45 @@ title: OCR
 
 ## What is OCR?
 
-Optical Character Recognition (OCR) is the process that converts an image of text into a machine-readable text format. The OCR component of ShareX relies on the intrinsic OCR capabilities that come with Microsoft Windows. The OS doesn't come with any OCR app, though. ShareX fills that void.
+Optical Character Recognition (OCR) is the process of converting an image of text into machine-readable text. The OCR component of ShareX relies on the built-in OCR capabilities that come with Microsoft Windows. Windows itself does not include a dedicated OCR app, but ShareX fills that gap.
 
 ## Installing OCR support for more languages
 
 ### Via the Settings app (Windows 10 and later)
 
-1. Ensure that you have an active Internet connection.
-2. Open Windows Search, search for "Settings: language settings" and click "Open". The Settings app will open on the Language page.
-3. In "Preferred languages" section, press "Add a language" button. A dialog box entitled "Choose a language to install" appears.
-4. Choose a language that you would like to install, and click "Next" button. A dialog box entitled "Install language features" appears.
-5. Inspect the "Required language features" section to ensure there is an "Optical character recognition" item listed. It is not, your intended language is not supported; you can cancel the operation.
-6. Uncheck all "Optional language features".
-7. Click "Install" and wait for Windows to download and install the language.
+1. Ensure you have an active Internet connection.
+2. Open Windows Search, search for Settings: language settings, and click Open. The Settings app will open on the Language page.
+3. In the Preferred languages section, click Add a language. A dialog box titled "Choose a language to install" appears.
+4. Choose a language to install, and click Next. A dialog box titled "Install language features" appears.
+5. Check the Required language features section to ensure there is an Optical character recognition item listed. If it is not listed, your intended language is not supported; you can cancel the operation.
+6. Uncheck all Optional language features.
+7. Click Install and wait for Windows to download and install the language.
 8. Restart ShareX.
 
-After the language is installed, ShareX will include it in language drop down menu next time OCR window is opened.
+After the language is installed, ShareX will include it in the language drop-down menu the next time the OCR window is opened.
 
 ### Via PowerShell (Windows 10 and later)
 
 The following steps work on the legacy Windows PowerShell 5.1 (included with Windows 10 and 11) as well as the free and open-source PowerShell 7.
 
-1. Ensure that you have an active Internet connection. It is, however, possible to modify the following commands to work with an offline source instead of the Internet, e.g., the optional language DVD obtained from Microsoft.
-3. Open PowerShell with administrative privileges. (You can open Terminal with administrative privileges and open a PowerShell tab therein. It's the same.)
-4. Enter the following command to see a list of supported languages:
+1. Ensure you have an active Internet connection. It is, however, possible to modify the following commands to work with an offline source instead of the Internet, e.g., an optional language DVD obtained from Microsoft.
+2. Open PowerShell with administrative privileges. (You can open Terminal with administrative privileges and open a PowerShell tab therein. It's the same.)
+3. Enter the following command to list supported languages:
 
     ```PowerShell
     (Get-WindowsCapability -Online | Where-Object -Property Name -Like 'Language.OCR*').Name
     ```
 
-    You should see a list of languages such as this:
+    You should see a list of languages similar to this:
 
     ```Output
     Language.OCR~~~ar-SA~0.0.1.0
     Language.OCR~~~bg-BG~0.0.1.0
     Language.OCR~~~bs-LATN-BA~0.0.1.0
-    [...]
+    ...
     ```
 
-5. Pick the language module you'd like to installd. Use the following table to find the OCR module of the language of your choice. Microsoft may add more modules in the future. Use their [language identifier][ISO639List] to figure out their corresponding language.
+4. Pick the language module you'd like to install. Use the following table to find the OCR module for the language of your choice. Microsoft may add more modules in the future. Use their [language identifier] to determine the corresponding language.
 
     Module name                         | Corresponding language
     ----------------------------------- | ----------------------
@@ -83,13 +83,13 @@ The following steps work on the legacy Windows PowerShell 5.1 (included with Win
     `Language.OCR~~~zh-HK~0.0.1.0`      | Chinese (Traditional, Hong Kong)
     `Language.OCR~~~zh-TW~0.0.1.0`      | Chinese (Traditional, Taiwan)
 
-6. Enter the following command to install the selected language module, replacing `"Name of the module"` with one of the items that the previous command generated:
+5. Enter the following command to install the selected language module, replacing `"Name of the module"` with one of the items that the previous command generated:
 
     ```PowerShell
     Add-WindowsCapability -Online -Name "Name of the module"
     ```
 
-    For example, the following command installs the Chinese (mainland China) OCR modules:
+    For example, the following command installs the "Chinese (Simplified, China)" OCR module:
 
    ```PowerShell
    Add-WindowsCapability -Online -Name "Language.OCR~~~zh-CN~0.0.1.0"
@@ -97,8 +97,8 @@ The following steps work on the legacy Windows PowerShell 5.1 (included with Win
 
    Wait for the command to download and install the module.
 
-7. Restart ShareX.
+6. Restart ShareX.
 
-After the language is installed, ShareX will include it in language drop down menu next time OCR window is opened.
+After the language is installed, ShareX will include it in the language drop-down menu the next time the OCR window is opened.
 
-[ISO639List]: https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes
+[language identifier]: https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes
