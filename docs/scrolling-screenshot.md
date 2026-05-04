@@ -3,25 +3,25 @@ layout: markdown
 title: Scrolling screenshot
 ---
 
-## What is scrolling screenshot?
+## What is a scrolling screenshot?
 
-Scrolling screenshot, also known as scrolling capture, is a feature in ShareX that allows you to capture an entire webpage or document that extends beyond the visible screen. It automatically combines multiple screenshots into a single image, giving you a complete view of the content.
+A scrolling screenshot, also known as a scrolling capture, is a feature in ShareX that allows you to capture an entire webpage or document that extends beyond the visible screen. It automatically combines multiple screenshots into a single image, giving you a complete view of the content.
 
 ## How to take a scrolling screenshot?
 
 To take a scrolling screenshot in ShareX, follow these steps:
 
-1. Open ShareX main window or tray menu.
-2. Go to "Capture -> Scrolling capture" menu option.
+1. Open the ShareX main window or tray menu.
+2. Go to the "Capture -> Scrolling capture" menu option.
 3. Alternatively, you can create a custom hotkey for "Start/Stop scrolling capture" in the hotkey settings window.
 4. Make a region selection to define the area you want to capture.
 5. Once the region is selected, the scrolling capture will automatically start.
 6. ShareX will scroll and capture the content until it reaches the end of the scroll.
-7. Finally, ShareX will display the result image of the scrolling capture.
+7. Finally, ShareX will display the resulting image of the scrolling capture.
 
 ## Status indicator
 
-After the scrolling capture is complete, a status indicator is shown at the top right corner.
+After the scrolling capture is complete, a status indicator is shown at the top-right corner.
 
 The indicator colors have the following meanings:
 
@@ -29,7 +29,7 @@ The indicator colors have the following meanings:
 * Yellow: The capture is partially successful. It couldn't perfectly match one or more images and used the best guess to combine them.
 * Red: The first two images couldn't be combined, and as a result, the scrolling capture was automatically stopped.
 
-## How scrolling capture works in ShareX?
+## How does scrolling capture work in ShareX?
 
 1. ShareX takes an initial screenshot of the visible portion of the webpage/document.
 2. It then compares subsequent screenshots with the previous one to identify any changes.
@@ -52,6 +52,6 @@ Similar to the previous problem, making a custom region selection can help exclu
 
 ### Hover-related issues
 
-Another common challenge in scrolling capture is related to hover effects. When scrolling, if the cursor moves over a section of the webpage with hover effects, it can trigger changes in the appearance, such as background color or highlighting. This can result in inaccurate or inconsistent captures.
+Another common challenge in scrolling capture is related to hover effects. When scrolling, if the cursor moves over a section of the webpage with hover effects, it can trigger changes in appearance, such as background color or highlighting. This can result in inaccurate or inconsistent captures.
 
 To mitigate this issue, it is recommended to move the cursor away from the content, preferably to the top of the scroll bars. By doing so, you can minimize the chances of triggering hover effects during the scrolling capture process.

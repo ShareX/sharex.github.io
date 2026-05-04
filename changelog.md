@@ -3,6 +3,217 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 20.0.4](https://github.com/ShareX/ShareX/releases/tag/v20.0.4) - 2026-05-01 {#v20.0.4}
+## [ShareX 20.0.2](https://github.com/ShareX/ShareX/releases/tag/v20.0.2) - 2026-04-24 {#v20.0.2}
+
+* Added native [ARM64](https://en.wikipedia.org/wiki/AArch64) support for ShareX via the [Microsoft Store](https://www.microsoft.com/store/apps/9nblggh4z1sp).
+* Introduced a new Image Editor built with [Avalonia UI](https://avaloniaui.net), delivering a modern interface and improved user experience. It features 18 annotation tools, a background beautifier, 232 image effects, and retains most of the functionality from the Legacy Image Editor.
+    * Annotation tools:
+        * <kbd>V</kbd> Select
+        * <kbd>R</kbd> Rectangle
+        * <kbd>E</kbd> Ellipse
+        * <kbd>L</kbd> Line
+        * <kbd>A</kbd> Arrow
+        * <kbd>F</kbd> Freehand
+        * <kbd>T</kbd> Text
+        * <kbd>J</kbd> Emoji (Supports [Microsoft 3D Fluent emojis](https://github.com/microsoft/fluentui-emoji)) <a class="badge" href="https://x.com/ShareX/status/2041953520706875831"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+        * <kbd>O</kbd> Speech Balloon
+        * <kbd>N</kbd> Step
+        * <kbd>H</kbd> Highlight
+        * <kbd>W</kbd> Smart Eraser
+        * <kbd>B</kbd> Blur
+        * <kbd>P</kbd> Pixelate
+        * <kbd>M</kbd> Magnify
+        * <kbd>S</kbd> Spotlight
+        * <kbd>C</kbd> Crop
+        * <kbd>U</kbd> Cut Out
+    * Background tools:
+        * Margin
+        * Padding
+        * Smart padding
+        * Rounded corner
+        * Shadow radius
+        * Ratio
+        * Background (Gradient, Color, Transparent, Image, Wallpaper)
+    * Image effects (232)
+        * Manipulations (35)
+        * Adjustments (32)
+        * Filters (149)
+        * Drawings (16)
+    * File menu keybinds:
+        * <kbd>Ctrl</kbd> + <kbd>N</kbd> New...
+        * <kbd>Ctrl</kbd> + <kbd>O</kbd> Open...
+        * <kbd>Ctrl</kbd> + <kbd>S</kbd> Save
+        * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> Save as...
+        * <kbd>Escape</kbd> Exit
+    * Task keybinds:
+        * <kbd>Enter</kbd> Run after capture tasks
+        * <kbd>Escape</kbd> Cancel
+        * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> Copy image to clipboard
+        * <kbd>Ctrl</kbd> + <kbd>S</kbd> Save image
+        * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> Save image as...
+        * <kbd>Ctrl</kbd> + <kbd>P</kbd> Pin image to screen
+        * <kbd>Ctrl</kbd> + <kbd>U</kbd> Upload image
+    * Context menu keybinds:
+        * <kbd>Ctrl</kbd> + <kbd>Z</kbd> Undo
+        * <kbd>Ctrl</kbd> + <kbd>Y</kbd> Redo
+        * <kbd>Delete</kbd> Delete
+        * <kbd>Shift</kbd> + <kbd>Delete</kbd> Delete all
+        * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> Flatten
+        * <kbd>Ctrl</kbd> + <kbd>X</kbd> Cut
+        * <kbd>Ctrl</kbd> + <kbd>C</kbd> Copy
+        * <kbd>Ctrl</kbd> + <kbd>V</kbd> Paste
+        * <kbd>Ctrl</kbd> + <kbd>D</kbd> Duplicate
+        * <kbd>Home</kbd> Bring to front
+        * <kbd>Page Up</kbd> Bring forward
+        * <kbd>Page Down</kbd> Send backward
+        * <kbd>End</kbd> Send to back
+    * "Task settings -> Tools -> Image editor" options:
+        * **Use legacy image editor**
+        * Use system theme
+        * Use system accent color
+        * Remember window state
+        * Show exit confirmation
+        * Zoom to fit on open
+        * Auto close editor on task
+        * Auto copy image to clipboard
+* Added option to disable capture region crosshair. <a class="badge" href="https://github.com/1rubyrain"><i class="fa-brands fa-github"></i>1rubyrain</a>
+* Added [PrivateBin](https://privatebin.info) text uploader. <a class="badge" href="https://github.com/SoNiice"><i class="fa-brands fa-github"></i>SoNiice</a>
+* Removed [MEGA](https://mega.io) file uploader due to unmaintained library.
+* Added "Load models" button to populate OpenAI models automatically. <a class="badge" href="https://github.com/CPatelCLT"><i class="fa-brands fa-github"></i>CPatelCLT</a>
+* Added tick/cross icon to the hash checker target section to display the verification result.
+* Added smoothing and curve interpolation to freehand drawing tools. <a class="badge" href="https://github.com/maxwellshepherd"><i class="fa-brands fa-github"></i>maxwellshepherd</a>
+* Improved [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol) upload speed. <a class="badge" href="https://github.com/WinterPhoenix"><i class="fa-brands fa-github"></i>WinterPhoenix</a>
+* Added filtering for non-activatable tool windows during region capture. <a class="badge" href="https://github.com/purr"><i class="fa-brands fa-github"></i>purr</a>
+* Added OpenAI Legacy AI Provider option to support local deployments. <a class="badge" href="https://github.com/qqq-qqqq"><i class="fa-brands fa-github"></i>qqq-qqqq</a>
+* Removed Custom AI Provider option instead OpenAI provider can be used for same purpose.
+* Removed Blob Emojis because instead [Microsoft 3D Fluent emojis](https://github.com/microsoft/fluentui-emoji) are used now.
+* Added "Copy folder path to clipboard" option to "After capture tasks" menu. <a class="badge" href="https://github.com/Maksymilian-Turkot"><i class="fa-brands fa-github"></i>Maksymilian-Turkot</a>
+
+## [ShareX 19.0.2](https://github.com/ShareX/ShareX/releases/tag/v19.0.2) - 2026-01-28 {#v19.0.2}
+
+* Bug fixes.
+
+## [ShareX 19.0.1](https://github.com/ShareX/ShareX/releases/tag/v19.0.1) - 2026-01-20 {#v19.0.1}
+
+* Automatic upload is now disabled by default for new installations.
+* Added "Analyze image" tool (opt-in, disabled by default).
+    * Users must provide their own API keys to use this feature.
+    * Supported providers:
+        * OpenAI ChatGPT
+        * Google Gemini <a class="badge" href="https://github.com/f1sherb0y"><i class="fa-brands fa-github"></i>f1sherb0y</a>
+        * OpenRouter <a class="badge" href="https://github.com/f1sherb0y"><i class="fa-brands fa-github"></i>f1sherb0y</a>
+        * Custom <a class="badge" href="https://github.com/f1sherb0y"><i class="fa-brands fa-github"></i>f1sherb0y</a>
+* Update [FFmpeg](https://ffmpeg.org) to version [8.0](https://github.com/ShareX/FFmpeg/releases/tag/v8.0).
+* Added "Spotlight" tool to region capture/image editor. <a class="badge" href="https://x.com/ShareX/status/1972233757844525370"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+* Added cross at center of regions in region capture.
+* Region capture (Light & Transparent) improvements to make region selection smoother.
+* Added "Automatically load more images" setting to Image history.
+* Added "Thumbnail height" setting to Image history.
+* Added "Stop auto capture" hotkey. <a class="badge" href="https://github.com/BallisticLingonberries"><i class="fa-brands fa-github"></i>BallisticLingonberries</a>
+* When exporting settings include computer name on file name.
+* Support rotating and flipping stickers in region capture/image editor via <kbd>Ctrl</kbd> + <kbd>Arrow keys</kbd> hotkey. <a class="badge" href="https://github.com/Ruandv"><i class="fa-brands fa-github"></i>Ruandv</a>
+* Added `UseMachineSpecificUploadersConfig` option to "Application settings -> Advanced tab".
+* Added "Skip files" option to "Directory indexer" tool.
+* Added "Scale step" option to "Pin to screen" tool. <a class="badge" href="https://github.com/michalkr52"><i class="fa-brands fa-github"></i>michalkr52</a>
+* Use `Microsoft.Data.Sqlite` library instead of `System.Data.SQLite` library. <a class="badge" href="https://github.com/BrycensRanch"><i class="fa-brands fa-github"></i>BrycensRanch</a>
+
+## [ShareX 18.0.1](https://github.com/ShareX/ShareX/releases/tag/v18.0.1) - 2025-08-19 {#v18.0.1}
+
+* Bug fixes.
+
+## [ShareX 18.0.0](https://github.com/ShareX/ShareX/releases/tag/v18.0.0) - 2025-08-12 {#v18.0.0}
+
+* Upgraded the ShareX project from .NET Framework 4.8 to .NET 9.0.
+    * .NET 9.0 is self-contained, so it does not need to be installed separately. However, as a result, the ShareX setup size will be around 100 MB. <a class="badge" href="https://x.com/ShareX/status/1938432188464152825"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+    * Windows 7 is no longer supported, as .NET 9.0 officially supports only Windows 10 64-bit or higher.
+* History changes:
+    * History & image history is now using [SQLite](https://en.wikipedia.org/wiki/SQLite) database instead of [JSON](https://en.wikipedia.org/wiki/JSON) text.
+        * History.json will be automatically migrated to History.db on ShareX startup.
+    * Added "Import folder" support, allowing you to select a folder and import all image files into ShareX history. <a class="badge" href="https://x.com/ShareX/status/1954367725108609092"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+    * Added "Favorite" button. <a class="badge" href="https://x.com/ShareX/status/1944475051455369299"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+    * Added "Edit tag" button.
+    * Added "Edit item" button. <a class="badge" href="https://x.com/ShareX/status/1942946957145563286"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+    * Added "Rename file" button.
+    * Added "Delete item" button. (<kbd>Del</kbd>)
+    * Added "Delete file & item" button. (<kbd>Shift</kbd> + <kbd>Del</kbd>)
+    * Removed more info button.
+    * Added "Only show image files" option to image history.
+    * Added "Show stats" button to image history.
+    * Added icons to context menu. <a class="badge" href="https://x.com/ShareX/status/1948417914949763484"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+* Dark theme improvements.
+* Added quick QR code scan button to QR code tool. <a class="badge" href="https://x.com/ShareX/status/1927066634470011177"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+* Added notification sound to QR code scan.
+* Added "QR code (Scan region)" hotkey.
+* Support showing thumbnails for video files in main window.
+* Added play icon to video thumbnails.
+* Added custom icon for `.sxcu` and `.sxie` files.
+* Added "Scroll method" option to scrolling capture.
+* Added notification sound to copy actions.
+* Support file drag and drop in "Metadata" tool.
+* Added "Automatically hide desktop icons" option. <a class="badge" href="https://x.com/ShareX/status/1933237028709179609"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+* When showing main window if it is out of bounds then center the main window.
+* In main window moved "Destination settings" and "Custom uploader settings" buttons to parent menu.
+* About window design changes.
+* Added more links to about window.
+* Added "Delete file locally" toast click action.
+* Removed Twitter destination.
+* Removed Jira destination.
+
+## [ShareX 17.1.0](https://github.com/ShareX/ShareX/releases/tag/v17.1.0) - 2025-05-26 {#v17.1.0}
+
+* Added "Metadata" tool to view file metadata and strip non-essential metadata from media files. <a class="badge" href="https://x.com/ShareX/status/1920392978343833909"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+* Added "Metadata" tool hotkey.
+* Added a custom scrollbar to ShareX's main window to support the dark theme. <a class="badge" href="https://x.com/ShareX/status/1918243985883029785"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+* Update [FFmpeg](https://ffmpeg.org) to [7.1](https://github.com/ShareX/FFmpeg/releases/tag/v7.1).
+* Improved [H.265 support for Apple products](https://trac.ffmpeg.org/wiki/Encode/H.265#FinalCutandApplestuffcompatibility).
+* Added icons to "Workflows" menu items.
+* Added [command line arguments](https://getsharex.com/docs/command-line-arguments):
+    * -PinToScreen "image file path"
+    * -PinToScreenFromFile "image file path"
+    * -VideoConverter "video file path"
+    * -OCR "image file path"
+    * -QRCode "image file path"
+    * -HashCheck "file path"
+    * -FileUpload "file path"
+    * -Metadata "file path"
+    * -StripMetadata "file path"
+* Added notification sound to "Hash checker" tool.
+* Removed DNS changer tool.
+* Allow moving pinned images with arrow keys.
+* Removed "Use custom theme" option, it is now always enabled.
+
+## [ShareX 17.0.0](https://github.com/ShareX/ShareX/releases/tag/v17.0.0) - 2025-01-08 {#v17.0.0}
+
+* Scrolling capture improvements:
+    * Automatically ignores 50px from the bottom during scrolling captures, useful for cases like horizontal scrollbars at the bottom.
+    * Added an "Auto ignore bottom edge" option, which compares two images to identify static parts at the bottom, in addition to the default 50px.
+    * Added a "Copy" button to the scrolling capture window.
+* Added notification sound to certain actions: <a class="badge" href="https://x.com/ShareX/status/1809810873847828676"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+    * Screen recording stop/pause/abort actions.
+    * Scrolling capture action.
+    * "Pin to screen" tool.
+    * "Screen color picker" tool.
+    * "Borderless window" tool.
+    * Browser extension action.
+    * Silent OCR action.
+    * "Disable/Enable hotkeys" action.
+* Added "Play sound after action is completed" option.
+* Added "Use custom action completed sound" option.
+* Removed toast notification from silent OCR action.
+* Removed "Disable notifications" option.
+* Added Arabic language support. <a class="badge" href="https://github.com/OthmanAliModaes"><i class="fa-brands fa-github"></i>OthmanAliModaes</a>
+* When "DisableUpload" [registry](https://getsharex.com/docs/command-line-arguments#registry) is set, hide upload related items in the main window.
+* Save tasks to history regardless of failed or stopped upload.
+* Allow restoring borderless window in "Borderless window" tool.
+* Added "Make active window borderless" hotkey.
+* Added "Make active window top most" hotkey.
+* Added "Pin to screen (Close all)" hotkey.
+* Removed YouTube icon because Google does not allow us to use a 16x16 size logo.
+* Removed Google Photos image uploader. (Reason: [https://developers.googleblog.com/en/google-photos-picker-api-launch-and-library-api-updates/](https://developers.googleblog.com/en/google-photos-picker-api-launch-and-library-api-updates/))
+* Removed adf.ly URL shortener.
+* Removed backward compatibility for .sxcu files generated before ShareX 12.4.0. <a class="badge" href="https://x.com/ShareX/status/1868484159284392302"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+
 ## [ShareX 16.1.0](https://github.com/ShareX/ShareX/releases/tag/v16.1.0) - 2024-05-09 {#v16.1.0}
 
 * Added an "Update channel" option to the "Application settings" window with the following options:

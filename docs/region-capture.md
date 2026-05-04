@@ -14,16 +14,16 @@ title: Region capture
 * <kbd>Ctrl + V</kbd> Paste image or text
 * <kbd>Ctrl + D</kbd> Duplicate shape
 * <kbd>Ctrl + Z</kbd> Undo shape
-* <kbd>Arrow keys</kbd> Move cursor / Resize current shape from bottom right corner
-* <kbd>Alt + Arrow keys</kbd> Resize current shape from top left corner
+* <kbd>Arrow keys</kbd> Move cursor / Resize current shape from bottom-right corner
+* <kbd>Alt + Arrow keys</kbd> Resize current shape from top-left corner
 * <kbd>Ctrl + Arrow keys</kbd> Move current shape
 * <kbd>Shift + Arrow keys</kbd> Resize or move faster
-* <kbd>Home</kbd> Move current shape top
-* <kbd>End</kbd> Move current shape bottom
+* <kbd>Home</kbd> Move current shape to top
+* <kbd>End</kbd> Move current shape to bottom
 * <kbd>Page up</kbd> Move current shape up
 * <kbd>Page down</kbd> Move current shape down
 * <kbd>Mouse wheel</kbd> Change magnifier size
-* <kbd>Hold Ctrl</kbd> Disables shape selection to allow drawing shape top of another shape
+* <kbd>Hold Ctrl</kbd> Disable shape selection to allow drawing on top of another shape
 
 ##### While creating region
 
@@ -33,7 +33,7 @@ title: Region capture
 * <kbd>Hold Shift</kbd> Proportional resizing
 * <kbd>Hold Alt</kbd> Snap selection to preset sizes
 
-##### When cursor top of shape
+##### When cursor is on top of a shape
 
 * <kbd>Left click</kbd> <kbd>Insert</kbd> Select shape
 * <kbd>Hold left click</kbd> Move shape
@@ -46,13 +46,13 @@ title: Region capture
 * <kbd>Space</kbd> Fullscreen capture
 * <kbd>1, 2, 3 ... 0</kbd> Specific monitor capture
 * <kbd>~</kbd> Active monitor capture
-* <kbd>Double left click</kbd> <kbd>Enter</kbd> If multi region mode is enabled then capture regions
+* <kbd>Double left click</kbd> <kbd>Enter</kbd> If multi-region mode is enabled, then capture regions
 
 ### Image editor
 
 * <kbd>Hold middle click</kbd> Pan image
 * <kbd>Enter</kbd> Close image editor and continue task with changes applied
-* <kbd>Right click</kbd> <kbd>Space</kbd> Close image editor and continue task without apply changes
+* <kbd>Right click</kbd> <kbd>Space</kbd> Close image editor and continue task without applying changes
 * <kbd>Esc</kbd> Close image editor and cancel task
 * <kbd>Ctrl + S</kbd> Save image
 * <kbd>Ctrl + Shift + S</kbd> Save image as...

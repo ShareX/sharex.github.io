@@ -4,9 +4,6 @@
 - name: MainWindowContextMenu.png
   caption: Main window context menu
 
-- name: MainWindowListView.png
-  caption: Main window (List view)
-
 - name: MainWindowCaptureMenu.png
   caption: Main window → Capture menu
 
@@ -33,9 +30,6 @@
 
 - name: ImageEffects.png
   caption: Image effects
-
-- name: AutoCapture.png
-  caption: Auto capture
 
 - name: CombineImages.png
   caption: Main window → Combine images

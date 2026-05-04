@@ -5,19 +5,19 @@ title: Actions
 
 ## What are ShareX actions?
 
-After capture screen you can automatically run configured actions to post-process captures. This is accomplished by running third party applications using [CLI](https://en.wikipedia.org/wiki/Command-line_interface) arguments and passing file path of the captured file.
+After the capture screen, you can automatically run configured actions to post-process captures. This is accomplished by running third-party applications using [CLI](https://en.wikipedia.org/wiki/Command-line_interface) arguments and passing the file path of the captured file.
 
 ## How to use ShareX actions?
 
 * Open **Task settings** window.
-* Choose **Actions** tab and click **Add** button.
-* Choose **File path** of the third party application.
-* Fill **Arguments** and **Output file name extension** options using examples listed at bottom.
-* Check **Hidden window** option.
-* Click **OK** button.
-* Make sure the checkbox for recently added action is checked.
-* Close **Task settings** window.
-* In **Main window** make sure both **After capture tasks -> Save image to file** and **After capture tasks -> Perform actions** options are checked.
+* Choose the **Actions** tab and click the **Add** button.
+* Choose the **File path** of the third-party application.
+* Fill **Arguments** and **Output file name extension** using the examples listed at the bottom.
+* Check the **Hidden window** option.
+* Click the **OK** button.
+* Make sure the checkbox for the recently added action is checked.
+* Close the **Task settings** window.
+* In the **Main window**, make sure both **After capture tasks -> Save image to file** and **After capture tasks -> Perform actions** options are checked.
 
 ## Example actions
 

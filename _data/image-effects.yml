@@ -139,9 +139,6 @@
 - name: Snow
   author: CubityFirst
 
-- name: LGBT
-  author: Jaex
-
 - name: Windows11
   title: Windows 11
   author: Bradley
@@ -216,3 +213,7 @@
 - name: macOSBigSur
   title: macOS Big Sur
   author: Cale111
+
+- name: RegionCapture
+  title: Region capture
+  author: Jaex
