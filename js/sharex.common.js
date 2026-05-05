@@ -1,19 +1,18 @@
 function GetParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
-    let results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return "";
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
+    const targetUrl = new URL(url || window.location.href, window.location.href);
+    return targetUrl.searchParams.get(name);
 }
 
 function SetParameter(name, value) {
-    window.history.replaceState(null, null, `?${name}=${value}`);
+    const url = new URL(window.location.href);
+    url.searchParams.set(name, value);
+    window.history.replaceState(null, null, `${url.pathname}${url.search}${url.hash}`);
 }
 
 function ClearParameters() {
-    window.history.replaceState(null, null, window.location.pathname);
+    const url = new URL(window.location.href);
+    url.search = "";
+    window.history.replaceState(null, null, `${url.pathname}${url.hash}`);
 }
 
 let entityMap = {
