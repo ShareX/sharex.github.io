@@ -3,7 +3,32 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 20.1.0](https://github.com/ShareX/ShareX/releases/tag/v20.1.0) - 2026-05-06 {#v20.1.0}
+
+* Image editor improvements:
+  * Added an “Image Editor Selector” dialog that appears the first time the user uses the editor. It lets users choose their preferred editor and makes it clear they can change it anytime. <a class="badge" href="https://x.com/ShareX/status/2051684934868234331"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+  * Improved high DPI support.
+  * Added support for <kbd>Ctrl</kbd> + <kbd>Enter</kbd> keybind to insert new lines in text and speech balloon tools.
+  * Added "Font family" option to text and speech balloon tools.
+  * Added "Arrow style" option to the arrow tool. <a class="badge" href="https://x.com/ShareX/status/2051268896234029473"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+    * Classic: Similar style to the Legacy arrow tool; allows curving the arrow using the middle node.
+    * Modern: Bigger, modern-looking arrow but does not allow curving.
+  * Also added curving support to the line tool.
+  * Added "Insert image" dialog for when the user pastes or drags and drops an image; allows these actions:
+    * Insert image in the center.
+    * Insert image below.
+    * Insert image on the right side.
+  * Added "Quick crop" option; it lets the user crop quickly similar to the Legacy Image Editor. This option is enabled by default.
+  * Swapped <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> keybind with <kbd>Ctrl</kbd> + <kbd>C</kbd>. Pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> now copies the image instead of copying the shape.
+  * Freehand tool no longer allows selection, letting the user draw easily without selecting previous drawings. The Select tool still allows selecting.
+  * "Save image" button is now usable even when the image file has not been saved previously.
+* Notification click action "Open link" now also opens files as a fallback.
+* Recent links now also support opening files.
+
 ## [ShareX 20.0.4](https://github.com/ShareX/ShareX/releases/tag/v20.0.4) - 2026-05-01 {#v20.0.4}
+
+* Bug fixes
+
 ## [ShareX 20.0.2](https://github.com/ShareX/ShareX/releases/tag/v20.0.2) - 2026-04-24 {#v20.0.2}
 
 * Added native [ARM64](https://en.wikipedia.org/wiki/AArch64) support for ShareX via the [Microsoft Store](https://www.microsoft.com/store/apps/9nblggh4z1sp).
@@ -69,7 +94,7 @@ title: Changelog
         * <kbd>Page Down</kbd> Send backward
         * <kbd>End</kbd> Send to back
     * "Task settings -> Tools -> Image editor" options:
-        * **Use legacy image editor**
+        * Use legacy image editor
         * Use system theme
         * Use system accent color
         * Remember window state
