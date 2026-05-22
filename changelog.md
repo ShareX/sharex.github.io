@@ -3,25 +3,55 @@ layout: markdown
 title: Changelog
 ---
 
+## [ShareX 20.2.0](https://github.com/ShareX/ShareX/releases/tag/v20.2.0) - 2026-05-22 {#v20.2.0}
+
+* Image editor improvements:
+    * Added "<kbd>I</kbd> Image" annotation tool.
+    * Added new arrow styles:
+        * Double
+        * Basic
+        * Line
+    * Added previews for arrow styles.
+    * Added "Starting number" option to "Step" annotation tool.
+    * Added "<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> Print image" button to the bottom toolbar.
+    * Drawing can now start outside the canvas and continue inside it.
+    * Added "Options" button to "File" menu with the following settings:
+        * Follow system theme
+        * Theme
+        * Follow system accent color
+        * Accent color <a class="badge" href="https://x.com/ShareX/status/2057462804118995010"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+        * Remember window state
+        * Show exit confirmation
+        * Zoom to fit on open
+        * Quick crop
+        * Auto close editor on task
+        * Auto copy image to clipboard
+        * Show insert image dialog
+    * Removed "Task settings -> Tools -> Image editor" tab, since these options are now available directly inside the image editor.
+    * Moved "Use legacy image editor" option to "Task settings -> Tools" tab.
+    * Added support for panning the canvas with <kbd>Middle click</kbd> while drawing or cropping, making it easier to work with areas larger than the screen.
+    * The insert image dialog now places images at the center of the currently visible area instead of the center of the canvas.
+* Update [FFmpeg](https://ffmpeg.org) to [8.1](https://github.com/ShareX/FFmpeg/releases/tag/v8.1).
+
 ## [ShareX 20.1.0](https://github.com/ShareX/ShareX/releases/tag/v20.1.0) - 2026-05-06 {#v20.1.0}
 
 * Image editor improvements:
-  * Added an “Image Editor Selector” dialog that appears the first time the user uses the editor. It lets users choose their preferred editor and makes it clear they can change it anytime. <a class="badge" href="https://x.com/ShareX/status/2051684934868234331"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
-  * Improved high DPI support.
-  * Added support for <kbd>Ctrl</kbd> + <kbd>Enter</kbd> keybind to insert new lines in text and speech balloon tools.
-  * Added "Font family" option to text and speech balloon tools.
-  * Added "Arrow style" option to the arrow tool. <a class="badge" href="https://x.com/ShareX/status/2051268896234029473"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
-    * Classic: Similar style to the Legacy arrow tool; allows curving the arrow using the middle node.
-    * Modern: Bigger, modern-looking arrow but does not allow curving.
-  * Also added curving support to the line tool.
-  * Added "Insert image" dialog for when the user pastes or drags and drops an image; allows these actions:
-    * Insert image in the center.
-    * Insert image below.
-    * Insert image on the right side.
-  * Added "Quick crop" option; it lets the user crop quickly similar to the Legacy Image Editor. This option is enabled by default.
-  * Swapped <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> keybind with <kbd>Ctrl</kbd> + <kbd>C</kbd>. Pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> now copies the image instead of copying the shape.
-  * Freehand tool no longer allows selection, letting the user draw easily without selecting previous drawings. The Select tool still allows selecting.
-  * "Save image" button is now usable even when the image file has not been saved previously.
+    * Added an “Image Editor Selector” dialog that appears the first time the user uses the editor. It lets users choose their preferred editor and makes it clear they can change it anytime. <a class="badge" href="https://x.com/ShareX/status/2051684934868234331"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+    * Improved high DPI support.
+    * Added support for <kbd>Ctrl</kbd> + <kbd>Enter</kbd> keybind to insert new lines in text and speech balloon tools.
+    * Added "Font family" option to text and speech balloon tools.
+    * Added "Arrow style" option to the arrow tool. <a class="badge" href="https://x.com/ShareX/status/2051268896234029473"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+        * Classic: Similar style to the Legacy arrow tool; allows curving the arrow using the middle node.
+        * Modern: Bigger, modern-looking arrow but does not allow curving.
+    * Also added curving support to the line tool.
+    * Added "Insert image" dialog for when the user pastes or drags and drops an image; allows these actions:
+        * Insert image in the center.
+        * Insert image below.
+        * Insert image on the right side.
+    * Added "Quick crop" option; it lets the user crop quickly similar to the Legacy Image Editor. This option is enabled by default.
+    * Swapped <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> keybind with <kbd>Ctrl</kbd> + <kbd>C</kbd>. Pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> now copies the image instead of copying the shape.
+    * Freehand tool no longer allows selection, letting the user draw easily without selecting previous drawings. The Select tool still allows selecting.
+    * "Save image" button is now usable even when the image file has not been saved previously.
 * Notification click action "Open link" now also opens files as a fallback.
 * Recent links now also support opening files.
 
