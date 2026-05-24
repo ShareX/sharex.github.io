@@ -375,7 +375,9 @@ body {
     text-align: center;
 
     img {
-        margin: 0px 0px $container-padding 0px;
+        max-width: min(100%, 70vw);
+        border-radius: 7px;
+        margin: 0px 0px $container-padding-double 0px;
         box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
     }
 
