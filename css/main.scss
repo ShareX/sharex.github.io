@@ -391,11 +391,26 @@ body {
     padding-bottom: $container-padding;
     color: $text-color-alt;
 
+    .container {
+        display: flex;
+        align-items: flex-start;
+        gap: $container-padding-double;
+    }
+
+    .feature-section-header {
+        flex: 0 0 310px;
+    }
+
+    .feature-section-content {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
     h2 {
         font-family: $font-header;
         font-size: 40px;
-        margin: $container-padding-half 0px $container-padding 0px;
-        text-align: center;
+        margin: 4px 0px $container-padding-half 0px;
+        text-align: left;
 
         a {
             color: $text-color-alt;
@@ -411,20 +426,19 @@ body {
     }
 
     .feature-intro {
-        max-width: 850px;
-        margin: -$container-padding-half auto $container-padding;
-        font-size: 20px;
+        margin: 0px;
+        font-size: 18px;
         font-weight: 300;
         line-height: 1.6;
-        text-align: center;
+        text-align: left;
     }
 
     h4 {
-        font-size: 22px;
-        margin-bottom: $container-padding;
+        font-size: 18px;
+        margin: 0px 0px $container-padding-half 6px;
         padding-bottom: 8px;
-        text-align: center;
-        background: $header-line-center;
+        text-align: left;
+        background: $header-line;
         background-size: 100% 1px;
 
         &:nth-of-type(n + 2) {
@@ -432,14 +446,58 @@ body {
         }
     }
 
+    .row {
+        justify-content: flex-start;
+        margin-right: -6px;
+        margin-left: -6px;
+    }
+
     .row div {
-        font-size: 18px;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: none;
+        font-size: 17px;
         font-weight: 300;
-        margin-bottom: $container-padding-half;
+        line-height: 1.35;
+        margin: 0px 6px 12px;
+        padding: 7px 14px;
+        background-color: rgba(255, 255, 255, 0.035);
+        border: 1px solid rgba(255, 255, 255, 0.055);
+        border-radius: 6px;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
+
+        > a {
+            text-decoration-color: rgba(255, 255, 255, 0.35);
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        .container {
+            display: block;
+        }
+
+        .feature-section-header {
+            margin-bottom: $container-padding;
+        }
+
+        h2,
+        .feature-intro {
+            text-align: center;
+        }
+
+        .row {
+            justify-content: center;
+        }
+
+        h4 {
+            margin-left: 0px;
+            text-align: center;
+            background: $header-line-center;
+            background-size: 100% 1px;
+        }
     }
 }
 
