@@ -1,4 +1,4 @@
-﻿---
+---
 layout: markdown
 title: Image Editor
 ---
@@ -30,7 +30,7 @@ When the editor is opened as an after-capture task, **Enter** continues the task
 
 ### Select
 
-Select and move existing annotations. After selecting an annotation, you can move it with the mouse or arrow keys, duplicate it, delete it, change its layer order, or adjust the available tool options in the second toolbar.
+Select and move existing annotations. After selecting an annotation, you can move it with the mouse or arrow keys, duplicate it, delete it, change its layer order, or adjust the available tool options in the bottom toolbar.
 
 ### Rectangle
 
@@ -64,6 +64,18 @@ Draw a speech balloon with text inside it. The balloon supports border color, fi
 
 Place auto-incrementing numbered markers. Use this for step-by-step screenshots where each marker identifies an action or area.
 
+### Image
+
+Insert another image as an annotation. You can also paste or drag image files into the editor.
+
+### Emoji
+
+Insert an emoji as an annotation. Use it when you want a quick visual marker, reaction, or decorative symbol without importing an image file manually.
+
+### Cursor
+
+Insert a cursor graphic as an annotation. This is useful for tutorial screenshots where you want to show where the pointer should be, even if the cursor was not captured or needs to be placed more clearly.
+
 ### Highlight
 
 Draw a translucent highlight region. It is useful for emphasizing text or UI areas without fully covering the underlying image.
@@ -95,10 +107,6 @@ Crop the image to a selected area. The crop overlay can be moved or resized befo
 ### Cut Out
 
 Remove a horizontal or vertical strip from the image and join the remaining parts. This is useful for shortening tall or wide screenshots by removing irrelevant space.
-
-### Image
-
-Insert another image as an annotation. You can also paste or drag image files into the editor.
 
 ## Keybinds
 
