@@ -3,7 +3,7 @@ layout: markdown
 title: Keybinds
 ---
 
-## Region capture / Image editor
+## Region capture / Legacy image editor
 
 ### Common
 
