@@ -391,7 +391,7 @@ body {
     padding-bottom: $container-padding;
     color: $text-color-alt;
 
-    h3 {
+    h2 {
         font-family: $font-header;
         font-size: 40px;
         margin: $container-padding-half 0px $container-padding 0px;
@@ -408,6 +408,15 @@ body {
             margin-right: 15px;
             padding-bottom: 5px;
         }
+    }
+
+    .feature-intro {
+        max-width: 850px;
+        margin: -$container-padding-half auto $container-padding;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.6;
+        text-align: center;
     }
 
     h4 {
