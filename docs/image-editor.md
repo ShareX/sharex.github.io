@@ -3,6 +3,8 @@ layout: markdown
 title: Image Editor
 ---
 
+![](/img/screenshots/ImageEditor.png)
+
 ## What is the ShareX image editor?
 
 The ShareX image editor is a built-in screenshot annotation and image editing tool. It lets you annotate screenshots, hide sensitive information, crop images, add callouts, insert text, and prepare captures before they are copied, saved, uploaded, or passed to the next after-capture task.
