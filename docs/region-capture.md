@@ -47,8 +47,6 @@ Freehand lets you draw a custom-shaped region. Use it when the part of the scree
 
 ## Region capture tools
 
-Region capture includes tools for selecting the capture area and drawing annotations before the capture is completed.
-
 ### Rectangle
 
 Draw a rectangular annotation or selection. Rectangle annotations are useful for highlighting windows, buttons, panels, and other rectangular UI elements.
