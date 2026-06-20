@@ -4,6 +4,28 @@ $(document).ready(function() {
 
         GetLatestReleaseInfo();
     });
+
+    $(".sharex-download-final").on("click", function() {
+        $(".sharex-download").trigger("mouseenter");
+
+        let downloadPanel = $("#download-panel");
+        $(".jumbotron-main")[0].scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+        if (downloadPanel.hasClass("show")) {
+            downloadPanel.removeClass("show");
+            downloadPanel.css("height", "");
+            $(".sharex-download").attr("aria-expanded", "false");
+
+            requestAnimationFrame(function() {
+                downloadPanel.collapse("show");
+            });
+        } else {
+            downloadPanel.collapse("show");
+        }
+    });
 });
 
 function GetLatestReleaseInfo() {

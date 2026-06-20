@@ -501,6 +501,32 @@ body {
     }
 }
 
+.container-download-cta {
+    padding-top: $container-padding-double;
+    padding-bottom: $container-padding-double;
+    text-align: center;
+    color: $text-color-alt;
+
+    h2 {
+        font-family: $font-header;
+        font-size: 48px;
+        margin-bottom: $container-padding;
+    }
+
+    p {
+        max-width: 720px;
+        margin: 0px auto $container-padding;
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 1.5;
+    }
+
+    .btn {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
 .container-image-effects {
     padding-top: $container-padding-half;
     padding-bottom: $container-padding;
