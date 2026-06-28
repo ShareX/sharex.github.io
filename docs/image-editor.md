@@ -25,11 +25,11 @@ You can open the image editor in several ways, depending on whether you want to 
 - **Quick task menu**: If you use the quick task menu after capture, choose a task that includes **Annotate**.
 - **Tools menu**: Open **Tools** -> **Image editor** to start the editor manually. If no image is supplied, the editor opens its startup flow so you can choose or create an image.
 - **Hotkey**: Create or edit a hotkey and set its task to **Tools** -> **Image editor**. If the hotkey is run with a file path, ShareX opens that image; otherwise it opens the editor startup flow.
-- **Main window task list**: Right click an image task in the main window and select **Edit image**.
+- **Main window task list**: Right-click an image task in the main window and select **Edit image**.
 - **Main window thumbnail action**: If thumbnail click actions are configured to **Edit image**, clicking the thumbnail of an image task opens it in the editor.
-- **Task notification**: Middle click the task-completed notification at the bottom right. The default middle-click action is **Annotate image**. This can be changed from **Task settings** -> **General** -> notification click actions.
+- **Task notification**: Middle-click the task-completed notification in the lower-right corner. The default middle-click action is **Annotate image**. This can be changed under **Task settings** -> **General** -> notification click actions.
 - **History windows**: Open **History** or **Image history**, select an image item, and use the edit image action.
-- **Windows Explorer context menu**: If ShareX shell integration is enabled, right click an image file in Explorer and choose **Edit with ShareX**.
+- **Windows Explorer context menu**: If ShareX shell integration is enabled, right-click an image file in Explorer and choose **Edit with ShareX**.
 - **Command line**: Run ShareX with `-ImageEditor "path\to\image.png"` to open a specific image in the editor.
 
 When the editor is opened as an after-capture task, **Enter** continues the task with your edits. **Esc** cancels the task. The bottom toolbar also contains buttons to continue, cancel, copy, save, save as, pin to screen, and upload.
@@ -269,7 +269,7 @@ If the editor was opened from an after-capture task, continuing applies the edit
 | <kbd>Right click</kbd> while crop is active | Cancel crop |
 | <kbd>Right click</kbd> while drawing crop or cut out | Cancel active region drawing |
 
-### Right click context menu
+### Right-click context menu
 
 | Keybind | Description |
 | --- | --- |

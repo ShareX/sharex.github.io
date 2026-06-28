@@ -5,7 +5,7 @@ title: Background remover
 
 ## What is the background remover tool?
 
-The background remover tool uses an AI model to remove the background from an image. ShareX does not include these models because they would significantly increase the setup size, so you must download a model separately before using this tool.
+The background remover tool uses an AI model to remove the background from an image. ShareX does not include these models because they would significantly increase the installer size, so you must download a model separately before using this tool.
 
 ## Downloading a model
 

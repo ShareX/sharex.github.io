@@ -7,7 +7,7 @@ title: Region Capture
 
 Region capture is the ShareX capture mode for selecting a specific part of the screen. Instead of capturing the entire monitor or active window, you can draw a rectangle, ellipse, or freehand region around only the area you need.
 
-Region capture is useful for screenshots of buttons, dialogs, menus, error messages, form fields, code snippets, sections of webpages, or any other area where a full-screen capture would include unnecessary content. You can also draw annotations during the capture, copy position and size information, reuse the last selected region, or capture multiple regions depending on your task settings.
+Region capture is useful for screenshots of buttons, dialogs, menus, error messages, form fields, code snippets, sections of web pages, or any other area where a full-screen capture would include unnecessary content. You can also draw annotations during the capture, copy position and size information, reuse the last selected region, or capture multiple regions depending on your task settings.
 
 ## Opening region capture
 
@@ -27,7 +27,7 @@ A typical region capture workflow in ShareX is:
 4. Release the mouse button or press **Insert** to finish the selection. ShareX captures the selected region immediately.
 5. Let ShareX continue with the configured after-capture tasks, such as copying, saving, opening in the image editor, pinning to screen, OCR, or uploading.
 
-If **Multi region mode** is enabled, selecting a region does not immediately finish the capture. You can create, move, resize, and adjust regions, then press **Enter** or double click to capture them.
+If **Multi region mode** is enabled, selecting a region does not immediately finish the capture. You can create, move, resize, and adjust regions, then press **Enter** or double-click to capture them.
 
 If you cancel the selection before it is completed, ShareX returns to the previous state without creating a capture.
 
@@ -123,11 +123,11 @@ Crop the capture to the selected area.
 
 Remove part of the capture, usually to shorten an image or remove irrelevant space.
 
-## Capturing monitors and fullscreen
+## Capturing monitors and the full screen
 
-While region capture is open, you can quickly capture a monitor or fullscreen without manually dragging a region:
+While region capture is open, you can quickly capture a monitor or the full screen without manually dragging a region:
 
-- Press **Space** to capture fullscreen.
+- Press **Space** to capture the full screen.
 - Press **1**, **2**, **3**, and so on to capture a specific monitor.
 - Press **~** to capture the active monitor.
 
@@ -168,7 +168,7 @@ These shortcuts are useful on multi-monitor setups or when you start region capt
 | <kbd>Mouse wheel</kbd> | Change magnifier size |
 | <kbd>Hold Ctrl</kbd> | Disable shape selection to allow drawing on top of another shape |
 
-### While creating region
+### While creating a region
 
 | Keybind | Description |
 | --- | --- |
@@ -178,7 +178,7 @@ These shortcuts are useful on multi-monitor setups or when you start region capt
 | <kbd>Hold Shift</kbd> | Proportional resizing |
 | <kbd>Hold Alt</kbd> | Snap selection to preset sizes |
 
-### When cursor is on top of a shape
+### When the cursor is on top of a shape
 
 | Keybind | Description |
 | --- | --- |
@@ -195,7 +195,7 @@ These shortcuts are useful on multi-monitor setups or when you start region capt
 | <kbd>Space</kbd> | Fullscreen capture |
 | <kbd>1</kbd> / <kbd>2</kbd> / <kbd>3</kbd> ... <kbd>0</kbd> | Specific monitor capture |
 | <kbd>~</kbd> | Active monitor capture |
-| <kbd>Double left click</kbd> / <kbd>Enter</kbd> | If multi-region mode is enabled, then capture regions |
+| <kbd>Double left click</kbd> / <kbd>Enter</kbd> | Capture selected regions when multi-region mode is enabled |
 
 ### Tools
 

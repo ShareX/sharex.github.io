@@ -19,7 +19,7 @@ Loads ShareX in portable mode. In portable mode, the application will create a f
 
 ### -silent or -s
 
-Loads ShareX to the tray without showing the main window. Only if the "Show tray icon" setting is enabled.
+Loads ShareX to the tray without showing the main window. This works only if the "Show tray icon" setting is enabled.
 
 ### -sandbox
 
@@ -29,7 +29,7 @@ ShareX will open with default settings and won't save any settings (ApplicationC
 
 You can use any hotkey action as a command-line argument.
 
-Example: `-RectangleRegion`, `-PrintScreen`, `-ClipboardUpload`, `-ScreenColorPicker` etc.
+Examples: `-RectangleRegion`, `-PrintScreen`, `-ClipboardUpload`, and `-ScreenColorPicker`.
 
 You can find the full list of hotkey actions in `public enum HotkeyType` [here](https://github.com/ShareX/ShareX/blob/master/ShareX/Enums.cs).
 
@@ -59,7 +59,7 @@ This executes your custom hotkey with the matching description.
 
 ### -task "Hotkey description"
 
-This command must be used together with a file or URL path. The upload will use this task setting. Only the first matched task command will be used and the rest will be ignored. The position of the task command doesn't matter.
+This command must be used together with a file or URL path. The upload will use this task setting. Only the first matching task command will be used; the rest will be ignored. The position of the task command doesn't matter.
 
 Example: `"C:\\ShareX.png" -task "Upload to Imgur"`
 
@@ -85,11 +85,11 @@ The specified .sxie file path is used to add an image effect configuration to Sh
 
 ### /SILENT
 
-When setup is silent, the wizard and the background window are not displayed, but the installation progress window is.
+In silent mode, the wizard and background window are hidden, but the installation progress window is shown.
 
 ### /VERYSILENT
 
-When setup is very silent, the installation progress window is also not displayed.
+In very silent mode, the installation progress window is also hidden.
 
 ### /NORUN
 
@@ -101,7 +101,7 @@ This command ensures that the setup will not apply initial tasks again, such as 
 
 ## Registry
 
-These registry settings should reside in either the `HKEY_LOCAL_MACHINE\SOFTWARE\ShareX` key or the `HKEY_CURRENT_USER\SOFTWARE\ShareX` key. `HKEY_LOCAL_MACHINE` has priority over `HKEY_CURRENT_USER` while reading the settings.
+These registry settings should reside in either the `HKEY_LOCAL_MACHINE\SOFTWARE\ShareX` key or the `HKEY_CURRENT_USER\SOFTWARE\ShareX` key. `HKEY_LOCAL_MACHINE` takes priority over `HKEY_CURRENT_USER` when the settings are read.
 
 ### DisableUpdateCheck `REG_DWORD`
 
@@ -113,7 +113,7 @@ Disables uploads application-wide.
 
 ### DisableLogging `REG_DWORD`
 
-Disables debug log file saving.
+Disables saving debug log files.
 
 ### PersonalPath `REG_SZ`
 
@@ -121,11 +121,11 @@ Overrides the personal path of ShareX, which by default is the `%UserProfile%\Do
 
 ## Context menu
 
-By using ShareX command-line arguments, you can add custom actions to the Windows context menu.
+Using ShareX command-line arguments, you can add custom actions to the Windows context menu.
 
 The ShareX app uses the registry to add "Upload with ShareX" and "Edit with ShareX" options to the Windows context menu. Similarly, you can modify the registry to add other ShareX actions.
 
-For example, to add a "Pin to screen" button for image files, you can use the following registry files:
+For example, to add a "Pin to screen" entry for image files, you can use the following registry files:
 
 **AddPinToScreen.reg**
 ```

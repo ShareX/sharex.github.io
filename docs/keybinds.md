@@ -28,7 +28,7 @@ title: Keybinds
 | <kbd>Mouse wheel</kbd> | Change magnifier size |
 | <kbd>Hold Ctrl</kbd> | Disable shape selection to allow drawing on top of another shape |
 
-##### While creating region
+#### While creating a region
 
 | Keybind | Description |
 | --- | --- |
@@ -38,7 +38,7 @@ title: Keybinds
 | <kbd>Hold Shift</kbd> | Proportional resizing |
 | <kbd>Hold Alt</kbd> | Snap selection to preset sizes |
 
-##### When cursor is on top of a shape
+#### When the cursor is on top of a shape
 
 | Keybind | Description |
 | --- | --- |
@@ -55,7 +55,7 @@ title: Keybinds
 | <kbd>Space</kbd> | Fullscreen capture |
 | <kbd>1</kbd> / <kbd>2</kbd> / <kbd>3</kbd> ... <kbd>0</kbd> | Specific monitor capture |
 | <kbd>~</kbd> | Active monitor capture |
-| <kbd>Double left click</kbd> / <kbd>Enter</kbd> | If multi-region mode is enabled, then capture regions |
+| <kbd>Double left click</kbd> / <kbd>Enter</kbd> | Capture selected regions when multi-region mode is enabled |
 
 ### Image editor only
 

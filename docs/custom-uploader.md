@@ -5,27 +5,27 @@ title: Custom uploader
 
 ## What is a custom uploader?
 
-The custom uploader system in ShareX lets users upload images/text/files to hosting services or shorten/share URLs. This feature is mainly used by users who host their own services.
+The custom uploader system in ShareX lets users upload images, text, and files to hosting services or shorten and share URLs. This feature is mainly used by users who host their own services.
 
-## Export / Import
+## Export and import
 
-You can export your custom uploader with the `.sxcu` extension, which allows users to just double-click that file to use the custom uploader.
+You can export your custom uploader with the `.sxcu` extension. Other users can then import it by double-clicking the file.
 
-If the destination type is configured, then ShareX can also set this custom uploader as the selected custom uploader and change the current destination to it, so users won't need any additional configuration.
+If the destination type is configured, ShareX can also select the imported custom uploader and change the current destination to it, so users won't need any additional configuration.
 
 ## Name
 
-In the custom uploaders list, this name will be used. The `Name` field is optional. When it is left empty, ShareX will automatically use the request URL domain as the name. It is suggested to leave the name field empty unless you have multiple uploaders using the same domain.
+The `Name` field controls the name shown in the custom uploaders list. This field is optional. When it is left empty, ShareX automatically uses the request URL domain as the name. We suggest leaving the field empty unless you have multiple uploaders that use the same domain.
 
 For example, if the request URL is `https://example.com/upload.php` and the name field is empty, then `example.com` will be used in the custom uploaders list.
 
 ## Destination type
 
-Destination type is used when users import a custom uploader by double-clicking the `.sxcu` file.
+The destination type is used when users import a custom uploader by double-clicking the `.sxcu` file.
 
 ## Method
 
-List of HTTP request methods available:
+The following HTTP request methods are available:
 
 * GET
 * POST
@@ -43,7 +43,7 @@ Example: `https://example.com/upload.php`
 
 ## URL parameters
 
-Parameters will be used to create a URL [query string](https://en.wikipedia.org/wiki/Query_string).
+Parameters are used to create a URL [query string](https://en.wikipedia.org/wiki/Query_string).
 
 For text uploaders or URL shorteners, the `{input}` syntax can be used as a value to supply input text or a URL.
 
@@ -56,9 +56,9 @@ For example, if you set parameters like this:
 | api_key | eUM14R4g4pMS |
 | private | true |
 
-Then the query string will be appended to the request URL like this when sending the request:
+The query string will then be appended to the request URL when the request is sent:
 
-`https://example.com/upload.php?api_key=eUM14R4g4pMs&private=true`
+`https://example.com/upload.php?api_key=eUM14R4g4pMS&private=true`
 
 ## Headers
 
@@ -96,7 +96,7 @@ Supported request body types:
 * XML (application/xml)
 * Binary
 
-Most of the time, if the API request method is `GET`, then `No body` will be used with parameters. If the request method is `POST`, then `Form data (multipart/form-data)` is used. This is not always the case, so you must check the API documentation to make sure what the request expects.
+Most of the time, `No body` is used with parameters when the API request method is `GET`. When the request method is `POST`, `Form data (multipart/form-data)` is commonly used. This is not always the case, so check the API documentation to determine what the request expects.
 
 ## Body arguments
 
@@ -106,7 +106,7 @@ For a text uploader or URL shortener, the `{input}` syntax can be used as a valu
 
 This field can only be used when `Body` is `Form data (multipart/form-data)`.
 
-For example, in this HTML code: `<input type="file" name="file_image">`, the file form name is `file_image`.
+For example, in the HTML snippet `<input type="file" name="file_image">`, the file form name is `file_image`.
 
 ## URL
 
@@ -115,7 +115,7 @@ For example, in this HTML code: `<input type="file" name="file_image">`, the fil
 * Thumbnail URL
 * Error message
 
-These text boxes can be used to parse the response to get the URL result. If the response only contains a URL, then there is no need to write anything in the URL text box.
+These text boxes can be used to parse URLs from the response. If the response contains only a URL, you do not need to enter anything in the URL text box.
 
 Make sure to also parse the error message so ShareX can show a user-friendly error message.
 
@@ -134,19 +134,19 @@ This syntax is usable in the following sections, with a few exceptions:
 * Deletion URL
 * Error message
 
-For example, syntaxes that involve parsing the response are only usable in URL sections, as expected.
+For example, syntax that parses the response can be used only in URL sections.
 
-Note: If you would like to use `{`, `}`, `|`, or `\` characters in any of the syntax-supported sections, then you can escape them with the `\` character. For example: `\{`
+Note: To use `{`, `}`, `|`, or `\` characters in any section that supports syntax, escape them with the `\` character. For example: `\{`
 
-You can find a list of all available syntaxes with example usages at the bottom.
+You can find a list of all available syntax expressions, with usage examples, below.
 
 ---
 
 ### response
 
-If the response only contains a file name (or ID) and you would like to append it to the domain, then you can use this syntax.
+If the response contains only a file name or ID and you want to append it to the domain, use this syntax.
 
-If the response contains a full URL, then you don't have to use this syntax because an empty URL text box will use the response automatically.
+If the response contains a full URL, you don't need to use this syntax because an empty URL text box uses the response automatically.
 
 Syntax:
 
@@ -164,7 +164,7 @@ https://example.com/{response}
 
 ### responseurl
 
-Can be used to get the redirection URL. If no redirection happened, then it will be just the request URL.
+Can be used to get the redirection URL. If no redirection occurred, it will be the request URL.
 
 Syntax:
 
@@ -275,7 +275,7 @@ Example:
 
 ### regex
 
-If the response is not [JSON](https://en.wikipedia.org/wiki/JSON) or [XML](https://en.wikipedia.org/wiki/XML), then you can use a [Regular expression (Regex)](https://en.wikipedia.org/wiki/Regular_expression) to parse the response text.
+If the response is not [JSON](https://en.wikipedia.org/wiki/JSON) or [XML](https://en.wikipedia.org/wiki/XML), you can use a [regular expression (regex)](https://en.wikipedia.org/wiki/Regular_expression) to parse the response text.
 
 When writing a regex pattern, don't forget to escape `{`, `}`, `|`, and `\` characters with `\`.
 
@@ -311,7 +311,7 @@ Example with group name:
 
 ### input
 
-If you are using a text custom uploader, then this syntax will be replaced with the text you are going to upload. If it is a URL shortener or URL sharing service, then the syntax will be replaced with the URL. This syntax is mainly used as an argument value.
+For a text custom uploader, this syntax is replaced with the text you are going to upload. For a URL shortener or URL-sharing service, it is replaced with the URL. This syntax is mainly used as an argument value.
 
 Syntax:
 

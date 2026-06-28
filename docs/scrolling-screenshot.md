@@ -5,7 +5,7 @@ title: Scrolling screenshot
 
 ## What is a scrolling screenshot?
 
-A scrolling screenshot, also known as a scrolling capture, is a feature in ShareX that allows you to capture an entire webpage or document that extends beyond the visible screen. It automatically combines multiple screenshots into a single image, giving you a complete view of the content.
+A scrolling screenshot, also known as a scrolling capture, is a feature in ShareX that allows you to capture an entire web page or document that extends beyond the visible screen. It automatically combines multiple screenshots into a single image, giving you a complete view of the content.
 
 ## How to take a scrolling screenshot?
 
@@ -21,26 +21,26 @@ To take a scrolling screenshot in ShareX, follow these steps:
 
 ## Status indicator
 
-After the scrolling capture is complete, a status indicator is shown at the top-right corner.
+After the scrolling capture is complete, a status indicator appears in the upper-right corner.
 
 The indicator colors have the following meanings:
 
 * Green: The capture is successful.
-* Yellow: The capture is partially successful. It couldn't perfectly match one or more images and used the best guess to combine them.
+* Yellow: The capture is partially successful. ShareX couldn't perfectly match one or more images and used the best available match to combine them.
 * Red: The first two images couldn't be combined, and as a result, the scrolling capture was automatically stopped.
 
 ## How does scrolling capture work in ShareX?
 
-1. ShareX takes an initial screenshot of the visible portion of the webpage/document.
+1. ShareX takes an initial screenshot of the visible portion of the web page or document.
 2. It then compares subsequent screenshots with the previous one to identify any changes.
 3. If changes are detected, ShareX cuts the top part of the new screenshot and appends the bottom part to the end of the previous screenshot.
-4. This process continues until the entire webpage/document is captured.
+4. This process continues until the entire web page or document is captured.
 
 ## Common problems and solutions
 
 ### Static elements
 
-If there are static elements on the webpage, such as footers or sidebars, ShareX may struggle to find an exact match between screenshots. As a result, the scrolling capture may fail or produce inaccurate results.
+If there are static elements on the web page, such as footers or sidebars, ShareX may struggle to find an exact match between screenshots. As a result, the scrolling capture may fail or produce inaccurate results.
 
 To avoid this issue, we recommend making a custom region selection by holding the left mouse button and dragging to capture only the desired content. This way, you can exclude any static elements that may interfere with the scrolling capture process.
 
@@ -52,6 +52,6 @@ Similar to the previous problem, making a custom region selection can help exclu
 
 ### Hover-related issues
 
-Another common challenge in scrolling capture is related to hover effects. When scrolling, if the cursor moves over a section of the webpage with hover effects, it can trigger changes in appearance, such as background color or highlighting. This can result in inaccurate or inconsistent captures.
+Another common challenge in scrolling capture is related to hover effects. If the cursor moves over a section of the web page with hover effects while scrolling, it can trigger changes in appearance, such as background color or highlighting. This can result in inaccurate or inconsistent captures.
 
-To mitigate this issue, it is recommended to move the cursor away from the content, preferably to the top of the scroll bars. By doing so, you can minimize the chances of triggering hover effects during the scrolling capture process.
+To mitigate this issue, move the cursor away from the content, preferably to the top of the scrollbar. This minimizes the chance of triggering hover effects during the scrolling capture process.

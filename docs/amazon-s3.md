@@ -5,36 +5,37 @@ title: Amazon S3 guide
 
 ## How to configure Amazon S3 and use it in ShareX
 
-### Get AWS account
+### Get an AWS account
 
 * Sign in or register for an Amazon Web Services account: [aws.amazon.com](https://aws.amazon.com)
 
 ### Create policy
 
-We are going to create this policy to increase security by granting only the PutObject permission, which is used when uploading files.
+We are going to create this policy to improve security by granting only the permissions required to upload files.
 
 * Open [policies page](https://console.aws.amazon.com/iam/home?#/policies)
 * Press `Create policy`
-* Click `Service`, type `S3` and then select `S3`
-* Click `Actions`, type `PutObject` and then select both `PutObject` and `PutObjectAcl` to grant only the PutObject permission
-* Click `Resources`, make sure `Specific` is selected and then click the `Add ARN` link
+* Click `Service`, type `S3`, and then select `S3`
+* Click `Actions`, type `PutObject`, and then select both `PutObject` and `PutObjectAcl`
+* Click `Resources`, make sure `Specific` is selected, and then click the `Add ARN` link
 * Select `Any` to give access to all your buckets
 
 **Note:** You can uncheck `Any` later if you prefer to use a specific bucket name instead.
+
 * Select `Any` for the object name as well
 * Press `Add` in the `Add ARN(s)` dialog
 * Press `Review policy`
-* Give a name for the policy, for example `ShareX_PutObject`
+* Give the policy a name, for example, `ShareX_PutObject`
 * Press `Create policy`
 
 ### Create group
 
 * Open [groups page](https://console.aws.amazon.com/iam/home?#/groups)
 * Press `Create New Group`
-* Give a name for the group, for example `ShareX`
+* Give the group a name, for example, `ShareX`
 * Press `Next Step`
 * Click `Policy Type` dropdown filter and select `Customer Managed`
-* Click the checkbox of your recently created policy which should be named `ShareX_PutObject` if you used that example name
+* Select the checkbox for your recently created policy, which should be named `ShareX_PutObject` if you used that example name
 * Press `Next Step`
 * Press `Create Group`
 
@@ -45,17 +46,18 @@ We are going to create this policy to increase security by granting only the Put
 * Type the username you want
 * In the access type section, click the checkbox for `Programmatic access`
 * Click `Next: Permissions`
-* Click the checkbox of your recently created group which should be named `ShareX` if you used that example name
+* Select the checkbox for your recently created group, which should be named `ShareX` if you used that example name
 * Press `Next: Tags`
 * Press `Next: Review`
 * Press `Create user`
 
 **Important:** On this page, either make a record of `Access key ID` and `Secret access key` somewhere or press `Download .csv` to save them as a file. We need these later in ShareX.
+
 * Press `Close`
 
 ### [Optional] Secure your account
 
-You don't need to do these, but it is suggested to keep your account secure.
+These steps are optional but recommended to help keep your account secure.
 
 * Open [Identity and Access Management page (Dashboard)](https://console.aws.amazon.com/iam/home)
 * Make sure all security status items are green on this page
@@ -69,17 +71,19 @@ The bucket is where your uploaded files will be stored.
 * Open [S3 Management Console](https://s3.console.aws.amazon.com/s3/home)
 * Press `Create bucket`
 
-**Important:** If you are going to use your own domain with S3 then the bucket name should be the same as your CNAME. For example, if you want to use this URL: `https://i.example.com/image.png` then bucket name should be `i.example.com`. [Click here for more info.](http://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html#VirtualHostingCustomURLs)
+**Important:** If you are going to use your own domain with S3, the bucket name should be the same as your CNAME. For example, if you want to use the URL `https://i.example.com/image.png`, the bucket name should be `i.example.com`. [Click here for more information.](http://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html#VirtualHostingCustomURLs)
+
 * Type the bucket name you want
 * Select the region you want the bucket to be hosted in
 
 **Tip:** You can use this website to check the ping of regions: [cloudping.info](https://www.cloudping.info)
-* If you want your uploaded files to be accessible by URL, then make sure `Block all public access` option is unchecked
+
+* If you want your uploaded files to be accessible by URL, make sure the `Block all public access` option is unchecked
 * Press `Create bucket`
 
 ### [Optional] Configure DNS for custom domain
 
-If you are going to use your own domain then you must configure DNS.
+If you are going to use your own domain, you must configure DNS.
 
 For example, assume that you are using [Cloudflare](https://www.cloudflare.com/), your bucket name is `i.example.com`, and it is stored in the `EU (Frankfurt)` region. Your DNS settings will then be:
 
@@ -87,21 +91,21 @@ For example, assume that you are using [Cloudflare](https://www.cloudflare.com/)
 * Name: `i`
 * Target: `i.example.com.s3.eu-central-1.amazonaws.com`
 
-You can find a list of region endpoints from `ShareX main window -> Destinations -> Destination settings -> Amazon S3 tab -> Endpoints`.
+You can find a list of regional endpoints under `ShareX main window -> Destinations -> Destination settings -> Amazon S3 tab -> Endpoints`.
 
-So the target should be `{bucketname}.{endpoint}`
+The target should be `{bucketname}.{endpoint}`.
 
 [Check here for more information.](http://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html#VirtualHostingCustomURLs)
 
 ### Configure ShareX Amazon S3 settings
 
-* From ShareX main window, open `Destinations -> Destination settings`
-* Select `Amazon S3` tab
-* Use `access key ID` and `secret access key` that you noted down previously
-* For the endpoints section select the region that you chose while creating the bucket
+* From the ShareX main window, open `Destinations -> Destination settings`
+* Select the `Amazon S3` tab
+* Enter the `Access key ID` and `Secret access key` that you noted previously
+* In the endpoints section, select the region that you chose while creating the bucket
 * Enter the bucket name you created
 * For the upload path, it is recommended to use `%y/%mo`, which creates subfolders such as `2020/04`
-* If you are using your own domain, then check `Use custom domain` and fill the text box, for example: `https://i.example.com`
+* If you are using your own domain, check `Use custom domain` and enter it in the text box, for example, `https://i.example.com`
 * You can now close the destination settings window
 * In the main window, make sure to select Amazon S3 as the destination for the image uploader, text uploader, and file uploader
 

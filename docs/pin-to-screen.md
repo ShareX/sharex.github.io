@@ -15,11 +15,11 @@ You can open Pin to Screen in several ways, depending on where the image comes f
 
 - **Tools menu**: Open **Tools** -> **Pin to screen**.
 - **Tools menu from screen**: Use **Tools** -> **Pin to screen (From screen)** to select an area and pin it immediately.
-- **Tools menu from clipboard**: Use **Tools** -> **Pin to screen (From clipboard)** to pin an image that is already copied to the clipboard.
+- **Tools menu from clipboard**: Use **Tools** -> **Pin to screen (From clipboard)** to pin an image that has already been copied to the clipboard.
 - **Tools menu from file**: Use **Tools** -> **Pin to screen (From file)** to choose an image file and pin it.
 - **After capture tasks**: Enable **Pin to screen** in the **After capture tasks** menu to pin captures automatically.
-- **Main window task list**: Right click an image task in the main window and select **Pin to screen**.
-- **History windows**: Open **History** or **Image history**, right click an image item, and select **Pin to screen**.
+- **Main window task list**: Right-click an image task in the main window and select **Pin to screen**.
+- **History windows**: Open **History** or **Image history**, right-click an image item, and select **Pin to screen**.
 - **Task notification**: Configure a notification click action to pin the completed image.
 - **Hotkey**: Create or edit a hotkey and set its task to **Tools** -> **Pin to screen**, **Pin to screen (From screen)**, **Pin to screen (From clipboard)**, or **Pin to screen (From file)**.
 
@@ -38,7 +38,7 @@ Pin to Screen is useful for many screenshot and productivity workflows:
 
 After an image is pinned, drag it with the left mouse button to move it. Use the mouse wheel or plus and minus keys to change its scale. Hold **Ctrl** while using the mouse wheel or plus and minus keys to change opacity.
 
-Pinned images can be closed with right click or **Escape**. Middle click resets the pinned image, double click minimizes it, and **Ctrl** + **C** copies it to the clipboard.
+Pinned images can be closed with a right-click or **Escape**. A middle-click resets the pinned image, a double-click minimizes it, and **Ctrl** + **C** copies it to the clipboard.
 
 ## Toolbar and options
 

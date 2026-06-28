@@ -7,45 +7,45 @@ title: Cloudflare R2 guide
 
 Create an account on [Cloudflare](https://cloudflare.com).
 
-Ensure that your domain is [added](https://developers.cloudflare.com/fundamentals/get-started/setup/add-site/) to Cloudflare and verified with NS (Name Server) records on your domain registrar. Your domain has to be hosted through Cloudflare; otherwise, this won't work, and you will be unable to use R2 / Cloudflare CDN to host your images.
+Ensure that your domain is [added](https://developers.cloudflare.com/fundamentals/get-started/setup/add-site/) to Cloudflare and verified with nameserver records at your domain registrar. Your domain must be hosted through Cloudflare; otherwise, you cannot use R2 and the Cloudflare CDN to host your images.
 
-While R2 is not free, it does have a generous free tier. The full pricing is available to see [here](https://developers.cloudflare.com/r2/platform/pricing/).
+While R2 is not free, it does have a generous free tier. See the [Cloudflare R2 pricing](https://developers.cloudflare.com/r2/platform/pricing/) page for details.
 
-### To create a bucket: 
+### Create a bucket
 
 1. Open [R2](https://dash.cloudflare.com/?to=/:account/r2).
 2. Select `Create bucket`.
-3. Type your bucket name of choice, and click `Create Bucket`.
+3. Enter a bucket name and click `Create Bucket`.
 4. Select `Settings`.
 5. Scroll to `Domain Access` and select `Connect Domain`.
 6. Type your domain and select `Continue`.
 7. Select `Connect domain`.
 
-This connects your domain to the R2 bucket and allows any objects inside that bucket to be accessible by the selected domain.
+This connects your domain to the R2 bucket and makes the objects in that bucket accessible through the selected domain.
 
-### To create an API token:
+### Create an API token
 
 1. Open [R2](https://dash.cloudflare.com/?to=/:account/r2).
-2. Select `Manage R2 API Tokens` on the top-right side of the dashboard.
+2. Select `Manage R2 API Tokens` in the upper-right corner of the dashboard.
 3. Select `Create API token`.
 4. Select the pencil icon or `R2 Token` text to edit your API token name.
 5. Under `Permissions`, select `Read` or `Edit` for your token.
 6. Select `Create API Token`.
-7. Save a copy of your `Access Key ID` and `Secret access key` for the next step.
+7. Save a copy of your `Access Key ID` and `Secret Access Key` for the next step.
 
-### To configure uploading with ShareX: 
+### Configure uploads in ShareX
 
-1. In `Destinations`, select `Destination Settings`.
+1. In `Destinations`, select `Destination settings`.
 2. Scroll down to `Amazon S3` and select it.
-3. Using the `Access Key ID` and `Secret access key`, fill in the two top boxes.
-4. Select `Endpoint:` and type `<ACCOUNT_ID>.r2.cloudflarestorage.com`. (You can find your account ID on the right-hand side of your [Dashboard](https://dash.cloudflare.com/?to=/:account/r2).)
+3. Enter the `Access Key ID` and `Secret Access Key` in the first two boxes.
+4. In `Endpoint:`, enter `<ACCOUNT_ID>.r2.cloudflarestorage.com`. You can find your account ID on the right-hand side of your [Dashboard](https://dash.cloudflare.com/?to=/:account/r2).
 5. Set `Region:` to `auto`.
-6. Fill `Bucket name:` with the bucket name you picked on Cloudflare.
-7. Change `Upload path:` to your preference. 
-8. Update `Use custom domain:` to the domain that you selected in the first step.
+6. Enter the bucket name you chose on Cloudflare in `Bucket name:`.
+7. Set `Upload path:` to your preferred path.
+8. Set `Use custom domain:` to the domain that you selected when creating the bucket.
 9. Uncheck `Set public-read ACL on file`.
 10. Ignore the rest of the settings.
-11. In `Destinations`, select `Image uploader:` and change it to `File Uploader -> Amazon S3`.
+11. In `Destinations`, select `Image uploader:` and change it to `File uploader -> Amazon S3`.
 12. Take a screenshot and ensure that it uploads correctly.
 
 Now you are ready to use [Cloudflare R2](https://www.cloudflare.com/products/r2) in ShareX!
