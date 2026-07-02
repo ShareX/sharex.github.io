@@ -1,6 +1,7 @@
 ---
 layout: markdown
 title: Cloudflare R2 guide
+description: Learn how to configure Cloudflare R2 as a ShareX upload destination using an R2 bucket, API token, custom domain, and Amazon S3 settings.
 ---
 
 ## How to configure Cloudflare R2 and use it in ShareX

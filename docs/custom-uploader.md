@@ -1,6 +1,7 @@
 ---
 layout: markdown
 title: Custom uploader
+description: Learn how to create ShareX custom uploaders, configure requests, headers and response parsing, use syntax, and import or export SXCU files.
 ---
 
 ## What is a custom uploader?

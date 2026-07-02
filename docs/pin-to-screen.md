@@ -1,6 +1,7 @@
 ---
 layout: markdown
 title: Pin to Screen
+description: Learn how to keep screenshots visible with ShareX Pin to Screen, open images from different sources, adjust them, and use keyboard shortcuts.
 ---
 
 ## What is Pin to Screen?

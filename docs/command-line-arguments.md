@@ -1,6 +1,7 @@
 ---
 layout: markdown
 title: Command line arguments
+description: Reference ShareX command-line arguments, setup switches, registry settings, Windows context-menu actions, workflows, and portable paths.
 ---
 
 ## ShareX CLI

@@ -1,6 +1,7 @@
 ---
 layout: markdown
 title: OCR
+description: Learn how ShareX OCR converts text in images and how to install additional Windows OCR languages for text recognition.
 ---
 
 ## What is OCR?

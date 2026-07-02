@@ -1,6 +1,7 @@
 ---
 layout: markdown
 title: Google Cloud Storage guide
+description: Learn how to configure Google Cloud Storage as a ShareX upload destination, including projects, buckets, permissions, and custom domains.
 ---
 
 ## How to configure Google Cloud Storage and use it in ShareX

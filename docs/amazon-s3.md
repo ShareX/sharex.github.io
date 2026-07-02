@@ -1,6 +1,7 @@
 ---
 layout: markdown
 title: Amazon S3 guide
+description: Learn how to configure Amazon S3 as a ShareX upload destination, including IAM permissions, bucket setup, custom domains, and upload settings.
 ---
 
 ## How to configure Amazon S3 and use it in ShareX

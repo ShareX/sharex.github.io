@@ -1,6 +1,7 @@
 ---
 layout: markdown
 title: Keybinds
+description: Reference keyboard and mouse shortcuts for ShareX region capture, the image editor, annotation tools, and Pin to Screen.
 ---
 
 ## Region capture / Legacy image editor
