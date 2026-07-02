@@ -3,6 +3,63 @@ layout: markdown
 title: Changelog
 ---
 
+## ShareX Dev build
+
+* Added "[Background remover](https://getsharex.com/docs/background-remover)" tool. <a class="badge" href="https://x.com/ShareX/status/2070997583984492789"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+* Added "Image Comparer" tool. <a class="badge" href="https://x.com/ShareX/status/2069905786566770876"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+* All 23 languages are 100% translated, except for the [Avalonia UI](https://avaloniaui.net) windows, which are not localizable yet.
+* [Image editor](https://getsharex.com/docs/image-editor) improvements:
+    * Added a "Customize toolbar" button to the Options dialog. It lets you fully customize the toolbar, including showing or hiding specific tools, reordering them, and changing their hotkeys. <a class="badge" href="https://x.com/ShareX/status/2069111712028979210"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+    * Added "Pick color from screen" button to color picker.
+    * Added image editor notifications.
+    * Added "Show notifications" option.
+    * Added "<kbd>K</kbd> Cursor" annotation tool.
+    * Added "Blur amount" option for Spotlight tool.
+    * Double clicking on emoji now opens the Emoji Picker dialog.
+    * Double clicking on image now opens the File Picker dialog.
+    * Added "<kbd>Ctrl</kbd> + <kbd>H</kbd> Hide/Show toolbars" button to context menu. <a class="badge" href="https://x.com/ShareX/status/2061155932155895879"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+    * Added "Step type" option for Step tool, with this options:
+        * 1, 2, 3
+        * A, B, C
+        * a, b, c
+        * I, II, III
+        * i, ii, iii
+    * Added "Horizontal alignment" option to Text & Speech Balloon annotation tools, with this options:
+        * Left
+        * Center
+        * Right
+    * Added "Toggle bold" option to Speech Balloon & Step annotation tools.
+    * Added "Toggle italic" option to Speech Balloon annotation tool.
+    * Added "Toggle tail" option for Speech Balloon & Step annotation tools.
+    * On exit confirmation dialog "Yes" button is automatically focused now.
+    * Added "Border style" option to Rectangle, Ellipse, Line, Freehand annotation tools, these are the options:
+        * Solid
+        * Dash
+        * Dot
+        * Dash Dot
+        * Dash Dot Dot
+    * Added rotation support to these annotation tools:
+        * Rectangle
+        * Ellipse <a class="badge" href="https://x.com/ShareX/status/2060915206973276617"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+        * Speech Balloon
+        * Highlight
+        * Blur
+        * Pixelate
+        * Magnify
+    * Holding <kbd>Ctrl</kbd> now disables shape selection, allowing you to draw a shape on top of another shape.
+    * Holding <kbd>Ctrl</kbd> while creating a shape now allows you to move it.
+    * Added a "Favorite Image Effects" action when right clicking the Image Effects button.
+    * Added "Toggle ellipse shape" option to Magnify & Spotlight tools.
+    * In the Background tool, gradient colors can now be edited using the color picker.
+    * Added “Shadow options” menu, when right clicking the "Toggle shadow" button, these are the options:
+        * Color
+        * Blur
+        * Opacity
+        * Offset X
+        * Offset Y
+    * Added easter egg. <a class="badge" href="https://x.com/ShareX/status/2072210469838864497"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+* Ignore NVIDIA GeForce Overlay in region capture selection.
+
 ## [ShareX 20.2.0](https://github.com/ShareX/ShareX/releases/tag/v20.2.0) - 2026-05-22 {#v20.2.0}
 
 * Image editor improvements:
