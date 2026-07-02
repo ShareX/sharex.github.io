@@ -1,0 +1,8 @@
+---
+---
+{
+    "version": "1.0",
+    "type": "link",
+    "provider_name": {{ site.name | jsonify }},
+    "provider_url": {{ site.url | jsonify }}
+}
