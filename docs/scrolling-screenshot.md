@@ -1,6 +1,7 @@
 ---
 layout: markdown
 title: Scrolling screenshot
+description: Learn how to capture a scrolling page or document with ShareX and troubleshoot static, animated, and hover-sensitive content.
 ---
 
 ## What is a scrolling screenshot?

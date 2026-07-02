@@ -1,6 +1,7 @@
 ---
 layout: markdown
 title: Region Capture
+description: Learn how to capture a selected region in ShareX, use annotation tools, select different region types, and work faster with keyboard shortcuts.
 ---
 
 ## What is region capture?

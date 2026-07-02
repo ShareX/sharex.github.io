@@ -1,6 +1,7 @@
 ---
 layout: markdown
 title: Image Editor
+description: Learn how to use the ShareX image editor to annotate, crop, redact, enhance, save, copy, and upload screenshots.
 ---
 
 ![](/img/screenshots/ImageEditor.png)

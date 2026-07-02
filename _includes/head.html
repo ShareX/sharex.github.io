@@ -1,13 +1,16 @@
 <head>
+    {% capture metadata_title %}{% if page.title %}{{ page.title }} - {{ site.name }}{% else %}{{ site.title }}{% endif %}{% endcapture %}
+    {% assign metadata_title = metadata_title | strip | escape %}
+    {% assign metadata_description = page.description | default: site.description | escape %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="{% if page.title != "Authorization" %}index, follow{% else %}noindex{% endif %}">
-    <meta name="description" content="{{ site.description }}">
+    <meta name="description" content="{{ metadata_description }}">
     <meta name="author" content="{{ site.author }}">
     <meta name="generator" content="Jekyll v{{ jekyll.version }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{% if page.title %}{{ page.title }} - {{ site.name }}{% elsif site.title %}{{ site.title }}{% endif %}</title>
+    <title>{{ metadata_title }}</title>
 
     <script type="application/ld+json">
     {
@@ -21,16 +24,16 @@
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@{{ site.twitter }}">
-    <meta name="twitter:title" content="{{ site.title }}">
-    <meta name="twitter:description" content="{{ site.description }}">
+    <meta name="twitter:title" content="{{ metadata_title }}">
+    <meta name="twitter:description" content="{{ metadata_description }}">
     <meta name="twitter:image" content="{{ site.url }}/img/ShareX_Card_Large.png">
 
     <!-- Open Graph data -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="{{ site.title }}" />
+    <meta property="og:title" content="{{ metadata_title }}" />
     <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
     <meta property="og:image" content="{{ site.url }}/img/ShareX_Card_Large.png" />
-    <meta property="og:description" content="{{ site.description }}" />
+    <meta property="og:description" content="{{ metadata_description }}" />
 
     <link rel="icon" href="/favicon.ico">
 

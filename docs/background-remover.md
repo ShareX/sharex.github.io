@@ -1,6 +1,7 @@
 ---
 layout: markdown
 title: Background remover
+description: Learn how to download a background removal model and remove image backgrounds locally with ShareX.
 ---
 
 ## What is the background remover tool?
