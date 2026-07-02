@@ -1,6 +1,7 @@
 ---
 layout: markdown
 title: Brand assets
+description: Download official ShareX logos, icons, and wallpapers in multiple formats, sizes, and background styles.
 ---
 
 ## Logo

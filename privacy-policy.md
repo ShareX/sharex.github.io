@@ -1,6 +1,7 @@
 ---
 layout: markdown
 title: Privacy Policy
+description: Learn what data the ShareX application and website use, how third-party upload services work, and which privacy policies apply.
 ---
 
 The ShareX application does not collect data of any kind, including personally identifiable information.

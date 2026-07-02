@@ -1,6 +1,7 @@
 ---
 layout: markdown
 title: Actions
+description: Learn how to configure ShareX actions to run third-party applications automatically after capture using command-line arguments.
 ---
 
 ## What are ShareX actions?

@@ -1,6 +1,7 @@
 ---
 layout: markdown
 title: Changelog
+description: Review ShareX release notes and development build changes, including new features, improvements, fixes, and dependency updates.
 ---
 
 ## ShareX Dev build
