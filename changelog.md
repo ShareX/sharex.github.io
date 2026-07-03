@@ -4,7 +4,7 @@ title: Changelog
 description: Review the ShareX changelog for release notes, new features, improvements, and other notable changes.
 ---
 
-## ShareX Dev build
+## [ShareX 21.0.0](https://github.com/ShareX/ShareX/releases/tag/v21.0.0) - 2026-07-03 {#v21.0.0}
 
 * Added "[Background remover](https://getsharex.com/docs/background-remover)" tool. <a class="badge" href="https://x.com/ShareX/status/2070997583984492789"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
 * Added "Image Comparer" tool. <a class="badge" href="https://x.com/ShareX/status/2069905786566770876"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
