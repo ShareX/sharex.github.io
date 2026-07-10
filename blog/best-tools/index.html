@@ -1,0 +1,29 @@
+---
+layout: page
+title: Best screenshot tools
+meta_title: Best Screenshot Tools - ShareX Blog
+description: Honest comparisons of screenshot, screen recording, annotation, and sharing tools for different users and workflows.
+section: blog
+permalink: /blog/best-tools/
+---
+
+<div class="container markdown blog-index">
+    <p class="blog-intro">No screenshot application is best for every person. These guides compare tools by platform, capture methods, editing, recording, sharing, automation, price, and the type of user each product serves well.</p>
+
+    <p><a href="/blog/">&larr; All ShareX blog articles</a></p>
+
+    <ul class="post-list">
+        {% for post in site.posts %}
+        {% if post.category_slug == "best-tools" %}
+        <li>
+            <span class="post-category">{{ post.category_name }}</span>
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <p>{{ post.description }}</p>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+
+{% include common-js.html %}

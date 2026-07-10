@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+<div class="jumbotron jumbotron-compact jumbotron-article">
+    <div class="container">
+        <h1><a href="/">{{ site.name }}</a></h1>
+        <p><a href="/blog/">Blog</a></p>
+    </div>
+</div>
+
+<article class="container markdown article-content">
+    <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><span>{{ page.category_name | default: "Article" }}</span>
+    </nav>
+
+    <header class="article-header">
+        {% if page.category_name %}<a class="article-category" href="{{ page.category_url | default: '/blog/' }}">{{ page.category_name }}</a>{% endif %}
+        <h1>{{ page.title }}</h1>
+        <p class="article-description">{{ page.description }}</p>
+        <div class="article-meta">
+            <span>Published <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time></span>
+            {% if page.last_modified_at %}<span>Updated <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: "%B %-d, %Y" }}</time></span>{% endif %}
+            <span>By {{ page.author | default: site.author }}</span>
+            {% if page.reviewed_by %}<span>Reviewed by {{ page.reviewed_by }}</span>{% endif %}
+        </div>
+        {% if page.disclosure %}<p class="article-disclosure">{{ page.disclosure }}</p>{% endif %}
+    </header>
+
+    {{ content }}
+
+    {% if page.related_links %}
+    <aside class="article-related" aria-labelledby="related-reading">
+        <h2 id="related-reading">Related ShareX resources</h2>
+        <ul>
+            {% for link in page.related_links %}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </aside>
+    {% endif %}
+</article>
+
+{% include common-js.html %}
+<script>
+    document.onreadystatechange = function () {
+        if (this.readyState !== "complete") return;
+        var contentBlock = document.getElementsByClassName("article-content")[0];
+        if (!contentBlock) return;
+        for (var level = 2; level <= 6; level++) {
+            var headers = contentBlock.getElementsByTagName("h" + level);
+            for (var h = 0; h < headers.length; h++) {
+                var header = headers[h];
+                if (header.id && !header.querySelector(".header-link")) {
+                    var anchor = document.createElement("a");
+                    anchor.className = "header-link";
+                    anchor.href = "#" + header.id;
+                    anchor.setAttribute("aria-label", "Link to " + header.textContent);
+                    anchor.innerHTML = '<i class="fas fa-link" aria-hidden="true"></i>';
+                    header.appendChild(anchor);
+                }
+            }
+        }
+    };
+</script>

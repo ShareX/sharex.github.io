@@ -2,9 +2,27 @@ name: ShareX
 title: ShareX - The best free and open source screenshot tool for Windows
 description: ShareX is a free and open source program that lets you capture or record any area of your screen and share it with a single press of a key. It also allows uploading images, text or other types of files to many supported destinations you can choose from.
 url: https://getsharex.com
+baseurl: ""
 author: ShareX Team
 github: https://github.com/ShareX/ShareX
+repository: ShareX/sharex.github.io
 twitter: ShareX
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+feed:
+  path: /blog/feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: ShareX Team
+      image: /img/ShareX_Card_Large.png
 
 encoding: utf-8
 markdown: kramdown

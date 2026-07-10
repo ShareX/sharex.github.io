@@ -1,0 +1,25 @@
+---
+layout: page
+title: Screenshot workflows and automation
+meta_title: Screenshot Workflow and Automation Guides - ShareX
+description: Configure ShareX workflows for uploads, bug reports, file naming, processing, sharing, and other repeatable Windows tasks.
+section: blog
+permalink: /blog/workflows/
+---
+
+<div class="container markdown blog-index">
+    <p class="blog-intro">Practical workflows for people who use screenshots in development, testing, documentation, support, and other repeated work. The goal is to remove manual steps without hiding where files are saved or uploaded.</p>
+    <p><a href="/blog/">&larr; All ShareX blog articles</a></p>
+    <ul class="post-list">
+        {% for post in site.posts %}{% if post.category_slug == "workflows" %}
+        <li>
+            <span class="post-category">{{ post.category_name }}</span>
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <p>{{ post.description }}</p>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+        </li>
+        {% endif %}{% endfor %}
+    </ul>
+</div>
+
+{% include common-js.html %}

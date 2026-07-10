@@ -1,10 +1,12 @@
 <head>
-    {% capture metadata_title %}{% if page.title %}{{ page.title }} - {{ site.name }}{% else %}{{ site.title }}{% endif %}{% endcapture %}
+    {% capture metadata_title %}{% if page.meta_title %}{{ page.meta_title }}{% elsif page.title %}{{ page.title }} - {{ site.name }}{% else %}{{ site.title }}{% endif %}{% endcapture %}
     {% assign metadata_title = metadata_title | strip | escape %}
     {% assign metadata_description = page.description | default: site.description | escape %}
+    {% assign metadata_image = page.image | default: '/img/ShareX_Card_Large.png' | absolute_url %}
+    {% assign canonical_url = page.canonical_url | default: page.url | absolute_url %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="robots" content="{% if page.title != "Authorization" %}index, follow{% else %}noindex{% endif %}">
+    <meta name="robots" content="{% if page.noindex or page.title == "Authorization" %}noindex, nofollow{% else %}index, follow{% endif %}">
     <meta name="description" content="{{ metadata_description }}">
     <meta name="author" content="{{ site.author }}">
     <meta name="generator" content="Jekyll v{{ jekyll.version }}">
@@ -12,32 +14,101 @@
 
     <title>{{ metadata_title }}</title>
 
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    <script type="application/ld+json">
+    {% if page.layout == "post" %}
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": {{ page.title | jsonify }},
+        "description": {{ page.description | jsonify }},
+        "image": {{ metadata_image | jsonify }},
+        "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+        "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+        "author": {
+            "@type": "Organization",
+            "name": {{ page.author | default: site.author | jsonify }},
+            "url": {{ site.github | jsonify }}
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "ShareX",
+            "url": {{ site.url | jsonify }},
+            "logo": {
+                "@type": "ImageObject",
+                "url": {{ '/img/ShareX_Logo_512.png' | absolute_url | jsonify }}
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": {{ canonical_url | jsonify }}
+        }
+    }
+    {% else %}
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ShareX",
+        "url": {{ site.url | jsonify }}
+    }
+    {% endif %}
+    </script>
+    {% if page.layout == "post" %}
     <script type="application/ld+json">
     {
-        "@context" : "https://schema.org",
-        "@type" : "WebSite",
-        "name" : "ShareX",
-        "url" : "https://getsharex.com"
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": {{ site.url | jsonify }}
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": {{ '/blog/' | absolute_url | jsonify }}
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": {{ page.category_name | default: "Article" | jsonify }},
+                "item": {{ page.category_url | default: '/blog/' | absolute_url | jsonify }}
+            }
+        ]
     }
     </script>
+    {% endif %}
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@{{ site.twitter }}">
     <meta name="twitter:title" content="{{ metadata_title }}">
     <meta name="twitter:description" content="{{ metadata_description }}">
-    <meta name="twitter:image" content="{{ site.url }}/img/ShareX_Card_Large.png">
+    <meta name="twitter:image" content="{{ metadata_image }}">
 
     <!-- Open Graph data -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}" />
     <meta property="og:site_name" content="{{ site.name | escape }}" />
     <meta property="og:title" content="{{ metadata_title }}" />
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-    <meta property="og:image" content="{{ site.url }}/img/ShareX_Card_Large.png" />
+    <meta property="og:url" content="{{ canonical_url }}" />
+    <meta property="og:image" content="{{ metadata_image }}" />
+    {% if page.layout == "post" %}
+    <meta property="og:image:width" content="{{ page.image_width | default: 1280 }}" />
+    <meta property="og:image:height" content="{{ page.image_height | default: 640 }}" />
+    {% endif %}
     <meta property="og:description" content="{{ metadata_description }}" />
+    {% if page.layout == "post" %}
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
+    <meta property="article:modified_time" content="{{ page.last_modified_at | default: page.date | date_to_xmlschema }}" />
+    {% endif %}
 
     <link rel="icon" href="/favicon.ico">
     <link rel="alternate" type="application/json+oembed" href="{{ site.url }}/oembed.json" title="{{ site.name | escape }} oEmbed">
+    <link rel="alternate" type="application/atom+xml" href="{{ '/blog/feed.xml' | absolute_url }}" title="ShareX Blog">
 
     <meta name="theme-color" content="#174974">
 

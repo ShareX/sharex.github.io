@@ -4,6 +4,8 @@ title: Scrolling screenshot
 description: Learn how to capture a scrolling page or document with ShareX and troubleshoot static, animated, and hover-sensitive content.
 ---
 
+> Comparing capture applications? See the [best screenshot tools for Windows](/blog/best-screenshot-tools-windows/) for an honest overview of ShareX, Snipping Tool, Snagit, Greenshot, Lightshot, Gyazo, and PicPick.
+
 ## What is a scrolling screenshot?
 
 A scrolling screenshot, also known as a scrolling capture, is a feature in ShareX that allows you to capture an entire web page or document that extends beyond the visible screen. It automatically combines multiple screenshots into a single image, giving you a complete view of the content.

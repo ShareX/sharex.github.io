@@ -4,6 +4,8 @@ title: Keybinds
 description: Reference keyboard and mouse shortcuts for ShareX region capture, the image editor, annotation tools, and Pin to Screen.
 ---
 
+> To configure and test video or GIF capture, see [how to record your screen on Windows with ShareX](/blog/how-to-record-screen-windows/).
+
 ## Region capture / Legacy image editor
 
 ### Common

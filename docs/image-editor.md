@@ -4,6 +4,8 @@ title: Image Editor
 description: Learn how to use the ShareX image editor to annotate, crop, redact, enhance, save, copy, and upload screenshots.
 ---
 
+> Looking for a broader tool comparison? Read our guide to the [best screenshot tools for Windows](/blog/best-screenshot-tools-windows/), including which options fit quick captures, annotation, documentation, sharing, and automation.
+
 ![](/img/screenshots/ImageEditor.png)
 
 ## What is the ShareX image editor?
