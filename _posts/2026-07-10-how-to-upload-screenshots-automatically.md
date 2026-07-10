@@ -9,6 +9,9 @@ category_name: Workflows & automation
 category_slug: workflows
 category_url: /blog/workflows/
 author: ShareX Team
+image: /img/blog/upload-screenshots-automatically.png
+image_width: 1200
+image_height: 630
 related_links:
   - title: ShareX custom uploader documentation
     url: /docs/custom-uploader
@@ -17,6 +20,8 @@ related_links:
   - title: ShareX privacy policy
     url: /privacy-policy
 ---
+
+![Guide to uploading screenshots automatically with ShareX](/img/blog/upload-screenshots-automatically.png){: .article-hero }
 
 ShareX can capture a screenshot, send it to a destination you choose, and copy the resulting URL to the clipboard. This is useful for support chats, issue trackers, documentation reviews, and other situations where pasting a link is more convenient than attaching a file manually.
 
