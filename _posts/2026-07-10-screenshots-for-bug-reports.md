@@ -9,9 +9,6 @@ category_name: Workflows & automation
 category_slug: workflows
 category_url: /blog/workflows/
 author: ShareX Team
-image: /img/blog/screenshots-for-bug-reports.png
-image_width: 1200
-image_height: 630
 related_links:
   - title: ShareX image editor guide
     url: /docs/image-editor
@@ -20,8 +17,6 @@ related_links:
   - title: Record your screen with ShareX
     url: /blog/how-to-record-screen-windows/
 ---
-
-![Guide to taking better screenshots for software bug reports with ShareX](/img/blog/screenshots-for-bug-reports.png){: .article-hero }
 
 A useful bug-report screenshot does more than prove that something went wrong. It helps another person identify the affected application, understand the state that produced the problem, and connect the image to written reproduction steps.
 

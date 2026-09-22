@@ -9,9 +9,6 @@ category_name: Comparisons
 category_slug: comparisons
 category_url: /compare/
 author: ShareX Team
-image: /img/blog/sharex-vs-snipping-tool-2026.png
-image_width: 1200
-image_height: 630
 disclosure: "This comparison is published by the ShareX project. Snipping Tool information was checked against current Microsoft documentation on July 10, 2026, and we identify cases where either tool is the better fit."
 related_links:
   - title: Best screenshot tools for Windows
@@ -21,8 +18,6 @@ related_links:
   - title: ShareX scrolling screenshot guide
     url: /docs/scrolling-screenshot
 ---
-
-![ShareX vs Windows Snipping Tool comparison guide for 2026](/img/blog/sharex-vs-snipping-tool-2026.png){: .article-hero }
 
 ShareX and Windows Snipping Tool can both capture and mark up a Windows screen, but they are designed for different levels of work.
 

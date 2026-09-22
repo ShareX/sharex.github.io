@@ -9,9 +9,6 @@ category_name: Guides
 category_slug: guides
 category_url: /blog/guides/
 author: ShareX Team
-image: /img/blog/how-to-record-screen-windows.png
-image_width: 1200
-image_height: 630
 related_links:
   - title: ShareX downloads
     url: /downloads
@@ -20,8 +17,6 @@ related_links:
   - title: Best screenshot tools for Windows
     url: /blog/best-screenshot-tools-windows/
 ---
-
-![Guide to recording your screen on Windows with ShareX](/img/blog/how-to-record-screen-windows.png){: .article-hero }
 
 ShareX can record a selected part of your Windows screen as a video or animated GIF. It is useful for short software demonstrations, bug reproductions, support explanations, and other clips where you do not need a full video-production application.
 
