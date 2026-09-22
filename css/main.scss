@@ -38,22 +38,22 @@ $container-padding-double: $container-padding * 2;
     }
 }
 
-// Sticky footer
+// Sticy footer
 
 html {
+    position: relative;
     min-height: 100%;
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
+    margin-bottom: 120px;
 }
 
 footer {
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    margin-top: auto;
+    height: 120px;
 }
 
 // Theme
@@ -562,55 +562,15 @@ body {
 footer {
     background-color: darken($background, 2%);
     color: $text-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     font-size: 16px;
     font-weight: 300;
-    padding: $container-padding 0px $container-padding-half;
 
-    .footer-content {
-        width: 100%;
-    }
-
-    .footer-links {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: $container-padding;
-        text-align: left;
-
-        h2 {
-            font-family: $font-header;
-            font-size: 24px;
-            font-weight: 500;
-            margin: 0px 0px 10px;
-        }
-
-        a,
-        span {
-            display: block;
-            color: $text-color-alt;
-            margin: 7px 0px;
-        }
-
-        span {
-            opacity: 0.65;
-        }
-
-        small {
-            display: inline-block;
-            margin-left: 4px;
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-        }
-    }
-
-    .footer-community {
-        margin-top: $container-padding;
-        text-align: center;
-    }
-
-    .footer-legal {
-        margin: $container-padding-half 0px 0px;
-        text-align: center;
+    p {
+        margin: 20px 0px 0px 0px;
     }
 
     a,
@@ -624,13 +584,6 @@ footer {
 
         img {
             height: 23px;
-        }
-    }
-
-    @media (max-width: 767.98px) {
-        .footer-links {
-            grid-template-columns: 1fr;
-            gap: $container-padding-half;
         }
     }
 }
@@ -1137,209 +1090,6 @@ footer {
 
         i {
             margin-right: 5px;
-        }
-    }
-}
-
-.jumbotron-article {
-    padding: $container-padding-half 0px;
-
-    h1 {
-        display: inline-block;
-        font-size: 48px;
-        margin: 0px $container-padding-half 0px 0px;
-    }
-
-    p {
-        display: inline-block;
-        font-size: 24px;
-        margin: 0px;
-
-        a {
-            color: $text-color-alt;
-        }
-    }
-}
-
-.article-content {
-    max-width: 920px;
-
-    .article-breadcrumb {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-bottom: $container-padding;
-        color: darken($text-color-alt, 15%);
-        font-size: 14px;
-    }
-
-    .article-header {
-        margin-bottom: $container-padding-double;
-
-        h1 {
-            margin-top: $container-padding-half;
-            font-size: 46px;
-            line-height: 1.15;
-        }
-    }
-
-    .article-category {
-        display: inline-block;
-        padding: 5px 9px;
-        border-radius: 4px;
-        background-color: $background-highlight;
-        font-size: 13px;
-        letter-spacing: 0.04em;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-
-    .article-description {
-        max-width: 760px;
-        color: $text-color-alt;
-        font-size: 21px;
-        line-height: 1.55;
-    }
-
-    .article-meta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px 18px;
-        color: darken($text-color-alt, 15%);
-        font-size: 14px;
-    }
-
-    .article-disclosure {
-        margin-top: $container-padding-half;
-        padding: 12px 14px;
-        border-left: 3px solid #2f80ed;
-        background-color: $background;
-        color: darken($text-color-alt, 5%);
-        font-size: 14px;
-    }
-
-    .article-summary {
-        margin: 0px 0px $container-padding;
-        padding: $container-padding-half;
-        border: 1px solid $background-highlight;
-        border-radius: 6px;
-        background-color: $background;
-
-        p:last-child {
-            margin-bottom: 0px;
-        }
-    }
-
-    .article-hero {
-        width: 100%;
-        margin-bottom: $container-padding;
-        border-radius: 8px;
-    }
-
-    .article-related {
-        margin-top: $container-padding-double;
-        padding: $container-padding;
-        border: 1px solid $background-highlight;
-        border-radius: 8px;
-        background-color: $background;
-
-        h2 {
-            margin-top: 0px;
-        }
-    }
-
-    .article-cta {
-        margin: $container-padding-double 0px;
-        padding: $container-padding;
-        border-radius: 8px;
-        background-color: $background;
-        text-align: center;
-
-        h2 {
-            margin-top: 0px;
-            background: none;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 10px 18px;
-            text-decoration: none;
-        }
-    }
-
-    @media (max-width: 575.98px) {
-        .article-header h1 {
-            font-size: 34px;
-        }
-
-        .article-description {
-            font-size: 18px;
-        }
-
-        table {
-            display: block;
-            overflow-x: auto;
-        }
-    }
-}
-
-.blog-index {
-    max-width: 1040px;
-
-    .blog-intro {
-        max-width: 760px;
-        margin-bottom: $container-padding-double;
-        font-size: 20px;
-        line-height: 1.55;
-    }
-
-    .blog-categories {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-bottom: $container-padding;
-
-        span,
-        a {
-            padding: 7px 11px;
-            border-radius: 4px;
-            background-color: $background-highlight;
-            text-decoration: none;
-        }
-    }
-
-    .post-list {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: $container-padding;
-        margin: 0px;
-        padding: 0px;
-        list-style: none;
-
-        li {
-            margin: 0px;
-            padding: $container-padding;
-            border: 1px solid $background-highlight;
-            border-radius: 8px;
-            background-color: $background;
-        }
-
-        h2 {
-            margin-top: 10px;
-            background: none;
-        }
-
-        .post-category,
-        time {
-            color: darken($text-color-alt, 15%);
-            font-size: 13px;
-            text-transform: uppercase;
-        }
-    }
-
-    @media (max-width: 767.98px) {
-        .post-list {
-            grid-template-columns: 1fr;
         }
     }
 }

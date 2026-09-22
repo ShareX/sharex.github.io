@@ -1,39 +1,14 @@
 <footer>
-    <div class="container footer-content">
-        <div class="footer-links" aria-label="Footer navigation">
-            <div>
-                <h2>ShareX</h2>
-                <a href="/downloads">Download</a>
-                <a href="/screenshots">Screenshots</a>
-                <a href="/changelog">Changelog</a>
-                <a href="/donate">Donate</a>
-            </div>
-            <div>
-                <h2>Guides</h2>
-                <a href="/blog/">Screenshot guides</a>
-                <a href="/blog/best-screenshot-tools-windows/">Best screenshot tools for Windows</a>
-                <a href="/blog/how-to-record-screen-windows/">How to record your screen</a>
-                <a href="/blog/how-to-upload-screenshots-automatically/">Automatic screenshot uploads</a>
-            </div>
-            <div>
-                <h2>Resources</h2>
-                <a href="/compare/">Screenshot tool comparisons</a>
-                <a href="/compare/sharex-vs-snipping-tool/">ShareX vs Snipping Tool</a>
-                <a href="/compare/sharex-vs-snagit/">ShareX vs Snagit</a>
-                <a href="/blog/screenshots-for-bug-reports/">Screenshots for bug reports</a>
-            </div>
-        </div>
-        <div class="footer-community">
-            <a class="shields" href="https://github.com/ShareX/ShareX/stargazers" data-toggle="tooltip" data-placement="top" title="GitHub">
-                <img src="https://img.shields.io/github/stars/ShareX/ShareX?label=Star&style=social" alt="Star ShareX on GitHub" /></a>
-            <a class="shields" href="https://x.com/intent/follow?screen_name=ShareX" data-toggle="tooltip" data-placement="top" title="X">
-                <img src="https://img.shields.io/twitter/follow/ShareX" alt="Follow ShareX on X" /></a>
-            <a class="shields" href="https://discord.gg/ShareX" data-toggle="tooltip" data-placement="top" title="Discord">
-                <img src="https://img.shields.io/discord/194170124859736065?label=Join&logo=Discord&style=social" alt="Join the ShareX Discord" /></a>
-            <a class="shields" href="https://www.reddit.com/r/sharex" data-toggle="tooltip" data-placement="top" title="Reddit">
-                <img src="https://img.shields.io/reddit/subreddit-subscribers/ShareX?label=Follow&style=social" alt="Follow ShareX on Reddit" /></a>
-        </div>
-        <p class="footer-legal">Copyright &copy; 2007-{{ site.time | date: '%Y' }} <a href="https://github.com/orgs/ShareX/people">{{ site.author }}</a> &middot; <a href="/privacy-policy">Privacy Policy</a> &middot; <a href="/blog/feed.xml">Blog feed</a></p>
+    <div>
+        <a class="shields" href="https://github.com/ShareX/ShareX/stargazers" data-toggle="tooltip" data-placement="top" title="GitHub">
+            <img src="https://img.shields.io/github/stars/ShareX/ShareX?label=Star&style=social" alt="GitHub" /></a>
+        <a class="shields" href="https://x.com/intent/follow?screen_name=ShareX" data-toggle="tooltip" data-placement="top" title="X">
+            <img src="https://img.shields.io/twitter/follow/ShareX" alt="X" /></a>
+        <a class="shields" href="https://discord.gg/ShareX" data-toggle="tooltip" data-placement="top" title="Discord">
+            <img src="https://img.shields.io/discord/194170124859736065?label=Join&logo=Discord&style=social" alt="Discord" /></a>
+        <a class="shields" href="https://www.reddit.com/r/sharex" data-toggle="tooltip" data-placement="top" title="Reddit">
+            <img src="https://img.shields.io/reddit/subreddit-subscribers/ShareX?label=Follow&style=social" alt="Reddit" /></a>
+        <p>Copyright &copy; 2007-{{ site.time | date: '%Y' }} <a href="https://github.com/orgs/ShareX/people">{{ site.author }}</a> · <a href="/privacy-policy">Privacy Policy</a></p>
     </div>
 </footer>
 
@@ -50,7 +25,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TSRVCS0KMR"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { window.dataLayer.push(arguments); }
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-TSRVCS0KMR');

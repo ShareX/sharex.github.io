@@ -4,8 +4,6 @@ title: Custom uploader
 description: Learn how to create ShareX custom uploaders, configure requests, headers and response parsing, use syntax, and import or export SXCU files.
 ---
 
-> New to screenshot sharing workflows? Start with [how to upload screenshots automatically with ShareX](/blog/how-to-upload-screenshots-automatically/) before building a custom uploader.
-
 ## What is a custom uploader?
 
 The custom uploader system in ShareX lets users upload images, text, and files to hosting services or shorten and share URLs. This feature is mainly used by users who host their own services.
