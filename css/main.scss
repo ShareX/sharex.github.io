@@ -460,7 +460,8 @@ body {
         margin-left: -6px;
     }
 
-    .row div {
+    .row > div,
+    .row > a {
         flex: 0 0 auto;
         width: auto;
         max-width: none;
@@ -476,20 +477,17 @@ body {
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
 
-        > a {
-            display: inline-flex;
-            align-items: center;
-            font-weight: 300;
-            text-decoration-color: rgba(255, 255, 255, 0.35);
+    .row > a {
+        text-decoration-color: rgba(255, 255, 255, 0.35);
 
-            &::before {
-                content: "\f0c1";
-                font-family: "Font Awesome 6 Free";
-                font-size: 0.75em;
-                font-weight: 900;
-                margin-right: 7px;
-            }
+        &::before {
+            content: "\f0c1";
+            font-family: "Font Awesome 6 Free";
+            font-size: 0.75em;
+            font-weight: 900;
+            margin-right: 7px;
         }
     }
 
