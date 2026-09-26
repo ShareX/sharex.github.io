@@ -1,77 +1,114 @@
 ---
 layout: markdown
 title: Pin to Screen
-description: Learn how to keep screenshots visible with ShareX Pin to Screen, open images from different sources, adjust them, and use keyboard shortcuts.
+description: Keep screenshots and reference images always on top with ShareX Pin to Screen, then move, resize, fade, minimize, copy, or close them.
 ---
 
-## What is Pin to Screen?
+## What is ShareX Pin to Screen?
 
-Pin to Screen is a ShareX tool that keeps an image visible on top of your desktop. It is useful when you want to reference a screenshot, compare two areas of the screen, keep instructions visible, or temporarily hold part of a window while working somewhere else.
+Pin to Screen keeps an image in a small floating window above your desktop. It is useful for referencing a screenshot while typing, comparing two screen states, keeping instructions visible, or preserving a temporary menu or message while working in another application.
 
-A pinned image behaves like a small floating reference window. You can move it, resize it, adjust its opacity, copy it, reset it, minimize it, or close it without opening a separate image viewer.
+Each pinned image is an independent borderless window. You can move it, scale it, change its opacity, minimize it to a small preview, copy the original image, customize its appearance, or close it.
 
-## Opening Pin to Screen
+## Pin an image
 
-You can open Pin to Screen in several ways, depending on where the image comes from:
+Open **Tools** -> **Pin to screen**. ShareX presents three sources:
 
-- **Tools menu**: Open **Tools** -> **Pin to screen**.
-- **Tools menu from screen**: Use **Tools** -> **Pin to screen (From screen)** to select an area and pin it immediately.
-- **Tools menu from clipboard**: Use **Tools** -> **Pin to screen (From clipboard)** to pin an image that has already been copied to the clipboard.
-- **Tools menu from file**: Use **Tools** -> **Pin to screen (From file)** to choose an image file and pin it.
-- **After capture tasks**: Enable **Pin to screen** in the **After capture tasks** menu to pin captures automatically.
-- **Main window task list**: Right-click an image task in the main window and select **Pin to screen**.
-- **History windows**: Open **History** or **Image history**, right-click an image item, and select **Pin to screen**.
-- **Task notification**: Configure a notification click action to pin the completed image.
-- **Hotkey**: Create or edit a hotkey and set its task to **Tools** -> **Pin to screen**, **Pin to screen (From screen)**, **Pin to screen (From clipboard)**, or **Pin to screen (From file)**.
+- **Select region** captures an area of the screen and pins it at the captured location.
+- **From clipboard** pins an image currently stored on the clipboard.
+- **Select image** opens an image file from disk.
 
-## Common uses
+You can also pin images from other ShareX workflows:
 
-Pin to Screen is useful for many screenshot and productivity workflows:
+- Enable **Pin to screen** under **After capture tasks** to pin new captures automatically.
+- Right-click an image in the main window task list, History, or Image history and select **Pin to screen**.
+- Use the Pin to Screen action in the [ShareX image editor](/docs/image-editor).
+- Configure a task-notification click action to pin a completed image.
 
-- Keep a captured area visible while typing information into another window.
-- Compare a current screen state with a previous screenshot.
-- Pin a reference image while editing, testing, designing, or documenting.
-- Keep a small instruction, code snippet, error message, QR code, or form value visible.
-- Capture and pin menus, popups, or temporary UI elements before they disappear.
-- Use opacity controls to keep the pinned image visible without fully covering the work area.
+## Create Pin to Screen hotkeys
 
-## Working with pinned images
+Hotkey settings provide direct tasks for frequent workflows:
 
-After an image is pinned, drag it with the left mouse button to move it. Use the mouse wheel or plus and minus keys to change its scale. Hold **Ctrl** while using the mouse wheel or plus and minus keys to change opacity.
+- **Pin to screen** opens the source chooser.
+- **Pin to screen (From screen)** immediately starts region selection.
+- **Pin to screen (From clipboard)** pins the clipboard image.
+- **Pin to screen (From file)** opens the image picker.
+- **Pin to screen (Close all)** closes every pinned image.
 
-Pinned images can be closed with a right-click or **Escape**. A middle-click resets the pinned image, a double-click minimizes it, and **Ctrl** + **C** copies it to the clipboard.
+A direct hotkey saves a step when you normally use the same source. For example, assign a shortcut to **From screen** when you frequently pin temporary interface elements.
 
-## Toolbar and options
+## Move, resize, and fade a pinned image
 
-Pinned images can show a toolbar with actions such as copy, scale, options, and close. If the pinned area is too small for the toolbar, ShareX can hide the toolbar automatically.
+- Hold the left mouse button and drag to move the image freely.
+- Use the mouse wheel or the plus and minus keys to change its scale.
+- Hold **Ctrl** while using the wheel or plus and minus keys to change opacity.
+- Use the arrow keys to move the window by 1 pixel.
+- Hold **Shift** with an arrow key to move it by 10 pixels.
+- Middle-click the image to reset its scale and opacity to 100%.
 
-Pin to Screen options can control how pinned images appear and behave:
+Scaling is limited to 20–500%, and opacity is limited to 10–100%. The configured scale and opacity steps determine how much each wheel or keyboard action changes the value.
 
-- **Placement** controls where the pinned image is placed.
-- **Placement offset** adjusts the pinned image position.
-- **Top most** keeps the pinned image above other windows.
-- **Keep center location** keeps the center point stable while resizing.
-- **Shadow** adds or removes a shadow around the pinned image.
-- **Border**, **Border size**, and **Border color** control the outline.
-- **Minimize size** controls the size used when a pinned image is minimized.
-- **Scale step** controls how much the scale changes when using zoom shortcuts.
+## Minimize, copy, or close a pinned image
+
+Double-click a pinned image to toggle its minimized preview. The minimized size can be customized without changing the original image.
+
+Press **Ctrl** + **C** or use the copy button on the hover toolbar to copy the original pinned image to the clipboard. Right-click the image or click the toolbar close button to close it.
+
+To close all pinned images at once, run a hotkey configured for **Pin to screen (Close all)**.
+
+## Hover toolbar
+
+Move the pointer over a pinned image to show its toolbar. The toolbar provides actions to copy the image, reset scale and opacity, open options, or close the image.
+
+ShareX hides the toolbar when the pinned window is too small to display it. You can still use the mouse and keyboard controls in that state.
+
+## Pin to Screen options
+
+Open the toolbar settings button to configure the current Pin to Screen behavior:
+
+### Size and opacity
+
+- **Initial scale** sets the starting image size.
+- **Scale step** controls each scale adjustment.
+- **High quality scaling** smooths resized images instead of keeping hard pixel edges.
+- **Initial opacity** sets the starting transparency.
+- **Opacity step** controls each opacity adjustment.
+
+### Placement
+
+- **Default position** selects an edge, corner, or center position for images that do not have a requested screen location.
+- **Screen edge offset** adds space between the pinned image and that position.
+- **Keep center while resizing** prevents scaling from moving the image away from its current center point.
+
+### Appearance
+
+- **Always on top** keeps the image above other windows.
+- **Window shadow** adds a shadow around the pinned image.
+- **Image border**, **Border size**, and **Border color** control the outline.
+- **Background color** appears behind transparent parts of the image.
+
+### Minimized preview
+
+**Preview size** controls the width and height used when the image is minimized with a double-click.
+
+## Keybinds and mouse controls
+
+| Input | Action |
+| --- | --- |
+| Hold left click | Move the pinned image |
+| Right click | Close the pinned image |
+| Middle click | Reset scale and opacity |
+| Double left click | Toggle minimized preview |
+| Mouse wheel or <kbd>+</kbd> / <kbd>-</kbd> | Change image scale |
+| <kbd>Ctrl</kbd> + mouse wheel or <kbd>Ctrl</kbd> + <kbd>+</kbd> / <kbd>-</kbd> | Change image opacity |
+| Arrow keys | Move by 1 px |
+| <kbd>Shift</kbd> + arrow keys | Move by 10 px |
+| <kbd>Ctrl</kbd> + <kbd>C</kbd> | Copy the original image |
 
 ## Tips
 
 - Pin only the area you need when using the tool as a temporary reference.
-- Lower the opacity when the pinned image covers an area you still need to see.
-- Use **Pin to screen (From screen)** for menus, popups, tooltips, and other temporary UI elements.
-- Use a hotkey if you pin screenshots frequently.
-- Close pinned images when they are no longer needed to keep the desktop uncluttered.
-
-## Keybinds
-
-| Keybind | Description |
-| --- | --- |
-| <kbd>Hold left click</kbd> | Move image |
-| <kbd>Right click</kbd> / <kbd>Escape</kbd> | Close image |
-| <kbd>Middle click</kbd> | Reset image |
-| <kbd>Double click</kbd> | Minimize image |
-| <kbd>Mouse wheel</kbd> / <kbd>+</kbd> <kbd>-</kbd> | Change image scale |
-| <kbd>Ctrl</kbd> + <kbd>Mouse wheel</kbd> / <kbd>Ctrl</kbd> + <kbd>+</kbd> <kbd>-</kbd> | Change image opacity |
-| <kbd>Ctrl</kbd> + <kbd>C</kbd> | Copy image |
+- Reduce opacity when the image covers something you still need to see.
+- Enable high-quality scaling for photographs and interface screenshots; disable it when crisp pixel-art scaling is preferred.
+- Use **Select region** for menus, tooltips, error messages, and other temporary content.
+- Create a **Close all** hotkey if you often keep several references open.

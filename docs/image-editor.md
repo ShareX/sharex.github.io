@@ -4,19 +4,13 @@ title: Image Editor
 description: Learn how to use the ShareX image editor to annotate, crop, redact, enhance, save, copy, and upload screenshots.
 ---
 
-![](/img/screenshots/ImageEditor.png)
+![ShareX image editor showing annotation tools and an editable text annotation](/img/screenshots/ImageEditor.png)
 
 ## What is the ShareX image editor?
 
 The ShareX image editor is a built-in screenshot annotation and image editing tool. It lets you annotate screenshots, hide sensitive information, crop images, add callouts, insert text, and prepare captures before they are copied, saved, uploaded, or passed to the next after-capture task.
 
 The editor is commonly used for software tutorials, bug reports, documentation screenshots, support replies, and quick image edits where opening a separate graphics application would be unnecessary. Because it is integrated with ShareX capture workflows, you can take a screenshot, mark the important area, redact private details, and continue uploading or saving from the same window.
-
-## Legacy image editor
-
-ShareX uses the modern image editor by default. If you prefer the old editor, enable it from **Task settings** -> **Tools** -> **Use legacy image editor**.
-
-The first time you open the image editor, ShareX can also show an image editor selector. Choosing the legacy editor there saves the same preference.
 
 ## Opening the image editor
 
@@ -157,14 +151,12 @@ Backgrounds can be transparent, solid colors, gradients, images, or wallpapers d
 
 Image effects can be used when the whole image needs visual adjustment rather than a single annotation. Effects are grouped into categories such as manipulations, adjustments, filters, and drawings. Use them for quick changes such as improving contrast, changing colors, applying filters, or preparing an image for a specific visual style.
 
-For documentation and support screenshots, keep effects minimal so the image still represents the real interface accurately.
+For documentation and support screenshots, keep effects minimal so the image still represents the real interface accurately. For reusable presets and automatic after-capture processing, see the [ShareX image effects documentation](/docs/image-effects).
 
-## Editor options
+## Customize the image editor
 
-The editor options are available from the **File** menu. Options can control the editor appearance, behavior, and task integration:
+Open **Task settings** -> **Tools** -> **Image editor** to configure editor behavior:
 
-- **Follow system theme** and **Theme** control whether the editor uses the system theme or a selected theme.
-- **Follow system accent color** and **Accent color** control the editor accent color.
 - **Remember window state** restores the previous editor window position and size.
 - **Show exit confirmation** asks before closing when there may be unsaved work.
 - **Zoom to fit on open** fits the image into the editor view when it opens.
@@ -172,10 +164,14 @@ The editor options are available from the **File** menu. Options can control the
 - **Auto close editor on task** closes the editor after using a task action.
 - **Auto copy image to clipboard** copies the result automatically.
 - **Show insert image dialog** controls whether ShareX asks how pasted or dropped images should be inserted.
+- **Show notifications** controls editor status notifications.
+- **Customize toolbar** changes toolbar item visibility, order, grouping, and tool shortcuts.
+
+The editor follows the ShareX theme and accent color configured under **Application settings** -> **Theme**.
 
 ## Saving, copying, and uploading
 
-The bottom toolbar is used to finish the edit. You can continue the current after-capture workflow, cancel the task, copy the edited image to the clipboard, save it, save it as a new file, pin it to the screen, print it, or upload it using the configured ShareX upload destinations.
+The bottom toolbar is used to finish the edit. You can continue the current after-capture workflow, cancel the task, copy the edited image to the clipboard, save it, save it as a new file, [pin it to the screen](/docs/pin-to-screen), print it, or upload it using the configured ShareX upload destinations.
 
 If the editor was opened from an after-capture task, continuing applies the edit before later tasks run. For example, a capture workflow can open the editor first, then copy the edited image, save it to disk, upload it, or perform other configured actions.
 
@@ -189,6 +185,8 @@ If the editor was opened from an after-capture task, continuing applies the edit
 - Flatten annotations only when you are ready to make them part of the image.
 
 ## Keybinds
+
+The tool shortcuts below are the defaults. They can be changed from **Task settings** -> **Tools** -> **Image editor** -> **Customize toolbar**.
 
 ### Common
 
@@ -287,16 +285,3 @@ If the editor was opened from an after-capture task, continuing applies the edit
 | <kbd>Page up</kbd> | Bring forward |
 | <kbd>Page down</kbd> | Send backward |
 | <kbd>End</kbd> | Send to back |
-
-### Bottom task menu
-
-| Keybind | Description |
-| --- | --- |
-| <kbd>Enter</kbd> | Continue / run after-capture tasks |
-| <kbd>Esc</kbd> | Cancel |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> | Copy image to clipboard |
-| <kbd>Ctrl</kbd> + <kbd>S</kbd> | Save image |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> | Save image as... |
-| <kbd>Ctrl</kbd> + <kbd>P</kbd> | Pin image to screen |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> | Print image |
-| <kbd>Ctrl</kbd> + <kbd>U</kbd> | Upload image |
