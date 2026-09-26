@@ -478,7 +478,17 @@ body {
         text-align: center;
 
         > a {
+            display: inline-flex;
+            align-items: center;
             text-decoration-color: rgba(255, 255, 255, 0.35);
+
+            &::before {
+                content: "\f0c1";
+                font-family: "Font Awesome 6 Free";
+                font-size: 0.75em;
+                font-weight: 900;
+                margin-right: 7px;
+            }
         }
     }
 
