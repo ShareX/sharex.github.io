@@ -482,6 +482,10 @@ body {
     .row > a {
         text-decoration-color: rgba(255, 255, 255, 0.35);
 
+        &:hover {
+            text-decoration: none;
+        }
+
         &::before {
             content: "\f0c1";
             font-family: "Font Awesome 6 Free";
