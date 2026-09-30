@@ -1,14 +1,14 @@
 ---
 layout: markdown
 title: Video Trimmer
-description: Trim videos in ShareX with FFmpeg using fast lossless stream copying or precise H.264 encoding, visual frame previews and exact time controls.
+description: Trim videos in ShareX with FFmpeg using Lossless or Re-encode trim mode, visual frame previews and exact time controls.
 ---
 
 ## What is the ShareX video trimmer?
 
-The ShareX video trimmer removes unwanted material from the beginning or end of a video. It uses FFmpeg, shows a still-frame timeline and offers a fast lossless mode or a precise re-encoding mode.
+The ShareX video trimmer removes unwanted material from the beginning or end of a video. It uses FFmpeg, shows a still-frame timeline and offers **Lossless** and **Re-encode** trim modes.
 
-Open it from **Tools** -> **Video trimmer**.
+Open it from **Tools** -> **Video** -> **Video trimmer**.
 
 ## FFmpeg requirement
 
@@ -20,17 +20,17 @@ The trimmer uses the FFmpeg executable configured for screen recording. If it is
 2. Move the timeline position to the desired beginning and select **Set start**.
 3. Move to the desired ending and select **Set end**.
 4. Fine-tune the start and end time fields if needed.
-5. Choose **Lossless** or **Precise**.
+5. Choose **Lossless** or **Re-encode** under **Trim mode**.
 6. Select **Trim**, choose an output file and wait for export to finish.
 
 The timeline uses twelve overview frames and loads a more accurate still after you stop scrubbing. These are frame previews rather than real-time playback, so use the time fields when an exact boundary matters.
 
-## Lossless versus precise trimming
+## Trim modes
 
 - **Lossless** stream-copies the first video stream, audio tracks and subtitles into the same container as the source. It is fast and avoids generation loss, but cuts occur around available keyframes. The actual boundary and duration can therefore differ slightly from the selected times.
-- **Precise** re-encodes the selection as H.264 video and AAC audio in an MP4 file. It can honor the requested boundaries more closely, but takes longer, changes the encoding and does not include subtitles.
+- **Re-encode** re-encodes the selection as H.264 video and AAC audio in an MP4 file. It can honor the requested boundaries more closely, but takes longer, changes the encoding and does not include subtitles.
 
-The trimmer does not silently fall back from lossless copying to re-encoding. If the source streams cannot be copied into the original container, choose precise mode or use [Video converter](/docs/video-converter).
+The trimmer does not silently fall back from lossless copying to re-encoding. If the source streams cannot be copied into the original container, choose **Re-encode** or use [Video converter](/docs/video-converter).
 
 ## Safe output behavior
 
