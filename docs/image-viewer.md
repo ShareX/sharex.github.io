@@ -1,7 +1,7 @@
 ---
 layout: markdown
 title: Image Viewer
-description: Open images in the lightweight full-screen ShareX image viewer and browse other images in the same folder with mouse or keyboard controls.
+description: Open images in the lightweight full-screen ShareX image viewer, zoom around the cursor, and browse other images in the same folder with mouse or keyboard controls.
 ---
 
 ## What is the ShareX image viewer?
@@ -14,7 +14,13 @@ Open **Tools** -> **Image viewer** and choose an image. The viewer is also used 
 
 When a file is opened from disk, ShareX loads the supported image files in the same folder. Use the left and right arrow buttons, the mouse wheel, or the keyboard arrow keys to move through them.
 
-The status at the top shows the current position in the folder, file name and image dimensions. Images are displayed at their original size when they fit on screen and scaled down when necessary; the viewer does not modify the file.
+The status at the top shows the current position in the folder, file name and image dimensions. Images are initially displayed at their original size when they fit on screen and scaled down when necessary; the viewer does not modify the file.
+
+## Zoom images
+
+Hold <kbd>Ctrl</kbd> and scroll the mouse wheel up to zoom in or down to zoom out. The point under the cursor stays in place as you zoom.
+
+Middle-click the image to reset its zoom and position. Zoom also resets when you switch to another image.
 
 ## Controls
 
@@ -23,7 +29,9 @@ The status at the top shows the current position in the folder, file name and im
 | <kbd>Left Arrow</kbd> | Previous image |
 | <kbd>Right Arrow</kbd> | Next image |
 | Mouse wheel up/down | Previous or next image |
+| <kbd>Ctrl</kbd> + mouse wheel up/down | Zoom in or out around the cursor |
+| Middle-click the image | Reset zoom and position |
 | Left-click or right-click the image | Close the viewer |
 | <kbd>Esc</kbd>, <kbd>Enter</kbd> or <kbd>Space</kbd> | Close the viewer |
 
-The viewer is intentionally minimal and closes when it loses focus after opening a file. Use the [image editor](/docs/image-editor) when you need zoomed editing, annotations, cropping or image effects.
+The viewer is intentionally minimal and closes when it loses focus after opening a file. Use the [image editor](/docs/image-editor) when you need annotations, cropping or image effects.
