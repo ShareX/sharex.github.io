@@ -4,6 +4,114 @@ title: Changelog
 description: Review the ShareX changelog for release notes, new features, improvements, and other notable changes.
 ---
 
+> If you'd like to hear about new features and updates early, we recommend following us on X: https://x.com/ShareX
+
+## [ShareX 22.0.0](https://github.com/ShareX/ShareX/releases/tag/v22.0.0) - 2026-10-20 {#v22.0.0}
+
+In ShareX's [19 year](https://x.com/ShareX/status/2091345454017503610) history, this is the biggest update we've ever released. Every part of the UI has been rewritten from scratch with a modern design. Since the majority of the application has also been completely overhauled, we expect this release to be significantly less stable than our usual releases. We'll be closely monitoring issue reports and addressing them as quickly as possible.
+
+* Screen recording changes:
+    * Added native screen recording support without relying on FFmpeg, enabled by default. <a class="badge" href="https://x.com/ShareX/status/2107454339803414603"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+        * Added support for recording system audio.
+        * Added support for recording microphone audio.
+        * Added support for recording camera overlays. <a class="badge" href="https://x.com/ShareX/status/2107940507393613826"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+    * Added a screen recorder bar that allows users to configure recording options before starting a recording: <a class="badge" href="https://x.com/ShareX/status/2108596557125910733"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+        * Start delay.
+        * System audio.
+        * Microphone.
+        * Camera.
+        * Cursor.
+        * Mouse highlighter.
+    * Increased the screen recording FPS limit to 120.
+    * Added an "Automatically start mouse highlighter" option for screen recording.
+    * Added a "Restart" button to the screen recorder bar and system tray menu.
+    * Added an option to show or hide the screen recording timer.
+    * Added an option to show or hide screen recording button labels.
+    * Recorder devices are no longer bundled.
+* Added [HDR](https://en.wikipedia.org/wiki/High_dynamic_range) screenshot color corrector option (Task settings -> Capture).
+* ShareX installer and assemblies are now [code-signed](https://en.wikipedia.org/wiki/Code_signing) using a certificate provided by [Ember Swan](https://emberswan.com?ref=sharex). <a class="badge" href="https://github.com/Xenthys"><i class="fa-brands fa-github"></i>Xenthys</a>
+* Added a warning before running unsigned installers.
+* Added a wide range of new tools and redesigned all existing tools from scratch:
+    * Screen & color:
+        * Color picker
+        * Mouse highlighter <a class="badge" href="https://x.com/ShareX/status/2099996175860461577"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+        * Pin to screen
+        * Ruler <a class="badge" href="https://x.com/ShareX/status/2086892296524415378"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+        * Screen color picker
+    * Images:
+        * Background remover
+        * Icon converter
+        * Image beautifier
+        * Image combiner
+        * Image comparer
+        * Image converter
+        * Image editor
+        * Image effects
+        * Image resizer <a class="badge" href="https://x.com/ShareX/status/2101522182975193434"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+        * Image splitter
+        * Image thumbnailer
+        * Image viewer
+        * Image watermark
+    * Video:
+        * Animated GIF maker
+        * Animated GIF trimmer <a class="badge" href="https://x.com/ShareX/status/2105598038114746418"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+        * Video converter
+        * Video player
+        * Video thumbnailer
+        * Video trimmer <a class="badge" href="https://x.com/ShareX/status/2096602597134110879"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+    * Data & text:
+        * Analyze image
+        * Hash checker
+        * Index folder
+        * Metadata
+        * OCR
+        * QR code
+        * Remote storage browser (supports Amazon S3, SFTP, FTPS, and FTP) <a class="badge" href="https://x.com/ShareX/status/2102223097982066712"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+    * System:
+        * Borderless window
+        * Clipboard viewer
+        * Inspect window
+        * Monitor test
+        * Network monitor <a class="badge" href="https://x.com/ShareX/status/2093938295751291024"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+* Added categorized grid layout for tools menu.
+* Added edit button to tools menu to be able to hide or show tools. <a class="badge" href="https://x.com/ShareX/status/2100333297788129433"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+* Include video files in image history window.
+* Added "Trim video" context menu option to main window and history windows.
+* Added "Trim animated GIF" context menu option to main window and history windows.
+* Added drag-and-drop upload overlay to main window.
+* Added customizable task buttons to bottom of notifications.
+* Added notification button size option.
+* Added search support to setting windows.
+* Upgraded project to [.NET 10](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-10/overview).
+* Update [FFmpeg](https://www.ffmpeg.org) to 9.0.
+* Added Czech language support.
+* Added Swedish language support.
+* Added Hindi language support.
+* Added Thai language support.
+* Added Danish language support.
+* Translated all newly redesigned ShareX windows into 28 languages from scratch.
+* Improve smart eraser with edge-matching fills.
+* Added [easter egg](https://en.wikipedia.org/wiki/Easter_egg_(media)) to about window.
+* Added [easter egg](https://en.wikipedia.org/wiki/Easter_egg_(media)) to image editor. <a class="badge" href="https://x.com/ShareX/status/2107861375238434984"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+* Added support for [Amazon S3](https://aws.amazon.com/s3/) multi-part uploads.
+* Added an option to upload [Amazon S3](https://aws.amazon.com/s3/) parts concurrently. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* Support remote deletion of [Amazon S3](https://aws.amazon.com/s3/) uploads.
+* Added [img.fish](https://img.fish) file uploader.
+* Added [Immich](https://immich.app) file uploader.
+* Added [MEGA](https://mega.io) file uploader.
+* Migrate [uPaste](https://upaste.me) uploader to API v2.
+* Removed Vault.ooo file uploader.
+* Show start screen on first application run.
+* Added an always on top toggle to the main window title bar.
+* Added a theme toggle to the main window title bar. <a class="badge" href="https://x.com/ShareX/status/2105296998295380345"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+* Added cursor centered zoom support to image viewer with <kbd>Ctrl</kbd> + <kbd>Mouse wheel</kbd>.
+* Reset image viewer zoom with <kbd>Middle click</kbd>.
+* Added PNG compression level option.
+* Added PNG filter option.
+* Added JPEG chroma subsampling option.
+* Added adaptive quantizer GIF quality option.
+* Added BMP bit depth option.
+
 ## [ShareX 21.0.0](https://github.com/ShareX/ShareX/releases/tag/v21.0.0) - 2026-07-03 {#v21.0.0}
 
 * Added "[Background remover](https://getsharex.com/docs/background-remover)" tool. <a class="badge" href="https://x.com/ShareX/status/2070997583984492789"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
