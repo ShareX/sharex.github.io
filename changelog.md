@@ -4,7 +4,7 @@ title: Changelog
 description: Review the ShareX changelog for release notes, new features, improvements, and other notable changes.
 ---
 
-> If you'd like to hear about new features and updates early, we recommend following us on X: https://x.com/ShareX
+> If you'd like to hear about new features and updates early, we recommend following us on X: [https://x.com/ShareX](https://x.com/ShareX)
 
 ## [ShareX 22.0.0](https://github.com/ShareX/ShareX/releases/tag/v22.0.0) - 2026-10-20 {#v22.0.0}
 
