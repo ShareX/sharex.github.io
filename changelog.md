@@ -6,12 +6,25 @@ description: Review the ShareX changelog for release notes, new features, improv
 
 > If you'd like to hear about new features and updates early, we recommend following us on X: [https://x.com/ShareX](https://x.com/ShareX)
 
+## [ShareX 22.1.0](https://github.com/ShareX/ShareX/releases/tag/v22.1.0) - 2026-11-02 {#v22.1.0}
+
+* Added "Photo editor" tool. <a class="badge" href="https://x.com/ShareX/status/2116491626273280239"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+* Added native GIF screen recording support without relying on FFmpeg.
+* Added region capture toolbar customization (Task settings -> Region capture -> Customize toolbar).
+* Added "<kbd>D</kbd> Clone" annotation tool.
+* Added a "Stats" window that generates statistics from locally stored history. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a> <a class="badge" href="https://x.com/ShareX/status/2115021425107202191"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+* Replaced all annotation toolbar icons with custom designed icons that better represent their respective tools. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* Added search box to the font picker in the annotation toolbar. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* Added region capture option to dim everything except the current region selection. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* Updated the region capture's rectangle region tool to match the behavior of the legacy region capture.
+* Updated the image editor's crop tool to match the behavior of the legacy image editor.
+
 ## [ShareX 22.0.0](https://github.com/ShareX/ShareX/releases/tag/v22.0.0) - 2026-10-20 {#v22.0.0}
 
 In ShareX's [19 year](https://x.com/ShareX/status/2091345454017503610) history, this is the biggest update we've ever released. Every part of the UI has been rewritten from scratch with a modern design. Since the majority of the application has also been completely overhauled, we expect this release to be significantly less stable than our usual releases. We'll be closely monitoring issue reports and addressing them as quickly as possible.
 
 * Screen recording changes:
-    * Added native screen recording support without relying on FFmpeg, enabled by default. <a class="badge" href="https://x.com/ShareX/status/2107454339803414603"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+    * Added native screen recording support without relying on FFmpeg. <a class="badge" href="https://x.com/ShareX/status/2107454339803414603"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
         * Added support for recording system audio.
         * Added support for recording microphone audio.
         * Added support for recording camera overlays. <a class="badge" href="https://x.com/ShareX/status/2107940507393613826"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
