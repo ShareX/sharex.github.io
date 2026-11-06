@@ -6,6 +6,20 @@ description: Review the ShareX changelog for release notes, new features, improv
 
 > If you'd like to hear about new features and updates early, we recommend following us on X: [https://x.com/ShareX](https://x.com/ShareX)
 
+## [ShareX 22.2.0](https://github.com/ShareX/ShareX/releases/tag/v22.2.0) - 2026-11-05 {#v22.2.0}
+
+* Replaced all icons across ShareX with custom designed icons.
+* Added [WebP](https://en.wikipedia.org/wiki/WebP) image format support for screenshots, with "Lossless", "WebP quality" and "WebP compression effort" options (Task settings -> Image).
+* Photo editor improvements:
+    * Translated "Photo editor" into all 28 languages.
+    * Added "Open in photo editor" after capture task.
+    * Added "Edit in Photo editor..." option to history windows context menu.
+    * Added "Edit with ShareX Photo editor" option to Windows Explorer context menu (Application settings -> Integration). The existing "Edit with ShareX" option is renamed to "Edit with ShareX Image editor".
+    * Added custom title bar with menu and file name.
+    * Added "Lossless" option for WebP in export dialog.
+    * Export dialog now remembers the last used format, quality and lossless settings.
+    * Added "Clear Recent File List" option to "Open Recent" menu.
+
 ## [ShareX 22.1.0](https://github.com/ShareX/ShareX/releases/tag/v22.1.0) - 2026-11-02 {#v22.1.0}
 
 * Added "Photo editor" tool. <a class="badge" href="https://x.com/ShareX/status/2116491626273280239"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
