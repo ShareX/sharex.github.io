@@ -6,7 +6,7 @@ description: Review the ShareX changelog for release notes, new features, improv
 
 > If you'd like to hear about new features and updates early, we recommend following us on X: [https://x.com/ShareX](https://x.com/ShareX)
 
-## [ShareX 22.2.0](https://github.com/ShareX/ShareX/releases/tag/v22.2.0) - 2026-11-05 {#v22.2.0}
+## [ShareX 22.2.0](https://github.com/ShareX/ShareX/releases/tag/v22.2.0) - 2026-11-06 {#v22.2.0}
 
 * Replaced all icons across ShareX with custom designed icons.
 * Added [WebP](https://en.wikipedia.org/wiki/WebP) image format support for screenshots, with "Lossless", "WebP quality" and "WebP compression effort" options (Task settings -> Image).
