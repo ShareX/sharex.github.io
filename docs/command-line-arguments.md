@@ -40,6 +40,7 @@ These actions support additional parameters:
 * `-PinToScreen "image file path"`
 * `-PinToScreenFromFile "image file path"`
 * `-ImageEditor "image file path"`
+* `-PhotoEditor "image file path"`
 * `-ImageBeautifier "image file path"`
 * `-ImageEffects "image file path"`
 * `-ImageViewer "image file path"`
