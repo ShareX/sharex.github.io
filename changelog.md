@@ -6,6 +6,17 @@ description: Review the ShareX changelog for release notes, new features, improv
 
 > If you'd like to hear about new features and updates early, we recommend following us on X: [https://x.com/ShareX](https://x.com/ShareX)
 
+## [ShareX 22.3.0](https://github.com/ShareX/ShareX/releases/tag/v22.3.0) - 2026-11-07 {#v22.3.0}
+
+* Added "Legacy" icon pack (Application settings -> Theme -> Icon pack). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* Region capture improvements:
+    * Added "Multi region mode" option (Task settings -> Region capture). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+    * Added "Compact region capture toolbar" option (Task settings -> Region capture). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+    * The region capture toolbar can now be dragged to a different position. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+    * Added "Region (Transparent)" capture back to the capture menu. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* The image editor and photo editor now open on the same monitor as the main window. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* Improved startup speed and first region capture speed.
+
 ## [ShareX 22.2.0](https://github.com/ShareX/ShareX/releases/tag/v22.2.0) - 2026-11-06 {#v22.2.0}
 
 * Replaced all icons across ShareX with custom designed icons.
