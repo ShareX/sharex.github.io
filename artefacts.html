@@ -1,98 +1,18 @@
 ---
-layout: page
-title: Artefacts
 permalink: /artefacts/
-description: Download preview builds of ShareX for macOS and Linux from the cross-platform branch.
 ---
-
-<div class="container-artefacts">
-    <div class="container">
-        <p class="artefacts-intro">
-            Preview builds of ShareX for <strong>macOS</strong> and <strong>Linux</strong>, from the
-            <a href="https://github.com/ShareX/ShareX/tree/cross-platform">cross-platform branch</a>.
-            They are for testing and are not releases. Please report problems in
-            <a href="https://github.com/ShareX/ShareX/issues/8867">issue #8867</a>.
-        </p>
-
-        <div class="artefacts-build" hidden>
-            <div class="artefacts-build-main">
-                <span class="artefacts-version"></span>
-                <a class="artefacts-commit" href="#"></a>
-                <span class="artefacts-message"></span>
-            </div>
-            <div class="artefacts-build-meta">
-                <span class="artefacts-date"></span>
-                <a class="artefacts-run" href="#">Build log</a>
-            </div>
-        </div>
-
-        <div class="artefacts-status">
-            <i class="fa-solid fa-gear fa-spin"></i>
-            <span>Loading the latest build...</span>
-        </div>
-
-        <div class="artefacts-grid" hidden>
-            <section class="artefacts-os" data-os="windows">
-                <h2><i class="fa-brands fa-windows"></i>Windows</h2>
-                <p class="artefacts-os-note">Windows builds are regular releases.</p>
-                <div class="artefacts-files">
-                    <a class="artefacts-file" href="https://github.com/ShareX/ShareX/releases/latest">
-                        <span class="artefacts-file-name">Latest release</span>
-                        <span class="artefacts-file-detail">Setup and portable, x64 and ARM64</span>
-                    </a>
-                    <a class="artefacts-file" href="https://github.com/ShareX/DevBuilds/releases/latest">
-                        <span class="artefacts-file-name">Latest dev build</span>
-                        <span class="artefacts-file-detail">From the develop branch</span>
-                    </a>
-                </div>
-            </section>
-
-            <section class="artefacts-os" data-os="macos">
-                <h2><i class="fa-brands fa-apple"></i>macOS</h2>
-                <p class="artefacts-os-note">macOS 13 or later. The download has a .dmg and a .zip of ShareX.app.</p>
-                <div class="artefacts-files"></div>
-                <details class="artefacts-help">
-                    <summary>Which one do I need?</summary>
-                    <p>Apple silicon (M1 and later) is arm64; Intel Macs are x64. Check under Apple menu &gt; About This Mac &gt; Chip or Processor.</p>
-                </details>
-            </section>
-
-            <section class="artefacts-os" data-os="linux">
-                <h2><i class="fa-brands fa-linux"></i>Linux</h2>
-                <p class="artefacts-os-note">X11 and Wayland (GNOME, KDE Plasma, Hyprland, sway). Installs for your user, no root needed.</p>
-                <div class="artefacts-files"></div>
-                <details class="artefacts-help">
-                    <summary>How do I install it?</summary>
-<pre><code>unzip ShareX-*-linux-x64.zip
-tar -xzf ShareX-*-linux-x64.tar.gz
-ShareX-*-linux-x64/install.sh</code></pre>
-                    <p>Then start ShareX from your app launcher, or run <code>sharex</code>.</p>
-                </details>
-            </section>
-        </div>
-
-        <p class="artefacts-footnote" hidden>
-            <i class="fa-solid fa-circle-info"></i>
-            Downloading needs a free GitHub account: GitHub only serves build artefacts to signed-in users. Each build is kept for 90 days.
-            The files arrive inside a .zip that GitHub adds.
-        </p>
-
-        <div class="artefacts-history" hidden>
-            <h2>Earlier builds</h2>
-            <table class="table table-artefacts-history">
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Commit</th>
-                        <th>Files</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
-    </div>
-</div>
-
-{% include common-js.html %}
-<script src="/js/sharex.common.js"></script>
-<script src="/js/sharex.artefacts.js"></script>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=/artifacts/">
+    <link rel="canonical" href="https://getsharex.com/artifacts/">
+    <script type="text/javascript">
+      window.location.href = "/artifacts/"
+    </script>
+    <title>Page Redirection</title>
+  </head>
+  <body>
+    If you are not redirected automatically, follow this <a href="/artifacts/">link to the macOS and Linux artifacts</a>.
+  </body>
+</html>
