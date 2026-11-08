@@ -1071,6 +1071,50 @@ footer {
         color: darken($text-color-alt, 30%);
     }
 
+    // Linux: a row per format with a button for each CPU.
+    .artifacts-format {
+        &.artifacts-format-yours {
+            border-color: #3fb950;
+        }
+
+        .artifacts-arches {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .artifacts-arch {
+            font-size: 14px;
+            font-weight: 400;
+            border: 1px solid $background-alt-border;
+            border-radius: 6px;
+            padding: 4px 10px;
+            text-decoration: none;
+
+            i {
+                margin-right: 8px;
+                font-size: 12px;
+            }
+
+            &.artifacts-arch-yours {
+                border-color: #3fb950;
+            }
+        }
+
+        a.artifacts-arch:hover,
+        a.artifacts-arch:focus-visible {
+            background-color: $background-highlight;
+        }
+    }
+
+    .artifacts-help h3 {
+        margin: 12px 0 0;
+        font-size: 15px;
+        font-weight: 400;
+        color: darken($text-color-alt, 10%);
+    }
+
     .artifacts-help {
         margin-top: 14px;
         font-size: 15px;

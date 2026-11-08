@@ -2,7 +2,7 @@
 layout: page
 title: Artifacts
 permalink: /artifacts/
-description: Download preview builds of ShareX for macOS and Linux from the cross-platform branch.
+description: Download preview builds of ShareX for macOS and Linux (.deb, .rpm, AppImage and portable) from the cross-platform branch.
 ---
 
 <div class="container-artifacts">
@@ -59,14 +59,26 @@ description: Download preview builds of ShareX for macOS and Linux from the cros
 
             <section class="artifacts-os" data-os="linux">
                 <h2><i class="fa-brands fa-linux"></i>Linux</h2>
-                <p class="artifacts-os-note">X11 and Wayland (GNOME, KDE Plasma, Hyprland, sway). Installs for your user, no root needed.</p>
+                <p class="artifacts-os-note">X11 and Wayland (GNOME, KDE Plasma, Hyprland, sway). x64 or ARM64: run <code>uname -m</code>, x86_64 is x64 and aarch64 is ARM64.</p>
                 <div class="artifacts-files"></div>
                 <details class="artifacts-help">
                     <summary>How do I install it?</summary>
-<pre><code>unzip ShareX-*-linux-x64.zip
-tar -xzf ShareX-*-linux-x64.tar.gz
-ShareX-*-linux-x64/install.sh</code></pre>
-                    <p>Then start ShareX from your app launcher, or run <code>sharex</code>.</p>
+                    <p>Each download is a .zip that GitHub adds around the file. Unzip it first.</p>
+                    <h3>.deb</h3>
+<pre><code>sudo apt install ./ShareX-*-linux-x64.deb</code></pre>
+                    <h3>.rpm</h3>
+<pre><code>sudo dnf install ./ShareX-*-linux-x64.rpm
+sudo zypper install --allow-unsigned-rpm ./ShareX-*-linux-x64.rpm   # openSUSE</code></pre>
+                    <h3>AppImage</h3>
+<pre><code>chmod +x ShareX-*-linux-x64.AppImage
+./ShareX-*-linux-x64.AppImage</code></pre>
+                    <h3>Portable</h3>
+<pre><code>tar -xzf ShareX-*-linux-x64.tar.gz
+ShareX-*-linux-x64/app/ShareX              # run it from there
+ShareX-*-linux-x64/install.sh              # or add it to your app launcher, for your user only</code></pre>
+                    <p>Preview .deb and .rpm packages are numbered below the release of the same version, so the release replaces them.
+                        A copy added with install.sh takes priority in your app launcher; remove it with <code>install.sh --uninstall</code>
+                        before switching to a package.</p>
                 </details>
             </section>
         </div>

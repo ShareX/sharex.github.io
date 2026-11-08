@@ -6,12 +6,20 @@ const artifactsWorkflow = "platform.yml";
 const artifactsBranch = "cross-platform";
 const artifactsApi = `https://api.github.com/repos/${artifactsRepo}/actions`;
 
-// Package names follow the release files: ShareX-<version>-<os>-<arch>.
+// Package names follow the release files: ShareX-<version>-<os>-<arch>, with the extension for the Linux .deb, .rpm and AppImage.
+// The Linux tarball has no extension in its name, as in builds made before the other formats.
 const artifactsKinds = {
     "macos-arm64": { os: "macos", label: "Apple silicon", arch: "arm64", order: 0 },
     "macos-x64": { os: "macos", label: "Intel", arch: "x64", order: 1 },
     "linux-x64": { os: "linux", label: "x64", arch: "x64", order: 0 },
     "linux-arm64": { os: "linux", label: "ARM64", arch: "arm64", order: 1 }
+};
+
+const artifactsLinuxFormats = {
+    "deb": { label: ".deb", icon: "fa-brands fa-ubuntu", detail: "Debian, Ubuntu, Linux Mint, Pop!_OS", order: 0 },
+    "rpm": { label: ".rpm", icon: "fa-brands fa-fedora", detail: "Fedora, openSUSE, RHEL", order: 1 },
+    "AppImage": { label: "AppImage", icon: "fa-solid fa-rocket", detail: "Any distribution, runs without installing", order: 2 },
+    "tar.gz": { label: "Portable", icon: "fa-solid fa-box-archive", detail: "Any distribution, .tar.gz", order: 3 }
 };
 
 document.addEventListener("DOMContentLoaded", LoadArtifacts);
@@ -55,10 +63,12 @@ async function GetJson(url) {
 }
 
 function ToPackage(run, artifact) {
-    const match = /^ShareX-([0-9.]+)-([a-z]+-[a-z0-9]+)$/.exec(artifact.name);
-    if (!match || !artifactsKinds[match[2]]) return null;
+    const match = /^ShareX-([0-9.]+)-([a-z]+-[a-z0-9]+)(?:\.(deb|rpm|AppImage))?$/.exec(artifact.name);
+    const kind = match && artifactsKinds[match[2]];
+    if (!kind || (match[3] && kind.os !== "linux")) return null;
 
-    return Object.assign({}, artifactsKinds[match[2]], {
+    return Object.assign({}, kind, {
+        format: kind.os === "linux" ? match[3] || "tar.gz" : null,
         name: artifact.name,
         version: match[1],
         size: artifact.size_in_bytes,
@@ -90,7 +100,7 @@ function ShowBuild(build) {
 
         files.innerHTML = packages.length === 0
             ? `<div class="artifacts-file artifacts-file-missing">Not in this build</div>`
-            : packages.map(FileHtml).join("");
+            : os === "linux" ? LinuxFormatsHtml(packages) : packages.map(FileHtml).join("");
     }
 
     document.querySelector(".artifacts-grid").hidden = false;
@@ -111,11 +121,34 @@ function FileHtml(p) {
     </a>`;
 }
 
+// One row per format, with a button for each CPU.
+function LinuxFormatsHtml(packages) {
+    return Object.keys(artifactsLinuxFormats)
+        .map(key => ({ key, format: artifactsLinuxFormats[key], packages: packages.filter(p => p.format === key) }))
+        .filter(f => f.packages.length > 0)
+        .sort((a, b) => a.format.order - b.format.order)
+        .map(f => `<div class="artifacts-file artifacts-format" data-format="${f.key}">
+            <span class="artifacts-file-name"><i class="${f.format.icon}"></i>${EscapeHtml(f.format.label)}</span>
+            <span class="artifacts-file-detail">${EscapeHtml(f.format.detail)}</span>
+            <div class="artifacts-arches">${f.packages.map(ArchHtml).join("")}</div>
+        </div>`).join("");
+}
+
+function ArchHtml(p) {
+    if (p.expired) {
+        return `<span class="artifacts-arch artifacts-file-missing">${EscapeHtml(p.label)} &middot; expired</span>`;
+    }
+
+    return `<a class="artifacts-arch" href="${p.url}" data-arch="${p.arch}" title="${EscapeHtml(p.name)}, until ${FormatDate(p.expires)}">
+        <i class="fa-solid fa-download"></i>${EscapeHtml(p.label)} &middot; ${FormatSize(p.size)}</a>`;
+}
+
 function ShowHistory(builds) {
     const rows = builds.slice(0, 5).map(b => {
-        const files = b.packages.sort((x, y) => x.name.localeCompare(y.name)).map(p => p.expired
-            ? `<span class="artifacts-history-expired">${EscapeHtml(p.os)} ${EscapeHtml(p.arch)}</span>`
-            : `<a href="${p.url}">${EscapeHtml(p.os)} ${EscapeHtml(p.arch)}</a>`).join(" ");
+        const files = b.packages.sort((x, y) => x.name.localeCompare(y.name)).map(p => {
+            const label = EscapeHtml([p.os, p.arch, p.format].filter(x => x).join(" "));
+            return p.expired ? `<span class="artifacts-history-expired">${label}</span>` : `<a href="${p.url}">${label}</a>`;
+        }).join(" ");
 
         return `<tr>
             <td>${FormatDate(new Date(b.run.updated_at))}</td>
@@ -143,6 +176,24 @@ function HighlightOwnSystem() {
         const card = document.querySelector(`.artifacts-os[data-os="${os}"]`);
         card.classList.add("artifacts-os-yours");
         card.querySelector("h2").insertAdjacentHTML("beforeend", `<span class="artifacts-yours">Your system</span>`);
+    }
+
+    if (os === "linux") HighlightOwnLinux();
+}
+
+// Some Linux browsers name the distribution and CPU in the user agent (Firefox on Ubuntu and Fedora does). Marks the matching
+// format and CPU; nothing is marked when the browser does not say.
+function HighlightOwnLinux() {
+    const agent = navigator.userAgent;
+    const format = /ubuntu|debian|mint/i.test(agent) ? "deb" : /fedora|suse|red hat/i.test(agent) ? "rpm" : null;
+    const arch = /aarch64|arm64/i.test(agent) ? "arm64" : /x86_64|amd64/i.test(agent) ? "x64" : null;
+
+    if (format) {
+        document.querySelector(`.artifacts-format[data-format="${format}"]`)?.classList.add("artifacts-format-yours");
+    }
+
+    if (arch) {
+        document.querySelectorAll(`.artifacts-arch[data-arch="${arch}"]`).forEach(a => a.classList.add("artifacts-arch-yours"));
     }
 }
 
