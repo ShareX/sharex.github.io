@@ -892,6 +892,262 @@ footer {
     }
 }
 
+.container-artifacts {
+    padding-top: $container-padding;
+    padding-bottom: $container-padding-half;
+    font-weight: 300;
+
+    a {
+        color: $text-color;
+    }
+
+    [hidden] {
+        display: none !important;
+    }
+
+    .artifacts-intro {
+        font-size: 18px;
+        max-width: 760px;
+        color: $text-color-alt;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    .artifacts-build {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px 24px;
+        background-color: $background-alt;
+        border: 1px solid $background-alt-border;
+        border-radius: 8px;
+        padding: 14px 18px;
+        margin: 24px 0;
+
+        .artifacts-build-main,
+        .artifacts-build-meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 6px 14px;
+            min-width: 0;
+        }
+
+        .artifacts-version {
+            font-family: $font-header;
+            font-size: 24px;
+        }
+
+        .artifacts-commit {
+            font-family: monospace;
+            font-size: 14px;
+            background-color: $background-highlight;
+            border-radius: 4px;
+            padding: 2px 6px;
+        }
+
+        .artifacts-message {
+            color: darken($text-color-alt, 15%);
+            overflow-wrap: anywhere;
+        }
+
+        .artifacts-build-meta {
+            color: darken($text-color-alt, 15%);
+            font-size: 15px;
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .artifacts-status {
+        font-size: 18px;
+        margin: 24px 0;
+
+        i {
+            margin-right: 10px;
+        }
+    }
+
+    .artifacts-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+
+        @media (max-width: 991.98px) {
+            grid-template-columns: minmax(0, 1fr);
+        }
+    }
+
+    .artifacts-os {
+        display: flex;
+        flex-direction: column;
+        background-color: $background;
+        border: 1px solid $background-alt-border;
+        border-radius: 8px;
+        padding: 20px;
+
+        h2 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: $font-header;
+            font-size: 28px;
+            margin-bottom: 8px;
+
+            i {
+                font-size: 26px;
+                width: 30px;
+                text-align: center;
+            }
+        }
+
+        &.artifacts-os-yours {
+            border-color: #3fb950;
+        }
+
+        .artifacts-yours {
+            margin-left: auto;
+            font-family: $font;
+            font-size: 13px;
+            font-weight: 400;
+            color: #3fb950;
+            border: 1px solid #3fb950;
+            border-radius: 4px;
+            padding: 2px 6px;
+        }
+
+        .artifacts-os-note {
+            color: darken($text-color-alt, 15%);
+            font-size: 15px;
+            min-height: 45px;
+        }
+    }
+
+    .artifacts-files {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .artifacts-file {
+        display: block;
+        background-color: $background-alt;
+        border: 1px solid $background-alt-border;
+        border-radius: 8px;
+        padding: 12px 15px;
+        text-decoration: none;
+
+        .artifacts-file-name {
+            display: block;
+            font-size: 18px;
+            font-weight: 400;
+
+            i {
+                margin-right: 10px;
+                font-size: 15px;
+            }
+        }
+
+        .artifacts-file-detail {
+            display: block;
+            font-size: 13px;
+            color: darken($text-color-alt, 20%);
+            overflow-wrap: anywhere;
+        }
+    }
+
+    a.artifacts-file:hover,
+    a.artifacts-file:focus-visible {
+        background-color: $background-highlight;
+        text-decoration: none;
+    }
+
+    .artifacts-file-missing {
+        color: darken($text-color-alt, 30%);
+    }
+
+    .artifacts-help {
+        margin-top: 14px;
+        font-size: 15px;
+
+        summary {
+            cursor: pointer;
+            color: darken($text-color-alt, 10%);
+        }
+
+        p {
+            margin: 8px 0 0;
+            color: darken($text-color-alt, 15%);
+        }
+
+        pre {
+            margin: 8px 0 0;
+            padding: 10px 12px;
+            background-color: $background-alt;
+            border-radius: 6px;
+            color: $text-color-alt;
+            font-size: 13px;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+        }
+    }
+
+    .artifacts-footnote {
+        margin-top: 24px;
+        color: darken($text-color-alt, 15%);
+        font-size: 15px;
+
+        i {
+            margin-right: 8px;
+        }
+    }
+
+    .artifacts-history {
+        margin-top: 32px;
+
+        h2 {
+            font-family: $font-header;
+            font-size: 26px;
+        }
+
+        .table-artifacts-history {
+            background-color: $background;
+            border-radius: 8px;
+            color: $text-color;
+
+            th,
+            td {
+                border: none;
+                font-weight: 300;
+            }
+
+            th {
+                font-size: 18px;
+            }
+
+            .artifacts-history-files a,
+            .artifacts-history-expired {
+                display: inline-block;
+                margin-right: 12px;
+            }
+
+            .artifacts-history-files a {
+                text-decoration: underline;
+            }
+
+            .artifacts-history-expired {
+                color: darken($text-color-alt, 35%);
+                text-decoration: line-through;
+            }
+        }
+    }
+}
+
 .container-screenshots {
     padding-top: $container-padding;
     padding-bottom: $container-padding-half;
