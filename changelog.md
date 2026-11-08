@@ -6,6 +6,29 @@ description: Review the ShareX changelog for release notes, new features, improv
 
 > If you'd like to hear about new features and updates early, we recommend following us on X: [https://x.com/ShareX](https://x.com/ShareX)
 
+## [ShareX 22.4.0](https://github.com/ShareX/ShareX/releases/tag/v22.4.0) - 2026-11-08 {#v22.4.0}
+
+* Added "Task view mode" option to switch the main window task list between "List view" and "Thumbnail view" (Application settings -> Main window). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* Added "Image preview visibility" option to show the selected image beside the list view (Application settings -> Main window). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* Added "Spacing" options with a live preview for the sidebar, menus, tool menus and settings windows, and a "Compact mode" preset that brings back the ShareX v21 spacing (Application settings -> Theme). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* ShareX now asks which icon pack to use after updating. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* The "Legacy" icon pack now also covers the screen recorder bar, tool windows and image effects. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* Added a "Ruler" tool that works like the ShareX v21 ruler. The existing ruler tool is renamed to "Measure". <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* Image editor improvements:
+    * Added "<kbd>X</kbd> Canvas size" tool. Drag the frame outward to add space or inward to crop, with a selectable fill color for the added area. <a class="badge" href="https://github.com/CreepMaH"><i class="fa-brands fa-github"></i>CreepMaH</a>
+    * Added "Auto-expand canvas when text or shapes go beyond the edge" option (Task settings -> Tools -> Image editor). <a class="badge" href="https://github.com/CreepMaH"><i class="fa-brands fa-github"></i>CreepMaH</a>
+    * Added "Freehand arrow" option to the freehand tool. <a class="badge" href="https://github.com/Fuzzums"><i class="fa-brands fa-github"></i>Fuzzums</a>
+    * Added "Rounded corners" option to the arrow tool. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+    * Added "Secondary" keyboard shortcuts for toolbar tools, defaulting to the ShareX v21 numpad keys (Task settings -> Region capture -> Customize toolbar). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* Region capture now shows the position and size of the hovered window or region, using the ShareX v21 "X: Y: W: H:" format. <a class="badge" href="https://github.com/Fuzzums"><i class="fa-brands fa-github"></i>Fuzzums</a>
+* Screen recording changes:
+    * Added "HDR tone mapping" option so recordings on [HDR](https://en.wikipedia.org/wiki/High_dynamic_range) displays are no longer blown out (Task settings -> Screen recorder). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+    * The screen recorder bar is now also shown before FFmpeg recordings. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+    * Regions too large for [H.264](https://en.wikipedia.org/wiki/Advanced_Video_Coding) are now recorded as [HEVC](https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding) instead of failing. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* The after capture window is now goal based. Choose what ends up on the clipboard, and the tasks that goal needs are selected automatically while every other task stays an optional extra. <a class="badge" href="https://github.com/McoreD"><i class="fa-brands fa-github"></i>McoreD</a>
+* Added "Just once" option to the screenshot delay menu so the delay only applies to the next capture. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* Added "Don't remind me again" option to the file delete confirmation. It can be turned back on with "Ask for confirmation before deleting files" (Application settings -> Advanced). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+
 ## [ShareX 22.3.0](https://github.com/ShareX/ShareX/releases/tag/v22.3.0) - 2026-11-07 {#v22.3.0}
 
 * Added "Legacy" icon pack (Application settings -> Theme -> Icon pack). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
