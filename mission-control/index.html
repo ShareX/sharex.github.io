@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>ShareX Mission Control</title>
+<link rel="icon" type="image/svg+xml" href="/img/ShareX_Logo.svg">
+<!--
+  Mission Control for the ShareX team. This page holds no data: it shows the Mission Control app, which runs behind
+  GitHub sign-in on its own address, in a frame. Only the ShareX team can sign in there.
+-->
+<style>
+  html, body { margin: 0; height: 100%; background: #f4f4f2; }
+  @media (prefers-color-scheme: dark) { html, body { background: #121211; } }
+  iframe { display: block; width: 100%; height: 100%; border: 0; }
+</style>
+</head>
+<body>
+<iframe id="app" title="ShareX Mission Control" src="https://mc.getsharex.com/mission-control/"></iframe>
+<script>
+  // Keep the address bar and the app on the same view, so links like /mission-control/#/fix can be shared.
+  var APP = 'https://mc.getsharex.com';
+  var frame = document.getElementById('app');
+  if (/^#\/[\w\/?=&%.-]*$/.test(location.hash)) frame.src = APP + '/mission-control/' + location.hash;
+  window.addEventListener('message', function (e) {
+    if (e.origin !== APP || !e.data || e.data.type !== 'mc-route') return;
+    var hash = String(e.data.hash || '');
+    if (hash === '' || /^#\/[\w\/?=&%.-]*$/.test(hash)) history.replaceState(null, '', location.pathname + hash);
+    if (e.data.title) document.title = String(e.data.title).slice(0, 120);
+  });
+</script>
+</body>
+</html>
