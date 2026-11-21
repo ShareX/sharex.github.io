@@ -1,7 +1,7 @@
 ---
 layout: markdown
 title: Changelog
-description: Review the ShareX changelog for release notes, new features, improvements, and other notable changes.
+description: Review the ShareX Classic changelog for release notes, new features, improvements, and other notable changes.
 ---
 
 > If you'd like to hear about new features and updates early, we recommend following us on X: [https://x.com/ShareX](https://x.com/ShareX)
