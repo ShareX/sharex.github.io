@@ -5,7 +5,7 @@ layout: default
 <div class="jumbotron jumbotron-compact">
     <div class="container">
         <div class="site-title">
-            <a href="/">{{ site.name }}</a>
+            <a href="/">{{ page.site_name | default: site.name }}</a>
         </div>
         <h1 class="page-title">{{ page.title }}</h1>
     </div>

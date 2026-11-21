@@ -1,5 +1,6 @@
 ---
 layout: markdown
+site_name: ShareX Classic
 title: Changelog
 description: Review the ShareX Classic changelog for release notes, new features, improvements, and other notable changes.
 ---
