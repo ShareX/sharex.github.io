@@ -9,18 +9,18 @@ description: Review the ShareX Classic changelog for release notes, new features
 ## [ShareX Classic 21.1.0](https://github.com/ShareX/ShareX-Classic/releases/tag/v21.1.0) - 2026-11-21 {#v21.1.0}
 
 * The window title now shows "ShareX Classic".
-* Updates are now checked from [ShareX Classic releases](https://github.com/ShareX/ShareX-Classic/releases).
 * Upgraded project to [.NET 11](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11/overview).
 * Added [ARM64](https://en.wikipedia.org/wiki/AArch64) setup and portable builds.
 * ShareX installer and assemblies are now [code-signed](https://en.wikipedia.org/wiki/Code_signing) using a certificate provided by [Ember Swan](https://emberswan.com?ref=sharex). <a class="badge" href="https://github.com/Xenthys"><i class="fa-brands fa-github"></i>Xenthys</a>
 * [Recorder devices](https://github.com/ShareX/RecorderDevices) are no longer bundled with the installer.
+* Updates are now checked from [ShareX Classic releases](https://github.com/ShareX/ShareX-Classic/releases).
+* Removed the "Dev" update channel.
 * Update [FFmpeg](https://www.ffmpeg.org) to 9.0.
 * Migrate [uPaste](https://upaste.me) uploader to API v2.
 * Removed the modern image editor built with [Avalonia UI](https://avaloniaui.net). The legacy image editor is now the only image editor.
 * Removed "Background remover" tool.
 * Removed "Image comparer" tool.
 * Removed "Metadata" tool.
-* Removed the "Dev" update channel.
 
 ## [ShareX 21.0.0](https://github.com/ShareX/ShareX/releases/tag/v21.0.0) - 2026-07-03 {#v21.0.0}
 
