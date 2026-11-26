@@ -6,6 +6,59 @@ description: Review the ShareX changelog for release notes, new features, improv
 
 > If you'd like to hear about new features and updates early, we recommend following us on X: [https://x.com/ShareX](https://x.com/ShareX)
 
+## [ShareX 22.5.0](https://github.com/ShareX/ShareX/releases/tag/v22.5.0) - 2026-11-26 {#v22.5.0}
+
+* Added "Pixel editor" tool for pixel art and sprite animations, with layers, an animation timeline, tilemaps, slices, and sprite sheet import and export. Images can be opened in it with "Edit in Pixel editor..." from the main window and history windows.
+* OCR Improvements:
+    * Replaced Windows OCR with [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR), so OCR no longer depends on installed Windows languages. The "Language" and "Scale factor" options are removed.
+    * Redesigned the OCR window with an image preview that outlines the recognized text. Click a text region to copy it.
+    * Added "Make text in captures searchable in history" option (Application settings -> History). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* Image editor improvements:
+    * The top toolbar can now be moved with its drag handle. Double-click the handle to reset its position. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+    * Added "Compact image editor toolbar" option, closer to the ShareX v21 editor (Task settings -> Tools -> Image editor). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+    * Added "Right-click deletes the shape under the cursor" option (Task settings -> Tools -> Image editor). <a class="badge" href="https://github.com/Fuzzums"><i class="fa-brands fa-github"></i>Fuzzums</a>
+    * Added "Size window to fit image" option (Task settings -> Tools -> Image editor). <a class="badge" href="https://github.com/descentiles"><i class="fa-brands fa-github"></i>descentiles</a>
+    * "Zoom to fit on open" now only shrinks images, so small images open at their actual size. <a class="badge" href="https://github.com/pigator"><i class="fa-brands fa-github"></i>pigator</a>
+    * Added "New from screenshot (region)..." and "New from screenshot (full screen)" options to the file menu and start screen. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+    * Added "Auto size to text" option to the "Speech Balloon" tool. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+    * Added border options to the "Magnify" tool. <a class="badge" href="https://github.com/descentiles"><i class="fa-brands fa-github"></i>descentiles</a> <a class="badge" href="https://github.com/heimned"><i class="fa-brands fa-github"></i>heimned</a>
+    * The font size can now be typed in, from 1 to 1000, including decimals such as 36.5. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+    * "Crop" now shows position and size while cropping, like ShareX v21. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+    * The "Smart Eraser" tool can now be rotated to improve parity with other tools. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+    * Holding <kbd>Shift</kbd> while drawing with the "Freehand" tool now draws straight lines, like ShareX v21. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+    * Resized images now stretch to fill their box, and holding <kbd>Shift</kbd> while dragging a corner keeps their proportions, like ShareX v21. <a class="badge" href="https://github.com/Fuzzums"><i class="fa-brands fa-github"></i>Fuzzums</a>
+    * <kbd>Shift</kbd> + <kbd>Enter</kbd> now starts a new line in text annotations. <a class="badge" href="https://github.com/Fuzzums"><i class="fa-brands fa-github"></i>Fuzzums</a>
+    * Added recent colors next to the screen color picker in the color dropdown. <a class="badge" href="https://github.com/Fuzzums"><i class="fa-brands fa-github"></i>Fuzzums</a>
+* Updated toolbar customization for region capture and the image editor so tools and spacers can be dragged into place on a preview of the toolbar. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* Region capture improvements:
+    * Region capture now opens about twice as fast. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+    * Added "Ellipse region" and "Freehand region" tools back. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+    * Added "Capture selected region" mouse action (Task settings -> Region capture). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+    * Pressing <kbd>Enter</kbd> now captures the highlighted window. <a class="badge" href="https://github.com/heimned"><i class="fa-brands fa-github"></i>heimned</a>
+    * Added "Mouse wheel" option to choose whether scrolling resizes or zooms the magnifier. Hold <kbd>Ctrl</kbd> while scrolling to do the other (Task settings -> Region capture). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+    * Added "Use custom toolbar button size" option (Task settings -> Region capture). <kbd>Ctrl</kbd> + <kbd>Mouse wheel</kbd> over the toolbar also resizes it. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a> <a class="badge" href="https://github.com/Fuzzums"><i class="fa-brands fa-github"></i>Fuzzums</a>
+    * The toolbar now follows the mouse cursor across monitors until it is used. <a class="badge" href="https://github.com/AlexFlipnote"><i class="fa-brands fa-github"></i>AlexFlipnote</a>
+* The after capture window and editors now open on the screen the capture was taken on. <a class="badge" href="https://github.com/McoreD"><i class="fa-brands fa-github"></i>McoreD</a>
+* Animated GIFs now play in the task preview, thumbnails and image viewer. <a class="badge" href="https://github.com/Fuzzums"><i class="fa-brands fa-github"></i>Fuzzums</a>
+* Added "Image preview location" option to show the image preview below the list view (Application settings -> Main window). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* Added "Always show full-width scroll bars" option (Application settings -> Theme). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* Added "Monitor" option to choose which monitor toast notifications appear on (Task settings -> General -> Notifications). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* Photo editor improvements:
+    * Added "Layer from Background" to the Layers panel right-click menu. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+    * Layers can now be deleted by dragging them onto the bin in the Layers panel. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+    * Copied text layers are now pasted as text. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* Added crop and resize options to the animated GIF trimmer. <a class="badge" href="https://github.com/Fuzzums"><i class="fa-brands fa-github"></i>Fuzzums</a>
+* "Save image to file as" can now save in any supported image format. <a class="badge" href="https://github.com/Fuzzums"><i class="fa-brands fa-github"></i>Fuzzums</a>
+* Links in the QR code window can now be opened with <kbd>Ctrl</kbd> + <kbd>Click</kbd>. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* The video converter now shows the average bitrate, file size and resolution of the output after converting. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+* Improved image effects search to rank results and match common words. <a class="badge" href="https://github.com/descentiles"><i class="fa-brands fa-github"></i>descentiles</a>
+* Settings, stats, debug log, about, image effects and FFmpeg options windows can now be closed with <kbd>Esc</kbd>. <a class="badge" href="https://github.com/tryallthethings"><i class="fa-brands fa-github"></i>tryallthethings</a>
+* Improved keyboard and screen reader support. The task list can now be used with the keyboard, and message box buttons have <kbd>Alt</kbd> shortcuts. <a class="badge" href="https://github.com/heimned"><i class="fa-brands fa-github"></i>heimned</a> <a class="badge" href="https://github.com/descentiles"><i class="fa-brands fa-github"></i>descentiles</a>
+* Added "Display diagnostics" window that creates a report for scaling and multi-monitor issues (Debug -> Display diagnostics). <a class="badge" href="https://github.com/McoreD"><i class="fa-brands fa-github"></i>McoreD</a>
+* Removed "Leave clipboard alone" goal from the after capture window.
+* Upgraded project to [.NET 11](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11/overview).
+* Removed "Dev" update channel.
+
 ## [ShareX 22.4.0](https://github.com/ShareX/ShareX/releases/tag/v22.4.0) - 2026-11-08 {#v22.4.0}
 
 * Added "Task view mode" option to switch the main window task list between "List view" and "Thumbnail view" (Application settings -> Main window). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
