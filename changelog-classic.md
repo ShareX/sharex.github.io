@@ -7,6 +7,10 @@ description: Review the ShareX Classic changelog for release notes, new features
 
 > If you'd like to hear about new features and updates early, we recommend following us on X: [https://x.com/ShareX](https://x.com/ShareX)
 
+## [ShareX Classic 21.1.1](https://github.com/ShareX/ShareX-Classic/releases/tag/v21.1.1) - 2026-11-26 {#v21.1.1}
+
+* Bug fixes
+
 ## [ShareX Classic 21.1.0](https://github.com/ShareX/ShareX-Classic/releases/tag/v21.1.0) - 2026-11-21 {#v21.1.0}
 
 * The window title now shows "ShareX Classic".
