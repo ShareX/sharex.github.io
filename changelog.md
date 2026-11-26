@@ -10,7 +10,7 @@ description: Review the ShareX changelog for release notes, new features, improv
 
 * Added "Pixel editor" tool for pixel art and sprite animations, with layers, an animation timeline, tilemaps, slices, and sprite sheet import and export. Images can be opened in it with "Edit in Pixel editor..." from the main window and history windows.
 * OCR Improvements:
-    * Replaced Windows OCR with [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR), so OCR no longer depends on installed Windows languages. The "Language" and "Scale factor" options are removed.
+    * Replaced Windows OCR with [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR), so OCR no longer depends on installed Windows languages. The "Language" and "Scale factor" options are removed. <a class="badge" href="https://x.com/ShareX/status/2120342150281937144"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
     * Redesigned the OCR window with an image preview that outlines the recognized text. Click a text region to copy it.
     * Added "Make text in captures searchable in history" option (Application settings -> History). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
 * Image editor improvements:
