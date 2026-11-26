@@ -22,7 +22,7 @@ description: Review the ShareX changelog for release notes, new features, improv
     * "Zoom to fit on open" now only shrinks images, so small images open at their actual size. <a class="badge" href="https://github.com/pigator"><i class="fa-brands fa-github"></i>pigator</a>
     * Added "New from screenshot (region)..." and "New from screenshot (full screen)" options to the file menu and start screen. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
     * Added "Auto size to text" option to the "Speech Balloon" tool. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
-    * Added border options to the "Magnify" tool. <a class="badge" href="https://github.com/descentiles"><i class="fa-brands fa-github"></i>descentiles</a> <a class="badge" href="https://github.com/heimned"><i class="fa-brands fa-github"></i>heimned</a>
+    * Added border options to the "Magnify" tool. <a class="badge" href="https://github.com/descentiles"><i class="fa-brands fa-github"></i>descentiles</a>
     * The font size can now be typed in, from 1 to 1000, including decimals such as 36.5. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
     * "Crop" now shows position and size while cropping, like ShareX v21. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
     * The "Smart Eraser" tool can now be rotated to improve parity with other tools. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
@@ -37,7 +37,7 @@ description: Review the ShareX changelog for release notes, new features, improv
     * Added "Capture selected region" mouse action (Task settings -> Region capture). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
     * Pressing <kbd>Enter</kbd> now captures the highlighted window. <a class="badge" href="https://github.com/heimned"><i class="fa-brands fa-github"></i>heimned</a>
     * Added "Mouse wheel" option to choose whether scrolling resizes or zooms the magnifier. Hold <kbd>Ctrl</kbd> while scrolling to do the other (Task settings -> Region capture). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
-    * Added "Use custom toolbar button size" option (Task settings -> Region capture). <kbd>Ctrl</kbd> + <kbd>Mouse wheel</kbd> over the toolbar also resizes it. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a> <a class="badge" href="https://github.com/Fuzzums"><i class="fa-brands fa-github"></i>Fuzzums</a>
+    * Added "Use custom toolbar button size" option (Task settings -> Region capture). <kbd>Ctrl</kbd> + <kbd>Mouse wheel</kbd> over the toolbar also resizes it. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
     * The toolbar now follows the mouse cursor across monitors until it is used. <a class="badge" href="https://github.com/AlexFlipnote"><i class="fa-brands fa-github"></i>AlexFlipnote</a>
 * The after capture window and editors now open on the screen the capture was taken on. <a class="badge" href="https://github.com/McoreD"><i class="fa-brands fa-github"></i>McoreD</a>
 * Animated GIFs now play in the task preview, thumbnails and image viewer. <a class="badge" href="https://github.com/Fuzzums"><i class="fa-brands fa-github"></i>Fuzzums</a>
@@ -54,7 +54,7 @@ description: Review the ShareX changelog for release notes, new features, improv
 * The video converter now shows the average bitrate, file size and resolution of the output after converting. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
 * Improved image effects search to rank results and match common words. <a class="badge" href="https://github.com/descentiles"><i class="fa-brands fa-github"></i>descentiles</a>
 * Settings, stats, debug log, about, image effects and FFmpeg options windows can now be closed with <kbd>Esc</kbd>. <a class="badge" href="https://github.com/tryallthethings"><i class="fa-brands fa-github"></i>tryallthethings</a>
-* Improved keyboard and screen reader support. The task list can now be used with the keyboard, and message box buttons have <kbd>Alt</kbd> shortcuts. <a class="badge" href="https://github.com/heimned"><i class="fa-brands fa-github"></i>heimned</a> <a class="badge" href="https://github.com/descentiles"><i class="fa-brands fa-github"></i>descentiles</a>
+* Improved keyboard and screen reader support. The task list can now be used with the keyboard, and message box buttons have <kbd>Alt</kbd> shortcuts. <a class="badge" href="https://github.com/heimned"><i class="fa-brands fa-github"></i>heimned</a>
 * Added "Display diagnostics" window that creates a report for scaling and multi-monitor issues (Debug -> Display diagnostics). <a class="badge" href="https://github.com/McoreD"><i class="fa-brands fa-github"></i>McoreD</a>
 * Removed "Leave clipboard alone" goal from the after capture window.
 * Upgraded project to [.NET 11](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11/overview).
