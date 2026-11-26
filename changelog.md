@@ -9,10 +9,11 @@ description: Review the ShareX changelog for release notes, new features, improv
 ## [ShareX 22.5.0](https://github.com/ShareX/ShareX/releases/tag/v22.5.0) - 2026-11-26 {#v22.5.0}
 
 * OCR Improvements:
-    * Replaced Windows OCR with [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) for more accurate text recognition. The "Language" and "Scale factor" options are removed. <a class="badge" href="https://x.com/ShareX/status/2120342150281937144"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
+    * Replaced Windows OCR with AI powered [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR), which gives significantly more accurate results. It supports over 100 languages out of the box, with no language packs to download and no switching between languages, and everything still runs locally on your device. <a class="badge" href="https://x.com/ShareX/status/2120342150281937144"><i class="fa-brands fa-x-twitter"></i>ShareX</a>
     * Redesigned the OCR window with an image preview that outlines the recognized text. Click a text region to copy it, or use the mouse wheel to zoom the preview.
-    * Added "Separate paragraphs" option that detects paragraphs and keeps their structure in the recognized text.
+    * Added "Separate paragraphs" option that automatically detects paragraphs and keeps their structure in the recognized text.
     * Added "Make text in captures searchable in history" option (Application settings -> History). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
+    * Removed the "Language" option, since languages no longer need to be selected, and the "Scale factor" option.
 * Added "Pixel editor" tool for pixel art and sprite animations, with layers, an animation timeline, tilemaps, slices, and sprite sheet import and export. Images can be opened in it with "Edit in Pixel editor..." from the main window and history windows.
 * Image editor improvements:
     * The top toolbar can now be moved with its drag handle. Double-click the handle to reset its position. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
