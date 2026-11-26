@@ -39,7 +39,7 @@ description: Review the ShareX changelog for release notes, new features, improv
     * Added "Mouse wheel" option to choose whether scrolling resizes or zooms the magnifier. Hold <kbd>Ctrl</kbd> while scrolling to do the other (Task settings -> Region capture). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
     * Added "Use custom toolbar button size" option (Task settings -> Region capture). <kbd>Ctrl</kbd> + <kbd>Mouse wheel</kbd> over the toolbar also resizes it. <a class="badge" href="https://github.com/Fuzzums"><i class="fa-brands fa-github"></i>Fuzzums</a>
     * The toolbar now follows the mouse cursor across monitors until it is used. <a class="badge" href="https://github.com/AlexFlipnote"><i class="fa-brands fa-github"></i>AlexFlipnote</a>
-* The after capture window and editors now open on the screen the capture was taken on. <a class="badge" href="https://github.com/McoreD"><i class="fa-brands fa-github"></i>McoreD</a>
+* The after capture window and editors now open on the screen the capture was taken on.
 * Animated GIFs now play in the task preview, thumbnails and image viewer. <a class="badge" href="https://github.com/Fuzzums"><i class="fa-brands fa-github"></i>Fuzzums</a>
 * Added "Image preview location" option to show the image preview below the list view (Application settings -> Main window). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
 * Added "Always show full-width scroll bars" option (Application settings -> Theme). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
@@ -55,7 +55,7 @@ description: Review the ShareX changelog for release notes, new features, improv
 * Improved image effects search to rank results and match common words. <a class="badge" href="https://github.com/descentiles"><i class="fa-brands fa-github"></i>descentiles</a>
 * Settings, stats, debug log, about, image effects and FFmpeg options windows can now be closed with <kbd>Esc</kbd>. <a class="badge" href="https://github.com/tryallthethings"><i class="fa-brands fa-github"></i>tryallthethings</a>
 * Improved keyboard and screen reader support. The task list can now be used with the keyboard, and message box buttons have <kbd>Alt</kbd> shortcuts. <a class="badge" href="https://github.com/heimned"><i class="fa-brands fa-github"></i>heimned</a>
-* Added "Display diagnostics" window that creates a report for scaling and multi-monitor issues (Debug -> Display diagnostics). <a class="badge" href="https://github.com/McoreD"><i class="fa-brands fa-github"></i>McoreD</a>
+* Added "Display diagnostics" window that creates a report for scaling and multi-monitor issues (Debug -> Display diagnostics).
 * Removed "Leave clipboard alone" goal from the after capture window.
 * Upgraded project to [.NET 11](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11/overview).
 * Removed "Dev" update channel.
@@ -79,7 +79,7 @@ description: Review the ShareX changelog for release notes, new features, improv
     * Added "HDR tone mapping" option so recordings on [HDR](https://en.wikipedia.org/wiki/High_dynamic_range) displays are no longer blown out (Task settings -> Screen recorder). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
     * The screen recorder bar is now also shown before FFmpeg recordings. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
     * Regions too large for [H.264](https://en.wikipedia.org/wiki/Advanced_Video_Coding) are now recorded as [HEVC](https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding) instead of failing. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
-* The after capture window is now goal based. Choose what ends up on the clipboard, and the tasks that goal needs are selected automatically while every other task stays an optional extra. <a class="badge" href="https://github.com/McoreD"><i class="fa-brands fa-github"></i>McoreD</a>
+* The after capture window is now goal based. Choose what ends up on the clipboard, and the tasks that goal needs are selected automatically while every other task stays an optional extra.
 * Added "Just once" option to the screenshot delay menu so the delay only applies to the next capture. <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
 * Added "Don't remind me again" option to the file delete confirmation. It can be turned back on with "Ask for confirmation before deleting files" (Application settings -> Advanced). <a class="badge" href="https://github.com/CubityFirst"><i class="fa-brands fa-github"></i>CubityFirst</a>
 
@@ -1643,7 +1643,7 @@ We updated .NET Framework version to 4.7.2 in the previous ShareX update. [Micro
 * Added [Nextcloud](https://nextcloud.com) support to [ownCloud](https://owncloud.org) file uploader <a class="badge" href="https://github.com/aStonedPenguin"><i class="fa-brands fa-github"></i>aStonedPenguin</a>
 * Changed Dropbox default settings for new users, moved upload path to outside public folder and enabled shareable URL option in preparation for Dropbox to disable public folders on [March 15, 2017](https://www.dropbox.com/help/16)
 * Polr API v2 support which will be active by default, from settings API v1 can be enabled back
-* Removed Automate tool and moved it to its own [GitHub page](https://github.com/Jaex/Automate)
+* Removed Automate tool
 * Added resize if smaller option to resize image effect <a class="badge" href="https://github.com/wolfborg"><i class="fa-brands fa-github"></i>wolfborg</a>
 * Updated Amazon S3 to include new endpoints
 * On upload errors include request URL in error message
